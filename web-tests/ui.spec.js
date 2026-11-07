@@ -119,6 +119,11 @@ test('synchronized zoom, drag, overview navigation, keyboard and fit', async ({
   );
   await page.locator('#nativeZoom').click();
   await expect(page.locator('#zoomvalue')).toHaveText('100%');
+  await page.locator('#zoomout').click();
+  await expect(page.locator('#zoomvalue')).toHaveText('80%');
+  await synced(page);
+  await page.locator('#zoomin').click();
+  await expect(page.locator('#zoomvalue')).toHaveText('100%');
 });
 
 test('overlay switches change real pixels and scope metrics correspond to highlighted regions', async ({
@@ -133,6 +138,10 @@ test('overlay switches change real pixels and scope metrics correspond to highli
   expect(await bitmap(page)).not.toBe(plain);
   await page.locator('#truth').uncheck();
   await page.locator('#segmentation').check();
+  await page.locator('#opacity').fill('0');
+  expect(await bitmap(page)).toBe(plain);
+  await page.locator('#opacity').fill('25');
+  await expect(page.locator('#opacityValue')).toHaveText('25%');
   await page.locator('#grid').uncheck();
   expect(await bitmap(page)).not.toBe(initial);
   await page.locator('#grid').check();
