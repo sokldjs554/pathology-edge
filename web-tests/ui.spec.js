@@ -339,8 +339,44 @@ test('served UI and result bytes match this repository commit', async ({
     const actual = await response.body(),
       local = fs.readFileSync(new URL('../dist/' + name, import.meta.url));
     const digest = (b) => crypto.createHash('sha256').update(b).digest('hex');
-    expect(digest(actual)).toBe(digest(local));
-    rows.push({ file: name, sha256: digest(actual) });
+    let source = actual;
+    let edgeInjection = null;
+    // Sites/Cloudflare may append this exact challenge template for external IPs.
+    // Ignore only its two request-specific fields after verifying all other bytes.
+    // A different or additional script still fails the source comparison.
+    if (name === 'index.html' && process.env.UI_BASE_URL) {
+      const html = actual.toString('utf8');
+      const injected = html.match(/<script>([\s\S]*?)<\/script>(?=<\/body>)/);
+      if (injected) {
+        const canonical = injected[0]
+          .replace(/r:'[0-9a-f]+'/g, "r:'RAY'")
+          .replace(/t:'[A-Za-z0-9+/=]+'/g, "t:'TIME'")
+          .replace(/\?ray=[0-9a-f]+/g, '?ray=RAY');
+        expect(
+          digest(canonical),
+          'Unexpected hosting script; inspect before accepting',
+        ).toBe(
+          '69dd8893936a4d122ab9539efcddaa035fe04cda961ccc480c7a2a75b6d07d64',
+        );
+        edgeInjection = {
+          kind: 'Cloudflare JS challenge',
+          rawSHA256: digest(injected[0]),
+          templateSHA256: digest(canonical),
+          bytes: Buffer.byteLength(injected[0]),
+        };
+        source = Buffer.from(
+          html.slice(0, injected.index) +
+            html.slice(injected.index + injected[0].length),
+        );
+      }
+    }
+    expect(digest(source), name + ' source mismatch').toBe(digest(local));
+    rows.push({
+      file: name,
+      sourceSHA256: digest(source),
+      responseSHA256: digest(actual),
+      edgeInjection,
+    });
   }
   fs.writeFileSync(
     'captures/served-source-parity.json',
