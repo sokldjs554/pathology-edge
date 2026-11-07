@@ -17,7 +17,7 @@ QuPath·Aperio·에이비스의 공개 화면을 조사해 영상 중심의 검�
 ![개선된 PathologyEdge — 실제 Chromium 화면](artifacts/ui/after-desktop.png)
 
 [변경 전](artifacts/ui/before-desktop.png) · [중복 병합 검토](artifacts/ui/after-merge.png) ·
-[모바일](artifacts/ui/after-390.png) · [조사 출처와 변경 이유](docs/UI_REVIEW.md) · [UI 검증·재현 명령](docs/UI_VERIFICATION.md)
+[모바일](artifacts/ui/after-390.png) · [조사 출처와 변경 이유](docs/UI_REVIEW.md) · [UI 검증·재현 명령](docs/UI_VERIFICATION.md) · [확대 후 이동 오류 수정](docs/PAN_FIX.md)
 
 ## 실제 결과
 
@@ -122,9 +122,9 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 - 사용자 좌표 함수 관련 **12 tests skipped**. 완성 또는 통과로 기록하지 않습니다.
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
-- Chromium 실제 조작 **12 tests**, 화면 좌표 **4 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태 캡처를 확인했습니다. [실행 근거](docs/UI_VERIFICATION.md).
+- Chromium·WebKit 각각 실제 조작 **19 tests**, 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태 캡처를 확인했습니다. [실행 근거](docs/UI_VERIFICATION.md).
 - macOS 11.7.11에서의 사용자 실행은 아직 확인하지 않았습니다.
-- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42374144546), [UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42374144704) 성공. UI 소스 `7429786` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다.
+- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42376086399), [UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42376086501) 성공. UI 소스 `2eb23c9` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
 

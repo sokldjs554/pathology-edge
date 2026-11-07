@@ -1,0 +1,41 @@
+{
+  "baseURL": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "commit": "2eb23c9b8e706d2e2cc9be58be495025f6478107",
+  "files": [
+    {
+      "file": "index.html",
+      "sourceSHA256": "944e3a6bdb355b4ef424338d01373dab3522f43b0c92484b8564d018e2354fa8",
+      "responseSHA256": "9a02d522b36193e611dd61c2e7db854dba551d62020597678ebc8c85b1304a89",
+      "edgeInjection": {
+        "kind": "Cloudflare JS challenge",
+        "rawSHA256": "58c8a1136d4679b55a606a04fb84b95754939f3dc83970ee730c791035292677",
+        "templateSHA256": "69dd8893936a4d122ab9539efcddaa035fe04cda961ccc480c7a2a75b6d07d64",
+        "bytes": 1114
+      }
+    },
+    {
+      "file": "app.js",
+      "sourceSHA256": "d7418b7ec7d1c15d109d637b77f91ec8c8d8087014d08e1334bdb22cb326f67f",
+      "responseSHA256": "d7418b7ec7d1c15d109d637b77f91ec8c8d8087014d08e1334bdb22cb326f67f",
+      "edgeInjection": null
+    },
+    {
+      "file": "style.css",
+      "sourceSHA256": "eb169f10b15254fb98235a5acc54f2f058f56c2c1b90558c661078d628532c99",
+      "responseSHA256": "eb169f10b15254fb98235a5acc54f2f058f56c2c1b90558c661078d628532c99",
+      "edgeInjection": null
+    },
+    {
+      "file": "viewer-math.js",
+      "sourceSHA256": "68629121bdcb1fa8d083894334ff542b0d937e37d1815acad0e8412563970395",
+      "responseSHA256": "68629121bdcb1fa8d083894334ff542b0d937e37d1815acad0e8412563970395",
+      "edgeInjection": null
+    },
+    {
+      "file": "results.json",
+      "sourceSHA256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "responseSHA256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "edgeInjection": null
+    }
+  ]
+}

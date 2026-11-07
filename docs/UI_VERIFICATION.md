@@ -1,5 +1,8 @@
 # UI 검증 기록과 재현
 
+후속 사용자 제보로 확인한 이동 오류와 WebKit 캔버스 수정은 [PAN_FIX](PAN_FIX.md)에 기록했습니다.
+현재 검사는 Chromium/WebKit 각각19개, 좌표5개이며 아래는 최초 UI 개편 당시의 이력입니다.
+
 2026-11-07 · Codex 실행. 사용자 실행·화면 검토 완료를 뜻하지 않습니다.
 [UI 조사/변경 이유](UI_REVIEW.md) · [사용자 검토 순서](REVIEW.md)
 
@@ -87,7 +90,7 @@ UI_BASE_URL=https://pathology-edge-lab.ykh13571.chatgpt.site npx playwright test
 
 또는 GitHub Actions → **UI browser review** → **Run workflow** → target=`checkout`/`production`.
 `production`은 checkout과 배포 파일이 다르면 실패하도록 설계했습니다.
-결과는 `ui-browser-evidence` artifact의 `captures/`, `report.json`, 실패시 trace에 있습니다.
+결과는 `ui-browser-evidence-chromium` / `ui-browser-evidence-webkit` artifact의 `captures/`, `report.json`, 실패시 trace에 있습니다.
 실패를 보낼 때 실행 폴더·명령·commit·전체 오류·대상URL·예제ID·브라우저/창 크기를 함께 적어 주세요.
 
 ## 배포 소스 대조와 호스팅 처리

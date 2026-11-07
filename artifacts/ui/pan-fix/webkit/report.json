@@ -1,0 +1,806 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/pathology-edge/pathology-edge/web-tests/playwright.config.js",
+    "rootDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/2eb23c9b8e706d2e2cc9be58be495025f6478107",
+        "commitHash": "2eb23c9b8e706d2e2cc9be58be495025f6478107",
+        "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/42376303069"
+      },
+      "gitCommit": {
+        "shortHash": "2eb23c9",
+        "hash": "2eb23c9b8e706d2e2cc9be58be495025f6478107",
+        "subject": "Constrain canvas to its visible grid row in WebKit for accurate pan coordinates",
+        "body": "Constrain canvas to its visible grid row in WebKit for accurate pan coordinates\n",
+        "author": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794057299000
+        },
+        "committer": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794057299000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/2eb23c9b8e706d2e2cc9be58be495025f6478107",
+            "commitHash": "2eb23c9b8e706d2e2cc9be58be495025f6478107",
+            "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/42376303069"
+          },
+          "gitCommit": {
+            "shortHash": "2eb23c9",
+            "hash": "2eb23c9b8e706d2e2cc9be58be495025f6478107",
+            "subject": "Constrain canvas to its visible grid row in WebKit for accurate pan coordinates",
+            "body": "Constrain canvas to its visible grid row in WebKit for accurate pan coordinates\n",
+            "author": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794057299000
+            },
+            "committer": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794057299000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.js"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pan.spec.js",
+      "file": "pan.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pan after one zoom step follows both drag axes 1440 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5873,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:34.038Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDAsIm1vZGUiOiJib3VuZGFyeSJ9LCJiZWZvcmUiOlsyNTYsMjU2XSwiYWZ0ZXIiOlsyMzYuNDk1LDIyOS45OTRdLCJ6b29tIjoxLjIzMDQ3LCJleHBlY3RlZCI6eyJ4IjoyMzYuNDk1MjU3OTA5NTc5MjcsInkiOjIyOS45OTM2NzcyMTI3NzIzNX19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-264bb611554c110ab0a9",
+          "file": "pan.spec.js",
+          "line": 31,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 1280 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1634,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:40.406Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxMjgwLCJoZWlnaHQiOjgwMCwibW9kZSI6ImJvdW5kYXJ5In0sImJlZm9yZSI6WzI1NiwyNTZdLCJhZnRlciI6WzIzMi44MTUsMjI1LjA4N10sInpvb20iOjEuMDM1MTYsImV4cGVjdGVkIjp7IngiOjIzMi44MTUxNzgzMjk5MiwieSI6MjI1LjA4NjkwNDQzOTg5MzM1fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-84409b22346a512dd781",
+          "file": "pan.spec.js",
+          "line": 31,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 390 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1463,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:42.050Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjozOTAsImhlaWdodCI6ODQ0LCJtb2RlIjoiYm91bmRhcnkifSwiYmVmb3JlIjpbMjU2LDI1Nl0sImFmdGVyIjpbMjI5LjE0MSwyMjAuMTg4XSwiem9vbSI6MC44OTM1NSwiZXhwZWN0ZWQiOnsieCI6MjI5LjE0MDg0MjcwNjA2MDA4LCJ5IjoyMjAuMTg3NzkwMjc0NzQ2OH19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-d5b208bbeab69d717a1c",
+          "file": "pan.spec.js",
+          "line": 31,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 1440 single",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2155,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:43.521Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDAsIm1vZGUiOiJzaW5nbGUifSwiYmVmb3JlIjpbMjU2LDI1Nl0sImFmdGVyIjpbMjQxLjM3MSwyMzYuNDk1XSwiem9vbSI6MS42NDA2MywiZXhwZWN0ZWQiOnsieCI6MjQxLjM3MTQ3MzE1MzYwNTYyLCJ5IjoyMzYuNDk1Mjk3NTM4MTQwODV9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-7ccc4baa4dfa56b70cf8",
+          "file": "pan.spec.js",
+          "line": 31,
+          "column": 3
+        },
+        {
+          "title": "two-finger style horizontal and vertical wheel events pan without changing zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1877,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:45.686Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wheel-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJiZWZvcmUiOlsyNTYsMjU2XSwiYWZ0ZXIiOlsyNzUuNTA1LDI4Mi4wMDZdLCJ6b29tIjoxLjIzMDQ3LCJhZnRlclpvb20iOjEuMjMwNDd9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-a432d23839a75396f020",
+          "file": "pan.spec.js",
+          "line": 89,
+          "column": 1
+        },
+        {
+          "title": "modifier wheel zoom remains available after wheel panning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1519,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:47.575Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-3a3367884229ca87b055",
+          "file": "pan.spec.js",
+          "line": 109,
+          "column": 1
+        },
+        {
+          "title": "canvas geometry matches the visible pane rather than overflowing below it",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1053,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:49.102Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-fe5676d64e263464129d",
+          "file": "pan.spec.js",
+          "line": 129,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ui.spec.js",
+      "file": "ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all seven images load immediately and metrics/counts match the real export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3960,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:50.197Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-dfe12e112d64a977548c",
+          "file": "ui.spec.js",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "synchronized zoom, drag, overview navigation, keyboard and fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:54.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-c1f5d2f93c0c3fd41db6",
+          "file": "ui.spec.js",
+          "line": 79,
+          "column": 1
+        },
+        {
+          "title": "overlay switches change real pixels and scope metrics correspond to highlighted regions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3243,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:55.911Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-0fa274c74ab7a51be2cf",
+          "file": "ui.spec.js",
+          "line": 131,
+          "column": 1
+        },
+        {
+          "title": "NMS raw-to-kept pair and image click resolve actual exported objects",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2201,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:18:59.160Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-779b24945e5871ea5d4e",
+          "file": "ui.spec.js",
+          "line": 164,
+          "column": 1
+        },
+        {
+          "title": "single image, focus panels and help are usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2192,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:01.369Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-978546a619f2c4bb9505",
+          "file": "ui.spec.js",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "responsive controls 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:03.574Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-d15270732546a23ebe69",
+          "file": "ui.spec.js",
+          "line": 244,
+          "column": 3
+        },
+        {
+          "title": "responsive controls 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1578,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:05.295Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-4a708baa35ab62906dbd",
+          "file": "ui.spec.js",
+          "line": 244,
+          "column": 3
+        },
+        {
+          "title": "responsive controls 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1702,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:06.883Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-d0f50eb5438a300b2cdc",
+          "file": "ui.spec.js",
+          "line": 244,
+          "column": 3
+        },
+        {
+          "title": "loading, HTTP error, retry and empty states never imply a new analysis",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:08.597Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-2e57ac11b7409df6034f",
+          "file": "ui.spec.js",
+          "line": 278,
+          "column": 1
+        },
+        {
+          "title": "failed image clears old numbers; rapid sample changes cannot leave mismatched results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1642,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:10.037Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-97360bf0741a2dd84742",
+          "file": "ui.spec.js",
+          "line": 318,
+          "column": 1
+        },
+        {
+          "title": "served UI and result bytes match this repository commit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 590,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:11.686Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-ed87e45ba1b1b5e22128",
+          "file": "ui.spec.js",
+          "line": 347,
+          "column": 1
+        },
+        {
+          "title": "canvas source pixels match the selected exported image at 1:1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1601,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-07T13:19:12.282Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-a7eb72983ca25de2f4c8",
+          "file": "ui.spec.js",
+          "line": 416,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-07T13:18:33.499Z",
+    "duration": 40472.551,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

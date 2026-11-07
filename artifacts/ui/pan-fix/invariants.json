@@ -1,0 +1,23 @@
+{
+  "baseline": "08c9fd3fea2a297fa902bc03a673ff47ca08c925",
+  "ui_commit": "2eb23c9b8e706d2e2cc9be58be495025f6478107",
+  "research_assets_unchanged": true,
+  "user_function_unchanged": true,
+  "files": [
+    {
+      "file": "dist/results.json",
+      "sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "unchanged": true
+    },
+    {
+      "file": "artifacts/model.pt",
+      "sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+      "unchanged": true
+    },
+    {
+      "file": "src/pathology_edge/learner_coordinates.py",
+      "sha256": "1d89537e7f252042ba5dfa5f5b31ba978fa06b19943c36cb0cf3150413c6c2e9",
+      "unchanged": true
+    }
+  ]
+}
