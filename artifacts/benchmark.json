@@ -1,0 +1,186 @@
+{
+  "rows": [
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "patch_count": 64,
+      "median_ms": 0.24766199999248784,
+      "measurements_ms": [
+        0.4062509999585018,
+        0.24766199999248784,
+        0.20836300018345355,
+        0.43203900008847995,
+        0.24384700009250082,
+        0.3298359999917011,
+        0.3038970000943664,
+        0.20987500010960503,
+        0.23771799988026032
+      ],
+      "peak_process_rss_mib": 41.953125,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "patch_count": 64,
+      "median_ms": 0.12280500004635542,
+      "measurements_ms": [
+        0.4288650000034977,
+        0.14858299982734025,
+        0.1498750000337168,
+        0.1221029999669554,
+        0.12150199995630828,
+        0.12196300008326943,
+        0.1540610001029563,
+        0.12280500004635542,
+        0.12090199993508577
+      ],
+      "peak_process_rss_mib": 42.10546875,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "patch_count": 64,
+      "median_ms": 0.16194299996641348,
+      "measurements_ms": [
+        0.40549999994254904,
+        0.19693600006576162,
+        0.18698099984248984,
+        0.2399410000180069,
+        0.15465199999198376,
+        0.14698099994348013,
+        0.13170700003684033,
+        0.1299049999943236,
+        0.16194299996641348
+      ],
+      "peak_process_rss_mib": 42.01953125,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "patch_count": 64,
+      "median_ms": 0.20842300000367686,
+      "measurements_ms": [
+        0.33800799997152353,
+        0.24169299990717263,
+        0.20842300000367686,
+        0.21540400007324934,
+        0.18800199995894218,
+        0.16067200022007455,
+        0.15390199996545562,
+        0.17446299989387626,
+        0.2160950000416051
+      ],
+      "peak_process_rss_mib": 41.94921875,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "patch_count": 1024,
+      "median_ms": 11.967464999997901,
+      "measurements_ms": [
+        11.236165999889636,
+        10.839779999969323,
+        11.664771000141627,
+        11.967464999997901,
+        12.010119000024133,
+        12.239904999887585,
+        11.932571999977881,
+        12.226325000028737,
+        12.306904000070062
+      ],
+      "peak_process_rss_mib": 188.9296875,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "patch_count": 1024,
+      "median_ms": 8.399602999816125,
+      "measurements_ms": [
+        8.8041220001287,
+        8.285882000109268,
+        9.094005999941146,
+        8.52795600007994,
+        8.085571000037817,
+        7.915335000006962,
+        8.444562000022415,
+        8.131719999937559,
+        8.399602999816125
+      ],
+      "peak_process_rss_mib": 189.6484375,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "patch_count": 1024,
+      "median_ms": 6.761130999848319,
+      "measurements_ms": [
+        8.054153000102815,
+        5.606475999911709,
+        7.969997999907719,
+        6.16117899994606,
+        8.036556999968525,
+        5.984232999935557,
+        8.138310000049387,
+        6.5732890000163025,
+        6.761130999848319
+      ],
+      "peak_process_rss_mib": 188.52734375,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "patch_count": 1024,
+      "median_ms": 5.298642000070686,
+      "measurements_ms": [
+        5.134005999934743,
+        5.280204999962734,
+        6.575471000132893,
+        5.3487580000819435,
+        5.232233000015185,
+        5.1126129999374825,
+        5.298642000070686,
+        6.321429999843531,
+        6.154174000130297
+      ],
+      "peak_process_rss_mib": 188.875,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "memory_scope": "absolute worker peak including parity check with both outputs resident"
+    }
+  ],
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu_count": 5,
+  "input": "seeded random uint8 RGB, not pathology accuracy evidence",
+  "timing_scope": "allocation + crop copy + white padding; no inference or disk I/O",
+  "repeats": 9,
+  "warmups": 1
+}

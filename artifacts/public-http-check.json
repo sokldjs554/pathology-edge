@@ -1,0 +1,30 @@
+{
+  "authentication_sent": false,
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matches_local_sha256": true,
+      "bytes": 6354
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "matches_local_sha256": true,
+      "bytes": 10143
+    },
+    {
+      "path": "results.json",
+      "status": 200,
+      "matches_local_sha256": true,
+      "bytes": 3059966
+    },
+    {
+      "path": "assets/10_1.png",
+      "status": 200,
+      "matches_local_sha256": true,
+      "bytes": 477357
+    }
+  ],
+  "browser_interaction_qa": false
+}

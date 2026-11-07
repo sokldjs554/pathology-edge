@@ -1,0 +1,77 @@
+{
+  "model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+  "images": 7,
+  "comparisons": [
+    {
+      "id": "10_1",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_1",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_2",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_2",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_3",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_3",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_4",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "10_4",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "11_1",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "11_1",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "11_2",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "11_2",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "11_3",
+      "mode": "no_overlap",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "id": "11_3",
+      "mode": "overlap",
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "passed": true
+}

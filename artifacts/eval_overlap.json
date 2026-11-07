@@ -1,0 +1,417 @@
+{
+  "mode": "overlap",
+  "rows": [
+    {
+      "id": "10_1",
+      "group_id": "10",
+      "metrics": {
+        "all": {
+          "tp": 64790,
+          "fp": 70495,
+          "fn": 3454,
+          "pixels": 262144,
+          "dice": 0.6366660279370507,
+          "iou": 0.46699197774237955,
+          "precision": 0.4789148833943157,
+          "recall": 0.9493874919406834
+        },
+        "boundary": {
+          "tp": 11267,
+          "fp": 11800,
+          "fn": 363,
+          "pixels": 46848,
+          "dice": 0.6494509611781999,
+          "iou": 0.4808792146820316,
+          "precision": 0.4884466987471279,
+          "recall": 0.9687876182287188
+        },
+        "interior": {
+          "tp": 53523,
+          "fp": 58695,
+          "fn": 3091,
+          "pixels": 215296,
+          "dice": 0.6340385708870356,
+          "iou": 0.46417018619535333,
+          "precision": 0.4769555686253542,
+          "recall": 0.9454021973363479
+        },
+        "centroid_proxy": {
+          "tp": 81,
+          "fp": 102,
+          "fn": 110,
+          "precision": 0.4426229508196721,
+          "recall": 0.42408376963350786,
+          "f1": 0.43315508021390375
+        }
+      },
+      "median_seconds": 0.3093040609999207,
+      "timings_seconds": [
+        0.34174791800001003,
+        0.3062299810000013,
+        0.3093040609999207
+      ],
+      "raw_count": 430,
+      "merged_count": 183,
+      "suppressed_count": 247,
+      "target_components": 191,
+      "patch_count": 64,
+      "skipped_background": 0
+    },
+    {
+      "id": "10_2",
+      "group_id": "10",
+      "metrics": {
+        "all": {
+          "tp": 17612,
+          "fp": 42258,
+          "fn": 349,
+          "pixels": 262144,
+          "dice": 0.4525703126003777,
+          "iou": 0.2924658330427274,
+          "precision": 0.2941707031902455,
+          "recall": 0.9805690106341518
+        },
+        "boundary": {
+          "tp": 2101,
+          "fp": 10010,
+          "fn": 79,
+          "pixels": 46848,
+          "dice": 0.29403120845287245,
+          "iou": 0.1723543888433142,
+          "precision": 0.1734786557674841,
+          "recall": 0.9637614678899082
+        },
+        "interior": {
+          "tp": 15511,
+          "fp": 32248,
+          "fn": 270,
+          "pixels": 215296,
+          "dice": 0.4882278879446018,
+          "iou": 0.3229507172749797,
+          "precision": 0.3247764819196382,
+          "recall": 0.9828908180723656
+        },
+        "centroid_proxy": {
+          "tp": 6,
+          "fp": 28,
+          "fn": 21,
+          "precision": 0.17647058823529413,
+          "recall": 0.2222222222222222,
+          "f1": 0.19672131147540983
+        }
+      },
+      "median_seconds": 0.17865827100001752,
+      "timings_seconds": [
+        0.17865827100001752,
+        0.21190992900005767,
+        0.17711985999994795
+      ],
+      "raw_count": 71,
+      "merged_count": 34,
+      "suppressed_count": 37,
+      "target_components": 27,
+      "patch_count": 64,
+      "skipped_background": 24
+    },
+    {
+      "id": "10_3",
+      "group_id": "10",
+      "metrics": {
+        "all": {
+          "tp": 41658,
+          "fp": 44353,
+          "fn": 3600,
+          "pixels": 262144,
+          "dice": 0.6346966915265599,
+          "iou": 0.46487596388836194,
+          "precision": 0.4843333992163793,
+          "recall": 0.9204560519687127
+        },
+        "boundary": {
+          "tp": 7690,
+          "fp": 5179,
+          "fn": 652,
+          "pixels": 46848,
+          "dice": 0.7250954693319503,
+          "iou": 0.5687449153169144,
+          "precision": 0.5975600279742016,
+          "recall": 0.9218412850635339
+        },
+        "interior": {
+          "tp": 33968,
+          "fp": 39174,
+          "fn": 2948,
+          "pixels": 215296,
+          "dice": 0.617274527976158,
+          "iou": 0.44641871467998423,
+          "precision": 0.46441169232451945,
+          "recall": 0.9201430274135876
+        },
+        "centroid_proxy": {
+          "tp": 41,
+          "fp": 150,
+          "fn": 48,
+          "precision": 0.21465968586387435,
+          "recall": 0.4606741573033708,
+          "f1": 0.29285714285714287
+        }
+      },
+      "median_seconds": 0.3247012330000416,
+      "timings_seconds": [
+        0.3187344950000579,
+        0.3247012330000416,
+        0.3484026139999514
+      ],
+      "raw_count": 480,
+      "merged_count": 191,
+      "suppressed_count": 289,
+      "target_components": 89,
+      "patch_count": 64,
+      "skipped_background": 0
+    },
+    {
+      "id": "10_4",
+      "group_id": "10",
+      "metrics": {
+        "all": {
+          "tp": 2179,
+          "fp": 11327,
+          "fn": 43,
+          "pixels": 262144,
+          "dice": 0.27708545269582907,
+          "iou": 0.1608236770241346,
+          "precision": 0.16133570265067376,
+          "recall": 0.9806480648064807
+        },
+        "boundary": {
+          "tp": 449,
+          "fp": 2676,
+          "fn": 1,
+          "pixels": 46848,
+          "dice": 0.2511888111888112,
+          "iou": 0.1436340371081254,
+          "precision": 0.14368,
+          "recall": 0.9977777777777778
+        },
+        "interior": {
+          "tp": 1730,
+          "fp": 8651,
+          "fn": 42,
+          "pixels": 215296,
+          "dice": 0.2847033654241751,
+          "iou": 0.16597908471649236,
+          "precision": 0.16665061169444176,
+          "recall": 0.9762979683972912
+        },
+        "centroid_proxy": {
+          "tp": 7,
+          "fp": 76,
+          "fn": 2,
+          "precision": 0.08433734939759036,
+          "recall": 0.7777777777777778,
+          "f1": 0.15217391304347827
+        }
+      },
+      "median_seconds": 0.24720120099993892,
+      "timings_seconds": [
+        0.25796323300005497,
+        0.24335266800005684,
+        0.24720120099993892
+      ],
+      "raw_count": 257,
+      "merged_count": 83,
+      "suppressed_count": 174,
+      "target_components": 9,
+      "patch_count": 64,
+      "skipped_background": 7
+    },
+    {
+      "id": "11_1",
+      "group_id": "11",
+      "metrics": {
+        "all": {
+          "tp": 34852,
+          "fp": 7359,
+          "fn": 40076,
+          "pixels": 262144,
+          "dice": 0.5950537395743518,
+          "iou": 0.42354199326746633,
+          "precision": 0.8256615574139442,
+          "recall": 0.4651398676062353
+        },
+        "boundary": {
+          "tp": 6893,
+          "fp": 1341,
+          "fn": 6434,
+          "pixels": 46848,
+          "dice": 0.6393952043040675,
+          "iou": 0.46993455140441776,
+          "precision": 0.8371386932232208,
+          "recall": 0.5172206798229159
+        },
+        "interior": {
+          "tp": 27959,
+          "fp": 6018,
+          "fn": 33642,
+          "pixels": 215296,
+          "dice": 0.585050953148214,
+          "iou": 0.41347846019609874,
+          "precision": 0.822880183653648,
+          "recall": 0.4538725020697716
+        },
+        "centroid_proxy": {
+          "tp": 115,
+          "fp": 92,
+          "fn": 25,
+          "precision": 0.5555555555555556,
+          "recall": 0.8214285714285714,
+          "f1": 0.6628242074927954
+        }
+      },
+      "median_seconds": 0.3234139019999702,
+      "timings_seconds": [
+        0.3188052970000399,
+        0.33899367899994104,
+        0.3234139019999702
+      ],
+      "raw_count": 624,
+      "merged_count": 207,
+      "suppressed_count": 417,
+      "target_components": 140,
+      "patch_count": 64,
+      "skipped_background": 0
+    },
+    {
+      "id": "11_2",
+      "group_id": "11",
+      "metrics": {
+        "all": {
+          "tp": 5033,
+          "fp": 537,
+          "fn": 5031,
+          "pixels": 262144,
+          "dice": 0.6438531405910196,
+          "iou": 0.4747665314592963,
+          "precision": 0.9035906642728905,
+          "recall": 0.5000993640699523
+        },
+        "boundary": {
+          "tp": 988,
+          "fp": 121,
+          "fn": 1224,
+          "pixels": 46848,
+          "dice": 0.5950015055706113,
+          "iou": 0.42348906986712387,
+          "precision": 0.890892696122633,
+          "recall": 0.44665461121157324
+        },
+        "interior": {
+          "tp": 4045,
+          "fp": 416,
+          "fn": 3807,
+          "pixels": 215296,
+          "dice": 0.6570291561763989,
+          "iou": 0.4892356071601355,
+          "precision": 0.9067473660614213,
+          "recall": 0.5151553744268976
+        },
+        "centroid_proxy": {
+          "tp": 33,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.868421052631579,
+          "f1": 0.9295774647887324
+        }
+      },
+      "median_seconds": 0.2848888570000554,
+      "timings_seconds": [
+        0.27981181300003755,
+        0.2848888570000554,
+        0.30519278999997823
+      ],
+      "raw_count": 116,
+      "merged_count": 33,
+      "suppressed_count": 83,
+      "target_components": 38,
+      "patch_count": 64,
+      "skipped_background": 0
+    },
+    {
+      "id": "11_3",
+      "group_id": "11",
+      "metrics": {
+        "all": {
+          "tp": 14191,
+          "fp": 3516,
+          "fn": 9499,
+          "pixels": 262144,
+          "dice": 0.6856052370944754,
+          "iou": 0.5216128795118724,
+          "precision": 0.8014344609476478,
+          "recall": 0.5990291262135923
+        },
+        "boundary": {
+          "tp": 2137,
+          "fp": 955,
+          "fn": 2735,
+          "pixels": 46848,
+          "dice": 0.5366649924660974,
+          "iou": 0.36674103312167494,
+          "precision": 0.6911384217335058,
+          "recall": 0.4386288998357964
+        },
+        "interior": {
+          "tp": 12054,
+          "fp": 2561,
+          "fn": 6764,
+          "pixels": 215296,
+          "dice": 0.7210839589627015,
+          "iou": 0.5638243135787455,
+          "precision": 0.8247690728703387,
+          "recall": 0.6405569135933681
+        },
+        "centroid_proxy": {
+          "tp": 65,
+          "fp": 23,
+          "fn": 11,
+          "precision": 0.7386363636363636,
+          "recall": 0.8552631578947368,
+          "f1": 0.7926829268292683
+        }
+      },
+      "median_seconds": 0.3442777650000153,
+      "timings_seconds": [
+        0.3442777650000153,
+        0.34714723800004776,
+        0.3165168169999788
+      ],
+      "raw_count": 291,
+      "merged_count": 88,
+      "suppressed_count": 203,
+      "target_components": 76,
+      "patch_count": 64,
+      "skipped_background": 0
+    }
+  ],
+  "macro_dice": {
+    "all": 0.5607900860028092,
+    "boundary": 0.5272611646418014,
+    "interior": 0.5696297743598978
+  },
+  "median_image_seconds": 0.3093040609999207,
+  "peak_process_rss_mib": 437.28125,
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "cpu_count": 5,
+    "torch_threads": 4,
+    "cuda": false,
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "timing_scope": "warm CPU; RGB extraction + tissue gate + forward + stitch + components + NMS; excludes disk I/O, scoring and model load",
+  "memory_scope": "fresh worker absolute peak RSS including runtime/model, validation warmup, image I/O and scoring"
+}

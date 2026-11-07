@@ -1,0 +1,1 @@
+{"prediction_dir": "work/inference", "objects": 183, "seconds": 0.5422229179998794}

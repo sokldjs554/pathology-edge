@@ -11,9 +11,15 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | U04 | 사용자 | 검토·결정 | 좌표계와 리사이즈 설명 | 예정 | 설명 수신 전 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |
-| C01 | Codex | 조사 | 회사·공개 데이터 확인, 공고 원문 접근 실패 기록 | 진행 중 | `docs/RESEARCH.md` 작성 예정 |
-| C02 | Codex | 구현 | 데이터·모델·경계 처리·C++·데모·테스트 | 진행 중 | 실행 후 근거 추가 |
-| C03 | Codex | 검증 | 모델 학습·평가·성능·배포 | 예정 | 실행 후 근거 추가 |
+| C01 | Codex | 조사 | 회사·공개 데이터 확인, 공고 원문 접근 실패 기록 | 완료 | `docs/RESEARCH.md`, `artifacts/data-source.json` |
+| C02 | Codex | 구현 | 데이터·모델·경계 처리·C++·데모·테스트 | 완료 | `src/`, `cpp/`, `dist/`, `tests/` (U01 함수 제외) |
+| C03 | Codex | 실험 | CPU 학습 16 epochs, validation 선택, 고정 test 평가 | 완료 | `artifacts/training.json`, `evaluation.json`, `model.pt` |
+| C04 | Codex | 검증 | Debian·Ubuntu Docker 각 33 tests 통과 | 완료 | `tests-host.txt`, `tests-ubuntu-docker.txt`. 사용자 과제 12 tests는 skip |
+| C05 | Codex | 검증 | 실제 이미지 C++ 일치, 스레드 벤치마크 | 완료 | `cpp_real_parity.json` 14확률맵 동일, `benchmark.json` |
+| C06 | Codex | 배포 | Sites 공개 데모 | 완료 | `artifacts/deployment.json` |
+| C07 | Codex | 화면·출력 | 실제 모델 비교·오류 이미지 생성 및 비교 그림 확인 | 완료 | `boundary_comparison.png`, `error_*.png`. 브라우저 캡처 아님 |
+| C08 | Codex | 화면 | 브라우저 클릭·반응형 UI 검증·화면 캡처 | 미수행 | 지원 브라우저 도구 부재. 정적 파일·DOM 연결 검사는 완료 |
+| C09 | Codex | CI | GitHub Actions 실행 결과 | 확인 대기 | 워크플로 게시 후 실행 상태 확인 |
 
 ## 검토 후 추가할 기록 형식
 

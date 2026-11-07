@@ -1,0 +1,127 @@
+{
+  "created": "2019-02-27T15:20:44.364033+00:00",
+  "modified": "2020-01-24T19:26:09.623258+00:00",
+  "id": 2579118,
+  "conceptrecid": "1174342",
+  "doi": "10.5281/zenodo.2579118",
+  "conceptdoi": "10.5281/zenodo.1174342",
+  "doi_url": "https://doi.org/10.5281/zenodo.2579118",
+  "metadata": {
+    "title": "Segmentation of Nuclei in Histopathology Images by deep regression of the distance map",
+    "doi": "10.5281/zenodo.2579118",
+    "publication_date": "2018-02-16",
+    "description": "<p>This dataset has been annonced in our accepted paper &quot;Segmentation of Nuclei in Histopathology Images by deep regression of the distance map&quot; in Transcation on Medical Imaging on the 13th of August.<br>\nThis dataset consists of 50 annotated images, divided into 11 patients.</p>\n\n<p>&nbsp;</p>\n\n<p>v1.1 (27/02/19): Small corrections to a few pixel that were labelled nuclei but weren&#39;t.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Naylor Peter Jack",
+        "affiliation": "(1) CBIO MINES Paristech PSL (2) Institut Curie (3) INSERM",
+        "orcid": "0000-0002-9984-1736"
+      },
+      {
+        "name": "Walter Thomas",
+        "affiliation": "(1) CBIO MINES Paristech PSL (2) Institut Curie (3) INSERM",
+        "orcid": "0000-0001-7419-7879"
+      },
+      {
+        "name": "Laé Marick",
+        "affiliation": "Pathology departement Institut Curie"
+      },
+      {
+        "name": "Reyal Fabien",
+        "affiliation": "Residual Tumor & Response to treatment Laboratory, RTL2Bab, Institut Curie"
+      }
+    ],
+    "keywords": [
+      "Histopathology; Nuclei segmentation;"
+    ],
+    "version": "1.1",
+    "language": "eng",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 3,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "1174342"
+          }
+        }
+      ]
+    },
+    "notes": "We would like to thank Ligue Nationnal contre le Cancer for funding my PhD."
+  },
+  "title": "Segmentation of Nuclei in Histopathology Images by deep regression of the distance map",
+  "links": {
+    "self": "https://zenodo.org/api/records/2579118",
+    "self_html": "https://zenodo.org/records/2579118",
+    "preview_html": "https://zenodo.org/records/2579118?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.2579118",
+    "self_doi": "https://doi.org/10.5281/zenodo.2579118",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.2579118",
+    "reserve_doi": "https://zenodo.org/api/records/2579118/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/1174342",
+    "parent_html": "https://zenodo.org/records/1174342",
+    "parent_doi": "https://doi.org/10.5281/zenodo.1174342",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1174342",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:2579118/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:2579118/sequence/default",
+    "files": "https://zenodo.org/api/records/2579118/files",
+    "media_files": "https://zenodo.org/api/records/2579118/media-files",
+    "latest": "https://zenodo.org/api/records/2579118/versions/latest",
+    "latest_html": "https://zenodo.org/records/2579118/latest",
+    "versions": "https://zenodo.org/api/records/2579118/versions",
+    "draft": "https://zenodo.org/api/records/2579118/draft",
+    "access_links": "https://zenodo.org/api/records/2579118/access/links",
+    "access_grants": "https://zenodo.org/api/records/2579118/access/grants",
+    "access_users": "https://zenodo.org/api/records/2579118/access/users",
+    "access_request": "https://zenodo.org/api/records/2579118/access/request",
+    "access": "https://zenodo.org/api/records/2579118/access",
+    "communities": "https://zenodo.org/api/records/2579118/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/2579118/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/2579118/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/2579118/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/2579118/quota-increase",
+    "requests": "https://zenodo.org/api/records/2579118/requests"
+  },
+  "updated": "2020-01-24T19:26:09.623258+00:00",
+  "recid": "2579118",
+  "revision": 6,
+  "files": [
+    {
+      "id": "11e3e0d7-86c1-4036-a2c6-1e4f1a6567fa",
+      "key": "TNBC_NucleiSegmentation.zip",
+      "size": 25232361,
+      "checksum": "md5:1605712a752b201b57eacc8f866adb4f",
+      "links": {
+        "self": "https://zenodo.org/api/records/2579118/files/TNBC_NucleiSegmentation.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "42261"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 8555,
+    "unique_downloads": 6831,
+    "views": 20425,
+    "unique_views": 18341,
+    "version_downloads": 1215,
+    "version_unique_downloads": 972,
+    "version_unique_views": 3430,
+    "version_views": 3733
+  },
+  "state": "done",
+  "submitted": true
+}
