@@ -2,7 +2,7 @@ import { defineConfig } from '@playwright/test';
 const remote = process.env.UI_BASE_URL;
 export default defineConfig({
   testDir: '.',
-  testMatch: 'ui.spec.js',
+  testMatch: '*.spec.js',
   workers: 1,
   timeout: 45000,
   outputDir: 'test-results',
@@ -17,7 +17,7 @@ export default defineConfig({
       },
   use: {
     baseURL: remote || 'http://127.0.0.1:8765',
-    browserName: 'chromium',
+    browserName: process.env.UI_BROWSER || 'chromium',
     viewport: { width: 1440, height: 1000 },
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
