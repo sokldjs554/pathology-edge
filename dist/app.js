@@ -651,10 +651,12 @@ function validateData(data) {
 function populateData() {
   const data = state.data;
   $('sampleCount').textContent = data.samples.length;
+  $('traySampleCount').textContent = data.samples.length;
   $('sample').replaceChildren(
     ...data.samples.map((s) => new Option(`TNBC ${s.id}`, s.id)),
   );
   $('sample').disabled = !data.samples.length;
+  if (!data.samples.length) $('sample').append(new Option('예제 없음', ''));
   $('sampleList').replaceChildren();
   for (const s of data.samples) {
     const button = node('button', undefined, 'sample-item');
@@ -725,6 +727,8 @@ function resetNumbers() {
     $(id).textContent = '—';
   $('imageMetrics').replaceChildren();
   $('activeImage').textContent = '결과 대기';
+  $('viewportBounds').textContent = '현재 시야 —';
+  $('cursorPosition').textContent = 'x — · y — px';
   $('componentSelect').replaceChildren(new Option('선택할 후보 없음', ''));
   $('suppressionSelect').replaceChildren(new Option('병합 사례 없음', ''));
   clearSelection();
@@ -745,6 +749,7 @@ async function loadSample(id) {
     '이미지와 오버레이를 불러옵니다. 새로운 추론을 실행하지 않습니다.',
   );
   $('status').textContent = `${id} 결과 파일 불러오는 중…`;
+  $('imageTitle').textContent = `${id} · 결과 파일 로딩`;
   $('sample').value = id;
   const timeout = setTimeout(
     () => controller.abort(new Error('timeout')),
@@ -825,6 +830,7 @@ async function loadSample(id) {
     );
     $('status').textContent =
       `${id} 로딩 실패 · 이전 이미지의 수치는 표시하지 않습니다.`;
+    $('imageTitle').textContent = `${id} · 로딩 실패`;
   } finally {
     clearTimeout(timeout);
   }

@@ -298,6 +298,8 @@ test('loading, HTTP error, retry and empty states never imply a new analysis', a
   await expect(page.locator('#stateTitle')).toHaveText(
     '표시할 예제가 없습니다',
   );
+  await expect(page.locator('#traySampleCount')).toHaveText('0');
+  await expect(page.locator('#sample option')).toHaveText('예제 없음');
   await shot(page, 'state-empty-injected');
 });
 
@@ -312,6 +314,8 @@ test('failed image clears old numbers; rapid sample changes cannot leave mismatc
   await page.locator('#sample').selectOption('11_2');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'error');
   await expect(page.locator('#rawCount')).toHaveText('—');
+  await expect(page.locator('#imageTitle')).toHaveText('11_2 · 로딩 실패');
+  await expect(page.locator('#viewportBounds')).toHaveText('현재 시야 —');
   await expect(page.locator('#imageMetrics tr')).toHaveCount(0);
   await page.unroute(`**/${fail.image}`);
   await page.locator('#retry').click();
