@@ -919,8 +919,22 @@ for (const [i, canvas] of canvases.entries()) {
     (e) => {
       if (state.phase !== 'ready') return;
       e.preventDefault();
-      const p = eventPoint(e, canvas);
-      setZoom(state.zoom * (e.deltaY < 0 ? 1.15 : 1 / 1.15), p.x, p.y, canvas);
+      const d = dimensions(canvas);
+      const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? d.height : 1;
+      const dx = e.deltaX * unit,
+        dy = e.deltaY * unit;
+      if (e.ctrlKey || e.metaKey) {
+        const p = eventPoint(e, canvas);
+        setZoom(state.zoom * Math.exp(-dy * 0.002), p.x, p.y, canvas);
+      } else {
+        // Trackpad two-finger scrolling and ordinary wheels translate the view.
+        state.cx += dx / state.zoom;
+        state.cy += dy / state.zoom;
+        state.fitMode = false;
+        clampView();
+        draw();
+        renderObjectOptions();
+      }
     },
     { passive: false },
   );

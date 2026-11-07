@@ -29,16 +29,18 @@
       y1: clamp(cy + height / (2 * zoom), 0, imageHeight),
     };
   }
-  function clampCenter(width, height, zoom, cx, cy, imageWidth, imageHeight) {
-    const hw = width / (2 * zoom),
-      hh = height / (2 * zoom);
-    return {
-      x: hw >= imageWidth / 2 ? imageWidth / 2 : clamp(cx, hw, imageWidth - hw),
-      y:
-        hh >= imageHeight / 2
-          ? imageHeight / 2
-          : clamp(cy, hh, imageHeight - hh),
-    };
+  function clampCenter(
+    _width,
+    _height,
+    _zoom,
+    cx,
+    cy,
+    imageWidth,
+    imageHeight,
+  ) {
+    // Keep the viewport center on the source, so the image cannot be lost.
+    // Requiring the image to fill the viewport froze an axis at modest zoom.
+    return { x: clamp(cx, 0, imageWidth), y: clamp(cy, 0, imageHeight) };
   }
   function zoomAt(width, height, zoom, cx, cy, x, y, nextZoom) {
     const anchor = toImage(x, y, transform(width, height, zoom, cx, cy));

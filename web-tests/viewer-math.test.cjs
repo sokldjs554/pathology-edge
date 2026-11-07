@@ -20,16 +20,24 @@ test('cursor anchor remains the same source pixel through zoom', () => {
     assert.ok(Math.abs(actual.y - before.y) < 1e-10);
   }
 });
-test('pan cannot expose space outside the source when zoomed; small images remain centered', () => {
+test('slightly zoomed views can move along an axis that still fits the image', () => {
+  // 528 x 696 viewport, 512px source at 1.25x: source height 640 still fits.
+  const c = M.clampCenter(528, 696, 1.25, 232, 224, 512, 512);
+  assert.equal(c.x, 232);
+  assert.equal(c.y, 224);
+  // A wide single view must also allow horizontal motion.
+  const single = M.clampCenter(1058, 696, 1.5, 220, 230, 512, 512);
+  assert.equal(single.x, 220);
+  assert.equal(single.y, 230);
+});
+test('panning stays recoverable at image edges and bounds remain valid', () => {
   const c = M.clampCenter(400, 300, 2, -100, 900, 512, 512);
-  assert.equal(c.x, 100);
-  assert.equal(c.y, 437);
+  assert.equal(c.x, 0);
+  assert.equal(c.y, 512);
   const b = M.bounds(400, 300, 2, c.x, c.y, 512, 512);
   assert.equal(b.x0, 0);
   assert.equal(b.y1, 512);
-  const f = M.clampCenter(900, 700, 1, 100, -20, 512, 512);
-  assert.equal(f.x, 256);
-  assert.equal(f.y, 256);
+  assert.ok(b.x1 > b.x0 && b.y1 > b.y0);
 });
 test('fit shows the complete source with padding and round-trips image coordinates', () => {
   const z = M.fitZoom(400, 300, 512, 512);

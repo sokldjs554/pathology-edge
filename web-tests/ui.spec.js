@@ -96,7 +96,9 @@ test('synchronized zoom, drag, overview navigation, keyboard and fit', async ({
   await expect(page.locator('#after')).not.toHaveAttribute('data-center', old);
   await synced(page);
   const z = Number(await page.locator('#after').getAttribute('data-zoom'));
+  await page.keyboard.down('Control');
   await page.mouse.wheel(0, -150);
+  await page.keyboard.up('Control');
   await expect
     .poll(async () =>
       Number(await page.locator('#after').getAttribute('data-zoom')),
