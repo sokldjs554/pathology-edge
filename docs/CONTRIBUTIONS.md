@@ -18,8 +18,12 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | C05 | Codex | 검증 | 실제 이미지 C++ 일치, 스레드 벤치마크 | 완료 | `cpp_real_parity.json` 14확률맵 동일, `benchmark.json` |
 | C06 | Codex | 배포 | Sites 공개 데모 | 완료 | `artifacts/deployment.json` |
 | C07 | Codex | 화면·출력 | 실제 모델 비교·오류 이미지 생성 및 비교 그림 확인 | 완료 | `boundary_comparison.png`, `error_*.png`. 브라우저 캡처 아님 |
-| C08 | Codex | 화면 | 브라우저 클릭·반응형 UI 검증·화면 캡처 | 미수행 | 지원 브라우저 도구 부재. 정적 파일·DOM 연결 검사는 완료 |
+| C08 | Codex | 화면 | 실제 Chromium 조작·반응형 UI 검증·캡처 시각 검토 | 완료 | GitHub Actions에서 12 browser tests, 4 geometry tests. `docs/UI_VERIFICATION.md`, `artifacts/ui/` |
 | C09 | Codex | CI | GitHub Actions Ubuntu 설치·C++ 빌드·테스트·정적 데모 검사 | 완료 | `artifacts/github-ci.json`, run `42364930156`, 소스 commit `0a9c24c` 성공 |
+| C10 | Codex | 조사·설계 | QuPath·Aperio·에이비스 공개 화면을 참고한 작업대 UI 설계 | 완료 | `docs/UI_REVIEW.md`. 제품 설치/임상 워크플로 수행은 아님 |
+| C11 | Codex | 구현 | 즉시 예제 선택, 개요도, 경계 영역, raw→NMS 대응, 모바일 A/B, 실제 파일 상태 처리 | 완료 | `dist/`, UI source commit `7429786` |
+| C12 | Codex | 보존 확인 | 모델·결과 JSON·42개 PNG·사용자 함수 바이트 보존 | 완료 | `artifacts/ui/invariants.json` |
+| C13 | Codex | 배포·검증 | 공개 버전3 배포, 소스 대조, 공개 주소에서 최종12개 UI 테스트 | 완료 | `artifacts/ui/deployment.json`, `verification.json`, run42374425111 |
 
 ## 검토 후 추가할 기록 형식
 

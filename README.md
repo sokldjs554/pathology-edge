@@ -8,6 +8,17 @@
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **H&E 핵 분할입니다. Ki-67 양성률, 종양 세포 분류, WSI 전체 성능은 검증하지 않았습니다.**
 
+## 영상 작업대
+
+QuPath·Aperio·에이비스의 공개 화면을 조사해 영상 중심의 검토 화면으로 구성했습니다.
+썸네일 선택 → 같은 위치 확대 → 경계 비교 → 억제/유지 후보 추적을 한 화면에서 수행합니다.
+큰 화면은 동기화 A/B, 작은 화면은 같은 시야의 A/B 전환입니다. 사전 계산된 실제 결과를 표시하며 새 추론을 실행하지 않습니다.
+
+![개선된 PathologyEdge — 실제 Chromium 화면](artifacts/ui/after-desktop.png)
+
+[변경 전](artifacts/ui/before-desktop.png) · [중복 병합 검토](artifacts/ui/after-merge.png) ·
+[모바일](artifacts/ui/after-390.png) · [조사 출처와 변경 이유](docs/UI_REVIEW.md) · [UI 검증·재현 명령](docs/UI_VERIFICATION.md)
+
 ## 실제 결과
 
 TNBC v1.1의 50개 512×512 이미지·이진 핵 마스크를 사용했습니다.
@@ -111,9 +122,9 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 - 사용자 좌표 함수 관련 **12 tests skipped**. 완성 또는 통과로 기록하지 않습니다.
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
-- 브라우저 클릭·화면 캡처는 지원 도구 부재로 미검증입니다. UI 테스트 계획을 [REVIEW](docs/REVIEW.md)에 제공합니다.
+- Chromium 실제 조작 **12 tests**, 화면 좌표 **4 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태 캡처를 확인했습니다. [실행 근거](docs/UI_VERIFICATION.md).
 - macOS 11.7.11에서의 사용자 실행은 아직 확인하지 않았습니다.
-- GitHub Actions: [run 42364930156](https://github.com/sokldjs554/pathology-edge/actions/runs/42364930156) 성공. 소스 commit `0a9c24c`의 설치·C++ 빌드·pytest·JS 구문·데모 파일 검사를 실행했습니다. 이후 CI 기록만 추가한 문서 커밋은 재실행하지 않았습니다.
+- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42374144546), [UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42374144704) 성공. UI 소스 `7429786` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
 

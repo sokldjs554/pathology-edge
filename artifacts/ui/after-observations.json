@@ -1,0 +1,28 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "bodyHeight": 1000,
+  "before": {
+    "x": 102,
+    "y": 227,
+    "width": 528,
+    "height": 696,
+    "top": 227,
+    "right": 630,
+    "bottom": 923,
+    "left": 102
+  },
+  "after": {
+    "x": 632,
+    "y": 227,
+    "width": 528,
+    "height": 696,
+    "top": 227,
+    "right": 1160,
+    "bottom": 923,
+    "left": 632
+  },
+  "overflow": false
+}
