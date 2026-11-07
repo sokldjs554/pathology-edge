@@ -19,7 +19,7 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | C06 | Codex | 배포 | Sites 공개 데모 | 완료 | `artifacts/deployment.json` |
 | C07 | Codex | 화면·출력 | 실제 모델 비교·오류 이미지 생성 및 비교 그림 확인 | 완료 | `boundary_comparison.png`, `error_*.png`. 브라우저 캡처 아님 |
 | C08 | Codex | 화면 | 브라우저 클릭·반응형 UI 검증·화면 캡처 | 미수행 | 지원 브라우저 도구 부재. 정적 파일·DOM 연결 검사는 완료 |
-| C09 | Codex | CI | GitHub Actions 실행 결과 | 확인 대기 | 워크플로 게시 후 실행 상태 확인 |
+| C09 | Codex | CI | GitHub Actions Ubuntu 설치·C++ 빌드·테스트·정적 데모 검사 | 완료 | `artifacts/github-ci.json`, run `42364930156`, 소스 commit `0a9c24c` 성공 |
 
 ## 검토 후 추가할 기록 형식
 

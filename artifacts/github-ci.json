@@ -1,0 +1,10 @@
+{
+  "run_id": 42364930156,
+  "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/42364930156",
+  "status": "completed",
+  "conclusion": "success",
+  "commit": "0a9c24c2c33d05b336b74812c0ab2299932e6275",
+  "workflow": "CPU checks",
+  "updated_at": "2026-11-07T10:41:21Z",
+  "scope": "Ubuntu 24.04: package install, C++ build, pytest, JavaScript syntax, demo artifact validation"
+}

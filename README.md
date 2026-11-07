@@ -113,7 +113,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
 - 브라우저 클릭·화면 캡처는 지원 도구 부재로 미검증입니다. UI 테스트 계획을 [REVIEW](docs/REVIEW.md)에 제공합니다.
 - macOS 11.7.11에서의 사용자 실행은 아직 확인하지 않았습니다.
-- GitHub Actions 상태: 아래 배지 및 Actions 페이지의 실제 결과를 확인하세요. 로컬 성공을 CI 성공으로 대신하지 않습니다.
+- GitHub Actions: [run 42364930156](https://github.com/sokldjs554/pathology-edge/actions/runs/42364930156) 성공. 소스 commit `0a9c24c`의 설치·C++ 빌드·pytest·JS 구문·데모 파일 검사를 실행했습니다. 이후 CI 기록만 추가한 문서 커밋은 재실행하지 않았습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
 
