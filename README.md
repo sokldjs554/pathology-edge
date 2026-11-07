@@ -12,12 +12,14 @@
 
 QuPath·Aperio·에이비스의 공개 화면을 조사해 영상 중심의 검토 화면으로 구성했습니다.
 썸네일 선택 → 같은 위치 확대 → 경계 비교 → 억제/유지 후보 추적을 한 화면에서 수행합니다.
+‘좋아진 경계 보기’는 `11_1`, ‘나빠진 경계 보기’는 `10_3`의 실제 오류 변화로 이동합니다.
+‘현재 예제 경계’로 `10_1`의 악화도 확인할 수 있습니다. 정답과 대조한 11개 국소 사례는 사후 설명용이며 평균 성능의 대표값이 아닙니다.
 큰 화면은 동기화 A/B, 작은 화면은 같은 시야의 A/B 전환입니다. 사전 계산된 실제 결과를 표시하며 새 추론을 실행하지 않습니다.
 
-![개선된 PathologyEdge — 실제 Chromium 화면](artifacts/ui/after-desktop.png)
+![실제 차이가 있는 경계 — Chromium 화면](artifacts/ui/interview/after-improved.png)
 
-[변경 전](artifacts/ui/before-desktop.png) · [중복 병합 검토](artifacts/ui/after-merge.png) ·
-[모바일](artifacts/ui/after-390.png) · [조사 출처와 변경 이유](docs/UI_REVIEW.md) · [UI 검증·재현 명령](docs/UI_VERIFICATION.md) · [확대 후 이동 오류 수정](docs/PAN_FIX.md)
+[이번 변경 전](artifacts/ui/interview/before-desktop.png) · [악화 경계](artifacts/ui/interview/after-worsened.png) · [실험 비교](artifacts/ui/interview/after-experiment.png) ·
+[모바일](artifacts/ui/interview/after-390.png) · [사례 선택·수치 대조·직접 확인 순서](docs/INTERVIEW_UI.md) · [조사 출처와 변경 이유](docs/UI_REVIEW.md) · [UI 검증·재현 명령](docs/UI_VERIFICATION.md) · [확대 후 이동 오류 수정](docs/PAN_FIX.md)
 
 ## 실제 결과
 
@@ -118,13 +120,13 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: Debian **33 passed**, Ubuntu 24.04 Docker **33 passed**.
+- 일반 테스트: 현재 호스트·Ubuntu Actions **36 passed**. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
 - 사용자 좌표 함수 관련 **12 tests skipped**. 완성 또는 통과로 기록하지 않습니다.
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
-- Chromium·WebKit 각각 실제 조작 **19 tests**, 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태 캡처를 확인했습니다. [실행 근거](docs/UI_VERIFICATION.md).
+- Chromium·WebKit 각각 실제 조작 **26 tests**, 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태 캡처를 확인했습니다. [실행 근거](docs/INTERVIEW_UI.md). 공개 버전5에서도 동일한 26개 검사를 각 엔진에서 통과했습니다.
 - macOS 11.7.11에서의 사용자 실행은 아직 확인하지 않았습니다.
-- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42376086399), [UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42376086501) 성공. UI 소스 `2eb23c9` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다.
+- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42401568523), [UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42401568608) 성공. [공개 주소 재검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42401871346)도 성공했습니다. UI 소스 `9278071` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
 

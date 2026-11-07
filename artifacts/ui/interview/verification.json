@@ -1,0 +1,38 @@
+{
+  "github_ui_commit": "92780713cd6fd83d74fe39eca4e3fe33cf9fe0be",
+  "sites_source_commit": "21855b4d96bb853ddd09966ceb9bc8a5e1a93fd2",
+  "version": 5,
+  "production_run": 42401871346,
+  "checkout_run": 42401568608,
+  "cpu_run": 42401568523,
+  "python_tests": {
+    "passed": 36,
+    "skipped_learner": 12
+  },
+  "geometry_tests": 5,
+  "browsers": {
+    "webkit": {
+      "startTime": "2026-11-07T18:33:59.543Z",
+      "duration": 73700.261,
+      "expected": 26,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "chromium": {
+      "startTime": "2026-11-07T18:33:48.321Z",
+      "duration": 54689.701,
+      "expected": 26,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "live_files_matched": 49,
+  "user_checks": "Pending; no new user completion recorded",
+  "limitations": [
+    "Headless Chromium/WebKit on Ubuntu via GitHub Actions; not physical macOS Safari or trackpad hardware",
+    "Post-hoc GT-selected examples, 7 PNGs / 2 case groups, single seed",
+    "No Ki-67 quantification, whole-WSI/external/clinical validation"
+  ]
+}

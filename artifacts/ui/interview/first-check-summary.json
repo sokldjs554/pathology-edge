@@ -1,0 +1,21 @@
+{
+  "commit": "961d7f30ef16aa8080ce71d083221ae22ddb5a0b",
+  "run": 42401277367,
+  "chromium": {
+    "startTime": "2026-11-07T18:26:34.674Z",
+    "duration": 31082.345999999998,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "webkit": {
+    "startTime": "2026-11-07T18:26:59.585Z",
+    "duration": 47656.093,
+    "expected": 26,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "failure_cause": "New paragraph line-height 18.2 CSS px caused 629.8125px canvas height. The rounded backing-store edge was only partially repainted and the 1:1 image origin was fractional. Fixed integer paragraph line-height and full backing-store background fill. Original exact pixel assertions retained."
+}

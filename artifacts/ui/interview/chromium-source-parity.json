@@ -1,0 +1,53 @@
+{
+  "baseURL": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "commit": "92780713cd6fd83d74fe39eca4e3fe33cf9fe0be",
+  "files": [
+    {
+      "file": "index.html",
+      "sourceSHA256": "6c46c924460c0691e788c75ba310ecbc4ae57a68bf0edd87fe3222e345b8c902",
+      "responseSHA256": "08ba9117c7e4a403a01c35e59b09b28505b98d335ecd9f8fd91a29d9d15fb82b",
+      "edgeInjection": {
+        "kind": "Cloudflare JS challenge",
+        "rawSHA256": "3c5ee25b248a75056e0cfae4e4db049f45f5864a937ba715b66d3dc228abcecd",
+        "templateSHA256": "69dd8893936a4d122ab9539efcddaa035fe04cda961ccc480c7a2a75b6d07d64",
+        "bytes": 1114
+      }
+    },
+    {
+      "file": "app.js",
+      "sourceSHA256": "da10825ee92a9e0428447a5a854e7e41798eb3141dbef75e289b45f26483c732",
+      "responseSHA256": "da10825ee92a9e0428447a5a854e7e41798eb3141dbef75e289b45f26483c732",
+      "edgeInjection": null
+    },
+    {
+      "file": "style.css",
+      "sourceSHA256": "1467e3f5ad78e6265160147a2151cec5d9a0b6ddd8f474315ad06c3285ea47aa",
+      "responseSHA256": "1467e3f5ad78e6265160147a2151cec5d9a0b6ddd8f474315ad06c3285ea47aa",
+      "edgeInjection": null
+    },
+    {
+      "file": "viewer-math.js",
+      "sourceSHA256": "68629121bdcb1fa8d083894334ff542b0d937e37d1815acad0e8412563970395",
+      "responseSHA256": "68629121bdcb1fa8d083894334ff542b0d937e37d1815acad0e8412563970395",
+      "edgeInjection": null
+    },
+    {
+      "file": "review-ui.js",
+      "sourceSHA256": "c46667ddcbdec4f3ada495a4cf1d7237eb946a174722f04f67d977ccab0d9724",
+      "responseSHA256": "c46667ddcbdec4f3ada495a4cf1d7237eb946a174722f04f67d977ccab0d9724",
+      "edgeInjection": null
+    },
+    {
+      "file": "cases.json",
+      "sourceSHA256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "responseSHA256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "edgeInjection": null
+    },
+    {
+      "file": "results.json",
+      "sourceSHA256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "responseSHA256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "edgeInjection": null
+    }
+  ]
+}

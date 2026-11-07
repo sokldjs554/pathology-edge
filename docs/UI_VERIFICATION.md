@@ -1,5 +1,7 @@
 # UI 검증 기록과 재현
 
+최신 경계 사례·설명 UI와 공개 버전5 검증은 [INTERVIEW_UI.md](INTERVIEW_UI.md)에 있습니다. 아래는 기존 작업대 개편 당시의 기록입니다.
+
 후속 사용자 제보로 확인한 이동 오류와 WebKit 캔버스 수정은 [PAN_FIX](PAN_FIX.md)에 기록했습니다.
 현재 검사는 Chromium/WebKit 각각19개, 좌표5개이며 아래는 최초 UI 개편 당시의 이력입니다.
 
