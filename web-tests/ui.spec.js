@@ -138,9 +138,10 @@ test('overlay switches change real pixels and scope metrics correspond to highli
   expect(await bitmap(page)).not.toBe(plain);
   await page.locator('#truth').uncheck();
   await page.locator('#segmentation').check();
-  await page.locator('#opacity').fill('0');
+  await page.locator('#opacity').focus();
+  await page.keyboard.press('Home');
   expect(await bitmap(page)).toBe(plain);
-  await page.locator('#opacity').fill('25');
+  for (let i = 0; i < 25; i++) await page.keyboard.press('ArrowRight');
   await expect(page.locator('#opacityValue')).toHaveText('25%');
   await page.locator('#grid').uncheck();
   expect(await bitmap(page)).not.toBe(initial);
