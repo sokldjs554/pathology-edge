@@ -1,6 +1,12 @@
 name: UI browser review
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: 'Browser target'
+        type: choice
+        options: [checkout, production]
+        default: checkout
   push:
     paths: ['web-tests/**', 'dist/**', '.github/workflows/ui-review.yml']
 permissions:
@@ -19,7 +25,10 @@ jobs:
         working-directory: web-tests
       - run: npx playwright install --with-deps chromium
         working-directory: web-tests
+      - run: node --test web-tests/viewer-math.test.cjs
       - run: npx playwright test
+        env:
+          UI_BASE_URL: ${{ inputs.target == 'production' && 'https://pathology-edge-lab.ykh13571.chatgpt.site' || '' }}
         working-directory: web-tests
       - uses: actions/upload-artifact@v4
         if: always()

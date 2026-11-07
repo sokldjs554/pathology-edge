@@ -1,0 +1,58 @@
+{
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "layout": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "bodyHeight": 1472,
+    "before": {
+      "x": 293,
+      "y": 418,
+      "width": 550,
+      "height": 550,
+      "top": 418,
+      "right": 843,
+      "bottom": 968,
+      "left": 293
+    },
+    "after": {
+      "x": 861,
+      "y": 418,
+      "width": 550,
+      "height": 550,
+      "top": 418,
+      "right": 1411,
+      "bottom": 968,
+      "left": 861
+    },
+    "selected": {
+      "x": 312,
+      "y": 1188.796875,
+      "width": 410.609375,
+      "height": 0,
+      "top": 1188.796875,
+      "right": 722.609375,
+      "bottom": 1188.796875,
+      "left": 312
+    },
+    "initialImage": "TNBC / 10_1 · 512 × 512"
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyHeight": 2165,
+    "canvas": {
+      "x": 15,
+      "y": 1226.96875,
+      "width": 174,
+      "height": 174,
+      "top": 1226.96875,
+      "right": 189,
+      "bottom": 1400.96875,
+      "left": 15
+    }
+  },
+  "beforeLoad": "TNBC / 10_1 · 512 × 512",
+  "errors": []
+}
