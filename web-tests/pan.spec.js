@@ -100,15 +100,18 @@ test('modifier wheel zoom remains available after wheel panning', async ({
   page,
 }) => {
   await open(page);
-  const initial = await scale(page);
-  await page.locator('#after').hover({ position: { x: 200, y: 200 } });
-  await page.keyboard.down('Control');
-  await page.mouse.wheel(0, -120);
-  await page.keyboard.up('Control');
-  await expect.poll(() => scale(page)).toBeGreaterThan(initial);
-  const zoom = await scale(page),
-    before = await center(page);
-  await page.mouse.wheel(12, 18);
-  await expect.poll(() => center(page)).not.toEqual(before);
-  expect(await scale(page)).toBe(zoom);
+  for (const modifier of ['Control', 'Meta']) {
+    await page.locator('#fit').click();
+    const initial = await scale(page);
+    await page.locator('#after').hover({ position: { x: 200, y: 200 } });
+    await page.keyboard.down(modifier);
+    await page.mouse.wheel(0, -120);
+    await page.keyboard.up(modifier);
+    await expect.poll(() => scale(page)).toBeGreaterThan(initial);
+    const zoom = await scale(page),
+      before = await center(page);
+    await page.mouse.wheel(12, 18);
+    await expect.poll(() => center(page)).not.toEqual(before);
+    expect(await scale(page)).toBe(zoom);
+  }
 });

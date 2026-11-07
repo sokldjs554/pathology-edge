@@ -318,11 +318,16 @@ test('loading, HTTP error, retry and empty states never imply a new analysis', a
 test('failed image clears old numbers; rapid sample changes cannot leave mismatched results', async ({
   page,
 }) => {
-  await open(page);
   const fail = data.samples.find((s) => s.id === '11_2');
+  // Install the failed response before thumbnails can populate WebKit's image cache.
   await page.route(`**/${fail.image}`, (route) =>
-    route.fulfill({ status: 404, body: 'missing' }),
+    route.fulfill({
+      status: 404,
+      headers: { 'cache-control': 'no-store' },
+      body: 'missing',
+    }),
   );
+  await open(page);
   await page.locator('#sample').selectOption('11_2');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'error');
   await expect(page.locator('#rawCount')).toHaveText('—');
