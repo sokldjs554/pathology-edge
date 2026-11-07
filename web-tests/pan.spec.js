@@ -41,6 +41,16 @@ for (const view of [
       .locator('#after')
       .evaluate((c) => c.toDataURL());
     await drag(page, 24, 32);
+    // Rendering is scheduled with requestAnimationFrame; wait for both axes to paint.
+    await expect
+      .poll(async () => {
+        const [x, y] = await center(page);
+        return Math.max(
+          Math.abs(x - (before[0] - 24 / zoom)),
+          Math.abs(y - (before[1] - 32 / zoom)),
+        );
+      })
+      .toBeLessThan(0.05);
     const after = await center(page);
     await testInfo.attach('pan-diagnostic', {
       body: JSON.stringify({
@@ -113,5 +123,25 @@ test('modifier wheel zoom remains available after wheel panning', async ({
     await page.mouse.wheel(12, 18);
     await expect.poll(() => center(page)).not.toEqual(before);
     expect(await scale(page)).toBe(zoom);
+  }
+});
+
+test('canvas geometry matches the visible pane rather than overflowing below it', async ({
+  page,
+}) => {
+  await open(page);
+  for (const id of ['before', 'after']) {
+    const geometry = await page.locator('#' + id).evaluate((c) => {
+      const pane = c.closest('.pane'),
+        r = pane.getBoundingClientRect();
+      return {
+        actual: c.getBoundingClientRect().height,
+        available:
+          r.height -
+          pane.querySelector('.pane-header').getBoundingClientRect().height -
+          pane.querySelector('.pane-caption').getBoundingClientRect().height,
+      };
+    });
+    expect(geometry.actual).toBeCloseTo(geometry.available, 0);
   }
 });
