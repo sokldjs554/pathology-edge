@@ -1,83 +1,465 @@
 <!doctype html>
 <html lang="ko">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PathologyEdge · 패치 경계 검토</title>
-<meta name="description" content="실제 TNBC 핵 분할 결과를 같은 시야에서 비교하는 연구용 병리 이미지 작업대">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="app-header">
- <a class="brand" href="./" aria-label="PathologyEdge 처음으로"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></svg>Pathology<span>Edge</span></a>
- <span class="app-title">패치 경계 검토</span>
- <div class="header-right"><span class="research-label">연구·교육용</span><span class="data-label">사전 계산 결과 · 실시간 추론 아님</span><button id="help" class="quiet">사용 안내</button><a href="https://github.com/sokldjs554/pathology-edge" target="_blank" rel="noreferrer" class="repo-link">GitHub ↗</a></div>
-</header>
-<nav class="study-bar" aria-label="작업 설정">
- <button id="toggleTray" aria-expanded="true" aria-controls="tray">예제 <span id="sampleCount">0</span></button>
- <label class="sr-only" for="sample">예제 이미지</label><select id="sample" disabled><option>예제 불러오는 중…</option></select>
- <span id="imageTitle" class="image-title">TNBC · H&E · 512 × 512 px</span>
- <div class="study-actions"><button id="focusMode" aria-pressed="false">영상 넓게</button><button id="toggleInspector" aria-expanded="true" aria-controls="inspector">결과 패널</button></div>
-</nav>
-<main class="workbench" id="workbench">
- <aside class="sample-tray" id="tray" aria-label="예제 이미지 목록">
-  <div class="tray-label">TEST IMAGES</div><div id="sampleList" class="sample-list"></div>
-  <div class="tray-footer">7개 예제<br>512px PNG<br><span>WSI 전체 아님</span></div>
- </aside>
- <section class="viewer-workspace" aria-label="영상 비교 작업대">
-  <div class="toolbar">
-   <div class="segmented" aria-label="비교 방식"><button id="modeBoundary" aria-pressed="true">경계 전후</button><button id="modeMerge" aria-pressed="false">중복 병합</button><button id="modeSingle" aria-pressed="false">단일 영상</button></div>
-   <div class="toolbar-divider"></div>
-   <div class="zoom-tools"><button id="zoomout" aria-label="축소">−</button><output id="zoomvalue" aria-label="화면 배율">—</output><button id="zoomin" aria-label="확대">+</button><button id="fit" title="전체 이미지 맞춤 (F)">맞춤</button><button id="nativeZoom" title="이미지 1px = 화면 1 CSS px">1:1</button></div>
-   <button id="jumpBoundary" class="accent-button" title="기준 패치 경계의 교차점으로 이동">경계로 이동</button>
-  </div>
-  <div class="layer-bar" aria-label="결과 표시">
-   <label><input type="checkbox" id="segmentation" checked><i class="swatch mask"></i>분할</label>
-   <label><input type="checkbox" id="objects"><i class="swatch objects"></i>후보</label>
-   <label><input type="checkbox" id="grid" checked><i class="swatch seam"></i>패치 경계</label>
-   <label><input type="checkbox" id="truth"><i class="swatch truth"></i>정답</label>
-   <label class="opacity-control" for="opacity">불투명도 <input type="range" id="opacity" min="0" max="70" value="25"><output id="opacityValue">25%</output></label>
-  </div>
-  <div class="context-bar"><span id="modeDescription">같은 모델 · 무겹침과 64px 겹침을 같은 시야에서 비교</span><span class="sync-label">↔ 시야 동기화</span></div>
-  <div class="mobile-pane-switch segmented" aria-label="작은 화면에서 전후 전환"><button id="mobileBefore" aria-pressed="false">전</button><button id="mobileAfter" aria-pressed="true">후</button></div>
-  <div class="stage" id="stage" aria-busy="true">
-   <div class="panes" id="panes">
-    <article class="pane" id="beforePane"><div class="pane-header"><span class="pane-key">A</span><strong id="beforeTitle">무겹침</strong><span id="beforeMeta">stride 128</span><span id="countBefore" class="pane-count"></span></div><canvas id="before" tabindex="0" aria-label="A 영상: 드래그 이동, 휠 확대, 후보 클릭"></canvas><div class="pane-caption"><span id="diceBefore">Dice —</span><span id="scopeBefore">전체 이미지</span></div></article>
-    <article class="pane" id="afterPane"><div class="pane-header"><span class="pane-key after">B</span><strong id="afterTitle">겹침 + 병합</strong><span id="afterMeta">stride 64</span><span id="countAfter" class="pane-count"></span></div><canvas id="after" tabindex="0" aria-label="B 영상: 드래그 이동, 휠 확대, 후보 클릭"></canvas><div class="pane-caption"><span id="diceAfter">Dice —</span><span id="scopeAfter">전체 이미지</span></div></article>
-   </div>
-   <div class="navigator" id="navigatorBox"><div>전체 위치 <span>PNG</span></div><canvas id="navigator" width="120" height="120" tabindex="0" aria-label="전체 위치 개요도. 클릭 또는 방향키로 이동"></canvas></div>
-   <div class="stage-message" id="stageMessage"><div class="state-symbol" id="stateSymbol" aria-hidden="true">◌</div><strong id="stateTitle">저장된 결과를 불러오는 중</strong><p id="stateDetail">모델을 새로 실행하지 않습니다.</p><button id="retry" hidden>다시 불러오기</button></div>
-  </div>
-  <div class="viewport-bar"><span id="viewportBounds">현재 시야 —</span><span id="cursorPosition">x — · y — px</span><span class="interaction-hint">드래그 이동 · 휠 확대 · 후보 클릭</span></div>
- </section>
- <aside class="inspector" id="inspector" aria-label="결과와 선택한 후보">
-  <div class="inspector-heading"><strong>검토 결과</strong><button id="closeInspector" class="quiet" aria-label="결과 패널 닫기">×</button></div>
-  <div class="inspector-tabs" role="tablist" aria-label="결과 패널 탭"><button id="tabImage" role="tab" aria-selected="true" aria-controls="panelImage">이미지</button><button id="tabObject" role="tab" aria-selected="false" aria-controls="panelObject">선택 후보</button><button id="tabExperiment" role="tab" aria-selected="false" aria-controls="panelExperiment">실험</button></div>
-  <div class="inspector-scroll">
-   <section id="panelImage" role="tabpanel" aria-labelledby="tabImage">
-    <div class="panel-section"><span class="eyebrow">ACTIVE IMAGE</span><h1 id="activeImage">예제 선택</h1><p class="muted">저장된 분할 결과와 정답을 비교합니다.</p></div>
-    <div class="panel-section"><div class="section-heading"><h2>평가 영역</h2><span id="metricScope">전체 512 × 512 px</span></div>
-     <div class="segmented scope-controls"><button id="scopeAll" aria-pressed="true">전체</button><button id="scopeBoundary" aria-pressed="false">경계</button><button id="scopeInterior" aria-pressed="false">내부</button></div>
-     <p id="scopeExplanation" class="note">아래 지표는 전체 이미지 기준입니다. 확대·이동해도 재계산하지 않습니다.</p>
-     <table class="metric-table"><thead><tr><th>분할 지표</th><th>무겹침</th><th>겹침</th></tr></thead><tbody id="imageMetrics"></tbody></table>
-     <div class="difference"><span>Dice 차이</span><strong id="delta">—</strong></div>
-    </div>
-    <div class="panel-section"><div class="section-heading"><h2>중복 병합</h2><span>전체 이미지</span></div><div class="merge-counts"><div><span>원시 후보</span><strong id="rawCount">—</strong></div><span>→</span><div><span>병합 후</span><strong id="mergedCount">—</strong></div><div><span>억제</span><strong id="suppressedCount">—</strong></div></div><button id="inspectMerge" class="wide-button">병합 후보를 영상에서 비교 →</button><p class="note">연결 성분 기반 후보 수입니다. 종양 세포 수나 Ki-67 양성률이 아닙니다.</p></div>
-    <div class="panel-section"><h2>처리 기록</h2><dl class="compact-dl"><dt>무겹침 / 겹침</dt><dd id="timing">—</dd><dt>모델 / threshold</dt><dd id="modelShort">—</dd></dl><p class="note">CPU 3회 중앙값 · 모델 로딩·디스크 I/O 제외. 화면을 보는 동안의 계산 시간이 아닙니다.</p></div>
-   </section>
-   <section id="panelObject" role="tabpanel" aria-labelledby="tabObject" hidden>
-    <div class="panel-section"><h2>영상에서 후보 선택</h2><p id="selectionText" class="note">후보 표시를 켜고 원을 누르거나 아래 목록에서 선택하세요.</p><label class="field-label" for="objectSource">후보 출처</label><select id="objectSource"><option value="after">B · 병합 후</option><option value="before">A · 무겹침</option></select><label class="field-label" for="componentSelect">후보 목록</label><select id="componentSelect" disabled><option>선택할 후보 없음</option></select><label class="check-row"><input type="checkbox" id="visibleOnly">현재 시야의 후보만</label><div id="selectionEmpty" class="empty-selection">아직 선택한 후보가 없습니다.</div><dl id="selectedInfo" class="compact-dl"></dl><p class="note">확률 평균은 보정된 신뢰도가 아닙니다. 선택 상자는 원본 PNG 픽셀 좌표입니다.</p></div>
-    <div class="panel-section"><h2>억제된 중복 후보 추적</h2><label class="field-label" for="suppressionSelect">저장된 NMS 대응</label><select id="suppressionSelect" disabled><option>병합 사례 없음</option></select><button id="jumpDuplicate" class="wide-button">첫 병합 사례로 이동</button><p id="pairInfo" class="note">분홍 상자는 억제 후보, 파란 상자는 유지 후보입니다. 두 후보가 같은 실제 핵인지는 별도 검토가 필요합니다.</p></div>
-   </section>
-   <section id="panelExperiment" role="tabpanel" aria-labelledby="tabExperiment" hidden>
-    <div class="panel-section"><h2>전체 테스트 결과</h2><p class="note">7개 PNG · 2개 케이스 그룹 · 이미지별 평균. 현재 보이는 시야의 수치가 아닙니다.</p><table class="metric-table experiment-table"><thead><tr><th>방식</th><th>Dice</th><th>경계 Dice</th></tr></thead><tbody id="summaryRows"></tbody></table><button id="failure" class="wide-button">개선이 가장 적은 10_3 열기 →</button></div>
-    <div class="panel-section"><h2>데이터·모델 출처</h2><div id="provenanceBody" class="provenance"></div><a href="results.json" download>실제 결과 JSON 다운로드 ↓</a></div>
-    <div class="panel-section"><h2>범위와 한계</h2><ul id="limits" class="limits"></ul><p class="note">픽셀 확률 합산과 후보 NMS는 별도 경로입니다. 녹색 마스크의 연결 영역 수와 후보 목록 수가 다를 수 있습니다.</p><p class="note">WSI 전체 검증 미수행. 물리 해상도와 스캐너 배율이 없어 μm 또는 현미경 배율로 표시하지 않습니다.</p></div>
-    <div class="panel-section source"><a href="https://doi.org/10.5281/zenodo.2579118" target="_blank" rel="noreferrer">TNBC v1.1 · CC BY 4.0 ↗</a><p>Naylor · Walter · Laé · Reyal<br>원본 RGB 변환, 모델 오버레이</p><a href="https://github.com/sokldjs554/pathology-edge/blob/main/docs/REVIEW.md" target="_blank" rel="noreferrer">실험 검토 질문 ↗</a></div>
-   </section>
-  </div>
- </aside>
-</main>
-<footer class="statusbar"><span id="status" role="status" aria-live="polite">결과를 불러오는 중…</span><span>H&E 핵 분할 · 임상 진단용 아님</span></footer>
-<dialog id="helpDialog" aria-labelledby="helpTitle"><div class="dialog-heading"><h2 id="helpTitle">같은 위치에서 전후 결과 검토하기</h2><button id="closeHelp" aria-label="사용 안내 닫기">×</button></div><ol><li><strong>예제 선택</strong><p>왼쪽 썸네일 또는 상단 목록을 선택하면 저장된 실제 결과가 열립니다.</p></li><li><strong>패치 경계 비교</strong><p>‘경계로 이동’을 눌러 확대하세요. A는 무겹침, B는 겹침 처리입니다. 두 영상은 함께 이동합니다.</p></li><li><strong>중복 병합 검토</strong><p>‘중복 병합’에서 같은 겹침 추론의 raw 후보와 NMS 후 후보를 비교합니다. ‘첫 병합 사례로 이동’으로 억제·유지 쌍을 추적합니다.</p></li><li><strong>수치의 영역 확인</strong><p>전체·경계·내부 지표를 선택하면 해당 평가 영역을 표시합니다. 확대된 시야의 새 점수를 계산하지 않습니다.</p></li></ol><p class="note">휠/핀치 확대 · 드래그/방향키 이동 · F 전체 맞춤 · +/− 확대·축소. 작은 화면은 A/B 버튼으로 같은 시야를 전환합니다.</p><p class="notice">연구·교육용. 사전 계산 결과이며 실시간 분석, Ki-67 정량화, WSI 전체 검증은 제공하지 않습니다.</p></dialog>
-<script src="viewer-math.js"></script><script src="app.js" defer></script>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PathologyEdge · 패치 경계 검토</title>
+    <meta
+      name="description"
+      content="실제 TNBC 핵 분할 결과를 같은 시야에서 비교하는 연구용 병리 이미지 작업대"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="./" aria-label="PathologyEdge 처음으로"
+        ><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z" /></svg
+        >Pathology<span>Edge</span></a
+      >
+      <span class="app-title">패치 경계 검토</span>
+      <div class="header-right">
+        <span class="research-label">연구·교육용</span
+        ><span class="data-label">사전 계산 결과 · 실시간 추론 아님</span
+        ><button id="help" class="quiet">사용 안내</button
+        ><a
+          href="https://github.com/sokldjs554/pathology-edge"
+          target="_blank"
+          rel="noreferrer"
+          class="repo-link"
+          >GitHub ↗</a
+        >
+      </div>
+    </header>
+    <nav class="study-bar" aria-label="작업 설정">
+      <button id="toggleTray" aria-expanded="true" aria-controls="tray">
+        예제 <span id="sampleCount">0</span>
+      </button>
+      <label class="sr-only" for="sample">예제 이미지</label
+      ><select id="sample" disabled>
+        <option>예제 불러오는 중…</option>
+      </select>
+      <span id="imageTitle" class="image-title">TNBC · H&E · 512 × 512 px</span>
+      <div class="study-actions">
+        <button id="focusMode" aria-pressed="false">영상 넓게</button
+        ><button
+          id="toggleInspector"
+          aria-expanded="true"
+          aria-controls="inspector"
+        >
+          결과 패널
+        </button>
+      </div>
+    </nav>
+    <main class="workbench" id="workbench">
+      <aside class="sample-tray" id="tray" aria-label="예제 이미지 목록">
+        <div class="tray-label">TEST IMAGES</div>
+        <div id="sampleList" class="sample-list"></div>
+        <div class="tray-footer">
+          7개 예제<br />512px PNG<br /><span>WSI 전체 아님</span>
+        </div>
+      </aside>
+      <section class="viewer-workspace" aria-label="영상 비교 작업대">
+        <div class="toolbar">
+          <div class="segmented" aria-label="비교 방식">
+            <button id="modeBoundary" aria-pressed="true">경계 전후</button
+            ><button id="modeMerge" aria-pressed="false">중복 병합</button
+            ><button id="modeSingle" aria-pressed="false">단일 영상</button>
+          </div>
+          <div class="toolbar-divider"></div>
+          <div class="zoom-tools">
+            <button id="zoomout" aria-label="축소">−</button
+            ><output id="zoomvalue" aria-label="화면 배율">—</output
+            ><button id="zoomin" aria-label="확대">+</button
+            ><button id="fit" title="전체 이미지 맞춤 (F)">맞춤</button
+            ><button id="nativeZoom" title="이미지 1px = 화면 1 CSS px">
+              1:1
+            </button>
+          </div>
+          <button
+            id="jumpBoundary"
+            class="accent-button"
+            title="기준 패치 경계의 교차점으로 이동"
+          >
+            경계로 이동
+          </button>
+        </div>
+        <div class="layer-bar" aria-label="결과 표시">
+          <label
+            ><input type="checkbox" id="segmentation" checked /><i
+              class="swatch mask"
+            ></i
+            >분할</label
+          >
+          <label
+            ><input type="checkbox" id="objects" /><i class="swatch objects"></i
+            >후보</label
+          >
+          <label
+            ><input type="checkbox" id="grid" checked /><i
+              class="swatch seam"
+            ></i
+            >패치 경계</label
+          >
+          <label
+            ><input type="checkbox" id="truth" /><i class="swatch truth"></i
+            >정답</label
+          >
+          <label class="opacity-control" for="opacity"
+            >불투명도
+            <input
+              type="range"
+              id="opacity"
+              min="0"
+              max="70"
+              value="25"
+            /><output id="opacityValue">25%</output></label
+          >
+        </div>
+        <div class="context-bar">
+          <span id="modeDescription"
+            >같은 모델 · 무겹침과 64px 겹침을 같은 시야에서 비교</span
+          ><span class="sync-label">↔ 시야 동기화</span>
+        </div>
+        <div
+          class="mobile-pane-switch segmented"
+          aria-label="작은 화면에서 전후 전환"
+        >
+          <button id="mobileBefore" aria-pressed="false">전</button
+          ><button id="mobileAfter" aria-pressed="true">후</button>
+        </div>
+        <div class="stage" id="stage" aria-busy="true">
+          <div class="panes" id="panes">
+            <article class="pane" id="beforePane">
+              <div class="pane-header">
+                <span class="pane-key">A</span
+                ><strong id="beforeTitle">무겹침</strong
+                ><span id="beforeMeta">stride 128</span
+                ><span id="countBefore" class="pane-count"></span>
+              </div>
+              <canvas
+                id="before"
+                tabindex="0"
+                aria-label="A 영상: 드래그 이동, 휠 확대, 후보 클릭"
+              ></canvas>
+              <div class="pane-caption">
+                <span id="diceBefore">Dice —</span
+                ><span id="scopeBefore">전체 이미지</span>
+              </div>
+            </article>
+            <article class="pane" id="afterPane">
+              <div class="pane-header">
+                <span class="pane-key after">B</span
+                ><strong id="afterTitle">겹침 + 병합</strong
+                ><span id="afterMeta">stride 64</span
+                ><span id="countAfter" class="pane-count"></span>
+              </div>
+              <canvas
+                id="after"
+                tabindex="0"
+                aria-label="B 영상: 드래그 이동, 휠 확대, 후보 클릭"
+              ></canvas>
+              <div class="pane-caption">
+                <span id="diceAfter">Dice —</span
+                ><span id="scopeAfter">전체 이미지</span>
+              </div>
+            </article>
+          </div>
+          <div class="navigator" id="navigatorBox">
+            <div>전체 위치 <span>PNG</span></div>
+            <canvas
+              id="navigator"
+              width="120"
+              height="120"
+              tabindex="0"
+              aria-label="전체 위치 개요도. 클릭 또는 방향키로 이동"
+            ></canvas>
+          </div>
+          <div class="stage-message" id="stageMessage">
+            <div class="state-symbol" id="stateSymbol" aria-hidden="true">
+              ◌
+            </div>
+            <strong id="stateTitle">저장된 결과를 불러오는 중</strong>
+            <p id="stateDetail">모델을 새로 실행하지 않습니다.</p>
+            <button id="retry" hidden>다시 불러오기</button>
+          </div>
+        </div>
+        <div class="viewport-bar">
+          <span id="viewportBounds">현재 시야 —</span
+          ><span id="cursorPosition">x — · y — px</span
+          ><span class="interaction-hint"
+            >드래그 이동 · 휠 확대 · 후보 클릭</span
+          >
+        </div>
+      </section>
+      <aside class="inspector" id="inspector" aria-label="결과와 선택한 후보">
+        <div class="inspector-heading">
+          <strong>검토 결과</strong
+          ><button
+            id="closeInspector"
+            class="quiet"
+            aria-label="결과 패널 닫기"
+          >
+            ×
+          </button>
+        </div>
+        <div class="inspector-tabs" role="tablist" aria-label="결과 패널 탭">
+          <button
+            id="tabImage"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panelImage"
+          >
+            이미지</button
+          ><button
+            id="tabObject"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panelObject"
+          >
+            선택 후보</button
+          ><button
+            id="tabExperiment"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panelExperiment"
+          >
+            실험
+          </button>
+        </div>
+        <div class="inspector-scroll">
+          <section id="panelImage" role="tabpanel" aria-labelledby="tabImage">
+            <div class="panel-section">
+              <span class="eyebrow">ACTIVE IMAGE</span>
+              <h1 id="activeImage">예제 선택</h1>
+              <p class="muted">저장된 분할 결과와 정답을 비교합니다.</p>
+            </div>
+            <div class="panel-section">
+              <div class="section-heading">
+                <h2>평가 영역</h2>
+                <span id="metricScope">전체 512 × 512 px</span>
+              </div>
+              <div class="segmented scope-controls">
+                <button id="scopeAll" aria-pressed="true">전체</button
+                ><button id="scopeBoundary" aria-pressed="false">경계</button
+                ><button id="scopeInterior" aria-pressed="false">내부</button>
+              </div>
+              <p id="scopeExplanation" class="note">
+                아래 지표는 전체 이미지 기준입니다. 확대·이동해도 재계산하지
+                않습니다.
+              </p>
+              <table class="metric-table">
+                <thead>
+                  <tr>
+                    <th>분할 지표</th>
+                    <th>무겹침</th>
+                    <th>겹침</th>
+                  </tr>
+                </thead>
+                <tbody id="imageMetrics"></tbody>
+              </table>
+              <div class="difference">
+                <span>Dice 차이</span><strong id="delta">—</strong>
+              </div>
+            </div>
+            <div class="panel-section">
+              <div class="section-heading">
+                <h2>중복 병합</h2>
+                <span>전체 이미지</span>
+              </div>
+              <div class="merge-counts">
+                <div>
+                  <span>원시 후보</span><strong id="rawCount">—</strong>
+                </div>
+                <span>→</span>
+                <div>
+                  <span>병합 후</span><strong id="mergedCount">—</strong>
+                </div>
+                <div>
+                  <span>억제</span><strong id="suppressedCount">—</strong>
+                </div>
+              </div>
+              <button id="inspectMerge" class="wide-button">
+                병합 후보를 영상에서 비교 →
+              </button>
+              <p class="note">
+                연결 성분 기반 후보 수입니다. 종양 세포 수나 Ki-67 양성률이
+                아닙니다.
+              </p>
+            </div>
+            <div class="panel-section">
+              <h2>처리 기록</h2>
+              <dl class="compact-dl">
+                <dt>무겹침 / 겹침</dt>
+                <dd id="timing">—</dd>
+                <dt>모델 / threshold</dt>
+                <dd id="modelShort">—</dd>
+              </dl>
+              <p class="note">
+                CPU 3회 중앙값 · 모델 로딩·디스크 I/O 제외. 화면을 보는 동안의
+                계산 시간이 아닙니다.
+              </p>
+            </div>
+          </section>
+          <section
+            id="panelObject"
+            role="tabpanel"
+            aria-labelledby="tabObject"
+            hidden
+          >
+            <div class="panel-section">
+              <h2>영상에서 후보 선택</h2>
+              <p id="selectionText" class="note">
+                후보 표시를 켜고 원을 누르거나 아래 목록에서 선택하세요.
+              </p>
+              <label class="field-label" for="objectSource">후보 출처</label
+              ><select id="objectSource">
+                <option value="after">B · 병합 후</option>
+                <option value="before">A · 무겹침</option></select
+              ><label class="field-label" for="componentSelect">후보 목록</label
+              ><select id="componentSelect" disabled>
+                <option>선택할 후보 없음</option></select
+              ><label class="check-row"
+                ><input type="checkbox" id="visibleOnly" />현재 시야의
+                후보만</label
+              >
+              <div id="selectionEmpty" class="empty-selection">
+                아직 선택한 후보가 없습니다.
+              </div>
+              <dl id="selectedInfo" class="compact-dl"></dl>
+              <p class="note">
+                확률 평균은 보정된 신뢰도가 아닙니다. 선택 상자는 원본 PNG 픽셀
+                좌표입니다.
+              </p>
+            </div>
+            <div class="panel-section">
+              <h2>억제된 중복 후보 추적</h2>
+              <label class="field-label" for="suppressionSelect"
+                >저장된 NMS 대응</label
+              ><select id="suppressionSelect" disabled>
+                <option>병합 사례 없음</option></select
+              ><button id="jumpDuplicate" class="wide-button">
+                첫 병합 사례로 이동
+              </button>
+              <p id="pairInfo" class="note">
+                분홍 상자는 억제 후보, 파란 상자는 유지 후보입니다. 두 후보가
+                같은 실제 핵인지는 별도 검토가 필요합니다.
+              </p>
+            </div>
+          </section>
+          <section
+            id="panelExperiment"
+            role="tabpanel"
+            aria-labelledby="tabExperiment"
+            hidden
+          >
+            <div class="panel-section">
+              <h2>전체 테스트 결과</h2>
+              <p class="note">
+                7개 PNG · 2개 케이스 그룹 · 이미지별 평균. 현재 보이는 시야의
+                수치가 아닙니다.
+              </p>
+              <table class="metric-table experiment-table">
+                <thead>
+                  <tr>
+                    <th>방식</th>
+                    <th>Dice</th>
+                    <th>경계 Dice</th>
+                  </tr>
+                </thead>
+                <tbody id="summaryRows"></tbody>
+              </table>
+              <button id="failure" class="wide-button">
+                개선이 가장 적은 10_3 열기 →
+              </button>
+            </div>
+            <div class="panel-section">
+              <h2>데이터·모델 출처</h2>
+              <div id="provenanceBody" class="provenance"></div>
+              <a href="results.json" download>실제 결과 JSON 다운로드 ↓</a>
+            </div>
+            <div class="panel-section">
+              <h2>범위와 한계</h2>
+              <ul id="limits" class="limits"></ul>
+              <p class="note">
+                픽셀 확률 합산과 후보 NMS는 별도 경로입니다. 녹색 마스크의 연결
+                영역 수와 후보 목록 수가 다를 수 있습니다.
+              </p>
+              <p class="note">
+                WSI 전체 검증 미수행. 물리 해상도와 스캐너 배율이 없어 μm 또는
+                현미경 배율로 표시하지 않습니다.
+              </p>
+            </div>
+            <div class="panel-section source">
+              <a
+                href="https://doi.org/10.5281/zenodo.2579118"
+                target="_blank"
+                rel="noreferrer"
+                >TNBC v1.1 · CC BY 4.0 ↗</a
+              >
+              <p>
+                Naylor · Walter · Laé · Reyal<br />원본 RGB 변환, 모델 오버레이
+              </p>
+              <a
+                href="https://github.com/sokldjs554/pathology-edge/blob/main/docs/REVIEW.md"
+                target="_blank"
+                rel="noreferrer"
+                >실험 검토 질문 ↗</a
+              >
+            </div>
+          </section>
+        </div>
+      </aside>
+    </main>
+    <footer class="statusbar">
+      <span id="status" role="status" aria-live="polite"
+        >결과를 불러오는 중…</span
+      ><span>H&E 핵 분할 · 임상 진단용 아님</span>
+    </footer>
+    <dialog id="helpDialog" aria-labelledby="helpTitle">
+      <div class="dialog-heading">
+        <h2 id="helpTitle">같은 위치에서 전후 결과 검토하기</h2>
+        <button id="closeHelp" aria-label="사용 안내 닫기">×</button>
+      </div>
+      <ol>
+        <li>
+          <strong>예제 선택</strong>
+          <p>
+            왼쪽 썸네일 또는 상단 목록을 선택하면 저장된 실제 결과가 열립니다.
+          </p>
+        </li>
+        <li>
+          <strong>패치 경계 비교</strong>
+          <p>
+            ‘경계로 이동’을 눌러 확대하세요. A는 무겹침, B는 겹침 처리입니다. 두
+            영상은 함께 이동합니다.
+          </p>
+        </li>
+        <li>
+          <strong>중복 병합 검토</strong>
+          <p>
+            ‘중복 병합’에서 같은 겹침 추론의 raw 후보와 NMS 후 후보를
+            비교합니다. ‘첫 병합 사례로 이동’으로 억제·유지 쌍을 추적합니다.
+          </p>
+        </li>
+        <li>
+          <strong>수치의 영역 확인</strong>
+          <p>
+            전체·경계·내부 지표를 선택하면 해당 평가 영역을 표시합니다. 확대된
+            시야의 새 점수를 계산하지 않습니다.
+          </p>
+        </li>
+      </ol>
+      <p class="note">
+        휠/핀치 확대 · 드래그/방향키 이동 · F 전체 맞춤 · +/− 확대·축소. 작은
+        화면은 A/B 버튼으로 같은 시야를 전환합니다.
+      </p>
+      <p class="notice">
+        연구·교육용. 사전 계산 결과이며 실시간 분석, Ki-67 정량화, WSI 전체
+        검증은 제공하지 않습니다.
+      </p>
+    </dialog>
+    <script src="viewer-math.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

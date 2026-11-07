@@ -20,4 +20,4 @@ for sample in data['samples']:
         assert Image.open(p).size==(sample['width'],sample['height'])
 assert '실시간 추론 아님' in html
 assert 'WSI 전체 검증 미수행' in html
-print('PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Browser QA not performed.')
+print('PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.')
