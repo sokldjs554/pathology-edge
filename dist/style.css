@@ -1215,7 +1215,7 @@ dialog li p {
   margin: 0 0 5px;
   color: #293d49;
   font-size: 13px;
-  line-height: 1.4;
+  line-height: 18px;
 }
 .guide-actions {
   display: flex;
@@ -1316,6 +1316,7 @@ dialog li p {
   }
   .review-guide p {
     font-size: 11px;
+    line-height: 16px;
     margin-bottom: 3px;
   }
   .workflow {

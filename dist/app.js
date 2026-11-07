@@ -261,7 +261,8 @@ function draw() {
     canvas.dataset.center = `${state.cx.toFixed(3)},${state.cy.toFixed(3)}`;
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     ctx.fillStyle = '#252a2e';
-    ctx.fillRect(0, 0, width, height);
+    // Fill the entire backing store, including the rounded fractional CSS edge.
+    ctx.fillRect(0, 0, canvas.width / ratio, canvas.height / ratio);
     ctx.save();
     ctx.translate(t.ox, t.oy);
     ctx.scale(t.scale, t.scale);
