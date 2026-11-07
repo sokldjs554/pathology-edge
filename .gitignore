@@ -10,4 +10,7 @@ work/
 .env*
 !.env.example
 node_modules/
+web-tests/captures/
+web-tests/test-results/
+web-tests/report.json
 
