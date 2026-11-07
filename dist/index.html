@@ -62,6 +62,24 @@
         </div>
       </aside>
       <section class="viewer-workspace" aria-label="영상 비교 작업대">
+        <div class="review-guide">
+          <p>
+            병리 이미지를 작은 조각으로 나눌 때,
+            <strong>경계의 핵 분할 결과</strong>는 어떻게 달라질까요?
+          </p>
+          <div class="guide-actions">
+            <span class="workflow">① 예제 선택 → ② 경계 비교 →</span
+            ><button id="showResults" class="quiet">③ 결과 확인</button>
+            <button id="showImproved" class="case-good" disabled>
+              좋아진 경계 보기</button
+            ><button id="showWorsened" class="case-bad" disabled>
+              나빠진 경계 보기
+            </button>
+          </div>
+          <span id="caseLoadNotice" class="sr-only" role="status"
+            >저장된 경계 사례를 읽는 중</span
+          >
+        </div>
         <div class="toolbar">
           <div class="segmented" aria-label="비교 방식">
             <button id="modeBoundary" aria-pressed="true">경계 전후</button
@@ -81,9 +99,9 @@
           <button
             id="jumpBoundary"
             class="accent-button"
-            title="기준 패치 경계의 교차점으로 이동"
+            title="현재 예제에서 실제 차이가 큰 경계 영역으로 이동"
           >
-            경계로 이동
+            현재 예제 경계
           </button>
         </div>
         <div class="layer-bar" aria-label="결과 표시">
@@ -136,7 +154,10 @@
               <div class="pane-header">
                 <span class="pane-key">A</span
                 ><strong id="beforeTitle">무겹침</strong
-                ><span id="beforeMeta">stride 128</span
+                ><span
+                  id="beforeMeta"
+                  title="stride: 다음 128px 조각까지 이동하는 간격"
+                  >stride 128</span
                 ><span id="countBefore" class="pane-count"></span>
               </div>
               <div class="canvas-frame">
@@ -155,7 +176,10 @@
               <div class="pane-header">
                 <span class="pane-key after">B</span
                 ><strong id="afterTitle">겹침 + 병합</strong
-                ><span id="afterMeta">stride 64</span
+                ><span
+                  id="afterMeta"
+                  title="stride: 다음 128px 조각까지 이동하는 간격"
+                  >stride 64</span
                 ><span id="countAfter" class="pane-count"></span>
               </div>
               <div class="canvas-frame">
@@ -238,7 +262,42 @@
             <div class="panel-section">
               <span class="eyebrow">ACTIVE IMAGE</span>
               <h1 id="activeImage">예제 선택</h1>
-              <p class="muted">저장된 분할 결과와 정답을 비교합니다.</p>
+              <p class="muted">
+                선택한 이미지의 저장 결과입니다. 전체 테스트 평균은 ‘실험’에서
+                확인하세요.
+              </p>
+            </div>
+            <div id="caseDetail" class="panel-section case-detail" hidden>
+              <h2>선택 경계 · 64 × 64 px</h2>
+              <label class="field-label" for="caseSelect"
+                >실제 차이가 있는 영역</label
+              ><select id="caseSelect"></select>
+              <p id="caseCoordinates" class="note"></p>
+              <p id="caseScores" class="case-scores"></p>
+              <div id="caseCounts" class="case-counts"></div>
+              <label class="check-row"
+                ><input id="caseHighlight" type="checkbox" checked />달라진 픽셀
+                강조</label
+              >
+              <p class="note">
+                청록: 정답과 일치하게 바뀜 · 분홍: 불일치하게 바뀜. 양쪽 영상의
+                흰 상자는 동일 영역입니다.
+              </p>
+              <p id="caseImageContext" class="note"></p>
+              <details>
+                <summary>이 위치를 고른 기준</summary>
+                <p class="note">
+                  128px 기준 경계의 ±8px 띠와 64px 사각형이 겹치는 영역을
+                  평가합니다. 16px 간격으로 탐색해 정답 일치 픽셀의
+                  순증가·순감소가 가장 큰 위치를 이미지별로 선택했습니다. 국소
+                  Dice 방향도 일치해야 합니다. 외곽 32px는 제외했습니다.
+                </p>
+                <p class="note">
+                  테스트 정답을 보고 고른 사후 설명 사례입니다. 평균 성능의
+                  대표값이나 경계 처리만의 인과 효과가 아닙니다.
+                </p>
+                <a href="cases.json" download>좌표·픽셀 근거 JSON ↓</a>
+              </details>
             </div>
             <div class="panel-section">
               <div class="section-heading">
@@ -254,6 +313,10 @@
                 아래 지표는 전체 이미지 기준입니다. 확대·이동해도 재계산하지
                 않습니다.
               </p>
+              <p class="note">
+                Dice·IoU: 0–1, 높을수록 정답과 유사
+                <button class="term-help quiet" data-terms>용어 뜻</button>
+              </p>
               <table class="metric-table">
                 <thead>
                   <tr>
@@ -265,7 +328,7 @@
                 <tbody id="imageMetrics"></tbody>
               </table>
               <div class="difference">
-                <span>Dice 차이</span><strong id="delta">—</strong>
+                <span>Dice 차이 · B−A</span><strong id="delta">—</strong>
               </div>
             </div>
             <div class="panel-section">
@@ -365,18 +428,63 @@
                 7개 PNG · 2개 케이스 그룹 · 이미지별 평균. 현재 보이는 시야의
                 수치가 아닙니다.
               </p>
-              <table class="metric-table experiment-table">
+              <p class="note">
+                A 겹침 없이 처리 → B 64px 겹침·결합. Δ는 반올림 전 B−A입니다.
+                Dice는 높을수록 좋습니다.
+              </p>
+              <table class="metric-table">
                 <thead>
                   <tr>
-                    <th>방식</th>
-                    <th>Dice</th>
-                    <th>경계 Dice</th>
+                    <th>평가 / 비용</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>Δ / 배수</th>
                   </tr>
                 </thead>
-                <tbody id="summaryRows"></tbody>
+                <tbody id="performanceRows"></tbody>
               </table>
+              <p id="costSummary" class="note"></p>
+              <details>
+                <summary>처리 시간의 측정 조건</summary>
+                <p class="note">
+                  각 이미지에서 예열 후 CPU 3회 실행의 중앙값 → 7개 이미지의
+                  중앙값. 평균 시간이 아닙니다. AMD EPYC 9V74, Torch 4 threads,
+                  CPU only.
+                </p>
+                <p class="note">
+                  RGB 추출·조직 검사·모델 순전파·확률 결합·후보 추출·NMS 포함.
+                  모델 로딩·디스크 I/O·정답 평가 제외. 브라우저 실행 시간이
+                  아닙니다.
+                </p>
+              </details>
+              <h2 class="subheading">이미지별 변화 · 평균과 구분</h2>
+              <p id="imageDirectionSummary" class="note"></p>
+              <table class="metric-table image-comparison">
+                <thead>
+                  <tr>
+                    <th>예제 ↗</th>
+                    <th>Δ 전체</th>
+                    <th>Δ 경계</th>
+                    <th>ms A/B</th>
+                  </tr>
+                </thead>
+                <tbody id="perImageRows"></tbody>
+              </table>
+              <details>
+                <summary>다른 기준 방식의 전체 결과</summary>
+                <table class="metric-table experiment-table">
+                  <thead>
+                    <tr>
+                      <th>방식</th>
+                      <th>Dice</th>
+                      <th>경계 Dice</th>
+                    </tr>
+                  </thead>
+                  <tbody id="summaryRows"></tbody>
+                </table>
+              </details>
               <button id="failure" class="wide-button">
-                개선이 가장 적은 10_3 열기 →
+                전체 Dice 감소가 가장 큰 10_3 열기 →
               </button>
             </div>
             <div class="panel-section">
@@ -385,7 +493,17 @@
               <a href="results.json" download>실제 결과 JSON 다운로드 ↓</a>
             </div>
             <div class="panel-section">
-              <h2>범위와 한계</h2>
+              <h2>병리 AI 업무와의 연결 · 범위</h2>
+              <p class="note">
+                에이비스 AI 연구원 지원을 위한 독립 포트폴리오입니다. H&E 조직
+                이미지의 핵 분할을 대상으로, 타일 좌표·경계 오차·중복
+                후보·평가와 처리 비용을 검토합니다. 병리 영상 분석 파이프라인의
+                연구·검증 역량을 보여 주는 범위입니다.
+              </p>
+              <p class="notice">
+                Ki-67 양성/음성 분류나 양성률 정량화가 아닙니다. WSI 전체
+                처리·외부 데이터 검증·임상 검증을 수행하지 않았습니다.
+              </p>
               <ul id="limits" class="limits"></ul>
               <p class="note">
                 픽셀 확률 합산과 후보 NMS는 별도 경로입니다. 녹색 마스크의 연결
@@ -427,6 +545,7 @@
         <h2 id="helpTitle">같은 위치에서 전후 결과 검토하기</h2>
         <button id="closeHelp" aria-label="사용 안내 닫기">×</button>
       </div>
+      <button class="quiet" data-terms>Dice·stride·후보 등 용어 뜻</button>
       <ol>
         <li>
           <strong>예제 선택</strong>
@@ -437,8 +556,10 @@
         <li>
           <strong>패치 경계 비교</strong>
           <p>
-            ‘경계로 이동’을 눌러 확대하세요. A는 무겹침, B는 겹침 처리입니다. 두
-            영상은 함께 이동합니다.
+            ‘좋아진 경계 보기’ 또는 ‘나빠진 경계 보기’를 누르면 실제 차이가 있는
+            영역으로 이동합니다. ‘현재 예제 경계’는 선택한 이미지 안에서
+            이동합니다. A는 무겹침, B는 겹침 처리입니다. 두 영상은 함께
+            이동합니다.
           </p>
         </li>
         <li>
@@ -466,7 +587,51 @@
         검증은 제공하지 않습니다.
       </p>
     </dialog>
+    <dialog id="termsDialog" aria-labelledby="termsTitle">
+      <div class="dialog-heading">
+        <h2 id="termsTitle">결과를 읽는 용어</h2>
+        <button id="closeTerms" aria-label="용어 안내 닫기">×</button>
+      </div>
+      <dl class="glossary">
+        <dt>Dice · IoU</dt>
+        <dd>
+          예측한 핵 영역과 정답이 얼마나 겹치는지 나타냅니다. 0–1이며 높을수록
+          좋습니다. Dice는 겹친 면적의 2배 ÷ 두 면적의 합, IoU는 교집합 ÷
+          합집합입니다.
+        </dd>
+        <dt>Precision · Recall</dt>
+        <dd>
+          Precision은 예측한 핵 픽셀 중 정답 비율, Recall은 정답 핵 픽셀 중
+          찾아낸 비율입니다. 둘 다 높을수록 좋지만 한쪽만으로 판단하지 않습니다.
+        </dd>
+        <dt>패치 · stride</dt>
+        <dd>
+          패치는 128×128px 이미지 조각, stride는 다음 조각까지의 이동
+          간격입니다. A는 128px(겹침 없음), B는 64px(64px 겹침)입니다.
+        </dd>
+        <dt>후보 · 병합</dt>
+        <dd>
+          이진 분할의 연결 성분에서 얻은 핵 후보입니다. NMS는 위치와 상자 중복을
+          이용해 중복 후보를 억제하고 하나를 남깁니다. 같은 실제 핵임이 검증된
+          세포 수는 아닙니다. 픽셀 확률 결합과 후보 NMS는 별도 경로입니다.
+        </dd>
+        <dt>Δ (차이)</dt>
+        <dd>
+          B(겹침) − A(무겹침)입니다. 점수의 양수는 증가, 음수는 감소입니다.
+          반올림 전 원본으로 빼므로 표시된 두 숫자를 빼면 마지막 자리가 다를 수
+          있습니다.
+        </dd>
+        <dt>평가 범위</dt>
+        <dd>
+          ‘전체·경계·내부’는 선택 이미지의 저장 지표입니다. 경계는 기준선 양쪽
+          8px, 내부는 이를 제외한 영역입니다. ‘선택 경계’는 흰 64px 상자 안 경계
+          띠만의 국소 점수입니다. ‘실험’의 Dice는 7개 이미지 점수의 산술평균이며
+          모든 픽셀을 합친 점수가 아닙니다.
+        </dd>
+      </dl>
+    </dialog>
     <script src="viewer-math.js"></script>
+    <script src="review-ui.js"></script>
     <script src="app.js" defer></script>
   </body>
 </html>

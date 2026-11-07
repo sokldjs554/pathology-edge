@@ -6,7 +6,7 @@ from PIL import Image
 
 root=Path('dist')
 html=(root/'index.html').read_text()
-js=(root/'app.js').read_text()
+js=(root/'app.js').read_text() + (root/'review-ui.js').read_text()
 ids=re.findall(r'\bid="([^"]+)"',html)
 assert len(ids)==len(set(ids)), 'Duplicate DOM IDs'
 for key in re.findall(r"\$\('([^']+)'\)",js):

@@ -57,7 +57,7 @@ test('all seven images load immediately and metrics/counts match the real export
     'captures/after-observations.json',
     JSON.stringify(obs, null, 2),
   );
-  expect(obs.after.y).toBeLessThan(270);
+  expect(obs.after.y).toBeLessThan(345);
   expect(obs.overflow).toBe(false);
   for (const s of data.samples) {
     await page.locator('#sample').selectOption(s.id);
@@ -81,7 +81,10 @@ test('synchronized zoom, drag, overview navigation, keyboard and fit', async ({
 }) => {
   await open(page);
   await page.locator('#jumpBoundary').click();
-  await expect(page.locator('#zoomvalue')).toHaveText('300%');
+  await expect(page.locator('#after')).toHaveAttribute(
+    'data-case',
+    '10_1-worsened',
+  );
   await synced(page);
   const box = await page.locator('#after').boundingBox();
   const old = await page.locator('#after').getAttribute('data-center');
@@ -253,7 +256,7 @@ for (const [width, height] of [
       ),
     ).toBe(true);
     const box = await page.locator('#after').boundingBox();
-    expect(box.y).toBeLessThan(width <= 760 ? 330 : 270);
+    expect(box.y).toBeLessThan(width <= 760 ? 415 : 345);
     expect(box.width).toBeGreaterThan(width <= 760 ? width - 5 : 400);
     if (width <= 760) {
       await page.locator('#mobileBefore').click();
@@ -262,7 +265,10 @@ for (const [width, height] of [
       await page.locator('#mobileAfter').click();
     }
     await page.locator('#jumpBoundary').click();
-    await expect(page.locator('#zoomvalue')).toHaveText('300%');
+    await expect(page.locator('#after')).toHaveAttribute(
+      'data-case',
+      '10_1-worsened',
+    );
     await page.locator('#fit').click();
     await shot(page, `after-${width}`);
     await page.locator('#toggleInspector').click();
@@ -353,6 +359,8 @@ test('served UI and result bytes match this repository commit', async ({
     'app.js',
     'style.css',
     'viewer-math.js',
+    'review-ui.js',
+    'cases.json',
     'results.json',
   ]) {
     const response = await request.get('/' + name);

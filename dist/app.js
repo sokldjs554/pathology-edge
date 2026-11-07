@@ -113,6 +113,7 @@ function setPhase(phase, title = '', detail = '') {
     phase === 'error' ? 'alert' : 'status',
   );
   interactionIds.forEach((id) => ($(id).disabled = phase !== 'ready'));
+  Review.refresh();
   if (phase !== 'ready') {
     $('componentSelect').disabled = true;
     $('suppressionSelect').disabled = true;
@@ -292,6 +293,7 @@ function draw() {
       ctx.stroke();
       ctx.setLineDash([]);
     }
+    Review.draw(ctx, canvas);
     if ($('objects').checked) {
       const suppressed = new Set(
         state.sample.methods.overlap.suppressed.map((r) => r.suppressed_index),
@@ -317,10 +319,35 @@ function draw() {
       );
       ctx.setLineDash([]);
     };
+    const pairLabel = (o, text, color, below = false) => {
+      const x = o.bbox[0],
+        y = below ? o.bbox[3] + 15 / state.zoom : o.bbox[1] - 5 / state.zoom;
+      ctx.font = `${11 / state.zoom}px Arial`;
+      ctx.fillStyle = '#14232be8';
+      ctx.fillRect(
+        x - 2 / state.zoom,
+        y - 12 / state.zoom,
+        100 / state.zoom,
+        16 / state.zoom,
+      );
+      ctx.fillStyle = color;
+      ctx.fillText(text, x, y);
+    };
     if (state.pair && state.mode === 'merge') {
       if (side === 'before') {
         box(state.pair.raw, '#ff557f');
         box(state.pair.kept, '#48c7ff', true);
+        pairLabel(
+          state.pair.raw,
+          `raw #${state.pair.rawId} suppressed`,
+          '#ff7f9f',
+        );
+        pairLabel(
+          state.pair.kept,
+          `raw #${state.pair.keptId} kept`,
+          '#79d6ff',
+          true,
+        );
         ctx.beginPath();
         ctx.strokeStyle = '#f1d1dc';
         ctx.lineWidth = 1 / state.zoom;
@@ -329,7 +356,15 @@ function draw() {
         ctx.lineTo(state.pair.kept.x, state.pair.kept.y);
         ctx.stroke();
         ctx.setLineDash([]);
-      } else box(state.pair.kept, '#48c7ff');
+      } else {
+        box(state.pair.kept, '#48c7ff');
+        pairLabel(
+          state.pair.kept,
+          `raw #${state.pair.keptId} kept`,
+          '#79d6ff',
+          true,
+        );
+      }
     } else if (state.selected) {
       box(state.selected.o, '#f9e45e');
       ctx.beginPath();
@@ -492,6 +527,7 @@ function setMode(mode) {
   state.mode = mode;
   if (mode === 'merge') $('objects').checked = true;
   clearSelection();
+  Review.clear();
   $('workbench').dataset.mode = mode;
   for (const [id, value] of [
     ['modeBoundary', 'boundary'],
@@ -605,6 +641,8 @@ function selectPair(index) {
   const keptIndex = b.objects.findIndex((o) => o.raw_index === pair.kept_index);
   selectObject('after', keptIndex, false);
   state.pair = {
+    rawId: pair.suppressed_index + 1,
+    keptId: pair.kept_index + 1,
     raw: b.raw[pair.suppressed_index],
     kept: b.raw[pair.kept_index],
   };
@@ -661,6 +699,7 @@ function populateData() {
   for (const s of data.samples) {
     const button = node('button', undefined, 'sample-item');
     button.dataset.sample = s.id;
+    button.title = 'Δ: 이 이미지 전체 Dice의 겹침 − 무겹침 차이';
     button.setAttribute('aria-label', `TNBC ${s.id} 열기`);
     button.setAttribute('aria-current', 'false');
     const img = node('img');
@@ -694,6 +733,7 @@ function populateData() {
     );
     $('summaryRows').append(tr);
   }
+  Review.summary(data);
   $('provenanceBody').replaceChildren(
     node(
       'p',
@@ -732,6 +772,7 @@ function resetNumbers() {
   $('componentSelect').replaceChildren(new Option('선택할 후보 없음', ''));
   $('suppressionSelect').replaceChildren(new Option('병합 사례 없음', ''));
   clearSelection();
+  Review.clear();
 }
 async function loadSample(id) {
   if (!state.data) return;
@@ -850,10 +891,12 @@ async function init() {
     const response = await fetch('results.json', { signal: controller.signal });
     if (!response.ok)
       throw new Error(`결과 파일 응답 오류 (HTTP ${response.status})`);
-    const data = validateData(await response.json());
+    const sourceText = await response.text();
+    const data = validateData(JSON.parse(sourceText));
     if (ticket !== state.request) return;
     state.data = data;
     populateData();
+    const caseTask = Review.load(data, sourceText);
     if (!data.samples.length) {
       state.sample = null;
       resetNumbers();
@@ -871,6 +914,7 @@ async function init() {
         ? requested
         : data.samples[0].id,
     );
+    await caseTask;
   } catch (error) {
     if (ticket !== state.request) return;
     setPhase(
@@ -1089,17 +1133,9 @@ $('zoomin').addEventListener('click', () => setZoom(state.zoom * 1.25));
 $('zoomout').addEventListener('click', () => setZoom(state.zoom / 1.25));
 $('nativeZoom').addEventListener('click', () => setZoom(1));
 $('fit').addEventListener('click', fit);
-$('jumpBoundary').addEventListener('click', () => {
-  if (state.mode !== 'boundary') setMode('boundary');
-  $('grid').checked = true;
-  state.cx = 256;
-  state.cy = 256;
-  state.zoom = 3;
-  state.fitMode = false;
-  clampView();
-  draw();
-  renderObjectOptions();
-});
+$('jumpBoundary').addEventListener('click', () =>
+  Review.open(Review.current()?.id),
+);
 for (const id of ['segmentation', 'objects', 'grid', 'truth'])
   $(id).addEventListener('change', draw);
 $('opacity').addEventListener('input', () => {
@@ -1205,4 +1241,5 @@ new ResizeObserver(() => {
     }
   });
 }).observe($('stage'));
+Review.bind();
 init();
