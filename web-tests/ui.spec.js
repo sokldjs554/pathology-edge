@@ -45,7 +45,7 @@ test('NMS raw-to-kept pair and image click resolve actual exported objects',asyn
  await open(page);await page.locator('#sample').selectOption('11_2');await ready(page,'11_2');const s=data.samples.find(s=>s.id==='11_2'),m=s.methods.overlap,p=m.suppressed[0];
  await page.locator('#inspectMerge').click();await page.locator('#jumpDuplicate').click();await expect(page.locator('#modeMerge')).toHaveAttribute('aria-pressed','true');
  await expect(page.locator('#pairInfo')).toContainText(`raw #${p.suppressed_index+1} (patch ${m.raw[p.suppressed_index].patch_id}) → 유지 raw #${p.kept_index+1}`);
- await expect(page.locator('#countBefore')).toHaveText(`${m.raw_count} 후보`);await expect(page.locator('#countAfter')).toHaveText(`${m.merged_count} 후보`);await expect(page.locator('#selectedInfo')).toContainText(String(m.raw[p.kept_index].patch_id));await shot(page,'after-merge');
+ await expect(page.locator('#countBefore')).toHaveText(`${m.raw_count} 후보`);await expect(page.locator('#countAfter')).toHaveText(`${m.merged_count} 후보`);await expect(page.locator('#selectedInfo')).toContainText(String(m.raw[p.kept_index].patch_id));await shot(page,'after-merge');const shown=await bitmap(page);await page.locator('#objects').uncheck();expect(await bitmap(page)).not.toBe(shown);await page.locator('#objects').check();
  await page.locator('#componentSelect').selectOption('0');const o=m.objects[0];
  const b=await page.locator('#after').boundingBox(),center=(await page.locator('#after').getAttribute('data-center')).split(',').map(Number),zoom=Number(await page.locator('#after').getAttribute('data-zoom'));
  await page.mouse.click(b.x+b.width/2+(o.x-center[0])*zoom,b.y+b.height/2+(o.y-center[1])*zoom);
@@ -89,4 +89,18 @@ test('failed image clears old numbers; rapid sample changes cannot leave mismatc
 test('served UI and result bytes match this repository commit',async({request})=>{
  const rows=[];for(const name of ['index.html','app.js','style.css','viewer-math.js','results.json']){const response=await request.get('/'+name);expect(response.ok()).toBe(true);const actual=await response.body(),local=fs.readFileSync(new URL('../dist/'+name,import.meta.url));const digest=b=>crypto.createHash('sha256').update(b).digest('hex');expect(digest(actual)).toBe(digest(local));rows.push({file:name,sha256:digest(actual)});}
  fs.writeFileSync('captures/served-source-parity.json',JSON.stringify({baseURL:process.env.UI_BASE_URL||'checkout localhost',commit:process.env.GITHUB_SHA||null,files:rows},null,2));
+});
+
+
+test('canvas source pixels match the selected exported image at 1:1',async({page})=>{
+ await open(page);for(const id of ['segmentation','grid','truth','objects'])await page.locator('#'+id).uncheck();
+ for(const sample of [data.samples[0],data.samples.find(s=>s.id==='11_2')]){
+  await page.locator('#sample').selectOption(sample.id);await ready(page,sample.id);await page.locator('#nativeZoom').click();
+  const pairs=await page.locator('#after').evaluate(async(c,imagePath)=>{
+   const image=new Image();image.src=imagePath;await image.decode();const src=document.createElement('canvas');src.width=src.height=512;const sctx=src.getContext('2d');sctx.drawImage(image,0,0);const ctx=c.getContext('2d');
+   const cx=c.width/2-256,cy=c.height/2-256;
+   return [[200,200],[256,256],[300,300]].map(([x,y])=>({expected:[...sctx.getImageData(x,y,1,1).data],actual:[...ctx.getImageData(cx+x,cy+y,1,1).data]}));
+  },sample.image);
+  for(const p of pairs)expect(p.actual).toEqual(p.expected);
+ }
 });
