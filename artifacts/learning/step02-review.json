@@ -1,0 +1,41 @@
+{
+  "review_date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "function": "test_distance_rule_can_suppress_distinct_nuclei",
+  "source_file": "tests/learner/test_merge_counterexample.py",
+  "source_sha256": "2d2003bd57c2b18fd5e511989ef6854ecb03353bf1e9ef43e5a102dc0609b34c",
+  "user_contribution": {
+    "test_body": "Full body submitted in chat",
+    "reported_test_output": "1 passed in 0.01s",
+    "full_machine_log_received": false
+  },
+  "codex_contribution": {
+    "provided_before_submission": [
+      "imports",
+      "candidate_pair fixture",
+      "test function signature"
+    ],
+    "submitted_body_changed": false,
+    "normalization": "Removed chat HTML/Markdown escaping only.",
+    "post_review": "Updated module status text and removed the pending learner marker; test now runs by default."
+  },
+  "review": {
+    "geometry_preconditions": "Checks actual box IoU=0 and hypot distance approximately 6.",
+    "actual_function_call": true,
+    "retained_and_suppressed_counts": true,
+    "original_index_mapping": true,
+    "scope": "Reproduces the known undercount on one synthetic example; not clinical validation or a fix."
+  },
+  "codex_verification": {
+    "focused_passed": 1,
+    "focused_log": "step02-codex-tests.txt",
+    "full_suite_passed": 69,
+    "full_suite_skipped": 0,
+    "full_suite_log": "step02-full-suite.txt",
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "production_nms_changed": false,
+  "model_or_demo_changed": false,
+  "next_review": "docs/STEP_03.md; pending user interpretation, no proposed policy applied"
+}

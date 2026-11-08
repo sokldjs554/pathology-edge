@@ -1,8 +1,8 @@
 # 2단계: 가까운 서로 다른 핵이 억제되는 반례 검토
 
-상태: **반례 해석 확인 완료 · 사용자 테스트 작성·실행 대기**.
+상태: **반례 해석·사용자 테스트 작성·실행 보고 확인 완료** (2026-11-09, Asia/Seoul).
 사용자는 서로 다른 핵2개가1개로 과소 집계되고, IoU0이어도 거리6px가8px 이하이므로 OR 조건이 작동한다고 설명했습니다. 정확한 해석입니다.
-이제 같은 사례를 재현하는 테스트 함수 하나만 작성합니다.
+사용자가 제출한 테스트 본문과 `1 passed in 0.01s` 보고를 확인했고, Codex 독립 실행에서도 해당1개와 전체69개가 통과했습니다. 다음은 [STEP_03](STEP_03.md)의 규칙 변경 전 검토입니다.
 
 ## 프로젝트에서 맡는 역할
 
@@ -37,10 +37,10 @@ Codex는 위 입력을 현재 `deduplicate`에 넣어 동작을 확인했습니�
 
 함수: `test_distance_rule_can_suppress_distinct_nuclei(candidate_pair)`
 
-이 테스트는 현재 NMS의 알려진 과소 집계 사례를 재현하는 기록입니다. 통과는 **이 한계를 재현했다는 뜻**이며 알고리즘의 정확도나 개선을 입증하지 않습니다.
+이 테스트는 현재 NMS의 알려진 과소 집계 사례를 재현하는 기록입니다. 통과는 **이 한계를 재현했다는 뜻**이며 알고리즘의 정확도나 개선을 입증하지 않습니다. 나중에 병합 정책을 개선하면 새 목표와 반대 오류 사례를 함께 검증하며 이 테스트의 기대값도 검토해야 합니다.
 
-- Codex 제공: import, 위 두 후보를 만드는 `candidate_pair` fixture, 테스트 함수 이름, 미완료 과제 표시.
-- 사용자 작성: `NotImplementedError`를 지우고 함수 본문만 작성합니다. fixture와 기존 병합 알고리즘은 이번 작성 범위에 포함하지 않습니다.
+- Codex 제공: import, 위 두 후보를 만드는 `candidate_pair` fixture, 테스트 함수 이름. 검토 후 미완료 표시를 제거했습니다.
+- 사용자 작성 완료: 함수 본문의 사전 조건·실제 호출·유지/억제 수·index 대응 검사. fixture와 기존 병합 알고리즘은 Codex 제공입니다.
 - 입력: fixture가 매번 새로 만드는 후보 dict 두 개의 list입니다. `x/y`, `bbox`, `score`, `patch_id`, `touches_edge`는 위 표와 같습니다.
 - 호출할 함수: `box_iou(a, b)`는 상자 좌표 list 두 개를 받아 수치를 반환합니다. `deduplicate(objects)`는 후보 목록을 받아 `(kept, removed)` 두 list를 반환합니다.
 - `kept`에는 원 후보의 `raw_index`가 추가됩니다. `removed`에는 `suppressed_index`와 `kept_index`가 있습니다. 둘 다 원래 입력 목록의 index입니다.
@@ -85,15 +85,14 @@ fi
 python -m pytest --run-learner tests/learner/test_merge_counterexample.py -q
 ```
 
-작성 전에는 `NotImplementedError`로1개 실패하는 것이 예상 동작이고, 작성 후 기대 결과는 **1 passed**입니다.
-GitHub 최신 코드 전체의 `python -m pytest -q`에서는 검토 전인 이1개만 skip합니다. 완료한 좌표 함수12개는 계속 실행됩니다.
-전체 프로젝트 환경에서 Codex는 **68 passed, 1 skipped**를 확인했습니다. 이 결과를 사용자 실행으로 기록하지 않습니다.
+초기 템플릿의 `NotImplementedError`는 사용자 제출 본문으로 교체했습니다. 이제 기대 결과는 **1 passed**입니다.
+GitHub 최신 코드 전체에서는 이 테스트와 좌표 함수12개를 기본 검사에 포함하며 Codex가 **69 passed, 0 skipped**를 확인했습니다.
+준비 당시의 **68 passed, 1 skipped**는 과거 상태입니다. Codex의 전체 실행을 사용자 실행으로 기록하지 않습니다.
 
-보내주실 것은 **작성한 테스트 함수와 실행 결과**입니다. 실패하면 생략하지 않은 traceback도 함께 보내 주세요.
-코드와 결과를 검토한 후 다음 단계로 진행합니다.
+테스트 함수와 사용자 실행 결과는 받았습니다. [검토 기록](../artifacts/learning/step02-review.json)에 사용자 기여와 독립 검증을 구분했습니다. 현재는 [STEP_03](STEP_03.md)의 합성 사례 하나를 해석하면 됩니다.
 
 ## 기여 구분
 
-- 사용자 완료: 과소 집계와 OR 거리 조건에 대한 해석.
-- 사용자 예정: 테스트 본문 작성·실행. 임계값 변경이나 새 병합 정책 결정은 아직 배정하지 않았습니다.
+- 사용자 완료: 과소 집계·OR 조건 해석, 테스트 본문 작성, `1 passed in 0.01s` 실행 보고.
+- 후속 사용자 검토: [STEP_03](STEP_03.md)의 반대 오류 사례 해석. 임계값이나 병합 정책 변경은 아직 결정하지 않았습니다.
 - Codex 완료: 합성 입력·fixture·빈 테스트 틀, 최소 의존성 분리, 기존68개 회귀 검사와 입력 검증. [준비 검증 기록](../artifacts/learning/step02-preparation.json).

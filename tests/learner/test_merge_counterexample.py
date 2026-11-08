@@ -1,6 +1,6 @@
 """USER STEP 2. Reproduce a synthetic limitation; see docs/STEP_02.md.
 
-Codex supplies the imports and fixture. The user writes the test body.
+Codex supplied the imports and fixture. The user submitted the reviewed body.
 This is not a real pathology annotation or a new model inference result.
 """
 from math import hypot
@@ -9,7 +9,7 @@ import pytest
 
 from pathology_edge.merge import box_iou, deduplicate
 
-pytestmark = pytest.mark.learner
+# STEP 2 was submitted and reviewed; include it in the default regression suite.
 
 
 @pytest.fixture
@@ -24,7 +24,16 @@ def candidate_pair():
 
 
 def test_distance_rule_can_suppress_distinct_nuclei(candidate_pair):
-    """Document the current heuristic's undercount for the two-nucleus fixture."""
-    # USER TODO: verify the geometry, call the real function and check the
-    # retained candidate and suppression mapping described in docs/STEP_02.md.
-    raise NotImplementedError("사용자 작성 예정: docs/STEP_02.md")
+    """합성 정답은 서로 다른 핵 2개지만, 현재 규칙이 1개만 유지하는 한계를 재현한다."""
+    a, b = candidate_pair
+
+    assert box_iou(a["bbox"], b["bbox"]) == 0.0
+    assert hypot(a["x"] - b["x"], a["y"] - b["y"]) == pytest.approx(6.0)
+
+    kept, removed = deduplicate(candidate_pair)
+
+    assert len(kept) == 1
+    assert len(removed) == 1
+    assert kept[0]["raw_index"] == 0
+    assert removed[0]["suppressed_index"] == 1
+    assert removed[0]["kept_index"] == 0
