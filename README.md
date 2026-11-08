@@ -16,7 +16,7 @@
 | 정답 경계 실험 | 기존 TNBC test7장/2그룹 | 좋아진·나빠진 경계, 정답과 오류 픽셀, 비용 | 기존 결과를 그대로 유지 |
 | IHC 분류 | Patherea P1 Ki67,29case/1,330patch/19,972점,CC BY-NC4 | 실제 염색·GT 중심·정답/오답·네 클래스 점수 | train/val/test15/4/10case, 정답 중심점 조건의4종 세포 분류. 자동 검출 아님 |
 
-WSI의 확대 영상은 OpenSeadragon6.1.1이 공식 OpenSlide 서버의 다중 해상도 타일을 요청합니다. 실제 원본 SVS의 SHA를 확인하고 OpenSlide4.0.1로 읽은 native ROI에 기존 TinyUNet을 실행했습니다. 같은 좌표의 예측·XOR 차이·원 패치와 NMS 사유가 연결됩니다. 확대용 JPEG Q75와 분석 입력인 원본 RGB는 손실압축 때문에 픽셀값이 완전히 같지 않으며, 9지점의 좌표 정렬을 별도로 확인했습니다.
+WSI의 확대 영상은 OpenSeadragon6.1.1이 OpenSlide4.0.1로 원본 SVS에서 생성한 전체 다중 해상도 타일을 요청합니다. 공식 외부 타일은 로컬에서 열렸지만 배포 도메인의 요청을403으로 거부해, 확보한 CC0 원본에서 타일을 생성하여 데모와 함께 제공합니다. 실제 원본 SHA를 확인하고 OpenSlide4.0.1로 읽은 native ROI에 기존 TinyUNet을 실행했습니다. 같은 좌표의 예측·XOR 차이·원 패치와 NMS 사유가 연결됩니다. JPEG Q75와 분석 입력인 원본 RGB는 손실압축 때문에 픽셀값이 완전히 같지 않으며 좌표 정렬을 별도로 검사합니다.
 
 세 WSI ROI에서 warm CPU 중앙값은 무겹침 **0.297–0.329초**, 겹침 **1.249–1.899초**, 독립 worker peak RSS **446–474MiB**였습니다. 전체 WSI 처리 비용이 아닙니다. [실험·좌표·선택 규칙](docs/WSI_EXPERIMENT.md).
 
@@ -25,6 +25,14 @@ WSI의 확대 영상은 OpenSeadragon6.1.1이 공식 OpenSlide 서버의 다중 
 Hann 겹침·경계 평가·WSI linked view·provenance 자체는 선행 기능입니다. 이 프로젝트의 설명 가능한 강점은 **같은 작은 CPU 모델의 실제 결과를 원본 좌표→패치→후보→억제 사유→오류·비용으로 추적하는 좁고 재현 가능한 검토 흐름**입니다. [16개 프로젝트·논문 비교](docs/WSI_LANDSCAPE.md), [WSI·도구·권리 비교](docs/WSI_DATA_OPTIONS.md), [AIVIS 업무와 IHC 자료](docs/AIVIS_IHC_FEASIBILITY.md)를 설계 전에 조사했습니다. 타사 모델 성능은 직접 재현한 값이 아닙니다.
 
 ## 영상 작업대
+
+새 WSI·IHC 화면의 조사, 실제 실험, 검증·배포 및 직접 확인 순서는 [확장 보고서](docs/WSI_REVIEW.md)에 정리했습니다. 아래 새 화면에서 실제 WSI를 탐색할 수 있습니다.
+
+![실제 WSI 전체 탐색 — 공개 버전7](artifacts/ui/wsi/wsi-overview.png)
+
+[변경 전](artifacts/ui/wsi/before-desktop.png) · [WSI 경계 비교](artifacts/ui/wsi/wsi-boundary.png) · [후보 출처](artifacts/ui/wsi/wsi-candidate-provenance.png) · [IHC 분류](artifacts/ui/wsi/ihc-desktop.png)
+
+기존 TNBC 정답 경계 화면도 유지했습니다.
 
 QuPath·Aperio·에이비스의 공개 화면을 조사해 영상 중심의 검토 화면으로 구성했습니다.
 썸네일 선택 → 같은 위치 확대 → 경계 비교 → 억제/유지 후보 추적을 한 화면에서 수행합니다.
@@ -135,13 +143,13 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: WSI/IHC 추가 후 현재 호스트 **54 passed**. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다. 새 브라우저·배포 검증은 확장 보고서에 별도 기록합니다.
+- 일반 테스트: WSI/IHC 추가 후 현재 호스트·Ubuntu Actions **56 passed**. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
 - 사용자 좌표 함수 관련 **12 tests skipped**. 완성 또는 통과로 기록하지 않습니다.
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
-- Chromium·WebKit 각각 실제 조작 **26 tests**, 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태 캡처를 확인했습니다. [실행 근거](docs/INTERVIEW_UI.md). 공개 버전5에서도 동일한 26개 검사를 각 엔진에서 통과했습니다.
+- 공개 버전7에서 Chromium·WebKit 각각 실제 조작 **46 tests**, 기존 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태·지연 복구를 확인했습니다. [확장 근거](docs/WSI_REVIEW.md). 과거 공개 버전5의 각26개 검사 기록은 [기존 보고서](docs/INTERVIEW_UI.md)에 유지했습니다.
 - macOS 11.7.11에서의 사용자 실행은 아직 확인하지 않았습니다.
-- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42401568523), [UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42401568608) 성공. [공개 주소 재검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42401871346)도 성공했습니다. UI 소스 `9278071` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다.
+- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829667), [checkout UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668), [공개 URL UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474) 성공. UI 소스 `b5024b0` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다. 공개2,188개 파일의 저장소 정합성은 `artifacts/ui/wsi/production-files.json`에 있습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
 
@@ -171,7 +179,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 ## 남은 한계
 
 WSI 전체 모델 처리, 자동 IHC 검출·분할·Ki67 임상 지수, ViT/사전학습 비교, 다중 seed·신뢰구간,
-외부 정확도 검증·병리 전문가·임상 검증은 미수행입니다. CMU WSI에는 핵 정답이 없고, IHC는 단일 기관·제공 중심점 조건입니다. 공식 원격 WSI 타일의 가용성을 보장하지 않습니다. 일반 배율 좌표 함수는 사용자 작성 대기입니다.
+외부 정확도 검증·병리 전문가·임상 검증은 미수행입니다. CMU WSI에는 핵 정답이 없고, IHC는 단일 기관·제공 중심점 조건입니다. 전체 WSI JPEG 타일을 포함해 저장소 용량이 증가했습니다. 일반 배율 좌표 함수는 사용자 작성 대기입니다.
 단순 핵 foreground만으로 임상 세포 수를 정할 수 없고, 두 테스트 그룹의 성능 차이가 큽니다.
 현재 test를 보며 모델을 다시 선택하면 새 평가 설계가 필요합니다.
 

@@ -1,0 +1,343 @@
+test	Set up job	﻿2026-11-08T08:24:52.8265134Z Current runner version: '2.338.2'
+test	Set up job	2026-11-08T08:24:52.8287883Z ##[group]Runner Image Provisioner
+test	Set up job	2026-11-08T08:24:52.8288699Z Hosted Compute Agent
+test	Set up job	2026-11-08T08:24:52.8289211Z Version: 20261028.624
+test	Set up job	2026-11-08T08:24:52.8289810Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+test	Set up job	2026-11-08T08:24:52.8290441Z Build Date: 2026-10-28T21:51:42Z
+test	Set up job	2026-11-08T08:24:52.8291025Z Worker ID: {24fcd6c7-06f4-416d-9386-1d1a1746c475}
+test	Set up job	2026-11-08T08:24:52.8291671Z Region: westus3
+test	Set up job	2026-11-08T08:24:52.8292159Z Cloud: Azure
+test	Set up job	2026-11-08T08:24:52.8292985Z ##[endgroup]
+test	Set up job	2026-11-08T08:24:52.8294185Z ##[group]Operating System
+test	Set up job	2026-11-08T08:24:52.8294725Z Ubuntu
+test	Set up job	2026-11-08T08:24:52.8295247Z 24.04.5
+test	Set up job	2026-11-08T08:24:52.8295705Z LTS
+test	Set up job	2026-11-08T08:24:52.8296169Z ##[endgroup]
+test	Set up job	2026-11-08T08:24:52.8296711Z ##[group]Runner Image
+test	Set up job	2026-11-08T08:24:52.8297218Z Image: ubuntu-24.04
+test	Set up job	2026-11-08T08:24:52.8297727Z Version: 20261101.360.1
+test	Set up job	2026-11-08T08:24:52.8298622Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+test	Set up job	2026-11-08T08:24:52.8300119Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+test	Set up job	2026-11-08T08:24:52.8300921Z ##[endgroup]
+test	Set up job	2026-11-08T08:24:52.8301971Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-11-08T08:24:52.8303729Z Contents: read
+test	Set up job	2026-11-08T08:24:52.8304368Z Metadata: read
+test	Set up job	2026-11-08T08:24:52.8304854Z Packages: read
+test	Set up job	2026-11-08T08:24:52.8305297Z ##[endgroup]
+test	Set up job	2026-11-08T08:24:52.8307682Z Secret source: Actions
+test	Set up job	2026-11-08T08:24:52.8308512Z Cache mode: write
+test	Set up job	2026-11-08T08:24:52.8309199Z Prepare workflow directory
+test	Set up job	2026-11-08T08:24:52.8575778Z Prepare all required actions
+test	Set up job	2026-11-08T08:24:52.8616708Z Getting action download info
+test	Set up job	2026-11-08T08:24:53.1536249Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test	Set up job	2026-11-08T08:24:53.2518726Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+test	Set up job	2026-11-08T08:24:53.4400737Z Complete job name: test
+test	Run actions/checkout@v4	﻿2026-11-08T08:24:53.5093295Z ##[group]Run actions/checkout@v4
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5094034Z with:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5094408Z   repository: sokldjs554/pathology-edge
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5097483Z   token: ***
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5097847Z   ssh-strict: true
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5098208Z   ssh-user: git
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5098572Z   persist-credentials: true
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5098972Z   clean: true
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5099342Z   sparse-checkout-cone-mode: true
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5099769Z   fetch-depth: 1
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5100125Z   fetch-tags: false
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5100489Z   show-progress: true
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5100856Z   lfs: false
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5101201Z   submodules: false
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5101569Z   set-safe-directory: true
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5101978Z   allow-unsafe-pr-checkout: false
+test	Run actions/checkout@v4	2026-11-08T08:24:53.5102669Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7101861Z Syncing repository: sokldjs554/pathology-edge
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7104255Z ##[group]Getting Git version info
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7105208Z Working directory is '/home/runner/work/pathology-edge/pathology-edge'
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7106718Z [command]/usr/bin/git version
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7138805Z git version 2.56.0
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7155797Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7169489Z Temporarily overriding HOME='/home/runner/work/_temp/de1c3d4d-108a-4b97-ad95-119a524bc52a' before making global git config changes
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7171245Z Adding repository directory to the temporary git global config as a safe directory
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7174469Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pathology-edge/pathology-edge
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7220946Z Deleting the contents of '/home/runner/work/pathology-edge/pathology-edge'
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7228693Z ##[group]Initializing the repository
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7242757Z [command]/usr/bin/git init /home/runner/work/pathology-edge/pathology-edge
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7309974Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7311759Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7314343Z hint: to use in all of your new repositories, which will suppress this warning,
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7315469Z hint: call:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7316152Z hint:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7316915Z hint: 	git config --global init.defaultBranch <name>
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7317811Z hint:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7318693Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7320024Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7321123Z hint:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7321797Z hint: 	git branch -m <name>
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7322673Z hint:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7323598Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7325205Z Initialized empty Git repository in /home/runner/work/pathology-edge/pathology-edge/.git/
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7327990Z [command]/usr/bin/git remote add origin https://github.com/sokldjs554/pathology-edge
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7401656Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7402813Z ##[group]Disabling automatic garbage collection
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7405995Z [command]/usr/bin/git config --local gc.auto 0
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7437138Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7438074Z ##[group]Setting up auth
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7443343Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7476273Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7783764Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Run actions/checkout@v4	2026-11-08T08:24:53.7825663Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Run actions/checkout@v4	2026-11-08T08:24:53.8047948Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Run actions/checkout@v4	2026-11-08T08:24:53.8088364Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Run actions/checkout@v4	2026-11-08T08:24:53.8303948Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Run actions/checkout@v4	2026-11-08T08:24:53.8348456Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:53.8349493Z ##[group]Fetching the repository
+test	Run actions/checkout@v4	2026-11-08T08:24:53.8359624Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b5024b04df25eba38bf4cf2aa81ef11df713407d:refs/remotes/origin/feature/wsi-review
+test	Run actions/checkout@v4	2026-11-08T08:24:58.4986502Z From https://github.com/sokldjs554/pathology-edge
+test	Run actions/checkout@v4	2026-11-08T08:24:58.4988032Z  * [new ref]         b5024b04df25eba38bf4cf2aa81ef11df713407d -> origin/feature/wsi-review
+test	Run actions/checkout@v4	2026-11-08T08:24:58.4990480Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:58.4991639Z ##[group]Determining the checkout info
+test	Run actions/checkout@v4	2026-11-08T08:24:58.4993179Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:58.4997114Z [command]/usr/bin/git sparse-checkout disable
+test	Run actions/checkout@v4	2026-11-08T08:24:58.5054547Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Run actions/checkout@v4	2026-11-08T08:24:58.5096807Z ##[group]Checking out the ref
+test	Run actions/checkout@v4	2026-11-08T08:24:58.5103227Z [command]/usr/bin/git checkout --progress --force -B feature/wsi-review refs/remotes/origin/feature/wsi-review
+test	Run actions/checkout@v4	2026-11-08T08:24:59.1264139Z Switched to a new branch 'feature/wsi-review'
+test	Run actions/checkout@v4	2026-11-08T08:24:59.1284920Z branch 'feature/wsi-review' set up to track 'origin/feature/wsi-review'.
+test	Run actions/checkout@v4	2026-11-08T08:24:59.1305897Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-08T08:24:59.1355568Z [command]/usr/bin/git log -1 --format=%H
+test	Run actions/checkout@v4	2026-11-08T08:24:59.1387609Z b5024b04df25eba38bf4cf2aa81ef11df713407d
+test	Run actions/setup-python@v5	﻿2026-11-08T08:24:59.1624505Z ##[group]Run actions/setup-python@v5
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1624874Z with:
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1625085Z   python-version: 3.12
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1625317Z   cache: pip
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1625524Z   check-latest: false
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1627607Z   token: ***
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1627827Z   update-environment: true
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1628068Z   allow-prereleases: false
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1628295Z   freethreaded: false
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.1628511Z ##[endgroup]
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.3999889Z ##[group]Installed versions
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.4086266Z (node:2116) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.4087402Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.4088332Z Successfully set up CPython (3.12.16)
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.4089022Z ##[endgroup]
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.6681134Z [command]/opt/hostedtoolcache/Python/3.12.16/x64/bin/pip cache dir
+test	Run actions/setup-python@v5	2026-11-08T08:24:59.8915880Z /home/runner/.cache/pip
+test	Run actions/setup-python@v5	2026-11-08T08:25:00.1432827Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-c8eb3ca1cf9819122c8cff5cd33632b35dd879e974bfe9cb43e858afe52c355a
+test	Run actions/setup-python@v5	2026-11-08T08:25:00.1523438Z (node:2116) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+test	Run actions/setup-python@v5	2026-11-08T08:25:01.3836384Z Received 41943040 of 350405763 (12.0%), 39.9 MBs/sec
+test	Run actions/setup-python@v5	2026-11-08T08:25:02.3843836Z Received 184549376 of 350405763 (52.7%), 87.9 MBs/sec
+test	Run actions/setup-python@v5	2026-11-08T08:25:03.3850234Z Received 337822851 of 350405763 (96.4%), 107.3 MBs/sec
+test	Run actions/setup-python@v5	2026-11-08T08:25:03.4860995Z Received 350405763 of 350405763 (100.0%), 107.7 MBs/sec
+test	Run actions/setup-python@v5	2026-11-08T08:25:03.4861844Z Cache Size: ~334 MB (350405763 B)
+test	Run actions/setup-python@v5	2026-11-08T08:25:03.4890134Z [command]/usr/bin/tar -xf /home/runner/work/_temp/388fa8d5-c542-4cd0-b4e6-5871388a74a1/cache.tzst -P -C /home/runner/work/pathology-edge/pathology-edge --use-compress-program unzstd
+test	Run actions/setup-python@v5	2026-11-08T08:25:03.9012692Z Cache restored successfully
+test	Run actions/setup-python@v5	2026-11-08T08:25:03.9160669Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-c8eb3ca1cf9819122c8cff5cd33632b35dd879e974bfe9cb43e858afe52c355a
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	﻿2026-11-08T08:25:03.9490822Z ##[group]Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9491613Z [36;1mpython -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt[0m
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9516080Z shell: /usr/bin/bash -e {0}
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9516356Z env:
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9516644Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9517018Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9517379Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9517689Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9517991Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9518306Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:03.9518584Z ##[endgroup]
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.3627873Z Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cpu
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.5061260Z Collecting certifi==2026.10.23 (from -r requirements-lock.txt (line 1))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.5072499Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.6312115Z Collecting charset-normalizer==3.5.2 (from -r requirements-lock.txt (line 2))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.6323462Z   Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.8545480Z Collecting cloudpickle==3.1.2 (from -r requirements-lock.txt (line 3))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.8555546Z   Using cached cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.8904545Z Collecting filelock==4.2.9 (from -r requirements-lock.txt (line 4))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.8913463Z   Using cached filelock-4.2.9-py3-none-any.whl.metadata (2.3 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.9246856Z Collecting fsspec==2026.9.0 (from -r requirements-lock.txt (line 5))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.9257905Z   Using cached fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.9589443Z Collecting idna==3.20 (from -r requirements-lock.txt (line 6))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:04.9599052Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.1526958Z Collecting iniconfig==2.3.1 (from -r requirements-lock.txt (line 7))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.1537301Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.1756372Z Collecting Jinja2==3.1.6 (from -r requirements-lock.txt (line 8))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.1820124Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.3354314Z Collecting joblib==1.6.0 (from -r requirements-lock.txt (line 9))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.3365487Z   Using cached joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.3954378Z Collecting MarkupSafe==3.0.4 (from -r requirements-lock.txt (line 10))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.3967366Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.4211689Z Collecting mpmath==1.3.0 (from -r requirements-lock.txt (line 11))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.4222085Z   Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.4743584Z Collecting networkx==3.7 (from -r requirements-lock.txt (line 12))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.4754081Z   Using cached networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.8431619Z Collecting numpy==2.5.4 (from -r requirements-lock.txt (line 13))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:05.8443989Z   Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.0680492Z Collecting opencv-python-headless==5.0.0.93 (from -r requirements-lock.txt (line 14))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.0691257Z   Using cached opencv_python_headless-5.0.0.93-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (19 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.3908730Z Collecting openslide-bin==4.0.1.2 (from -r requirements-lock.txt (line 15))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.4630590Z   Downloading openslide_bin-4.0.1.2-py3-none-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.7242214Z Collecting openslide-python==1.4.7 (from -r requirements-lock.txt (line 16))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.7355380Z   Downloading openslide_python-1.4.7-cp311-abi3-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (5.2 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.7620951Z Collecting packaging==26.3 (from -r requirements-lock.txt (line 17))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:06.7631317Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.0757457Z Collecting pillow==13.0.0 (from -r requirements-lock.txt (line 18))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.0770149Z   Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.1635370Z Collecting pluggy==1.7.0 (from -r requirements-lock.txt (line 19))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.1646572Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.3937625Z Collecting psutil==7.2.2 (from -r requirements-lock.txt (line 20))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.3949365Z   Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.4918825Z Collecting pybind11==3.1.0 (from -r requirements-lock.txt (line 21))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.4934599Z   Using cached pybind11-3.1.0-py3-none-any.whl.metadata (10 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.6579589Z Collecting Pygments==2.21.0 (from -r requirements-lock.txt (line 22))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.6596361Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.7615079Z Collecting pytest==9.2.0 (from -r requirements-lock.txt (line 23))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.7628266Z   Using cached pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.7998029Z Collecting requests==2.34.2 (from -r requirements-lock.txt (line 24))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.8008596Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.9909643Z Collecting scipy==1.18.1 (from -r requirements-lock.txt (line 25))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:07.9920631Z   Using cached scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.1502861Z Collecting scikit-learn==1.8.0 (from -r requirements-lock.txt (line 26))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.1513558Z   Using cached scikit_learn-1.8.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.3168256Z Collecting setuptools==84.2.1 (from -r requirements-lock.txt (line 27))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.3179302Z   Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.4424208Z Collecting sympy==1.14.0 (from -r requirements-lock.txt (line 28))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.4434770Z   Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.5630560Z Collecting torch==2.15.0+cpu (from -r requirements-lock.txt (line 29))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.5641110Z   Using cached torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (35 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.6539231Z Collecting threadpoolctl==3.8.0 (from -r requirements-lock.txt (line 30))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.6549850Z   Using cached threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.6847804Z Collecting typing_extensions==4.16.0 (from -r requirements-lock.txt (line 31))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.6859338Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8106244Z Collecting urllib3==2.8.0 (from -r requirements-lock.txt (line 32))
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8117049Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8422494Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8431530Z Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8441115Z Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8450428Z Using cached filelock-4.2.9-py3-none-any.whl (164 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8459801Z Using cached fsspec-2026.9.0-py3-none-any.whl (221 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8469557Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8478697Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8642959Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8653931Z Using cached joblib-1.6.0-py3-none-any.whl (306 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8664834Z Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8673758Z Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8684468Z Using cached networkx-3.7-py3-none-any.whl (2.1 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8700324Z Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.8760646Z Using cached opencv_python_headless-5.0.0.93-cp37-abi3-manylinux_2_28_x86_64.whl (61.2 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:08.9044003Z Downloading openslide_bin-4.0.1.2-py3-none-manylinux_2_28_x86_64.whl (2.8 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2658540Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 7.7 MB/s  0:00:00
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2766800Z Downloading openslide_python-1.4.7-cp311-abi3-manylinux1_x86_64.manylinux_2_5_x86_64.whl (36 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2794528Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2804205Z Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2835373Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2844924Z Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2855437Z Using cached pybind11-3.1.0-py3-none-any.whl (319 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2865362Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2877994Z Using cached pytest-9.2.0-py3-none-any.whl (411 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2888416Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2897625Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.2906923Z Using cached scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.3020604Z Using cached scikit_learn-1.8.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (8.9 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.3058699Z Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.3071439Z Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.3099026Z Using cached torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl (209.5 MB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.3743277Z Using cached threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.3753671Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:09.9761072Z Installing collected packages: mpmath, urllib3, typing_extensions, threadpoolctl, sympy, setuptools, Pygments, pybind11, psutil, pluggy, pillow, packaging, openslide-bin, numpy, networkx, MarkupSafe, iniconfig, idna, fsspec, filelock, cloudpickle, charset-normalizer, certifi, scipy, requests, pytest, openslide-python, opencv-python-headless, joblib, Jinja2, torch, scikit-learn
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:39.9052867Z 
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:39.9069337Z Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 Pygments-2.21.0 certifi-2026.10.23 charset-normalizer-3.5.2 cloudpickle-3.1.2 filelock-4.2.9 fsspec-2026.9.0 idna-3.20 iniconfig-2.3.1 joblib-1.6.0 mpmath-1.3.0 networkx-3.7 numpy-2.5.4 opencv-python-headless-5.0.0.93 openslide-bin-4.0.1.2 openslide-python-1.4.7 packaging-26.3 pillow-13.0.0 pluggy-1.7.0 psutil-7.2.2 pybind11-3.1.0 pytest-9.2.0 requests-2.34.2 scikit-learn-1.8.0 scipy-1.18.1 setuptools-84.2.1 sympy-1.14.0 threadpoolctl-3.8.0 torch-2.15.0+cpu typing_extensions-4.16.0 urllib3-2.8.0
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:39.9078841Z 
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:39.9084272Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+test	Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt	2026-11-08T08:25:39.9084780Z [notice] To update, run: pip install --upgrade pip
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	﻿2026-11-08T08:25:40.1329579Z ##[group]Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1330060Z [36;1mCC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .[0m
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1349191Z shell: /usr/bin/bash -e {0}
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1349412Z env:
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1349641Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1349993Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1350348Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1350654Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1350954Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1351264Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.1351535Z ##[endgroup]
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.4262703Z Obtaining file:///home/runner/work/pathology-edge/pathology-edge
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.4271688Z   Checking if build backend supports build_editable: started
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.7050799Z   Checking if build backend supports build_editable: finished with status 'done'
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.7058114Z   Preparing editable metadata (pyproject.toml): started
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.9361415Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.9402884Z Building wheels for collected packages: pathology-edge
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:40.9409038Z   Building editable for pathology-edge (pyproject.toml): started
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.4969731Z   Building editable for pathology-edge (pyproject.toml): finished with status 'done'
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.4975551Z   Created wheel for pathology-edge: filename=pathology_edge-0.1.0-0.editable-cp312-cp312-linux_x86_64.whl size=1493 sha256=6929b0b287392b367685eaf327663b302432dc1fdde015a82454e6d266bba450
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.4976940Z   Stored in directory: /tmp/pip-ephem-wheel-cache-jvaxugy6/wheels/54/73/82/01f380890ed2c70352dadedc6c20e4d3c04e1d94adebc2b3e3
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.4994738Z Successfully built pathology-edge
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.5088873Z Installing collected packages: pathology-edge
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.5200778Z Successfully installed pathology-edge-0.1.0
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.5207969Z 
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.5208290Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+test	Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .	2026-11-08T08:25:48.5208773Z [notice] To update, run: pip install --upgrade pip
+test	Run python -m pytest -q	﻿2026-11-08T08:25:48.5796902Z ##[group]Run python -m pytest -q
+test	Run python -m pytest -q	2026-11-08T08:25:48.5797191Z [36;1mpython -m pytest -q[0m
+test	Run python -m pytest -q	2026-11-08T08:25:48.5815848Z shell: /usr/bin/bash -e {0}
+test	Run python -m pytest -q	2026-11-08T08:25:48.5816086Z env:
+test	Run python -m pytest -q	2026-11-08T08:25:48.5816313Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pytest -q	2026-11-08T08:25:48.5816669Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test	Run python -m pytest -q	2026-11-08T08:25:48.5817014Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pytest -q	2026-11-08T08:25:48.5817330Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pytest -q	2026-11-08T08:25:48.5817665Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python -m pytest -q	2026-11-08T08:25:48.5817969Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test	Run python -m pytest -q	2026-11-08T08:25:48.5818237Z ##[endgroup]
+test	Run python -m pytest -q	2026-11-08T08:25:57.7095149Z ssssssssssss........................................................     [100%]
+test	Run python -m pytest -q	2026-11-08T08:25:57.7095684Z 56 passed, 12 skipped in 8.48s
+test	Run node --check dist/app.js	﻿2026-11-08T08:25:58.2700355Z ##[group]Run node --check dist/app.js
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2700644Z [36;1mnode --check dist/app.js[0m
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2720748Z shell: /usr/bin/bash -e {0}
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2720964Z env:
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2721189Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2721547Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2721895Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2722199Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2722761Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2723088Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test	Run node --check dist/app.js	2026-11-08T08:25:58.2723361Z ##[endgroup]
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	﻿2026-11-08T08:25:58.4096571Z ##[group]Run node --check dist/wsi.js && node --check dist/ihc.js
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4096956Z [36;1mnode --check dist/wsi.js && node --check dist/ihc.js[0m
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4115499Z shell: /usr/bin/bash -e {0}
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4115724Z env:
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4115946Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4116297Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4116645Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4116948Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4117243Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4117537Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test	Run node --check dist/wsi.js && node --check dist/ihc.js	2026-11-08T08:25:58.4117810Z ##[endgroup]
+test	Run python scripts/validate_demo.py	﻿2026-11-08T08:25:58.4683867Z ##[group]Run python scripts/validate_demo.py
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4684179Z [36;1mpython scripts/validate_demo.py[0m
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4702536Z shell: /usr/bin/bash -e {0}
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4702752Z env:
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4702977Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4703330Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4703681Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4703987Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4704277Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4704588Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.4704852Z ##[endgroup]
+test	Run python scripts/validate_demo.py	2026-11-08T08:25:58.5547425Z PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.
+test	Post Run actions/setup-python@v5	﻿2026-11-08T08:25:58.5751578Z Post job cleanup.
+test	Post Run actions/setup-python@v5	2026-11-08T08:25:58.6803043Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-c8eb3ca1cf9819122c8cff5cd33632b35dd879e974bfe9cb43e858afe52c355a, not saving cache.
+test	Post Run actions/setup-python@v5	2026-11-08T08:25:58.6804299Z (node:2299) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Post Run actions/setup-python@v5	2026-11-08T08:25:58.6805057Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Post Run actions/checkout@v4	﻿2026-11-08T08:25:58.6945636Z Post job cleanup.
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7694302Z [command]/usr/bin/git version
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7730617Z git version 2.56.0
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7762867Z Temporarily overriding HOME='/home/runner/work/_temp/51c44cf3-7fac-4205-b656-43f7cec35ed5' before making global git config changes
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7763899Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7768294Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pathology-edge/pathology-edge
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7811450Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.7876374Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.8123742Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.8148097Z http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.8162525Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.8202773Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.8450087Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Run actions/checkout@v4	2026-11-08T08:25:58.8491885Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Complete job	﻿2026-11-08T08:25:58.8871830Z Cleaning up orphan processes
+test	Complete job	2026-11-08T08:25:58.9209946Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

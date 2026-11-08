@@ -1,0 +1,68 @@
+{
+  "date_utc": "2026-11-08",
+  "performed_by": "Codex",
+  "user_execution_confirmed": false,
+  "ui_commit": "b5024b04df25eba38bf4cf2aa81ef11df713407d",
+  "sites_source_commit": "3021c2cbaef0be488d8349c46656e33514c90131",
+  "public_version": 7,
+  "public_url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "deployment_id": "appgdep_6af033fa12d08191b854c499e4cd1806",
+  "checkout_browser_run": 42462829668,
+  "main_cpu_run": 42463131372,
+  "production_browser_run": 42463547474,
+  "cpu": {
+    "passed": 56,
+    "skipped_learner": 12,
+    "cpp_extension_built": true
+  },
+  "node_geometry_passed": 5,
+  "browsers": {
+    "chromium": {
+      "startTime": "2026-11-08T08:35:34.665Z",
+      "duration": 118835.906,
+      "expected": 46,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "runtime": "Ubuntu 24.04 GitHub Actions / Playwright 1.56.1 / Node 22",
+      "target": "public deployment"
+    },
+    "webkit": {
+      "startTime": "2026-11-08T08:36:08.394Z",
+      "duration": 152927.383,
+      "expected": 46,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "runtime": "Ubuntu 24.04 GitHub Actions / Playwright 1.56.1 / Node 22",
+      "target": "public deployment"
+    }
+  },
+  "matched_public_files": 2188,
+  "preserved_original_files": 46,
+  "image_review": [
+    "before-desktop.png",
+    "wsi-overview.png",
+    "wsi-boundary.png",
+    "wsi-candidate-provenance.png",
+    "wsi-mobile-375.png",
+    "wsi-mobile-webkit-375.png",
+    "ihc-desktop.png",
+    "ihc-375.png",
+    "wsi-tile-error-injected.png"
+  ],
+  "failures_fixed": [
+    "case deep link stripped by existing URL cleanup",
+    "test URL string treated as method",
+    "external official S3 tiles denied in public origin; replaced by full CC0 self-hosted pyramid"
+  ],
+  "limitations": [
+    "Modern Linux Playwright WebKit is not a test of the user macOS 11.7.11 browser.",
+    "12 learner tests are intentionally skipped; no user implementation claimed.",
+    "No ground-truth WSI accuracy, whole-WSI inference or clinical Ki67 validation."
+  ],
+  "source_parity": "production-files.json",
+  "native_tile_generation": "../../wsi/local-tiles.json",
+  "historical_failed_version": 6,
+  "historical_failed_browser_run": 42461198669
+}

@@ -124,7 +124,7 @@ ROI 산출물에는 적어도 다음 lineage를 저장한다.
 
 다운로드 checksum 일치, 최고 DZI level의 native 치수 일치, 전체 화면→native zoom에서 실제 타일 교체, ROI로 이동한 위치와 분석 입력 crop의 일치, 외부 타일 사용 시 배포 origin의 실제 브라우저 CORS를 확인한다. 코드가 돌아간 것과 unlabeled 데이터의 임상 정확도가 검증된 것은 구분한다.
 
-조사 원시 자료는 작업 환경의 `/workspace/work/wsi-source-research/`에 있다. 원본 index JSON/HTML, metadata range-reader와 결과 JSON, official demo info/status JSON, 실제 overview/macro JPEG, Zenodo API JSON을 포함한다. source checksum의 전체 다운로드 검증은 구현 담당 단계에 남겨 두었다.
+조사 원시 자료는 작업 환경의 `/workspace/work/wsi-source-research/`에 있다. 원본 index JSON/HTML, metadata range-reader와 결과 JSON, official demo info/status JSON, 실제 overview/macro JPEG, Zenodo API JSON을 포함한다. 조사 당시 source checksum의 전체 다운로드 검증은 구현 단계에 남겨 두었으며, 이후 실제 원본 다운로드·SHA 대조를 완료했다([source.json](../artifacts/wsi/source.json)).
 
 ### 추론 전에 고정한 ROI 제안
 
@@ -137,3 +137,9 @@ ROI 산출물에는 적어도 다음 lineage를 저장한다.
 | C | 15872 | 26112 | 1024 | 1024 | 아래쪽 가운데 절편 내부 |
 
 level9 overview의 중심점 `(50,165)`, `(234,80)`, `(128,208)`에 native factor128을 적용하고 512px를 뺀 top-left이다. 눈에 띄는 접힘이 있는 오른쪽 위 작은 절편을 피하고 3개 다른 절편을 포함했다. 추론 전 실제 native RGB를 한 번 확인하여 유리·뚜렷한 찢김 여부를 기록할 수 있다. 결과가 기대보다 나쁘다는 이유로 ROI를 바꾸지 않는다. 이 좌표 제안은 **보고서 작성 시점의 사전 선택**이며 실제 추론 실행·품질 검증 완료 주장이 아니다.
+
+## 공개 배포 후 최종 타일 호스팅 결정
+
+초기 로컬 환경의 공식 타일 HTTP200/CORS 확인과 달리, 공개 사이트에서 동일 S3 객체는 `AccessDenied` HTTP403을 반환했다. 외부 제한을 우회하지 않고 **자체 생성 정적 DZI를 최종 채택**했다. 현재 `wsi/slide_files/`는 원본 전체 46,000×32,893를 native level16까지 유지하는 17-level pyramid이다. 1022px tile/1px overlap/JPEG75로 생성한 실제 결과는 **2,071파일, 139,369,111bytes**, 생성 71.13초, 전체 프로세스 peak RSS 944.23MiB였다. 이 비용은 전체 WSI 모델 추론 비용이 아니다.
+
+[재현 CLI](../scripts/export_wsi_tiles.py), [생성·정렬 검증](../artifacts/wsi/local-tiles.json), [실험 기록](WSI_EXPERIMENT.md)에 근거를 남겼다. 이미지 CC0 권리·원본 checksum은 그대로이며, 낮은 level의 18개 thumbnail 반올림만 선언된 크기에 맞췄다. native level의 크기 축소·resize와 ROI 모델 재실행은 없었다. 모델 분석 범위는 3개 ROI이며 나머지 조직은 탐색만 가능하다.

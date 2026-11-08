@@ -9,6 +9,8 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | U02 | 사용자 | 테스트 | 1단계 단위 테스트 | 예정 | 출력 수신 전 |
 | U03 | 사용자 | 화면 | 데모 선택·확대·경계 비교 | 부분 확인 | 확대 가능, 드래그·두 손가락 스크롤 이동 실패를 채팅으로 제보. 수정본과 나머지 동작은 미확인 |
 | U06 | 사용자 | 화면·해석 | 개선/악화 경계·픽셀 강조·전체 평균/국소 점수·시간 비용 확인 | 예정 | `docs/INTERVIEW_UI.md`의 첫 확인 순서 제공. 사용자 결과 수신 전 |
+| U07 | 사용자 | 화면·해석 | 실제 WSI 전체→R1→경계→후보 출처, 드래그·스크롤 이동 확인 | 예정 | `docs/WSI_REVIEW.md`의 첫 확인 순서. 사용자 결과 수신 전 |
+| U08 | 사용자 | 검토 | IHC 정답 중심 조건·네 클래스 오류·분모와 임상 범위 구분 | 예정 | U07 확인 후 다음 단계로 안내. 아직 검토 완료 아님 |
 | U04 | 사용자 | 검토·결정 | 좌표계와 리사이즈 설명 | 예정 | 설명 수신 전 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |
@@ -26,11 +28,15 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | C12 | Codex | 보존 확인 | 모델·결과 JSON·42개 PNG·사용자 함수 바이트 보존 | 완료 | `artifacts/ui/invariants.json` |
 | C13 | Codex | 배포·검증 | 공개 버전3 배포, 소스 대조, 공개 주소에서 최종12개 UI 테스트 | 완료 | `artifacts/ui/deployment.json`, `verification.json`, run42374425111 |
 | C14 | Codex | 오류 재현·수정 | 약한 확대의 축 고정, 트랙패드 스크롤, WebKit 캔버스 범위 수정 및 두 엔진 회귀 검사 | 완료 | `docs/PAN_FIX.md`, `artifacts/ui/pan-fix/`. 사용자 수정본 재확인은 대기 |
-
 | C15 | Codex | 구현·검증 | 실제 마스크 기반 경계 사례 11개, 동기화 ROI·정확한 변경 픽셀, 평균/개별/비용 비교·용어·범위 안내 | 완료 | `review_cases.py`, `review-ui.js`, `docs/INTERVIEW_UI.md`; Python36 + 좌표5 + Chromium/WebKit 각26. 사용자 실습 제외 |
 | C16 | Codex | 수치·원본 대조 | 42개 Dice 재계산, 6평균/2시간 중앙값, 모델·결과·PNG·사용자 함수45개 보존 | 완료 | `artifacts/ui/interview/result-audit.json` |
-
 | C17 | Codex | 배포·브라우저 | 공개 버전5, 49개 파일 정합성, 공개 URL Chromium/WebKit 각26개 검사와 캡처 시각 검토 | 완료 | `artifacts/ui/interview/verification.json`, run42401871346, UI9278071 / Sites21855b4 |
+| C18 | Codex | 조사·비교 | 공식 AIVIS 대체 공고·제품·16개 WSI/분할/경계 프로젝트·IHC 자료 비교 | 완료 | `WSI_LANDSCAPE.md`, `WSI_DATA_OPTIONS.md`, `AIVIS_IHC_FEASIBILITY.md`. 타사 추론 미실행 |
+| C19 | Codex | 구현·실험 | CC0 원본 WSI 검증, native 3ROI 고정 모델 추론, 후보/원 패치/NMS 출처, 시간·RSS·타일 정렬 대조 | 완료 | `wsi_export.py`, `artifacts/wsi/`, `WSI_EXPERIMENT.md` |
+| C20 | Codex | 구현·실험 | 실제 Patherea IHC 파일·case 분리 검증, train/val 모델 선택·고정 test 분류, 16예시 공개 | 완료 | `ihc_baseline.py`, `artifacts/ihc/`, `IHC_EXPERIMENT.md`; GT 중심 제공 조건 |
+| C21 | Codex | 보존·검증 | 기존 모델·결과·사용자 함수 등46파일 보존, Python54/좌표5 검사 | 완료 | `artifacts/ui/wsi/invariants.json`, Ubuntu CPU run42460349142. 사용자12검사 skipped |
+| C22 | Codex | 배포 오류 수정·검증 | 공개 외부 타일403을 확인하고 CC0 원본의 전체2,071타일 자체 생성·좌표/크기/hash 대조 | 완료 | `local-tiles.json`, `remote-tile-failure.json`; Python56/사용자12skip |
+| C23 | Codex | 공개 배포·화면 | 버전7 공개2,188파일 정합성, Chromium/WebKit 각46통과, 전후·모바일·IHC 캡처 시각 검토 | 완료 | `artifacts/ui/wsi/verification.json`, run42463547474, UIb5024b0/Sites3021c2c. 사용자 확인은 대기 |
 
 ## 검토 후 추가할 기록 형식
 

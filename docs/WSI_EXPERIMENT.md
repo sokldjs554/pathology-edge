@@ -90,3 +90,28 @@ PYTHONPATH=src python -m pathology_edge.wsi_export \
 9개 표본의 정렬된 평균 MAE는 **3.771/255**, 표본별 범위는 **2.946–4.782**였다. 모든 표본에서 의도적 offset 대조군보다 오차가 작았다. native PNG와 달리 원격 display tile은 공식 생성 코드에서 JPEG 품질75로 다시 저장하므로 RGB가 bit-exact하게 같다고 주장하지 않는다. 이 결과는 샘플링한 좌표에서의 정렬과 손실압축 차이에 대한 근거이며, WSI 전체 픽셀에 대한 완전 검사나 핵 분할 정확도 검증이 아니다.
 
 [검증 기록](../artifacts/wsi/tile-alignment.json)에 각 source/ROI/원격 JPEG checksum, 실제 타일 URL·크기·HTTP 응답, native 좌표, 96×96 표본 hash, MAE/RMSE/오차 분위수·범위와 의도적 offset 결과를 남겼다. 원 모델·추론·소스 코드·공개 자산·기존 source manifest는 변경하지 않았다.
+
+## 공개 배포용 전체 native 정적 DZI
+
+로컬 브라우저에서 동작하던 공식 S3 타일이 공개 배포에서는 `AccessDenied` XML/HTTP403을 반환했다. CORS `*`와 객체 접근 허용은 별개였다. 외부 서버 제한을 우회하거나 Referrer를 바꾸지 않고, 이미 확보하여 SHA-256을 검증한 CC0 원본에서 전체 타일을 자체 생성했다. 위 원격 정렬 검사는 당시 측정한 역사 기록으로 보존한다. 현재 viewer는 상대 URL `wsi/slide_files/`를 사용한다.
+
+- 제공된 원본 스캔의 **46,000×32,893 전체 범위**를 유지했다. `limit_bounds=False`, 빈 유리 영역 포함, sparse omission 없음. 전체를 볼 수 있다는 뜻이며, 모델 분석 범위는 여전히 3개 ROI뿐이다.
+- DZI 17 levels(0–16), native 최고 level16. tile size1022/overlap1, JPEG quality75, 4:2:0. **2,071 JPEG, 139,369,111 bytes (132.91 MiB)**. 최대 파일 371,547 bytes.
+- 4개 CPU worker와 128 MiB OpenSlide cache로 생성 시간 **71.13초**, source checksum·생성·geometry/정렬검사까지 **71.95초**. 후자는 Python 시작/import 및 최종 JSON 쓰기 이전 구간이다. 전체 프로세스 high-water RSS **944.23 MiB**. 모델을 로드하거나 추론한 메모리가 아니다.
+- 2,071개 모든 파일의 존재·JPEG 형식·선언된 tile geometry를 확인하고 개별 SHA-256을 기록했다. 마지막 native 타일은 11×190px로, 마지막 10×189px 원본 영역과 왼쪽/위 overlap을 포함한다. 가장자리 픽셀을 버리지 않았다.
+- OpenSlide의 `thumbnail()` 종횡비 반올림 때문에 18개 하위 타일이 선언 geometry보다 한 축 1px 작았다. 하위 level2/3/5/6/7/11/14의 해당 타일만 명시적 LANCZOS resize로 보정했다. **native level16 resize는 0개**이며 크기가 다르면 생성기가 실패한다. 18개 before/after 크기는 검증 JSON에 포함했다.
+- 3ROI×3개 고정 96×96 표본에서 자체 생성 타일과 native RGB의 MAE는 평균 **3.786/255**, 범위 **2.997–4.702**였다. 모든 표본에서 각 축 +1px/+16px offset 대조군보다 작았다. 원본 맨 앞·맨 끝·native 타일 교차점도 별도 비교했다. JPEG 손실이 있으므로 표시 타일과 source RGB가 bit-exact하게 같다는 주장은 하지 않는다.
+
+[전체 생성·검증 기록](../artifacts/wsi/local-tiles.json)에는 파일별 bytes/checksum, 모든 level 크기, 하위 geometry 보정, 실제 실행시간/RSS, 정렬 오차와 protected artifact checksum을 남겼다. 원 모델 SHA-256, 각 ROI 전체 데이터와 `methods`, 원 추론 시간, PNG/mask/overlay, 최초 source/protocol manifest가 유지됨을 확인했다. `dist/wsi.json`과 `artifacts/wsi/experiment.json`의 내용은 동일하며 viewing metadata만 자체 호스팅에 맞췄다.
+
+재현 시 **ROI 모델 exporter를 먼저 실행한 다음 타일 CLI를 실행**한다. 원 exporter가 초기 원격 descriptor를 기록하므로 순서가 필요하다. 타일 CLI는 모델·추론·학습 전 protocol을 수정하지 않는다.
+
+```bash
+PYTHONPATH=src python -m pathology_edge.wsi_export \
+  --slide /path/to/CMU-1-JP2K-33005.svs \
+  --output-dist dist --artifacts artifacts/wsi
+python scripts/export_wsi_tiles.py \
+  --slide /path/to/CMU-1-JP2K-33005.svs --workers 4
+```
+
+이미지는 원 배포자의 CC0-1.0 조건에 따라 파생 타일로 재배포한다. OpenSlide 소프트웨어의 LGPL-2.1은 이미지 권리와 구분한다. 생성 CLI의 source hash와 사용한 OpenSlide/Pillow 버전도 기록했다. 추가 검증 후 전체 Python suite는 **56 passed / 사용자 과제 12 skipped**였다. 2개 native 생성 fixture는 외부 WSI 다운로드 없이 작은 합성 RGB로 마지막 열·overlap·하위 thumbnail 반올림·native 무변형을 검사한다. OpenSlide가 없는 환경에서는 이 두 fixture만 별도 skip되며, 현재 고정 의존성을 설치한 CI에서는 실행한다.

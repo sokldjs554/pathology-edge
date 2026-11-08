@@ -126,10 +126,13 @@ mkdir -p work/wsi
 curl -fL 'https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-JP2K-33005.svs' -o work/wsi/CMU-1-JP2K-33005.svs
 sha256sum work/wsi/CMU-1-JP2K-33005.svs
 PYTHONPATH=src python -m pathology_edge.wsi_export --slide work/wsi/CMU-1-JP2K-33005.svs --output-dist work/wsi-reproduced --artifacts work/wsi-run
+python scripts/export_wsi_tiles.py --slide work/wsi/CMU-1-JP2K-33005.svs --output-dir work/wsi-reproduced/wsi/slide_files --report work/wsi-run/local-tiles.json --dist-json work/wsi-reproduced/wsi.json --experiment-json work/wsi-run/experiment.json --public-provenance work/wsi-reproduced/wsi/provenance.json
 python -m pytest tests/test_wsi_export.py tests/test_ihc_baseline.py -q
 ```
 
 SHA는 `9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420`여야 합니다. export는 세1024px ROI에 고정 모델을 실행하며 전체 WSI를 분석하지 않습니다. 기존 결과를 덮어쓰지 않는 출력 경로를 지정했습니다. 마지막 명령은 WSI 좌표·후보 출처·실제 mask와 IHC split/metric/model 검사를 실행합니다. 새 WSI 다운로드 없이도 체크인된 산출물의 검사 자체는 가능합니다.
+
+두 번째 export는 분석을 실행하지 않고 전체 WSI를 2,071개의 JPEG 타일로 변환합니다. 출력 약133MiB와 생성 중 메모리 약944MiB가 별도로 필요했습니다. 일반 `wsi_export` 뒤에 이 명령을 실행해야 타일 출처가 자체 정적 파일로 바뀝니다. macOS의 SHA 확인은 `sha256sum` 대신 `shasum -a 256`을 사용합니다.
 
 IHC의 pinned ZIP 준비·실행 명령은 [IHC_EXPERIMENT](IHC_EXPERIMENT.md)에 있습니다. 데이터의 비상업적 이용 조건을 유지하며, 저자 fold1 test를 모델 선택에 사용하지 않습니다. test 결과를 보며 재튜닝한 결과는 같은 고정 test 평가로 보고하지 마세요.
 

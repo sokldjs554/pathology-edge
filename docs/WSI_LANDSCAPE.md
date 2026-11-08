@@ -4,9 +4,9 @@
 
 이 문서는 공식 저장소, 저자 논문, 프로젝트 문서·공개 데모 주소를 비교한다. 아래 타사 성능은 **저자가 보고한 값**이며 이번 조사에서 재현한 값이 아니다. 타사 모델을 설치·학습·추론하지 않았다. GitHub 원문은 연결 도구로 읽었고, 논문·문서는 웹 검색/열기로 확인했다. 개인 계정 저장소라는 사실을 1인 개발이나 완성도를 보증하는 근거로 삼지 않았다.
 
-## 현재 프로젝트와 비교 기준
+## 조사 당시 프로젝트와 비교 기준
 
-[README](../README.md)와 [UI_REVIEW](UI_REVIEW.md)를 읽고 다음 상태를 기준으로 삼았다. PathologyEdge는 TNBC의 512×512 H&E PNG에 작은 TinyUNet을 학습해 무겹침 128/128과 겹침 128/64를 비교한 **이진 핵 foreground 연구 작업대**다. 경계/내부 Dice, 확률 합산, 별도 연결 성분 NMS, 억제→유지 후보 추적, 개선·악화 사례와 CPU 비용을 공개한다. 7장/2그룹/1 seed의 결과이며 WSI 원점·MPP, 진짜 instance GT, 종양 분류, Ki-67 양성률은 검증하지 않았다. 현재 화면은 고정 결과를 읽으며 새 추론을 실행하지 않는다.
+[README](../README.md)와 [UI_REVIEW](UI_REVIEW.md)를 읽고 확장 전 버전5 상태를 기준으로 삼았다. 이후 완료한 WSI 원점·MPP 검증과 별도 IHC GT-center 분류는 [WSI_EXPERIMENT](WSI_EXPERIMENT.md), [IHC_EXPERIMENT](IHC_EXPERIMENT.md)에 구분해 기록했다. PathologyEdge는 TNBC의 512×512 H&E PNG에 작은 TinyUNet을 학습해 무겹침 128/128과 겹침 128/64를 비교한 **이진 핵 foreground 연구 작업대**다. 경계/내부 Dice, 확률 합산, 별도 연결 성분 NMS, 억제→유지 후보 추적, 개선·악화 사례와 CPU 비용을 공개한다. 7장/2그룹/1 seed의 결과이며 WSI 원점·MPP, 진짜 instance GT, 종양 분류, Ki-67 양성률은 검증하지 않았다. 현재 화면은 고정 결과를 읽으며 새 추론을 실행하지 않는다.
 
 조사 결과, 확대 가능한 WSI, 동기 탐색, 핵 overlay, ROI, patch metadata, 겹침 합산, 경계/내부 평가, 처리 이력 각각은 이미 선행 구현이 있다. **이 요소들이 처음이라는 주장은 성립하지 않는다.** 적절한 목표는 작은 CPU baseline에서 발생한 오류·비용을 실제 WSI 위치와 연결하여, 다른 사람이 같은 결과와 실패를 재확인할 수 있는 좁고 완결된 QA 사례다.
 
@@ -51,7 +51,7 @@
 
 [공식 tutorial](https://qupath.readthedocs.io/en/stable/docs/tutorials/cell_detection.html)은 OpenSlide의 OS-2.ndpi Ki67 영상에서 tumor ROI를 수동으로 정하고, 핵 DAB optical density로 positive/negative를 나눈다. 개별 객체와 측정 표가 연결되고 histogram·CSV를 제공한다. 문서 예시의 1,088 detections/12.4%는 해당 설정의 예시이며 임상 정확도 수치가 아니다. stain vector 변경 후에는 detection을 다시 수행해야 한다고 설명한다. [저장소](https://github.com/qupath/qupath)와 [원 논문](https://www.nature.com/articles/s41598-017-17204-5)은 연구용 bioimage analysis의 범위를 확인해 준다.
 
-**배울 점:** 총 핵 수가 아니라 **어떤 세포를 분모로 삼았는지**, staining·threshold·검출 조건을 함께 보여 준다. **현재 부족:** PathologyEdge에는 IHC, 종양/비종양, 양성/음성 GT가 없다. H&E 핵 foreground를 Ki-67 score로 바꾸어 부를 근거가 없다.
+**배울 점:** 총 핵 수가 아니라 **어떤 세포를 분모로 삼았는지**, staining·threshold·검출 조건을 함께 보여 준다. **조사 당시 부족:** 확장 전 PathologyEdge에는 IHC, 종양/비종양, 양성/음성 GT가 없었다. H&E 핵 foreground를 Ki-67 score로 바꾸어 부를 근거가 없다.
 
 ### 4. Digital Slide Archive / HistomicsUI / HistomicsTK
 

@@ -1,0 +1,105 @@
+{
+  "run_id": 42461198669,
+  "deployed_version": 6,
+  "browser": "WebKit",
+  "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/9/0_0.jpeg",
+  "request_headers": [
+    {
+      "name": "Origin",
+      "value": "https://pathology-edge-lab.ykh13571.chatgpt.site"
+    },
+    {
+      "name": "Accept",
+      "value": "image/webp,image/avif,image/jxl,video/*;q=0.8,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5"
+    },
+    {
+      "name": "Referer",
+      "value": "https://pathology-edge-lab.ykh13571.chatgpt.site/"
+    },
+    {
+      "name": "User-Agent",
+      "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15"
+    },
+    {
+      "name": "Accept-Language",
+      "value": "en-US"
+    },
+    {
+      "name": "Accept-Encoding",
+      "value": "gzip, deflate, br"
+    },
+    {
+      "name": "Connection",
+      "value": "Keep-Alive"
+    },
+    {
+      "name": "Host",
+      "value": "openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com"
+    },
+    {
+      "name": "Sec-Fetch-Dest",
+      "value": "image"
+    },
+    {
+      "name": "Sec-Fetch-Mode",
+      "value": "cors"
+    },
+    {
+      "name": "Sec-Fetch-Site",
+      "value": "cross-site"
+    }
+  ],
+  "response_status": 403,
+  "response_headers": [
+    {
+      "name": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "name": "Access-Control-Allow-Methods",
+      "value": "GET"
+    },
+    {
+      "name": "Vary",
+      "value": "Origin"
+    },
+    {
+      "name": "Vary",
+      "value": "Access-Control-Request-Headers"
+    },
+    {
+      "name": "Vary",
+      "value": "Access-Control-Request-Method"
+    },
+    {
+      "name": "Content-Type",
+      "value": "application/xml"
+    },
+    {
+      "name": "Transfer-Encoding",
+      "value": "chunked"
+    },
+    {
+      "name": "Date",
+      "value": "Sun"
+    },
+    {
+      "name": "Date",
+      "value": "08 Nov 2026 08:04:55 GMT"
+    },
+    {
+      "name": "Server",
+      "value": "AmazonS3"
+    },
+    {
+      "name": "x-amz-request-id",
+      "value": "A9KPY7X598KFARN5"
+    },
+    {
+      "name": "x-amz-id-2",
+      "value": "NfF/SLqUrIwpgmKylJq9QVUBX7XlPwn3vCBWaLokmSGYeNqi4EBx1w56k4w2gyTrXLYbMgLMNq2Z5Zq0Bw/5PbaNCw1Derqb"
+    }
+  ],
+  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>A9KPY7X598KFARN5</RequestId><HostId>NfF/SLqUrIwpgmKylJq9QVUBX7XlPwn3vCBWaLokmSGYeNqi4EBx1w56k4w2gyTrXLYbMgLMNq2Z5Zq0Bw/5PbaNCw1Derqb</HostId></Error>",
+  "resolution": "Generate full JPEG pyramid from the already verified CC0 original; do not modify headers to bypass the external access policy."
+}

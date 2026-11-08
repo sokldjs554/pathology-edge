@@ -1,0 +1,123 @@
+{
+  "baseURL": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "commit": "b5024b04df25eba38bf4cf2aa81ef11df713407d",
+  "files": [
+    {
+      "file": "index.html",
+      "sourceSHA256": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656",
+      "responseSHA256": "d532d849baed26d501e390201b4b9bf900c05a4b0a046e57b27f47388c29fef1",
+      "edgeInjection": {
+        "kind": "Cloudflare JS challenge",
+        "rawSHA256": "021254d46c7098f525da872234289642928e934b36638bc513ea21796bc57b57",
+        "templateSHA256": "69dd8893936a4d122ab9539efcddaa035fe04cda961ccc480c7a2a75b6d07d64",
+        "bytes": 1114
+      }
+    },
+    {
+      "file": "app.js",
+      "sourceSHA256": "d5c2c9003a35cba10b3d021ce3e161712950600b79d1be548845b1d8bab34379",
+      "responseSHA256": "d5c2c9003a35cba10b3d021ce3e161712950600b79d1be548845b1d8bab34379",
+      "edgeInjection": null
+    },
+    {
+      "file": "style.css",
+      "sourceSHA256": "45f9e47e84c9b5e250988a6bb092b7162cf02f9d0a7701e483a35317241ccdf5",
+      "responseSHA256": "45f9e47e84c9b5e250988a6bb092b7162cf02f9d0a7701e483a35317241ccdf5",
+      "edgeInjection": null
+    },
+    {
+      "file": "viewer-math.js",
+      "sourceSHA256": "68629121bdcb1fa8d083894334ff542b0d937e37d1815acad0e8412563970395",
+      "responseSHA256": "68629121bdcb1fa8d083894334ff542b0d937e37d1815acad0e8412563970395",
+      "edgeInjection": null
+    },
+    {
+      "file": "review-ui.js",
+      "sourceSHA256": "c46667ddcbdec4f3ada495a4cf1d7237eb946a174722f04f67d977ccab0d9724",
+      "responseSHA256": "c46667ddcbdec4f3ada495a4cf1d7237eb946a174722f04f67d977ccab0d9724",
+      "edgeInjection": null
+    },
+    {
+      "file": "cases.json",
+      "sourceSHA256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "responseSHA256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "edgeInjection": null
+    },
+    {
+      "file": "results.json",
+      "sourceSHA256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "responseSHA256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "edgeInjection": null
+    },
+    {
+      "file": "wsi.html",
+      "sourceSHA256": "43b28a8cd27d4a4845f4ef9d68bacb3a33fe99a1ef6860e16786f48c403f7f4f",
+      "responseSHA256": "6a7a9eae1c995055019b224d41f6ffe8722f7603f34f2d144b0234240e61827e",
+      "edgeInjection": {
+        "kind": "Cloudflare JS challenge",
+        "rawSHA256": "e92253b5ff0b72ef0a40e9aee977cc6657e642e43c957fef0df8c5ae7b42227e",
+        "templateSHA256": "69dd8893936a4d122ab9539efcddaa035fe04cda961ccc480c7a2a75b6d07d64",
+        "bytes": 1114
+      }
+    },
+    {
+      "file": "wsi.css",
+      "sourceSHA256": "34df69effcf4f3e84984e51776ca2941ee7582915e869814676f170f53ca271a",
+      "responseSHA256": "34df69effcf4f3e84984e51776ca2941ee7582915e869814676f170f53ca271a",
+      "edgeInjection": null
+    },
+    {
+      "file": "wsi.js",
+      "sourceSHA256": "bc5c280e966e37b57d9349bf6fc2be88cf6700629c568c0c7c9bb80f7382e19b",
+      "responseSHA256": "bc5c280e966e37b57d9349bf6fc2be88cf6700629c568c0c7c9bb80f7382e19b",
+      "edgeInjection": null
+    },
+    {
+      "file": "wsi.json",
+      "sourceSHA256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+      "responseSHA256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+      "edgeInjection": null
+    },
+    {
+      "file": "ihc.html",
+      "sourceSHA256": "63e85e3637974376ca0b411b73285fcfd5518bd486695199d546bf5f724b04ec",
+      "responseSHA256": "51dbcb6c11bdb7e2d27bed46bf014c67c7856d4f21dd40cae5806d008560b1b2",
+      "edgeInjection": {
+        "kind": "Cloudflare JS challenge",
+        "rawSHA256": "222b18853396663b8a27aa85f9de6234fed0e03ed30b3c54320e41e7472b77f8",
+        "templateSHA256": "69dd8893936a4d122ab9539efcddaa035fe04cda961ccc480c7a2a75b6d07d64",
+        "bytes": 1114
+      }
+    },
+    {
+      "file": "ihc.css",
+      "sourceSHA256": "d3b7cca84f5d13120ea0661ca84ff224765290589e29c7d7157ff9dbb3f68d99",
+      "responseSHA256": "d3b7cca84f5d13120ea0661ca84ff224765290589e29c7d7157ff9dbb3f68d99",
+      "edgeInjection": null
+    },
+    {
+      "file": "ihc.js",
+      "sourceSHA256": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675",
+      "responseSHA256": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675",
+      "edgeInjection": null
+    },
+    {
+      "file": "ihc/results.json",
+      "sourceSHA256": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+      "responseSHA256": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+      "edgeInjection": null
+    },
+    {
+      "file": "ihc/model.json",
+      "sourceSHA256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+      "responseSHA256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+      "edgeInjection": null
+    },
+    {
+      "file": "vendor/openseadragon.min.js",
+      "sourceSHA256": "14d587cd3ee7c4861f1a41077ce642029364a21029956ba635bd8fb1202cf9ad",
+      "responseSHA256": "14d587cd3ee7c4861f1a41077ce642029364a21029956ba635bd8fb1202cf9ad",
+      "edgeInjection": null
+    }
+  ]
+}
