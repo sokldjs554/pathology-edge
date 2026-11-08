@@ -1,0 +1,889 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-11-08T07:46:21.714907+00:00",
+  "source": {
+    "name": "CMU-1-JP2K-33005.svs",
+    "sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+    "sha256_verified": true,
+    "native_dimensions": [
+      46000,
+      32893
+    ],
+    "mpp": [
+      0.499,
+      0.499
+    ],
+    "embedded_icc_profile_present": false
+  },
+  "runtime": {
+    "openslide": "4.0.1",
+    "openslide_python": "1.4.7",
+    "python": "3.12.14"
+  },
+  "protocol": {
+    "deepzoom_level": 16,
+    "tile_size": 510,
+    "overlap": 1,
+    "source_url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/",
+    "cache_stamp": "88ddfdd0",
+    "stamp_note": "The query stamp is a cache version hint, not immutable content addressing; each fetched JPEG hash is recorded.",
+    "points_per_roi": [
+      [
+        96,
+        96
+      ],
+      [
+        448,
+        448
+      ],
+      [
+        800,
+        800
+      ]
+    ],
+    "sample_size": [
+      96,
+      96
+    ],
+    "selection": "Three fixed local coordinates per preselected ROI, chosen before tile-error measurement.",
+    "native_to_tile": "column=floor(x/510), row=floor(y/510); decoded tile origin=(510*column-1,510*row-1) for nonzero column/row; interior grid cells avoid double-counting overlap.",
+    "metric": "Mean absolute RGB channel difference on 8-bit [0,255] pixels; also RMSE and absolute-error percentiles/range.",
+    "jpeg_recipe": "Official OpenSlide demo _synctiles.py: JPEG quality=75. Native source is also JPEG2000-compressed.",
+    "recipe_source": "https://github.com/openslide/openslide.github.io/blob/main/demo/_synctiles.py",
+    "inference_run": false
+  },
+  "rois": [
+    {
+      "id": "R1",
+      "origin_level0": [
+        5888,
+        20608
+      ],
+      "roi_image": "wsi/R1.png",
+      "roi_image_sha256": "fe9aae2ba037beb47d7aa74e058b0660ab86ad434d7f6676f7fe258fe9f8a7f3",
+      "local_roi_matches_fresh_native_read_exactly": true,
+      "local_roi_native_max_absolute_error": 0,
+      "samples": [
+        {
+          "id": "R1-sample-1",
+          "origin_local": [
+            96,
+            96
+          ],
+          "origin_level0": [
+            5984,
+            20704
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              11,
+              40
+            ]
+          ],
+          "native_rgb_sha256": "32b54e1fc8d3deaf5e3a2a65238efe4e9037355937607eec025e99b00cac1078",
+          "remote_rgb_sha256": "1c2d16df8c26a31c0519d73ef57d318b71993483017a6c11a38181d8e8683326",
+          "correct_alignment": {
+            "mae": 2.9457103587962963,
+            "rmse": 3.9565465631050674,
+            "min_absolute_error": 0,
+            "max_absolute_error": 35,
+            "p95_absolute_error": 8.0,
+            "p99_absolute_error": 12.0,
+            "fraction_identical_channels": 0.12485532407407407
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 13.141565393518519,
+              "rmse": 18.102949949524803,
+              "min_absolute_error": 0,
+              "max_absolute_error": 101,
+              "p95_absolute_error": 38.0,
+              "p99_absolute_error": 57.0,
+              "fraction_identical_channels": 0.03247974537037037,
+              "mae_ratio_to_correct": 4.4612551109364835
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 35.99215133101852,
+              "rmse": 46.6809583305626,
+              "min_absolute_error": 0,
+              "max_absolute_error": 186,
+              "p95_absolute_error": 96.0,
+              "p99_absolute_error": 124.0,
+              "fraction_identical_channels": 0.010561342592592593,
+              "mae_ratio_to_correct": 12.218496371695542
+            }
+          ]
+        },
+        {
+          "id": "R1-sample-2",
+          "origin_local": [
+            448,
+            448
+          ],
+          "origin_level0": [
+            6336,
+            21056
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              12,
+              41
+            ]
+          ],
+          "native_rgb_sha256": "fea2de9e2fae40e140dcf4a6f6e1c2dbabb7177fae1a85e405d5dc5b7abe648f",
+          "remote_rgb_sha256": "ca108533de90f2601f138b5ca922c23b471e99652ed8ab74649b8bc0f0e2d5b6",
+          "correct_alignment": {
+            "mae": 3.621455439814815,
+            "rmse": 4.846478472866971,
+            "min_absolute_error": 0,
+            "max_absolute_error": 39,
+            "p95_absolute_error": 10.0,
+            "p99_absolute_error": 15.0,
+            "fraction_identical_channels": 0.10431134259259259
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 18.7080078125,
+              "rmse": 25.957560710590307,
+              "min_absolute_error": 0,
+              "max_absolute_error": 186,
+              "p95_absolute_error": 54.0,
+              "p99_absolute_error": 85.0,
+              "fraction_identical_channels": 0.022605613425925927,
+              "mae_ratio_to_correct": 5.16588098995266
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 38.110134548611114,
+              "rmse": 50.36172216967797,
+              "min_absolute_error": 0,
+              "max_absolute_error": 219,
+              "p95_absolute_error": 107.0,
+              "p99_absolute_error": 146.0,
+              "fraction_identical_channels": 0.010127314814814815,
+              "mae_ratio_to_correct": 10.523430477598227
+            }
+          ]
+        },
+        {
+          "id": "R1-sample-3",
+          "origin_local": [
+            800,
+            800
+          ],
+          "origin_level0": [
+            6688,
+            21408
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              13,
+              41
+            ],
+            [
+              13,
+              42
+            ]
+          ],
+          "native_rgb_sha256": "4c0229c7850e2136d894ecf6b529b3ce32325b70ac4769e197e46e51f317eec9",
+          "remote_rgb_sha256": "14a0dd1e6c267df135d02abb64f0f9f12204410ef062355fa187fef4328922be",
+          "correct_alignment": {
+            "mae": 4.23169849537037,
+            "rmse": 5.796785308031289,
+            "min_absolute_error": 0,
+            "max_absolute_error": 48,
+            "p95_absolute_error": 12.0,
+            "p99_absolute_error": 17.0,
+            "fraction_identical_channels": 0.10322627314814815
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 19.27517361111111,
+              "rmse": 26.995700907308404,
+              "min_absolute_error": 0,
+              "max_absolute_error": 166,
+              "p95_absolute_error": 57.0,
+              "p99_absolute_error": 82.0,
+              "fraction_identical_channels": 0.033383969907407406,
+              "mae_ratio_to_correct": 4.554949657259098
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 49.394820601851855,
+              "rmse": 62.77766446953885,
+              "min_absolute_error": 0,
+              "max_absolute_error": 229,
+              "p95_absolute_error": 125.0,
+              "p99_absolute_error": 161.0,
+              "fraction_identical_channels": 0.006944444444444444,
+              "mae_ratio_to_correct": 11.672575599582899
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "origin_level0": [
+        29440,
+        9728
+      ],
+      "roi_image": "wsi/R2.png",
+      "roi_image_sha256": "404f05f24fb421ce328141bc9c141df7fa53b24cff8413e73ea90ca3d0ca6441",
+      "local_roi_matches_fresh_native_read_exactly": true,
+      "local_roi_native_max_absolute_error": 0,
+      "samples": [
+        {
+          "id": "R2-sample-1",
+          "origin_local": [
+            96,
+            96
+          ],
+          "origin_level0": [
+            29536,
+            9824
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              57,
+              19
+            ],
+            [
+              58,
+              19
+            ]
+          ],
+          "native_rgb_sha256": "e0168d767841ad1f08a5ec3610e5c873c74d2d938bfca9439a7ed395f9c2a089",
+          "remote_rgb_sha256": "e4990ceef5c45c504e4c5bb9359843d6a47853e31eb3f100a54b6b368f9fe823",
+          "correct_alignment": {
+            "mae": 4.78247974537037,
+            "rmse": 6.322295983630442,
+            "min_absolute_error": 0,
+            "max_absolute_error": 46,
+            "p95_absolute_error": 13.0,
+            "p99_absolute_error": 18.0,
+            "fraction_identical_channels": 0.07667824074074074
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 24.490849247685187,
+              "rmse": 33.59371554692463,
+              "min_absolute_error": 0,
+              "max_absolute_error": 187,
+              "p95_absolute_error": 70.0,
+              "p99_absolute_error": 105.0,
+              "fraction_identical_channels": 0.01830150462962963,
+              "mae_ratio_to_correct": 5.120952006413263
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 45.02347366898148,
+              "rmse": 56.50897783626542,
+              "min_absolute_error": 0,
+              "max_absolute_error": 240,
+              "p95_absolute_error": 111.0,
+              "p99_absolute_error": 144.0,
+              "fraction_identical_channels": 0.007921006944444444,
+              "mae_ratio_to_correct": 9.414252870086065
+            }
+          ]
+        },
+        {
+          "id": "R2-sample-2",
+          "origin_local": [
+            448,
+            448
+          ],
+          "origin_level0": [
+            29888,
+            10176
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              58,
+              19
+            ],
+            [
+              58,
+              20
+            ]
+          ],
+          "native_rgb_sha256": "136ca66ae98ff2ad7486cc4a210642f0dc3246f4b25b1fdd38f22e9099b3f4e4",
+          "remote_rgb_sha256": "8b2900b94002fa0e4d1e1758c9cd49635d6b906009c6c2d18b905b25d312c6a5",
+          "correct_alignment": {
+            "mae": 3.0691550925925926,
+            "rmse": 4.03537059716719,
+            "min_absolute_error": 0,
+            "max_absolute_error": 22,
+            "p95_absolute_error": 8.0,
+            "p99_absolute_error": 12.0,
+            "fraction_identical_channels": 0.11353443287037036
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 14.971281828703704,
+              "rmse": 20.586316838429894,
+              "min_absolute_error": 0,
+              "max_absolute_error": 145,
+              "p95_absolute_error": 43.0,
+              "p99_absolute_error": 65.0,
+              "fraction_identical_channels": 0.02448640046296296,
+              "mae_ratio_to_correct": 4.877981521636655
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 39.47960069444444,
+              "rmse": 51.63597108448686,
+              "min_absolute_error": 0,
+              "max_absolute_error": 215,
+              "p95_absolute_error": 108.0,
+              "p99_absolute_error": 136.0,
+              "fraction_identical_channels": 0.009186921296296295,
+              "mae_ratio_to_correct": 12.863344960874894
+            }
+          ]
+        },
+        {
+          "id": "R2-sample-3",
+          "origin_local": [
+            800,
+            800
+          ],
+          "origin_level0": [
+            30240,
+            10528
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              59,
+              20
+            ]
+          ],
+          "native_rgb_sha256": "9469656ff8554cc69434cea658ed90069d122d47016442b1b3737cb221ae1483",
+          "remote_rgb_sha256": "c1e03ea6f297325a1eb92b70c0cd331b29a4d2eec0a711a355521b998c4f5466",
+          "correct_alignment": {
+            "mae": 3.472186053240741,
+            "rmse": 4.562599092023869,
+            "min_absolute_error": 0,
+            "max_absolute_error": 23,
+            "p95_absolute_error": 9.0,
+            "p99_absolute_error": 13.0,
+            "fraction_identical_channels": 0.10300925925925926
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 17.51215277777778,
+              "rmse": 23.47785414846652,
+              "min_absolute_error": 0,
+              "max_absolute_error": 128,
+              "p95_absolute_error": 49.0,
+              "p99_absolute_error": 71.0,
+              "fraction_identical_channels": 0.02253327546296296,
+              "mae_ratio_to_correct": 5.043552537005594
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 45.15863715277778,
+              "rmse": 58.27433710615709,
+              "min_absolute_error": 0,
+              "max_absolute_error": 229,
+              "p95_absolute_error": 119.0,
+              "p99_absolute_error": 154.52999999999884,
+              "fraction_identical_channels": 0.007559317129629629,
+              "mae_ratio_to_correct": 13.00582297732268
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "origin_level0": [
+        15872,
+        26112
+      ],
+      "roi_image": "wsi/R3.png",
+      "roi_image_sha256": "b526e9c9a33a3a0e0ed29f8c9d47981ee320fc380ea54c7f49f5bd04ec74c08c",
+      "local_roi_matches_fresh_native_read_exactly": true,
+      "local_roi_native_max_absolute_error": 0,
+      "samples": [
+        {
+          "id": "R3-sample-1",
+          "origin_local": [
+            96,
+            96
+          ],
+          "origin_level0": [
+            15968,
+            26208
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              31,
+              51
+            ]
+          ],
+          "native_rgb_sha256": "a09bd776da8026ce296ee0cd0c7b367e4ee10a789a5b0b881a37f4a1c5576426",
+          "remote_rgb_sha256": "3b2bc453e9fc671a63b2f2232fd749c6765a3a27e0f1a50e41013a7b65ed2ad6",
+          "correct_alignment": {
+            "mae": 3.8599537037037037,
+            "rmse": 5.419877520568427,
+            "min_absolute_error": 0,
+            "max_absolute_error": 43,
+            "p95_absolute_error": 11.0,
+            "p99_absolute_error": 18.0,
+            "fraction_identical_channels": 0.11595775462962964
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 16.439308449074073,
+              "rmse": 24.186152644547878,
+              "min_absolute_error": 0,
+              "max_absolute_error": 180,
+              "p95_absolute_error": 51.0,
+              "p99_absolute_error": 86.0,
+              "fraction_identical_channels": 0.04097945601851852,
+              "mae_ratio_to_correct": 4.25893928035982
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 45.756980613425924,
+              "rmse": 60.69382756567392,
+              "min_absolute_error": 0,
+              "max_absolute_error": 216,
+              "p95_absolute_error": 128.0,
+              "p99_absolute_error": 168.0,
+              "fraction_identical_channels": 0.011031539351851851,
+              "mae_ratio_to_correct": 11.854282233883058
+            }
+          ]
+        },
+        {
+          "id": "R3-sample-2",
+          "origin_local": [
+            448,
+            448
+          ],
+          "origin_level0": [
+            16320,
+            26560
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              32,
+              52
+            ]
+          ],
+          "native_rgb_sha256": "66fa00d78c2f63559b35b051506c8f4f15920e975532152a3efa478a33717652",
+          "remote_rgb_sha256": "3758cfbfc4b17a40539d76aad37e818891591a8e44f3adcee5d424dc991cd757",
+          "correct_alignment": {
+            "mae": 4.471535011574074,
+            "rmse": 6.17358084138311,
+            "min_absolute_error": 0,
+            "max_absolute_error": 45,
+            "p95_absolute_error": 12.0,
+            "p99_absolute_error": 20.0,
+            "fraction_identical_channels": 0.10138165509259259
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 24.768192997685187,
+              "rmse": 34.31328898860146,
+              "min_absolute_error": 0,
+              "max_absolute_error": 176,
+              "p95_absolute_error": 75.0,
+              "p99_absolute_error": 104.0,
+              "fraction_identical_channels": 0.024558738425925927,
+              "mae_ratio_to_correct": 5.539080636420257
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 48.6664134837963,
+              "rmse": 62.410184597492226,
+              "min_absolute_error": 0,
+              "max_absolute_error": 222,
+              "p95_absolute_error": 127.0,
+              "p99_absolute_error": 166.0,
+              "fraction_identical_channels": 0.00853587962962963,
+              "mae_ratio_to_correct": 10.883603361670804
+            }
+          ]
+        },
+        {
+          "id": "R3-sample-3",
+          "origin_local": [
+            800,
+            800
+          ],
+          "origin_level0": [
+            16672,
+            26912
+          ],
+          "size": [
+            96,
+            96
+          ],
+          "tiles": [
+            [
+              32,
+              52
+            ]
+          ],
+          "native_rgb_sha256": "42268c22ccada0df7bb9395cfc919f2963402c6eeb375dee2c85b2effec1cf4a",
+          "remote_rgb_sha256": "120d7f822196c6c8ef9e8ebe33082b65b59215a1dd813c21b56a45ab606c4aaf",
+          "correct_alignment": {
+            "mae": 3.4833622685185186,
+            "rmse": 4.741197069599383,
+            "min_absolute_error": 0,
+            "max_absolute_error": 40,
+            "p95_absolute_error": 9.0,
+            "p99_absolute_error": 15.0,
+            "fraction_identical_channels": 0.10460069444444445
+          },
+          "intentional_misalignment_controls": [
+            {
+              "reference_shift_pixels": [
+                1,
+                1
+              ],
+              "mae": 17.5732421875,
+              "rmse": 23.44149117251724,
+              "min_absolute_error": 0,
+              "max_absolute_error": 131,
+              "p95_absolute_error": 49.0,
+              "p99_absolute_error": 69.0,
+              "fraction_identical_channels": 0.02097800925925926,
+              "mae_ratio_to_correct": 5.044908003488807
+            },
+            {
+              "reference_shift_pixels": [
+                16,
+                16
+              ],
+              "mae": 36.0414134837963,
+              "rmse": 47.11331510686545,
+              "min_absolute_error": 0,
+              "max_absolute_error": 191,
+              "p95_absolute_error": 98.0,
+              "p99_absolute_error": 131.0,
+              "fraction_identical_channels": 0.008897569444444444,
+              "mae_ratio_to_correct": 10.346731320347219
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "remote_tiles": [
+    {
+      "column": 11,
+      "row": 40,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/11_40.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"923b91fb7f241bd59be50552f889ee43\"",
+      "bytes": 60898,
+      "jpeg_sha256": "ff941c17c863044b26333c454d1509cf0ac8901d962e4e9a147b4e278d347ddf",
+      "decoded_rgb_sha256": "56741e0c1fd97a57db7be3a476962018dd1e6820df45aea4aa508d507518ad1a",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        5609,
+        20399
+      ]
+    },
+    {
+      "column": 12,
+      "row": 41,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/12_41.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"1ce0f7a9f46ec1018900c9400b4c8a0f\"",
+      "bytes": 72754,
+      "jpeg_sha256": "deefd493650c1fcb87ed41be743979a0db9a7947a1f05168cb42ba47d351be79",
+      "decoded_rgb_sha256": "a32525ffde488afa79e5b2858db33fbb01afdd4201b0209e6528fc5c86291176",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        6119,
+        20909
+      ]
+    },
+    {
+      "column": 13,
+      "row": 41,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/13_41.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"dd9e5382656f45e11e3a2acb29f30b7a\"",
+      "bytes": 70787,
+      "jpeg_sha256": "bb97a0a03e72068540ebbbd3af44e9a7b5ad93ae084c2b65e14387e194927920",
+      "decoded_rgb_sha256": "2e143f4eeadd6d799c532dc69af34494c10a4baca3a091eb1518a5c8112c6ade",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        6629,
+        20909
+      ]
+    },
+    {
+      "column": 13,
+      "row": 42,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/13_42.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"6fb407ae63d55121151b83dfe903e874\"",
+      "bytes": 74261,
+      "jpeg_sha256": "16bea47a543f500186c52ac9c6925f741d288995e42d088fd616deaf9615ff1b",
+      "decoded_rgb_sha256": "d17a2907ca84dc277d105b84408b2ed9bc6d3db840ba62919527847e12ed8d9d",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        6629,
+        21419
+      ]
+    },
+    {
+      "column": 31,
+      "row": 51,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/31_51.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"5740870b1896b497de8cc8276225ae8c\"",
+      "bytes": 66953,
+      "jpeg_sha256": "1689b0c95157f3982d8deecdf85a1e81ef953fe98a55dc50c04983e105a0a1ad",
+      "decoded_rgb_sha256": "59bc287cd7fb53c57eb52e3bbb15b4526fa6fed253964f17bfc750c90a7dd904",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        15809,
+        26009
+      ]
+    },
+    {
+      "column": 32,
+      "row": 52,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/32_52.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"d5df033c53ee3e592a5aa65271852809\"",
+      "bytes": 65652,
+      "jpeg_sha256": "98c1c12ff77493ae0fe8e547e71390ce74d5a96ad66806fb736eaf55ce5e264b",
+      "decoded_rgb_sha256": "8949b1658e02f4c4b703639af514a20e4e1d54ff806140afa0f2de4de4a199f0",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        16319,
+        26519
+      ]
+    },
+    {
+      "column": 57,
+      "row": 19,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/57_19.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"55d1016a3a00749dd4881a82013d5525\"",
+      "bytes": 75888,
+      "jpeg_sha256": "0a67b406dbe9ba7c32e889bb878c62cd1d2c566c949c27fb2834976e757815a7",
+      "decoded_rgb_sha256": "75f15ed3b60f9f38fcc31c88fb7bf6cec12f008ab67f5187916df7e707a8276d",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        29069,
+        9689
+      ]
+    },
+    {
+      "column": 58,
+      "row": 19,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/58_19.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"d5000a8c1afe1dd4ae793e908d4d58af\"",
+      "bytes": 64933,
+      "jpeg_sha256": "0ae06f5e5d7ac916129da02da63a86ad587339bb07b60f2e7af6c34eae8a74e7",
+      "decoded_rgb_sha256": "7d4cd0a03f5b4afaf056f63bbd361b2518310ccd9b3bf1f69c0aad9755b7e943",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        29579,
+        9689
+      ]
+    },
+    {
+      "column": 58,
+      "row": 20,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/58_20.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"c0f2a540d3dbe830421598c1a155e655\"",
+      "bytes": 67271,
+      "jpeg_sha256": "9e44c86b13afbefba7dea39ad542edafc1a5a601a979fc4422de7c1618d815b0",
+      "decoded_rgb_sha256": "fc4f6606562bf3e6ca7ac23f25befef316fee94177d66334e1520d0adffcda82",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        29579,
+        10199
+      ]
+    },
+    {
+      "column": 59,
+      "row": 20,
+      "url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/16/59_20.jpeg?v=88ddfdd0",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "etag": "\"2ce27c23a4d597052784ad4d8a99d7e9\"",
+      "bytes": 65811,
+      "jpeg_sha256": "4edd198ecc0621119d97d82c7402d0daeea4964eb4a33a9e65b27fc2ceb3338f",
+      "decoded_rgb_sha256": "20ed1d209576ad2a5bcc8403cf5572d077e0913cda9deca9d624b184668d960a",
+      "size": [
+        512,
+        512
+      ],
+      "native_decoded_origin": [
+        30089,
+        10199
+      ]
+    }
+  ],
+  "summary": {
+    "roi_count": 3,
+    "sample_count": 9,
+    "pixels_per_sample": 9216,
+    "unique_remote_tiles": 10,
+    "correct_mae_mean": 3.7708373521090532,
+    "correct_mae_range": [
+      2.9457103587962963,
+      4.78247974537037
+    ],
+    "shift_1px_mae_range": [
+      13.141565393518519,
+      24.768192997685187
+    ],
+    "shift_16px_mae_range": [
+      35.99215133101852,
+      49.394820601851855
+    ],
+    "correct_lower_mae_than_both_controls_for_all_samples": true
+  },
+  "interpretation": "All three stored native ROI PNGs exactly match fresh level-0 reads. Remote display tiles align at the tested locations, but JPEG display re-encoding causes nonzero RGB differences. This is a sampled coordinate alignment check, not a bit-exact remote/native equality claim, nuclear ground-truth validation, or exhaustive whole-slide check."
+}

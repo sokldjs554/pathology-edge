@@ -1,0 +1,1762 @@
+{
+  "schema_version": "pathology-edge.ihc.v1",
+  "task": "gt_center_cell_classification",
+  "created_utc": "2026-11-08T07:30:36.771745+00:00",
+  "scope": {
+    "stain": "Ki-67 IHC",
+    "organ": "breast",
+    "provided_centers": true,
+    "detection_evaluated": false,
+    "segmentation_evaluated": false,
+    "clinical_assay": false,
+    "title_ko": "정답 중심점 조건의 IHC 세포 분류"
+  },
+  "classes": [
+    {
+      "id": 0,
+      "name": "positive_tumor_cell",
+      "label_ko": "Ki67 양성 종양 세포"
+    },
+    {
+      "id": 1,
+      "name": "negative_tumor_cell",
+      "label_ko": "Ki67 음성 종양 세포"
+    },
+    {
+      "id": 2,
+      "name": "others_positive",
+      "label_ko": "Ki67 양성 비종양 세포"
+    },
+    {
+      "id": 3,
+      "name": "others_negative",
+      "label_ko": "Ki67 음성 비종양 세포"
+    }
+  ],
+  "dataset": {
+    "id": "patherea-breast-p1-v1.1",
+    "url": "https://huggingface.co/datasets/ds2268/patherea",
+    "revision": "eb8a6c38cb1df3381b22385ed7b6175091c87ea5",
+    "license": "CC BY-NC 4.0",
+    "zip_sha256": "1194dbfb145ca3aee1a27fcff9d92799d73d34b5da972118424a7b67047034e7",
+    "zip_bytes": 134068022,
+    "image_count": 1330,
+    "case_count": 29,
+    "cell_count": 19972,
+    "class_counts": {
+      "positive_tumor_cell": 5556,
+      "negative_tumor_cell": 9530,
+      "others_negative": 4421,
+      "others_positive": 465
+    },
+    "normal_cell_count": 0,
+    "point_mask_semantics": "isolated 255-valued single pixels in 0/255 arrays; all connected components size 1",
+    "statistics_discrepancy": {
+      "global_stats_txt_and_paper": 36673,
+      "actual_downloaded_point_masks": 19972,
+      "fold_stats_match_actual": true,
+      "cause": "unknown"
+    }
+  },
+  "protocol": {
+    "seed": 20261108,
+    "author_test_fold": 1,
+    "split": {
+      "train": {
+        "case_ids": [
+          "case_0001",
+          "case_0002",
+          "case_0010",
+          "case_0012",
+          "case_0013",
+          "case_0016",
+          "case_0017",
+          "case_0018",
+          "case_0021",
+          "case_0022",
+          "case_0025",
+          "case_0026",
+          "case_0027",
+          "case_0028",
+          "case_0029"
+        ],
+        "image_count": 696,
+        "cell_count": 10751,
+        "class_counts": {
+          "positive_tumor_cell": 3118,
+          "negative_tumor_cell": 5434,
+          "others_positive": 193,
+          "others_negative": 2006
+        }
+      },
+      "validation": {
+        "case_ids": [
+          "case_0003",
+          "case_0005",
+          "case_0007",
+          "case_0019"
+        ],
+        "image_count": 227,
+        "cell_count": 2802,
+        "class_counts": {
+          "positive_tumor_cell": 483,
+          "negative_tumor_cell": 1292,
+          "others_positive": 112,
+          "others_negative": 915
+        }
+      },
+      "test": {
+        "case_ids": [
+          "case_0004",
+          "case_0006",
+          "case_0008",
+          "case_0009",
+          "case_0011",
+          "case_0014",
+          "case_0015",
+          "case_0020",
+          "case_0023",
+          "case_0024"
+        ],
+        "image_count": 407,
+        "cell_count": 6419,
+        "class_counts": {
+          "positive_tumor_cell": 1955,
+          "negative_tumor_cell": 2804,
+          "others_positive": 160,
+          "others_negative": 1500
+        }
+      }
+    },
+    "C_candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selected_C": 10.0,
+    "selection_metric": "validation_macro_f1",
+    "tie_rule": "smaller_C",
+    "trials": [
+      {
+        "C": 0.1,
+        "validation_macro_f1": 0.653770027982089,
+        "iterations": 271
+      },
+      {
+        "C": 1.0,
+        "validation_macro_f1": 0.6585909179570293,
+        "iterations": 732
+      },
+      {
+        "C": 10.0,
+        "validation_macro_f1": 0.6611117431791453,
+        "iterations": 1996
+      }
+    ],
+    "export_probability_max_abs_error": 0.0,
+    "scaler_fit": "training_cells_only",
+    "refit_with_validation": false,
+    "probability_calibration": "none",
+    "test_evaluations": 1,
+    "features": [
+      "disk3_mean_red",
+      "disk3_mean_green",
+      "disk3_mean_blue",
+      "disk3_mean_hue_sin",
+      "disk3_mean_hue_cos",
+      "disk3_mean_saturation",
+      "disk3_mean_value",
+      "disk3_mean_od_red",
+      "disk3_mean_od_green",
+      "disk3_mean_od_blue",
+      "disk3_std_red",
+      "disk3_std_green",
+      "disk3_std_blue",
+      "disk3_std_hue_sin",
+      "disk3_std_hue_cos",
+      "disk3_std_saturation",
+      "disk3_std_value",
+      "disk3_std_od_red",
+      "disk3_std_od_green",
+      "disk3_std_od_blue",
+      "disk7_mean_red",
+      "disk7_mean_green",
+      "disk7_mean_blue",
+      "disk7_mean_hue_sin",
+      "disk7_mean_hue_cos",
+      "disk7_mean_saturation",
+      "disk7_mean_value",
+      "disk7_mean_od_red",
+      "disk7_mean_od_green",
+      "disk7_mean_od_blue",
+      "disk7_std_red",
+      "disk7_std_green",
+      "disk7_std_blue",
+      "disk7_std_hue_sin",
+      "disk7_std_hue_cos",
+      "disk7_std_saturation",
+      "disk7_std_value",
+      "disk7_std_od_red",
+      "disk7_std_od_green",
+      "disk7_std_od_blue"
+    ],
+    "decision_rule": "argmax of four softmax scores; no tuned class threshold",
+    "calibration": "not calibrated; displayed probabilities are model scores",
+    "case_separation_check": "filename case IDs disjoint",
+    "patient_mapping_limit": "Author describes patient-level folds; no independent clinical patient list or slide-to-patient registry supplied"
+  },
+  "metrics": {
+    "validation": {
+      "accuracy": 0.719129193433262,
+      "macro_f1": 0.6611117431791453,
+      "per_class": [
+        {
+          "id": 0,
+          "name": "positive_tumor_cell",
+          "precision": 0.8690476190476191,
+          "recall": 0.7556935817805382,
+          "f1": 0.8084163898117387,
+          "support": 483
+        },
+        {
+          "id": 1,
+          "name": "negative_tumor_cell",
+          "precision": 0.7447425670775925,
+          "recall": 0.794891640866873,
+          "f1": 0.7690003743916136,
+          "support": 1292
+        },
+        {
+          "id": 2,
+          "name": "others_positive",
+          "precision": 0.30837004405286345,
+          "recall": 0.625,
+          "f1": 0.41297935103244837,
+          "support": 112
+        },
+        {
+          "id": 3,
+          "name": "others_negative",
+          "precision": 0.7126288659793815,
+          "recall": 0.6043715846994535,
+          "f1": 0.6540508574807806,
+          "support": 915
+        }
+      ],
+      "confusion_matrix": [
+        [
+          365,
+          2,
+          111,
+          5
+        ],
+        [
+          17,
+          1027,
+          35,
+          213
+        ],
+        [
+          35,
+          2,
+          70,
+          5
+        ],
+        [
+          3,
+          348,
+          11,
+          553
+        ]
+      ],
+      "cell_count": 2802
+    },
+    "test": {
+      "accuracy": 0.7036921638884561,
+      "macro_f1": 0.600905528462403,
+      "per_class": [
+        {
+          "id": 0,
+          "name": "positive_tumor_cell",
+          "precision": 0.8620071684587813,
+          "recall": 0.7381074168797954,
+          "f1": 0.7952604023146872,
+          "support": 1955
+        },
+        {
+          "id": 1,
+          "name": "negative_tumor_cell",
+          "precision": 0.7903162827020696,
+          "recall": 0.7218259629101283,
+          "f1": 0.754520037278658,
+          "support": 2804
+        },
+        {
+          "id": 2,
+          "name": "others_positive",
+          "precision": 0.12551724137931033,
+          "recall": 0.56875,
+          "f1": 0.20564971751412428,
+          "support": 160
+        },
+        {
+          "id": 3,
+          "name": "others_negative",
+          "precision": 0.6572995202193284,
+          "recall": 0.6393333333333333,
+          "f1": 0.6481919567421426,
+          "support": 1500
+        }
+      ],
+      "confusion_matrix": [
+        [
+          1443,
+          29,
+          479,
+          4
+        ],
+        [
+          152,
+          2024,
+          134,
+          494
+        ],
+        [
+          64,
+          3,
+          91,
+          2
+        ],
+        [
+          15,
+          505,
+          21,
+          959
+        ]
+      ],
+      "cell_count": 6419
+    }
+  },
+  "cases": [
+    {
+      "case_id": "case_0004",
+      "cell_count": 566,
+      "metrics": {
+        "accuracy": 0.6749116607773852,
+        "macro_f1": 0.6280898995862749,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.8383838383838383,
+            "recall": 0.7757009345794392,
+            "f1": 0.8058252427184466,
+            "support": 107
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.5692307692307692,
+            "recall": 0.8176795580110497,
+            "f1": 0.671201814058957,
+            "support": 181
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.2727272727272727,
+            "recall": 0.6,
+            "f1": 0.375,
+            "support": 20
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.852760736196319,
+            "recall": 0.5387596899224806,
+            "f1": 0.6603325415676959,
+            "support": 258
+          }
+        ],
+        "confusion_matrix": [
+          [
+            83,
+            1,
+            22,
+            1
+          ],
+          [
+            5,
+            148,
+            5,
+            23
+          ],
+          [
+            8,
+            0,
+            12,
+            0
+          ],
+          [
+            3,
+            111,
+            5,
+            139
+          ]
+        ],
+        "cell_count": 566
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.3715277777777778,
+        "predicted": 0.2757660167130919,
+        "gt_tumor_cell_count": 288,
+        "predicted_tumor_cell_count": 359,
+        "absolute_error_percentage_points": 9.576176106468587,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0006",
+      "cell_count": 97,
+      "metrics": {
+        "accuracy": 0.8350515463917526,
+        "macro_f1": 0.5887808671981334,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.8571428571428571,
+            "recall": 0.75,
+            "f1": 0.8,
+            "support": 8
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.9130434782608695,
+            "recall": 0.9,
+            "f1": 0.9064748201438849,
+            "support": 70
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.631578947368421,
+            "recall": 0.6666666666666666,
+            "f1": 0.6486486486486487,
+            "support": 18
+          }
+        ],
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            63,
+            0,
+            7
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            12
+          ]
+        ],
+        "cell_count": 97
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.10256410256410256,
+        "predicted": 0.09210526315789473,
+        "gt_tumor_cell_count": 78,
+        "predicted_tumor_cell_count": 76,
+        "absolute_error_percentage_points": 1.045883940620783,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0008",
+      "cell_count": 683,
+      "metrics": {
+        "accuracy": 0.677891654465593,
+        "macro_f1": 0.6308974194978684,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.6417445482866043,
+            "recall": 0.7953667953667953,
+            "f1": 0.7103448275862069,
+            "support": 259
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.946078431372549,
+            "recall": 0.6088328075709779,
+            "f1": 0.7408829174664108,
+            "support": 317
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.25892857142857145,
+            "recall": 0.5087719298245614,
+            "f1": 0.3431952662721893,
+            "support": 57
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.7608695652173914,
+            "recall": 0.7,
+            "f1": 0.7291666666666666,
+            "support": 50
+          }
+        ],
+        "confusion_matrix": [
+          [
+            206,
+            0,
+            53,
+            0
+          ],
+          [
+            86,
+            193,
+            27,
+            11
+          ],
+          [
+            28,
+            0,
+            29,
+            0
+          ],
+          [
+            1,
+            11,
+            3,
+            35
+          ]
+        ],
+        "cell_count": 683
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.4496527777777778,
+        "predicted": 0.6114285714285714,
+        "gt_tumor_cell_count": 576,
+        "predicted_tumor_cell_count": 525,
+        "absolute_error_percentage_points": 16.177579365079364,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0009",
+      "cell_count": 604,
+      "metrics": {
+        "accuracy": 0.7466887417218543,
+        "macro_f1": 0.5517183980647329,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.8118811881188119,
+            "recall": 0.7068965517241379,
+            "f1": 0.7557603686635944,
+            "support": 116
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.8692307692307693,
+            "recall": 0.8475,
+            "f1": 0.8582278481012658,
+            "support": 400
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.17857142857142858,
+            "recall": 0.7692307692307693,
+            "f1": 0.2898550724637681,
+            "support": 13
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.3508771929824561,
+            "recall": 0.26666666666666666,
+            "f1": 0.30303030303030304,
+            "support": 75
+          }
+        ],
+        "confusion_matrix": [
+          [
+            82,
+            0,
+            34,
+            0
+          ],
+          [
+            13,
+            339,
+            11,
+            37
+          ],
+          [
+            3,
+            0,
+            10,
+            0
+          ],
+          [
+            3,
+            51,
+            1,
+            20
+          ]
+        ],
+        "cell_count": 604
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.2248062015503876,
+        "predicted": 0.20570264765784113,
+        "gt_tumor_cell_count": 516,
+        "predicted_tumor_cell_count": 491,
+        "absolute_error_percentage_points": 1.9103553892546477,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0011",
+      "cell_count": 742,
+      "metrics": {
+        "accuracy": 0.5943396226415094,
+        "macro_f1": 0.5581549216813498,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.9850746268656716,
+            "recall": 0.6534653465346535,
+            "f1": 0.7857142857142857,
+            "support": 101
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.8881987577639752,
+            "recall": 0.36855670103092786,
+            "f1": 0.5209471766848816,
+            "support": 388
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.17543859649122806,
+            "recall": 0.8333333333333334,
+            "f1": 0.2898550724637681,
+            "support": 12
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.48577680525164113,
+            "recall": 0.921161825726141,
+            "f1": 0.6361031518624641,
+            "support": 241
+          }
+        ],
+        "confusion_matrix": [
+          [
+            66,
+            0,
+            35,
+            0
+          ],
+          [
+            0,
+            143,
+            11,
+            234
+          ],
+          [
+            1,
+            0,
+            10,
+            1
+          ],
+          [
+            0,
+            18,
+            1,
+            222
+          ]
+        ],
+        "cell_count": 742
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.2065439672801636,
+        "predicted": 0.29385964912280704,
+        "gt_tumor_cell_count": 489,
+        "predicted_tumor_cell_count": 228,
+        "absolute_error_percentage_points": 8.731568184264344,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0014",
+      "cell_count": 872,
+      "metrics": {
+        "accuracy": 0.7018348623853211,
+        "macro_f1": 0.5521971200172368,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.9134860050890585,
+            "recall": 0.7924944812362031,
+            "f1": 0.8486997635933806,
+            "support": 453
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.890625,
+            "recall": 0.5428571428571428,
+            "f1": 0.6745562130177515,
+            "support": 315
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.006802721088435374,
+            "recall": 0.3333333333333333,
+            "f1": 0.013333333333333334,
+            "support": 3
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.5785714285714286,
+            "recall": 0.801980198019802,
+            "f1": 0.6721991701244814,
+            "support": 101
+          }
+        ],
+        "confusion_matrix": [
+          [
+            359,
+            5,
+            88,
+            1
+          ],
+          [
+            31,
+            171,
+            55,
+            58
+          ],
+          [
+            2,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            16,
+            3,
+            81
+          ]
+        ],
+        "cell_count": 872
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.58984375,
+        "predicted": 0.6717948717948717,
+        "gt_tumor_cell_count": 768,
+        "predicted_tumor_cell_count": 585,
+        "absolute_error_percentage_points": 8.195112179487174,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0015",
+      "cell_count": 775,
+      "metrics": {
+        "accuracy": 0.7006451612903226,
+        "macro_f1": 0.5602208247414269,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.9622641509433962,
+            "recall": 0.7611940298507462,
+            "f1": 0.85,
+            "support": 67
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.5400516795865633,
+            "recall": 0.8565573770491803,
+            "f1": 0.6624405705229794,
+            "support": 244
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.9012738853503185,
+            "recall": 0.6112311015118791,
+            "f1": 0.7284427284427284,
+            "support": 463
+          }
+        ],
+        "confusion_matrix": [
+          [
+            51,
+            1,
+            15,
+            0
+          ],
+          [
+            0,
+            209,
+            4,
+            31
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            177,
+            2,
+            283
+          ]
+        ],
+        "cell_count": 775
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.21543408360128619,
+        "predicted": 0.12045454545454545,
+        "gt_tumor_cell_count": 311,
+        "predicted_tumor_cell_count": 440,
+        "absolute_error_percentage_points": 9.497953814674073,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0020",
+      "cell_count": 477,
+      "metrics": {
+        "accuracy": 0.8301886792452831,
+        "macro_f1": 0.7470655523705707,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.98,
+            "recall": 0.8099173553719008,
+            "f1": 0.8868778280542986,
+            "support": 121
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.8185483870967742,
+            "recall": 0.9354838709677419,
+            "f1": 0.8731182795698925,
+            "support": 217
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.34375,
+            "recall": 0.7333333333333333,
+            "f1": 0.46808510638297873,
+            "support": 15
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.865979381443299,
+            "recall": 0.6774193548387096,
+            "f1": 0.7601809954751131,
+            "support": 124
+          }
+        ],
+        "confusion_matrix": [
+          [
+            98,
+            3,
+            20,
+            0
+          ],
+          [
+            0,
+            203,
+            1,
+            13
+          ],
+          [
+            2,
+            2,
+            11,
+            0
+          ],
+          [
+            0,
+            40,
+            0,
+            84
+          ]
+        ],
+        "cell_count": 477
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.35798816568047337,
+        "predicted": 0.28735632183908044,
+        "gt_tumor_cell_count": 338,
+        "predicted_tumor_cell_count": 348,
+        "absolute_error_percentage_points": 7.0631843841392925,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0023",
+      "cell_count": 616,
+      "metrics": {
+        "accuracy": 0.6525974025974026,
+        "macro_f1": 0.529777985067013,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.8937007874015748,
+            "recall": 0.6656891495601173,
+            "f1": 0.7630252100840336,
+            "support": 341
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.7272727272727273,
+            "recall": 0.7953216374269005,
+            "f1": 0.7597765363128491,
+            "support": 171
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.08208955223880597,
+            "recall": 0.5,
+            "f1": 0.14102564102564102,
+            "support": 22
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.6829268292682927,
+            "recall": 0.34146341463414637,
+            "f1": 0.45528455284552843,
+            "support": 82
+          }
+        ],
+        "confusion_matrix": [
+          [
+            227,
+            4,
+            110,
+            0
+          ],
+          [
+            12,
+            136,
+            10,
+            13
+          ],
+          [
+            10,
+            1,
+            11,
+            0
+          ],
+          [
+            5,
+            46,
+            3,
+            28
+          ]
+        ],
+        "cell_count": 616
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.666015625,
+        "predicted": 0.5759637188208617,
+        "gt_tumor_cell_count": 512,
+        "predicted_tumor_cell_count": 441,
+        "absolute_error_percentage_points": 9.005190617913827,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "case_id": "case_0024",
+      "cell_count": 987,
+      "metrics": {
+        "accuracy": 0.7558257345491388,
+        "macro_f1": 0.5726207845818119,
+        "per_class": [
+          {
+            "id": 0,
+            "name": "positive_tumor_cell",
+            "precision": 0.9498207885304659,
+            "recall": 0.693717277486911,
+            "f1": 0.8018154311649016,
+            "support": 382
+          },
+          {
+            "id": 1,
+            "name": "negative_tumor_cell",
+            "precision": 0.9049676025917927,
+            "recall": 0.8363273453093812,
+            "f1": 0.8692946058091287,
+            "support": 501
+          },
+          {
+            "id": 2,
+            "name": "others_positive",
+            "precision": 0.058333333333333334,
+            "recall": 0.4375,
+            "f1": 0.10294117647058823,
+            "support": 16
+          },
+          {
+            "id": 3,
+            "name": "others_negative",
+            "precision": 0.44,
+            "recall": 0.625,
+            "f1": 0.5164319248826291,
+            "support": 88
+          }
+        ],
+        "confusion_matrix": [
+          [
+            265,
+            15,
+            100,
+            2
+          ],
+          [
+            5,
+            419,
+            10,
+            67
+          ],
+          [
+            8,
+            0,
+            7,
+            1
+          ],
+          [
+            1,
+            29,
+            3,
+            55
+          ]
+        ],
+        "cell_count": 987
+      },
+      "annotated_cell_ki67_ratio": {
+        "gt": 0.43261608154020387,
+        "predicted": 0.37601078167115903,
+        "gt_tumor_cell_count": 883,
+        "predicted_tumor_cell_count": 742,
+        "absolute_error_percentage_points": 5.660529986904484,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    }
+  ],
+  "annotated_cell_ratio_summary": {
+    "case_mae_percentage_points": 7.686353396880657,
+    "defined_cases": 10,
+    "excluded_zero_denominator_cases": 0,
+    "scope": "GT-center conditional classification; no missed/false detections evaluated"
+  },
+  "examples": [
+    {
+      "id": "correct-01",
+      "kind": "correct",
+      "case_id": "case_0004",
+      "image_name": "case_0004_region_0_patch_0_O.png",
+      "center": [
+        115,
+        117
+      ],
+      "gt_class": 0,
+      "pred_class": 0,
+      "probabilities": [
+        0.6011740590251227,
+        7.506585574121915e-15,
+        0.39882587751919485,
+        6.34556748918628e-08
+      ],
+      "confidence": 0.6011740590251227,
+      "source_image": "ihc/examples/correct-01-source.png",
+      "crop_image": "ihc/examples/correct-01-crop.png",
+      "crop_bbox": [
+        91,
+        93,
+        139,
+        141
+      ],
+      "point_in_crop": [
+        24,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "57c11adfbfb337eba28549d628d2e065d33f77170d29872bab761b43b1df3496",
+      "source_pixel_sha256": "6b8a7018d44abe0d1d370dcb3a7a1b81a1c1cde96e5eb3cbb3131395be2be461"
+    },
+    {
+      "id": "correct-02",
+      "kind": "correct",
+      "case_id": "case_0006",
+      "image_name": "case_0006_region_0_patch_0_O.png",
+      "center": [
+        204,
+        55
+      ],
+      "gt_class": 1,
+      "pred_class": 1,
+      "probabilities": [
+        0.010086237592001139,
+        0.7818952672533361,
+        0.007873003317100644,
+        0.20014549183756197
+      ],
+      "confidence": 0.7818952672533361,
+      "source_image": "ihc/examples/correct-02-source.png",
+      "crop_image": "ihc/examples/correct-02-crop.png",
+      "crop_bbox": [
+        176,
+        31,
+        224,
+        79
+      ],
+      "point_in_crop": [
+        28,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "c88f6c424b92786d8133625f0e60398bed2eba8a928a5deb6ea65214c261d27b",
+      "source_pixel_sha256": "27741ce96d4628658ffa65883e4a481d29ef0f09e42ed65bb4d0fa04bd383494"
+    },
+    {
+      "id": "correct-03",
+      "kind": "correct",
+      "case_id": "case_0008",
+      "image_name": "case_0008_region_0_patch_1_O.png",
+      "center": [
+        35,
+        13
+      ],
+      "gt_class": 2,
+      "pred_class": 2,
+      "probabilities": [
+        0.08087856158629753,
+        1.709074710343938e-05,
+        0.9191043460584335,
+        1.6081656235887233e-09
+      ],
+      "confidence": 0.9191043460584335,
+      "source_image": "ihc/examples/correct-03-source.png",
+      "crop_image": "ihc/examples/correct-03-crop.png",
+      "crop_bbox": [
+        11,
+        0,
+        59,
+        48
+      ],
+      "point_in_crop": [
+        24,
+        13
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "a5625bb2966b2494d919d05d8dcca0a59a3761290bda6cb87d7b98639063456a",
+      "source_pixel_sha256": "ee7c00975f22a8935b10d030a3f953a49929d266ff94b438087730262aaf484f"
+    },
+    {
+      "id": "correct-04",
+      "kind": "correct",
+      "case_id": "case_0009",
+      "image_name": "case_0009_region_0_patch_0_O.png",
+      "center": [
+        40,
+        2
+      ],
+      "gt_class": 3,
+      "pred_class": 3,
+      "probabilities": [
+        0.00024994059173501004,
+        0.1892156050722907,
+        0.0009565024722731053,
+        0.8095779518637013
+      ],
+      "confidence": 0.8095779518637013,
+      "source_image": "ihc/examples/correct-04-source.png",
+      "crop_image": "ihc/examples/correct-04-crop.png",
+      "crop_bbox": [
+        16,
+        0,
+        64,
+        48
+      ],
+      "point_in_crop": [
+        24,
+        2
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "133b74d450831e7bec47d1412e8990b8b7c07376ddf6b06cac956b75f4ad2a2d",
+      "source_pixel_sha256": "5f63d0b7e0fb0db965a441976e9a5ad2daadedca4aa761cb304e9859014d77a8"
+    },
+    {
+      "id": "correct-05",
+      "kind": "correct",
+      "case_id": "case_0011",
+      "image_name": "case_0011_region_0_patch_10_O.png",
+      "center": [
+        140,
+        75
+      ],
+      "gt_class": 0,
+      "pred_class": 0,
+      "probabilities": [
+        0.7456379793283305,
+        4.115857627519724e-08,
+        0.25436196552103874,
+        1.399205450429187e-08
+      ],
+      "confidence": 0.7456379793283305,
+      "source_image": "ihc/examples/correct-05-source.png",
+      "crop_image": "ihc/examples/correct-05-crop.png",
+      "crop_bbox": [
+        116,
+        51,
+        164,
+        99
+      ],
+      "point_in_crop": [
+        24,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "d597b945652d2e78c31b7f2b7f1c7d0043a48dea54ba4c347194ba6750a1f08c",
+      "source_pixel_sha256": "3daa115e5482b783e4e696624bae1f649d740777048f9c494cb0eede0d01cea3"
+    },
+    {
+      "id": "correct-06",
+      "kind": "correct",
+      "case_id": "case_0014",
+      "image_name": "case_0014_region_0_patch_0_O.png",
+      "center": [
+        28,
+        4
+      ],
+      "gt_class": 1,
+      "pred_class": 1,
+      "probabilities": [
+        0.001942486017196289,
+        0.6858785231093641,
+        0.004129633305851476,
+        0.30804935756758806
+      ],
+      "confidence": 0.6858785231093641,
+      "source_image": "ihc/examples/correct-06-source.png",
+      "crop_image": "ihc/examples/correct-06-crop.png",
+      "crop_bbox": [
+        4,
+        0,
+        52,
+        48
+      ],
+      "point_in_crop": [
+        24,
+        4
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "34b77239f00f1bb7a2d80b5fc568f4056626441683dbd6fbac2de3ea0243aeab",
+      "source_pixel_sha256": "9d4cbbfadba462a913b5efbf4b7bad68685ab92aa0f8f556bc49046076e8e4e0"
+    },
+    {
+      "id": "correct-07",
+      "kind": "correct",
+      "case_id": "case_0020",
+      "image_name": "case_0020_region_0_patch_2_O.png",
+      "center": [
+        91,
+        218
+      ],
+      "gt_class": 2,
+      "pred_class": 2,
+      "probabilities": [
+        0.2080430461759756,
+        0.0006166675295058406,
+        0.7913399052034904,
+        3.8109102819587145e-07
+      ],
+      "confidence": 0.7913399052034904,
+      "source_image": "ihc/examples/correct-07-source.png",
+      "crop_image": "ihc/examples/correct-07-crop.png",
+      "crop_bbox": [
+        67,
+        176,
+        115,
+        224
+      ],
+      "point_in_crop": [
+        24,
+        42
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "6ea91e4ea31b5bc29833f6a3c3a10803c2409173b0488cfd937aa09194959eda",
+      "source_pixel_sha256": "3c95c24db3dd4e71a70463d21564a2a0018067bb671ad508d25b355f9870e5e4"
+    },
+    {
+      "id": "correct-08",
+      "kind": "correct",
+      "case_id": "case_0015",
+      "image_name": "case_0015_region_0_patch_0_O.png",
+      "center": [
+        219,
+        5
+      ],
+      "gt_class": 3,
+      "pred_class": 3,
+      "probabilities": [
+        0.002122810867989739,
+        0.3241960288186834,
+        0.017463757396366342,
+        0.6562174029169605
+      ],
+      "confidence": 0.6562174029169605,
+      "source_image": "ihc/examples/correct-08-source.png",
+      "crop_image": "ihc/examples/correct-08-crop.png",
+      "crop_bbox": [
+        176,
+        0,
+        224,
+        48
+      ],
+      "point_in_crop": [
+        43,
+        5
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "bd69789c667f5be5beb4ecf6158d40c21f3535b5e04599c0c993014d1d68f161",
+      "source_pixel_sha256": "6c3ee882c45ccf336736875b14abe251138525637433fbab7ebd995fdb86d264"
+    },
+    {
+      "id": "incorrect-01",
+      "kind": "incorrect",
+      "case_id": "case_0004",
+      "image_name": "case_0004_region_0_patch_10_O.png",
+      "center": [
+        179,
+        98
+      ],
+      "gt_class": 0,
+      "pred_class": 2,
+      "probabilities": [
+        0.49080959784837674,
+        3.5126455409621698e-06,
+        0.5091868891451504,
+        3.609318680443322e-10
+      ],
+      "confidence": 0.5091868891451504,
+      "source_image": "ihc/examples/incorrect-01-source.png",
+      "crop_image": "ihc/examples/incorrect-01-crop.png",
+      "crop_bbox": [
+        155,
+        74,
+        203,
+        122
+      ],
+      "point_in_crop": [
+        24,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "8fd797a1ff454f7a07349aef40c0223f8e726f298530f77a76b824814e503cc7",
+      "source_pixel_sha256": "4f28c3efef1b9bbc0b4f36d736eb5a3d686a4665d0c1fb62a4ba39ce4de6636d"
+    },
+    {
+      "id": "incorrect-02",
+      "kind": "incorrect",
+      "case_id": "case_0006",
+      "image_name": "case_0006_region_0_patch_0_O.png",
+      "center": [
+        44,
+        16
+      ],
+      "gt_class": 1,
+      "pred_class": 3,
+      "probabilities": [
+        0.002170581334030095,
+        0.39701778231197854,
+        0.0009740726878766344,
+        0.5998375636661147
+      ],
+      "confidence": 0.5998375636661147,
+      "source_image": "ihc/examples/incorrect-02-source.png",
+      "crop_image": "ihc/examples/incorrect-02-crop.png",
+      "crop_bbox": [
+        20,
+        0,
+        68,
+        48
+      ],
+      "point_in_crop": [
+        24,
+        16
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "c88f6c424b92786d8133625f0e60398bed2eba8a928a5deb6ea65214c261d27b",
+      "source_pixel_sha256": "27741ce96d4628658ffa65883e4a481d29ef0f09e42ed65bb4d0fa04bd383494"
+    },
+    {
+      "id": "incorrect-03",
+      "kind": "incorrect",
+      "case_id": "case_0008",
+      "image_name": "case_0008_region_0_patch_0_O.png",
+      "center": [
+        35,
+        90
+      ],
+      "gt_class": 2,
+      "pred_class": 0,
+      "probabilities": [
+        0.5780462653306577,
+        0.024990598578516356,
+        0.39636132928698875,
+        0.0006018068038371529
+      ],
+      "confidence": 0.5780462653306577,
+      "source_image": "ihc/examples/incorrect-03-source.png",
+      "crop_image": "ihc/examples/incorrect-03-crop.png",
+      "crop_bbox": [
+        11,
+        66,
+        59,
+        114
+      ],
+      "point_in_crop": [
+        24,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "90e72d7824962ac99f43ce4965a4fa15990634fd8bee27f0c59deb5e892e2277",
+      "source_pixel_sha256": "5afbd8e14d1d18e2ab2f5f64bc97bb96cf646732f3be35a7903e573ffddd6d1e"
+    },
+    {
+      "id": "incorrect-04",
+      "kind": "incorrect",
+      "case_id": "case_0009",
+      "image_name": "case_0009_region_0_patch_0_O.png",
+      "center": [
+        1,
+        39
+      ],
+      "gt_class": 3,
+      "pred_class": 1,
+      "probabilities": [
+        0.0014583797023346307,
+        0.5351017250255138,
+        0.0007668866704108756,
+        0.46267300860174065
+      ],
+      "confidence": 0.5351017250255138,
+      "source_image": "ihc/examples/incorrect-04-source.png",
+      "crop_image": "ihc/examples/incorrect-04-crop.png",
+      "crop_bbox": [
+        0,
+        15,
+        48,
+        63
+      ],
+      "point_in_crop": [
+        1,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "133b74d450831e7bec47d1412e8990b8b7c07376ddf6b06cac956b75f4ad2a2d",
+      "source_pixel_sha256": "5f63d0b7e0fb0db965a441976e9a5ad2daadedca4aa761cb304e9859014d77a8"
+    },
+    {
+      "id": "incorrect-05",
+      "kind": "incorrect",
+      "case_id": "case_0011",
+      "image_name": "case_0011_region_0_patch_10_O.png",
+      "center": [
+        212,
+        48
+      ],
+      "gt_class": 0,
+      "pred_class": 2,
+      "probabilities": [
+        0.35454399093447425,
+        0.00027609725258569243,
+        0.6442163829871091,
+        0.0009635288258307951
+      ],
+      "confidence": 0.6442163829871091,
+      "source_image": "ihc/examples/incorrect-05-source.png",
+      "crop_image": "ihc/examples/incorrect-05-crop.png",
+      "crop_bbox": [
+        176,
+        24,
+        224,
+        72
+      ],
+      "point_in_crop": [
+        36,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "d597b945652d2e78c31b7f2b7f1c7d0043a48dea54ba4c347194ba6750a1f08c",
+      "source_pixel_sha256": "3daa115e5482b783e4e696624bae1f649d740777048f9c494cb0eede0d01cea3"
+    },
+    {
+      "id": "incorrect-06",
+      "kind": "incorrect",
+      "case_id": "case_0014",
+      "image_name": "case_0014_region_0_patch_10_O.png",
+      "center": [
+        89,
+        6
+      ],
+      "gt_class": 1,
+      "pred_class": 3,
+      "probabilities": [
+        0.004981731779589898,
+        0.46286597266649065,
+        0.02615526989265802,
+        0.5059970256612614
+      ],
+      "confidence": 0.5059970256612614,
+      "source_image": "ihc/examples/incorrect-06-source.png",
+      "crop_image": "ihc/examples/incorrect-06-crop.png",
+      "crop_bbox": [
+        65,
+        0,
+        113,
+        48
+      ],
+      "point_in_crop": [
+        24,
+        6
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "f3f890acb1b82250934e7bb3d7a8ae982229c317e44b7f37129f7bbeb032cd16",
+      "source_pixel_sha256": "708ffa29db35056541a647d43a89a0e7de41c7a1d8a15448709d6ae18f60e078"
+    },
+    {
+      "id": "incorrect-07",
+      "kind": "incorrect",
+      "case_id": "case_0015",
+      "image_name": "case_0015_region_0_patch_3_O.png",
+      "center": [
+        176,
+        218
+      ],
+      "gt_class": 2,
+      "pred_class": 0,
+      "probabilities": [
+        0.8313207815688173,
+        4.798450391952226e-09,
+        0.16867921362700342,
+        5.728882246545699e-12
+      ],
+      "confidence": 0.8313207815688173,
+      "source_image": "ihc/examples/incorrect-07-source.png",
+      "crop_image": "ihc/examples/incorrect-07-crop.png",
+      "crop_bbox": [
+        152,
+        176,
+        200,
+        224
+      ],
+      "point_in_crop": [
+        24,
+        42
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "2936926bbff6baca2fa084a6af952dd19478a76c6919ec5c9424ab04bb25758d",
+      "source_pixel_sha256": "c1b91f5d05126014161cd979b2850469a511f303b9d7ec31ab30e91a029a6cde"
+    },
+    {
+      "id": "incorrect-08",
+      "kind": "incorrect",
+      "case_id": "case_0020",
+      "image_name": "case_0020_region_0_patch_0_O.png",
+      "center": [
+        169,
+        42
+      ],
+      "gt_class": 3,
+      "pred_class": 1,
+      "probabilities": [
+        0.0017641359570543622,
+        0.5482399674845128,
+        0.006484549248279821,
+        0.443511347310153
+      ],
+      "confidence": 0.5482399674845128,
+      "source_image": "ihc/examples/incorrect-08-source.png",
+      "crop_image": "ihc/examples/incorrect-08-crop.png",
+      "crop_bbox": [
+        145,
+        18,
+        193,
+        66
+      ],
+      "point_in_crop": [
+        24,
+        24
+      ],
+      "source_size": [
+        224,
+        224
+      ],
+      "source_sha256": "59cc602f6578ee2cfbb3d4a9a5ff83dc2226234c8d1fbd80619e6970298daabf",
+      "source_pixel_sha256": "2f80ee6db51787255b5b457bd1187d712a1df75469590a82db28cec8f1cec273"
+    }
+  ],
+  "example_selection": "8 correct and 8 incorrect when available; round robin true class, prioritize unused case then first sorted distinct image; illustrative, not representative",
+  "model": {
+    "path": "ihc/model.json",
+    "sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+    "pretrained_weights": false,
+    "type": "40 fixed local color features + multinomial logistic regression"
+  },
+  "runtime": {
+    "device": "CPU",
+    "paid_services": false,
+    "fit_blas_threads": 1,
+    "feature_extraction_seconds": 22.37984277400028,
+    "candidate_training_seconds": 3.7892727039998135,
+    "test_model_inference_seconds": 0.0013015589993301546,
+    "total_wall_seconds": 26.60144557499916,
+    "peak_process_rss_mib": 146.703125,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "logical_cpus_visible": 5,
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "Pillow": "13.0.0",
+      "scikit-learn": "1.8.0"
+    },
+    "timing_scope": "One local run. Feature time includes image/mask reads, validation and hashes for all splits; test time excludes extraction. RSS includes process imports."
+  },
+  "limitations": [
+    "Expert-provided centers eliminate localization errors; this is not detection or an end-to-end Ki67 assay.",
+    "Point labels provide no nuclear boundary ground truth; Dice/AJI are not reported.",
+    "Single institution breast subset and 10 held-out case IDs; no external validation.",
+    "Author patient-level folds are checked by case IDs, without an independent patient registry.",
+    "Actual v1.1 masks contain 19,972 cells; global metadata/paper report 36,673 for an unexplained reason.",
+    "Probabilities are uncalibrated model scores; selected examples do not estimate prevalence or accuracy."
+  ],
+  "attribution": {
+    "authors": "Dejan Štepec, Maja Jerše, Snežana Đokić, Jera Jeruc, Nina Zidar, Danijel Skočaj",
+    "dataset": "Patherea Breast-P1 224 v1.1",
+    "source": "https://huggingface.co/datasets/ds2268/patherea",
+    "paper": "https://doi.org/10.1016/j.media.2025.103868",
+    "license": "CC BY-NC 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "changes": "Original 224px RGB patches re-encoded losslessly; 48px local crops and JSON coordinates exported. No generated or recolored tissue.",
+    "use": "Independent noncommercial research/education; no AIVIS affiliation"
+  },
+  "provenance": {
+    "training_execution_source_sha256": "5a3580156006ad3683d23cd2dfd20a5d158075a073b594d5f37e030b9b69a453",
+    "current_source_sha256": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "post_evaluation_change": "Display sample selection now prioritizes different cases; existing frozen predictions reused. Model, metrics and split unchanged."
+  }
+}

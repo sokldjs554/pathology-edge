@@ -1,0 +1,8 @@
+{
+  "package": "openseadragon",
+  "version": "6.1.1",
+  "source": "https://github.com/openseadragon/openseadragon",
+  "license": "BSD-3-Clause",
+  "npm_archive_sha256": "b4ab2942f33b90e0448e4d20fc5ed14cee049f1f3ae49d70afd4b05e9a2f92d0",
+  "bundle_sha256": "14d587cd3ee7c4861f1a41077ce642029364a21029956ba635bd8fb1202cf9ad"
+}

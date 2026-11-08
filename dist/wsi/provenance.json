@@ -1,0 +1,179 @@
+{
+  "slide": {
+    "id": "cmu-1-jp2k-33005",
+    "name": "CMU-1-JP2K-33005.svs",
+    "width": 46000,
+    "height": 32893,
+    "mpp_x": 0.499,
+    "mpp_y": 0.499,
+    "objective_power": 20.0,
+    "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-JP2K-33005.svs",
+    "source_sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+    "source_bytes": 132565343,
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "OpenSlide freely distributable test data / Carnegie Mellon University",
+    "rights_source": "https://openslide.cs.cmu.edu/download/openslide-testdata/index.json",
+    "description": "Brightfield; JPEG 2000 export of CMU-1.svs. Source does not document tissue/stain identity.",
+    "thumbnail": "wsi/overview.jpg",
+    "native_levels": [
+      [
+        46000,
+        32893
+      ],
+      [
+        11500,
+        8223
+      ],
+      [
+        2875,
+        2055
+      ]
+    ],
+    "reader": {
+      "openslide": "4.0.1",
+      "openslide_python": "1.4.7",
+      "vendor": "aperio"
+    },
+    "tile_source": {
+      "Image": {
+        "xmlns": "http://schemas.microsoft.com/deepzoom/2008",
+        "Url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/",
+        "Format": "jpeg",
+        "TileSize": 510,
+        "Overlap": 1,
+        "Size": {
+          "Width": 46000,
+          "Height": 32893
+        }
+      }
+    },
+    "thumbnail_sha256": "5eb10fac375f852c9f30fbde3039f37e5032fb5a22ae8d7e326c4f8626f49869"
+  },
+  "protocol": {
+    "schema_version": 1,
+    "source_sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+    "model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+    "threshold": 0.5,
+    "seed": 20261107,
+    "roi_selection": "Three tissue locations fixed from overview before inference; no outcome-based ROI selection.",
+    "roi_geometry": [
+      {
+        "id": "R1",
+        "origin": [
+          5888,
+          20608
+        ],
+        "width": 1024,
+        "height": 1024,
+        "image_pixel_sha256": "10f9d7a4d8dce0f29881887196e181ae26f7058761de210320d4b63335f035be"
+      },
+      {
+        "id": "R2",
+        "origin": [
+          29440,
+          9728
+        ],
+        "width": 1024,
+        "height": 1024,
+        "image_pixel_sha256": "052e52d0f9853eb42b5e0576efebbcb0e9b30b894279b1412e1fe6eca7d3a459"
+      },
+      {
+        "id": "R3",
+        "origin": [
+          15872,
+          26112
+        ],
+        "width": 1024,
+        "height": 1024,
+        "image_pixel_sha256": "a3024ea8a5e0a03ca5a932271364c17c890a7dae4e782ddd02154633d91e0ea7"
+      }
+    ],
+    "preprocessing": "Native level 0 RGB, uint8 / 255 in existing predict(); no resize or stain normalization.",
+    "patch_size": 128,
+    "overlap": 64,
+    "seam_radius": 8,
+    "seam_reference": "Internal no_overlap ROI grid",
+    "merge_iou": 0.3,
+    "merge_distance": 8,
+    "min_component_area": 12,
+    "background_gate": "existing tissue_mask: >= 1% per extracted patch",
+    "methods": [
+      "no_overlap",
+      "overlap"
+    ],
+    "warmup_runs": 1,
+    "timed_repeats": 3,
+    "torch_threads": 4,
+    "opencv_threads": 1,
+    "backend": "python",
+    "device": "cpu",
+    "ground_truth": false,
+    "timing_scope": "warm CPU predict(): patch RGB extraction + tissue gate + forward + probability stitch + components + NMS; excludes OpenSlide reading, model load, hashing, PNG/JSON writing and difference selection",
+    "memory_scope": "fresh process per ROI/method; absolute process high-water RSS including Python/runtime imports, OpenSlide open/read/cache, model load, one warmup and three timed predictions; sampled before result serialization",
+    "case_selection": "64x64 windows centered on one internal 128px seam, with the other center coordinate sampled every 16px; changed pixels >=16 and boundary changes >0; rank boundary-changed descending, total changed descending, then y/x ascending; at most one per ROI.",
+    "colors": {
+      "removed_a_only": [
+        59,
+        130,
+        246,
+        180
+      ],
+      "added_b_only": [
+        249,
+        115,
+        22,
+        180
+      ]
+    },
+    "training_reference": "artifacts/training.json",
+    "coordinate_unit": "native WSI level-0 pixels",
+    "case_selection_revision": 2
+  },
+  "provenance": {
+    "source_manifest": "artifacts/wsi/source.json",
+    "protocol_manifest": "artifacts/wsi/protocol.json",
+    "pipeline": "src/pathology_edge/wsi_export.py",
+    "pipeline_sha256": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "public_manifest": "wsi/provenance.json",
+    "coordinate_note": "Native level-0 ROI translation only; no image resize or general coordinate transform.",
+    "remote_tiles": "Pinned source path and dimensions from official OpenSlide demo; JPEG display re-encoding; external service availability not guaranteed.",
+    "source_identity": "Analysis and remote DZI both reference the CMU-1-JP2K-33005 variant.",
+    "ground_truth_note": "No nuclear ground truth is supplied with this slide; disagreement is not accuracy or improvement.",
+    "inference_pipeline_sha256": "cadf4b4ff687e56a118205fb5c3b57e85206edb8c32e2f5cc3c148e13efd9fe0",
+    "case_selection_pipeline_sha256": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "case_refresh_scope": "Saved prediction masks only; no inference rerun; original timing and candidates retained."
+  },
+  "roi_images": [
+    {
+      "id": "R1",
+      "origin": [
+        5888,
+        20608
+      ],
+      "image": "wsi/R1.png",
+      "image_sha256": "fe9aae2ba037beb47d7aa74e058b0660ab86ad434d7f6676f7fe258fe9f8a7f3",
+      "image_pixel_sha256": "10f9d7a4d8dce0f29881887196e181ae26f7058761de210320d4b63335f035be"
+    },
+    {
+      "id": "R2",
+      "origin": [
+        29440,
+        9728
+      ],
+      "image": "wsi/R2.png",
+      "image_sha256": "404f05f24fb421ce328141bc9c141df7fa53b24cff8413e73ea90ca3d0ca6441",
+      "image_pixel_sha256": "052e52d0f9853eb42b5e0576efebbcb0e9b30b894279b1412e1fe6eca7d3a459"
+    },
+    {
+      "id": "R3",
+      "origin": [
+        15872,
+        26112
+      ],
+      "image": "wsi/R3.png",
+      "image_sha256": "b526e9c9a33a3a0e0ed29f8c9d47981ee320fc380ea54c7f49f5bd04ec74c08c",
+      "image_pixel_sha256": "a3024ea8a5e0a03ca5a932271364c17c890a7dae4e782ddd02154633d91e0ea7"
+    }
+  ]
+}

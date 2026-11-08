@@ -127,6 +127,34 @@ button.quiet {
   border-left: 1px solid var(--line);
   padding-left: 20px;
 }
+.experiment-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.experiment-nav a[aria-current='page'] {
+  font-weight: 600;
+  color: #334f62;
+}
+@media (max-width: 760px) {
+  body {
+    grid-template-rows: 73px 43px minmax(0, 1fr) 27px !important;
+  }
+  .app-header {
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 8px !important;
+  }
+  .experiment-nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 10px;
+    padding: 0 2px 6px;
+  }
+}
 .header-right {
   display: flex;
   align-items: center;

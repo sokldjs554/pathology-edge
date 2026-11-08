@@ -362,6 +362,16 @@ test('served UI and result bytes match this repository commit', async ({
     'review-ui.js',
     'cases.json',
     'results.json',
+    'wsi.html',
+    'wsi.css',
+    'wsi.js',
+    'wsi.json',
+    'ihc.html',
+    'ihc.css',
+    'ihc.js',
+    'ihc/results.json',
+    'ihc/model.json',
+    'vendor/openseadragon.min.js',
   ]) {
     const response = await request.get('/' + name);
     expect(response.ok()).toBe(true);
@@ -373,7 +383,7 @@ test('served UI and result bytes match this repository commit', async ({
     // Sites/Cloudflare may append this exact challenge template for external IPs.
     // Ignore only its two request-specific fields after verifying all other bytes.
     // A different or additional script still fails the source comparison.
-    if (name === 'index.html' && process.env.UI_BASE_URL) {
+    if (name.endsWith('.html') && process.env.UI_BASE_URL) {
       const html = actual.toString('utf8');
       const injected = html.match(/<script>([\s\S]*?)<\/script>(?=<\/body>)/);
       if (injected) {

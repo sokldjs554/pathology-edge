@@ -1,0 +1,16 @@
+{
+  "source": "https://huggingface.co/datasets/ds2268/patherea",
+  "revision": "eb8a6c38cb1df3381b22385ed7b6175091c87ea5",
+  "gated": false,
+  "private": false,
+  "license": "CC BY-NC 4.0",
+  "license_source": "https://huggingface.co/datasets/ds2268/patherea/raw/eb8a6c38cb1df3381b22385ed7b6175091c87ea5/README.md",
+  "dataset_card_sha256": "f2174506afab5d7ae8a387f672bb7d3892a3a6a472d2078a9935471f4ecd23ce",
+  "download_url": "https://huggingface.co/datasets/ds2268/patherea/resolve/eb8a6c38cb1df3381b22385ed7b6175091c87ea5/Patherea_Breast_P1_224_v1.1.zip",
+  "zip_bytes": 134068022,
+  "zip_sha256": "1194dbfb145ca3aee1a27fcff9d92799d73d34b5da972118424a7b67047034e7",
+  "code_license_separate": "Patherea reference model code is CC BY-NC-SA 4.0; no model code copied",
+  "paper": "https://doi.org/10.1016/j.media.2025.103868",
+  "data_inspection_report": "patherea-p1-validation.json",
+  "clinical_patient_registry_independently_verified": false
+}

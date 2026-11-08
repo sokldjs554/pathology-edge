@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PathologyEdge · 실제 IHC 세포 분류</title>
+    <meta
+      name="description"
+      content="실제 Patherea Ki67 IHC 영상과 정답 중심점에서 CPU 세포 분류의 정답·오류를 검토하는 연구용 작업대"
+    />
+    <link rel="stylesheet" href="ihc.css" />
+  </head>
+  <body data-phase="loading" class="results-hidden cases-hidden">
+    <header class="app-header">
+      <a class="brand" href="wsi.html">▦ Pathology<span>Edge</span></a>
+      <nav aria-label="작업 화면">
+        <a href="wsi.html">WSI 슬라이드</a
+        ><a href="index.html">정답 경계 실험</a
+        ><a href="ihc.html" aria-current="page">IHC 세포 분류</a>
+      </nav>
+      <span class="research">연구·교육용</span>
+    </header>
+    <div class="study-bar">
+      <strong>Patherea · 유방암 Ki67 IHC</strong
+      ><span>정답 중심점 조건의 분류</span>
+      <div class="bar-actions">
+        <button
+          id="toggleCases"
+          aria-expanded="false"
+          aria-controls="examplePanel"
+        >
+          사례 목록</button
+        ><button
+          id="toggleResults"
+          aria-expanded="false"
+          aria-controls="inspector"
+        >
+          결과·출처
+        </button>
+      </div>
+    </div>
+    <main class="workbench">
+      <aside
+        id="examplePanel"
+        class="examples-panel"
+        aria-label="실제 세포 사례 목록"
+      >
+        <div class="side-title">
+          실제 표시 사례 <span id="caseCount">—</span>
+        </div>
+        <p class="small-note side-note">
+          정답과 오류를 같은 입력 조건에서 확인합니다.
+        </p>
+        <div id="exampleList"></div>
+        <p id="sampleNote" class="small-note side-note">
+          저장된 실제 사례를 읽는 중입니다.
+        </p>
+        <p class="small-note side-note">
+          표시 사례는 전체 테스트 성능을 대표하지 않습니다.
+        </p>
+      </aside>
+      <section class="workspace" aria-label="IHC 영상과 선택 세포">
+        <div class="guide">
+          <p>
+            <strong>세포의 실제 염색과 정답·예측을 함께 확인합니다.</strong>
+          </p>
+          <span id="scopeNote"
+            >정답 중심점이 입력됩니다. 자동 세포 검출·임상 Ki67 분석이
+            아닙니다.</span
+          >
+        </div>
+        <div class="toolbar">
+          <div class="segments" aria-label="사례 종류">
+            <button id="filterWrong" aria-pressed="true" disabled>
+              실패 사례</button
+            ><button id="filterCorrect" aria-pressed="false" disabled>
+              정답 사례
+            </button>
+          </div>
+          <label class="select-label"
+            ><span class="sr-only">표시할 실제 세포</span
+            ><select id="exampleSelect" aria-label="표시할 실제 세포" disabled>
+              <option>사례 로딩 중</option>
+            </select></label
+          >
+          <div class="step-buttons">
+            <button id="prevExample" aria-label="이전 사례" disabled>‹</button
+            ><button id="nextExample" aria-label="다음 사례" disabled>›</button>
+          </div>
+          <label class="marker-toggle"
+            ><input id="showPoint" type="checkbox" checked disabled />정답
+            중심·crop</label
+          >
+        </div>
+        <div id="imageStage" class="image-stage">
+          <div class="image-heading">
+            <strong id="activeCase">실제 IHC 영상</strong
+            ><span id="sourceMeta">원본 224 × 224 px · 화면 맞춤</span>
+          </div>
+          <div class="image-viewport">
+            <div id="imagePlane" class="image-plane" hidden>
+              <img id="sourceImage" alt="선택 세포가 있는 실제 IHC 원본 패치" />
+              <svg
+                id="sourceOverlay"
+                viewBox="0 0 224 224"
+                preserveAspectRatio="xMidYMid meet"
+                aria-label="정답 중심점과 표시용 crop 범위"
+                hidden
+              >
+                <rect
+                  id="cropOutline"
+                  class="crop-outline"
+                  x="0"
+                  y="0"
+                  width="48"
+                  height="48"
+                />
+                <circle id="gtHalo" class="point-halo" r="4.5" />
+                <circle id="gtPoint" class="gt-point" r="3" />
+                <path id="gtCross" class="point-cross" />
+              </svg>
+            </div>
+            <div
+              id="stageMessage"
+              class="stage-message"
+              role="status"
+              aria-live="polite"
+            >
+              <strong id="stageTitle">실제 결과를 읽는 중</strong>
+              <p id="stageDetail">저장된 분류와 원영상의 출처를 확인합니다.</p>
+              <button id="retryLoad" hidden>다시 불러오기</button>
+            </div>
+          </div>
+          <div class="position-bar">
+            <span id="pointPosition">GT 좌표 —</span
+            ><span>파랑: 입력 중심 · 노란 상자: 48px crop, 세포 경계 아님</span>
+          </div>
+        </div>
+        <section class="selection-strip" aria-label="선택 세포의 정답과 예측">
+          <div class="crop-frame">
+            <img
+              id="cropImage"
+              alt="선택한 정답 중심 주변의 실제 48픽셀 crop"
+              hidden
+            /><svg
+              id="cropOverlay"
+              viewBox="0 0 48 48"
+              aria-label="crop 안의 정답 중심점"
+              hidden
+            >
+              <circle id="cropHalo" class="point-halo" r="2.5" />
+              <circle id="cropPoint" class="gt-point" r="1.4" /></svg
+            ><span id="cropPlaceholder">48px crop</span>
+          </div>
+          <div class="selection-text">
+            <div class="selected-heading">
+              <span id="verdict" class="verdict">선택 대기</span
+              ><span id="selectedId"></span>
+            </div>
+            <div class="classification-line">
+              <span>정답</span><strong id="truthLabel">—</strong>
+            </div>
+            <div class="classification-line">
+              <span>예측</span><strong id="predictionLabel">—</strong>
+            </div>
+            <div class="model-line">
+              <span>예측 점수 <strong id="selectedScore">—</strong></span
+              ><span>정답 중심점을 입력한 분류</span>
+            </div>
+          </div>
+        </section>
+      </section>
+      <aside id="inspector" class="inspector" aria-label="IHC 실험 결과와 출처">
+        <div class="side-title">
+          결과·출처
+          <button id="closeResults" aria-label="결과 패널 닫기">×</button>
+        </div>
+        <div class="inspector-scroll">
+          <section>
+            <h1>전체 테스트의 분류 성능</h1>
+            <div class="metric-pair">
+              <div>
+                <span>Macro-F1</span><strong id="testMacroF1">—</strong>
+              </div>
+              <div>
+                <span>Accuracy</span><strong id="testAccuracy">—</strong>
+              </div>
+            </div>
+            <p id="testCount" class="small-note">고정 테스트 정보를 읽는 중</p>
+            <p class="notice">
+              중심 위치는 정답으로 주어졌습니다. 누락·가짜 검출과 핵 경계 분할은
+              평가하지 않았습니다.
+            </p>
+          </section>
+          <section>
+            <h2>선택 세포의 네 클래스 점수</h2>
+            <p id="caseExplanation" class="small-note">
+              실제 사례를 선택하면 정답과 예측의 차이를 표시합니다.
+            </p>
+            <div id="classScores"></div>
+            <p id="scoreDisclaimer" class="small-note">
+              확률 보정을 하지 않은 모델 점수입니다. 임상 확신도나 검사 정확도가
+              아닙니다.
+            </p>
+          </section>
+          <section>
+            <h2>클래스별 테스트 성능</h2>
+            <table class="metrics-table">
+              <caption class="sr-only">
+                네 클래스의 precision, recall, F1
+              </caption>
+              <thead>
+                <tr>
+                  <th>정답 유형</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  <th>F1</th>
+                </tr>
+              </thead>
+              <tbody id="classMetrics"></tbody>
+            </table>
+            <p class="small-note">
+              Macro-F1은 네 클래스 F1의 동일 가중 평균입니다. 양성 비종양 세포의
+              낮은 점수도 포함합니다.
+            </p>
+            <details id="confusionDetails">
+              <summary>전체 혼동행렬 · 정답 행 / 예측 열</summary>
+              <div class="table-scroll">
+                <table class="confusion-table">
+                  <thead>
+                    <tr>
+                      <th>정답 ↓</th>
+                      <th>종양 +</th>
+                      <th>종양 −</th>
+                      <th>기타 +</th>
+                      <th>기타 −</th>
+                    </tr>
+                  </thead>
+                  <tbody id="confusionRows"></tbody>
+                </table>
+              </div>
+              <p class="small-note">
+                + / −는 Ki67 양성 / 음성, 기타는 비종양 세포입니다.
+              </p>
+            </details>
+          </section>
+          <section>
+            <h2>분리·모델 선택</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>분리</th>
+                  <th>Case</th>
+                  <th>패치</th>
+                  <th>세포</th>
+                </tr>
+              </thead>
+              <tbody id="splitRows"></tbody>
+            </table>
+            <p id="selectionMethod" class="small-note"></p>
+            <p id="patientLimit" class="small-note">
+              저자 제공 환자별 fold의 case ID 분리는 검사했습니다. 별도 환자
+              명부를 독립 검증한 것은 아닙니다.
+            </p>
+            <details>
+              <summary>특징·모델과 측정 조건</summary>
+              <p id="modelMethod"></p>
+              <p id="runtimeText"></p>
+              <p class="small-note">
+                단일 CPU 실행 관찰값입니다. 영상 읽기·특징 계산을 제외한 모델
+                시간은 WSI 처리 시간이 아닙니다.
+              </p>
+            </details>
+          </section>
+          <section>
+            <h2>정답의 범위와 데이터 차이</h2>
+            <p id="statisticsDiscrepancy" class="notice"></p>
+            <p class="small-note">
+              normal_cell은 실제 라벨 0개로 제외했습니다. 점 라벨만 있으므로
+              분할 Dice·AJI는 보고하지 않습니다.
+            </p>
+            <details>
+              <summary>주석 세포 비율의 부속 결과</summary>
+              <p id="ratioText"></p>
+              <p class="small-note">
+                정답 중심의 주석 세포만 사용한 종양 양성률입니다. 검출 오류·전체
+                슬라이드·임상 Ki67 지수의 평가가 아닙니다.
+              </p>
+            </details>
+          </section>
+          <section>
+            <h2>원자료·모델 출처</h2>
+            <p>
+              <a
+                id="datasetLink"
+                href="https://huggingface.co/datasets/ds2268/patherea"
+                target="_blank"
+                rel="noreferrer"
+                >Patherea Breast-P1 원자료 ↗</a
+              >
+            </p>
+            <p id="authors" class="small-note"></p>
+            <p>
+              <a
+                id="licenseLink"
+                href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noreferrer"
+                >CC BY-NC 4.0</a
+              >
+              · 비상업 연구·교육
+            </p>
+            <p class="small-note">
+              원영상의 실제 픽셀과 48px crop입니다. 화면에 정답 중심·crop 범위만
+              덧씌웁니다. 전체 원영상 ZIP은 배포하지 않습니다.
+            </p>
+            <div class="source-links">
+              <a href="ihc/results.json" download>실제 결과·분리·조건 JSON ↓</a
+              ><a id="modelLink" href="ihc/model.json" download
+                >학습 계수·정규화 JSON ↓</a
+              ><a href="ihc/attribution.json" download>출처·이용 조건 JSON ↓</a
+              ><a
+                href="https://github.com/sokldjs554/pathology-edge/blob/main/docs/IHC_EXPERIMENT.md"
+                target="_blank"
+                rel="noreferrer"
+                >실험 방법·오류 분석 ↗</a
+              >
+            </div>
+            <details>
+              <summary>모델 SHA-256</summary>
+              <p id="modelHash" class="hash"></p>
+            </details>
+            <p class="small-note">
+              AIVIS와 무관한 독립 연구·교육 프로젝트입니다. 임상 진단·치료
+              판단용이 아닙니다.
+            </p>
+          </section>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <span id="status" role="status" aria-live="polite"
+        >저장된 IHC 결과를 불러오는 중</span
+      ><span>GT 중심 분류 · 임상 분석 아님</span>
+    </footer>
+    <script src="ihc.js" defer></script>
+  </body>
+</html>

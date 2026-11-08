@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-11-08T07:33:20.888437+00:00",
+  "source_files_matching_pinned_archive": 7980,
+  "test_predictions": 6419,
+  "confusion_matrix_reconstructed": true,
+  "macro_f1_reconstructed": true,
+  "published_examples": 16,
+  "example_points_confirmed_in_original_masks": 16,
+  "source_and_crop_pixels_exact": true,
+  "json_model_example_probability_max_abs_error": 2.0539125955565396e-15,
+  "example_distinct_cases_by_kind": {
+    "correct": 8,
+    "incorrect": 8
+  },
+  "public_total_bytes": 1442149,
+  "model_sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+  "source_sha256": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+  "tests_sha256": "6141019b6ed968292d4895cf0497ea938fbb00f2a2ef6d23781fa4577f313002",
+  "test_evaluation_count": 1,
+  "post_evaluation_refit_or_tuning": false
+}

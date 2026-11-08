@@ -916,6 +916,8 @@ async function init() {
         : data.samples[0].id,
     );
     await caseTask;
+    const requestedCase = new URLSearchParams(location.search).get('case');
+    if (requestedCase) await Review.open(requestedCase);
   } catch (error) {
     if (ticket !== state.request) return;
     setPhase(

@@ -1,0 +1,10 @@
+{
+  "authors": "Dejan Štepec, Maja Jerše, Snežana Đokić, Jera Jeruc, Nina Zidar, Danijel Skočaj",
+  "dataset": "Patherea Breast-P1 224 v1.1",
+  "source": "https://huggingface.co/datasets/ds2268/patherea",
+  "paper": "https://doi.org/10.1016/j.media.2025.103868",
+  "license": "CC BY-NC 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "changes": "Original 224px RGB patches re-encoded losslessly; 48px local crops and JSON coordinates exported. No generated or recolored tissue.",
+  "use": "Independent noncommercial research/education; no AIVIS affiliation"
+}

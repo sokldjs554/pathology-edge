@@ -1,0 +1,272 @@
+{
+  "checked_utc": "2026-11-08T07:22:00.780389+00:00",
+  "zip_path": "/workspace/work/aivis-ihc/Patherea_Breast_P1_224_v1.1.zip",
+  "zip_sha256": "1194dbfb145ca3aee1a27fcff9d92799d73d34b5da972118424a7b67047034e7",
+  "zip_bytes": 134068022,
+  "zip_crc_error": null,
+  "image_count": 1330,
+  "label_count": 6650,
+  "case_count": 29,
+  "cases": [
+    "case_0001",
+    "case_0002",
+    "case_0003",
+    "case_0004",
+    "case_0005",
+    "case_0006",
+    "case_0007",
+    "case_0008",
+    "case_0009",
+    "case_0010",
+    "case_0011",
+    "case_0012",
+    "case_0013",
+    "case_0014",
+    "case_0015",
+    "case_0016",
+    "case_0017",
+    "case_0018",
+    "case_0019",
+    "case_0020",
+    "case_0021",
+    "case_0022",
+    "case_0023",
+    "case_0024",
+    "case_0025",
+    "case_0026",
+    "case_0027",
+    "case_0028",
+    "case_0029"
+  ],
+  "image_shapes": {
+    "(224, 224, 3)": 1330
+  },
+  "image_modes": {
+    "RGB": 1330
+  },
+  "mask_values": [
+    0,
+    255
+  ],
+  "actual_counts": {
+    "positive_tumor_cell": 5556,
+    "negative_tumor_cell": 9530,
+    "normal_cell": 0,
+    "others_positive": 465,
+    "others_negative": 4421
+  },
+  "global_stats_txt": "Global cell stats:\n\npositive_tumor_cell: 9665\nnegative_tumor_cell: 17187\nnormal_cell: 0\nothers_positive: 908\nothers_negative: 8913\n",
+  "folds": {
+    "1": {
+      "train": {
+        "images": 923,
+        "unique_images": 923,
+        "cases": [
+          "case_0001",
+          "case_0002",
+          "case_0003",
+          "case_0005",
+          "case_0007",
+          "case_0010",
+          "case_0012",
+          "case_0013",
+          "case_0016",
+          "case_0017",
+          "case_0018",
+          "case_0019",
+          "case_0021",
+          "case_0022",
+          "case_0025",
+          "case_0026",
+          "case_0027",
+          "case_0028",
+          "case_0029"
+        ],
+        "case_count": 19,
+        "counts": {
+          "positive_tumor_cell": 3601,
+          "negative_tumor_cell": 6726,
+          "normal_cell": 0,
+          "others_positive": 305,
+          "others_negative": 2921
+        },
+        "missing_images": [],
+        "list_sha256": "5693ed7f7ed9c2646a241e7ee30bf41737450f9840a6535737bacf72c023ac99"
+      },
+      "test": {
+        "images": 407,
+        "unique_images": 407,
+        "cases": [
+          "case_0004",
+          "case_0006",
+          "case_0008",
+          "case_0009",
+          "case_0011",
+          "case_0014",
+          "case_0015",
+          "case_0020",
+          "case_0023",
+          "case_0024"
+        ],
+        "case_count": 10,
+        "counts": {
+          "positive_tumor_cell": 1955,
+          "negative_tumor_cell": 2804,
+          "normal_cell": 0,
+          "others_positive": 160,
+          "others_negative": 1500
+        },
+        "missing_images": [],
+        "list_sha256": "8aaaff720ac1be54b07b824626ef9ee547c7d1f79a9baa14ce37e038e9b633f2"
+      },
+      "overlap_images": [],
+      "overlap_cases": [],
+      "uncovered_images": [],
+      "cross_split_pixel_duplicates": []
+    },
+    "2": {
+      "train": {
+        "images": 854,
+        "unique_images": 854,
+        "cases": [
+          "case_0004",
+          "case_0005",
+          "case_0006",
+          "case_0008",
+          "case_0009",
+          "case_0011",
+          "case_0012",
+          "case_0014",
+          "case_0015",
+          "case_0016",
+          "case_0017",
+          "case_0019",
+          "case_0020",
+          "case_0021",
+          "case_0023",
+          "case_0024",
+          "case_0025",
+          "case_0026",
+          "case_0029"
+        ],
+        "case_count": 19,
+        "counts": {
+          "positive_tumor_cell": 3880,
+          "negative_tumor_cell": 5853,
+          "normal_cell": 0,
+          "others_positive": 290,
+          "others_negative": 3096
+        },
+        "missing_images": [],
+        "list_sha256": "7d7d92f185afb5a804722fedc9c63b5b2a6904fcfa3ff390f793b9da19c42521"
+      },
+      "test": {
+        "images": 476,
+        "unique_images": 476,
+        "cases": [
+          "case_0001",
+          "case_0002",
+          "case_0003",
+          "case_0007",
+          "case_0010",
+          "case_0013",
+          "case_0018",
+          "case_0022",
+          "case_0027",
+          "case_0028"
+        ],
+        "case_count": 10,
+        "counts": {
+          "positive_tumor_cell": 1676,
+          "negative_tumor_cell": 3677,
+          "normal_cell": 0,
+          "others_positive": 175,
+          "others_negative": 1325
+        },
+        "missing_images": [],
+        "list_sha256": "f3807d577f8fc5f8c8eff767125c207d018e0b78aafeae50f6a9778f44d8421e"
+      },
+      "overlap_images": [],
+      "overlap_cases": [],
+      "uncovered_images": [],
+      "cross_split_pixel_duplicates": []
+    },
+    "3": {
+      "train": {
+        "images": 883,
+        "unique_images": 883,
+        "cases": [
+          "case_0001",
+          "case_0002",
+          "case_0003",
+          "case_0004",
+          "case_0006",
+          "case_0007",
+          "case_0008",
+          "case_0009",
+          "case_0010",
+          "case_0011",
+          "case_0013",
+          "case_0014",
+          "case_0015",
+          "case_0018",
+          "case_0020",
+          "case_0022",
+          "case_0023",
+          "case_0024",
+          "case_0027",
+          "case_0028"
+        ],
+        "case_count": 20,
+        "counts": {
+          "positive_tumor_cell": 3631,
+          "negative_tumor_cell": 6481,
+          "normal_cell": 0,
+          "others_positive": 335,
+          "others_negative": 2825
+        },
+        "missing_images": [],
+        "list_sha256": "ab8cf3e90b4b4bc0fb55b39bd1991880f5190723a4b14d3d0a14b65e08e8c147"
+      },
+      "test": {
+        "images": 447,
+        "unique_images": 447,
+        "cases": [
+          "case_0005",
+          "case_0012",
+          "case_0016",
+          "case_0017",
+          "case_0019",
+          "case_0021",
+          "case_0025",
+          "case_0026",
+          "case_0029"
+        ],
+        "case_count": 9,
+        "counts": {
+          "positive_tumor_cell": 1925,
+          "negative_tumor_cell": 3049,
+          "normal_cell": 0,
+          "others_positive": 130,
+          "others_negative": 1596
+        },
+        "missing_images": [],
+        "list_sha256": "c65d8ae6c49b29a29b5fd9a0339bee274bb31e27d1202a7d628e8875aedffbdd"
+      },
+      "overlap_images": [],
+      "overlap_cases": [],
+      "uncovered_images": [],
+      "cross_split_pixel_duplicates": []
+    }
+  },
+  "test_folds_cover_all": true,
+  "test_fold_pairwise_overlaps": {
+    "1-2": 0,
+    "1-3": 0,
+    "2-3": 0
+  },
+  "duplicate_image_bytes": [],
+  "duplicate_image_pixels": [],
+  "conflicting_class_points": [],
+  "errors": []
+}

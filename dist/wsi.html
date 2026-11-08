@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PathologyEdge · 실제 슬라이드 검토</title>
+    <meta
+      name="description"
+      content="실제 CMU-1 슬라이드의 전체 스캔에서 분석 ROI와 패치·후보의 출처를 추적하는 연구용 작업대"
+    />
+    <link rel="stylesheet" href="wsi.css" />
+  </head>
+  <body data-phase="loading">
+    <header class="app-header">
+      <a class="brand" href="wsi.html">▦ Pathology<span>Edge</span></a>
+      <nav aria-label="작업 화면">
+        <a href="wsi.html" aria-current="page">WSI 슬라이드</a
+        ><a href="index.html">정답 경계 실험</a
+        ><a href="ihc.html">IHC 세포 분류</a>
+      </nav>
+      <span class="research">연구·교육용</span><button id="help">안내</button>
+    </header>
+    <div class="study-bar">
+      <strong id="slideName">슬라이드 목록 로딩</strong
+      ><span id="slideMeta"></span>
+      <div class="bar-actions">
+        <button id="toggleRegions" aria-expanded="true">영역 목록</button
+        ><button id="toggleResults" aria-expanded="true">결과·출처</button>
+      </div>
+    </div>
+    <main id="workbench" class="workbench">
+      <aside id="regions" class="regions" aria-label="슬라이드와 분석 영역">
+        <div class="side-title">실제 스캔 전체</div>
+        <button id="slideOverview" class="slide-card">
+          <img id="slideThumb" alt="CMU-1 스캔 전체 개요" /><span
+            >CMU-1 · 전체로 이동</span
+          >
+        </button>
+        <div class="side-title">저장된 분석 ROI</div>
+        <p class="small-note">
+          ROI = 관심 영역.<br />아래 영역만 모델을 실행했습니다.
+        </p>
+        <div id="roiList"></div>
+        <p id="coverageSummary" class="small-note"></p>
+        <a class="side-link" href="index.html">정답이 있는 TNBC 실험 ↗</a>
+      </aside>
+      <section class="workspace" aria-label="WSI 영상 작업대">
+        <div class="guide">
+          <p>
+            <strong
+              >조직 전체에서 세부 영역까지 확대하고, 패치 결과의 출처를
+              추적합니다.</strong
+            >
+          </p>
+          <span>① 슬라이드 탐색 → ② 분석 ROI 선택 → ③ 경계·병합 근거 확인</span
+          ><span class="stored-label">저장 결과 열람 · 새 추론 아님</span>
+        </div>
+        <div class="toolbar">
+          <div class="segments">
+            <button id="modeExplore" aria-pressed="true">슬라이드 탐색</button
+            ><button id="modeCompare" aria-pressed="false">A/B 경계 비교</button
+            ><button id="modeTrace" aria-pressed="false">중복 출처</button>
+          </div>
+          <div class="zoom-tools">
+            <button id="zoomOut" aria-label="축소">−</button
+            ><output id="zoomReadout">—</output
+            ><button id="zoomIn" aria-label="확대">+</button
+            ><button id="home">전체 맞춤</button
+            ><button id="native">1:1</button>
+          </div>
+          <button id="jumpDifference" disabled>차이가 큰 경계</button>
+        </div>
+        <div class="layers">
+          <label
+            ><input id="showBounds" type="checkbox" checked />분석 영역</label
+          ><label
+            ><input id="showMask" type="checkbox" checked /><i class="mask"></i
+            >핵 예측</label
+          ><label
+            ><input id="showGrid" type="checkbox" checked />선택 ROI 경계</label
+          ><label><input id="showCandidates" type="checkbox" />후보</label
+          ><label><input id="showDifference" type="checkbox" />예측 차이</label
+          ><label class="opacity"
+            >불투명도
+            <input
+              id="overlayOpacity"
+              type="range"
+              min="0"
+              max="80"
+              value="30"
+              aria-label="예측 불투명도"
+          /></label>
+        </div>
+        <div class="context">
+          <span id="viewContext">실제 원본의 확대 타일을 불러오는 중</span
+          ><span id="centerCoverage">분석 범위 확인 중</span>
+        </div>
+        <div class="mobile-switch segments">
+          <button id="mobileA" aria-pressed="false">A 무겹침</button
+          ><button id="mobileB" aria-pressed="true">B 겹침</button>
+        </div>
+        <div class="stage" id="stage">
+          <div id="panes" class="panes explore">
+            <article id="paneA" class="pane">
+              <div class="pane-heading">
+                <b>A</b><strong id="titleA">겹침 없음</strong
+                ><span id="metaA">128px 패치 / stride 128</span>
+              </div>
+              <div class="viewport-frame">
+                <div
+                  id="viewerA"
+                  class="viewer"
+                  tabindex="0"
+                  aria-label="A 실제 WSI, 드래그·스크롤 이동, Ctrl/Command 스크롤 확대"
+                ></div>
+                <svg
+                  id="overlayA"
+                  class="overlay"
+                  aria-label="A 분석 좌표와 후보"
+                ></svg>
+                <div class="scale">
+                  <span id="scaleA"></span><i id="scaleBarA"></i>
+                </div>
+              </div>
+            </article>
+            <article id="paneB" class="pane">
+              <div class="pane-heading">
+                <b>B</b><strong id="titleB">CMU-1 실제 스캔</strong
+                ><span id="metaB">미분석 영역에는 예측 없음</span>
+              </div>
+              <div class="viewport-frame">
+                <div
+                  id="viewerB"
+                  class="viewer"
+                  tabindex="0"
+                  aria-label="B 실제 WSI, 드래그·스크롤 이동, Ctrl/Command 스크롤 확대"
+                ></div>
+                <svg
+                  id="overlayB"
+                  class="overlay"
+                  aria-label="B 분석 좌표와 후보"
+                ></svg>
+                <div class="scale">
+                  <span id="scaleB"></span><i id="scaleBarB"></i>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div id="stageMessage" class="stage-message" role="status">
+            <strong id="stageTitle">슬라이드 열기</strong>
+            <p id="stageDetail">영상의 필요한 확대 타일만 요청합니다.</p>
+          </div>
+          <div id="tileWarning" class="tile-warning" hidden role="alert">
+            <span id="tileWarningText"></span
+            ><button id="retryTiles">타일 다시 불러오기</button>
+          </div>
+        </div>
+        <div class="position-bar">
+          <span id="position">level-0 좌표 —</span
+          ><span>드래그·스크롤 이동 · Ctrl/⌘+스크롤 확대</span>
+        </div>
+      </section>
+      <aside id="inspector" class="inspector" aria-label="분석 결과와 출처">
+        <div class="side-title">
+          결과·출처
+          <button id="closeResults" aria-label="결과 패널 닫기">×</button>
+        </div>
+        <div class="inspector-scroll">
+          <section>
+            <h1 id="activeRegion">스캔 전체 탐색</h1>
+            <p id="regionDescription">
+              왼쪽 ROI를 선택하면 실제 분석한 영역으로 이동합니다.
+            </p>
+            <p class="notice">
+              이 WSI에는 핵 정답이 없습니다. 예측 차이는 정확도 개선을 뜻하지
+              않습니다.
+            </p>
+          </section>
+          <section id="regionResult" hidden>
+            <h2>선택 ROI 처리 기록</h2>
+            <p id="regionCoordinates" class="small-note"></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>1024² ROI</th>
+                  <th>A 무겹침</th>
+                  <th>B 겹침</th>
+                </tr>
+              </thead>
+              <tbody id="roiMetrics"></tbody>
+            </table>
+            <p id="regionDifference" class="small-note"></p>
+            <details>
+              <summary>시간·메모리 측정 범위</summary>
+              <p id="timingScope"></p>
+              <p>전체 슬라이드 추론 시간이나 브라우저 로딩 시간이 아닙니다.</p>
+            </details>
+            <button id="traceFirst" class="wide">
+              실제 중복 후보 한 쌍 추적 →
+            </button>
+          </section>
+          <section id="differenceDetail" hidden>
+            <h2>선택한 경계의 예측 차이</h2>
+            <p id="differenceCoordinates"></p>
+            <p id="differenceCounts"></p>
+            <p class="small-note">
+              <span class="added">주황: B에서 추가된 핵 예측</span><br /><span
+                class="removed"
+                >파랑: B에서 사라진 핵 예측</span
+              ><br />정답 여부를 나타내는 색이 아닙니다. 흰 상자는 양쪽의 같은
+              64px 영역입니다.
+            </p>
+          </section>
+          <section id="traceDetail" hidden>
+            <h2>후보 → 패치 → 병합</h2>
+            <label for="pairSelect">저장된 억제·유지 대응</label
+            ><select id="pairSelect">
+              <option value="">후보 쌍 선택</option>
+            </select>
+            <div id="candidateInfo"></div>
+            <p class="small-note">
+              박스는 연결 성분 후보입니다. 서로 다른 실제 핵이 잘못 병합됐을
+              가능성은 정답 없이 판정할 수 없습니다.
+            </p>
+          </section>
+          <section>
+            <h2>정답으로 확인한 개선·악화</h2>
+            <p class="small-note">
+              아래는 별도 TNBC PNG 데이터입니다. 이 슬라이드 위에 덧씌우지
+              않습니다.
+            </p>
+            <div class="reference-links">
+              <a href="index.html?sample=11_1&case=11_1-improved"
+                >개선 사례 11_1 ↗</a
+              ><a href="index.html?sample=10_3&case=10_3-worsened"
+                >악화 사례 10_3 ↗</a
+              >
+            </div>
+          </section>
+          <section>
+            <details open>
+              <summary>슬라이드·모델·분석 범위</summary>
+              <div id="provenance"></div>
+              <p class="small-note">
+                CMU의 조직형·질환·염색명은 배포 정보로 확정하지 못했습니다. H&E
+                TNBC에서 학습한 모델의 탐색적 적용이며 외부 정확도·임상 검증이
+                아닙니다.
+              </p>
+              <a href="wsi.json" download>좌표·원본·실행 기록 JSON ↓</a>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>용어와 이용 조건</summary>
+              <p>
+                <b>WSI</b>는 다중 해상도로 저장된 큰 슬라이드 영상입니다.
+                <b>level-0</b>는 제공 원본의 최고 해상도 좌표입니다.
+              </p>
+              <p>
+                <b>stride</b>는 다음 128px 조각까지의 이동 간격입니다. 64px이면
+                절반이 겹칩니다. 뷰어의 전송 타일과 모델 패치는 다릅니다.
+              </p>
+              <p>
+                <b>후보·NMS</b>: 패치별 연결 성분 중 위치·상자가 겹치는 후보를
+                우선순위에 따라 억제합니다. 검증된 실제 세포 수가 아닙니다.
+              </p>
+              <p>
+                원본 CMU-1 JP2K: CC0. OpenSlide 공식 공개 타일은 별도 서버에서
+                로딩되며 가용성을 보장할 수 없습니다. 로딩 실패 시 화면 안내를
+                확인하세요.
+              </p>
+              <p>
+                연구·교육용. WSI 전체 추론·임상 검증·이 슬라이드의 Ki-67
+                정량화는 수행하지 않았습니다.
+              </p>
+              <a
+                href="https://github.com/sokldjs554/pathology-edge/blob/main/docs/WSI_LANDSCAPE.md"
+                target="_blank"
+                rel="noreferrer"
+                >도구·논문 비교와 설계 근거 ↗</a
+              >
+            </details>
+          </section>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <span id="status" role="status" aria-live="polite"
+        >결과 목록을 읽는 중</span
+      ><span>표시 범위 ≠ 모델 분석 범위 · 임상 진단용 아님</span>
+    </footer>
+    <dialog id="helpDialog">
+      <div class="dialog-head">
+        <h2>전체 슬라이드에서 결과의 출처까지</h2>
+        <button id="closeHelp" aria-label="안내 닫기">×</button>
+      </div>
+      <ol>
+        <li>
+          전체 스캔에서 드래그·스크롤로 이동하고 +/− 또는 Ctrl/⌘+스크롤로
+          확대합니다.
+        </li>
+        <li>
+          왼쪽 R1–R3 중 하나를 선택하면 분석한 1024×1024 영역을 같은 좌표의
+          A/B로 비교합니다.
+        </li>
+        <li>
+          ‘차이가 큰 경계’로 실제 변경 픽셀을 봅니다. 정답이 없어 개선/악화로
+          해석하지 않습니다.
+        </li>
+        <li>
+          ‘중복 출처’ 또는 ‘후보’를 선택해 원시 후보와 유지 후보, 원래
+          패치·상자·억제 조건을 추적합니다.
+        </li>
+      </ol>
+      <p>
+        작은 화면에서는 A/B 버튼으로 같은 위치를 바꿔 봅니다. ‘결과·출처’ 패널을
+        열면 수치와 조건을 확인할 수 있습니다.
+      </p>
+      <p>
+        화면 확대는 원본 픽셀 대비 배율입니다. µm 눈금은 파일의 0.499µm/px를
+        이용하며 실제 모니터의 현미경 배율이 아닙니다.
+      </p>
+      <p>
+        새 추론을 실행하는 화면이 아닙니다. 저장된 ROI 밖에는 분석 결과가
+        없습니다. 정답 평가가 있는 TNBC, IHC 분류 실험은 상단의 별도 화면에서
+        확인합니다.
+      </p>
+    </dialog>
+    <script src="vendor/openseadragon.min.js"></script>
+    <script src="wsi.js" defer></script>
+  </body>
+</html>

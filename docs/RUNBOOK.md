@@ -112,6 +112,27 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 이 서버는 저장된 실제 모델 결과를 제공하며 추론 서버가 아닙니다. 외부 사용자 업로드도 없습니다.
 종료는 Terminal에서 Ctrl-C입니다. 클릭 점검 항목은 [REVIEW.md](REVIEW.md)에 있습니다.
 
+새 WSI는 `http://127.0.0.1:8000/wsi.html`, IHC는 `/ihc.html`입니다. WSI 확대 타일만 OpenSlide 외부 공개 서버를 사용하므로 인터넷이 필요합니다. ROI 밖의 영상 탐색은 모델 추론이 아닙니다.
+
+## 추가 WSI / IHC 재현 참고
+
+아래는 이후 재현용이며 지금 할 사용자 과제는 여전히 STEP_01 하나입니다. 전체 프로젝트 설치는 Python 3.11 이상, 실제 검증 환경은 Ubuntu/Python3.12입니다. NumPy만 사용하는 STEP_01의 Python3.10 조건과 구분합니다.
+
+저장소 루트에서, WSI 원본 읽기 기능을 설치하고 원본을 별도 `work/`에 내려받습니다. 약132.6MB이며 CC0입니다.
+
+```bash
+python -m pip install 'openslide-python==1.4.7' 'openslide-bin==4.0.1.2'
+mkdir -p work/wsi
+curl -fL 'https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-JP2K-33005.svs' -o work/wsi/CMU-1-JP2K-33005.svs
+sha256sum work/wsi/CMU-1-JP2K-33005.svs
+PYTHONPATH=src python -m pathology_edge.wsi_export --slide work/wsi/CMU-1-JP2K-33005.svs --output-dist work/wsi-reproduced --artifacts work/wsi-run
+python -m pytest tests/test_wsi_export.py tests/test_ihc_baseline.py -q
+```
+
+SHA는 `9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420`여야 합니다. export는 세1024px ROI에 고정 모델을 실행하며 전체 WSI를 분석하지 않습니다. 기존 결과를 덮어쓰지 않는 출력 경로를 지정했습니다. 마지막 명령은 WSI 좌표·후보 출처·실제 mask와 IHC split/metric/model 검사를 실행합니다. 새 WSI 다운로드 없이도 체크인된 산출물의 검사 자체는 가능합니다.
+
+IHC의 pinned ZIP 준비·실행 명령은 [IHC_EXPERIMENT](IHC_EXPERIMENT.md)에 있습니다. 데이터의 비상업적 이용 조건을 유지하며, 저자 fold1 test를 모델 선택에 사용하지 않습니다. test 결과를 보며 재튜닝한 결과는 같은 고정 test 평가로 보고하지 마세요.
+
 ## 8. Docker / Ubuntu 24.04
 
 ```bash

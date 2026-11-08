@@ -1,0 +1,51 @@
+{
+  "id": "cmu-1-jp2k-33005",
+  "name": "CMU-1-JP2K-33005.svs",
+  "width": 46000,
+  "height": 32893,
+  "mpp_x": 0.499,
+  "mpp_y": 0.499,
+  "objective_power": 20.0,
+  "source_url": "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-JP2K-33005.svs",
+  "source_sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+  "source_bytes": 132565343,
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "credit": "OpenSlide freely distributable test data / Carnegie Mellon University",
+  "rights_source": "https://openslide.cs.cmu.edu/download/openslide-testdata/index.json",
+  "description": "Brightfield; JPEG 2000 export of CMU-1.svs. Source does not document tissue/stain identity.",
+  "thumbnail": "wsi/overview.jpg",
+  "native_levels": [
+    [
+      46000,
+      32893
+    ],
+    [
+      11500,
+      8223
+    ],
+    [
+      2875,
+      2055
+    ]
+  ],
+  "reader": {
+    "openslide": "4.0.1",
+    "openslide_python": "1.4.7",
+    "vendor": "aperio"
+  },
+  "tile_source": {
+    "Image": {
+      "xmlns": "http://schemas.microsoft.com/deepzoom/2008",
+      "Url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/",
+      "Format": "jpeg",
+      "TileSize": 510,
+      "Overlap": 1,
+      "Size": {
+        "Width": 46000,
+        "Height": 32893
+      }
+    }
+  },
+  "thumbnail_sha256": "5eb10fac375f852c9f30fbde3039f37e5032fb5a22ae8d7e326c4f8626f49869"
+}

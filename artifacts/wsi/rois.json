@@ -1,0 +1,50 @@
+[
+  {
+    "id": "R1",
+    "name": "Native ROI R1",
+    "origin": [
+      5888,
+      20608
+    ],
+    "width": 1024,
+    "height": 1024,
+    "image": "wsi/R1.png",
+    "thumbnail": "wsi/R1-thumb.jpg",
+    "thumbnail_sha256": "bbf0f190ce9c73d11339644617bc66bcc7ef5302460e89e023967712a29f6fba",
+    "image_sha256": "fe9aae2ba037beb47d7aa74e058b0660ab86ad434d7f6676f7fe258fe9f8a7f3",
+    "image_pixel_sha256": "10f9d7a4d8dce0f29881887196e181ae26f7058761de210320d4b63335f035be",
+    "preparation_read_seconds": 0.06671447299959254
+  },
+  {
+    "id": "R2",
+    "name": "Native ROI R2",
+    "origin": [
+      29440,
+      9728
+    ],
+    "width": 1024,
+    "height": 1024,
+    "image": "wsi/R2.png",
+    "thumbnail": "wsi/R2-thumb.jpg",
+    "thumbnail_sha256": "0130fbbb338111a748d39e79fd6244b2cca0da6fe9d8bb2d1fe604699dc39b97",
+    "image_sha256": "404f05f24fb421ce328141bc9c141df7fa53b24cff8413e73ea90ca3d0ca6441",
+    "image_pixel_sha256": "052e52d0f9853eb42b5e0576efebbcb0e9b30b894279b1412e1fe6eca7d3a459",
+    "preparation_read_seconds": 0.06448869599989848
+  },
+  {
+    "id": "R3",
+    "name": "Native ROI R3",
+    "origin": [
+      15872,
+      26112
+    ],
+    "width": 1024,
+    "height": 1024,
+    "image": "wsi/R3.png",
+    "thumbnail": "wsi/R3-thumb.jpg",
+    "thumbnail_sha256": "b786c59a6bcd9e5dfab1caa06f2e8b7374738349176e05cb1125effbbea90c12",
+    "image_sha256": "b526e9c9a33a3a0e0ed29f8c9d47981ee320fc380ea54c7f49f5bd04ec74c08c",
+    "image_pixel_sha256": "a3024ea8a5e0a03ca5a932271364c17c890a7dae4e782ddd02154633d91e0ea7",
+    "preparation_read_seconds": 0.06421412000054261
+  }
+]
