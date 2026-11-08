@@ -910,13 +910,13 @@ async function init() {
       return;
     }
     const requested = new URLSearchParams(location.search).get('sample');
+    const requestedCase = new URLSearchParams(location.search).get('case');
     await loadSample(
       data.samples.some((s) => s.id === requested)
         ? requested
         : data.samples[0].id,
     );
     await caseTask;
-    const requestedCase = new URLSearchParams(location.search).get('case');
     if (requestedCase) await Review.open(requestedCase);
   } catch (error) {
     if (ticket !== state.request) return;

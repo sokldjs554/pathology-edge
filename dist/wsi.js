@@ -762,10 +762,21 @@ async function init() {
         .map(async (path) => {
           const image = new Image();
           image.src = path;
+          let timer;
           try {
-            await image.decode();
+            await Promise.race([
+              image.decode(),
+              new Promise((_, reject) => {
+                timer = setTimeout(
+                  () => reject(new Error('overlay timeout')),
+                  15000,
+                );
+              }),
+            ]);
           } catch {
             WSI.failedOverlays.add(path);
+          } finally {
+            clearTimeout(timer);
           }
         }),
     );

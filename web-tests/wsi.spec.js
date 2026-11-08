@@ -79,14 +79,14 @@ test('real multilevel tiles load; ROI masks, metrics and native coordinates use 
   await expect(page.locator('#zoomReadout')).toHaveText('100%');
   await expect
     .poll(() =>
-      requests.some((r) => r.status === 200 && r.url().includes('/16/')),
+      requests.some((r) => r.status === 200 && r.url.includes('/16/')),
     )
     .toBe(true);
   expect(
     new Set(
       requests
         .filter((r) => r.status === 200)
-        .map((r) => r.url().match(/slide_files\/(\d+)\//)?.[1]),
+        .map((r) => r.url.match(/slide_files\/(\d+)\//)?.[1]),
     ).size,
   ).toBeGreaterThan(1);
   expect(errors).toEqual([]);
