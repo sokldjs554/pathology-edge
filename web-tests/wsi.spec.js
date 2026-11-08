@@ -4,12 +4,25 @@ const data = JSON.parse(
   fs.readFileSync(new URL('../dist/wsi.json', import.meta.url)),
 );
 fs.mkdirSync('captures', { recursive: true });
-const shot = (page, name) =>
-  page.screenshot({ path: `captures/wsi-${name}.png`, fullPage: true });
+const shot = async (page, name) => {
+  if ((await page.locator('body').getAttribute('data-phase')) === 'ready')
+    await page.waitForFunction(() =>
+      Object.entries(WSI.viewers).every(
+        ([id, v]) =>
+          (id === 'A' && WSI.mode === 'explore') || v.getFullyLoaded(),
+      ),
+    );
+  return page.screenshot({ path: `captures/wsi-${name}.png`, fullPage: true });
+};
 const open = async (page) => {
   await page.goto('/wsi.html');
+  await expect
+    .poll(() => page.locator('body').getAttribute('data-phase'), {
+      timeout: 25000,
+    })
+    .not.toBe('loading');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready', {
-    timeout: 25000,
+    timeout: 5000,
   });
 };
 const roi = async (page, id = 'R1') => {

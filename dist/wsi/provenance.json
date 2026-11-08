@@ -38,9 +38,9 @@
     "tile_source": {
       "Image": {
         "xmlns": "http://schemas.microsoft.com/deepzoom/2008",
-        "Url": "https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/aperio/cmu-1-jp2k-33005/slide_files/",
+        "Url": "wsi/slide_files/",
         "Format": "jpeg",
-        "TileSize": 510,
+        "TileSize": 1022,
         "Overlap": 1,
         "Size": {
           "Width": 46000,
@@ -137,12 +137,24 @@
     "pipeline_sha256": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
     "public_manifest": "wsi/provenance.json",
     "coordinate_note": "Native level-0 ROI translation only; no image resize or general coordinate transform.",
-    "remote_tiles": "Pinned source path and dimensions from official OpenSlide demo; JPEG display re-encoding; external service availability not guaranteed.",
-    "source_identity": "Analysis and remote DZI both reference the CMU-1-JP2K-33005 variant.",
+    "remote_tiles": "Historical external alignment audit only; deployed external S3 tiles returned AccessDenied HTTP 403, so the viewer now uses locally generated static tiles.",
+    "source_identity": "Analysis and self-hosted DZI derive from the same pinned CMU-1-JP2K-33005.svs original.",
     "ground_truth_note": "No nuclear ground truth is supplied with this slide; disagreement is not accuracy or improvement.",
     "inference_pipeline_sha256": "cadf4b4ff687e56a118205fb5c3b57e85206edb8c32e2f5cc3c148e13efd9fe0",
     "case_selection_pipeline_sha256": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
-    "case_refresh_scope": "Saved prediction masks only; no inference rerun; original timing and candidates retained."
+    "case_refresh_scope": "Saved prediction masks only; no inference rerun; original timing and candidates retained.",
+    "tile_hosting": {
+      "mode": "self-hosted static full-resolution DZI",
+      "generator": "scripts/export_wsi_tiles.py",
+      "generator_sha256": "22e6ce3b81181c8b4fa8529fe1d9143ba59d63c62dad42b49cd49dda0d646925",
+      "report": "artifacts/wsi/local-tiles.json",
+      "source_sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+      "data_license": "CC0-1.0",
+      "tile_count": 2071,
+      "total_bytes": 139369111,
+      "requires_external_tile_service": false,
+      "public_url": "wsi/slide_files/"
+    }
   },
   "roi_images": [
     {

@@ -216,3 +216,50 @@ def test_refresh_cases_uses_saved_masks_without_inference_and_minifies_public_js
                               env=dict(os.environ, PYTHONPATH=str(root/'src')))
     assert rejected.returncode != 0 and 'mask SHA-256' in rejected.stderr
     assert (dest/'wsi.json').read_bytes() == before
+
+
+def test_local_dzi_keeps_native_edge_pixels_and_every_level(tmp_path):
+    # Optional library fixture, never an external WSI download. Catches dropping
+    # the last 6px column, overlap off-by-one, missing levels, and wrong public URL.
+    openslide = pytest.importorskip('openslide')
+    import importlib.util
+    root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location('local_dzi_export', root/'scripts/export_wsi_tiles.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    yy, xx = np.mgrid[:1030, :2050]
+    rgb = np.stack([xx % 256, yy % 256, (xx+yy) % 256], axis=-1).astype(np.uint8)
+    with openslide.ImageSlide(Image.fromarray(rgb)) as slide:
+        report = module.generate_pyramid(slide, tmp_path/'tiles', tile_size=1022,
+                                         overlap=1, quality=75, workers=2)
+    assert report['native_dimensions'] == [2050, 1030]
+    assert report['max_level'] == 12
+    assert report['level_count'] == 13
+    assert report['level_tiles'][-1] == [3, 2]
+    assert report['all_tile_dimensions_verified']
+    assert Image.open(tmp_path/'tiles/12/2_1.jpeg').size == (7, 9)
+    assert (tmp_path/'tiles/0/0_0.jpeg').exists()
+    assert len(list((tmp_path/'tiles').rglob('*.jpeg'))) == report['tile_count']
+    assert report['total_bytes'] == sum(p.stat().st_size for p in (tmp_path/'tiles').rglob('*.jpeg'))
+    # Stitch the native tile interiors across the x=1022 seam, discarding overlap.
+    decoded = module.read_native_patch(tmp_path/'tiles', 12, 1022, 1, 1000, 300, 64, 64)
+    assert decoded.shape == (64, 64, 3)
+    error = np.abs(decoded.astype(float)-rgb[300:364, 1000:1064].astype(float)).mean()
+    assert error < 5  # allows JPEG loss; never claims pixel equality
+
+
+def test_local_dzi_corrects_thumbnail_rounding_without_resizing_native(tmp_path):
+    openslide = pytest.importorskip('openslide')
+    import importlib.util
+    root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location('rounded_dzi_export',root/'scripts/export_wsi_tiles.py')
+    module=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    with openslide.ImageSlide(Image.new('RGB',(46,33),(100,40,150))) as slide:
+        report=module.generate_pyramid(slide,tmp_path/'tiles',workers=1)
+    assert Image.open(tmp_path/'tiles/2/0_0.jpeg').size == (3,3)
+    assert Image.open(tmp_path/'tiles/6/0_0.jpeg').size == (46,33)
+    assert report['native_tiles_resized'] == 0
+    correction=next(r for r in report['lower_level_geometry_adjustments'] if r['path']=='2/0_0.jpeg')
+    assert correction['before']==[3,2] and correction['after']==[3,3]
+    assert all(r['level']<report['max_level'] for r in report['lower_level_geometry_adjustments'])

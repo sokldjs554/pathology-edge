@@ -112,7 +112,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 이 서버는 저장된 실제 모델 결과를 제공하며 추론 서버가 아닙니다. 외부 사용자 업로드도 없습니다.
 종료는 Terminal에서 Ctrl-C입니다. 클릭 점검 항목은 [REVIEW.md](REVIEW.md)에 있습니다.
 
-새 WSI는 `http://127.0.0.1:8000/wsi.html`, IHC는 `/ihc.html`입니다. WSI 확대 타일만 OpenSlide 외부 공개 서버를 사용하므로 인터넷이 필요합니다. ROI 밖의 영상 탐색은 모델 추론이 아닙니다.
+새 WSI는 `http://127.0.0.1:8000/wsi.html`, IHC는 `/ihc.html`입니다. WSI 전체 확대 타일도 저장소의 `dist/wsi/slide_files/`에서 제공하므로 이 정적 서버만으로 탐색할 수 있습니다. ROI 밖의 영상 탐색은 모델 추론이 아닙니다.
 
 ## 추가 WSI / IHC 재현 참고
 

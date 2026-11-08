@@ -1,6 +1,6 @@
 # PathologyEdge 실제 WSI 데이터와 타일 뷰어 조사
 
-확인일: 2026-11-08 UTC. 원본 배포자의 데이터별 권리 표시, 원격 파일 헤더, 공식 도구 문서와 실제 overview/macro 이미지를 확인했다. 이 조사에서는 대형 WSI 전체를 내려받지 않았다. 아래 크기는 **압축 원본 바이트 수**이며, DZI 변환 결과의 크기와 다르다.
+확인일: 2026-11-08 UTC. 원본 배포자의 데이터별 권리 표시, 원격 파일 헤더, 공식 도구 문서와 실제 overview/macro 이미지를 확인했다. 초기 자료 조사에서는 대형 WSI 전체를 내려받지 않았다. 이후 구현 단계에서는 선택 원본 전체를 내려받아 checksum을 검증했고, 아래 배포 결정은 그 원본에서 자체 타일을 생성하는 방향으로 갱신했다. 아래 크기는 **압축 원본 바이트 수**이며, DZI 변환 결과의 크기와 다르다.
 
 ## 권고
 
@@ -63,11 +63,11 @@ CMU JP2K, 대동맥 SVS, 두 Huron 파일의 HEAD 요청은 HTTP 200, 위 표와
 
 파일 제한이 문제이면 타일 크기를 조정하거나 용량이 작은 대동맥 파일을 택할 수 있다. 조직 전체 이미지를 작은 JPEG로 축소한 뒤 그것을 확대하는 방식은 native 상세 탐색의 대체가 아니다. JPEG 품질을 조정했다면 re-encoding 사실도 기록한다.
 
-### 검증된 공식 원격 fallback
+### 조사 당시 공식 원격 타일 검증 — 공개 배포에서는 미채택
 
 [공식 demo](https://openslide.org/demo/)가 사용하는 [info.json](https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/info.json)과 [status.json](https://openslide-demo-site.s3.dualstack.us-east-2.amazonaws.com/status.json)을 직접 확인했다. 2026-11-08 확인 시 `dirty=false`, stamp=`88ddfdd0`이며, 임의 Origin 헤더가 있는 GET에 `Access-Control-Allow-Origin: *`를 반환했다. native level 16의 `45_32.jpeg`와 overview level 9의 `0_0.jpeg`도 HTTP 200/CORS `*`였다.
 
-CMU JP2K와 정확히 일치하는 OpenSeadragon source는 다음과 같다.
+다음은 초기 조사에서 확인한 공식 원격 JP2K descriptor의 기록이다. 로컬 브라우저의 200/CORS 확인과 달리 공개 배포에서는 S3가 `AccessDenied` XML/HTTP403을 반환했다. CORS 헤더가 `*`여도 객체 접근이 허용되는 것은 아니다. 접근 제한 우회나 Referrer 변경은 수행하지 않았고, 현재 배포는 이 외부 URL을 사용하지 않는다. 동일 CC0 원본으로 모든 level의 정적 DZI를 생성해 같은 사이트에서 제공한다.
 
 ```json
 {

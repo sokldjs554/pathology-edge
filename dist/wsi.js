@@ -639,7 +639,7 @@ function setupViewer(id) {
   viewer.addHandler('tile-load-failed', () => {
     WSI.tiles.failed++;
     failure(
-      '일부 상세 타일을 불러오지 못했습니다. 외부 OpenSlide 서버·연결 상태를 확인하고 다시 시도하세요.',
+      '일부 영상 타일을 불러오지 못했습니다. 연결 상태를 확인하고 다시 시도하세요.',
     );
   });
   viewer.addHandler('open-failed', (e) =>
@@ -791,7 +791,7 @@ async function init() {
       if (b) selectROI(b.dataset.roi);
     };
     $('provenance').innerHTML =
-      `<p>원본 <a href="${s.source_url}" target="_blank" rel="noreferrer">${escape(s.name)} ↗</a><br>${escape(s.credit)} · <a href="${s.license_url}" target="_blank" rel="noreferrer">${escape(s.license)}</a></p><p>원본 SHA-256</p><div class="hash">${s.source_sha256}</div><p>고정 TinyUNet · TNBC H&E 학습 · threshold 0.5</p><div class="hash">${WSI.data.model.sha256}</div><p>서버 타일은 같은 JP2K 원본에서 생성한 JPEG Q75입니다. 분석은 다운로드한 원본의 native RGB에서 수행했습니다. 뷰어 타일과 손실압축 없는 ROI PNG는 픽셀값이 완전히 같지 않습니다.</p><a href="wsi/provenance.json">실행·출처 기록 ↗</a>`;
+      `<p>원본 <a href="${s.source_url}" target="_blank" rel="noreferrer">${escape(s.name)} ↗</a><br>${escape(s.credit)} · <a href="${s.license_url}" target="_blank" rel="noreferrer">${escape(s.license)}</a></p><p>원본 SHA-256</p><div class="hash">${s.source_sha256}</div><p>고정 TinyUNet · TNBC H&E 학습 · threshold 0.5</p><div class="hash">${WSI.data.model.sha256}</div><p>화면용 타일은 같은 SVS 원본에서 OpenSlide로 직접 생성한 JPEG Q75이며 이 데모에서 제공합니다. 분석은 원본의 native RGB에서 수행했습니다. JPEG 손실압축으로 화면 타일과 ROI PNG의 픽셀값은 완전히 같지 않습니다.</p><a href="wsi/provenance.json">실행·출처 기록 ↗</a>`;
     await Promise.all(
       WSI.data.rois
         .flatMap((r) => [

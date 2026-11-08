@@ -56,7 +56,7 @@ PYTHONPATH=src python -m pathology_edge.wsi_export \
 python -m pytest -q
 ```
 
-- `artifacts/wsi/source.json`: 원본 checksum·native 크기·MPP·OpenSlide 버전·권리와 동일 JP2K 원격 tile source.
+- `artifacts/wsi/source.json`: 원본 checksum·native 크기·MPP·OpenSlide 버전·권리 및 초기 조사 당시의 원격 tile descriptor. 현재 viewer의 자체 생성 타일은 `local-tiles.json`과 공개 `wsi.json`에 기록한다.
 - `artifacts/wsi/protocol.json`: 추론 전 고정 ROI geometry와 pixel hash, 원 모델/threshold, 반복 측정/경계 규칙, 그리고 revision2 case 표시 규칙.
 - `artifacts/wsi/R{1,2,3}_{no_overlap,overlap}.json`: 독립 worker의 실제 raw/kept/suppressed, patch manifest, 모든 반복 시간과 probability hash.
 - `dist/wsi.json`, `artifacts/wsi/experiment.json`: 동일한 완성 실험 schema. `dist/wsi/provenance.json`은 공개 provenance 요약.
@@ -77,7 +77,7 @@ PYTHONPATH=src python -m pathology_edge.wsi_export \
 
 원래 추론 코드 hash는 `provenance.inference_pipeline_sha256`에 보존하고, 갱신 코드 hash는 `case_selection_pipeline_sha256`에 기록했다. public `wsi.json`은 같은 schema의 minified JSON으로 저장하여 8,929,315 → 3,934,683 bytes로 줄였다. 기록 보관용 `artifacts/wsi/experiment.json`은 읽기 쉬운 형태를 유지하며 내용은 동일하다.
 
-## 공식 DZI와 native ROI 좌표 독립 확인
+## 공식 원격 DZI와 native ROI 좌표 독립 확인 — 초기 조사 기록
 
 원본 SHA-256을 다시 확인하고, 3개 ROI의 저장 PNG가 해당 원본을 새 OpenSlide handle에서 읽은 native level0 RGB와 정확히 일치함을 확인했다. 이어 각 ROI의 고정 local 좌표 `(96,96)`, `(448,448)`, `(800,800)`에서 96×96 RGB 영역을 공식 JP2K DZI의 level16과 비교했다. 510px 격자와 내부 타일의 1px overlap을 반영했으며, 타일 경계를 가로지르는 표본은 격자 내부 영역을 이어 붙여 overlap 중복을 피했다. 원격 JPEG 10개가 HTTP200/CORS `*`로 응답했다.
 

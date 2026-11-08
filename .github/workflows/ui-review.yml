@@ -7,6 +7,10 @@ on:
         type: choice
         options: [checkout, production]
         default: checkout
+      grep:
+        description: 'Optional test-title regex; default runs the full suite'
+        type: string
+        default: '.*'
   push:
     paths: ['web-tests/**', 'dist/**', '.github/workflows/ui-review.yml']
 permissions:
@@ -30,9 +34,10 @@ jobs:
       - run: npx playwright install --with-deps ${{ matrix.browser }}
         working-directory: web-tests
       - run: node --test web-tests/viewer-math.test.cjs
-      - run: npx playwright test
+      - run: npx playwright test --grep "$UI_TEST_GREP"
         env:
           UI_BROWSER: ${{ matrix.browser }}
+          UI_TEST_GREP: ${{ inputs.grep || '.*' }}
           UI_BASE_URL: ${{ inputs.target == 'production' && 'https://pathology-edge-lab.ykh13571.chatgpt.site' || '' }}
         working-directory: web-tests
       - uses: actions/upload-artifact@v4
