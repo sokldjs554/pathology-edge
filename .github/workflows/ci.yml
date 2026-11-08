@@ -12,6 +12,7 @@ jobs:
       - run: python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt
       - run: CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .
       - run: python -m pytest -q
+      - run: python scripts/audit_dice.py --output work/dice-audit.json
       - run: node --check dist/app.js
       - run: node --check dist/wsi.js && node --check dist/ihc.js
       - run: python scripts/validate_demo.py

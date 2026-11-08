@@ -3,7 +3,7 @@
 **병리 이미지의 패치 경계가 핵 분할에 미치는 영향을 재현하고 검토하는 연구용 작업대.**
 같은 모델의 무겹침·겹침 처리를 비교하고, 정확도·처리 시간·메모리·실패 사례를 함께 공개합니다.
 
-[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 4단계 실습](docs/STEP_04.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
+[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 5단계 검산](docs/STEP_05.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
@@ -87,7 +87,7 @@ Dice는 이미지별 점수의 평균입니다. 시간은 모델 로딩·디스�
 ```
 
 각 패치는 좌표·유효 영역·level·downsample을 갖습니다. 이번 PNG에는 실제 WSI 원점·배율·MPP가 없으므로
-물리 해상도는 null이고 좌표 단위는 `provided_png_pixels`입니다. 일반 배율·리사이즈 변환은 사용자 과제로 남겨 두었습니다.
+물리 해상도는 null이고 좌표 단위는 `provided_png_pixels`입니다. 일반 배율·리사이즈 변환 함수는 사용자 작성·검토를 마쳤으며, 실제 파이프라인의 일반 배율 어댑터 연결은 후속 작업입니다.
 
 무겹침은 128px/stride128, 겹침은 128px/stride64이며 trailing patch를 흰색으로 padding합니다.
 512px 입력은 각각 16·64개 패치입니다. 픽셀은 Hann 계열 중앙 가중치로 합칩니다.
@@ -143,8 +143,8 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: 2단계 사용자 테스트 검토 후 Codex 호스트에서 **69 passed, 0 skipped**. 완료한 사용자 테스트도 기본 CI에 포함됩니다. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
-- 4단계 준비 후 Codex 호스트 검사: **69 passed, 20 skipped**. 새 Dice 함수의20개 검사는 사용자 작성 대기이며 통과가 아닙니다. [준비 기록](artifacts/learning/step04-preparation.json).
+- 일반 테스트: 4단계 사용자 Dice 검토 후 Codex 호스트에서 **89 passed, 0 skipped**. 완료한 사용자 테스트도 기본 CI에 포함됩니다. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
+- 사용자가 Dice 함수와 **20 passed in 0.01s**를 제출했습니다. Codex 독립20개 통과와 실제 TNBC 점수42개·평균6개의 원 실험/화면 일치를 확인했습니다. [검토 기록](artifacts/learning/step04-review.json), [검산 기록](artifacts/learning/step04-real-dice-audit.json). 준비 당시69통과/20skip은 과거 기록이며 사용자 검산 실행은 예정입니다.
 - 사용자가 NMS 반례 테스트 본문과 **1 passed in 0.01s**를 제출했습니다. 독립 실행에서도1개 통과했고 기본 전체 검사에 편입했습니다. [검토 기록](artifacts/learning/step02-review.json). 준비 당시68통과/1skip은 과거 기록입니다.
 - 사용자가 좌표 함수와 **12 passed in 0.31s**를 제출했습니다. Codex도 같은12개를 통과했고, 이제 기본 전체 테스트에 포함됩니다. [검토·실행 구분](artifacts/learning/step01-review.json).
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
@@ -170,8 +170,8 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 ## 사용자와 Codex의 역할
 
 사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
-Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. [2단계](docs/STEP_02.md)의 반례 해석·테스트 작성·실행 보고도 확인했습니다. [3단계](docs/STEP_03.md)의 과대 집계 설명까지 확인했습니다. 현재는
-[4단계](docs/STEP_04.md)에서 전체·지정 영역의 Dice를 계산하는 함수 하나를 작성합니다.
+Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. [2단계](docs/STEP_02.md)의 반례 해석·테스트 작성·실행 보고, [3단계](docs/STEP_03.md)의 과대 집계 설명, [4단계](docs/STEP_04.md)의 Dice 구현·20개 테스트 통과 보고도 확인했습니다.
+현재는 [5단계](docs/STEP_05.md)에서 본인이 작성한 Dice로 실제 저장 결과를 재계산하는 명령 하나를 실행합니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을

@@ -1,0 +1,95 @@
+{
+  "review_date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "function": "dice_score",
+  "source_file": "src/pathology_edge/learner_metrics.py",
+  "source_sha256": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+  "user_contribution": {
+    "function_body": "Full body submitted in chat",
+    "reported_test_output": "20 passed in 0.01s",
+    "full_machine_log_received": false
+  },
+  "codex_changes": {
+    "submitted_body_changed": false,
+    "normalization": "Removed chat HTML/Markdown escaping only; updated module status and promoted the existing 20 tests to the default suite.",
+    "new_wrapper": "scripts/audit_dice.py reads PNGs and saved records and calls the user function; no production metric replacement."
+  },
+  "review_notes": [
+    "Binary 0/1 membership rejects NaN and infinity without an additional isfinite call.",
+    "Validation includes pixels outside region.",
+    "Python integer counts avoid uint8 arithmetic overflow.",
+    "Empty foreground and empty evaluation region are treated separately."
+  ],
+  "codex_verification": {
+    "focused_passed": 20,
+    "focused_log": "step04-codex-tests.txt",
+    "full_suite_passed": 89,
+    "full_suite_skipped": 0,
+    "full_suite_log": "step04-full-suite.txt",
+    "real_dice_values_matched": 42,
+    "real_macro_means_matched": 6,
+    "real_audit": "step04-real-dice-audit.json",
+    "raw_annotation_checks": [
+      {
+        "id": "10_1",
+        "original_path": "data/raw/TNBC_dataset/GT_10/10_1.png",
+        "original_sha256": "2298debab2b5e38926632246e3da29d31443b3c84af42521be7f40ae7ea1f8bb",
+        "exported_path": "dist/assets/10_1_gt.png",
+        "exported_sha256": "2298debab2b5e38926632246e3da29d31443b3c84af42521be7f40ae7ea1f8bb",
+        "pixels_equal": true
+      },
+      {
+        "id": "10_2",
+        "original_path": "data/raw/TNBC_dataset/GT_10/10_2.png",
+        "original_sha256": "a9f6d769701171c15da0877fac76744096d251929876200a80d60be317410437",
+        "exported_path": "dist/assets/10_2_gt.png",
+        "exported_sha256": "a9f6d769701171c15da0877fac76744096d251929876200a80d60be317410437",
+        "pixels_equal": true
+      },
+      {
+        "id": "10_3",
+        "original_path": "data/raw/TNBC_dataset/GT_10/10_3.png",
+        "original_sha256": "71403b63bb9ba4fa8482a00f5344de9c1f71de96174bb304c0049e7bcad3ff30",
+        "exported_path": "dist/assets/10_3_gt.png",
+        "exported_sha256": "71403b63bb9ba4fa8482a00f5344de9c1f71de96174bb304c0049e7bcad3ff30",
+        "pixels_equal": true
+      },
+      {
+        "id": "10_4",
+        "original_path": "data/raw/TNBC_dataset/GT_10/10_4.png",
+        "original_sha256": "ed8465a041c0a134de8dba2262004cbba426fe9bcb6baf3af079982101c378e3",
+        "exported_path": "dist/assets/10_4_gt.png",
+        "exported_sha256": "ed8465a041c0a134de8dba2262004cbba426fe9bcb6baf3af079982101c378e3",
+        "pixels_equal": true
+      },
+      {
+        "id": "11_1",
+        "original_path": "data/raw/TNBC_dataset/GT_11/11_1.png",
+        "original_sha256": "10aa699ba3248b8fcd1cc55077b1fabfcc4a164c3d20386b4f417a187e8cfcee",
+        "exported_path": "dist/assets/11_1_gt.png",
+        "exported_sha256": "10aa699ba3248b8fcd1cc55077b1fabfcc4a164c3d20386b4f417a187e8cfcee",
+        "pixels_equal": true
+      },
+      {
+        "id": "11_2",
+        "original_path": "data/raw/TNBC_dataset/GT_11/11_2.png",
+        "original_sha256": "e8a573df533a39d349c5fe77fa83a153c8274feb8cee34aeda00bd3ef5c111ea",
+        "exported_path": "dist/assets/11_2_gt.png",
+        "exported_sha256": "e8a573df533a39d349c5fe77fa83a153c8274feb8cee34aeda00bd3ef5c111ea",
+        "pixels_equal": true
+      },
+      {
+        "id": "11_3",
+        "original_path": "data/raw/TNBC_dataset/GT_11/11_3.png",
+        "original_sha256": "6757f0a8abc4bdd18fee92161140f9e21b5789ce3381977d4dabba8e8e2c76e2",
+        "exported_path": "dist/assets/11_3_gt.png",
+        "exported_sha256": "6757f0a8abc4bdd18fee92161140f9e21b5789ce3381977d4dabba8e8e2c76e2",
+        "pixels_equal": true
+      }
+    ],
+    "python": "3.12.14",
+    "numpy": "2.5.4"
+  },
+  "production_model_and_results_changed": false,
+  "next_user_task": "STEP_05: run saved-result audit; pending"
+}

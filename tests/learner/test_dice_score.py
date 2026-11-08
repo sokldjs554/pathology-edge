@@ -1,10 +1,10 @@
-"""Codex-provided acceptance tests for the pending user Dice implementation."""
+"""Codex-provided acceptance tests for the reviewed user Dice implementation."""
 import numpy as np
 import pytest
 
 from pathology_edge.learner_metrics import dice_score
 
-pytestmark = pytest.mark.learner
+# STEP 4 was submitted and reviewed; include these tests in the default suite.
 
 
 def test_known_overlap_and_input_preservation():
