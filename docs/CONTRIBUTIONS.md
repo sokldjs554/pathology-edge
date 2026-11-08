@@ -15,7 +15,9 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | U09 | 사용자 | 검토 | 서로 다른 핵 두 개에 거리 기반 억제를 적용한 합성 반례의 해석 | 완료 | 2026-11-08 2개→1개 과소 집계, IoU0이어도 거리6≤8의 OR 조건이 작동한다고 설명. `step02-synthetic-nms.json`에 원문 기록 |
 | U10 | 사용자 | 코드 | `test_distance_rule_can_suppress_distinct_nuclei` 본문 | 완료 | 2026-11-09 함수 본문 전체 제출. 실제 호출·기하 조건·유지/억제 index 검토 및 독립 실행 통과. fixture·import는 Codex 제공 |
 | U11 | 사용자 | 테스트 | 2단계 반례 테스트 한 개 실행 | 완료 | 사용자가 `1 passed in 0.01s` 보고. 전체69개 실행은 Codex 기여 |
-| U12 | 사용자 | 검토 | OR→AND 변경안이 같은 핵의 조각에 미치는 영향 | 예정 | `STEP_03.md` 합성 사례 제공. 답변·정책 결정 수신 전 |
+| U12 | 사용자 | 검토 | OR→AND 변경안이 같은 핵의 조각에 미치는 영향 | 완료 | 2026-11-09 IoU 조건 불충족으로 후보2개가 남고 핵1개를1개 과대 집계한다고 설명. 정책 채택 결정은 아님; `step03-review.json` |
+| U13 | 사용자 | 코드 | `learner_metrics.py::dice_score` | 예정 | 함수 서명·계약·20개 테스트 제공. 사용자 본문 제출 전 |
+| U14 | 사용자 | 테스트 | Dice 계약 테스트20개 실행 | 예정 | 사용자 실행 결과 수신 전 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |
 | C01 | Codex | 조사 | 회사·공개 데이터 확인, 공고 원문 접근 실패 기록 | 완료 | `docs/RESEARCH.md`, `artifacts/data-source.json` |
@@ -45,6 +47,7 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | C25 | Codex | 설명 검토·자료 준비 | 사용자 역변환 설명 확인, 합성 반례를 기존 deduplicate로 실행하고 2단계 검토 자료 제공 | 완료 | `step01-review.json`, `step02-synthetic-nms.json`, `STEP_02.md`. 모델·실제 실험·병합 규칙은 변경하지 않음 |
 | C26 | Codex | 검토·실습 준비 | 반례 해석 확인, 미완료 테스트 틀·fixture 제공, 영상 처리 의존성을 components 내부로 분리, 기존68개 통과·새 과제1개 skip | 완료 | `step02-preparation.json`과 로그. NMS/IoU AST 동일, Python -S에서 실행 확인. 사용자 테스트 본문은 작성하지 않음 |
 | C27 | Codex | 코드 검토·검증 | 제출 테스트 본문을 수정 없이 반영, 독립1개·전체69개 통과, 기본 CI 편입, 다음 정책 검토 사례 제공 | 완료 | `step02-review.json`, `step02-codex-tests.txt`, `step02-full-suite.txt`, `STEP_03.md`. 병합 알고리즘·실험·데모는 변경하지 않음 |
+| C28 | Codex | 설명 검토·실습 준비 | AND 반대 오류 설명 확인, 독립 Dice 계약·빈 함수·20개 검사 제공, 기존69개 통과·새 과제20개 skip 확인 | 완료 | `step03-review.json`, `step04-preparation.json`, `STEP_04.md`. 정답 함수는 미제공; 기존 모델·실험·평가 함수는 유지 |
 
 ## 검토 후 추가할 기록 형식
 

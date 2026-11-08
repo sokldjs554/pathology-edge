@@ -1,0 +1,895 @@
+FFFFFFFFFFFFFFFFFFFF                                                     [100%]
+=================================== FAILURES ===================================
+__________________ test_known_overlap_and_input_preservation ___________________
+
+    def test_known_overlap_and_input_preservation():
+        prediction = np.array([[1, 1], [0, 0]], dtype=np.uint8)
+        target = np.array([[1, 0], [1, 0]], dtype=np.uint8)
+        before_p, before_t = prediction.copy(), target.copy()
+>       result = dice_score(prediction, target)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_dice_score.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[1, 1],
+       [0, 0]], dtype=uint8)
+target = array([[1, 0],
+       [1, 0]], dtype=uint8), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+__________ test_region_selects_evaluation_pixels_and_preserves_region __________
+
+    def test_region_selects_evaluation_pixels_and_preserves_region():
+        prediction = np.array([[1, 1], [0, 0]], dtype=np.float64)
+        target = np.array([[1, 0], [1, 0]], dtype=np.float32)
+        region = np.array([[True, True], [False, False]])
+        before = region.copy()
+>       assert dice_score(prediction, target, region) == pytest.approx(2 / 3)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_dice_score.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[1., 1.],
+       [0., 0.]])
+target = array([[1., 0.],
+       [1., 0.]], dtype=float32)
+region = array([[ True,  True],
+       [False, False]])
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+___________ test_foreground_agreement_cases[prediction0-target0-1.0] ___________
+
+prediction = [[1, 0], [0, 1]], target = [[1, 0], [0, 1]], expected = 1.0
+
+    @pytest.mark.parametrize("prediction,target,expected", [
+        ([[1, 0], [0, 1]], [[1, 0], [0, 1]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 1], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[0, 0], [0, 0]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 0], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[1, 0], [0, 0]], 0.0),
+    ])
+    def test_foreground_agreement_cases(prediction, target, expected):
+>       result = dice_score(np.asarray(prediction, dtype=bool),
+                            np.asarray(target, dtype=bool))
+
+tests/learner/test_dice_score.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[ True, False],
+       [False,  True]])
+target = array([[ True, False],
+       [False,  True]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+___________ test_foreground_agreement_cases[prediction1-target1-0.0] ___________
+
+prediction = [[1, 0], [0, 0]], target = [[0, 1], [0, 0]], expected = 0.0
+
+    @pytest.mark.parametrize("prediction,target,expected", [
+        ([[1, 0], [0, 1]], [[1, 0], [0, 1]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 1], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[0, 0], [0, 0]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 0], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[1, 0], [0, 0]], 0.0),
+    ])
+    def test_foreground_agreement_cases(prediction, target, expected):
+>       result = dice_score(np.asarray(prediction, dtype=bool),
+                            np.asarray(target, dtype=bool))
+
+tests/learner/test_dice_score.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[ True, False],
+       [False, False]])
+target = array([[False,  True],
+       [False, False]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+___________ test_foreground_agreement_cases[prediction2-target2-1.0] ___________
+
+prediction = [[0, 0], [0, 0]], target = [[0, 0], [0, 0]], expected = 1.0
+
+    @pytest.mark.parametrize("prediction,target,expected", [
+        ([[1, 0], [0, 1]], [[1, 0], [0, 1]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 1], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[0, 0], [0, 0]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 0], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[1, 0], [0, 0]], 0.0),
+    ])
+    def test_foreground_agreement_cases(prediction, target, expected):
+>       result = dice_score(np.asarray(prediction, dtype=bool),
+                            np.asarray(target, dtype=bool))
+
+tests/learner/test_dice_score.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[False, False],
+       [False, False]])
+target = array([[False, False],
+       [False, False]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+___________ test_foreground_agreement_cases[prediction3-target3-0.0] ___________
+
+prediction = [[1, 0], [0, 0]], target = [[0, 0], [0, 0]], expected = 0.0
+
+    @pytest.mark.parametrize("prediction,target,expected", [
+        ([[1, 0], [0, 1]], [[1, 0], [0, 1]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 1], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[0, 0], [0, 0]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 0], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[1, 0], [0, 0]], 0.0),
+    ])
+    def test_foreground_agreement_cases(prediction, target, expected):
+>       result = dice_score(np.asarray(prediction, dtype=bool),
+                            np.asarray(target, dtype=bool))
+
+tests/learner/test_dice_score.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[ True, False],
+       [False, False]])
+target = array([[False, False],
+       [False, False]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+___________ test_foreground_agreement_cases[prediction4-target4-0.0] ___________
+
+prediction = [[0, 0], [0, 0]], target = [[1, 0], [0, 0]], expected = 0.0
+
+    @pytest.mark.parametrize("prediction,target,expected", [
+        ([[1, 0], [0, 1]], [[1, 0], [0, 1]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 1], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[0, 0], [0, 0]], 1.0),
+        ([[1, 0], [0, 0]], [[0, 0], [0, 0]], 0.0),
+        ([[0, 0], [0, 0]], [[1, 0], [0, 0]], 0.0),
+    ])
+    def test_foreground_agreement_cases(prediction, target, expected):
+>       result = dice_score(np.asarray(prediction, dtype=bool),
+                            np.asarray(target, dtype=bool))
+
+tests/learner/test_dice_score.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[False, False],
+       [False, False]])
+target = array([[ True, False],
+       [False, False]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+______________ test_read_only_uint8_masks_do_not_overflow_counts _______________
+
+    def test_read_only_uint8_masks_do_not_overflow_counts():
+        prediction = np.ones((32, 32), dtype=np.uint8)
+        target = prediction.copy()
+        prediction.flags.writeable = False
+        target.flags.writeable = False
+>       assert dice_score(prediction, target) == pytest.approx(1.0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_dice_score.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1],
+       ...,
+       [1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1]], shape=(32, 32), dtype=uint8)
+target = array([[1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1],
+       ...,
+       [1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1],
+       [1, 1, 1, ..., 1, 1, 1]], shape=(32, 32), dtype=uint8)
+region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction0-target0-None] ________
+
+prediction = array([[0., 0., 0.],
+       [0., 0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0., 0., 0.],
+       [0., 0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction1-target1-None] ________
+
+prediction = array([0., 0.]), target = array([0., 0.]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([0., 0.]), target = array([0., 0.]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction2-target2-None] ________
+
+prediction = array([], shape=(0, 2), dtype=float64)
+target = array([], shape=(0, 2), dtype=float64), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([], shape=(0, 2), dtype=float64)
+target = array([], shape=(0, 2), dtype=float64), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction3-target3-None] ________
+
+prediction = array([[0.25, 0.25],
+       [0.25, 0.25]])
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0.25, 0.25],
+       [0.25, 0.25]])
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction4-target4-None] ________
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[2, 2],
+       [2, 2]]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[2, 2],
+       [2, 2]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+______ test_invalid_inputs_raise_value_error[prediction5-target5-region5] ______
+
+prediction = array([[ 0.,  0.],
+       [ 0., nan]])
+target = array([[0., 0.],
+       [0., 0.]])
+region = array([[ True,  True],
+       [False, False]])
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[ 0.,  0.],
+       [ 0., nan]])
+target = array([[0., 0.],
+       [0., 0.]])
+region = array([[ True,  True],
+       [False, False]])
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction6-target6-None] ________
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[inf, inf],
+       [inf, inf]]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[inf, inf],
+       [inf, inf]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction7-target7-None] ________
+
+prediction = array([[0.+1.j, 0.+1.j],
+       [0.+1.j, 0.+1.j]])
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0.+1.j, 0.+1.j],
+       [0.+1.j, 0.+1.j]])
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+_______ test_invalid_inputs_raise_value_error[prediction8-target8-None] ________
+
+prediction = array([['1', '0'],
+       ['0', '0']], dtype='<U1')
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([['1', '0'],
+       ['0', '0']], dtype='<U1')
+target = array([[0., 0.],
+       [0., 0.]]), region = None
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+______ test_invalid_inputs_raise_value_error[prediction9-target9-region9] ______
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]]), region = array([[ True,  True]])
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]]), region = array([[ True,  True]])
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+____ test_invalid_inputs_raise_value_error[prediction10-target10-region10] _____
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]])
+region = array([[1, 1],
+       [1, 1]], dtype=uint8)
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]])
+region = array([[1, 1],
+       [1, 1]], dtype=uint8)
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+____ test_invalid_inputs_raise_value_error[prediction11-target11-region11] _____
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]])
+region = array([[False, False],
+       [False, False]])
+
+    @pytest.mark.parametrize("prediction,target,region", [
+        (np.zeros((2, 3)), np.zeros((2, 2)), None),
+        (np.zeros(2), np.zeros(2), None),
+        (np.zeros((0, 2)), np.zeros((0, 2)), None),
+        (np.full((2, 2), 0.25), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.full((2, 2), 2), None),
+        (np.array([[0., 0.], [0., np.nan]]), np.zeros((2, 2)),
+         np.array([[True, True], [False, False]])),
+        (np.zeros((2, 2)), np.full((2, 2), np.inf), None),
+        (np.full((2, 2), 1j), np.zeros((2, 2)), None),
+        (np.array([["1", "0"], ["0", "0"]]), np.zeros((2, 2)), None),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((1, 2), dtype=bool)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.ones((2, 2), dtype=np.uint8)),
+        (np.zeros((2, 2)), np.zeros((2, 2)), np.zeros((2, 2), dtype=bool)),
+    ])
+    def test_invalid_inputs_raise_value_error(prediction, target, region):
+        with pytest.raises(ValueError):
+>           dice_score(prediction, target, region)
+
+tests/learner/test_dice_score.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+prediction = array([[0., 0.],
+       [0., 0.]])
+target = array([[0., 0.],
+       [0., 0.]])
+region = array([[False, False],
+       [False, False]])
+
+    def dice_score(
+        prediction: np.ndarray,
+        target: np.ndarray,
+        region: np.ndarray | None = None,
+    ) -> float:
+        """Compute foreground Dice on valid binary HW masks in the selected region.
+    
+        Follow the input validation and empty-foreground policy in docs/STEP_04.md.
+        Preserve all inputs and return a Python float. Invalid inputs raise ValueError.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_04.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_04.md
+
+src/pathology_edge/learner_metrics.py:21: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/learner/test_dice_score.py::test_known_overlap_and_input_preservation
+FAILED tests/learner/test_dice_score.py::test_region_selects_evaluation_pixels_and_preserves_region
+FAILED tests/learner/test_dice_score.py::test_foreground_agreement_cases[prediction0-target0-1.0]
+FAILED tests/learner/test_dice_score.py::test_foreground_agreement_cases[prediction1-target1-0.0]
+FAILED tests/learner/test_dice_score.py::test_foreground_agreement_cases[prediction2-target2-1.0]
+FAILED tests/learner/test_dice_score.py::test_foreground_agreement_cases[prediction3-target3-0.0]
+FAILED tests/learner/test_dice_score.py::test_foreground_agreement_cases[prediction4-target4-0.0]
+FAILED tests/learner/test_dice_score.py::test_read_only_uint8_masks_do_not_overflow_counts
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction0-target0-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction1-target1-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction2-target2-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction3-target3-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction4-target4-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction5-target5-region5]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction6-target6-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction7-target7-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction8-target8-None]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction9-target9-region9]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction10-target10-region10]
+FAILED tests/learner/test_dice_score.py::test_invalid_inputs_raise_value_error[prediction11-target11-region11]
+20 failed in 0.13s

@@ -1,0 +1,11 @@
+{
+  "review_date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "user explanation; Codex review",
+  "user_explanation": "중심 거리는 6px로 기준을 만족하지만 IoU가 0이라 AND 조건이 성립하지 않아 후보 2개가 모두 남습니다. 따라서 실제 핵 1개를 2개로 세어 1개 과대 집계하는 오류가 생깁니다.",
+  "accepted": true,
+  "scope": "Correct interpretation of the synthetic one-nucleus fragment scenario; no clinical labels or performance claims.",
+  "policy_adoption_decided": false,
+  "production_policy_changed": false,
+  "next_step": "STEP_04 independent Dice implementation; pending"
+}

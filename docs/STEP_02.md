@@ -89,7 +89,7 @@ python -m pytest --run-learner tests/learner/test_merge_counterexample.py -q
 GitHub 최신 코드 전체에서는 이 테스트와 좌표 함수12개를 기본 검사에 포함하며 Codex가 **69 passed, 0 skipped**를 확인했습니다.
 준비 당시의 **68 passed, 1 skipped**는 과거 상태입니다. Codex의 전체 실행을 사용자 실행으로 기록하지 않습니다.
 
-테스트 함수와 사용자 실행 결과는 받았습니다. [검토 기록](../artifacts/learning/step02-review.json)에 사용자 기여와 독립 검증을 구분했습니다. 현재는 [STEP_03](STEP_03.md)의 합성 사례 하나를 해석하면 됩니다.
+테스트 함수와 사용자 실행 결과는 받았습니다. [검토 기록](../artifacts/learning/step02-review.json)에 사용자 기여와 독립 검증을 구분했습니다. 3단계 해석도 후속으로 확인했습니다. 현재 활성 작업은 [NEXT_STEPS](NEXT_STEPS.md)에서 확인할 수 있습니다.
 
 ## 기여 구분
 

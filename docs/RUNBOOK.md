@@ -1,7 +1,7 @@
 # 실행 안내 — 필요할 때 참고
 
 이 문서는 이후 재현을 위한 참고자료입니다. 아래 전체를 한 번에 수행하는 과제가 아닙니다.
-1단계와2단계 코드·실행 보고·해석은 확인했습니다. 현재 [STEP_03](STEP_03.md)는 합성 사례 해석만 하는 단계로 새 설치·실행이 필요하지 않습니다.
+1·2단계 코드·실행 보고와3단계 해석을 확인했습니다. 현재는 [STEP_04](STEP_04.md)의 Dice 함수 하나만 작성·실행합니다. NumPy·pytest 환경이면 충분합니다.
 사용자 실행 완료는 로그를 받은 뒤에만 기록합니다. 모든 명령은 별도 표시가 없으면
 **`pathology-edge` 저장소 루트**에서 실행합니다.
 
@@ -89,7 +89,7 @@ python -m pathology_edge.cli export --output work/reproduction --dest work/repro
 ## 6. 테스트
 
 ```bash
-python -m pytest --run-learner tests/learner/test_merge_counterexample.py -q
+python -m pytest --run-learner tests/learner/test_dice_score.py -q
 python -m pytest -q
 python -m pytest --run-learner -q
 python scripts/verify_cpp_real.py
@@ -99,7 +99,7 @@ python scripts/benchmark.py
 
 순서대로 사용자 과제만 / 구현된 전체 기능 / 사용자 과제 포함 전체 / 실제 이미지 C++ 일치 /
 데모 파일 연결 / 추출 속도·메모리를 확인합니다. **검토 완료한 좌표 함수의 12개 테스트는 이제 전체 기본 테스트에도 포함됩니다.**
-2단계 반례 테스트도 검토 완료해 기본 검사에 포함했습니다. 현재69개 모두 실행되며 미완료 skip은 없습니다. `--run-learner` 옵션은 기존 명령과의 호환을 위해 유지하며 향후 미완료 표시한 과제에만 필요합니다.
+완료한 좌표·NMS 반례 테스트는 기본 검사에 포함됩니다. 현재 기본 검사는69개 통과·4단계20개 skip이며, 새 함수의20개 검사는 `--run-learner`로 활성화합니다. 사용자 본문 작성 전에는 NotImplementedError로 실패하는 것이 예상 상태입니다.
 `verify_cpp_real.py`에는 준비한 원 데이터가 필요합니다. benchmark는 합성 RGB를 사용하며
 의학적 성능 근거로 쓰지 않습니다. 다른 무거운 작업을 끈 상태에서 실행하세요.
 

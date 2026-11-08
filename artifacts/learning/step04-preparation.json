@@ -1,0 +1,35 @@
+{
+  "prepared_date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "Codex",
+  "user_implementation": "pending",
+  "provided": [
+    "function signature and NumPy import",
+    "20 contract checks",
+    "input/output and empty-region policy",
+    "small hand-checkable examples"
+  ],
+  "user_solution_supplied": false,
+  "example_cross_check": {
+    "whole_dice": 0.5,
+    "region_dice": 0.6666666666666666,
+    "reference": "Existing binary_metrics on valid nonempty inputs only; not called by learner tests."
+  },
+  "contract_note": "Empty evaluation region is explicitly invalid; empty foreground in a nonempty evaluation region scores 1.0.",
+  "default_suite": {
+    "passed": 69,
+    "skipped_pending_user": 20,
+    "log": "step04-preparation-suite.txt"
+  },
+  "opt_in_template": {
+    "exit_code": 1,
+    "expected": "20 NotImplementedError failures; not a completed implementation",
+    "log": "step04-template-expected-failure.txt"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.4"
+  },
+  "production_metrics_changed": false,
+  "model_or_demo_changed": false
+}
