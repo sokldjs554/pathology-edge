@@ -3,7 +3,7 @@
 **병리 이미지의 패치 경계가 핵 분할에 미치는 영향을 재현하고 검토하는 연구용 작업대.**
 같은 모델의 무겹침·겹침 처리를 비교하고, 정확도·처리 시간·메모리·실패 사례를 함께 공개합니다.
 
-[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 2단계 검토](docs/STEP_02.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
+[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 2단계 테스트](docs/STEP_02.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
@@ -144,6 +144,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
 - 일반 테스트: 사용자 좌표 함수 검토 후 Codex 호스트·Ubuntu Actions에서 **68 passed**. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
+- 2단계 준비 후 Codex 호스트 검사: **68 passed, 1 skipped**. 새 반례 테스트1개는 사용자 작성 대기이며 통과로 기록하지 않습니다. [준비 기록](artifacts/learning/step02-preparation.json).
 - 사용자가 좌표 함수와 **12 passed in 0.31s**를 제출했습니다. Codex도 같은12개를 통과했고, 이제 기본 전체 테스트에 포함됩니다. [검토·실행 구분](artifacts/learning/step01-review.json).
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
@@ -169,7 +170,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
 Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. 현재 사용자 단계는
-[2단계 합성 사례](docs/STEP_02.md)에서 거리 기반 중복 억제의 위험을 해석하는 것입니다.
+[2단계](docs/STEP_02.md)에서 이미 설명한 과소 집계 사례를 재현하는 테스트 함수 하나를 작성·실행하는 것입니다. 합성 반례 해석은 사용자 완료로 기록했습니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을

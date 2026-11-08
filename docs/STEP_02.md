@@ -1,7 +1,8 @@
 # 2단계: 가까운 서로 다른 핵이 억제되는 반례 검토
 
-상태: **사용자 검토 대기**. 1단계의 코드·12개 테스트 실행 보고·리사이즈 역변환 설명은 확인했습니다.
-이번에는 새 코드를 작성하거나 설치할 필요 없이 아래 사례 하나를 판단합니다.
+상태: **반례 해석 확인 완료 · 사용자 테스트 작성·실행 대기**.
+사용자는 서로 다른 핵2개가1개로 과소 집계되고, IoU0이어도 거리6px가8px 이하이므로 OR 조건이 작동한다고 설명했습니다. 정확한 해석입니다.
+이제 같은 사례를 재현하는 테스트 함수 하나만 작성합니다.
 
 ## 프로젝트에서 맡는 역할
 
@@ -30,13 +31,68 @@
 Codex는 위 입력을 현재 `deduplicate`에 넣어 동작을 확인했습니다([입력·실행 기록](../artifacts/learning/step02-synthetic-nms.json)).
 이 확인은 사용자 실행 기록에 포함하지 않습니다.
 
-## 지금 답할 것 하나
+## 직접 작성할 파일·함수
 
-**A와 B가 실제로 서로 다른 핵이라면, 현재 규칙으로 처리할 때 핵 개수에 어떤 오류가 생길까요?**
-규칙에서 어느 조건이 작동하는지도 포함해 1~2문장으로 설명해 주세요.
-답변을 검토한 후 이 사례를 직접 테스트로 작성하는 작업을 안내하겠습니다. 지금은 함수나 임계값을 바꾸는 과제가 아닙니다.
+파일: `tests/learner/test_merge_counterexample.py`
+
+함수: `test_distance_rule_can_suppress_distinct_nuclei(candidate_pair)`
+
+이 테스트는 현재 NMS의 알려진 과소 집계 사례를 재현하는 기록입니다. 통과는 **이 한계를 재현했다는 뜻**이며 알고리즘의 정확도나 개선을 입증하지 않습니다.
+
+- Codex 제공: import, 위 두 후보를 만드는 `candidate_pair` fixture, 테스트 함수 이름, 미완료 과제 표시.
+- 사용자 작성: `NotImplementedError`를 지우고 함수 본문만 작성합니다. fixture와 기존 병합 알고리즘은 이번 작성 범위에 포함하지 않습니다.
+- 입력: fixture가 매번 새로 만드는 후보 dict 두 개의 list입니다. `x/y`, `bbox`, `score`, `patch_id`, `touches_edge`는 위 표와 같습니다.
+- 호출할 함수: `box_iou(a, b)`는 상자 좌표 list 두 개를 받아 수치를 반환합니다. `deduplicate(objects)`는 후보 목록을 받아 `(kept, removed)` 두 list를 반환합니다.
+- `kept`에는 원 후보의 `raw_index`가 추가됩니다. `removed`에는 `suppressed_index`와 `kept_index`가 있습니다. 둘 다 원래 입력 목록의 index입니다.
+- 테스트 함수 자체의 반환값은 없습니다. 실제 함수 결과를 `assert`로 검사합니다.
+
+## 본문에서 확인할 조건
+
+1. 실제 fixture 좌표로 상자 IoU가0이고 중심 거리가6px인지 확인합니다. `hypot`는 import해 두었습니다.
+2. 실제 `deduplicate`를 기본 임계값으로 호출합니다.
+3. 유지 후보1개, 억제 대응1개가 나오는지 확인합니다.
+4. 남은 원래 후보 index는0(A), 억제된 index는1(B)이며, B가 A에 대응해 억제됐는지 확인합니다.
+
+입력 두 핵이 별개라는 합성 정답과 유지1개의 차이를 테스트 docstring 또는 짧은 주석으로 설명하세요.
+결과값을 직접 만들어 검사를 통과시키지 않고 실제 함수의 반환값을 검증합니다. 완성된 테스트 코드는 먼저 제공하지 않았습니다.
+
+## 로컬에 이번 실습 파일 받기
+
+이전에 안내한 위치에 저장소를 받았다면 Mac 터미널에서 아래를 실행합니다. 다른 곳에 받았다면 첫 경로만 바꿉니다.
+작성한 좌표 함수를 보존하면서 이번에 필요한 두 파일만 받는 명령입니다.
+
+```bash
+cd ~/Projects/pathology-edge
+git fetch origin
+if [ -e tests/learner/test_merge_counterexample.py ]; then
+  printf '%s\n' '실습 파일이 이미 있습니다. 기존 작성 내용을 보존하고 이 파일을 열어 확인하세요.'
+elif git diff --quiet HEAD -- src/pathology_edge/merge.py; then
+  git restore --source=origin/main -- src/pathology_edge/merge.py tests/learner/test_merge_counterexample.py
+else
+  printf '%s\n' 'merge.py에 로컬 변경이 있습니다. 파일을 보존했으니 git status --short 결과를 보내 주세요.'
+fi
+```
+
+`merge.py`의 변경은 OpenCV·NumPy를 이미지 성분 추출 함수 안에서만 import하도록 옮긴 것입니다.
+`box_iou`·`deduplicate`의 알고리즘은 동일합니다. 이번 테스트에는 pytest만 필요하며, 앞선 NumPy·pytest 환경을 그대로 사용할 수 있습니다.
+
+## 직접 실행할 명령
+
+앞서 사용한 가상환경을 활성화하고 **저장소 루트**에서 실행합니다. 이 명령은 지금 작성한 반례 테스트 하나만 검사합니다.
+
+```bash
+python -m pytest --run-learner tests/learner/test_merge_counterexample.py -q
+```
+
+작성 전에는 `NotImplementedError`로1개 실패하는 것이 예상 동작이고, 작성 후 기대 결과는 **1 passed**입니다.
+일반 `python -m pytest -q`에서는 검토 전인 이1개만 skip합니다. 완료한 좌표 함수12개는 계속 실행됩니다.
+전체 프로젝트 환경에서 Codex는 **68 passed, 1 skipped**를 확인했습니다. 이 결과를 사용자 실행으로 기록하지 않습니다.
+
+보내주실 것은 **작성한 테스트 함수와 실행 결과**입니다. 실패하면 생략하지 않은 traceback도 함께 보내 주세요.
+코드와 결과를 검토한 후 다음 단계로 진행합니다.
 
 ## 기여 구분
 
-- Codex 완료: 현재 규칙 확인, 합성 입력 설계와 실제 함수 호출 검증, 검토 자료 제공.
-- 사용자 예정: 이 사례의 오류 해석. 테스트 작성·실행·병합 정책 변경 결정은 아직 배정하지 않았습니다.
+- 사용자 완료: 과소 집계와 OR 거리 조건에 대한 해석.
+- 사용자 예정: 테스트 본문 작성·실행. 임계값 변경이나 새 병합 정책 결정은 아직 배정하지 않았습니다.
+- Codex 완료: 합성 입력·fixture·빈 테스트 틀, 최소 의존성 분리, 기존68개 회귀 검사와 입력 검증. [준비 검증 기록](../artifacts/learning/step02-preparation.json).

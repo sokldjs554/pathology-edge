@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_distance_rule_can_suppress_distinct_nuclei ________________
+
+candidate_pair = [{'x': 99.5, 'y': 49.5, 'bbox': [98, 48, 102, 52], 'area': 16, ...}, {'x': 105.5, 'y': 49.5, 'bbox': [104, 48, 108, 52], 'area': 16, ...}]
+
+    def test_distance_rule_can_suppress_distinct_nuclei(candidate_pair):
+        """Document the current heuristic's undercount for the two-nucleus fixture."""
+        # USER TODO: verify the geometry, call the real function and check the
+        # retained candidate and suppression mapping described in docs/STEP_02.md.
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_02.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_02.md
+
+tests/learner/test_merge_counterexample.py:30: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/learner/test_merge_counterexample.py::test_distance_rule_can_suppress_distinct_nuclei
+1 failed in 0.01s

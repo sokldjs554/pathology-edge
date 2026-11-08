@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-08",
+  "performed_by": "Codex",
+  "user_test_body": "pending",
+  "merge_source_sha256": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+  "nms_and_iou_ast_unchanged": true,
+  "components_change": "Move its OpenCV/NumPy imports into the image-processing function; no change to its processing logic.",
+  "minimal_import_and_counterexample": "Verified with Python -S; OpenCV and NumPy not loaded.",
+  "same_synthetic_output": true,
+  "default_suite_log": "step02-preparation-suite.txt",
+  "opt_in_template_check": {
+    "exit_code": 1,
+    "expected": "1 failed: NotImplementedError; user body intentionally unimplemented",
+    "log": "step02-template-expected-failure.txt"
+  },
+  "default_suite_passed": 68,
+  "default_suite_skipped_pending_user": 1,
+  "fixture_matches_verified_synthetic_inputs": true
+}

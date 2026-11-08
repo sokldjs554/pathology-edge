@@ -1,8 +1,8 @@
-import cv2
-import numpy as np
-
-
 def components(mask, probability=None, patch_id=-1, origin=(0, 0), min_area=12):
+    # Coordinate-only NMS review does not require the image-processing stack.
+    import cv2
+    import numpy as np
+
     n, labels, stats, centers = cv2.connectedComponentsWithStats(mask.astype(np.uint8), 8)
     objects = []
     for i in range(1, n):
