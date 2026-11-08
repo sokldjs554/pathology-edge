@@ -211,6 +211,56 @@ test('NMS pair links actual raw candidates to the two original native patches', 
   await roi(page, 'R2');
   await expect(page.locator('#traceDetail')).toBeHidden();
 });
+
+test('candidate centres are selectable without blocking drag; navigator moves both panes', async ({
+  page,
+}) => {
+  await open(page);
+  await roi(page);
+  await page.locator('#showCandidates').check();
+  const object = data.rois[0].methods.no_overlap.objects.find(
+    (o) => o.x > 350 && o.x < 650 && o.y > 350 && o.y < 650,
+  );
+  const box = await page.locator('#viewerA').boundingBox(),
+    c = (await center(page, 'A')).split(',').map(Number),
+    z = Number(await page.locator('#viewerA').getAttribute('data-zoom'));
+  const x = box.x + box.width / 2 + (object.center_level0[0] - c[0]) * z,
+    y = box.y + box.height / 2 + (object.center_level0[1] - c[1]) * z;
+  await page.mouse.click(x, y);
+  await expect(page.locator('#candidateInfo')).toContainText(
+    `무겹침 raw #${object.raw_index + 1}`,
+  );
+  await expect(page.locator('#overlayB [data-selected]')).toHaveCount(0);
+  const before = await center(page, 'A');
+  await page.mouse.move(x, y);
+  await page.mouse.down();
+  await page.mouse.move(x + 40, y + 30, { steps: 6 });
+  await page.mouse.up();
+  await expect.poll(() => center(page, 'A')).not.toBe(before);
+  await synced(page);
+  const nav = await page.locator('#viewerB .navigator').boundingBox(),
+    old = await center(page);
+  await page.mouse.click(nav.x + nav.width * 0.65, nav.y + nav.height * 0.35);
+  await expect.poll(() => center(page)).not.toBe(old);
+  await synced(page);
+  await expect(page.locator('#centerCoverage')).toContainText('미분석');
+});
+
+test('a stalled overlay cannot indefinitely block the real WSI', async ({
+  page,
+}) => {
+  const pending = [];
+  await page.route(`**/${data.rois[0].methods.overlap.overlay}`, (route) => {
+    pending.push(route);
+  });
+  await page.goto('/wsi.html', { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('#modeCompare')).toBeDisabled();
+  await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready', {
+    timeout: 25000,
+  });
+  await expect(page.locator('#tileWarning')).toContainText('예측 오버레이');
+  for (const route of pending) await route.abort();
+});
 test('unanalysed scan has no fabricated result; old positive and negative GT cases remain accessible', async ({
   page,
 }) => {

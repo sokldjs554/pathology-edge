@@ -51,6 +51,8 @@ function ready() {
   document.body.dataset.phase = 'ready';
   $('stageMessage').hidden = true;
   text('status', '실제 WSI 타일 · 저장된 ROI 결과 · 새 모델 실행 없음');
+  if (WSI.mode === 'explore')
+    text('viewContext', '전체 스캔 탐색 · ROI 밖에는 예측 없음');
   controls(false);
 }
 function controls(disabled) {
@@ -412,9 +414,18 @@ function selectPair(index) {
   const m = WSI.roi.methods.overlap,
     a = m.raw[p.suppressed_raw_index],
     b = m.raw[p.kept_raw_index];
-  const x = (a.center_level0[0] + b.center_level0[0]) / 2,
-    y = (a.center_level0[1] + b.center_level0[1]) / 2;
-  fit([x - 150, y - 150, x + 150, y + 150]);
+  const patches = [a, b].map(
+    (o) => m.patches.find((p) => p.id === o.patch_id).bbox_level0,
+  );
+  fit(
+    [
+      Math.min(...patches.map((p) => p[0])),
+      Math.min(...patches.map((p) => p[1])),
+      Math.max(...patches.map((p) => p[2])),
+      Math.max(...patches.map((p) => p[3])),
+    ],
+    32,
+  );
 }
 function selectCandidate(method, rawIndex) {
   const m = WSI.roi.methods[method],
@@ -453,6 +464,10 @@ function renderOverlays() {
     const method =
       id === 'A' && WSI.mode !== 'trace' ? 'no_overlap' : 'overlap';
     let markup = '';
+    if (WSI.boundary) {
+      const [x, y, x1, y1] = WSI.boundary.bbox_level0;
+      markup += `<defs><clipPath id="differenceClip${id}"><rect x="${x}" y="${y}" width="${x1 - x}" height="${y1 - y}"/></clipPath></defs>`;
+    }
     for (const r of WSI.data.rois) {
       const [x, y] = r.origin,
         box = [x, y, x + r.width, y + r.height];
@@ -467,7 +482,7 @@ function renderOverlays() {
         WSI.mode !== 'trace' &&
         !WSI.failedOverlays.has(r.difference.overlay)
       )
-        markup += `<image data-difference="${r.id}" href="${r.difference.overlay}" x="${x}" y="${y}" width="${r.width}" height="${r.height}"/>`;
+        markup += `<image data-difference="${r.id}" href="${r.difference.overlay}" x="${x}" y="${y}" width="${r.width}" height="${r.height}" ${WSI.boundary ? `clip-path="url(#differenceClip${id})"` : ''}/>`;
       if ($('showBounds').checked)
         markup +=
           rect(box, '#42b9d7', `class="hit" data-roi="${r.id}"`) +
@@ -489,7 +504,7 @@ function renderOverlays() {
             rect(
               o.bbox_level0,
               '#2cd5d0',
-              `class="hit" data-candidate="${o.raw_index}" data-method="${method}"`,
+              `data-candidate="${o.raw_index}" data-method="${method}" opacity="${WSI.pair || WSI.selected ? 0.22 : 1}"`,
             ),
           )
           .join('');
@@ -543,9 +558,9 @@ function renderOverlays() {
           markup +=
             rect(o.bbox_level0, s.color, `data-selected="${o.raw_index}"`) +
             pointLabel(
-              o.bbox_level0[2] + 3,
-              o.bbox_level0[1],
-              `#${o.raw_index + 1}`,
+              o.bbox_level0[0] + 3,
+              s.kept ? o.bbox_level0[3] + 10 : o.bbox_level0[1] - 7,
+              `${WSI.pair ? (s.kept ? '유지 ' : '억제 ') : ''}#${o.raw_index + 1}`,
               s.color,
             );
       }
@@ -591,6 +606,31 @@ function setupViewer(id) {
   });
   viewer.addHandler('viewport-change', () => updateView(viewer));
   viewer.addHandler('resize', () => updateView(viewer));
+  viewer.addHandler('canvas-click', (event) => {
+    if (!event.quick || !WSI.roi || !$('showCandidates').checked) return;
+    const method =
+      id === 'A' && WSI.mode !== 'trace' ? 'no_overlap' : 'overlap';
+    const m = WSI.roi.methods[method];
+    const point = viewer.viewport.viewportToImageCoordinates(
+      viewer.viewport.pointFromPixel(event.position),
+    );
+    const tolerance =
+      5 / viewer.viewport.viewportToImageZoom(viewer.viewport.getZoom(true));
+    const candidates = WSI.mode === 'trace' && id === 'A' ? m.raw : m.objects;
+    const nearby = candidates.filter(
+      (o) =>
+        point.x >= o.bbox_level0[0] - tolerance &&
+        point.x <= o.bbox_level0[2] + tolerance &&
+        point.y >= o.bbox_level0[1] - tolerance &&
+        point.y <= o.bbox_level0[3] + tolerance,
+    );
+    nearby.sort(
+      (a, b) =>
+        Math.hypot(a.center_level0[0] - point.x, a.center_level0[1] - point.y) -
+        Math.hypot(b.center_level0[0] - point.x, b.center_level0[1] - point.y),
+    );
+    if (nearby.length) selectCandidate(method, nearby[0].raw_index);
+  });
   viewer.addHandler('tile-loaded', (e) => {
     WSI.tiles.loaded++;
     WSI.tiles.levels.add(e.tile.level);
