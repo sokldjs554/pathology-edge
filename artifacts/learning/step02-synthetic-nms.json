@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-08",
+  "kind": "synthetic teaching counterexample; not a real pathology annotation or model output",
+  "performed_by": "Codex",
+  "user_review": "pending",
+  "function": "pathology_edge.merge.deduplicate",
+  "source_sha256": "ce2c19b95d955450f216f465908da8a290d72f913770e068c32a49a3f0a6b42c",
+  "source_commit": "59e96ba61da208fc6fa1520cdb5746cfaeb4f4cc",
+  "coordinate_scope": "same native original-image pixel coordinates; half-open boxes",
+  "objects": [
+    {
+      "x": 99.5,
+      "y": 49.5,
+      "bbox": [
+        98,
+        48,
+        102,
+        52
+      ],
+      "area": 16,
+      "score": 0.9,
+      "patch_id": 0,
+      "touches_edge": false
+    },
+    {
+      "x": 105.5,
+      "y": 49.5,
+      "bbox": [
+        104,
+        48,
+        108,
+        52
+      ],
+      "area": 16,
+      "score": 0.8,
+      "patch_id": 1,
+      "touches_edge": false
+    }
+  ],
+  "synthetic_truth": {
+    "distinct_nuclei": 2,
+    "object_labels": [
+      "nucleus_A",
+      "nucleus_B"
+    ]
+  },
+  "thresholds": {
+    "iou": 0.3,
+    "distance_pixels": 8
+  },
+  "measured": {
+    "box_iou": 0.0,
+    "center_distance": 6.0
+  },
+  "actual_output": {
+    "kept": [
+      {
+        "x": 99.5,
+        "y": 49.5,
+        "bbox": [
+          98,
+          48,
+          102,
+          52
+        ],
+        "area": 16,
+        "score": 0.9,
+        "patch_id": 0,
+        "touches_edge": false,
+        "raw_index": 0
+      }
+    ],
+    "removed": [
+      {
+        "suppressed_index": 1,
+        "kept_index": 0
+      }
+    ]
+  },
+  "new_model_inference": false,
+  "production_algorithm_changed": false
+}

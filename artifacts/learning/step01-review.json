@@ -7,7 +7,8 @@
     "code": "Full function submitted in chat",
     "reported_test_output": "12 passed in 0.31s",
     "full_machine_log_received": false,
-    "coordinate_explanation_received": false
+    "coordinate_explanation_received": true,
+    "coordinate_explanation": "모델 입력을 만들 때 패치가 x축은 절반, y축은 4분의 1로 축소됐으므로, 좌표를 각각 0.5와 0.25로 나누어 리사이즈 전 패치 좌표로 되돌려야 하기 때문입니다."
   },
   "codex_changes": {
     "algorithm_changed": false,
@@ -91,5 +92,11 @@
     "full_suite_skipped": 0,
     "extra_checks_passed": 16
   },
-  "integration_scope": "Reviewed standalone coordinate utility; existing model/data/UI/native ROI path unchanged. General WSI adapter integration remains pending."
+  "integration_scope": "Reviewed standalone coordinate utility; existing model/data/UI/native ROI path unchanged. General WSI adapter integration remains pending.",
+  "coordinate_explanation_review": {
+    "reviewed_by": "Codex",
+    "date": "2026-11-08",
+    "accepted": true,
+    "scope": "Correct axis-specific inverse of model input resizing; step 1 code/test/explanation complete."
+  }
 }

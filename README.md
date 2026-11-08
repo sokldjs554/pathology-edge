@@ -3,7 +3,7 @@
 **병리 이미지의 패치 경계가 핵 분할에 미치는 영향을 재현하고 검토하는 연구용 작업대.**
 같은 모델의 무겹침·겹침 처리를 비교하고, 정확도·처리 시간·메모리·실패 사례를 함께 공개합니다.
 
-[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 1단계 과제](docs/STEP_01.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
+[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 2단계 검토](docs/STEP_02.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
@@ -143,13 +143,13 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: 사용자 좌표 함수 검토 후 Codex 호스트에서 **68 passed**. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
+- 일반 테스트: 사용자 좌표 함수 검토 후 Codex 호스트·Ubuntu Actions에서 **68 passed**. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
 - 사용자가 좌표 함수와 **12 passed in 0.31s**를 제출했습니다. Codex도 같은12개를 통과했고, 이제 기본 전체 테스트에 포함됩니다. [검토·실행 구분](artifacts/learning/step01-review.json).
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
 - 공개 버전7에서 Chromium·WebKit 각각 실제 조작 **46 tests**, 기존 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태·지연 복구를 확인했습니다. [확장 근거](docs/WSI_REVIEW.md). 과거 공개 버전5의 각26개 검사 기록은 [기존 보고서](docs/INTERVIEW_UI.md)에 유지했습니다.
 - 사용자가 데모 화면의 정상 표시를 확인했습니다([U07](docs/CONTRIBUTIONS.md)). 브라우저 버전·개별 조작은 미확인입니다. 좌표 함수의12개 테스트 통과는 사용자 보고로 확인했으며, 상세 실행 환경 로그는 받지 않았습니다.
-- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829667), [checkout UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668), [공개 URL UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474) 성공. UI 소스 `b5024b0` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다. 공개2,188개 파일의 저장소 정합성은 `artifacts/ui/wsi/production-files.json`에 있습니다.
+- GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42467103761), [checkout UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668), [공개 URL UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474) 성공. UI 소스 `b5024b0` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다. 공개2,188개 파일의 저장소 정합성은 `artifacts/ui/wsi/production-files.json`에 있습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
 
@@ -168,13 +168,13 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 ## 사용자와 Codex의 역할
 
 사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
-Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 현재 남은 사용자 단계는
-[1단계 예제](docs/STEP_01.md)에서 x/y 배율을 각각 적용하는 이유 한 문장입니다.
+Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. 현재 사용자 단계는
+[2단계 합성 사례](docs/STEP_02.md)에서 거리 기반 중복 억제의 위험을 해석하는 것입니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을
 구분합니다. 사용자가 실제로 수행한 근거를 받기 전에는 사용자 항목을 완료로 바꾸지 않습니다.
-[후속 후보](docs/NEXT_STEPS.md)는 현재 과제가 아닙니다.
+[후속 작업 목록](docs/NEXT_STEPS.md)은 현재 활성 단계와 아직 배정하지 않은 후보를 구분합니다.
 
 ## 남은 한계
 
