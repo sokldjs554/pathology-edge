@@ -60,6 +60,7 @@ Codex는 위 입력을 현재 `deduplicate`에 넣어 동작을 확인했습니�
 
 이전에 안내한 위치에 저장소를 받았다면 Mac 터미널에서 아래를 실행합니다. 다른 곳에 받았다면 첫 경로만 바꿉니다.
 작성한 좌표 함수를 보존하면서 이번에 필요한 두 파일만 받는 명령입니다.
+전체 브랜치를 최신 상태로 맞추는 명령은 아니므로, 아래 전체 테스트 수치는 GitHub 최신 코드 기준입니다. 이번 실습은 지정한 테스트 하나만 실행하면 됩니다.
 
 ```bash
 cd ~/Projects/pathology-edge
@@ -85,7 +86,7 @@ python -m pytest --run-learner tests/learner/test_merge_counterexample.py -q
 ```
 
 작성 전에는 `NotImplementedError`로1개 실패하는 것이 예상 동작이고, 작성 후 기대 결과는 **1 passed**입니다.
-일반 `python -m pytest -q`에서는 검토 전인 이1개만 skip합니다. 완료한 좌표 함수12개는 계속 실행됩니다.
+GitHub 최신 코드 전체의 `python -m pytest -q`에서는 검토 전인 이1개만 skip합니다. 완료한 좌표 함수12개는 계속 실행됩니다.
 전체 프로젝트 환경에서 Codex는 **68 passed, 1 skipped**를 확인했습니다. 이 결과를 사용자 실행으로 기록하지 않습니다.
 
 보내주실 것은 **작성한 테스트 함수와 실행 결과**입니다. 실패하면 생략하지 않은 traceback도 함께 보내 주세요.
