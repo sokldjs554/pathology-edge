@@ -143,12 +143,12 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: WSI/IHC 추가 후 현재 호스트·Ubuntu Actions **56 passed**. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
-- 사용자 좌표 함수 관련 **12 tests skipped**. 완성 또는 통과로 기록하지 않습니다.
+- 일반 테스트: 사용자 좌표 함수 검토 후 Codex 호스트에서 **68 passed**. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
+- 사용자가 좌표 함수와 **12 passed in 0.31s**를 제출했습니다. Codex도 같은12개를 통과했고, 이제 기본 전체 테스트에 포함됩니다. [검토·실행 구분](artifacts/learning/step01-review.json).
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
 - 공개 버전7에서 Chromium·WebKit 각각 실제 조작 **46 tests**, 기존 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태·지연 복구를 확인했습니다. [확장 근거](docs/WSI_REVIEW.md). 과거 공개 버전5의 각26개 검사 기록은 [기존 보고서](docs/INTERVIEW_UI.md)에 유지했습니다.
-- 사용자가 데모 화면의 정상 표시를 확인했습니다([U07](docs/CONTRIBUTIONS.md)). 브라우저 버전·개별 조작·macOS 로컬 테스트 실행은 아직 확인하지 않았습니다.
+- 사용자가 데모 화면의 정상 표시를 확인했습니다([U07](docs/CONTRIBUTIONS.md)). 브라우저 버전·개별 조작은 미확인입니다. 좌표 함수의12개 테스트 통과는 사용자 보고로 확인했으며, 상세 실행 환경 로그는 받지 않았습니다.
 - GitHub Actions: [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829667), [checkout UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668), [공개 URL UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474) 성공. UI 소스 `b5024b0` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다. 공개2,188개 파일의 저장소 정합성은 `artifacts/ui/wsi/production-files.json`에 있습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
@@ -156,7 +156,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ```bash
 # 저장소 루트, 개발 환경 설치 후: 제공 모델의 실제 추론
 python -m pathology_edge.cli infer --image dist/assets/10_1.png --backend cpp --threads 4
-# 저장소 루트: 일반 테스트 (사용자 과제는 명시적 skip)
+# 저장소 루트: 일반 테스트 (검토 완료한 사용자 좌표 함수 포함)
 python -m pytest -q
 # 저장소 루트: 사전 계산 결과를 로컬 웹에서 검토
 python -m http.server 8000 --directory dist --bind 127.0.0.1
@@ -167,9 +167,9 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 ## 사용자와 Codex의 역할
 
-지금 사용자가 직접 작성할 부분은 `src/pathology_edge/learner_coordinates.py`의
-`local_to_level0` 하나입니다. [1단계 요구사항·macOS 테스트](docs/STEP_01.md)에 따라
-코드와 실제 테스트 출력을 보내면 검토한 뒤 다음 단계로 진행합니다. 정답 코드는 비워 두었습니다.
+사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
+Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 현재 남은 사용자 단계는
+[1단계 예제](docs/STEP_01.md)에서 x/y 배율을 각각 적용하는 이유 한 문장입니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을
@@ -179,7 +179,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 ## 남은 한계
 
 WSI 전체 모델 처리, 자동 IHC 검출·분할·Ki67 임상 지수, ViT/사전학습 비교, 다중 seed·신뢰구간,
-외부 정확도 검증·병리 전문가·임상 검증은 미수행입니다. CMU WSI에는 핵 정답이 없고, IHC는 단일 기관·제공 중심점 조건입니다. 전체 WSI JPEG 타일을 포함해 저장소 용량이 증가했습니다. 일반 배율 좌표 함수는 사용자 작성 대기입니다.
+외부 정확도 검증·병리 전문가·임상 검증은 미수행입니다. CMU WSI에는 핵 정답이 없고, IHC는 단일 기관·제공 중심점 조건입니다. 전체 WSI JPEG 타일을 포함해 저장소 용량이 증가했습니다. 사용자 좌표 함수는 구현·검토됐으며 실제 파이프라인의 일반 배율 어댑터 연결은 별도 후속 작업입니다.
 단순 핵 foreground만으로 임상 세포 수를 정할 수 없고, 두 테스트 그룹의 성능 차이가 큽니다.
 현재 test를 보며 모델을 다시 선택하면 새 평가 설계가 필요합니다.
 

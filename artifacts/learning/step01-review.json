@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-08",
+  "function": "local_to_level0",
+  "source_file": "src/pathology_edge/learner_coordinates.py",
+  "source_sha256": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+  "user_contribution": {
+    "code": "Full function submitted in chat",
+    "reported_test_output": "12 passed in 0.31s",
+    "full_machine_log_received": false,
+    "coordinate_explanation_received": false
+  },
+  "codex_changes": {
+    "algorithm_changed": false,
+    "normalization": "Removed chat HTML/Markdown escaping; retained existing NumPy import; updated module status documentation.",
+    "test_promotion": "Removed pending learner marker from the same 12 tests; fixed collection hook to inspect an explicit marker instead of the directory-derived learner keyword."
+  },
+  "codex_verification": {
+    "focused_tests": "12 passed in 0.07s",
+    "focused_log": "step01-codex-tests.txt",
+    "full_suite_log": "step01-full-suite.txt",
+    "extra_checks": [
+      {
+        "case": "string coordinates",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "complex coordinates",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "boolean coordinates",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "object coordinates",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "scalar coordinates",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "3D coordinates",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "nested origin",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "NaN origin",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "length-one downsample array",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "2D downsample array",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "NaN scale",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "infinite scale",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "zero y scale",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "missing y scale",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "nested scale",
+        "result": "ValueError as required"
+      },
+      {
+        "case": "negative/subpixel/read-only coordinates, independent float64 output",
+        "result": "[-110, 204], input unchanged"
+      }
+    ],
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "full_suite_passed": 68,
+    "full_suite_skipped": 0,
+    "extra_checks_passed": 16
+  },
+  "integration_scope": "Reviewed standalone coordinate utility; existing model/data/UI/native ROI path unchanged. General WSI adapter integration remains pending."
+}

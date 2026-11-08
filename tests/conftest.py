@@ -8,6 +8,6 @@ def pytest_addoption(parser):
 def pytest_collection_modifyitems(config, items):
     if not config.getoption("--run-learner"):
         for item in items:
-            if "learner" in item.keywords:
-                item.add_marker(pytest.mark.skip(reason="USER STEP 1 pending; use --run-learner"))
+            if item.get_closest_marker("learner") is not None:
+                item.add_marker(pytest.mark.skip(reason="User exercise pending; use --run-learner"))
 

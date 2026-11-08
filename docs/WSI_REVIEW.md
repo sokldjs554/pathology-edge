@@ -50,7 +50,7 @@ IHC는 CC BY-NC4 PathereaP1 실제1,330patch/29case/19,972점을 사용했다. �
 
 ## 직접 확인할 첫 단계
 
-2026-11-08 후속 답변에서 사용자가 “잘 나와”라고 화면 정상 표시를 확인했다. 아래 개별 조작 전체를 실행했다는 확인은 아니므로 U07은 부분 확인으로 기록했다([기여 기록](CONTRIBUTIONS.md)). 다음 직접 작성 단계는 [STEP_01](STEP_01.md)의 좌표 변환 함수 하나다.
+2026-11-08 후속 답변에서 사용자가 “잘 나와”라고 화면 정상 표시를 확인했다. 아래 개별 조작 전체를 실행했다는 확인은 아니므로 U07은 부분 확인으로 기록했다([기여 기록](CONTRIBUTIONS.md)). 후속으로 [STEP_01](STEP_01.md)의 좌표 함수와12개 테스트 통과 보고를 받았으며, 현재 좌표계 설명 한 문장을 기다린다.
 
 1. [WSI 화면](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)을 연다. 제공 슬라이드의 전체 스캔과 분석 ROI세 개가 보이고, 목록·안내에 ‘저장 결과’라고 표시되어야 한다.
 2. R1을 누른다. 양쪽이 같은 조직 위치로 이동하며 결과 패널에0.297s/1.899s가 표시되어야 한다. 작은 화면은 ‘영역 목록’을 먼저 연다.
@@ -58,13 +58,13 @@ IHC는 CC BY-NC4 PathereaP1 실제1,330patch/29case/19,972점을 사용했다. �
 4. 드래그와 일반 두 손가락 스크롤로 각각 이동한다. 두 영상의 원본 중심좌표가 함께 움직여야 한다. Ctrl/⌘+스크롤은 확대이며 오른쪽 아래 개요도에 위치가 보인다.
 5. ‘중복 출처’를 누른다. 억제→유지 번호, 서로 다른 원patch와IoU/거리 조건을 확인한다. 작은 화면은 A/B버튼과 ‘결과·출처’를 사용한다.
 
-확인 후 브라우저/OS·누른 순서·이동 여부·이해하기 어려웠던 표기를 보내면 그 결과를 검토한 뒤 다음 단계로 넘어간다. 사용자 직접 작성 과제는 여전히 [STEP_01](STEP_01.md)의 `learner_coordinates.py::local_to_level0`이며 정답은 넣지 않았다. 원본좌표·리사이즈 일반 변환은 사용자 작성 후 검토한다.
+확인 후 브라우저/OS·누른 순서·이동 여부·이해하기 어려웠던 표기를 보내면 그 결과를 검토한 뒤 다음 단계로 넘어간다. 사용자가 제출한 `learner_coordinates.py::local_to_level0`는 요구사항 검토와 독립 테스트를 통과했다. [검토 기록](../artifacts/learning/step01-review.json). 기존 WSI 분석 경로에 일반 배율 어댑터를 연결하는 작업은 별도로 남아 있다.
 
 추후 비교할 화면은 정답 경계의11_1개선/10_3악화, IHC의실패/정답 사례다. 전체 재현을 한꺼번에 요구하지 않는다. 명령은 [RUNBOOK](RUNBOOK.md)에 실행 폴더·용도와 함께 두었다. 문제 제보 시커밋·브라우저버전·화면크기·ROI/사례ID·조작순서·콘솔오류나캡처를 보내면 된다.
 
 ## 검증·배포와 캡처
 
-로컬·Ubuntu CPU 검사에서 **56 passed / 사용자 과제12 skipped**, 기존 Node 좌표5개, JS 문법·정적 파일 검사가 통과했다. [최종 UI checkout 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668)는 **Chromium46 / WebKit46 passed**, flaky/skip0이다. [동일 커밋 CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829667)도 성공했다.
+버전7 배포 당시 로컬·Ubuntu CPU 검사에서 **56 passed / 사용자 과제12 skipped**, 기존 Node 좌표5개, JS 문법·정적 파일 검사가 통과했다. [최종 UI checkout 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668)는 **Chromium46 / WebKit46 passed**, flaky/skip0이다. [동일 커밋 CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829667)도 성공했다.
 
 UI 검증 항목은 기존26개에 IHC9개와 WSI11개를 추가했다. 실제 DZI의 서로 다른 level과 최고 level16 요청, 3ROI의 입력 좌표·수치, SVG 강조 중심과 양쪽 native 중심의 일치, 드래그·일반 스크롤·수정키 줌, 후보 중심 클릭·클릭 후 드래그, navigator 이동, 선택 분기의 혼동 방지, 분석 밖 표시, 기존 GT 사례 링크, 1024/390/375px, metadata/타일/overlay 오류·빈 목록·15초 지연 복구를 포함한다. IHC16사례의 원영상·crop·GT점·확률·metrics·split·출처와 모바일·오류 복구도 확인했다. 실제 macOS/Safari 구버전을 실행한 결과가 아니라 Ubuntu의 Chromium/WebKit 결과다.
 
@@ -74,7 +74,7 @@ UI 검증 항목은 기존26개에 IHC9개와 WSI11개를 추가했다. 실제 D
 
 자체 타일을 포함한 **공개 버전7**을 배포했다. GitHub UI 소스는 `b5024b04df25eba38bf4cf2aa81ef11df713407d`, Sites source는 `3021c2cbaef0be488d8349c46656e33514c90131`이다. 실제 공개2,188개 파일 모두 저장소 `dist/`와 일치했다([대조 기록](../artifacts/ui/wsi/production-files.json)). Sites 저장소의1회64MiB 전송 한도는45MiB 미만 파일 묶음의 커밋을 순서대로 push하여 처리했다. 최종 tree는 GitHub와 동일하며 영상 품질을 추가로 낮추지 않았다. 브라우저의 HTML 검사에서는 알려진 Cloudflare 주입이 있을 때에만 전체 template SHA를 먼저 검증하고 요청별 ray/time값을 제외한다. 임의 script나 HTML 차이를 무시하지 않는다.
 
-[공개 URL 최종 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474)에서 **Chromium46/46, WebKit46/46 모두 통과**, skipped/flaky/unexpected는0이었다. [전체 검증 기록](../artifacts/ui/wsi/verification.json), [Chromium 보고](../artifacts/ui/wsi/report-chromium.json), [WebKit 보고](../artifacts/ui/wsi/report-webkit.json), [실제 tile 요청](../artifacts/ui/wsi/wsi-real-tile-requests.json), [배포 메타데이터](../artifacts/ui/wsi/deployment.json). 사용자 테스트는 완료 처리하지 않았다.
+[공개 URL 최종 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474)에서 **Chromium46/46, WebKit46/46 모두 통과**, skipped/flaky/unexpected는0이었다. [전체 검증 기록](../artifacts/ui/wsi/verification.json), [Chromium 보고](../artifacts/ui/wsi/report-chromium.json), [WebKit 보고](../artifacts/ui/wsi/report-webkit.json), [실제 tile 요청](../artifacts/ui/wsi/wsi-real-tile-requests.json), [배포 메타데이터](../artifacts/ui/wsi/deployment.json). 이 배포 검증 당시 사용자 테스트는 미완료였다. 이후 좌표 함수12개 테스트 통과 보고는 [기여 기록](CONTRIBUTIONS.md)의 U02에 별도로 반영했다.
 
 아래는 모두 실제 공개 URL의 브라우저 캡처다. Codex가 전체 스캔·경계·후보 번호/원patch·모바일·IHC 화면을 열어 시각 검토했다. 오류 캡처는 테스트에서 의도적으로 타일 응답을 차단한 상태이며 정상 배포 장애라는 의미가 아니다.
 
@@ -96,4 +96,4 @@ UI 검증 항목은 기존26개에 IHC9개와 WSI11개를 추가했다. 실제 D
 
 ## 남은 한계
 
-WSI 전체 모델 처리·외부GT정확도·다기관/다seed·전문가/임상 검증은 하지 않았다. CMU정확한염색/조직형이 문서화되지 않았고 TNBC모델을 그대로 적용해 domain차이가 있다. IHC는 주어진 중심점의조건부분류로 자동검출과 임상Ki67지수를 대신하지 않는다. 클래스불균형과 양성비종양구분 약점이 있다. IHC source데이터는 비상업적 조건이며 상업 서비스로 전용할 권리를 주장하지 않는다. WSI source는 CC0로 별개다. 전체 타일을 저장소에 포함해 clone용량이 약133MiB 늘었다. 로컬 정적 서버에서도 전체 탐색이 가능하다. macOS11.7.11의 사용자 브라우저·사용자실행과제는 아직 미확인이다.
+WSI 전체 모델 처리·외부GT정확도·다기관/다seed·전문가/임상 검증은 하지 않았다. CMU정확한염색/조직형이 문서화되지 않았고 TNBC모델을 그대로 적용해 domain차이가 있다. IHC는 주어진 중심점의조건부분류로 자동검출과 임상Ki67지수를 대신하지 않는다. 클래스불균형과 양성비종양구분 약점이 있다. IHC source데이터는 비상업적 조건이며 상업 서비스로 전용할 권리를 주장하지 않는다. WSI source는 CC0로 별개다. 전체 타일을 저장소에 포함해 clone용량이 약133MiB 늘었다. 로컬 정적 서버에서도 전체 탐색이 가능하다. 사용자의 정확한 브라우저 버전·개별 조작은 미확인이다. 좌표 함수12개 테스트는 사용자 통과 보고를 받았으며 전체 프로젝트 실행을 사용자 기여로 확대하지 않는다.

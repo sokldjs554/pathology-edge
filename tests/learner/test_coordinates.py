@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from pathology_edge.learner_coordinates import local_to_level0
 
-pytestmark = pytest.mark.learner
+# STEP 1 was submitted and reviewed; these tests now run in the default suite.
 
 
 def test_known_example_and_no_mutation():
