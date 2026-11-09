@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U34",
+  "status": "User WSI boundary case screen report accepted",
+  "user_answer_verbatim": "잘 보여",
+  "question_context": "Asked whether R1 차이가 큰 경계 shows the same white-box location in both views and B added 347px / removed 123px in the result panel.",
+  "confirmed_from_reply": "The requested matching boundary location and added/removed pixel values are visible, as reported in response to that question.",
+  "scope": "User report for R1-boundary-1 only; no direct observation of the user's browser.",
+  "not_separately_confirmed": [
+    "Boundary-band changed count of 413px",
+    "Interpretation of colors or accuracy improvement",
+    "Exact level-0 coordinates",
+    "Other ROIs, candidate tracing, WSI drag/scroll or browser versions"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "previous_evidence": "artifacts/learning/step23-preparation.json",
+    "previous_evidence_source_hashes_still_match": true,
+    "wsi_ground_truth_flag": false,
+    "review": "Checked the existing WSI metadata and UI text on ground truth and prediction-change colors; no fresh mask recomputation, browser run, inference or accuracy measurement."
+  },
+  "next_step": {
+    "document": "docs/STEP_24.md",
+    "user_status": "Pending",
+    "task": "Explain whether WSI B added 347px can be described as 347 pixels corrected against ground truth, compared with TNBC."
+  }
+}
