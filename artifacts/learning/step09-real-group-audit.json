@@ -1,0 +1,52 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "Codex",
+  "function": "pathology_edge.learner_split.find_group_leaks (user-submitted)",
+  "manifest_path": "artifacts/manifest.json",
+  "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+  "checked_in_manifest_equals_prepared_manifest": true,
+  "records": 50,
+  "images_by_split": {
+    "train": 33,
+    "validation": 10,
+    "test": 7
+  },
+  "groups_by_split": {
+    "train": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07"
+    ],
+    "validation": [
+      "08",
+      "09"
+    ],
+    "test": [
+      "10",
+      "11"
+    ]
+  },
+  "group_leaks": {},
+  "synthetic_check": {
+    "scope": "Copied metadata in memory only; not actual experiment or model output",
+    "change": "Move copied record 01_1 from train to test",
+    "group_leaks": {
+      "01": [
+        "train",
+        "test"
+      ]
+    }
+  },
+  "input_records_preserved": true,
+  "manifest_file_preserved": true,
+  "image_files_rehashed": false,
+  "patient_identity_independently_checked": false,
+  "near_duplicate_images_checked": false,
+  "new_training_or_inference_run": false,
+  "user_real_manifest_execution_confirmed": false
+}

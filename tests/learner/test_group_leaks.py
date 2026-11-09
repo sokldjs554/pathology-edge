@@ -1,11 +1,11 @@
-"""Codex-provided contract tests for the unfinished STEP 9 user function."""
+"""Codex-provided contract tests for the reviewed STEP 9 user function."""
 from copy import deepcopy
 
 import pytest
 
 from pathology_edge.learner_split import find_group_leaks
 
-pytestmark = pytest.mark.learner
+# STEP 9 was submitted and reviewed; include these tests in the default suite.
 
 
 def test_empty_input_has_no_reported_group_conflicts():
