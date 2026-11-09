@@ -1,0 +1,31 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U24",
+  "status": "User requested screen check accepted",
+  "user_answer_verbatim": "국소 경계 Dice 0.546 → 0.433  같은 위치 보여줌",
+  "confirmed_from_report": {
+    "local_boundary_dice_before": "0.546",
+    "local_boundary_dice_after": "0.433",
+    "same_location_in_both_views": true
+  },
+  "scope": "User report after STEP_13 instructions to open 10_1 and click current-example boundary; not a direct observation of the user browser.",
+  "saved_case_id": "10_1-worsened",
+  "display_values_match_saved_case": true,
+  "not_confirmed_by_this_reply": [
+    "Browser name/version",
+    "Numeric ROI coordinates",
+    "10/162 pixel counts",
+    "Overlay toggles",
+    "Mouse drag",
+    "Two-finger scrolling",
+    "Other examples/tabs"
+  ],
+  "user_screenshot_received": false,
+  "new_user_code_or_test_execution_claimed": false,
+  "next_step": {
+    "document": "docs/STEP_14.md",
+    "user_status": "Pending",
+    "task": "Drag one enlarged image and confirm both views move together"
+  }
+}

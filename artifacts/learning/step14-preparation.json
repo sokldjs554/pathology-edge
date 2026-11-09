@@ -1,0 +1,51 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "Codex",
+  "scope": "Local Chromium only; production and user browser drag not checked in this run",
+  "browser_version": "Chrome/156.0.8078.79",
+  "gesture": {
+    "canvas": "before",
+    "mouse_button": "left",
+    "screen_dx": 80,
+    "screen_dy": 0
+  },
+  "before": {
+    "sample": "10_1",
+    "before": {
+      "zoom": "4.88889",
+      "center": "112.000,128.000",
+      "case": "10_1-worsened"
+    },
+    "after": {
+      "zoom": "4.88889",
+      "center": "112.000,128.000",
+      "case": "10_1-worsened"
+    },
+    "scores": "국소 경계 Dice 0.546 → 0.433 (Δ -0.113)"
+  },
+  "after": {
+    "sample": "10_1",
+    "before": {
+      "zoom": "4.88889",
+      "center": "95.636,128.000",
+      "case": "10_1-worsened"
+    },
+    "after": {
+      "zoom": "4.88889",
+      "center": "95.636,128.000",
+      "case": "10_1-worsened"
+    },
+    "scores": "국소 경계 Dice 0.546 → 0.433 (Δ -0.113)"
+  },
+  "checks": {
+    "both_views_moved": true,
+    "same_center_after": true,
+    "zoom_preserved": true,
+    "case_and_local_dice_preserved": true,
+    "pixel_to_image_displacement_matches_zoom": true
+  },
+  "screenshot": "step14-local-drag.png",
+  "user_drag_confirmation": "pending",
+  "user_two_finger_scroll_confirmation": "pending"
+}
