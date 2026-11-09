@@ -1,7 +1,7 @@
 # 실행 안내 — 필요할 때 참고
 
 이 문서는 이후 재현을 위한 참고자료입니다. 아래 전체를 한 번에 수행하는 과제가 아닙니다.
-1·2단계 코드·실행 보고,3단계 해석,4단계 Dice 구현·20개 통과 보고,5단계 실제 검산 성공 출력,6·7단계 결과 해석을 확인했습니다. 현재는 [STEP_08](STEP_08.md)의 일반화 범위 질문 하나에 답합니다. 추가 설치나 실행은 없습니다.
+1·2단계 코드·실행 보고,3단계 해석,4단계 Dice 구현·20개 통과 보고,5단계 실제 검산 성공 출력,6~8단계 결과 해석을 확인했습니다. 현재는 [STEP_09](STEP_09.md)의 그룹 누수 보고 함수 하나를 작성·검사합니다. Python 표준 라이브러리·pytest면 충분합니다.
 사용자 실행 완료는 로그를 받은 뒤에만 기록합니다. 모든 명령은 별도 표시가 없으면
 **`pathology-edge` 저장소 루트**에서 실행합니다.
 
@@ -89,7 +89,7 @@ python -m pathology_edge.cli export --output work/reproduction --dest work/repro
 ## 6. 테스트
 
 ```bash
-python -m pytest --run-learner tests/learner/test_dice_score.py -q
+python -m pytest --run-learner tests/learner/test_group_leaks.py -q
 python -m pytest -q
 python -m pytest --run-learner -q
 python scripts/verify_cpp_real.py
@@ -99,7 +99,7 @@ python scripts/benchmark.py
 
 순서대로 사용자 과제만 / 구현된 전체 기능 / 사용자 과제 포함 전체 / 실제 이미지 C++ 일치 /
 데모 파일 연결 / 추출 속도·메모리를 확인합니다. **검토 완료한 좌표 함수의 12개 테스트는 이제 전체 기본 테스트에도 포함됩니다.**
-완료한 좌표·NMS 반례·Dice 테스트는 기본 검사에 포함됩니다. 현재 기본 검사는 **89개 통과·0개 skip**이며, Dice의20개도 `--run-learner` 없이 실행할 수 있습니다.
+완료한 좌표·NMS 반례·Dice 테스트는 기본 검사에 포함됩니다. 9단계 준비 후 기본 검사는 **89개 통과·18개 skip**입니다. 새 그룹 검사는 `--run-learner`로 활성화하며, 사용자 작성 전에는18개가 NotImplementedError로 실패하는 것이 예상 상태입니다.
 `verify_cpp_real.py`에는 준비한 원 데이터가 필요합니다. benchmark는 합성 RGB를 사용하며
 의학적 성능 근거로 쓰지 않습니다. 다른 무거운 작업을 끈 상태에서 실행하세요.
 
@@ -117,7 +117,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 ## 추가 WSI / IHC 재현 참고
 
-아래는 이후 재현용이며 지금 할 사용자 과제는 STEP_08의 일반화 범위 검토 하나입니다. 전체 프로젝트 설치는 Python 3.11 이상, 실제 검증 환경은 Ubuntu/Python3.12입니다. 경량 실습의 Python3.10 이상 조건과 구분합니다.
+아래는 이후 재현용이며 지금 할 사용자 과제는 STEP_09의 그룹 분리 검사 함수 하나입니다. 전체 프로젝트 설치는 Python 3.11 이상, 실제 검증 환경은 Ubuntu/Python3.12입니다. 경량 실습의 Python3.10 이상 조건과 구분합니다.
 
 저장소 루트에서, WSI 원본 읽기 기능을 설치하고 원본을 별도 `work/`에 내려받습니다. 약132.6MB이며 CC0입니다.
 

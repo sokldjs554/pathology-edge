@@ -3,7 +3,7 @@
 **병리 이미지의 패치 경계가 핵 분할에 미치는 영향을 재현하고 검토하는 연구용 작업대.**
 같은 모델의 무겹침·겹침 처리를 비교하고, 정확도·처리 시간·메모리·실패 사례를 함께 공개합니다.
 
-[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 8단계 검토](docs/STEP_08.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
+[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 9단계 실습](docs/STEP_09.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
@@ -144,6 +144,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
 - 일반 테스트: 4단계 사용자 Dice 검토 후 Codex 호스트에서 **89 passed, 0 skipped**. 완료한 사용자 테스트도 기본 CI에 포함됩니다. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
+- 9단계 준비 후 최신 Codex 검사: **89 passed, 18 skipped**. 새 그룹 누수 보고 함수는 사용자 작성 대기이며18개 skip을 통과로 집계하지 않습니다. [준비 기록](artifacts/learning/step09-preparation.json).
 - 사용자가 Dice 함수와 **20 passed in 0.01s**를 제출했습니다. Codex 독립20개 통과와 실제 TNBC 점수42개·평균6개의 원 실험/화면 일치를 확인했습니다. [검토 기록](artifacts/learning/step04-review.json), [검산 기록](artifacts/learning/step04-real-dice-audit.json). 준비 당시69통과/20skip은 과거 기록입니다. 사용자도 로컬 빈 함수 오류 복구 안내 후 검산을 재실행해42/42·6/6 일치 출력을 제출했습니다. [사용자 실행 보고 검토](artifacts/learning/step05-review.json).
 - 사용자가 NMS 반례 테스트 본문과 **1 passed in 0.01s**를 제출했습니다. 독립 실행에서도1개 통과했고 기본 전체 검사에 편입했습니다. [검토 기록](artifacts/learning/step02-review.json). 준비 당시68통과/1skip은 과거 기록입니다.
 - 사용자가 좌표 함수와 **12 passed in 0.31s**를 제출했습니다. Codex도 같은12개를 통과했고, 이제 기본 전체 테스트에 포함됩니다. [검토·실행 구분](artifacts/learning/step01-review.json).
@@ -171,7 +172,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
 Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. [2단계](docs/STEP_02.md)의 반례 해석·테스트 작성·실행 보고, [3단계](docs/STEP_03.md)의 과대 집계 설명, [4단계](docs/STEP_04.md)의 Dice 구현·20개 테스트 통과 보고도 확인했습니다.
-[5단계](docs/STEP_05.md)에서 사용자도 본인이 작성한 Dice로 실제 저장 결과를 재계산하고42개 점수·6개 평균 일치 출력을 제출했습니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다. [6단계](docs/STEP_06.md)의 영역별 평균 변화와 [7단계](docs/STEP_07.md)의 평균·개별 이미지 구분 설명도 확인했습니다. 현재는 [8단계](docs/STEP_08.md)의 일반화 범위 질문 하나에 답합니다.
+[5단계](docs/STEP_05.md)에서 사용자도 본인이 작성한 Dice로 실제 저장 결과를 재계산하고42개 점수·6개 평균 일치 출력을 제출했습니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다. [6단계](docs/STEP_06.md)의 영역별 평균, [7단계](docs/STEP_07.md)의 평균·개별 이미지, [8단계](docs/STEP_08.md)의 일반화 한계 설명도 확인했습니다. 현재는 [9단계](docs/STEP_09.md)의 그룹 누수 보고 함수 하나를 직접 작성·검사합니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을

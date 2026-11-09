@@ -1,0 +1,621 @@
+FFFFFFFFFFFFFFFFFF                                                       [100%]
+=================================== FAILURES ===================================
+_______________ test_empty_input_has_no_reported_group_conflicts _______________
+
+    def test_empty_input_has_no_reported_group_conflicts():
+>       result = find_group_leaks([])
+                 ^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_group_leaks.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = []
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______ test_separate_groups_and_repeated_group_in_one_split_are_allowed _______
+
+    def test_separate_groups_and_repeated_group_in_one_split_are_allowed():
+        records = [
+            {"group_id": "01", "split": "train"},
+            {"group_id": "01", "split": "train"},
+            {"group_id": "08", "split": "validation"},
+            {"group_id": "10", "split": "test"},
+        ]
+>       assert find_group_leaks(records) == {}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_group_leaks.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': '01', 'split': 'train'}, {'group_id': '01', 'split': 'train'}, {'group_id': '08', 'split': 'validation'}, {'group_id': '10', 'split': 'test'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_________ test_same_group_leaks_even_when_image_ids_and_hashes_differ __________
+
+    def test_same_group_leaks_even_when_image_ids_and_hashes_differ():
+        records = [
+            {"id": "a", "image_sha256": "synthetic-hash-a", "group_id": "01", "split": "train"},
+            {"id": "b", "image_sha256": "synthetic-hash-b", "group_id": "01", "split": "test"},
+        ]
+>       assert find_group_leaks(records) == {"01": ["train", "test"]}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_group_leaks.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'id': 'a', 'image_sha256': 'synthetic-hash-a', 'group_id': '01', 'split': 'train'}, {'id': 'b', 'image_sha256': 'synthetic-hash-b', 'group_id': '01', 'split': 'test'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+___________ test_reports_all_conflicts_once_in_canonical_split_order ___________
+
+    def test_reports_all_conflicts_once_in_canonical_split_order():
+        records = [
+            {"group_id": "B", "split": "test"},
+            {"group_id": "A", "split": "validation"},
+            {"group_id": "B", "split": "train"},
+            {"group_id": "A", "split": "train"},
+            {"group_id": "B", "split": "validation"},
+            {"group_id": "A", "split": "validation"},
+            {"group_id": "C", "split": "test"},
+        ]
+>       assert find_group_leaks(records) == {
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+            "A": ["train", "validation"],
+            "B": ["train", "validation", "test"],
+        }
+
+tests/learner/test_group_leaks.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 'B', 'split': 'test'}, {'group_id': 'A', 'split': 'validation'}, {'group_id': 'B', 'split': 'train'}, {'...p_id': 'A', 'split': 'train'}, {'group_id': 'B', 'split': 'validation'}, {'group_id': 'A', 'split': 'validation'}, ...]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+______ test_record_order_does_not_affect_result_and_inputs_are_preserved _______
+
+    def test_record_order_does_not_affect_result_and_inputs_are_preserved():
+        records = [
+            {"group_id": "g", "split": "test", "extra": {"origin": [0, 1]}},
+            {"group_id": "g", "split": "train", "extra": {"origin": [2, 3]}},
+        ]
+        before = deepcopy(records)
+>       assert find_group_leaks(records) == {"g": ["train", "test"]}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_group_leaks.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 'g', 'split': 'test', 'extra': {'origin': [0, 1]}}, {'group_id': 'g', 'split': 'train', 'extra': {'origin': [2, 3]}}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+__________________ test_group_ids_are_not_coerced_to_integers __________________
+
+    def test_group_ids_are_not_coerced_to_integers():
+>       assert find_group_leaks([
+            {"group_id": "01", "split": "train"},
+            {"group_id": "1", "split": "test"},
+        ]) == {}
+
+tests/learner/test_group_leaks.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': '01', 'split': 'train'}, {'group_id': '1', 'split': 'test'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_________________ test_invalid_records_raise_value_error[None] _________________
+
+records = None
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = None
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records1] _______________
+
+records = {}
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = {}
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records2] _______________
+
+records = ()
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = ()
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records3] _______________
+
+records = [None]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [None]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records4] _______________
+
+records = [{'split': 'train'}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'split': 'train'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records5] _______________
+
+records = [{'group_id': '', 'split': 'train'}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': '', 'split': 'train'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records6] _______________
+
+records = [{'group_id': '   ', 'split': 'train'}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': '   ', 'split': 'train'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records7] _______________
+
+records = [{'group_id': 1, 'split': 'train'}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 1, 'split': 'train'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records8] _______________
+
+records = [{'group_id': 'g'}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 'g'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+_______________ test_invalid_records_raise_value_error[records9] _______________
+
+records = [{'group_id': 'g', 'split': 'val'}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 'g', 'split': 'val'}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+______________ test_invalid_records_raise_value_error[records10] _______________
+
+records = [{'group_id': 'g', 'split': None}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 'g', 'split': None}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+______________ test_invalid_records_raise_value_error[records11] _______________
+
+records = [{'group_id': 'g', 'split': []}]
+
+    @pytest.mark.parametrize("records", [
+        None,
+        {},
+        (),
+        [None],
+        [{"split": "train"}],
+        [{"group_id": "", "split": "train"}],
+        [{"group_id": "   ", "split": "train"}],
+        [{"group_id": 1, "split": "train"}],
+        [{"group_id": "g"}],
+        [{"group_id": "g", "split": "val"}],
+        [{"group_id": "g", "split": None}],
+        [{"group_id": "g", "split": []}],
+    ])
+    def test_invalid_records_raise_value_error(records):
+        with pytest.raises(ValueError):
+>           find_group_leaks(records)
+
+tests/learner/test_group_leaks.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'group_id': 'g', 'split': []}]
+
+    def find_group_leaks(records: list[dict]) -> dict[str, list[str]]:
+        """Return groups seen in multiple splits, with train/validation/test ordering.
+    
+        Follow the validation, empty-input and input-preservation contract in STEP_09.
+        Read group_id and split only; do not call data.check_split or change records.
+        """
+>       raise NotImplementedError("사용자 작성 예정: docs/STEP_09.md")
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_09.md
+
+src/pathology_edge/learner_split.py:15: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/learner/test_group_leaks.py::test_empty_input_has_no_reported_group_conflicts
+FAILED tests/learner/test_group_leaks.py::test_separate_groups_and_repeated_group_in_one_split_are_allowed
+FAILED tests/learner/test_group_leaks.py::test_same_group_leaks_even_when_image_ids_and_hashes_differ
+FAILED tests/learner/test_group_leaks.py::test_reports_all_conflicts_once_in_canonical_split_order
+FAILED tests/learner/test_group_leaks.py::test_record_order_does_not_affect_result_and_inputs_are_preserved
+FAILED tests/learner/test_group_leaks.py::test_group_ids_are_not_coerced_to_integers
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[None]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records1]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records2]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records3]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records4]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records5]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records6]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records7]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records8]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records9]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records10]
+FAILED tests/learner/test_group_leaks.py::test_invalid_records_raise_value_error[records11]
+18 failed in 0.07s

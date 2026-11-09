@@ -1,0 +1,58 @@
+{
+  "prepared_date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "Codex",
+  "user_implementation": "pending",
+  "user_test_execution": "pending",
+  "user_solution_supplied": false,
+  "provided": [
+    "function signature and stub",
+    "18 contract tests",
+    "input/output contract, synthetic example, download and test commands"
+  ],
+  "design_choice": "Report every cross-split group independently using standard-library Python. Keep the production fail-fast group/hash/ID validator unchanged; defer near-duplicate and patient identity checks.",
+  "default_suite": {
+    "passed": 89,
+    "skipped_pending_user": 18,
+    "log": "step09-preparation-suite.txt"
+  },
+  "opt_in_template": {
+    "exit_code": 1,
+    "expected": "18 NotImplementedError failures; implementation is unfinished",
+    "log": "step09-template-expected-failure.txt"
+  },
+  "codex_existing_manifest_check": {
+    "validator": "pathology_edge.data.check_split",
+    "records": 50,
+    "images_by_split": {
+      "train": 33,
+      "validation": 10,
+      "test": 7
+    },
+    "groups_by_split": {
+      "train": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "validation": [
+        "08",
+        "09"
+      ],
+      "test": [
+        "10",
+        "11"
+      ]
+    },
+    "passed": true,
+    "learner_function_used": false,
+    "patient_identity_independently_confirmed": false
+  },
+  "python": "3.12.14",
+  "production_validator_changed": false,
+  "model_or_demo_changed": false
+}
