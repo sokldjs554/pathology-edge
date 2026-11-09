@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U38",
+  "status": "User WSI analysis scope interpretation accepted",
+  "user_answer_verbatim": "아니요. WSI에서는 슬라이드 탐색과 일부 ROI(관심 영역)의 핵 예측·분석을 수행했지만, WSI 전체의 핵 분석을 완료한 것은 아닙니다. 성능 검증은 정답 마스크가 있는 TNBC 테스트 이미지 7장·2개 케이스 그룹을 대상으로 수행했으며, WSI 전체에 대한 정답 기반 성능 검증은 진행하지 않았다고 설명해야 합니다.",
+  "confirmed_from_reply": [
+    "Whole-slide browsing and inference on selected ROIs do not constitute whole-slide inference",
+    "Ground-truth segmentation evaluation used 7 TNBC images from 2 case groups",
+    "No ground-truth-based evaluation of this entire WSI was performed"
+  ],
+  "scope": "User interpretation of WSI versus TNBC segmentation scope. IHC classification is a separate experiment, not covered by this answer.",
+  "not_separately_confirmed": [
+    "User independently recomputed the 0.2079% coverage figure",
+    "New model inference or performance evaluation by the user",
+    "IHC screen operation or classification interpretation"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": "Checked unchanged WSI coverage evidence and TNBC manifest counts. Prepared the first IHC error example by comparing saved test predictions, decoded source pixels and display crop. Investigated an initial audit hash-assumption failure without modifying source data; no new browser run, training or inference.",
+  "next_step": {
+    "document": "docs/STEP_28.md",
+    "user_status": "Pending",
+    "task": "Open IHC incorrect-01 and confirm the image plus positive tumor ground truth / positive non-tumor prediction labels.",
+    "preparation": "artifacts/learning/step28-preparation.json"
+  }
+}

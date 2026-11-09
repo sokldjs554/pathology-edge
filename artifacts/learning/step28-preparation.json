@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "example_id": "incorrect-01",
+  "case_id": "case_0004",
+  "truth_label": "Ki67 양성 종양 세포",
+  "prediction_label": "Ki67 양성 비종양 세포",
+  "display_score": "50.9%",
+  "center": [
+    179,
+    98
+  ],
+  "crop_bbox": [
+    155,
+    74,
+    203,
+    122
+  ],
+  "checks": {
+    "example_matches_original_results": true,
+    "labels_and_probabilities_match_unique_test_prediction": true,
+    "exported_source_pixels_match_recorded_source_pixel_hash": true,
+    "source_and_crop_dimensions_match": true,
+    "crop_pixels_equal_source_bbox": true,
+    "crop_marker_offset_matches": true
+  },
+  "hash_semantics_diagnosis": {
+    "initial_assertion": "Original-file source_sha256 was incorrectly compared with the exported PNG byte hash and failed.",
+    "original_source_sha256": "8fd797a1ff454f7a07349aef40c0223f8e726f298530f77a76b824814e503cc7",
+    "exported_source_png_sha256": "10793c4b24a5dd77908c6efae078f54cbc0e3ebb50b5258b0d7a818503596241",
+    "resolution": "Exporter reads original image as RGB, saves a new PNG, records original-file byte hash separately from decoded RGB pixel hash. Checked export code and exact decoded pixel equality to the recorded pixel hash. No source files or metadata were modified to make the check pass."
+  },
+  "source_sha256": {
+    "dist/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "artifacts/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "artifacts/ihc/test-predictions.json": "9b934d1e35a69a3a8a9a288175d7a5d897cb6dd0ca2dc419645d5b224888c275",
+    "dist/ihc/examples/incorrect-01-source.png": "10793c4b24a5dd77908c6efae078f54cbc0e3ebb50b5258b0d7a818503596241",
+    "dist/ihc/examples/incorrect-01-crop.png": "8aa65c32259a2e18bbed0473d0c45761a7f1b06443e31aab5ba605f8f0809322",
+    "dist/ihc.js": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675",
+    "dist/ihc.html": "63e85e3637974376ca0b411b73285fcfd5518bd486695199d546bf5f724b04ec",
+    "src/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe"
+  },
+  "scope": "One stored example checked against the saved test row, recorded original-pixel hash and crop pixels. Inspected UI source, export code and existing tests; no original dataset reread, new browser test, model inference, training or independent annotation validation."
+}
