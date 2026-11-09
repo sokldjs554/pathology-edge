@@ -2,6 +2,8 @@
 
 상태: **사용자 실행·출력 제출 대기**. 11단계에서 사용자는 서로 다른 그룹의 같은 파일이 분할을 넘을 수 있으므로 해시 비교도 필요하다고 설명했습니다. 이번에는 새 함수를 작성하지 않고 확인 명령 하나를 실행합니다.
 
+2026-11-09 받은 후속 출력에는 기존 그룹 검사 결과만 있고 `unique_image_hashes`·`image_hash_leaks`가 없습니다. 해시 검사를 실행했는지 확인되지 않아 완료나 실패로 기록하지 않았습니다. 아래의 **해시 검사만 다시 확인하기** 명령으로 두 줄을 확인합니다. [출력 검토 기록](../artifacts/learning/step12-output-incomplete.json).
+
 ## 무엇을 확인하는가
 
 `artifacts/manifest.json`의50개 레코드에서 사용자 작성 `find_group_leaks`로 그룹 ID를 검사하고, 저장된 `image_sha256`이 서로 다른 split에 등장하는지도 비교합니다. 해시 비교와 출력 코드는 Codex 제공입니다. 이를 사용자 작성 코드로 기록하지 않습니다.
@@ -45,6 +47,28 @@ image_hash_leaks: {}
 ```
 
 **터미널 출력 전체**를 보내 주세요. 실패하면 실행 명령과 traceback을 함께 보내 주세요. 사용자가 실행하기 전에는 완료로 기록하지 않습니다.
+
+## 해시 검사만 다시 확인하기
+
+그룹 검사 실행은 이미10단계에서 확인했습니다. 아래는 남은 저장 해시 비교만 수행하는 축약 명령입니다. **저장소 루트**에서 실행하며 추가 패키지는 필요하지 않습니다.
+
+```bash
+cd ~/Projects/pathology-edge
+source .venv/bin/activate
+python - <<'PY'
+import json
+from pathlib import Path
+
+records = json.loads(Path("artifacts/manifest.json").read_text())["records"]
+seen = {}
+for record in records:
+    seen.setdefault(record["image_sha256"], set()).add(record["split"])
+print("unique_image_hashes:", len(seen))
+print("image_hash_leaks:", {h: sorted(s) for h, s in seen.items() if len(s) > 1})
+PY
+```
+
+기대 결과는 `unique_image_hashes: 50`과 `image_hash_leaks: {}`입니다. **이 명령에서 실제로 출력된 두 줄**을 보내 주세요. 출력이 다르거나 오류가 나면 해당 내용을 그대로 보내 주세요.
 
 ## 결과를 해석할 범위
 

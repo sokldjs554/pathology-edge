@@ -1,0 +1,12 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U23",
+  "status": "Pending hash-check output; do not mark complete or failed",
+  "user_reported_output": "records: 50\ngroups: 11\nimages_by_split: {'train': 33, 'validation': 10, 'test': 7}\ngroup_leaks: {}",
+  "missing_output_fields": ["unique_image_hashes", "image_hash_leaks"],
+  "assessment": "Received output matches the previously accepted group-only audit. It does not establish whether the new hash comparison was executed; the actual command was not provided.",
+  "next_action": "Run the shortened hash-only metadata command in STEP_12 and return both output lines.",
+  "prior_group_audit_completion_retained": true,
+  "user_hash_execution_confirmed": false
+}
