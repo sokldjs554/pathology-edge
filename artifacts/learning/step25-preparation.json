@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "roi_id": "R1",
+  "pair": {
+    "suppressed_index": 1301,
+    "kept_index": 1106,
+    "suppressed_raw_index": 1301,
+    "kept_raw_index": 1106,
+    "suppressed_patch_id": 144,
+    "kept_patch_id": 128,
+    "box_iou": 1.0,
+    "center_distance": 1.1368683772161603e-13,
+    "iou_threshold": 0.3,
+    "distance_threshold": 8,
+    "iou_trigger": true,
+    "distance_trigger": true,
+    "touches_edge_priority": false,
+    "suppressed_touches_edge": false,
+    "kept_touches_edge": false,
+    "suppressed_score": 0.9050188660621643,
+    "kept_score": 0.9051289558410645,
+    "priority_rule": "complete component, then higher score, then lower raw index; first matching kept candidate"
+  },
+  "display_ids": {
+    "suppressed": 1302,
+    "kept": 1107
+  },
+  "patches": [
+    {
+      "id": 144,
+      "origin_local": [
+        0,
+        576
+      ],
+      "origin_level0": [
+        5888,
+        21184
+      ],
+      "bbox_local": [
+        0,
+        576,
+        128,
+        704
+      ],
+      "bbox_level0": [
+        5888,
+        21184,
+        6016,
+        21312
+      ],
+      "valid_size": [
+        128,
+        128
+      ],
+      "size": 128
+    },
+    {
+      "id": 128,
+      "origin_local": [
+        0,
+        512
+      ],
+      "origin_level0": [
+        5888,
+        21120
+      ],
+      "bbox_local": [
+        0,
+        512,
+        128,
+        640
+      ],
+      "bbox_level0": [
+        5888,
+        21120,
+        6016,
+        21248
+      ],
+      "valid_size": [
+        128,
+        128
+      ],
+      "size": 128
+    }
+  ],
+  "checks": {
+    "ui_candidates_pairs_patches_match_original_report": true,
+    "kept_and_suppressed_membership_match": true,
+    "candidate_and_patch_level0_coordinates_match": true,
+    "candidates_inside_source_patch_bounds": true,
+    "pair_iou_distance_and_triggers_match": true
+  },
+  "source_sha256": {
+    "dist/wsi.json": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+    "artifacts/wsi/R1_overlap.json": "54288dd4a4f1f95102fe6ba9e6072fb797d9f53569a531afac14b5b64bff80ce",
+    "dist/wsi.js": "bc5c280e966e37b57d9349bf6fc2be88cf6700629c568c0c7c9bb80f7382e19b",
+    "dist/wsi.html": "43b28a8cd27d4a4845f4ef9d68bacb3a33fe99a1ef6860e16786f48c403f7f4f",
+    "src/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "src/pathology_edge/merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3"
+  },
+  "scope": "Stored candidate/patch provenance audit and source/UI-test-definition inspection. Codex independently called the user coordinate function; the viewer does not call Python. No NMS replay, new browser run, inference or biological correctness assessment."
+}
