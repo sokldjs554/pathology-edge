@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U41",
+  "status": "Confirmed",
+  "user_answer_verbatim": "정답과 예측 모두 Ki67 양성이므로 양성·음성 구분은 맞았지만, 종양 세포를 비종양 세포로 잘못 분류한 것이 오류입니다.",
+  "confirmed_from_reply": "In incorrect-01, the Ki67-positive attribute agrees while tumor versus non-tumor is misclassified.",
+  "assistance_received": "Codex supplied the two saved class labels and asked which attribute differed; user supplied the interpretation.",
+  "scope": "Interpretation of one saved example. Does not establish binary Ki67 accuracy across the test set or explain all errors.",
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "previous_evidence": "artifacts/learning/step30-preparation.json",
+    "previous_evidence_source_hashes_still_match": true,
+    "new_inference": false,
+    "new_training": false,
+    "new_browser_check": false
+  },
+  "next_step": {
+    "document": "docs/STEP_31.md",
+    "user_status": "Pending",
+    "task": "Explain how this one tumor-to-non-tumor misclassification changes the numerator and denominator of the annotated tumor-cell positive ratio, holding other cells fixed."
+  }
+}

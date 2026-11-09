@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "formula": "positive tumor cells / (positive tumor cells + negative tumor cells)",
+  "class_definition": {
+    "numerator": [
+      0
+    ],
+    "denominator": [
+      0,
+      1
+    ],
+    "excluded_non_tumor": [
+      2,
+      3
+    ]
+  },
+  "source_review": "tumor_ratios separately counts ground-truth and predicted classes. The displayed subsidiary result is scoped to annotated cells at supplied GT centers.",
+  "saved_case_audit": {
+    "case_id": "case_0004",
+    "cell_count": 566,
+    "ground_truth_numerator": 107,
+    "ground_truth_denominator": 288,
+    "prediction_numerator": 99,
+    "prediction_denominator": 359,
+    "ratios_match_saved_report": true,
+    "public_case_matches_original": true
+  },
+  "exercise_scope": "Isolate the contribution of incorrect-01 by holding other cells fixed. Actual case totals include other classification errors and must not be attributed to this one cell.",
+  "source_sha256": {
+    "src/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "artifacts/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "dist/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "artifacts/ihc/test-predictions.json": "9b934d1e35a69a3a8a9a288175d7a5d897cb6dd0ca2dc419645d5b224888c275",
+    "dist/ihc.html": "63e85e3637974376ca0b411b73285fcfd5518bd486695199d546bf5f724b04ec",
+    "dist/ihc.js": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675"
+  },
+  "scope": "Read-only recomputation from saved class labels and formula/rendering-code review. No new feature extraction, inference, training or browser run. No user execution or interpretation claimed."
+}
