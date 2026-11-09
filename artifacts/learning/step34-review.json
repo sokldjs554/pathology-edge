@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U45",
-  "status": "Environment and data preparation reports confirmed; user training pending",
+  "status": "User training reached epoch 16; saved results and numerical reproduction discrepancy under review",
   "user_output_normalized": "Python: 3.12.3 /opt/venv/bin/python\nPyTorch: 2.15.0+cpu\nSource: /workspaces/pathology-edge/src/pathology_edge/__init__.py\nC++ import: OK",
   "confirmed_from_user_report": {
     "python": "3.12.3",
@@ -14,16 +14,19 @@
     "data_preparation": {
       "images": 50,
       "manifest": "data/manifest.json"
-    }
+    },
+    "training_progress": "Complete epoch 14, 15, 16 log rows received; confirms user execution reached epoch 16."
   },
   "evidence_scope": "User-supplied command output from the requested Codespaces check; not a Codex remote inspection of their session.",
   "not_confirmed": [
     "Architecture and OpenCV version",
     "Checkout commit and Git status",
-    "Training",
-    "Full test suite execution"
+    "Full test suite execution",
+    "Final training report/model files and normal command completion",
+    "Saved best epoch, selected threshold and validation Dice",
+    "Exact reproduction and cause of numerical differences"
   ],
-  "assistance_received": "Codex supplied the devcontainer configuration and environment/data-preparation commands. User supplied execution output. No user-authored model code or user training execution is claimed.",
+  "assistance_received": "Codex supplied the model, environment/data preparation and fixed-condition training commands. User supplied environment/data output and partial training logs. User execution is credited; no user-authored model implementation or exact reproduction is claimed.",
   "codex_work": {
     "previous_preparation_configuration_hashes_match": {
       ".devcontainer/Dockerfile": true,
@@ -70,13 +73,125 @@
           "training_stub_called": true
         }
       }
+    },
+    "current_review": "Read baseline history and training selection/save flow; compared all supplied complete log rows. Numerical mismatch recorded without changing model or conditions.",
+    "summary_command_verification": {
+      "scope": "Executed exact documented read-only snippet on the previously saved Codex Ubuntu run, using the host mount path; not the user Codespace.",
+      "exit_code": 0,
+      "completed_epochs": 16,
+      "model_file_matches_report": true,
+      "missing_run_variable_stops_with_clear_message": true,
+      "initial_check_failure": "First pointed at older Codex host run lacking source-commit.txt; FileNotFoundError correctly stopped summary. Retested using the Ubuntu verification run that had executed the documented metadata commands. No files fabricated.",
+      "new_training_or_inference": false
     }
   },
   "next_user_action": {
     "working_directory": "/workspaces/pathology-edge",
-    "task": "Run the unchanged TinyUNet baseline once in a fresh work/my-tnbc-baseline.* directory; send Run path and final epoch log. Review training.json next before claiming reproduction.",
-    "training_status": "Pending user output",
+    "task": "In the same terminal, read the saved training summary including run path, best epoch, threshold, score, model hash, config, environment and captured source status; send full output. Do not rerun training.",
+    "training_status": "Epoch 16 reached; final report review pending",
     "reference": "docs/STEP_34.md"
   },
-  "data_preparation_output_normalized": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\n{\"images\": 50, \"manifest\": \"data/manifest.json\"}"
+  "data_preparation_output_normalized": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\n{\"images\": 50, \"manifest\": \"data/manifest.json\"}",
+  "training_log_report": {
+    "complete_rows": [
+      {
+        "epoch": 14,
+        "train_loss": 0.6248055592179298,
+        "validation_dice": {
+          "0.35": 0.46384528865747415,
+          "0.5": 0.4510496158898397,
+          "0.65": 0.4368729445729714
+        }
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.6135369896888733,
+        "validation_dice": {
+          "0.35": 0.5197988099709685,
+          "0.5": 0.5088034450393012,
+          "0.65": 0.4893506102666086
+        }
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.594966746866703,
+        "validation_dice": {
+          "0.35": 0.5090085221798153,
+          "0.5": 0.5012017684535199,
+          "0.65": 0.4886163395328705
+        }
+      }
+    ],
+    "leading_fragment": "2486537641603, \"0.65\": 0.5205519432916852}}",
+    "leading_fragment_interpreted": false,
+    "run_path_submitted": false,
+    "full_history_submitted": false,
+    "comparison_to_saved_baseline": [
+      {
+        "epoch": 14,
+        "exact_match": false,
+        "baseline": {
+          "epoch": 14,
+          "train_loss": 0.6167118161916733,
+          "validation_dice": {
+            "0.35": 0.4460998241063212,
+            "0.5": 0.4332294563676123,
+            "0.65": 0.419151531720645
+          }
+        },
+        "user_minus_baseline": {
+          "train_loss": 0.008093743026256539,
+          "validation_dice": {
+            "0.35": 0.017745464551152945,
+            "0.5": 0.01782015952222743,
+            "0.65": 0.017721412852326368
+          }
+        }
+      },
+      {
+        "epoch": 15,
+        "exact_match": false,
+        "baseline": {
+          "epoch": 15,
+          "train_loss": 0.6165337070822716,
+          "validation_dice": {
+            "0.35": 0.5070336417531641,
+            "0.5": 0.4977193197193359,
+            "0.65": 0.48217931403945097
+          }
+        },
+        "user_minus_baseline": {
+          "train_loss": -0.0029967173933983515,
+          "validation_dice": {
+            "0.35": 0.012765168217804379,
+            "0.5": 0.011084125319965277,
+            "0.65": 0.00717129622715762
+          }
+        }
+      },
+      {
+        "epoch": 16,
+        "exact_match": false,
+        "baseline": {
+          "epoch": 16,
+          "train_loss": 0.6066850528120995,
+          "validation_dice": {
+            "0.35": 0.5112015542611046,
+            "0.5": 0.5051041697403853,
+            "0.65": 0.4952525697649294
+          }
+        },
+        "user_minus_baseline": {
+          "train_loss": -0.011718305945396468,
+          "validation_dice": {
+            "0.35": -0.0021930320812892923,
+            "0.5": -0.0039024012868653646,
+            "0.65": -0.006636230232058893
+          }
+        }
+      }
+    ],
+    "last_epoch_is_not_necessarily_saved_best_model": true,
+    "cause": "Unknown; configuration, environment, source snapshot and saved result requested. No environment cause asserted."
+  }
 }
