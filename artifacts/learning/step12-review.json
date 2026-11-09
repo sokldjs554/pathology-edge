@@ -1,0 +1,35 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U23",
+  "status": "User saved-hash comparison execution report accepted",
+  "user_evidence": {
+    "console_output": "step12-user-output.txt",
+    "normalization": "Removed the blank line only; values and text preserved.",
+    "sha256": "97bddc01a9c30e1004f71dfbf53603cdc569d965129de91305e5e7ab594b69d2",
+    "reported_unique_image_hashes": 50,
+    "reported_image_hash_leaks": {},
+    "local_manifest_received": false,
+    "local_image_files_rehashed": false
+  },
+  "codex_review": {
+    "manifest_path": "artifacts/manifest.json",
+    "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+    "records": 50,
+    "unique_image_hashes": 50,
+    "image_hash_leaks": {},
+    "reported_values_match": true
+  },
+  "attribution": {
+    "hash_comparison_code": "Codex provided",
+    "execution_and_output_submission": "User reported",
+    "group_function": "User authored; execution confirmed separately in STEP_10"
+  },
+  "scope": "Compare stored manifest hash strings only; not raw image byte verification, near-duplicate search or patient identity validation.",
+  "previous_missing_output_record": "step12-output-incomplete.json; retained as historical evidence",
+  "next_step": {
+    "document": "docs/STEP_13.md",
+    "user_status": "Pending",
+    "task": "Open 10_1 and inspect its current-example boundary in the demo"
+  }
+}
