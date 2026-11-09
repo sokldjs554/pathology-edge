@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U40",
+  "status": "Core interpretation confirmed; classifier-input correction pending",
+  "user_answer_verbatim": "아니요. 이번 IHC 실험은 세포의 정답 중심 좌표를 입력으로 제공받았고, 모델은 해당 위치 주변의 48px 영상을 이용해 종양·비종양 세포와 Ki67 양성·음성을 조합한 4개 클래스를 분류했습니다. 따라서 세포 위치를 자동으로 검출한 것이 아니라, 이미 주어진 세포 위치에서 종류를 예측한 실험이며 자동 검출 성능은 검증하지 않았습니다.",
+  "confirmed_from_reply": [
+    "Expert-provided ground-truth center positions are supplied.",
+    "The prediction is one of four tumor/non-tumor and Ki67-positive/negative classes.",
+    "This experiment does not evaluate automatic cell detection."
+  ],
+  "correction_provided_by_codex": {
+    "phrase_requiring_correction": "해당 위치 주변의 48px 영상을 이용해",
+    "display_crop_size_pixels": [
+      48,
+      48
+    ],
+    "display_crop_role": "Visual inspection of the example; the crop is not passed as classifier input.",
+    "classifier_input": "40 local color statistics extracted from circular regions of radii 3 and 7 pixels around the supplied center, standardized with training-set parameters.",
+    "model_type": "multinomial_logistic_regression",
+    "user_correction_received": false
+  },
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "source_review": [
+      "read_points returns centers and separate class targets; extract_features receives RGB and centers.",
+      "extract_features computes mean/std of ten color channels over each radius.",
+      "predict_proba standardizes 40 features and applies the saved linear classifier and softmax.",
+      "Example export separately saves a 48x48 display crop."
+    ],
+    "saved_model_checks": {
+      "feature_names_match_source": true,
+      "feature_count": 40,
+      "radii_pixels": [
+        3,
+        7
+      ],
+      "coefficient_shape": [
+        4,
+        40
+      ],
+      "scaler_dimensions": [
+        40,
+        40
+      ],
+      "published_model_matches_original": true,
+      "published_scope_matches_original": true
+    },
+    "source_sha256": {
+      "src/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+      "artifacts/ihc/model.json": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+      "dist/ihc/model.json": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+      "artifacts/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+      "dist/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506"
+    },
+    "new_feature_extraction": false,
+    "new_inference": false,
+    "new_training": false,
+    "new_browser_check": false
+  },
+  "next_step": {
+    "document": "docs/STEP_29.md",
+    "user_status": "Awaiting corrected explanation",
+    "task": "Restate the difference between the displayed 48x48 crop and the actual classifier input in one sentence."
+  }
+}
