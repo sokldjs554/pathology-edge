@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U30",
+  "status": "User timing scope interpretation accepted",
+  "user_answer_verbatim": "57.2ms(A)와 309.3ms(B)는 CPU에서 이미지 처리 파이프라인을 실행한 시간으로, RGB 추출·조직 검사·모델 추론·확률 결합·후보 추출·NMS를 포함하며, 예열 후 이미지별 3회 실행 중앙값을 구한 뒤 7개 이미지의 중앙값을 계산한 결과입니다. 웹페이지 로딩 시간이 아니라 실제 모델 처리 시간이며, 모델 로딩·디스크 입출력·정답 평가는 제외됩니다.",
+  "confirmed_from_reply": [
+    "CPU image-processing pipeline time, distinct from webpage loading",
+    "Warm execution with per-image medians of 3 runs, then the median across 7 images",
+    "Model loading, disk I/O and ground-truth scoring excluded",
+    "Preprocessing, model inference and postprocessing are included rather than forward-only latency"
+  ],
+  "codex_clarification": "NMS runs in the overlap method B and is bypassed in no_overlap A. This method-specific clarification was supplied by Codex, not independently stated by the user.",
+  "scope": "Interpretation of the reported stored timing values; no separate confirmation that the user opened the measurement-conditions disclosure.",
+  "not_separately_confirmed": [
+    "Disclosure opened or new browser operations performed",
+    "Fresh measurements on the user's machine",
+    "User independently stated the method-specific NMS distinction",
+    "WSI latency or end-to-end deployment latency"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": "Checked the explanation against timing scope and the conditional NMS call; verified previous timing-audit source hashes; replayed NMS on saved 11_2 candidates for the next review. No new timing, browser run, training or inference.",
+  "next_step": {
+    "document": "docs/STEP_20.md",
+    "user_status": "Pending",
+    "task": "Open the first merge pair in TNBC 11_2 and confirm navigation and suppressed #74 -> kept #54 labels.",
+    "preparation": "artifacts/learning/step20-preparation.json"
+  }
+}

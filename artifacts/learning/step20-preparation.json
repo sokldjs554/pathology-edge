@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "sample_id": "11_2",
+  "validation": {
+    "ui_payload_matches_original": true,
+    "replayed_nms_matches_all_kept_and_removed": true,
+    "raw_count": 116,
+    "kept_count": 33,
+    "suppressed_count": 83
+  },
+  "first_pair": {
+    "stored_zero_based": {
+      "suppressed_index": 73,
+      "kept_index": 53
+    },
+    "display_one_based": {
+      "suppressed": 74,
+      "kept": 54
+    },
+    "suppressed_candidate": {
+      "x": 262.98237885462555,
+      "y": 228.23788546255506,
+      "bbox": [
+        255,
+        220,
+        272,
+        237
+      ],
+      "area": 227,
+      "score": 0.8993005752563477,
+      "patch_id": 27,
+      "touches_edge": false
+    },
+    "kept_candidate": {
+      "x": 262.98237885462555,
+      "y": 228.23788546255508,
+      "bbox": [
+        255,
+        220,
+        272,
+        237
+      ],
+      "area": 227,
+      "score": 0.8994767665863037,
+      "patch_id": 19,
+      "touches_edge": false
+    },
+    "bbox_iou": 1.0,
+    "centroid_distance_px": 2.842170943040401e-14
+  },
+  "source_sha256": {
+    "dist/results.json": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+    "artifacts/objects_overlap.json": "d8269270c35b5cb5555375b0d740ba9fdc688b778eb5e064b71aba200c2b2fbd",
+    "src/pathology_edge/merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "dist/app.js": "d5c2c9003a35cba10b3d021ce3e161712950600b79d1be548845b1d8bab34379",
+    "dist/index.html": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656"
+  },
+  "scope": "Replayed deterministic NMS on saved candidates only; inspected UI pair selection, numbering and label drawing plus an existing UI test definition. No new inference, browser run or biological identity validation."
+}
