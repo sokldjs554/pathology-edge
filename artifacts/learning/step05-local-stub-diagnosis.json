@@ -1,0 +1,19 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_status": "Audit attempted; stopped at learner_metrics.py line 21 with NotImplementedError. Successful rerun pending.",
+  "user_reported_error": "NotImplementedError: 사용자 작성 예정: docs/STEP_04.md",
+  "root_cause": "The imported local learner_metrics.py still contains the exercise stub. The prior download command only updated audit_dice.py.",
+  "accepted_function_commit": "d7bcd55cd03a67c69b8865366acb9ada09e4f269",
+  "local_user_files_accessed": false,
+  "codex_verification": {
+    "historical_stub_reproduced_error": true,
+    "method": "Temporarily bind the historical stub in the audit module in memory, then restore the accepted user function.",
+    "accepted_function_dice_checks": 42,
+    "accepted_function_mean_checks": 6,
+    "max_absolute_error": 0.0,
+    "model_inference_run": false
+  },
+  "resolution": "Back up the local learner_metrics.py, restore only that file from the accepted commit, rerun the existing audit.",
+  "user_resolution_confirmed": false
+}

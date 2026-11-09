@@ -144,7 +144,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
 - 일반 테스트: 4단계 사용자 Dice 검토 후 Codex 호스트에서 **89 passed, 0 skipped**. 완료한 사용자 테스트도 기본 CI에 포함됩니다. 배포 버전7 당시 Ubuntu Actions는 **56 passed / 사용자12 skipped**였습니다. 기존 Ubuntu 24.04 Docker 실행은 **33 passed**이며 이번에 Docker를 다시 실행하지 않았습니다.
-- 사용자가 Dice 함수와 **20 passed in 0.01s**를 제출했습니다. Codex 독립20개 통과와 실제 TNBC 점수42개·평균6개의 원 실험/화면 일치를 확인했습니다. [검토 기록](artifacts/learning/step04-review.json), [검산 기록](artifacts/learning/step04-real-dice-audit.json). 준비 당시69통과/20skip은 과거 기록이며 사용자 검산 실행은 예정입니다.
+- 사용자가 Dice 함수와 **20 passed in 0.01s**를 제출했습니다. Codex 독립20개 통과와 실제 TNBC 점수42개·평균6개의 원 실험/화면 일치를 확인했습니다. [검토 기록](artifacts/learning/step04-review.json), [검산 기록](artifacts/learning/step04-real-dice-audit.json). 준비 당시69통과/20skip은 과거 기록입니다. 사용자 첫 검산은 로컬 빈 함수에서 중단돼 [복구 후 재실행](docs/STEP_05.md) 대기입니다.
 - 사용자가 NMS 반례 테스트 본문과 **1 passed in 0.01s**를 제출했습니다. 독립 실행에서도1개 통과했고 기본 전체 검사에 편입했습니다. [검토 기록](artifacts/learning/step02-review.json). 준비 당시68통과/1skip은 과거 기록입니다.
 - 사용자가 좌표 함수와 **12 passed in 0.31s**를 제출했습니다. Codex도 같은12개를 통과했고, 이제 기본 전체 테스트에 포함됩니다. [검토·실행 구분](artifacts/learning/step01-review.json).
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.

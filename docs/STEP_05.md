@@ -1,6 +1,6 @@
 # 5단계: 내가 작성한 Dice로 실제 저장 결과 재계산
 
-상태: **사용자 실행·결과 확인 대기**. 4단계 Dice 코드와 `20 passed in 0.01s` 보고를 확인했습니다.
+상태: **사용자 실행 시도 확인·복구 후 재실행 대기**. 2026-11-09 로컬 `learner_metrics.py`의 빈 함수에서 `NotImplementedError`가 발생한 traceback을 받았습니다. 검산 성공은 아직 확인되지 않았습니다. 4단계 Dice 코드와 `20 passed in 0.01s` 보고는 별도 완료 기록으로 유지합니다.
 이번에는 새 함수를 작성하지 않고, 본인이 작성한 함수로 실제 결과를 확인하는 명령 하나를 실행합니다.
 
 ## 무엇을 확인하는가
@@ -42,6 +42,23 @@ python -m pip install numpy pillow
 
 이 실습은 NumPy와 PNG를 읽는 Pillow만 필요합니다. PyTorch·OpenCV·SciPy 설치나 데이터 재다운로드는 필요하지 않습니다.
 
+## `NotImplementedError: 사용자 작성 예정`이 발생한 경우
+
+오류 경로가 `src/pathology_edge/learner_metrics.py`이고 `raise NotImplementedError`에서 멈추면, 검산 스크립트가 읽은 파일에 아직 과제용 빈 함수가 남아 있다는 뜻입니다. 이전 준비 명령은 검산 스크립트만 받으므로 이 파일까지 갱신하지 않습니다. 앞서 작성·제출한 Dice의 계산 오류라는 뜻은 아닙니다.
+
+프로젝트 루트에서 현재 파일을 백업한 뒤, 제출한 본문이 그대로 반영된 커밋의 파일 하나만 받습니다. 첫 백업이 이미 있으면 `cp -n`은 덮어쓰지 않습니다.
+
+```bash
+cd ~/Projects/pathology-edge
+git fetch origin
+mkdir -p work
+cp -p -n src/pathology_edge/learner_metrics.py work/learner_metrics.before-restore.py && git restore --source=d7bcd55 -- src/pathology_edge/learner_metrics.py
+source .venv/bin/activate
+python scripts/audit_dice.py --output work/my-dice-audit.json
+```
+
+Codex는 과거 빈 함수를 검산 코드에 연결해 같은 오류를 재현하고, 검토 완료 함수로 바꾸면42개 점수·6개 평균이 일치함을 확인했습니다. 사용자 Mac 파일에 직접 접근하거나 수정한 것은 아닙니다. [진단 기록](../artifacts/learning/step05-local-stub-diagnosis.json).
+
 ## 직접 실행할 명령 하나
 
 **`pathology-edge/` 저장소 루트**에서 실행합니다.
@@ -74,4 +91,4 @@ JSON에는 이미지·방식·영역별 값과 원 값, 입력 파일·사용자
 
 - 사용자 완료: Dice 함수 구현, 단위 테스트20개 통과 보고.
 - Codex 완료: PNG·기록 읽기와 검산 스크립트, 기존 사용자 함수로42개 점수·6개 평균 대조. [Codex 실행 기록](../artifacts/learning/step04-real-dice-audit.json).
-- 사용자 예정: 위 검산 명령 실행과 실제 출력 확인. Codex가 성공한 결과를 사용자 실행으로 기록하지 않습니다.
+- 사용자 진행 중: 검산 실행을 시도했으나 로컬 빈 함수에서 중단됐습니다. 복구 후 재실행·전체 출력 확인 대기입니다. Codex가 성공한 결과를 사용자 검산 성공으로 기록하지 않습니다.
