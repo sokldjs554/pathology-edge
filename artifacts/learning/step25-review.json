@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U36",
+  "status": "User WSI candidate provenance screen report accepted",
+  "user_answer_verbatim": "응 잘 보여",
+  "question_context": "Asked whether tracing the first R1 pair moves the view and shows suppressed #1302 -> kept #1107 plus source patch IDs 144 -> 128.",
+  "confirmed_from_reply": "The requested navigation, candidate numbers and source patch IDs are visible, as reported in response to that question.",
+  "scope": "User report for the single R1 trace flow; no direct observation of the user's browser.",
+  "not_separately_confirmed": [
+    "Patch origin coordinates or individual IoU/distance values interpreted",
+    "Biological identity or correctness of suppression",
+    "WSI drag or scroll gestures",
+    "Other pairs, ROIs, magnifications or browser versions"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "previous_evidence": "artifacts/learning/step25-preparation.json",
+    "previous_evidence_source_hashes_still_match": true,
+    "review": "Inspected existing OpenSeadragon mouse settings, wheel pan/zoom branches, viewport synchronization and WSI test definitions. No new browser run, NMS replay or inference."
+  },
+  "next_step": {
+    "document": "docs/STEP_26.md",
+    "user_status": "Pending",
+    "task": "Check synchronized WSI movement with click-drag and unmodified two-finger scrolling; report each input separately."
+  }
+}
