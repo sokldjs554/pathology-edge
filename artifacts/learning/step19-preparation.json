@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "test_images": 7,
+  "case_groups": 2,
+  "repeats_per_image": 3,
+  "methods": {
+    "no_overlap": {
+      "image_medians_seconds": {
+        "10_1": 0.06703034600002411,
+        "10_2": 0.04272576599998956,
+        "10_3": 0.05717446799997106,
+        "10_4": 0.04296841099994708,
+        "11_1": 0.07487374499999078,
+        "11_2": 0.055009287999951084,
+        "11_3": 0.07664611899997453
+      },
+      "median_image_seconds": 0.05717446799997106,
+      "display_ms": "57.2",
+      "environment": {
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "torch": "2.15.0+cpu",
+        "numpy": "2.5.4",
+        "opencv": "5.0.0",
+        "cpu_count": 5,
+        "torch_threads": 4,
+        "cuda": false,
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "timing_scope": "warm CPU; RGB extraction + tissue gate + forward + stitch + components + NMS; excludes disk I/O, scoring and model load"
+    },
+    "overlap": {
+      "image_medians_seconds": {
+        "10_1": 0.3093040609999207,
+        "10_2": 0.17865827100001752,
+        "10_3": 0.3247012330000416,
+        "10_4": 0.24720120099993892,
+        "11_1": 0.3234139019999702,
+        "11_2": 0.2848888570000554,
+        "11_3": 0.3442777650000153
+      },
+      "median_image_seconds": 0.3093040609999207,
+      "display_ms": "309.3",
+      "environment": {
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "torch": "2.15.0+cpu",
+        "numpy": "2.5.4",
+        "opencv": "5.0.0",
+        "cpu_count": 5,
+        "torch_threads": 4,
+        "cuda": false,
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "timing_scope": "warm CPU; RGB extraction + tissue gate + forward + stitch + components + NMS; excludes disk I/O, scoring and model load"
+    }
+  },
+  "ratio_b_over_a": 5.409828404526253,
+  "display_ratio": "5.41",
+  "matched_image_medians": 14,
+  "matched_aggregate_medians": 2,
+  "scope": "Read and compare saved timing records only. No new timing measurement, inference, browser test or user screen confirmation.",
+  "source_sha256": {
+    "artifacts/evaluation.json": "4cfcf602ecda8cb73d8371ab320d000f0e1be87e495c67bcda7ea1946045c1d3",
+    "dist/results.json": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+    "src/pathology_edge/experiment.py": "89450ae3666c6ca3a57d2431fc5cbcdcb8e5a06b788da5fed3baf54a361fbbe7",
+    "dist/review-ui.js": "c46667ddcbdec4f3ada495a4cf1d7237eb946a174722f04f67d977ccab0d9724",
+    "dist/index.html": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656"
+  }
+}
