@@ -1,0 +1,29 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U26",
+  "status": "User two-finger scroll report accepted",
+  "user_answer_verbatim": "잘 작동해",
+  "question_context": "Asked whether two-finger scrolling without Ctrl/Meta over the enlarged image moves both views together.",
+  "confirmed_from_reply": "The requested two-finger scroll movement works, as reported by the user.",
+  "scope": "Same enlarged TNBC 10_1 view; earlier click-drag success is recorded separately under U25. User browser was not observed directly.",
+  "not_separately_confirmed": [
+    "Browser name/version",
+    "Device details",
+    "Exact zoom preservation",
+    "Other magnifications/images/viewers"
+  ],
+  "initial_movement_issue_followup": "Both previously reported interaction types now have success reports for the checked view; do not generalize to all environments.",
+  "new_user_code_or_test_execution_claimed": false,
+  "next_step": {
+    "document": "docs/STEP_16.md",
+    "user_status": "Pending",
+    "task": "Turn changed-pixel highlighting off and on in the same boundary case"
+  },
+  "codex_preparation": {
+    "source": "dist/review-ui.js",
+    "sha256": "c46667ddcbdec4f3ada495a4cf1d7237eb946a174722f04f67d977ccab0d9724",
+    "test_definition": "web-tests/review.spec.js",
+    "review": "Inspected the checkbox-controlled highlight drawing and existing pixel-overlay test definition. No new browser test run in this turn."
+  }
+}
