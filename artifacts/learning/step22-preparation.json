@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "slide": {
+    "id": "cmu-1-jp2k-33005",
+    "size": [
+      46000,
+      32893
+    ]
+  },
+  "roi": {
+    "id": "R1",
+    "origin_level0": [
+      5888,
+      20608
+    ],
+    "size": [
+      1024,
+      1024
+    ],
+    "bbox_level0": [
+      5888,
+      20608,
+      6912,
+      21632
+    ],
+    "center_level0": [
+      6400,
+      21120
+    ]
+  },
+  "checks": {
+    "stored_roi_image_hash_matches": true,
+    "stored_roi_image_size_matches": true,
+    "learner_coordinate_conversion_matches": true,
+    "roi_inside_slide_bounds": true,
+    "tile_source_dimensions_match": true
+  },
+  "coordinate_check": "Codex called the user-authored local_to_level0 with downsample=1 and model_scale=(1,1) as an independent audit. This does not mean the JavaScript viewer calls that Python function.",
+  "ui_source_review": "selectROI defaults to compare mode, fills activeRegion and regionCoordinates, then fits the ROI with a 70px margin and synchronizes viewers. Read existing wsi.spec.js ROI/navigation assertions; not rerun.",
+  "ground_truth_available": false,
+  "source_sha256": {
+    "dist/wsi.json": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+    "dist/wsi/R1.png": "fe9aae2ba037beb47d7aa74e058b0660ab86ad434d7f6676f7fe258fe9f8a7f3",
+    "dist/wsi.js": "bc5c280e966e37b57d9349bf6fc2be88cf6700629c568c0c7c9bb80f7382e19b",
+    "dist/wsi.html": "43b28a8cd27d4a4845f4ef9d68bacb3a33fe99a1ef6860e16786f48c403f7f4f",
+    "src/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149"
+  },
+  "scope": "Stored ROI image integrity/dimensions, coordinate audit and existing UI source/test definitions only. No WSI reread/crop, browser run, inference or user confirmation."
+}
