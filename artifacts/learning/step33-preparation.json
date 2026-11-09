@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "example_id": "incorrect-01",
+  "truth_label": "Ki67 양성 종양 세포",
+  "prediction_label": "Ki67 양성 비종양 세포",
+  "saved_probabilities": [
+    0.49080959784837674,
+    3.5126455409621698e-06,
+    0.5091868891451504,
+    3.609318680443322e-10
+  ],
+  "selected_score": 0.5091868891451504,
+  "display_percent": "50.9%",
+  "probability_calibration": "none",
+  "checks": {
+    "example_matches_unique_saved_test_row": true,
+    "published_example_matches_original": true,
+    "selected_score_is_maximum_class_score": true,
+    "calibration_metadata_agrees": true
+  },
+  "source_review": "predict_proba exports softmax scores; example confidence is their maximum. dist/ihc.js percent multiplies by 100 and formats one decimal in selectedScore. Adjacent HTML calls this an uncalibrated model score.",
+  "source_sha256": {
+    "src/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "artifacts/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "dist/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "artifacts/ihc/test-predictions.json": "9b934d1e35a69a3a8a9a288175d7a5d897cb6dd0ca2dc419645d5b224888c275",
+    "artifacts/ihc/selection.json": "619d1653503b3ffe150b88b4e1cbdb449d29bdcf188266d4c6bba338e5cb9cfb",
+    "dist/ihc.html": "63e85e3637974376ca0b411b73285fcfd5518bd486695199d546bf5f724b04ec",
+    "dist/ihc.js": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675"
+  },
+  "scope": "Saved-score comparison and code/metadata review. No new inference, calibration, training or browser check. The score-display operation and its interpretation have not been confirmed by the user."
+}
