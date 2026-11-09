@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U39",
+  "status": "User IHC classification-label display report accepted",
+  "user_answer_verbatim": "구 분류 잘 나와",
+  "question_context": "Asked whether IHC incorrect-01 shows the image and the ground-truth Ki67-positive tumor / predicted Ki67-positive non-tumor labels.",
+  "confirmed_from_reply": "The classification labels appear, interpreted in the context of the two requested labels.",
+  "scope": "The reply explicitly refers to classification display. Source-image and crop rendering were not separately confirmed. No direct observation of the user's browser.",
+  "not_separately_confirmed": [
+    "Source image and crop rendering",
+    "Center marker, crop outline, scores or other examples",
+    "Understanding of GT-center inputs or classification-versus-detection scope",
+    "Browser name/version or new inference"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "previous_evidence": "artifacts/learning/step28-preparation.json",
+    "previous_evidence_source_hashes_still_match": true,
+    "scope_matches_original_report": true,
+    "verified_scope": {"provided_centers": true, "detection_evaluated": false, "segmentation_evaluated": false, "clinical_assay": false},
+    "review": "Read point-label parsing to feature-extraction wiring and separate targets, and compared UI scope with saved experiment metadata. No new feature extraction, model inference, training or browser run."
+  },
+  "next_step": {
+    "document": "docs/STEP_29.md",
+    "user_status": "Pending",
+    "task": "Distinguish information supplied to the IHC classifier from the model prediction and automatic cell detection."
+  }
+}
