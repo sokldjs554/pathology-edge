@@ -1,0 +1,51 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U16",
+  "status": "User interpretation accepted",
+  "user_answer_verbatim": "아니요. 겹침 방식은 전체 Dice가 0.558001 → 0.560790, 경계 Dice가 0.491793 → 0.527261로 개선됐지만, 내부 Dice는 0.572866 → 0.569630으로 감소했습니다. 따라서 겹침 방식은 경계 영역에서 개선 효과가 크지만, 모든 영역에서 더 우수하다고 말할 수는 없습니다.",
+  "assessment": "Correctly identifies higher all/boundary mean Dice, lower interior mean Dice, and rejects improvement in every region. Applies to this saved test experiment.",
+  "sources": [
+    "artifacts/evaluation.json",
+    "dist/results.json"
+  ],
+  "image_macro_dice": {
+    "no_overlap": {
+      "all": 0.558001243639622,
+      "boundary": 0.4917929383428104,
+      "interior": 0.5728662878255809
+    },
+    "overlap": {
+      "all": 0.5607900860028092,
+      "boundary": 0.5272611646418014,
+      "interior": 0.5696297743598978
+    }
+  },
+  "overlap_minus_no_overlap": {
+    "all": 0.002788842363187216,
+    "boundary": 0.03546822629899099,
+    "interior": -0.0032365134656830996
+  },
+  "new_user_test_execution_claimed": false,
+  "new_user_screen_review_claimed": false,
+  "new_training_or_inference_run": false,
+  "next_step": {
+    "document": "docs/STEP_07.md",
+    "user_status": "Pending",
+    "topic": "Distinguish the test-image mean from individual image results",
+    "image_id": "10_1",
+    "image_dice": {
+      "no_overlap": {
+        "all": 0.6504622016686821,
+        "boundary": 0.6826762472030506,
+        "interior": 0.6443011271171117
+      },
+      "overlap": {
+        "all": 0.6366660279370507,
+        "boundary": 0.6494509611781999,
+        "interior": 0.6340385708870356
+      }
+    },
+    "selected_because": "The first example requested earlier by the user has lower boundary Dice despite a higher test mean. Example, not representative sampling."
+  }
+}

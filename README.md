@@ -3,7 +3,7 @@
 **병리 이미지의 패치 경계가 핵 분할에 미치는 영향을 재현하고 검토하는 연구용 작업대.**
 같은 모델의 무겹침·겹침 처리를 비교하고, 정확도·처리 시간·메모리·실패 사례를 함께 공개합니다.
 
-[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 6단계 해석](docs/STEP_06.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
+[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 7단계 해석](docs/STEP_07.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
@@ -171,7 +171,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
 Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. [2단계](docs/STEP_02.md)의 반례 해석·테스트 작성·실행 보고, [3단계](docs/STEP_03.md)의 과대 집계 설명, [4단계](docs/STEP_04.md)의 Dice 구현·20개 테스트 통과 보고도 확인했습니다.
-[5단계](docs/STEP_05.md)에서 사용자도 본인이 작성한 Dice로 실제 저장 결과를 재계산하고42개 점수·6개 평균 일치 출력을 제출했습니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다. 현재는 [6단계](docs/STEP_06.md)의 영역별 점수 변화 해석 질문 하나에 답합니다.
+[5단계](docs/STEP_05.md)에서 사용자도 본인이 작성한 Dice로 실제 저장 결과를 재계산하고42개 점수·6개 평균 일치 출력을 제출했습니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다. [6단계](docs/STEP_06.md)에서 전체·경계 평균 상승과 내부 평균 하락을 구분한 설명도 확인했습니다. 현재는 [7단계](docs/STEP_07.md)의 테스트 평균과 개별 이미지 결과 구분 질문 하나에 답합니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을
