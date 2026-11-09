@@ -122,7 +122,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 
 ## 업무·기술 대응
 
-지정된 사람인 공고 원문은 열리지 않았습니다. 사용자 요약에 더해 에이비스의 공개 제품 자료와 [병역일터의 별도 공식 채용공고](https://work.mma.go.kr/caisBYIS/search/cygonggogeomsaekView.do?byjjeopche_cd=&cygonggo_no=2000001538893&menu_id=m_m7_1)를 확인했습니다. 동일한 채용공고라고 단정하지 않습니다. [근거와 업무 연결](docs/AIVIS_IHC_FEASIBILITY.md)을 참고하세요.
+2026-11-10에 지정된 사람인 공고 55507517의 모바일 본문에서 자격·우대·접수 일정을 확인했습니다. 주요 업무·기술 목록은 [병역일터의 별도 공식 채용공고](https://work.mma.go.kr/caisBYIS/search/cygonggogeomsaekView.do?byjjeopche_cd=&cygonggo_no=2000001538893&menu_id=m_m7_1)로도 대조했으며 두 공고의 고용 조건·마감일은 구분합니다. [현재 공고와 프로젝트·사용자 기여의 대조 및 보완 우선순위](docs/JOB_MATCH_2026-11-10.md), [제품·IHC 조사](docs/AIVIS_IHC_FEASIBILITY.md)를 참고하세요.
 
 | 기술/업무 | 코드와 실제 실행 |
 |---|---|
