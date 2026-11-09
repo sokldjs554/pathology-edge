@@ -1,0 +1,72 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "status": "User audit execution report accepted; interpretation is the next pending step.",
+  "user_evidence": {
+    "console_output": "step05-user-output.txt",
+    "normalization": "Whitespace and blank lines normalized from the chat paste; values and text preserved.",
+    "sha256": "f5aefe14be29fd497a27843628ece4186c2a47f54adb073510727378973f6a6d",
+    "reported_dice_checks": 42,
+    "reported_mean_checks": 6,
+    "reported_test_images": 7,
+    "reported_test_case_groups": 2,
+    "reported_no_inference_run": true,
+    "reported_output_path": "work/my-dice-audit.json",
+    "report_json_received": false,
+    "local_file_hashes_verified": false,
+    "local_user_machine_accessed": false
+  },
+  "codex_review": {
+    "comparison": "Six displayed means match both original experiment and UI JSON after rounding to six decimals.",
+    "mean_checks": [
+      {
+        "method": "no_overlap",
+        "scope": "all",
+        "user_displayed": "0.558001",
+        "original": 0.558001243639622,
+        "matches_six_decimal_display": true
+      },
+      {
+        "method": "no_overlap",
+        "scope": "boundary",
+        "user_displayed": "0.491793",
+        "original": 0.4917929383428104,
+        "matches_six_decimal_display": true
+      },
+      {
+        "method": "no_overlap",
+        "scope": "interior",
+        "user_displayed": "0.572866",
+        "original": 0.5728662878255809,
+        "matches_six_decimal_display": true
+      },
+      {
+        "method": "overlap",
+        "scope": "all",
+        "user_displayed": "0.560790",
+        "original": 0.5607900860028092,
+        "matches_six_decimal_display": true
+      },
+      {
+        "method": "overlap",
+        "scope": "boundary",
+        "user_displayed": "0.527261",
+        "original": 0.5272611646418014,
+        "matches_six_decimal_display": true
+      },
+      {
+        "method": "overlap",
+        "scope": "interior",
+        "user_displayed": "0.569630",
+        "original": 0.5696297743598978,
+        "matches_six_decimal_display": true
+      }
+    ],
+    "new_model_inference_run": false,
+    "new_model_training_run": false,
+    "new_test_execution_claimed": false
+  },
+  "prior_failure": "step05-local-stub-diagnosis.json; historical failure retained, successful rerun now reported.",
+  "user_contribution_id": "U15",
+  "next_step": "STEP_06: interpret whether overlap improves every evaluated region; user answer pending."
+}
