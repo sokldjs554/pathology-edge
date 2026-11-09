@@ -1,0 +1,38 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U21",
+  "status": "User real-manifest execution report accepted",
+  "user_evidence": {
+    "console_output": "step10-user-output.txt",
+    "normalization": "Removed chat line-continuation escapes only; output values preserved.",
+    "sha256": "26501dae9d3085049229be34502f2fb22534df1c7f745e83b0f8314535adf9b6",
+    "reported_result": {
+      "records": 50,
+      "groups": 11,
+      "images_by_split": {
+        "train": 33,
+        "validation": 10,
+        "test": 7
+      },
+      "group_leaks": {}
+    },
+    "local_manifest_file_received": false,
+    "local_file_hashes_verified": false,
+    "local_machine_accessed": false
+  },
+  "codex_review": {
+    "comparison": "Reported counts and group-leak result match the checked-in manifest and the accepted user function.",
+    "manifest_path": "artifacts/manifest.json",
+    "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+    "group_check_only": true
+  },
+  "new_user_training_or_inference_claimed": false,
+  "new_user_image_file_hash_check_claimed": false,
+  "new_user_screen_review_claimed": false,
+  "next_step": {
+    "document": "docs/STEP_11.md",
+    "user_status": "Pending",
+    "topic": "Different group IDs do not rule out identical file bytes across splits"
+  }
+}

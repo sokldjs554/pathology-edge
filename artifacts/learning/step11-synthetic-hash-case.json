@@ -1,0 +1,25 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "Codex",
+  "scope": "Synthetic metadata only; not a leakage finding in the real dataset. Hash computed from a synthetic byte string, not a pathology image.",
+  "records": [
+    {
+      "id": "example_a",
+      "group_id": "case_A",
+      "split": "train",
+      "image_sha256": "4ddf56210f9005be2df3c23d22dc1e123a040fbec03a50591bdef7d0a8eb8b9e"
+    },
+    {
+      "id": "example_b",
+      "group_id": "case_B",
+      "split": "test",
+      "image_sha256": "4ddf56210f9005be2df3c23d22dc1e123a040fbec03a50591bdef7d0a8eb8b9e"
+    }
+  ],
+  "learner_group_result": {},
+  "existing_validator_error": "Split leakage: 4ddf56210f9005be2df3c23d22dc1e123a040fbec03a50591bdef7d0a8eb8b9e",
+  "input_preserved": true,
+  "real_data_or_split_modified": false,
+  "user_interpretation": "pending"
+}
