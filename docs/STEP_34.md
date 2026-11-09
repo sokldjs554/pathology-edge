@@ -1,6 +1,6 @@
 # 34단계: Codespaces에서 TinyUNet 학습 직접 재현
 
-상태: **사용자 Python·PyTorch·소스 경로·C++ import 출력 확인, 데이터 준비 대기**. 2026-11-10 제출한 Python 3.12.3(`/opt/venv/bin/python`), PyTorch 2.15.0+cpu, 작업 폴더의 소스 경로, `C++ import: OK`가 예상과 일치했습니다. 운영체제 이름은 제출 출력에 없어 별도 미확인입니다. 학습·전체 테스트 실행 완료로 기록하지 않습니다. [사용자 보고 검토 기록](../artifacts/learning/step34-review.json)
+상태: **사용자 환경·데이터 준비 출력 확인, 기존 모델 학습 실행 대기**. 2026-11-10 제출한 Python 3.12.3(`/opt/venv/bin/python`), PyTorch 2.15.0+cpu, 작업 폴더의 소스 경로, `C++ import: OK`가 예상과 일치했습니다. 후속 출력으로 Ubuntu 24.04.5 LTS와 `{"images": 50, "manifest": "data/manifest.json"}`도 확인했습니다. 학습·전체 테스트 실행 완료로 기록하지 않습니다. [사용자 보고 검토 기록](../artifacts/learning/step34-review.json)
 
 이번 단계의 목표는 기존 모델을 같은 조건으로 직접 학습하고 로그를 확인하는 것입니다. 모델·손실 코드를 바꾸는 비교 실험은 이 결과를 검토한 뒤 진행합니다.
 
@@ -15,7 +15,7 @@
 
 ## 초기 설정 참고: Codespace 생성과 환경 확인
 
-아래는 처음 환경을 만드는 절차입니다. 현재 사용자는 위 패키지 확인 출력을 제출했으므로 새 Codespace 생성이나 설치를 반복하지 않고 **데이터 준비**로 진행합니다.
+아래는 처음 환경을 만드는 절차입니다. 현재 사용자는 환경·데이터 준비 출력을 제출했으므로 새 Codespace 생성이나 설치를 반복하지 않고 **기존 조건으로 학습**합니다.
 
 1. [저장소](https://github.com/sokldjs554/pathology-edge)의 `main`에서 **Code → Codespaces → Create codespace on main**을 누릅니다. 기본 2-core급 CPU 환경으로 시작할 수 있으며 GPU는 필요 없습니다.
 2. 개발 컨테이너 빌드와 `postCreateCommand` 설치가 끝날 때까지 기다립니다. 새 설정은 Ubuntu 24.04/Python 3.12이며 모델 학습은 자동 실행하지 않습니다.
@@ -45,9 +45,9 @@ git status --short --branch
 
 ## 데이터 준비와 이후 학습 순서 — 한 번에 한 작업씩
 
-아래 명령은 모두 **Codespaces 저장소 루트**에서 실행합니다. 현재는 데이터 준비 출력까지만 제출하고, 이를 검토한 뒤 학습으로 넘어갑니다.
+아래 명령은 모두 **Codespaces 저장소 루트**에서 실행합니다. 현재는 데이터 준비 보고 검토를 마쳤으므로 기존 학습 명령 한 번을 실행합니다. 이후 요약 결과를 검토하고 비교 실험으로 넘어갑니다.
 
-### 지금 할 일: 데이터 준비
+### 완료한 데이터 준비 명령 — 재설치 시 참고
 
 ```bash
 cd /workspaces/pathology-edge
@@ -57,7 +57,7 @@ python -m pathology_edge.cli prepare
 
 첫 Python 명령은 이전 제출에서 빠진 운영체제 이름을 출력합니다. `prepare`는 TNBC v1.1 ZIP을 받아 체크섬·이미지/마스크·분리 기록을 검사합니다. 출력은 `images: 50`, `manifest: data/manifest.json`이어야 합니다. 기존 분할은 train 33장, validation 10장, test 7장입니다. 데이터 준비 자체는 모델 학습이나 평가가 아닙니다.
 
-### 데이터 준비 보고를 확인한 뒤: 기존 조건으로 새 학습
+### 지금 할 일: 기존 조건으로 새 학습
 
 다음은 **Bash 터미널**에서 한 블록으로 실행합니다. 실행마다 새 디렉터리를 만들므로 기존 `artifacts/` 모델과 공개 결과를 덮어쓰지 않습니다. `&&`는 폴더 생성·소스 상태 기록이 실패하면 학습을 시작하지 않게 하고, `pipefail`은 학습 오류를 `tee`의 성공으로 가리지 않게 합니다.
 
@@ -66,6 +66,7 @@ set -o pipefail
 mkdir -p work &&
 PATHOLOGY_RUN_DIR="$(mktemp -d "$PWD/work/my-tnbc-baseline.XXXXXX")" &&
 export PATHOLOGY_RUN_DIR &&
+printf 'Run: %s\n' "$PATHOLOGY_RUN_DIR" &&
 git rev-parse HEAD > "$PATHOLOGY_RUN_DIR/source-commit.txt" &&
 git status --short > "$PATHOLOGY_RUN_DIR/source-status.txt" &&
 python -u -m pathology_edge.cli train \
@@ -106,7 +107,7 @@ PY
 
 ## 결과를 보낼 때
 
-현재는 위 **운영체제 이름과 데이터 준비 출력**을 보내 주세요. 이후 학습을 실행하면 요약 출력과 `train.log` 마지막 부분을 제출하면 됩니다. 불일치 검토에 필요할 때 `training.json`과 전체 오류 로그를 추가로 확인합니다.
+현재는 **학습 명령 한 번을 실행한 뒤 `Run:` 경로와 마지막 epoch 로그**를 보내 주세요. 이어서 같은 터미널에서 위 결과 요약 명령으로 `training.json`을 확인합니다. 마지막 epoch의 점수만으로 저장된 best epoch·threshold·모델 재현까지 완료로 판단하지 않습니다. 불일치 검토에 필요할 때 `training.json`과 전체 오류 로그를 추가로 확인합니다.
 
 오류라면 실행한 명령, 실행 폴더, traceback 전체, 생성된 run 경로, 코드 수정 여부를 함께 알려 주세요. `No module named ...`는 설치/복구 모드부터 확인하며 임의로 패키지 버전을 바꾸지 않습니다.
 
@@ -114,7 +115,7 @@ PY
 
 Codex가 Debian 호스트와 Ubuntu 24.04 컨테이너에서 각각 같은 seed·16 epoch 학습을 별도 폴더로 실행했습니다. 두 실행 모두 기존 학습 history·설정·모델 가중치 및 파일 SHA256이 일치했고, best epoch 12·threshold 0.5·validation Dice 0.530508395092291을 재현했습니다. 호스트와 컨테이너에서 기존 Python 테스트도 각각 **107개 통과**했습니다. 컨테이너의 실제 빌드·editable 설치·데이터 준비·실행 근거는 [준비 기록](../artifacts/learning/step34-preparation.json)에 있습니다.
 
-이는 **Codex의 로컬 Docker 검증**입니다. 이후 사용자가 Codespaces의 Python·PyTorch·소스 경로·C++ import 출력을 제출한 사실은 별도 기록했습니다. 사용자의 데이터 다운로드·학습·전체 테스트는 아직 미확인이며 Codex 실행을 사용자의 기여로 기록하지 않습니다. 새 test 평가나 공개 결과 변경도 없습니다.
+이는 **Codex의 로컬 Docker 검증**입니다. 이후 사용자가 Codespaces의 환경과 데이터 준비 성공 출력을 제출한 사실은 별도 기록했습니다. 사용자의 모델 학습·전체 테스트는 아직 미확인이며 Codex 실행을 사용자의 기여로 기록하지 않습니다. 새 test 평가나 공개 결과 변경도 없습니다.
 
 학습 보고 검토 후에만 사용자가 직접 작성할 손실/증강 등 비교 실험 하나를 배정합니다. WSI 배율 연결과 반복·비교 모델 보강은 그다음 순서로 유지합니다.
 

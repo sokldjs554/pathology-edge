@@ -2,25 +2,28 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U45",
-  "status": "Package environment report confirmed; data preparation pending",
+  "status": "Environment and data preparation reports confirmed; user training pending",
   "user_output_normalized": "Python: 3.12.3 /opt/venv/bin/python\nPyTorch: 2.15.0+cpu\nSource: /workspaces/pathology-edge/src/pathology_edge/__init__.py\nC++ import: OK",
   "confirmed_from_user_report": {
     "python": "3.12.3",
     "python_executable": "/opt/venv/bin/python",
     "torch": "2.15.0+cpu",
     "source_path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
-    "cpp_import": "OK"
+    "cpp_import": "OK",
+    "os_pretty_name": "Ubuntu 24.04.5 LTS",
+    "data_preparation": {
+      "images": 50,
+      "manifest": "data/manifest.json"
+    }
   },
   "evidence_scope": "User-supplied command output from the requested Codespaces check; not a Codex remote inspection of their session.",
   "not_confirmed": [
-    "OS distribution/version output",
     "Architecture and OpenCV version",
     "Checkout commit and Git status",
-    "Data preparation",
     "Training",
     "Full test suite execution"
   ],
-  "assistance_received": "Codex supplied the devcontainer configuration and environment-check command. No user-authored model code or user training execution is claimed.",
+  "assistance_received": "Codex supplied the devcontainer configuration and environment/data-preparation commands. User supplied execution output. No user-authored model code or user training execution is claimed.",
   "codex_work": {
     "previous_preparation_configuration_hashes_match": {
       ".devcontainer/Dockerfile": true,
@@ -29,7 +32,9 @@
     },
     "reviewed_source_sha256": {
       "src/pathology_edge/cli.py": "005e15e4caec89e65d5301f27bc8a6d7c4bd18c6f8590dff0775626aca810cc2",
-      "src/pathology_edge/data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd"
+      "src/pathology_edge/data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+      "src/pathology_edge/experiment.py": "89450ae3666c6ca3a57d2431fc5cbcdcb8e5a06b788da5fed3baf54a361fbbe7",
+      "artifacts/training.json": "436b6c844b23d364e951ec90917c95378c0265d0c3e268d6473b1129e893f49f"
     },
     "data_command_scope": "prepare prints image count and manifest path after archive checksum, image-mask and split checks; it returns before training/evaluation dispatch.",
     "new_install": false,
@@ -38,15 +43,40 @@
     "new_inference": false,
     "new_test_run": false,
     "new_browser_check": false,
-    "new_deployment": false
+    "new_deployment": false,
+    "training_protocol_checked_against_saved_baseline": {
+      "seed": 20261107,
+      "epochs": 16,
+      "steps_per_epoch": 20,
+      "test_used_for_selection": false
+    },
+    "documented_shell_verification": {
+      "scope": "Exact documented block with command stubs; no actual model training or test-suite execution in this review.",
+      "cases": {
+        "directory_creation_failure": {
+          "exit_status": 73,
+          "training_stub_called": false
+        },
+        "metadata_failure": {
+          "exit_status": 74,
+          "training_stub_called": false
+        },
+        "training_failure": {
+          "exit_status": 75,
+          "training_stub_called": true
+        },
+        "success": {
+          "exit_status": 0,
+          "training_stub_called": true
+        }
+      }
+    }
   },
   "next_user_action": {
     "working_directory": "/workspaces/pathology-edge",
-    "task": "Print OS name and run python -m pathology_edge.cli prepare; submit output before training.",
-    "expected_data_output": {
-      "images": 50,
-      "manifest": "data/manifest.json"
-    },
+    "task": "Run the unchanged TinyUNet baseline once in a fresh work/my-tnbc-baseline.* directory; send Run path and final epoch log. Review training.json next before claiming reproduction.",
+    "training_status": "Pending user output",
     "reference": "docs/STEP_34.md"
-  }
+  },
+  "data_preparation_output_normalized": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\n{\"images\": 50, \"manifest\": \"data/manifest.json\"}"
 }
