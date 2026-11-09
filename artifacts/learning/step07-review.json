@@ -1,0 +1,63 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U17",
+  "status": "User interpretation accepted",
+  "user_answer_verbatim": "두 결과는 모순되지 않습니다. 7장 평균 경계 Dice는 전체 이미지의 점수를 평균한 값이므로, 다른 이미지들의 개선 폭이 `10_1`의 감소 폭보다 크면 평균은 상승할 수 있습니다. 따라서 겹침 방식은 전체 평균에서는 개선됐지만, 개별 이미지 `10_1`에서는 오히려 성능이 저하된 것으로 해석해야 합니다.",
+  "assessment": "Correctly distinguishes mean boundary Dice from individual-image boundary Dice. For precision, sum signed changes over the other six images; some other images also worsen.",
+  "sources": [
+    "artifacts/evaluation.json",
+    "dist/results.json"
+  ],
+  "boundary_dice_changes": [
+    {
+      "id": "10_1",
+      "group_id": "10",
+      "overlap_minus_no_overlap_boundary_dice": -0.03322528602485075
+    },
+    {
+      "id": "10_2",
+      "group_id": "10",
+      "overlap_minus_no_overlap_boundary_dice": -0.02313212613784804
+    },
+    {
+      "id": "10_3",
+      "group_id": "10",
+      "overlap_minus_no_overlap_boundary_dice": -0.04825347431128313
+    },
+    {
+      "id": "10_4",
+      "group_id": "10",
+      "overlap_minus_no_overlap_boundary_dice": -0.07129853515970652
+    },
+    {
+      "id": "11_1",
+      "group_id": "11",
+      "overlap_minus_no_overlap_boundary_dice": 0.12805846907338725
+    },
+    {
+      "id": "11_2",
+      "group_id": "11",
+      "overlap_minus_no_overlap_boundary_dice": 0.17163380797610955
+    },
+    {
+      "id": "11_3",
+      "group_id": "11",
+      "overlap_minus_no_overlap_boundary_dice": 0.12449472867712863
+    }
+  ],
+  "sum_of_changes": 0.248277584092937,
+  "mean_change": 0.03546822629899099,
+  "image_10_1_change": -0.03322528602485075,
+  "other_six_signed_change_sum": 0.28150287011778774,
+  "improved_images": 3,
+  "worsened_images": 4,
+  "new_user_test_execution_claimed": false,
+  "new_user_screen_review_claimed": false,
+  "new_training_or_inference_run": false,
+  "next_step": {
+    "document": "docs/STEP_08.md",
+    "user_status": "Pending",
+    "topic": "Scope of generalization from seven test images in two case groups, one seed, no external validation"
+  }
+}
