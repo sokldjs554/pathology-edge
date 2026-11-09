@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U28",
+  "status": "User improved boundary screen report accepted",
+  "user_answer_verbatim": "응 똑같이 보여",
+  "question_context": "Asked whether 좋아진 경계 보기 changes the example to TNBC 11_1, moves both views to the same white-box region and displays local boundary Dice 0.626 -> 0.854.",
+  "confirmed_from_reply": [
+    "Example changes to TNBC 11_1 as described",
+    "Both images show the same selected region as described",
+    "Local boundary Dice display matches 0.626 -> 0.854"
+  ],
+  "scope": "User report in response to the three explicit expected results, not direct observation of the user's browser.",
+  "not_separately_confirmed": [
+    "Corrected and regressed pixel counts",
+    "Interpretation of colors and pixel-count units",
+    "Browser name/version or other images/viewers"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "reviewed": "Existing evidenceLayer pixel comparison, caseCounts display and legend",
+    "previous_audit": "artifacts/learning/step17-preparation.json",
+    "previous_audit_source_hashes_still_match": true,
+    "new_browser_test_or_inference": false
+  },
+  "next_step": {
+    "document": "docs/STEP_18.md",
+    "user_status": "Pending",
+    "task": "Explain what corrected 268px counts and whether it can be described as 268 additional nuclei."
+  }
+}
