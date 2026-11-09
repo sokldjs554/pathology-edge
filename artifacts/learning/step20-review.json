@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U31",
+  "status": "User saved NMS pair screen report accepted",
+  "user_answer_verbatim": "응 잘보임",
+  "question_context": "Asked the user to select TNBC 11_2, open 선택 후보, click 첫 병합 사례로 이동, and report whether the view moves and suppressed #74 -> kept #54 is visible.",
+  "confirmed_from_reply": "The requested pair navigation and #74 suppressed -> #54 kept display work, as reported in response to that question.",
+  "scope": "User report for the single requested 11_2 pair; no direct observation of the user's browser.",
+  "not_separately_confirmed": [
+    "Raw/kept/suppressed total counts",
+    "Colors and patch IDs individually checked",
+    "Whether both candidates represent the same actual nucleus",
+    "Other pairs, browsers or viewers"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "reviewed": "Existing NMS rule and pairInfo text distinguishing algorithm correspondence from actual nucleus identity",
+    "previous_evidence": "artifacts/learning/step20-preparation.json",
+    "previous_evidence_source_hashes_still_match": true,
+    "new_browser_test_nms_run_or_inference": false
+  },
+  "next_step": {
+    "document": "docs/STEP_21.md",
+    "user_status": "Pending",
+    "task": "Explain whether the suppression correspondence alone proves correct deduplication of the same actual nucleus, and what further evidence would be needed."
+  }
+}
