@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U40",
-  "status": "Core interpretation confirmed; classifier-input correction pending",
+  "status": "Input-condition interpretation confirmed after Codex clarification",
   "user_answer_verbatim": "아니요. 이번 IHC 실험은 세포의 정답 중심 좌표를 입력으로 제공받았고, 모델은 해당 위치 주변의 48px 영상을 이용해 종양·비종양 세포와 Ki67 양성·음성을 조합한 4개 클래스를 분류했습니다. 따라서 세포 위치를 자동으로 검출한 것이 아니라, 이미 주어진 세포 위치에서 종류를 예측한 실험이며 자동 검출 성능은 검증하지 않았습니다.",
   "confirmed_from_reply": [
     "Expert-provided ground-truth center positions are supplied.",
@@ -18,7 +18,7 @@
     "display_crop_role": "Visual inspection of the example; the crop is not passed as classifier input.",
     "classifier_input": "40 local color statistics extracted from circular regions of radii 3 and 7 pixels around the supplied center, standardized with training-set parameters.",
     "model_type": "multinomial_logistic_regression",
-    "user_correction_received": false
+    "user_correction_received": true
   },
   "new_user_code_or_test_execution_claimed": false,
   "codex_work": {
@@ -59,8 +59,17 @@
     "new_browser_check": false
   },
   "next_step": {
-    "document": "docs/STEP_29.md",
-    "user_status": "Awaiting corrected explanation",
-    "task": "Restate the difference between the displayed 48x48 crop and the actual classifier input in one sentence."
+    "document": "docs/STEP_30.md",
+    "user_status": "Pending",
+    "task": "Identify which part of the four-class label is incorrect in IHC example incorrect-01."
+  },
+  "followup_review": {
+    "date": "2026-11-10",
+    "timezone": "Asia/Seoul",
+    "user_answer_verbatim": "48×48px 영상은 사람이 세포를 확인하기 위한 화면 표시용이며, 실제 분류기는 제공된 정답 중심 좌표 주변의 반경 3px·7px 영역에서 추출한 색상 통계 40개를 표준화한 뒤 로지스틱 회귀로 네 클래스를 예측합니다.",
+    "assessment": "Correct distinction between display-only crop and the actual standardized 40-feature classifier input.",
+    "assistance_received": "Codex explained display crop versus local color statistics and logistic regression before this corrected answer.",
+    "previous_evidence_hashes_still_match": true,
+    "new_user_code_or_test_execution_claimed": false
   }
 }

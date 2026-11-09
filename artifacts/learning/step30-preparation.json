@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "example_id": "incorrect-01",
+  "case_id": "case_0004",
+  "image_name": "case_0004_region_0_patch_10_O.png",
+  "center": [
+    179,
+    98
+  ],
+  "gt_class": 0,
+  "pred_class": 2,
+  "truth_label": "Ki67 양성 종양 세포",
+  "prediction_label": "Ki67 양성 비종양 세포",
+  "checks": {
+    "public_example_matches_original": true,
+    "public_class_labels_match_original": true,
+    "unique_saved_test_row_matches_labels_and_probabilities": true,
+    "prediction_matches_saved_probability_argmax": true,
+    "step28_source_hashes_still_match": true
+  },
+  "source_review": "dist/ihc.js maps gt_class and pred_class to the Korean class labels in truthLabel and predictionLabel.",
+  "source_sha256": {
+    "artifacts/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "dist/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "artifacts/ihc/test-predictions.json": "9b934d1e35a69a3a8a9a288175d7a5d897cb6dd0ca2dc419645d5b224888c275",
+    "dist/ihc.js": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675"
+  },
+  "scope": "Saved-result comparison and rendering-code review only. No new browser check, feature extraction, inference or training. User error interpretation remains pending."
+}
