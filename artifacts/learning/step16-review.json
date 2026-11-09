@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U27",
+  "status": "User changed-pixel highlight toggle confirmation accepted",
+  "user_answer_verbatim": "응 정확히 확인했어",
+  "question_context": "Asked explicitly whether turning 달라진 픽셀 강조 off and on made the pink/teal changed-pixel marks disappear and reappear.",
+  "confirmed_from_reply": "The user confirmed that specific off/on behavior, beyond merely finding the section.",
+  "scope": "Same TNBC 10_1 selected boundary view. User report, not direct observation of the user's browser.",
+  "assistance_received": [
+    "Explained that 이미지 is the leftmost tab under 검토 결과, beside 선택 후보 and 실험.",
+    "After the user showed the 이미지 tab without an active case section, explained that 현재 예제 경계 is above the image, outside the result panel, and activates 선택 경계.",
+    "Clarified the scope of the first 잘 작동해 reply before recording completion."
+  ],
+  "not_separately_confirmed": [
+    "Dice and white-box preservation during toggle",
+    "Interpretation of highlight colors or exact pixel counts",
+    "Improved example navigation",
+    "Browser name/version and other images/viewers"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": "Recorded the explicit confirmation, corrected the navigation guide using the existing markup and case-opening source, and checked saved PNG data for the next improved example. No UI source changes or new browser run.",
+  "next_step": {
+    "document": "docs/STEP_17.md",
+    "user_status": "Pending",
+    "task": "Open 좋아진 경계 보기 and report the image, local Dice and same-location view.",
+    "codex_evidence": "artifacts/learning/step17-preparation.json"
+  }
+}
