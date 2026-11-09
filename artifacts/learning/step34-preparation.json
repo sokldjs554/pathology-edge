@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "purpose": "Prepare STEP_34 user baseline training reproduction in Codespaces; no new model or held-out evaluation.",
+  "source_base_commit": "f588d40f32659df569218eb6bbaf75c77723a972",
+  "configuration_sha256": {
+    ".devcontainer/Dockerfile": "866fa594318ec92df2fbfa89cf7e9986c295a9f8f2f3cab5a5e3393521e0d536",
+    ".devcontainer/devcontainer.json": "a5503959bf19c7e5989dbc3a2df88d8313694b439530a72db22056c515d22497",
+    "requirements-lock.txt": "ba7f3a1dc13425c24d9de3c30e73e9a1d522ce24e7916fa4c9deeb89232529e2"
+  },
+  "local_container": {
+    "image_id": "sha256:161f013e282f2126d905cdc4d6cbd83bd0ff77e29e64328bdd47d985af91dbd9",
+    "os": "Ubuntu 24.04.5 LTS",
+    "python": "3.12.3",
+    "user": "ubuntu (UID 1000)",
+    "editable_import": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+    "cpp_import_ok": true,
+    "build_exit_code": 0,
+    "exact_post_create_command_exit_code": 0,
+    "pip_check": "No broken requirements found",
+    "exact_documented_environment_command_exit_code": 0,
+    "hosted_github_codespace_created": false
+  },
+  "tests": {
+    "host": {
+      "passed": 107,
+      "seconds": 7.74,
+      "command": "/workspace/work/venv/bin/python -m pytest -q"
+    },
+    "ubuntu_container": {
+      "passed": 107,
+      "seconds": 7.38,
+      "command": "python -m pytest -q",
+      "log": "step34-ubuntu-tests.txt"
+    }
+  },
+  "data_preparation": {
+    "command": "python -m pathology_edge.cli prepare",
+    "exit_code": 0,
+    "download_completed": true,
+    "archive_md5": "1605712a752b201b57eacc8f866adb4f",
+    "archive_sha256": "014bc1e08d6459be5508620ad219063a45179a1767b7caf84d64245d7f6cc5a3",
+    "paired_images": 50,
+    "images_by_split": {
+      "train": 33,
+      "validation": 10,
+      "test": 7
+    }
+  },
+  "host_reproduction": {
+    "checks": {
+      "history_exact_match": true,
+      "config_exact_match": true,
+      "model_file_sha256_match": true,
+      "all_model_tensors_equal": true,
+      "protocol_exact_match": true,
+      "no_evaluation_artifact_created": true,
+      "test_not_used_for_selection": true
+    },
+    "completed_epochs": 16,
+    "best_epoch": 12,
+    "threshold": 0.5,
+    "validation_dice": 0.530508395092291,
+    "train_images": 33,
+    "validation_images": 10,
+    "seconds": 44.26349921300425,
+    "model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+    "environment": {
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "opencv": "5.0.0",
+      "cpu_count": 5,
+      "torch_threads": 4,
+      "cuda": false,
+      "cpu": "AMD EPYC 9V74 80-Core Processor"
+    }
+  },
+  "ubuntu_container_reproduction": {
+    "checks": {
+      "history_exact_match": true,
+      "config_exact_match": true,
+      "model_file_sha256_match": true,
+      "all_model_tensors_equal": true,
+      "protocol_exact_match": true,
+      "no_evaluation_artifact_created": true,
+      "test_not_used_for_selection": true
+    },
+    "completed_epochs": 16,
+    "best_epoch": 12,
+    "threshold": 0.5,
+    "validation_dice": 0.530508395092291,
+    "train_images": 33,
+    "validation_images": 10,
+    "seconds": 44.29066172899911,
+    "model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+    "environment": {
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "opencv": "5.0.0",
+      "cpu_count": 5,
+      "torch_threads": 4,
+      "cuda": false,
+      "cpu": "AMD EPYC 9V74 80-Core Processor"
+    }
+  },
+  "training_command": "python -u -m pathology_edge.cli train --data data --output <new-mktemp-run-dir> --seed 20261107 --epochs 16 --steps 20",
+  "training_logs": [
+    "step34-host-train.log",
+    "step34-ubuntu-train.log"
+  ],
+  "output_protection": {
+    "original_artifacts_and_dist_files_checked": 2464,
+    "all_original_hashes_unchanged": true,
+    "dist_matches_commit": "b5024b0",
+    "separate_mktemp_directories_verified": true,
+    "failed_training_pipeline_status_propagation": 1
+  },
+  "resolved_verification_issues": [
+    {
+      "issue": "Git refused a UID-1000 checkout when container ran as root.",
+      "resolution": "Run container and remote shell as ubuntu UID 1000; verified clean git status."
+    },
+    {
+      "issue": "Non-root dependency install could not read a root-owned lock file copied with restrictive host mode.",
+      "resolution": "COPY --chmod=0644; rebuilt image successfully."
+    },
+    {
+      "issue": "Managed proxy CA was absent from the local Ubuntu image for pip and data HTTPS.",
+      "resolution": "Trusted local CA supplied as a build secret and SSL_CERT_FILE at runtime. TLS verification remained enabled; no CA file committed or baked into image. Hosted Codespaces networking not tested."
+    }
+  ],
+  "user_status": {
+    "selected_codespaces": true,
+    "created_codespace": "pending user output",
+    "environment_check": "pending user output",
+    "training_run": "pending user output",
+    "next_action": "docs/STEP_34.md: create Codespace and submit environment output only"
+  },
+  "limits": [
+    "This is a local Docker verification, not an actual hosted GitHub Codespace session.",
+    "Exact matching was observed on these two Codex runtimes; it is not a guarantee for every CPU/runtime.",
+    "No new held-out performance results, browser verification, production deployment or user training execution are claimed."
+  ],
+  "documented_shell_guards": {
+    "scope": "Exact documented Bash block with controlled command stubs; no additional training claimed.",
+    "cases": {
+      "directory_creation_failure": {
+        "exit_code": 73,
+        "training_stub_called": false
+      },
+      "metadata_capture_failure": {
+        "exit_code": 74,
+        "training_stub_called": false
+      },
+      "training_failure": {
+        "exit_code": 75,
+        "training_stub_called": true
+      },
+      "successful_setup": {
+        "exit_code": 0,
+        "training_stub_called": true
+      }
+    }
+  },
+  "review": {
+    "mode": "independent read-only reviewer",
+    "important_finding": "export with command substitution masked a failed mktemp status; training could receive an empty output path.",
+    "resolution": "Separate assignment/export and chain directory setup, metadata capture, training with &&; verified failing mktemp and metadata stop before training, and failing training retains nonzero pipeline status.",
+    "open_critical_or_important_findings": 0,
+    "declined_behaviors": [
+      {
+        "behavior": "Hosted Codespaces startup/network integration",
+        "ruling": "Pending user environment output, explicitly documented; local Docker evidence does not prove it."
+      },
+      {
+        "behavior": "Later comparison-model implementation",
+        "ruling": "Outside this baseline reproduction step and reserved until user report."
+      }
+    ]
+  }
+}

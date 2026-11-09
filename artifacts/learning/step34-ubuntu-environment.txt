@@ -1,0 +1,7 @@
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+Python: 3.12.3 executable: /opt/venv/bin/python
+Architecture: x86_64
+PyTorch: 2.15.0+cpu OpenCV: 5.0.0
+Source: /workspaces/pathology-edge/src/pathology_edge/__init__.py
+C++ import: OK
+## main...origin/main

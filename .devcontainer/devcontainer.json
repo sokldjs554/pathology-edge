@@ -1,0 +1,23 @@
+{
+  "name": "PathologyEdge — Ubuntu 24.04 / Python 3.12 CPU",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "ubuntu",
+  "overrideCommand": true,
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb"
+  },
+  "postCreateCommand": "/opt/venv/bin/python -m pip install --no-deps --no-build-isolation -e . && /opt/venv/bin/python -m pip check",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python"
+      }
+    }
+  },
+  "forwardPorts": [8000]
+}
