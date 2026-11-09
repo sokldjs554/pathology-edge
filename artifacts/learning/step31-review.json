@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U42",
+  "status": "Confirmed",
+  "user_answer_verbatim": "양성 종양 세포 1개를 양성 비종양 세포로 잘못 분류하면, 올바르게 분류했을 때보다 분자(양성 종양 세포 수)와 분모(전체 종양 세포 수)가 각각 1개씩 감소합니다.",
+  "confirmed_from_reply": "Holding other cells fixed, changing one positive-tumor prediction to positive non-tumor removes one from both the positive-tumor numerator and tumor-cell denominator.",
+  "assistance_received": "Codex supplied the formula and isolated one-cell scenario; user explained both count changes.",
+  "scope": "One-cell count contribution only. This does not determine the actual full-case error or establish a fixed percentage-point change.",
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": {
+    "previous_evidence": "artifacts/learning/step31-preparation.json",
+    "previous_evidence_source_hashes_still_match": true,
+    "new_inference": false,
+    "new_training": false,
+    "new_browser_check": false
+  },
+  "next_step": {
+    "document": "docs/STEP_32.md",
+    "user_status": "Pending",
+    "task": "Distinguish the saved GT-center annotated-cell ratio evaluation from whole-slide automatic clinical Ki67 validation."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "saved_label_audit": {
+    "test_case_count": 10,
+    "test_image_count": 407,
+    "test_cell_count": 6419,
+    "case_ratios": [
+      {
+        "case_id": "case_0004",
+        "gt_numerator": 107,
+        "gt_denominator": 288,
+        "prediction_numerator": 99,
+        "prediction_denominator": 359,
+        "absolute_error_percentage_points": 9.576176106468587
+      },
+      {
+        "case_id": "case_0006",
+        "gt_numerator": 8,
+        "gt_denominator": 78,
+        "prediction_numerator": 7,
+        "prediction_denominator": 76,
+        "absolute_error_percentage_points": 1.045883940620783
+      },
+      {
+        "case_id": "case_0008",
+        "gt_numerator": 259,
+        "gt_denominator": 576,
+        "prediction_numerator": 321,
+        "prediction_denominator": 525,
+        "absolute_error_percentage_points": 16.177579365079364
+      },
+      {
+        "case_id": "case_0009",
+        "gt_numerator": 116,
+        "gt_denominator": 516,
+        "prediction_numerator": 101,
+        "prediction_denominator": 491,
+        "absolute_error_percentage_points": 1.9103553892546477
+      },
+      {
+        "case_id": "case_0011",
+        "gt_numerator": 101,
+        "gt_denominator": 489,
+        "prediction_numerator": 67,
+        "prediction_denominator": 228,
+        "absolute_error_percentage_points": 8.731568184264344
+      },
+      {
+        "case_id": "case_0014",
+        "gt_numerator": 453,
+        "gt_denominator": 768,
+        "prediction_numerator": 393,
+        "prediction_denominator": 585,
+        "absolute_error_percentage_points": 8.195112179487174
+      },
+      {
+        "case_id": "case_0015",
+        "gt_numerator": 67,
+        "gt_denominator": 311,
+        "prediction_numerator": 53,
+        "prediction_denominator": 440,
+        "absolute_error_percentage_points": 9.497953814674073
+      },
+      {
+        "case_id": "case_0020",
+        "gt_numerator": 121,
+        "gt_denominator": 338,
+        "prediction_numerator": 100,
+        "prediction_denominator": 348,
+        "absolute_error_percentage_points": 7.0631843841392925
+      },
+      {
+        "case_id": "case_0023",
+        "gt_numerator": 341,
+        "gt_denominator": 512,
+        "prediction_numerator": 254,
+        "prediction_denominator": 441,
+        "absolute_error_percentage_points": 9.005190617913827
+      },
+      {
+        "case_id": "case_0024",
+        "gt_numerator": 382,
+        "gt_denominator": 883,
+        "prediction_numerator": 279,
+        "prediction_denominator": 742,
+        "absolute_error_percentage_points": 5.660529986904484
+      }
+    ],
+    "case_mae_percentage_points": 7.686353396880658,
+    "display_rounded_3_decimals": "7.686",
+    "excluded_zero_denominator_cases": 0,
+    "all_case_ratios_and_mae_match_original": true,
+    "public_cases_summary_and_scope_match_original": true
+  },
+  "scope_from_saved_results": {
+    "stain": "Ki-67 IHC",
+    "organ": "breast",
+    "provided_centers": true,
+    "detection_evaluated": false,
+    "segmentation_evaluated": false,
+    "clinical_assay": false,
+    "title_ko": "정답 중심점 조건의 IHC 세포 분류"
+  },
+  "relevant_saved_limitations": [
+    "Expert-provided centers eliminate localization errors; this is not detection or an end-to-end Ki67 assay.",
+    "Single institution breast subset and 10 held-out case IDs; no external validation."
+  ],
+  "source_review": "tumor_ratios uses class 0 over classes 0/1 among provided centers. UI ratioText renders case-level MAE in percentage points; adjacent note excludes detection, whole-slide and clinical-index evaluation.",
+  "source_sha256": {
+    "src/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "artifacts/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "dist/ihc/results.json": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+    "artifacts/ihc/test-predictions.json": "9b934d1e35a69a3a8a9a288175d7a5d897cb6dd0ca2dc419645d5b224888c275",
+    "dist/ihc.html": "63e85e3637974376ca0b411b73285fcfd5518bd486695199d546bf5f724b04ec",
+    "dist/ihc.js": "b51ed81bce233f69ba6525445052e316d6b93ebb20004f623ebf9107bbfd9675",
+    "docs/IHC_EXPERIMENT.md": "4a638c33b189a1a854502a749b8262b5271facd3fe195f6084b1bce302211ac8"
+  },
+  "scope": "Read-only aggregation of saved labels from the existing test set. No new model inference, training, image processing, clinical evaluation or browser run. User scope interpretation remains pending."
+}
