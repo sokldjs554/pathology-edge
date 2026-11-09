@@ -1,0 +1,28 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "performed_by": "Codex",
+  "scope": "Stored metadata only; original image bytes not rehashed.",
+  "manifest_path": "artifacts/manifest.json",
+  "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+  "records": 50,
+  "unique_image_hashes": 50,
+  "group_leaks": {},
+  "image_hash_leaks": {},
+  "synthetic_positive_control": {
+    "source": "step11-synthetic-hash-case.json",
+    "image_hash_leaks": {
+      "4ddf56210f9005be2df3c23d22dc1e123a040fbec03a50591bdef7d0a8eb8b9e": [
+        "test",
+        "train"
+      ]
+    }
+  },
+  "input_file_preserved": true,
+  "patient_identity_checked": false,
+  "near_duplicate_images_checked": false,
+  "new_training_or_inference_run": false,
+  "user_execution": "pending",
+  "hash_comparison_code_author": "Codex",
+  "group_function_author": "User"
+}

@@ -1,0 +1,17 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U22",
+  "status": "User interpretation accepted",
+  "user_answer_verbatim": "아니요. `find_group_leaks`는 동일한 `group_id`가 서로 다른 split에 등장하는지만 검사하므로, 그룹 ID가 다른 `case_A`와 `case_B`의 파일 중복은 발견하지 못합니다. 따라서 서로 다른 split 간 파일 해시도 추가로 비교해야 하며, 같은 해시 `H`가 train과 test에 존재하므로 이 합성 사례에는 데이터 누수가 있습니다.",
+  "assessment": "Correctly distinguishes group-ID checks from same-file hash checks across splits and identifies leakage in the stated synthetic scenario.",
+  "case_source": "step11-synthetic-hash-case.json",
+  "scope": "Synthetic metadata; not a leakage finding in the real dataset.",
+  "new_user_test_execution_claimed": false,
+  "new_user_image_file_hash_check_claimed": false,
+  "next_step": {
+    "document": "docs/STEP_12.md",
+    "user_status": "Pending",
+    "topic": "Run group-ID and saved-image-hash checks on the existing manifest; hash comparison call code is Codex-provided"
+  }
+}
