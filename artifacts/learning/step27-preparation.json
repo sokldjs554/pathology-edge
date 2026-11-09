@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "slide_size": [
+    46000,
+    32893
+  ],
+  "slide_file_pixels": 1513078000,
+  "roi_count": 3,
+  "roi_sizes": [
+    [
+      1024,
+      1024
+    ],
+    [
+      1024,
+      1024
+    ],
+    [
+      1024,
+      1024
+    ]
+  ],
+  "roi_ids": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "analyzed_pixels": 3145728,
+  "slide_fraction": 0.002079025668207455,
+  "display_percent": "0.2079%",
+  "checks": {
+    "rois_within_slide": true,
+    "rois_pairwise_disjoint": true,
+    "roi_count_and_pixel_sum_match_metadata": true,
+    "fraction_matches_metadata": true
+  },
+  "ground_truth_available": false,
+  "scope": "Read stored ROI geometry and UI coverage text. Denominator is all original file pixels including background, not tissue area. No image reread, inference, full-slide processing or new browser run.",
+  "source_sha256": {
+    "dist/wsi.json": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+    "dist/wsi.js": "bc5c280e966e37b57d9349bf6fc2be88cf6700629c568c0c7c9bb80f7382e19b"
+  }
+}
