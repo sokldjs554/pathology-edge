@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U33",
+  "status": "User WSI R1 navigation report accepted",
+  "user_answer_verbatim": "잘 보임",
+  "question_context": "Asked whether selecting R1 in the WSI viewer zooms/moves to that ROI and both views show the same tissue location.",
+  "confirmed_from_reply": "Requested R1 navigation and same-location view work, as reported in response to that question.",
+  "scope": "User report for the R1 selection flow only; no direct observation of the user's browser.",
+  "not_separately_confirmed": [
+    "Exact coordinate values and panel title wording",
+    "WSI boundary or candidate-tracing buttons",
+    "WSI drag and scroll gestures",
+    "Other ROIs, screen sizes or browser versions"
+  ],
+  "new_user_code_or_test_execution_claimed": false,
+  "codex_work": "Recorded the R1 report; recomputed next boundary case counts from saved masks and checked difference PNG alpha, coordinates and UI wiring. No new browser run, inference or accuracy measurement.",
+  "next_step": {
+    "document": "docs/STEP_23.md",
+    "user_status": "Pending",
+    "task": "Open R1 차이가 큰 경계 and report aligned white boxes and B added 347px / removed 123px.",
+    "preparation": "artifacts/learning/step23-preparation.json"
+  }
+}

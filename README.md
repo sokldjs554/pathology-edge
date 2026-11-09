@@ -3,7 +3,7 @@
 **병리 이미지의 패치 경계가 핵 분할에 미치는 영향을 재현하고 검토하는 연구용 작업대.**
 같은 모델의 무겹침·겹침 처리를 비교하고, 정확도·처리 시간·메모리·실패 사례를 함께 공개합니다.
 
-[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 22단계 WSI R1 이동](docs/STEP_22.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
+[실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [지금 할 23단계 WSI 경계 확인](docs/STEP_23.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
@@ -151,7 +151,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 - 실제 모델 추론·학습·평가·C++ 정합성·정적 UI 파일과 실제 결과 연결 검사 완료.
 - 공개 데모는 [Sites](https://pathology-edge-lab.ykh13571.chatgpt.site)에 배포했습니다.
 - 공개 버전7에서 Chromium·WebKit 각각 실제 조작 **46 tests**, 기존 화면 좌표 **5 tests** 통과. 데스크톱·태블릿·모바일 크기와 로딩/오류/빈 상태·지연 복구를 확인했습니다. [확장 근거](docs/WSI_REVIEW.md). 과거 공개 버전5의 각26개 검사 기록은 [기존 보고서](docs/INTERVIEW_UI.md)에 유지했습니다.
-- 사용자가 데모 화면의 정상 표시를 확인했습니다([U07](docs/CONTRIBUTIONS.md)). 브라우저 버전·개별 조작은 미확인입니다. 좌표 함수의12개 테스트 통과는 사용자 보고로 확인했으며, 상세 실행 환경 로그는 받지 않았습니다.
+- 사용자가 데모 화면의 정상 표시와 WSI R1 이동·양쪽 같은 조직 위치를 확인했습니다([U07·U33](docs/CONTRIBUTIONS.md)). 다른 WSI 조작·브라우저 버전은 별도 미확인입니다. 좌표 함수의12개 테스트 통과는 사용자 보고로 확인했으며, 상세 실행 환경 로그는 받지 않았습니다.
 - GitHub Actions: [CPU 검사 이력](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml), [checkout UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42462829668), [공개 URL UI 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42463547474) 성공. UI 소스 `b5024b0` 기준이며 후속 문서·증거 추가는 UI 파일을 바꾸지 않습니다. 공개2,188개 파일의 저장소 정합성은 `artifacts/ui/wsi/production-files.json`에 있습니다.
 
 [![CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml)
@@ -172,7 +172,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 사용자가 `src/pathology_edge/learner_coordinates.py`의 `local_to_level0` 구현과12개 테스트 통과 결과를 제출했습니다.
 Codex는 제출한 알고리즘을 바꾸지 않고 검토·독립 실행했습니다. 축별 역변환 설명까지 확인해 [1단계](docs/STEP_01.md)를 완료했습니다. [2단계](docs/STEP_02.md)의 반례 해석·테스트 작성·실행 보고, [3단계](docs/STEP_03.md)의 과대 집계 설명, [4단계](docs/STEP_04.md)의 Dice 구현·20개 테스트 통과 보고도 확인했습니다.
-[5단계](docs/STEP_05.md)에서 사용자도 본인이 작성한 Dice로 실제 저장 결과를 재계산하고42개 점수·6개 평균 일치 출력을 제출했습니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다. [6단계](docs/STEP_06.md)의 영역별 평균, [7단계](docs/STEP_07.md)의 평균·개별 이미지, [8단계](docs/STEP_08.md)의 일반화 한계, [9단계](docs/STEP_09.md)의 그룹 함수·18개 테스트, [10단계](docs/STEP_10.md)의 그룹 검사, [11단계](docs/STEP_11.md)의 파일 중복 구분, [12단계](docs/STEP_12.md)의 저장 해시, [13단계](docs/STEP_13.md)의 국소 점수·같은 위치, [14단계](docs/STEP_14.md)의 드래그와 [15단계](docs/STEP_15.md)의 스크롤 정상 보고도 확인했습니다. [16단계](docs/STEP_16.md)의 강조 표시 끄기·켜기도 탭·버튼 위치 안내 후 사용자 확인을 받았습니다. [17단계](docs/STEP_17.md)의11_1 전환·양쪽 같은 위치·국소 Dice0.626→0.854도 사용자 확인을 받았습니다. [18단계](docs/STEP_18.md)의 변경 픽셀 수와 핵 개수 구분 설명도 확인했습니다. [19단계](docs/STEP_19.md)의 시간 집계·측정 범위 설명도 확인했습니다. [20단계](docs/STEP_20.md)의11_2 첫 병합 쌍 이동·#74 억제→#54 유지 표시도 사용자 확인을 받았습니다. [21단계](docs/STEP_21.md)의 NMS 대응과 실제 핵 정답 구분 설명도 확인했습니다. 현재는 [22단계](docs/STEP_22.md)의 실제 WSI R1 이동을 확인합니다.
+[5단계](docs/STEP_05.md)에서 사용자도 본인이 작성한 Dice로 실제 저장 결과를 재계산하고42개 점수·6개 평균 일치 출력을 제출했습니다. 데이터를 읽는 검산 스크립트는 Codex가 작성했습니다. [6단계](docs/STEP_06.md)의 영역별 평균, [7단계](docs/STEP_07.md)의 평균·개별 이미지, [8단계](docs/STEP_08.md)의 일반화 한계, [9단계](docs/STEP_09.md)의 그룹 함수·18개 테스트, [10단계](docs/STEP_10.md)의 그룹 검사, [11단계](docs/STEP_11.md)의 파일 중복 구분, [12단계](docs/STEP_12.md)의 저장 해시, [13단계](docs/STEP_13.md)의 국소 점수·같은 위치, [14단계](docs/STEP_14.md)의 드래그와 [15단계](docs/STEP_15.md)의 스크롤 정상 보고도 확인했습니다. [16단계](docs/STEP_16.md)의 강조 표시 끄기·켜기도 탭·버튼 위치 안내 후 사용자 확인을 받았습니다. [17단계](docs/STEP_17.md)의11_1 전환·양쪽 같은 위치·국소 Dice0.626→0.854도 사용자 확인을 받았습니다. [18단계](docs/STEP_18.md)의 변경 픽셀 수와 핵 개수 구분 설명도 확인했습니다. [19단계](docs/STEP_19.md)의 시간 집계·측정 범위 설명도 확인했습니다. [20단계](docs/STEP_20.md)의11_2 첫 병합 쌍 이동·#74 억제→#54 유지 표시도 사용자 확인을 받았습니다. [21단계](docs/STEP_21.md)의 NMS 대응과 실제 핵 정답 구분 설명도 확인했습니다. [22단계](docs/STEP_22.md)의 WSI R1 이동·양쪽 같은 조직 위치도 사용자 확인을 받았습니다. 현재는 [23단계](docs/STEP_23.md)의 R1 경계 차이 화면을 확인합니다.
 
 그 결과에 의존하지 않는 모델·기반 코드·데모·검증은 Codex가 수행했습니다.
 [기여 기록](docs/CONTRIBUTIONS.md)은 코드 작성 / 테스트·화면 확인 / 검토·결정 / Codex 작업을

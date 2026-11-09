@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Etc/UTC",
+  "actor": "Codex",
+  "user_status": "Pending",
+  "case": {
+    "id": "R1-boundary-1",
+    "bbox_local": [
+      608,
+      624,
+      672,
+      688
+    ],
+    "bbox_level0": [
+      6496,
+      21232,
+      6560,
+      21296
+    ],
+    "center_level0": [
+      6528,
+      21264
+    ],
+    "added_pixels": 347,
+    "removed_pixels": 123,
+    "changed_pixels": 470,
+    "boundary_changed_pixels": 413
+  },
+  "recalculated_counts": {
+    "added_pixels": 347,
+    "removed_pixels": 123,
+    "changed_pixels": 470,
+    "boundary_changed_pixels": 413
+  },
+  "checks": {
+    "source_mask_hashes_match": true,
+    "counts_match_case": true,
+    "local_to_level0_offset_matches": true,
+    "difference_overlay_hash_matches": true,
+    "difference_overlay_alpha_matches_xor": true
+  },
+  "ground_truth_available": false,
+  "source_sha256": {
+    "dist/wsi.json": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+    "dist/wsi.js": "bc5c280e966e37b57d9349bf6fc2be88cf6700629c568c0c7c9bb80f7382e19b",
+    "dist/wsi.html": "43b28a8cd27d4a4845f4ef9d68bacb3a33fe99a1ef6860e16786f48c403f7f4f",
+    "dist/wsi/R1-no_overlap-mask.png": "8f4cb8b18c6aa2f19c1e079db089bbefa3f9d75ced320a6f609b0135e41a7a44",
+    "dist/wsi/R1-overlap-mask.png": "6da3b52c7138f0eb7aa0f54f4f853d8c785ae3b4607666ced1435cdffb35d746",
+    "dist/wsi/R1-difference.png": "00d3dbe20773f5e561f0e1e2b0a1eec142d5024f65af66cc1726dabb395d7754"
+  },
+  "scope": "Read saved binary prediction masks and difference PNG; verify case counts, coordinates and changed-pixel alpha. Reviewed jumpDifference display/viewport wiring and existing test definition; no new browser run, inference or accuracy measurement."
+}
