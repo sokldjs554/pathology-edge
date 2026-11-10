@@ -1,6 +1,6 @@
 # 34단계: Codespaces에서 TinyUNet 학습 직접 재현
 
-상태: **사용자 epoch 14~16 학습 로그 확인, 저장 결과·재현 차이 검토 대기**. Ubuntu 24.04.5 LTS·패키지 환경·데이터 50쌍 준비에 이어 마지막 epoch 로그를 받았습니다. epoch 16의 threshold 0.5 검증 Dice는 사용자 0.5012017684535199, 기준 실행 0.5051041697403853으로 다릅니다. 원인은 아직 확인하지 않았습니다. 사용자가 학습을 실행해 epoch 16까지 도달한 사실과, 최종 파일 저장·선택 모델·정확한 재현 여부를 구분합니다. 전체 테스트 실행도 미확인입니다. [사용자 보고 검토 기록](../artifacts/learning/step34-review.json)
+상태: **사용자 epoch 16 도달·모델 파일 해시·실행 커밋 확인, 선택 결과 검토 대기**. 실행 폴더는 `work/my-tnbc-baseline.nD5R9k/`, 학습 당시 커밋은 `1d812eea0f3c44cf3e7ab4fc1dd6b51a371c54da`입니다. 사용자 모델 파일 SHA256은 `aa0e259512f4ec491356782521e544408a1cd189363ee4dd82f455ccff6c7f91`로 기준 파일과 다릅니다. 파일 해시만으로 가중치 차이나 실패 원인을 확정하지 않습니다. epoch 16의 threshold 0.5 검증 Dice도 사용자 0.5012017684535199, 기준 0.5051041697403853으로 다릅니다. 최선 epoch·선택 threshold·최선 검증 점수·실행 환경의 원문은 아직 받지 않았고, 실행 당시 미커밋 변경 및 전체 테스트도 미확인입니다. [사용자 보고 검토 기록](../artifacts/learning/step34-review.json)
 
 이번 단계의 목표는 기존 모델을 같은 조건으로 직접 학습하고 로그를 확인하는 것입니다. 모델·손실 코드를 바꾸는 비교 실험은 이 결과를 검토한 뒤 진행합니다.
 
@@ -80,31 +80,13 @@ python -u -m pathology_edge.cli train \
 
 Bash가 0이 아닌 종료 상태를 내거나 traceback이 보이면 성공으로 기록하지 않습니다. 재시도할 때도 위 블록 전체를 실행해 새 폴더를 만듭니다. 종료된 터미널에서 이어갈 때는 로그가 있는 실제 폴더를 `PATHOLOGY_RUN_DIR`에 지정해야 합니다.
 
-### 지금 할 일: 같은 터미널에서 저장 결과 요약
+### 지금 할 일: 저장 결과의 필요한 끝부분 확인
 
-이 명령은 기존 파일만 읽습니다. `Run:` 경로가 이전 보고에서 빠져 있으므로 경로도 함께 출력합니다. 환경 변수나 파일이 없으면 자동으로 다른 실행을 고르지 않고 오류를 확인합니다.
+터미널 초기화로 환경 변수가 사라졌으나 사용자가 학습 폴더를 찾아 경로를 제출했습니다. 이후 들여쓰기 문제가 있어 Python 블록 대신 셸 명령을 안내했고 모델 파일 해시·커밋 출력을 받았습니다. 아래는 **사용자가 확인한 실행 폴더**의 `training.json`에서 `best_epoch`부터 끝까지 약 30줄만 읽습니다. 환경 변수와 Python 들여쓰기를 사용하지 않으며 학습을 다시 실행하지 않습니다.
 
 ```bash
-python - <<'PY'
-import hashlib, json, os
-from pathlib import Path
-
-value = os.environ.get('PATHOLOGY_RUN_DIR')
-if not value:
-    raise SystemExit('PATHOLOGY_RUN_DIR이 없습니다. 학습 때 나온 Run: 경로를 보내 주세요.')
-run = Path(value)
-report = json.loads((run / 'training.json').read_text())
-summary = {'run': str(run), 'completed_epochs': len(report['history'])}
-for key in ('train_images', 'validation_images', 'best_epoch', 'threshold',
-            'best_validation_dice', 'seconds', 'model_sha256', 'config', 'environment'):
-    summary[key] = report[key]
-for name in ('source-commit.txt', 'source-status.txt'):
-    summary[name] = (run / name).read_text().strip()
-summary['model_file_matches_report'] = (
-    hashlib.sha256((run / 'model.pt').read_bytes()).hexdigest() == report['model_sha256']
-)
-print(json.dumps(summary, ensure_ascii=False, indent=2))
-PY
+cd /workspaces/pathology-edge &&
+sed -n '/"best_epoch"/,$p' work/my-tnbc-baseline.nD5R9k/training.json
 ```
 
 고정된 기존 결과의 참고값은 **16 epochs, best epoch 12, threshold 0.5, validation Dice 0.530508395092291**입니다. 이 값은 test 평균 Dice와 다릅니다. CPU·라이브러리 차이로 재현 값이나 시간에 차이가 날 수 있으며, 맞추려고 반복 튜닝하지 않고 차이와 환경을 함께 보고합니다.
@@ -113,7 +95,7 @@ PY
 
 ## 결과를 보낼 때
 
-현재는 **위 저장 결과 요약의 출력 전체**를 보내 주세요. 마지막 epoch의 점수만으로 저장된 best epoch·threshold·모델 재현까지 완료로 판단하지 않습니다. 불일치 검토에 필요할 때 전체 학습 history를 추가로 확인합니다. 학습은 다시 실행하지 않습니다.
+현재는 **위 명령이 출력한 끝부분 전체**를 보내 주세요. 모델 해시·커밋은 받았으므로 그 두 줄만 다시 보낼 필요는 없습니다. 마지막 epoch의 점수만으로 저장된 best epoch·threshold·모델 재현까지 완료로 판단하지 않습니다. 실행 설정·데이터 manifest·미커밋 변경과 전체 history는 필요할 때 추가로 대조합니다.
 
 오류라면 실행한 명령, 실행 폴더, traceback 전체, 생성된 run 경로, 코드 수정 여부를 함께 알려 주세요. `No module named ...`는 설치/복구 모드부터 확인하며 임의로 패키지 버전을 바꾸지 않습니다.
 
