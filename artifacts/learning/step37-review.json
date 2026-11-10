@@ -1,7 +1,7 @@
 {
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
-  "status": "Both user training executions and summaries reported; saved conditions/file audit pending",
+  "status": "Both user training execution reports and user-run saved-condition/file audit completed; interpretation pending",
   "user_contribution_ids": [
     "U48",
     "U49"
@@ -30,7 +30,7 @@
   "comparison": {
     "b_minus_a_validation_dice_decimal": "0.0146121120609965",
     "b_minus_a_training_seconds_decimal": "5.66106777000005",
-    "selection": "Each arm selects its own epoch and threshold with the assigned common validation rule; these are outcomes, not fixed controls. Full histories await user audit.",
+    "selection": "Each arm selects its own epoch and threshold using the common validation rule. User audit reports both 16-epoch histories and recomputed best selections match their reports.",
     "claim": "The reported selected validation score is higher for learner_dice in these runs. No new test-set, clinical or significance claim."
   },
   "earlier_user_baseline_report_match": {
@@ -41,7 +41,7 @@
   },
   "earlier_user_baseline_match_scope": "Summary score/selection and reported model SHA match STEP_34. Actual files not independently rehashed or tensors compared here. New run path and timing were separately reported.",
   "user_training_execution_reports_completed": true,
-  "user_comparison_conditions_audit_completed": false,
+  "user_comparison_conditions_audit_completed": true,
   "user_result_interpretation_completed": false,
   "codex_work": {
     "source_reference_commit": "46d365337e74c4e2c4a002d210d3574ec96540aa",
@@ -79,14 +79,15 @@
     "new_deployment": false
   },
   "next_user_action": {
-    "reference": "docs/STEP_38.md",
-    "user_contribution_id": "U50",
+    "reference": "docs/STEP_39.md",
+    "user_contribution_id": "U51",
     "status": "Pending",
-    "task": "Read and compare the two saved protocols, recorded environments/manifests/source snapshots, learner/model file hashes, 16-epoch history and best selection. Send the JSON check output; no retraining."
+    "task": "Summarize in one sentence for an interview the user-authored change, observed validation-score difference and interpretation limits."
   },
   "limits": [
-    "Full user protocols, learner-run environment, manifests, history and file hash recomputation are not yet verified.",
+    "Saved protocols, recorded environments, manifests, source records, history selection and file hashes passed the user-run audit. Raw files and full histories were not directly received by Codex.",
     "One seed with selection on validation; this is not independent final test validation or evidence of clinical/generalized improvement.",
     "Training seconds are single-run measurements, not inference timings or a stable performance benchmark."
-  ]
+  ],
+  "conditions_audit_evidence": "step38-review.json: 12 true checks reported by user, not direct Codex access to user files."
 }

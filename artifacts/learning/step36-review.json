@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U48",
-  "status": "BCE-only execution and result report confirmed; comparative conditions/file audit pending",
+  "status": "BCE-only execution/result report and user-run comparative conditions/file audit completed",
   "evidence_type": "User-pasted training.json ending; not direct Codex access to user files",
   "reported_training_summary": {
     "best_epoch": 12,
@@ -40,7 +40,7 @@
   "full_history_received": false,
   "completed_16_epochs_independently_verified": false,
   "model_file_sha256_independently_recomputed": false,
-  "protocol_manifest_and_source_audit_completed": false,
+  "protocol_manifest_and_source_audit_completed": true,
   "comparison_to_step34": {
     "matching_report_fields": [
       "environment",
@@ -75,14 +75,14 @@
     "new_deployment": false
   },
   "next_user_action": {
-    "reference": "docs/STEP_38.md",
-    "user_contribution_id": "U50",
+    "reference": "docs/STEP_39.md",
+    "user_contribution_id": "U51",
     "status": "Pending",
-    "task": "Read and compare the two saved protocols, recorded environments/manifests/source snapshots, learner/model file hashes, 16-epoch history and best selection. Send the JSON check output; no retraining."
+    "task": "Summarize in one sentence for an interview the user-authored change, observed validation-score difference and interpretation limits."
   },
   "limits": [
-    "The first report ending omitted mode/path; later user JSON confirmed bce_only and its run path. Full history, file integrity and source audit remain pending.",
-    "Configuration, manifest, source and environment equality for the two arms will be audited from their saved records after the second run.",
+    "Mode/path confirmed by user JSON; 16-epoch history, file hash and source checks subsequently passed according to user audit output.",
+    "Recorded settings, manifest and environment equality confirmed by user-run audit; this does not independently rehash all original image files.",
     "Validation selection is exploratory; no new test score, multi-seed effect, statistical significance, clinical result or speed improvement established."
   ],
   "actual_mode_verification_basis": "User-pasted JSON summary reports loss_mode bce_only; not direct file access.",
@@ -94,5 +94,6 @@
     "best_validation_dice": 0.5211708103759707,
     "seconds": 95.53081978800037,
     "model_sha256": "b200555e5e8e3a1552e815fc731aacad6809df53ee46552d4d41ed1c915923ce"
-  }
+  },
+  "user_audit_followup": "step38-review.json: user reported 12 true checks including 16 epochs and model file hash agreement; direct independent Codex access remains false."
 }

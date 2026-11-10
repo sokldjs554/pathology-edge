@@ -28,10 +28,10 @@
     "new_deployment": false
   },
   "next_user_action": {
-    "reference": "docs/STEP_38.md",
-    "user_contribution_id": "U50",
+    "reference": "docs/STEP_39.md",
+    "user_contribution_id": "U51",
     "status": "Pending",
-    "task": "Read and compare the two saved protocols, recorded environments/manifests/source snapshots, learner/model file hashes, 16-epoch history and best selection. Send the JSON check output; no retraining."
+    "task": "Summarize in one sentence for an interview the user-authored change, observed validation-score difference and interpretation limits."
   },
   "accepted_calculation": {
     "path": "src/pathology_edge/learner_losses.py",
@@ -51,5 +51,5 @@
     "step35-codex-accepted-ci-checks.txt",
     "step36-preparation.json"
   ],
-  "comparison_followup": "Two user execution summaries received in step37-review.json; saved conditions/file audit and user interpretation remain pending."
+  "comparison_followup": "Two user execution summaries received in step37-review.json; user-run saved-condition/file audit completed in step38-review.json. User interpretation remains pending."
 }
