@@ -1,10 +1,10 @@
 # 40단계: 실제 ROI 메타데이터를 본인 좌표 함수에 연결
 
-상태: **사용자 코드 작성·테스트 예정**. 39단계 비교 실험 설명은 확인했습니다. 이번에는 이미 작성한 `local_to_level0`를 다시 구현하지 않고, 실제 WSI 읽기·리사이즈 정보와 연결합니다.
+상태: **실습 파일 갱신·손실 함수 원본 보존 보고 확인, 사용자 연결 함수 작성·테스트 예정**. 사용자가 “실습 파일 갱신 완료. 작성한 손실 함수 원본 보존.”을 보고했습니다. 갱신 후 커밋과 파일은 직접 조회하지 않았으며, 새 함수 코드·테스트 출력은 아직 받지 않았습니다. 이번에는 이미 작성한 `local_to_level0`를 다시 구현하지 않고, 실제 WSI 읽기·리사이즈 정보와 연결합니다.
 
-## 먼저 실습 파일 받기
+## 실습 파일 수신 완료 — 아래 갱신 명령은 참고용
 
-확인된 Codespaces 상태는 `790a336`, 변경 파일은 `src/pathology_edge/learner_losses.py` 하나입니다. 아래는 그 파일의 **검증된 백업을 만든 뒤** 저장소를 갱신하고, 작성한 파일을 그대로 복구하는 명령입니다. 명령이 실패해도 종료 처리에서 백업을 복원합니다. 다른 변경이 생겼으면 수정 전에 중단합니다. 백업 경로도 파일로 남깁니다.
+갱신 전 보고된 Codespaces 상태는 `790a336`, 변경 파일은 `src/pathology_edge/learner_losses.py` 하나였습니다. 아래 명령의 성공 보고를 받았으므로 **다시 실행하지 않고 다음 절의 함수 작성으로 진행합니다**. 아래는 그 파일의 검증된 백업을 만든 뒤 저장소를 갱신하고, 작성한 파일을 그대로 복구하도록 제공한 명령입니다. 명령이 실패해도 종료 처리에서 백업을 복원합니다. 다른 변경이 생겼으면 수정 전에 중단합니다. 백업 경로도 파일로 남깁니다.
 
 **실행 위치:** Codespaces Bash 터미널, 기존 저장소 `/workspaces/pathology-edge`.
 
@@ -83,4 +83,4 @@ Codex는 `wsi_roi.py`의 메타데이터 검사·OpenSlide ROI 읽기·리사이
 
 사용자 함수가 미완성이므로 일반 배율의 patch 좌표 반환은 아직 완료되지 않았습니다. 기존 `wsi_export.py`와 공개 native 결과는 그대로이며, 실제 export 연결·좌표 대조는 제출 코드 검토 후 진행합니다. 이번에 새 모델 추론·WSI 정확도 평가·전체 슬라이드 분석을 수행한 것은 아닙니다.
 
-[실제 ROI 읽기 근거](../artifacts/learning/step40-real-roi-reads.json) · [준비·검증 기록](../artifacts/learning/step40-preparation.json) · [기여 기록](CONTRIBUTIONS.md)
+[실제 ROI 읽기 근거](../artifacts/learning/step40-real-roi-reads.json) · [준비·검증 기록](../artifacts/learning/step40-preparation.json) · [사용자 갱신 보고](../artifacts/learning/step40-review.json) · [기여 기록](CONTRIBUTIONS.md)

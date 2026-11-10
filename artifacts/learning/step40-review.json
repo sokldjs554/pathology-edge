@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Etc/UTC",
+  "user_contribution_id": "U52",
+  "status": "File update and loss preservation reported; adapter implementation and tests pending",
+  "user_update_report_verbatim": "실습 파일 갱신 완료. 작성한 손실 함수 원본 보존.",
+  "evidence_basis": "User reported the success line from the supplied protected update command; Codex has not accessed the user's Codespaces files.",
+  "workspace": {
+    "previous_reported_head": "790a336",
+    "updated_head": null,
+    "user_update_completed_reported": true,
+    "user_loss_preserved_reported": true
+  },
+  "user_adapter_received": false,
+  "user_contract_test_output_received": false,
+  "codex_work": [
+    "Read the reserved roi_points_to_level0 scaffold and its eight contract tests.",
+    "Recorded the update report separately from pending user implementation and test execution.",
+    "Provided one function-writing task using the existing accepted coordinate transform."
+  ],
+  "not_performed_this_turn": [
+    "User Codespaces inspection",
+    "Runtime implementation changes",
+    "Pytest, training or inference",
+    "Browser testing or deployment"
+  ],
+  "next_user_action": {
+    "file": "src/pathology_edge/learner_wsi.py",
+    "function": "roi_points_to_level0",
+    "working_directory": "/workspaces/pathology-edge",
+    "test_command": "python -m pytest -q tests/learner/test_wsi_coordinates.py --run-learner",
+    "expected_test_count": 8,
+    "submit": "Function body and test output; traceback if unsuccessful"
+  }
+}
