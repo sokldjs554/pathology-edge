@@ -41,5 +41,5 @@
 - [x] Record U53 accepted boundary answer; mark repeat execution U54 pending.
 - [x] Run all six actual experiments in a new ignored directory against prepared TNBC data; audit complete result, preserve all signs and costs.
 - [x] Verify frozen imports/source/protected original file hashes; inspect final JSON and document links.
-- [ ] Publish a pinned standalone runner + checksum command, requiring no Git update and preserving user files; verify download before final handoff.
+- [x] Publish a pinned standalone runner + checksum command, requiring no Git update and preserving user files; verify download before final handoff.
 - [x] Obtain one fresh whole-branch review under executing-plans, address material findings, commit and integrate within existing authorization.

@@ -29,5 +29,11 @@
   "download_sha256": "cdb84d646b41cf5cac713f0152aa7d389ad29679b469e9b36dc785df58ba4b1c",
   "actual_training_runner_commit": "2538c4f58ba87fbf8ad2f0341c13e89dfc626582",
   "final_fix_scope": "Startup failure reporting only; no training loop, learner source, selected seeds or aggregation change. Final runner re-audited all six saved runs and reproduced the exact summary without retraining.",
-  "publication_download_verified": false
+  "publication_download_verified": true,
+  "publication_verification": {
+    "pinned_url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/b8f199fa2fb1af0aab8ef774fc50407736c62dd1/scripts/run_loss_repeats.py",
+    "download_sha256": "cdb84d646b41cf5cac713f0152aa7d389ad29679b469e9b36dc785df58ba4b1c",
+    "downloaded_runner_read_only_audit_matches_retained_summary": true,
+    "user_execution_reported": false
+  }
 }

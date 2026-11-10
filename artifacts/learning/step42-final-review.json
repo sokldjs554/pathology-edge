@@ -57,5 +57,10 @@
       "decision": "Parent independently rechecked 2392 protected files and the native-edge record against user answer",
       "risk": "User report remains distinct from direct access to their environment"
     }
+  ],
+  "integration_decisions": [
+    "Prior user authorization for ordered completion and delegated implementation covers routine seed/tool preparation and main integration; these protocol choices are labelled Codex decisions.",
+    "Reused the existing host-owned linked worktree and equivalent ignored ledger; retain the host-owned worktree and actual experimental outputs.",
+    "Published exact pinned final runner, verified its SHA-256 and reproduced all six saved results using the downloaded copy; no new inference or retraining."
   ]
 }
