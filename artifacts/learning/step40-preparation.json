@@ -62,9 +62,35 @@
     "ROI mapping waits for the user function; the public native pipeline has not been rewired.",
     "This adapter uses continuous rectangle-edge coordinates; resized model centroid index conversion is not implemented.",
     "Conservative clipping excludes a fractional selected-level residual strip at right/bottom; native level-0 edges are preserved.",
-    "No WSI accuracy or new performance result; image reading checks do not constitute inference."
+    "No WSI accuracy or new performance result; image reading checks do not constitute inference.",
+    "OpenSlide metadata/pixel correspondence was checked; independent vendor physical calibration was not performed."
   ],
   "independent_review": {
-    "status": "Pending fresh whole-branch review"
+    "reviewed_range": "2917e9f..0a3bdf6",
+    "reviewer": "fresh read-only agent on gpt-6-astra",
+    "status": "Approved; no Critical or Important findings; one nonblocking contribution-status sentence corrected by Codex",
+    "minor_addressed": "U49 now references completed U51 interpretation instead of awaiting a reply.",
+    "declined_scopes_and_rulings": [
+      {
+        "scope": "Completed learner mapping",
+        "ruling": "Remains reserved; eight expected stub failures and pending user execution are explicit."
+      },
+      {
+        "scope": "Pixel-center/centroid corrections",
+        "ruling": "Deferred; continuous rectangle-edge contract only. Generalized centroid/inference claims remain unavailable."
+      },
+      {
+        "scope": "Generalized inference/WSI accuracy/clinical validity",
+        "ruling": "No new inference or GT; no such claim."
+      },
+      {
+        "scope": "User Codespaces execution",
+        "ruling": "Update command fixtures do not establish user execution; status remains pending."
+      },
+      {
+        "scope": "Vendor physical-pixel calibration",
+        "ruling": "Checks follow OpenSlide metadata and verify returned pixels; independent physical calibration is outside the claim."
+      }
+    ]
   }
 }
