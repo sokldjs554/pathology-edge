@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "source_base_commit": "818b668b1fce788319a6fc7fc4e061e2eccf7679",
+  "source_sha256": {
+    "src/pathology_edge/experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "src/pathology_edge/cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "src/pathology_edge/learner_losses.py": "c083205e86179a4472eef4b77b9e6fd861a8066754e363400c59a57366488a91",
+    "src/pathology_edge/model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a"
+  },
+  "user_owned_function": {
+    "path": "src/pathology_edge/learner_losses.py",
+    "function": "soft_dice_loss",
+    "status": "NotImplementedError stub; user code and test output pending",
+    "provided_by_codex": "Signature, input validation, contract tests and training addition/routing; no learner math body supplied."
+  },
+  "verification": {
+    "baseline_main_tests": "107 passed in 6.85s",
+    "infrastructure_red": "22 failed, 3 passed before implementation",
+    "full_default_suite": "132 passed, 8 skipped in 8.26s",
+    "learner_opt_in": "8 failed with NotImplementedError in 1.10s; expected pending learner implementation",
+    "integration_test_substitute": "Two infrastructure tests substitute a differentiable term for the unfinished learner function, testing composition/provenance only, not claiming completed learner math.",
+    "remaining_ci_checks": "audit_dice.py: 42/42 Dice, 6/6 means; node --check for app/wsi/ihc; validate_demo.py all exit 0. No new browser execution."
+  },
+  "training_checks": {
+    "baseline_history_exact": true,
+    "baseline_protocol_exact": true,
+    "baseline_model_file_exact": true,
+    "baseline_all_tensors_equal": true,
+    "only_loss_changes_in_bce_protocol": true,
+    "no_test_evaluation": true
+  },
+  "runs": {
+    "baseline": {
+      "actor": "Codex",
+      "loss": "BCE + soft Dice",
+      "epochs": 16,
+      "best_epoch": 12,
+      "threshold": 0.5,
+      "best_validation_dice": 0.530508395092291,
+      "seconds": 41.02660633000778,
+      "model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+      "train_images": 33,
+      "validation_images": 10,
+      "test_used_for_selection": false,
+      "environment": {
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "torch": "2.15.0+cpu",
+        "numpy": "2.5.4",
+        "opencv": "5.0.0",
+        "cpu_count": 5,
+        "torch_threads": 4,
+        "cuda": false,
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      }
+    },
+    "bce_only": {
+      "actor": "Codex",
+      "loss": "BCE only",
+      "epochs": 16,
+      "best_epoch": 12,
+      "threshold": 0.5,
+      "best_validation_dice": 0.5111511225357194,
+      "seconds": 43.449443314020755,
+      "model_sha256": "c7a07078fab337fb6953d2c2d7e927943c46908d3c413eb69fe7b0d36b8d2078",
+      "train_images": 33,
+      "validation_images": 10,
+      "test_used_for_selection": false,
+      "environment": {
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "torch": "2.15.0+cpu",
+        "numpy": "2.5.4",
+        "opencv": "5.0.0",
+        "cpu_count": 5,
+        "torch_threads": 4,
+        "cuda": false,
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      }
+    }
+  },
+  "original_files_protected": {
+    "snapshot_count": 2473,
+    "all_hashes_unchanged_immediately_after_training": true,
+    "permitted_progress_update": [
+      "artifacts/learning/step34-review.json"
+    ],
+    "final_protected_count": 2472,
+    "final_protected_hashes_unchanged": true
+  },
+  "resolved_preparation_issues": [
+    "Host editable build initially used missing clang++; installed with existing CC=gcc CXX=g++.",
+    "Tiny synthetic fixture initially reused identical image bytes across train/validation and correctly triggered leakage; made fixture images distinct.",
+    "Kept existing Held-out guard text after original regression test caught changed wording."
+  ],
+  "limits": [
+    "User implementation/tests and two-arm training are pending.",
+    "Codex experiments are one seed on 10 validation images with validation selection; no new test score or clinical claim.",
+    "Compare user arms in the same Codespace later; do not compare these host scores directly as an intervention against their different CPU run.",
+    "No learner_dice real training completed; only consumer wiring used a test substitute."
+  ],
+  "independent_review": {
+    "result": "No Critical or Important findings; infrastructure ready, learner math pending.",
+    "minor_deferred": [
+      {
+        "file": "src/pathology_edge/cli.py",
+        "issue": "Explicit --loss baseline is accepted on nontraining commands; nondefault modes are rejected.",
+        "impact": "No different loss is selected and current learner task is unaffected; retain as a CLI validation limitation."
+      }
+    ],
+    "declined_behaviors": [
+      {
+        "scope": "Actual learner math, gradients or training quality",
+        "ruling": "Pending user code; reserved body and opt-in failing tests remain. No claim of readiness for actual learner training."
+      },
+      {
+        "scope": "Independent access to user Codespaces execution",
+        "ruling": "User reports are the evidence, separate from Codex verification."
+      },
+      {
+        "scope": "Statistical generalization or clinical improvement",
+        "ruling": "One-seed validation-only runs cannot establish either; no such claim made."
+      }
+    ]
+  }
+}

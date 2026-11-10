@@ -13,18 +13,22 @@ def main():
     parser.add_argument('--epochs',type=int,default=16)
     parser.add_argument('--steps',type=int,default=20)
     parser.add_argument('--seed',type=int,default=20261107)
+    parser.add_argument('--loss',choices=['baseline','bce_only','learner_dice'],default='baseline',
+                        help='Training loss; learner_dice requires STEP_35 implementation')
     parser.add_argument('--mode',choices=['classical','no_overlap','overlap','full'])
     parser.add_argument('--image')
     parser.add_argument('--backend',choices=['python','cpp'],default='python')
     parser.add_argument('--threads',type=int,default=1)
     parser.add_argument('--prediction-dir',default='work/inference')
     args=parser.parse_args()
+    if args.command!='train' and args.loss!='baseline':
+        parser.error('--loss is only supported by train')
     if args.command=='prepare':
         result=prepare(args.data,args.archive)
         print(json.dumps({'images':len(result['records']),'manifest':args.data+'/manifest.json'}))
         return
     from .experiment import train,evaluate,evaluate_worker,export_demo
-    if args.command=='train': train(args.data,args.output,args.seed,args.epochs,args.steps)
+    if args.command=='train': train(args.data,args.output,args.seed,args.epochs,args.steps,loss_mode=args.loss)
     elif args.command=='evaluate': evaluate(args.data,args.output)
     elif args.command=='eval-worker': evaluate_worker(args.data,args.output,args.mode)
     elif args.command=='export': export_demo(args.data,args.output,args.dest)

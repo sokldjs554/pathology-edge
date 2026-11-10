@@ -1,0 +1,16 @@
+COMMAND ['/workspace/work/venv/bin/python', 'scripts/audit_dice.py', '--output', 'work/step35-dice-audit.json']
+42/42 Dice values and 6/6 image means match.
+7 test images / 2 case groups; no inference run.
+method           all       boundary  interior
+no_overlap       0.558001  0.491793  0.572866
+overlap          0.560790  0.527261  0.569630
+Report: work/step35-dice-audit.json
+
+COMMAND ['node', '--check', 'dist/app.js']
+
+COMMAND ['node', '--check', 'dist/wsi.js']
+
+COMMAND ['node', '--check', 'dist/ihc.js']
+
+COMMAND ['/workspace/work/venv/bin/python', 'scripts/validate_demo.py']
+PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.

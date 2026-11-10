@@ -75,10 +75,31 @@ def classical(image, cutoff):
     return (gray < cutoff) & (tissue_mask(image) > 0)
 
 
-def train(root='data', output='artifacts', seed=20261107, epochs=16, steps=20):
+def _training_loss(mode):
+    if mode == 'baseline':
+        return loss_fn, 'BCE + soft Dice'
+    if mode == 'bce_only':
+        return torch.nn.functional.binary_cross_entropy_with_logits, 'BCE only'
+    if mode == 'learner_dice':
+        from . import learner_losses
+
+        def learner_combined(logits, target):
+            return (torch.nn.functional.binary_cross_entropy_with_logits(logits, target)
+                    + learner_losses.soft_dice_loss(logits, target))
+
+        return learner_combined, 'BCE + learner soft Dice'
+    raise ValueError(f'Unknown training loss: {mode}')
+
+
+def train(root='data', output='artifacts', seed=20261107, epochs=16, steps=20,
+          loss_mode='baseline'):
+    selected_loss, loss_label = _training_loss(loss_mode)
     root, out = Path(root), Path(output)
     if (out/'evaluation.json').exists() or (out/'evaluation_lock.json').exists():
         raise RuntimeError('Held-out evaluation already exists. Start a new experiment directory; do not retune on test.')
+    protected = ('model.pt', 'training.json', 'protocol.json')
+    if any((out/name).exists() for name in protected):
+        raise RuntimeError('Saved experiment already exists. Use a new output directory; do not overwrite or retune on test.')
     torch.set_num_threads(4)
     torch.manual_seed(seed)
     np.random.seed(seed)
@@ -92,12 +113,17 @@ def train(root='data', output='artifacts', seed=20261107, epochs=16, steps=20):
     val_data = [(load_image(root/r['image']),load_mask(root/r['mask'])) for r in val_rows]
     out.mkdir(parents=True, exist_ok=True)
     config = dict(seed=seed, epochs=epochs, steps_per_epoch=steps, batch_size=8, crop=128,
-                  optimizer='Adam', learning_rate=0.001, loss='BCE + soft Dice', width=8,
+                  optimizer='Adam', learning_rate=0.001, loss=loss_label, width=8,
                   augmentations=['horizontal/vertical flip','90 degree rotations'],
                   selection='maximum validation image-macro Dice over epochs and thresholds',
                   thresholds=[0.35,0.5,0.65], seam_radius=8, test_used_for_selection=False,
                   patch_size=128, overlap=64, merge_iou=0.3, merge_distance=8, min_component_area=12,
                   centroid_match_radius=12, manifest_sha256=sha256(root/'manifest.json'))
+    if loss_mode != 'baseline':
+        config['loss_mode'] = loss_mode
+    if loss_mode == 'learner_dice':
+        from . import learner_losses
+        config['loss_source_sha256'] = sha256(learner_losses.__file__)
     dump(out/'protocol.json', config)
     model = TinyUNet()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
@@ -119,7 +145,7 @@ def train(root='data', output='artifacts', seed=20261107, epochs=16, steps=20):
                 xs.append(a.transpose(2,0,1).copy()); ys.append(b[None].copy())
             inputs, targets = torch.from_numpy(np.stack(xs)).float()/255, torch.from_numpy(np.stack(ys)).float()
             optimizer.zero_grad(set_to_none=True)
-            loss = loss_fn(model(inputs), targets)
+            loss = selected_loss(model(inputs), targets)
             loss.backward(); optimizer.step()
             losses.append(float(loss.detach()))
         val_probs = [predict(model, a)['probability'] for a,_ in val_data]
