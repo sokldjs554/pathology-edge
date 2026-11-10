@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "source_base_commit": "2917e9f750e5e69c164f280596d7d74c6f992dc5",
+  "source_sha256": {
+    "src/pathology_edge/wsi_roi.py": "ed2c64ef74fe018237a6a1d249a4bb7f218e1f8efa5bdc0bca46afb89b4fbdd6",
+    "src/pathology_edge/learner_wsi.py": "65d78f23b9fba4265f74e96a6b03d259a83999ff1e0572174cf2284c162b5717",
+    "src/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "src/pathology_edge/wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f"
+  },
+  "user_function": {
+    "path": "src/pathology_edge/learner_wsi.py",
+    "name": "roi_points_to_level0",
+    "state": "NotImplementedError stub; user body and eight test outputs pending",
+    "codex_provided": "Declaration, type guard, validated geometry, actual ROI reader, patch-footprint consumer and tests; no adapter answer body."
+  },
+  "verification": {
+    "baseline": "140 passed in 8.27s",
+    "reader_red": "25 failed in 0.15s before reader existed",
+    "reader_green": "25 passed in 0.08s; complete suite 165 passed in 8.44s",
+    "adapter_preparation_red": "10 failed, 25 passed in 0.15s before stub/consumer/guards existed",
+    "full_default": "167 passed, 8 skipped in 8.27s",
+    "learner_opt_in": "8 failed in 0.13s, all NotImplementedError; expected pending user work",
+    "remaining_ci": "42/42 stored Dice and 6/6 means; JavaScript syntax and static validate_demo all exit 0",
+    "real_roi_reads": "5 conditions from pinned source, native saved R1 pixel equality, direct OpenSlide/Pillow image/mask equality. step40-real-roi-reads.json",
+    "log_normalization": "Trailing whitespace stripped from the captured expected-failure log; outcomes and traceback content unchanged."
+  },
+  "user_update_command_verification": {
+    "success": {
+      "exit_code": 0,
+      "user_file_preserved_exactly": true,
+      "head_advanced_only_on_success": true
+    },
+    "diverged_branch": {
+      "exit_code": 128,
+      "user_file_preserved_exactly": true,
+      "head_advanced_only_on_success": true
+    },
+    "fetch_failure": {
+      "exit_code": 128,
+      "user_file_preserved_exactly": true,
+      "head_advanced_only_on_success": true
+    },
+    "unexpected_change": {
+      "exit_code": 1,
+      "user_file_preserved_exactly": true,
+      "head_advanced_only_on_success": true
+    }
+  },
+  "protected_original_files_unchanged": {
+    "count": 2392,
+    "scope": "dist, non-learning artifacts and accepted coordinate/loss/model/native-export source"
+  },
+  "user_update_executed": false,
+  "user_adapter_submitted": false,
+  "generalized_mapping_completed": false,
+  "native_export_rewired": false,
+  "new_model_inference": false,
+  "new_deployment": false,
+  "limits": [
+    "ROI mapping waits for the user function; the public native pipeline has not been rewired.",
+    "This adapter uses continuous rectangle-edge coordinates; resized model centroid index conversion is not implemented.",
+    "Conservative clipping excludes a fractional selected-level residual strip at right/bottom; native level-0 edges are preserved.",
+    "No WSI accuracy or new performance result; image reading checks do not constitute inference."
+  ],
+  "independent_review": {
+    "status": "Pending fresh whole-branch review"
+  }
+}

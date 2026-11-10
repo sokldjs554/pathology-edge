@@ -1,0 +1,200 @@
+{
+  "actor": "Codex",
+  "date": "2026-11-10",
+  "source_sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+  "reader": {
+    "openslide_python": "1.4.7",
+    "openslide": "4.0.1"
+  },
+  "actual_level_downsamples": [
+    1.0,
+    4.000060805058981,
+    16.003163017031632
+  ],
+  "cases": [
+    {
+      "name": "native_R1",
+      "geometry": {
+        "origin_level0_xy": [
+          5888,
+          20608
+        ],
+        "level": 0,
+        "level_downsample": 1.0,
+        "read_size_wh": [
+          1024,
+          1024
+        ],
+        "model_size_wh": [
+          1024,
+          1024
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        1024,
+        1024
+      ],
+      "image_shape": [
+        1024,
+        1024,
+        3
+      ],
+      "rgb_pixel_sha256": "10f9d7a4d8dce0f29881887196e181ae26f7058761de210320d4b63335f035be",
+      "source_opacity_mask_pixels": 1048576,
+      "direct_openslide_pillow_pixels_equal": true,
+      "saved_native_R1_pixels_equal": true
+    },
+    {
+      "name": "level_1_asymmetric",
+      "geometry": {
+        "origin_level0_xy": [
+          5888,
+          20608
+        ],
+        "level": 1,
+        "level_downsample": 4.000060805058981,
+        "read_size_wh": [
+          256,
+          128
+        ],
+        "model_size_wh": [
+          128,
+          32
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        256,
+        128
+      ],
+      "image_shape": [
+        32,
+        128,
+        3
+      ],
+      "rgb_pixel_sha256": "2ac8bf743b5b754431e5de3e4153e8e9040c1f43c303d46b1730c7fae0e84f20",
+      "source_opacity_mask_pixels": 4096,
+      "direct_openslide_pillow_pixels_equal": true,
+      "saved_native_R1_pixels_equal": null
+    },
+    {
+      "name": "level_2_asymmetric",
+      "geometry": {
+        "origin_level0_xy": [
+          5888,
+          20608
+        ],
+        "level": 2,
+        "level_downsample": 16.003163017031632,
+        "read_size_wh": [
+          128,
+          64
+        ],
+        "model_size_wh": [
+          64,
+          64
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        128,
+        64
+      ],
+      "image_shape": [
+        64,
+        64,
+        3
+      ],
+      "rgb_pixel_sha256": "feecc33e638d70e5b9a36386cee7c382d32ee3e92ca6acbe6281fb35521057bc",
+      "source_opacity_mask_pixels": 4096,
+      "direct_openslide_pillow_pixels_equal": true,
+      "saved_native_R1_pixels_equal": null
+    },
+    {
+      "name": "native_edge",
+      "geometry": {
+        "origin_level0_xy": [
+          45970,
+          32870
+        ],
+        "level": 0,
+        "level_downsample": 1.0,
+        "read_size_wh": [
+          30,
+          23
+        ],
+        "model_size_wh": [
+          15,
+          46
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        128,
+        128
+      ],
+      "image_shape": [
+        46,
+        15,
+        3
+      ],
+      "rgb_pixel_sha256": "a82e7dc6fc791aadd95737c8fed8140ae504c60c0349dc6f6eac034662de369e",
+      "source_opacity_mask_pixels": 690,
+      "direct_openslide_pillow_pixels_equal": true,
+      "saved_native_R1_pixels_equal": null
+    },
+    {
+      "name": "level_1_edge",
+      "geometry": {
+        "origin_level0_xy": [
+          45000,
+          32000
+        ],
+        "level": 1,
+        "level_downsample": 4.000060805058981,
+        "read_size_wh": [
+          249,
+          223
+        ],
+        "model_size_wh": [
+          300,
+          80
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        512,
+        512
+      ],
+      "image_shape": [
+        80,
+        300,
+        3
+      ],
+      "rgb_pixel_sha256": "c24bc3dbcec98ad3a03d3f11b8a1e37353ae7f546a4a859ac3304b2f10ed4337",
+      "source_opacity_mask_pixels": 24000,
+      "direct_openslide_pillow_pixels_equal": true,
+      "saved_native_R1_pixels_equal": null
+    }
+  ],
+  "learner_mapping_run": false,
+  "inference_run": false,
+  "original_scientific_and_public_files_unchanged": 2392,
+  "scope": "Actual ROI reads, clipping, RGB/opacity resampling and metadata only. User coordinate adapter remains a stub; no generalized inference or accuracy evaluation."
+}

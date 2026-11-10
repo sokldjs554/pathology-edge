@@ -52,12 +52,12 @@
     "This is acceptance of a user-run audit report, not independent Codex execution on the user files.",
     "The source check covers saved commit, tracked source diff and learner copy; it does not establish absence of every unrecorded file.",
     "Manifest equality does not newly rehash all original image bytes.",
-    "No new test, external-data, multi-seed or clinical validation; user interpretation remains pending."
+    "No new test, external-data, multi-seed or clinical validation. User interpretation subsequently confirmed in step39-review.json."
   ],
   "next_user_action": {
-    "reference": "docs/STEP_39.md",
-    "user_contribution_id": "U51",
+    "reference": "docs/STEP_40.md",
+    "user_contribution_id": "U52",
     "status": "Pending",
-    "task": "Summarize in one sentence for an interview the user-authored change, observed validation-score difference and interpretation limits."
+    "task": "Preserve the existing modified loss file while receiving the exercise, write only roi_points_to_level0 metadata wiring, and submit the function plus its eight opt-in test results."
   }
 }

@@ -1,0 +1,269 @@
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+________________ test_anisotropic_resize_and_no_input_mutation _________________
+
+    def test_anisotropic_resize_and_no_input_mutation():
+        from pathology_edge.learner_wsi import roi_points_to_level0
+        points = np.array([[10, 20], [0, 0]], dtype=np.int32)
+        before = points.copy()
+        points.flags.writeable = False
+>       result = roi_points_to_level0(points, geometry())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_wsi_coordinates.py:21:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[10, 20],
+       [ 0,  0]], dtype=int32)
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=1, level_downsample=4.0, read_size_wh=(400, 200), model_size_wh=(200, 50), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+______________________ test_native_edges_and_empty_points ______________________
+
+    def test_native_edges_and_empty_points():
+        from pathology_edge.learner_wsi import roi_points_to_level0
+        g = geometry(level=0, level_downsample=1., read_size_wh=(150, 130), model_size_wh=(150, 130))
+>       np.testing.assert_array_equal(roi_points_to_level0(np.array([[0, 0], [150, 130]]), g),
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                      [[1000, 2000], [1150, 2130]])
+
+tests/learner/test_wsi_coordinates.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[  0,   0],
+       [150, 130]])
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=0, level_downsample=1.0, read_size_wh=(150, 130), model_size_wh=(150, 130), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+________ test_fractional_downsample_is_not_replaced_with_a_power_of_two ________
+
+    def test_fractional_downsample_is_not_replaced_with_a_power_of_two():
+        from pathology_edge.learner_wsi import roi_points_to_level0
+        g = geometry(level_downsample=4.25, read_size_wh=(100, 80), model_size_wh=(50, 80))
+>       np.testing.assert_allclose(roi_points_to_level0(np.array([[1., 2.5]]), g), [[1008.5, 2010.625]])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_wsi_coordinates.py:39:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[1. , 2.5]])
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=1, level_downsample=4.25, read_size_wh=(100, 80), model_size_wh=(50, 80), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+____________ test_points_are_not_rounded_or_clipped_to_model_extent ____________
+
+    def test_points_are_not_rounded_or_clipped_to_model_extent():
+        from pathology_edge.learner_wsi import roi_points_to_level0
+>       np.testing.assert_allclose(roi_points_to_level0(np.array([[-.25, .5], [210, 60]]), geometry()),
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   [[998, 2008], [2680, 2960]])
+
+tests/learner/test_wsi_coordinates.py:44:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[ -0.25,   0.5 ],
+       [210.  ,  60.  ]])
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=1, level_downsample=4.0, read_size_wh=(400, 200), model_size_wh=(200, 50), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+__________________ test_uses_actual_read_size_after_edge_crop __________________
+
+    def test_uses_actual_read_size_after_edge_crop():
+        from pathology_edge.learner_wsi import roi_points_to_level0
+        from pathology_edge.wsi_roi import read_roi
+        from PIL import Image
+        class EdgeSlide:
+            dimensions = (500, 400)
+            level_downsamples = (1.0,)
+            def read_region(self, location, level, size):
+                return Image.new('RGBA', size, 'white')
+        roi = read_roi(EdgeSlide(), (490, 380), 0, (40, 30), (20, 10))
+        assert roi.geometry.read_size_wh == (10, 20) and roi.requested_size_wh == (40, 30)
+>       np.testing.assert_allclose(roi_points_to_level0(np.array([[20, 10], [10, 5]]), roi.geometry),
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   [[500, 400], [495, 390]])
+
+tests/learner/test_wsi_coordinates.py:59:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[20, 10],
+       [10,  5]])
+geometry = RoiGeometry(origin_level0_xy=(490, 380), level=0, level_downsample=1.0, read_size_wh=(10, 20), model_size_wh=(20, 10), slide_size_level0_wh=(500, 400))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+_______________ test_preserves_existing_invalid_point_rejection ________________
+
+    def test_preserves_existing_invalid_point_rejection():
+        from pathology_edge.learner_wsi import roi_points_to_level0
+        for points in (np.zeros((2, 3)), np.array([1, 2]), np.array([[np.nan, 0]]), np.array([[True, False]])):
+            with pytest.raises(ValueError):
+>               roi_points_to_level0(points, geometry())
+
+tests/learner/test_wsi_coordinates.py:67:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[0., 0., 0.],
+       [0., 0., 0.]])
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=1, level_downsample=4.0, read_size_wh=(400, 200), model_size_wh=(200, 50), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+____________ test_native_footprint_consumer_matches_existing_export ____________
+
+    def test_native_footprint_consumer_matches_existing_export():
+        from pathology_edge.wsi_roi import roi_patch_manifest
+        from pathology_edge.wsi_export import patch_manifest
+        g = geometry(level=0, level_downsample=1., read_size_wh=(150, 130), model_size_wh=(150, 130))
+        for mode in ('no_overlap', 'overlap'):
+>           assert roi_patch_manifest(g, mode) == patch_manifest(150, 130, (1000, 2000), mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_wsi_coordinates.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/pathology_edge/wsi_roi.py:131: in roi_patch_manifest
+    mapped = roi_points_to_level0(corners, geometry).reshape(len(patches), 2, 2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[  0.,   0.],
+       [128., 128.],
+       [128.,   0.],
+       [150., 128.],
+       [  0., 128.],
+       [128., 130.],
+       [128., 128.],
+       [150., 130.]])
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=0, level_downsample=1.0, read_size_wh=(150, 130), model_size_wh=(150, 130), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+____________ test_scaled_patch_footprints_exclude_trailing_padding _____________
+
+    def test_scaled_patch_footprints_exclude_trailing_padding():
+        from pathology_edge.wsi_roi import roi_patch_manifest
+        g = geometry(read_size_wh=(300, 260), model_size_wh=(150, 130))
+>       rows = roi_patch_manifest(g, 'no_overlap')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/learner/test_wsi_coordinates.py:81:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/pathology_edge/wsi_roi.py:131: in roi_patch_manifest
+    mapped = roi_points_to_level0(corners, geometry).reshape(len(patches), 2, 2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+points_xy = array([[  0.,   0.],
+       [128., 128.],
+       [128.,   0.],
+       [150., 128.],
+       [  0., 128.],
+       [128., 130.],
+       [128., 128.],
+       [150., 130.]])
+geometry = RoiGeometry(origin_level0_xy=(1000, 2000), level=1, level_downsample=4.0, read_size_wh=(300, 260), model_size_wh=(150, 130), slide_size_level0_wh=(10000, 10000))
+
+    def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.ndarray:
+        """Map continuous model-frame edge coordinates; see docs/STEP_40.md.
+
+        Codex provides the type guard. The user derives the x/y resize scales from
+        actual read/model dimensions and delegates to their local_to_level0.
+        """
+        if not isinstance(geometry, RoiGeometry):
+            raise ValueError('geometry must be a RoiGeometry')
+        # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
+>       raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+E       NotImplementedError: 사용자 작성 예정: docs/STEP_40.md
+
+src/pathology_edge/learner_wsi.py:17: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/learner/test_wsi_coordinates.py::test_anisotropic_resize_and_no_input_mutation
+FAILED tests/learner/test_wsi_coordinates.py::test_native_edges_and_empty_points
+FAILED tests/learner/test_wsi_coordinates.py::test_fractional_downsample_is_not_replaced_with_a_power_of_two
+FAILED tests/learner/test_wsi_coordinates.py::test_points_are_not_rounded_or_clipped_to_model_extent
+FAILED tests/learner/test_wsi_coordinates.py::test_uses_actual_read_size_after_edge_crop
+FAILED tests/learner/test_wsi_coordinates.py::test_preserves_existing_invalid_point_rejection
+FAILED tests/learner/test_wsi_coordinates.py::test_native_footprint_consumer_matches_existing_export
+FAILED tests/learner/test_wsi_coordinates.py::test_scaled_patch_footprints_exclude_trailing_padding
+8 failed in 0.13s
