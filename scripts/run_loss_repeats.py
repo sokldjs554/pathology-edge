@@ -45,7 +45,7 @@ def planned_runs():
             for mode in (MODES[::-1] if i == 1 else MODES)]
 
 
-def freeze(repo, data, output):
+def freeze(repo, data, output, *, record_path=False):
     repo, data, output = Path(repo).resolve(), Path(data).resolve(), Path(output).resolve()
     if output.exists():
         raise FileExistsError(f'Existing output is preserved: {output}')
@@ -68,26 +68,35 @@ def freeze(repo, data, output):
     status = subprocess.check_output(['git', 'status', '--short'], cwd=repo, text=True)
     diff = subprocess.check_output(['git', 'diff', 'HEAD', '--', 'src/pathology_edge'], cwd=repo, text=True)
     output.mkdir(parents=True)
-    for path in files:
-        dest = output / 'source/pathology_edge' / path.relative_to(source)
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(path, dest)
-    shutil.copyfile(data / 'manifest.json', output / 'manifest.json')
-    shutil.copyfile(Path(__file__), output / 'runner.py')
-    (output / 'source-commit.txt').write_text(commit + '\n')
-    (output / 'source-status.txt').write_text(status)
-    (output / 'source.diff').write_text(diff)
-    plan = dict(schema_version=1, created_utc=datetime.now(timezone.utc).isoformat(),
-                seeds=list(SEEDS), runs=planned_runs(), reference_controls=controls,
-                data_path=str(data), source_commit=commit,
-                source_sha256={p.relative_to(source).as_posix(): sha(output / 'source/pathology_edge' / p.relative_to(source))
-                               for p in files}, runner_sha256=sha(output / 'runner.py'),
-                source_import_root=str(output / 'source'),
-                selection_scope='Same previously used validation set; no new held-out evaluation',
-                time_scope='Existing train() total: epochs/validation/checkpoint writes/classical validation; excludes process startup/data loading',
-                test_evaluation_run=False)
-    dump(output / 'repeat-protocol.json', plan)
-    return plan
+    try:
+        if record_path:
+            print(f'Run: {output}', flush=True)
+            (repo / 'work').mkdir(exist_ok=True)
+            (repo / 'work/step42-repeat-run-path.txt').write_text(str(output) + '\n')
+        for path in files:
+            dest = output / 'source/pathology_edge' / path.relative_to(source)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(path, dest)
+        shutil.copyfile(data / 'manifest.json', output / 'manifest.json')
+        shutil.copyfile(Path(__file__), output / 'runner.py')
+        (output / 'source-commit.txt').write_text(commit + '\n')
+        (output / 'source-status.txt').write_text(status)
+        (output / 'source.diff').write_text(diff)
+        plan = dict(schema_version=1, created_utc=datetime.now(timezone.utc).isoformat(),
+                    seeds=list(SEEDS), runs=planned_runs(), reference_controls=controls,
+                    data_path=str(data), source_commit=commit,
+                    source_sha256={p.relative_to(source).as_posix(): sha(output / 'source/pathology_edge' / p.relative_to(source))
+                                   for p in files}, runner_sha256=sha(output / 'runner.py'),
+                    source_import_root=str(output / 'source'),
+                    selection_scope='Same previously used validation set; no new held-out evaluation',
+                    time_scope='Existing train() total: epochs/validation/checkpoint writes/classical validation; excludes process startup/data loading',
+                    test_evaluation_run=False)
+        dump(output / 'repeat-protocol.json', plan)
+        return plan
+    except BaseException as exc:
+        record_failure(output, exc)
+        raise
+
 
 
 def check_snapshot(output, plan):
@@ -188,13 +197,20 @@ def execute_training(command, *, cwd, env, log):
                 process.wait()
 
 
+def record_failure(output, exc):
+    # Disk/host failures cannot guarantee a status write; keep the original error
+    # and always identify this attempt rather than directing users to an old path.
+    try:
+        dump(output / 'status.json', dict(status='failed', error=type(exc).__name__, message=str(exc)))
+    except OSError:
+        pass
+    print(f'Failed; partial output preserved: {output}', file=sys.stderr, flush=True)
+
+
 def run(repo, data, output):
     repo, data, output = Path(repo).resolve(), Path(data).resolve(), Path(output).resolve()
-    plan = freeze(repo, data, output)
-    (repo / 'work').mkdir(exist_ok=True)
-    (repo / 'work/step42-repeat-run-path.txt').write_text(str(output) + '\n')
+    plan = freeze(repo, data, output, record_path=True)
     env = dict(os.environ, PYTHONPATH=str(output / 'source'), PYTHONDONTWRITEBYTECODE='1')
-    print(f'Run: {output}', flush=True)
     try:
         for index, entry in enumerate(plan['runs'], 1):
             check_snapshot(output, plan)
@@ -214,8 +230,7 @@ def run(repo, data, output):
         print(json.dumps(result, ensure_ascii=False, allow_nan=False), flush=True)
         return result
     except BaseException as exc:
-        dump(output / 'status.json', dict(status='failed', error=type(exc).__name__, message=str(exc)))
-        print(f'Failed; partial output preserved: {output}', file=sys.stderr, flush=True)
+        record_failure(output, exc)
         raise
 
 

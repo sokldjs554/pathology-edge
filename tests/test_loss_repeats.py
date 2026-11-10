@@ -116,8 +116,7 @@ def test_existing_output_is_never_overwritten(tmp_path):
     assert original.read_bytes() == b'keep me'
 
 
-def test_failure_preserves_snapshot_and_records_no_summary(tmp_path, monkeypatch):
-    module = runner()
+def source_repo(tmp_path):
     repo = tmp_path / 'repo'
     shutil.copytree(ROOT / 'src', repo / 'src', ignore=shutil.ignore_patterns('__pycache__', '*.so'))
     (repo / 'artifacts').mkdir()
@@ -125,6 +124,12 @@ def test_failure_preserves_snapshot_and_records_no_summary(tmp_path, monkeypatch
     subprocess.run(['git', 'init', '-q', str(repo)], check=True)
     subprocess.run(['git', '-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
                     'commit', '-qm', 'fixture', '--allow-empty'], cwd=repo, check=True)
+    return repo
+
+
+def test_failure_preserves_snapshot_and_records_no_summary(tmp_path, monkeypatch):
+    module = runner()
+    repo = source_repo(tmp_path)
     out = tmp_path / 'out'
     data = dataset(tmp_path)
     before = (repo / 'src/pathology_edge/learner_losses.py').read_bytes()
@@ -138,6 +143,26 @@ def test_failure_preserves_snapshot_and_records_no_summary(tmp_path, monkeypatch
     assert (repo / 'src/pathology_edge/learner_losses.py').read_bytes() == before
     assert json.loads((out / 'status.json').read_text())['status'] == 'failed'
     assert not (out / 'summary.json').exists()
+
+
+def test_snapshot_copy_failure_replaces_stale_run_pointer(tmp_path, monkeypatch, capsys):
+    module = runner()
+    repo = source_repo(tmp_path)
+    data, out = dataset(tmp_path), tmp_path / 'new-run'
+    (repo / 'work').mkdir()
+    pointer = repo / 'work/step42-repeat-run-path.txt'
+    pointer.write_text('/older/completed/run\n')
+    before = (repo / 'src/pathology_edge/learner_losses.py').read_bytes()
+    def fail_copy(*args, **kwargs):
+        raise OSError('fixture copy failure')
+    monkeypatch.setattr(module.shutil, 'copyfile', fail_copy)
+    with pytest.raises(OSError, match='fixture copy failure'):
+        module.run(repo, data, out)
+    assert pointer.read_text().strip() == str(out)
+    assert json.loads((out / 'status.json').read_text())['status'] == 'failed'
+    assert str(out) in capsys.readouterr().err
+    assert not (out / 'summary.json').exists()
+    assert (repo / 'src/pathology_edge/learner_losses.py').read_bytes() == before
 
 
 def test_cli_summary_is_read_only(complete):
