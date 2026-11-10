@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U52",
-  "status": "User reported eight passing contract tests; implementation submission and independent code review pending",
+  "status": "Completed: user calculation accepted unchanged; user test report and Codex independent verification recorded separately",
   "user_update_report_verbatim": "실습 파일 갱신 완료. 작성한 손실 함수 원본 보존.",
   "evidence_basis": "User reported the success line from the supplied protected update command; Codex has not accessed the user's Codespaces files.",
   "workspace": {
@@ -11,28 +11,26 @@
     "user_update_completed_reported": true,
     "user_loss_preserved_reported": true
   },
-  "user_adapter_received": false,
+  "user_adapter_received": true,
   "user_contract_test_output_received": true,
   "codex_work": [
     "Read the reserved roi_points_to_level0 scaffold and its eight contract tests.",
     "Recorded the update report separately from pending user implementation and test execution.",
     "Provided one function-writing task using the existing accepted coordinate transform.",
-    "Recorded the eight-test success report and requested only the implementation for review; no new tests run."
+    "Recorded the eight-test success report and requested only the implementation for review; no new tests run.",
+    "Accepted user body unchanged, enabled its eight contracts in default CI, ran fresh contracts/full suite and actual slide geometry audit; updated contribution and current task records."
   ],
   "not_performed_this_turn": [
     "User Codespaces inspection",
-    "Runtime implementation changes",
-    "Pytest, training or inference",
+    "New scientific training/inference or WSI accuracy evaluation",
+    "Original native exporter rewrite or published experiment refresh",
     "Browser testing or deployment"
   ],
   "next_user_action": {
-    "file": "src/pathology_edge/learner_wsi.py",
-    "function": "roi_points_to_level0",
-    "working_directory": "/workspaces/pathology-edge",
-    "test_command": "python -m pytest -q tests/learner/test_wsi_coordinates.py --run-learner",
-    "expected_test_count": 8,
-    "submit": "The roi_points_to_level0 function body; the eight-test output has already been received",
-    "read_only_command": "sed -n '1,120p' src/pathology_edge/learner_wsi.py"
+    "reference": "docs/STEP_41.md",
+    "user_contribution_id": "U53",
+    "status": "Pending",
+    "task": "Explain the level-0 lower-right boundary coordinate and actual clipped-size choice for one real native edge ROI; no new setup or test run required."
   },
   "user_test_report": {
     "output_verbatim": "8 passed in 7.08s",
@@ -41,7 +39,47 @@
     "passed": 8,
     "seconds": 7.08,
     "full_log_received": false,
-    "implementation_received": false,
-    "independent_verification_completed": false
-  }
+    "implementation_received": true,
+    "independent_verification_completed": true
+  },
+  "accepted_calculation": {
+    "path": "src/pathology_edge/learner_wsi.py",
+    "function": "roi_points_to_level0",
+    "user_scope": "Unpack actual read/model dimensions; derive x/y model/read scales; pass points, level-0 origin, actual downsample and scales to local_to_level0; return its result",
+    "codex_provided_scope": "Imports/signature/type guard, validated RoiGeometry, OpenSlide ROI reader/crop/resize, patch consumer and tests",
+    "algorithm_changed_by_codex": false,
+    "normalization": "Chat escaping and indentation only; submitted body and pre-existing guard retained",
+    "file_sha256": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "review": [
+      "Correct independent model/read scale for width/x and height/y.",
+      "Uses actual post-crop read dimensions rather than requested dimensions.",
+      "Passes the already-level-0 origin and actual downsample unchanged.",
+      "Delegates validation and conversion to the accepted coordinate function without mutation, rounding or clipping.",
+      "Contract is continuous pixel-edge coordinates, not resampled pixel-center indices."
+    ]
+  },
+  "codex_verification": {
+    "learner_contracts": "8 passed in 0.14s",
+    "default_suite": "175 passed in 9.85s; 0 skipped",
+    "contracts_promoted_to_default_ci": true,
+    "real_read_mapping_cases": 7,
+    "saved_native_rois": 3,
+    "saved_native_patch_records_matched": 960,
+    "max_abs_extent_error_level0_pixels": 0.0,
+    "protected_file_hashes_unchanged": 2392,
+    "protected_scope": "All original non-learning artifacts and dist files, accepted coordinate/loss functions, native exporter and model source; compared to preparation hash snapshot",
+    "geometry_path": "read_roi -> RoiGeometry -> roi_points_to_level0 -> local_to_level0 -> roi_patch_manifest",
+    "original_native_exporter_changed": false,
+    "generalized_model_inference_completed": false,
+    "centroid_half_pixel_correction_completed": false,
+    "new_scientific_training_or_inference": false,
+    "new_accuracy_evaluation": false,
+    "browser_tests_or_deployment": false
+  },
+  "evidence": [
+    "step40-codex-accepted-contracts.txt",
+    "step40-codex-accepted-suite.txt",
+    "step40-codex-real-mapping.json",
+    "step40-codex-verify-mapping.py"
+  ]
 }

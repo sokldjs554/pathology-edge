@@ -14,4 +14,12 @@ def roi_points_to_level0(points_xy: np.ndarray, geometry: RoiGeometry) -> np.nda
     if not isinstance(geometry, RoiGeometry):
         raise ValueError('geometry must be a RoiGeometry')
     # 사용자 작성 범위: 아래 예외를 메타데이터 연결과 반환으로 바꾸세요.
-    raise NotImplementedError('사용자 작성 예정: docs/STEP_40.md')
+    model_width, model_height = geometry.model_size_wh
+    read_width, read_height = geometry.read_size_wh
+    model_scale_xy = (model_width / read_width, model_height / read_height)
+    return local_to_level0(
+        points_xy,
+        geometry.origin_level0_xy,
+        geometry.level_downsample,
+        model_scale_xy,
+    )

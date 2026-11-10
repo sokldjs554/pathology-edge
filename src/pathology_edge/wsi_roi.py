@@ -113,9 +113,9 @@ def read_roi(slide, origin_level0_xy, level, read_size_wh, model_size_wh=None):
 
 
 def roi_patch_manifest(geometry: RoiGeometry, mode: str):
-    """Map valid model-frame patch rectangles through the reserved user adapter.
+    """Map valid model-frame patch rectangles through the accepted user adapter.
 
-    This path intentionally raises NotImplementedError until STEP_40 is submitted.
+    STEP_40 connects actual read/resize metadata to the user's coordinate transform.
     Existing public native exports continue using their unchanged implementation.
     """
     if not isinstance(geometry, RoiGeometry):

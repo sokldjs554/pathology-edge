@@ -1,0 +1,845 @@
+{
+  "actor": "Codex",
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "source_sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+  "source_bytes": 132565343,
+  "openslide_python": "1.4.7",
+  "openslide": "4.0.1",
+  "code_sha256": {
+    "src/pathology_edge/learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "src/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "src/pathology_edge/wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e"
+  },
+  "actual_level_downsamples": [
+    1.0,
+    4.000060805058981,
+    16.003163017031632
+  ],
+  "cases": [
+    {
+      "name": "native_R1",
+      "geometry": {
+        "origin_level0_xy": [
+          5888,
+          20608
+        ],
+        "level": 0,
+        "level_downsample": 1.0,
+        "read_size_wh": [
+          1024,
+          1024
+        ],
+        "model_size_wh": [
+          1024,
+          1024
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        1024,
+        1024
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          5888.0,
+          20608.0
+        ],
+        [
+          6912.0,
+          20608.0
+        ],
+        [
+          5888.0,
+          21632.0
+        ],
+        [
+          6912.0,
+          21632.0
+        ],
+        [
+          6400.0,
+          21120.0
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 64,
+          "last_patch": {
+            "id": 63,
+            "origin_local": [
+              896,
+              896
+            ],
+            "origin_level0": [
+              6784.0,
+              21504.0
+            ],
+            "bbox_local": [
+              896,
+              896,
+              1024,
+              1024
+            ],
+            "bbox_level0": [
+              6784.0,
+              21504.0,
+              6912.0,
+              21632.0
+            ],
+            "valid_size": [
+              128,
+              128
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": true
+        },
+        "overlap": {
+          "patch_count": 256,
+          "last_patch": {
+            "id": 255,
+            "origin_local": [
+              960,
+              960
+            ],
+            "origin_level0": [
+              6848.0,
+              21568.0
+            ],
+            "bbox_local": [
+              960,
+              960,
+              1024,
+              1024
+            ],
+            "bbox_level0": [
+              6848.0,
+              21568.0,
+              6912.0,
+              21632.0
+            ],
+            "valid_size": [
+              64,
+              64
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": true
+        }
+      }
+    },
+    {
+      "name": "level_1_asymmetric",
+      "geometry": {
+        "origin_level0_xy": [
+          5888,
+          20608
+        ],
+        "level": 1,
+        "level_downsample": 4.000060805058981,
+        "read_size_wh": [
+          256,
+          128
+        ],
+        "model_size_wh": [
+          128,
+          32
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        256,
+        128
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          5888.0,
+          20608.0
+        ],
+        [
+          6912.015566095099,
+          20608.0
+        ],
+        [
+          5888.0,
+          21120.00778304755
+        ],
+        [
+          6912.015566095099,
+          21120.00778304755
+        ],
+        [
+          6400.007783047549,
+          20864.003891523775
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 1,
+          "last_patch": {
+            "id": 0,
+            "origin_local": [
+              0,
+              0
+            ],
+            "origin_level0": [
+              5888.0,
+              20608.0
+            ],
+            "bbox_local": [
+              0,
+              0,
+              128,
+              32
+            ],
+            "bbox_level0": [
+              5888.0,
+              20608.0,
+              6912.015566095099,
+              21120.00778304755
+            ],
+            "valid_size": [
+              128,
+              32
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        },
+        "overlap": {
+          "patch_count": 2,
+          "last_patch": {
+            "id": 1,
+            "origin_local": [
+              64,
+              0
+            ],
+            "origin_level0": [
+              6400.007783047549,
+              20608.0
+            ],
+            "bbox_local": [
+              64,
+              0,
+              128,
+              32
+            ],
+            "bbox_level0": [
+              6400.007783047549,
+              20608.0,
+              6912.015566095099,
+              21120.00778304755
+            ],
+            "valid_size": [
+              64,
+              32
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        }
+      }
+    },
+    {
+      "name": "level_2_asymmetric",
+      "geometry": {
+        "origin_level0_xy": [
+          5888,
+          20608
+        ],
+        "level": 2,
+        "level_downsample": 16.003163017031632,
+        "read_size_wh": [
+          128,
+          64
+        ],
+        "model_size_wh": [
+          64,
+          64
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        128,
+        64
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          5888.0,
+          20608.0
+        ],
+        [
+          7936.404866180049,
+          20608.0
+        ],
+        [
+          5888.0,
+          21632.202433090024
+        ],
+        [
+          7936.404866180049,
+          21632.202433090024
+        ],
+        [
+          6912.202433090024,
+          21120.101216545012
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 1,
+          "last_patch": {
+            "id": 0,
+            "origin_local": [
+              0,
+              0
+            ],
+            "origin_level0": [
+              5888.0,
+              20608.0
+            ],
+            "bbox_local": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "bbox_level0": [
+              5888.0,
+              20608.0,
+              7936.404866180049,
+              21632.202433090024
+            ],
+            "valid_size": [
+              64,
+              64
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        },
+        "overlap": {
+          "patch_count": 1,
+          "last_patch": {
+            "id": 0,
+            "origin_local": [
+              0,
+              0
+            ],
+            "origin_level0": [
+              5888.0,
+              20608.0
+            ],
+            "bbox_local": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "bbox_level0": [
+              5888.0,
+              20608.0,
+              7936.404866180049,
+              21632.202433090024
+            ],
+            "valid_size": [
+              64,
+              64
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        }
+      }
+    },
+    {
+      "name": "native_edge",
+      "geometry": {
+        "origin_level0_xy": [
+          45970,
+          32870
+        ],
+        "level": 0,
+        "level_downsample": 1.0,
+        "read_size_wh": [
+          30,
+          23
+        ],
+        "model_size_wh": [
+          15,
+          46
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        128,
+        128
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          45970.0,
+          32870.0
+        ],
+        [
+          46000.0,
+          32870.0
+        ],
+        [
+          45970.0,
+          32893.0
+        ],
+        [
+          46000.0,
+          32893.0
+        ],
+        [
+          45985.0,
+          32881.5
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 1,
+          "last_patch": {
+            "id": 0,
+            "origin_local": [
+              0,
+              0
+            ],
+            "origin_level0": [
+              45970.0,
+              32870.0
+            ],
+            "bbox_local": [
+              0,
+              0,
+              15,
+              46
+            ],
+            "bbox_level0": [
+              45970.0,
+              32870.0,
+              46000.0,
+              32893.0
+            ],
+            "valid_size": [
+              15,
+              46
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        },
+        "overlap": {
+          "patch_count": 1,
+          "last_patch": {
+            "id": 0,
+            "origin_local": [
+              0,
+              0
+            ],
+            "origin_level0": [
+              45970.0,
+              32870.0
+            ],
+            "bbox_local": [
+              0,
+              0,
+              15,
+              46
+            ],
+            "bbox_level0": [
+              45970.0,
+              32870.0,
+              46000.0,
+              32893.0
+            ],
+            "valid_size": [
+              15,
+              46
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        }
+      }
+    },
+    {
+      "name": "level_1_edge",
+      "geometry": {
+        "origin_level0_xy": [
+          45000,
+          32000
+        ],
+        "level": 1,
+        "level_downsample": 4.000060805058981,
+        "read_size_wh": [
+          249,
+          223
+        ],
+        "model_size_wh": [
+          300,
+          80
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        512,
+        512
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          45000.0,
+          32000.0
+        ],
+        [
+          45996.01514045968,
+          32000.0
+        ],
+        [
+          45000.0,
+          32892.01355952815
+        ],
+        [
+          45996.01514045968,
+          32892.01355952815
+        ],
+        [
+          45498.00757022984,
+          32446.006779764077
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 3,
+          "last_patch": {
+            "id": 2,
+            "origin_local": [
+              256,
+              0
+            ],
+            "origin_level0": [
+              45849.93291985893,
+              32000.0
+            ],
+            "bbox_local": [
+              256,
+              0,
+              300,
+              80
+            ],
+            "bbox_level0": [
+              45849.93291985893,
+              32000.0,
+              45996.01514045968,
+              32892.01355952815
+            ],
+            "valid_size": [
+              44,
+              80
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        },
+        "overlap": {
+          "patch_count": 10,
+          "last_patch": {
+            "id": 9,
+            "origin_local": [
+              256,
+              64
+            ],
+            "origin_level0": [
+              45849.93291985893,
+              32713.610847622524
+            ],
+            "bbox_local": [
+              256,
+              64,
+              300,
+              80
+            ],
+            "bbox_level0": [
+              45849.93291985893,
+              32713.610847622524,
+              45996.01514045968,
+              32892.01355952815
+            ],
+            "valid_size": [
+              44,
+              16
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": null
+        }
+      }
+    },
+    {
+      "name": "native_R2",
+      "geometry": {
+        "origin_level0_xy": [
+          29440,
+          9728
+        ],
+        "level": 0,
+        "level_downsample": 1.0,
+        "read_size_wh": [
+          1024,
+          1024
+        ],
+        "model_size_wh": [
+          1024,
+          1024
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        1024,
+        1024
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          29440.0,
+          9728.0
+        ],
+        [
+          30464.0,
+          9728.0
+        ],
+        [
+          29440.0,
+          10752.0
+        ],
+        [
+          30464.0,
+          10752.0
+        ],
+        [
+          29952.0,
+          10240.0
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 64,
+          "last_patch": {
+            "id": 63,
+            "origin_local": [
+              896,
+              896
+            ],
+            "origin_level0": [
+              30336.0,
+              10624.0
+            ],
+            "bbox_local": [
+              896,
+              896,
+              1024,
+              1024
+            ],
+            "bbox_level0": [
+              30336.0,
+              10624.0,
+              30464.0,
+              10752.0
+            ],
+            "valid_size": [
+              128,
+              128
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": true
+        },
+        "overlap": {
+          "patch_count": 256,
+          "last_patch": {
+            "id": 255,
+            "origin_local": [
+              960,
+              960
+            ],
+            "origin_level0": [
+              30400.0,
+              10688.0
+            ],
+            "bbox_local": [
+              960,
+              960,
+              1024,
+              1024
+            ],
+            "bbox_level0": [
+              30400.0,
+              10688.0,
+              30464.0,
+              10752.0
+            ],
+            "valid_size": [
+              64,
+              64
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": true
+        }
+      }
+    },
+    {
+      "name": "native_R3",
+      "geometry": {
+        "origin_level0_xy": [
+          15872,
+          26112
+        ],
+        "level": 0,
+        "level_downsample": 1.0,
+        "read_size_wh": [
+          1024,
+          1024
+        ],
+        "model_size_wh": [
+          1024,
+          1024
+        ],
+        "slide_size_level0_wh": [
+          46000,
+          32893
+        ]
+      },
+      "requested_size_wh": [
+        1024,
+        1024
+      ],
+      "rgb_matches_previous_read_or_saved_roi": true,
+      "mapped_corners_and_center": [
+        [
+          15872.0,
+          26112.0
+        ],
+        [
+          16896.0,
+          26112.0
+        ],
+        [
+          15872.0,
+          27136.0
+        ],
+        [
+          16896.0,
+          27136.0
+        ],
+        [
+          16384.0,
+          26624.0
+        ]
+      ],
+      "max_abs_extent_error": 0.0,
+      "methods": {
+        "no_overlap": {
+          "patch_count": 64,
+          "last_patch": {
+            "id": 63,
+            "origin_local": [
+              896,
+              896
+            ],
+            "origin_level0": [
+              16768.0,
+              27008.0
+            ],
+            "bbox_local": [
+              896,
+              896,
+              1024,
+              1024
+            ],
+            "bbox_level0": [
+              16768.0,
+              27008.0,
+              16896.0,
+              27136.0
+            ],
+            "valid_size": [
+              128,
+              128
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": true
+        },
+        "overlap": {
+          "patch_count": 256,
+          "last_patch": {
+            "id": 255,
+            "origin_local": [
+              960,
+              960
+            ],
+            "origin_level0": [
+              16832.0,
+              27072.0
+            ],
+            "bbox_local": [
+              960,
+              960,
+              1024,
+              1024
+            ],
+            "bbox_level0": [
+              16832.0,
+              27072.0,
+              16896.0,
+              27136.0
+            ],
+            "valid_size": [
+              64,
+              64
+            ],
+            "size": 128
+          },
+          "saved_native_manifest_equal": true
+        }
+      }
+    }
+  ],
+  "saved_native_roi_count": 3,
+  "saved_native_patch_records_matched": 960,
+  "inference_run": false,
+  "published_files_rewritten": false,
+  "scope": "OpenSlide reads -> accepted user adapter -> patch footprint manifests. Edge-coordinate geometry only; no centroid half-pixel correction, vendor physical calibration, nonnative model inference or accuracy claim. Original published native exporter remains unchanged."
+}

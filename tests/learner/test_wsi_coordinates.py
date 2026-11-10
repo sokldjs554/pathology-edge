@@ -1,8 +1,6 @@
-"""STEP_40 contracts; opt in after writing the reserved ROI adapter."""
+"""STEP_40 contracts for the accepted user adapter; included in default CI."""
 import numpy as np
 import pytest
-
-pytestmark = pytest.mark.learner
 
 
 def geometry(**changes):

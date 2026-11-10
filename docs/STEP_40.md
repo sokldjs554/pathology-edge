@@ -1,6 +1,6 @@
 # 40단계: 실제 ROI 메타데이터를 본인 좌표 함수에 연결
 
-상태: **사용자 `8 passed in 7.08s` 보고 확인, 연결 함수 본문 제출·코드 검토 대기**. 앞서 실습 파일 갱신·손실 함수 원본 보존 보고도 받았습니다. 사용자 파일·갱신 후 커밋은 직접 조회하지 않았고, 제출 코드의 Codex 독립 검증도 아직 수행하지 않았습니다. 아래 요구사항과 테스트 명령은 참고용이며 현재 할 일은 작성한 함수 본문 제출 하나입니다.
+상태: **완료 — 사용자 본문을 수정 없이 반영하고 독립 검증 완료**. 사용자 `8 passed in 7.08s` 보고와 함수 본문을 모두 받았습니다. Codex 독립 계약 8개·전체 175개 통과, 실제 슬라이드 7조건과 저장 native 패치 960개 대조를 확인했습니다. 다음 사용자 과제는 [41단계 실제 경계 크기 해석](STEP_41.md) 하나입니다. 아래 작성 요구사항·명령은 완료한 실습의 참고 기록입니다.
 
 ## 실습 파일 수신 완료 — 아래 갱신 명령은 참고용
 
@@ -33,7 +33,7 @@ git status --short
 
 실행 뒤 손실 파일이 여전히 `M`으로 표시될 수 있습니다. 원본 파일의 주석·공백 등을 그대로 보존한 결과이며 오류가 아닙니다. 성공 문구가 없거나 오류가 나면 출력을 보내고 다음 편집은 기다립니다. 백업은 삭제하지 않습니다.
 
-## 직접 작성할 부분 하나
+## 직접 작성한 부분과 당시 요구사항
 
 **파일:** `src/pathology_edge/learner_wsi.py`
 
@@ -61,7 +61,7 @@ git status --short
 - 모델 좌표 `[[10,20],[0,0]]`의 예상 결과는 `[[1080,2320],[1000,2000]]`입니다.
 - 슬라이드 경계 때문에 요청 `(40,30)`에서 실제 읽기가 `(10,20)`으로 줄고 모델 입력이 `(20,10)`이라면, 비율 계산에 사용할 크기는 `(10,20)`입니다.
 
-실제 CMU 슬라이드의 downsample은 level 1에서 **4.000060805058981**, level 2에서 **16.003163017031632**입니다. 정수 4·16이나 `2**level`로 대체하지 않습니다. Codex는 원본에서 5개 읽기 조건과 기존 native R1 이미지 픽셀 일치를 확인했습니다. 이는 ROI 읽기 검증이고 아직 미작성인 사용자 좌표 연결 검증은 아닙니다.
+실제 CMU 슬라이드의 downsample은 level 1에서 **4.000060805058981**, level 2에서 **16.003163017031632**입니다. 정수 4·16이나 `2**level`로 대체하지 않습니다. 준비 당시 Codex는 원본에서 5개 읽기 조건과 native R1 이미지 픽셀 일치를 확인했습니다. 이후 사용자 본문을 받아 실제 7개 읽기·좌표 조건과 native R1/R2/R3의 저장 패치 960개를 대조했습니다. 준비 당시 근거와 제출 후 검증은 별도 파일로 보관합니다.
 
 ## 작성 후 실행할 테스트
 
@@ -71,23 +71,16 @@ git status --short
 python -m pytest -q tests/learner/test_wsi_coordinates.py --run-learner
 ```
 
-목표는 **8 passed**입니다. 비등방 리사이즈, native 좌표, 소수 downsample, 입력 보존·빈 배열·잘못된 입력, 실제 crop 크기 사용, 기존 native patch manifest와의 일치, 마지막 패치의 padding 제외를 검사합니다. 처음의 미구현 틀에서는 8개 `NotImplementedError` 실패가 예상 상태입니다.
+목표는 **8 passed**입니다. 비등방 리사이즈, native 좌표, 소수 downsample, 입력 보존·빈 배열·잘못된 입력, 실제 crop 크기 사용, 기존 native patch manifest와의 일치, 마지막 패치의 padding 제외를 검사합니다. 준비 당시 미구현 틀의 8개 `NotImplementedError`는 과거 상태이며, 현재는 사용자 구현으로 통과하고 기본 CI에도 포함됩니다.
 
-**현재 제출할 것:** 작성한 `roi_points_to_level0` 함수 본문. `8 passed in 7.08s` 출력은 이미 받았으므로 테스트를 반복할 필요는 없습니다. U52는 사용자 테스트 통과 보고 확인·코드 검토 대기 상태입니다.
-
-Codespaces 저장소 루트에서 아래 명령으로 파일 내용을 읽고 함수 본문을 보내 주세요. 파일은 변경하지 않습니다.
-
-```bash
-cd /workspaces/pathology-edge
-sed -n '1,120p' src/pathology_edge/learner_wsi.py
-```
-
-전체 테스트의 참고 명령은 `python -m pytest -q --run-learner`입니다. 현재 기본 `python -m pytest -q`는 이 미완료 계약 8개를 건너뛰므로 개인 함수 성공 확인을 대신하지 않습니다. 8개 통과 보고를 받은 현재 단계에서는 다시 실행할 필요가 없습니다.
+**코드와 테스트 출력 제출은 완료했습니다.** 사용자 `8 passed in 7.08s`와 Codex `8 passed in 0.14s`는 별도 실행입니다. 기본 `python -m pytest -q`에도 8개를 포함해 `175 passed in 9.85s`를 확인했습니다. 지금은 갱신·재실행·재제출 없이 [41단계](STEP_41.md)의 사례 한 가지를 설명하면 됩니다.
 
 ## Codex가 준비한 것과 남은 범위
 
 Codex는 `wsi_roi.py`의 메타데이터 검사·OpenSlide ROI 읽기·리사이즈와 `roi_patch_manifest` 호출부를 준비했습니다. 읽기 요청이 오른쪽/아래 경계를 넘으면 완전히 들어가는 선택-level 픽셀 수까지만 잘라 실제 크기를 기록합니다. 축소 level에서는 마지막 1픽셀 미만의 잔여 영역을 제외할 수 있으며 native level 0의 마지막 행·열은 보존합니다. RGBA는 흰 배경과 합성하고 RGB는 bilinear, 원본 alpha==255 마스크는 nearest-neighbor로 리사이즈합니다. 이 마스크는 보간 커널 전체의 유효성을 보장하는 마스크가 아닙니다.
 
-사용자 함수 본문을 아직 받지 않아 저장소의 함수 틀은 미구현 상태이며, 일반 배율의 patch 좌표 반환을 Codex가 검토·통합한 것으로 기록하지 않습니다. 기존 `wsi_export.py`와 공개 native 결과는 그대로이며, 실제 export 연결·좌표 대조는 제출 코드 검토 후 진행합니다. 이번에 새 모델 추론·WSI 정확도 평가·전체 슬라이드 분석을 수행한 것은 아닙니다.
+현재 `read_roi → RoiGeometry → roi_points_to_level0 → local_to_level0 → roi_patch_manifest`의 실제 native/축소-level 경로를 확인했습니다. 기존 `wsi_export.py`와 공개 native 결과는 그대로입니다. 새 좌표 경로에서 생성한 native 패치 필드는 저장된 결과와 수치가 같지만, 원래 추론 exporter를 새 구현으로 교체하거나 일반 배율 모델 추론을 실행한 것은 아닙니다. 이번에 새 모델 추론·WSI 정확도 평가·전체 슬라이드 분석을 수행한 것은 아닙니다.
 
-[실제 ROI 읽기 근거](../artifacts/learning/step40-real-roi-reads.json) · [준비·검증 기록](../artifacts/learning/step40-preparation.json) · [사용자 갱신 보고](../artifacts/learning/step40-review.json) · [기여 기록](CONTRIBUTIONS.md)
+[실제 ROI 읽기 근거](../artifacts/learning/step40-real-roi-reads.json) · [준비·검증 기록](../artifacts/learning/step40-preparation.json) · [사용자 코드·테스트 검토](../artifacts/learning/step40-review.json) · [기여 기록](CONTRIBUTIONS.md)
+
+[제출 후 실제 좌표 대조](../artifacts/learning/step40-codex-real-mapping.json) · [재현용 Codex 감사 스크립트](../artifacts/learning/step40-codex-verify-mapping.py)
