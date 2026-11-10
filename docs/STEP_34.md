@@ -1,6 +1,6 @@
 # 34단계: Codespaces에서 TinyUNet 학습 직접 재현
 
-상태: **사용자 학습·모델 저장·선택 결과 보고 확인, 학습 설정 일치 검토 대기**. 실행 폴더는 `work/my-tnbc-baseline.nD5R9k/`, 학습 당시 커밋은 `1d812eea0f3c44cf3e7ab4fc1dd6b51a371c54da`입니다. 사용자 모델 파일 SHA256 `aa0e259512f4ec491356782521e544408a1cd189363ee4dd82f455ccff6c7f91`이 보고서의 SHA와 일치했습니다. 사용자 선택은 epoch 13·threshold 0.35·validation Dice 0.5357829224369672이며, 학습·보고된 모델 저장은 확인했습니다. 기준 실행과 수치가 정확히 같지는 않습니다. 원인·실행 당시 설정 일치·미커밋 변경·전체 테스트는 아직 확인하지 않았습니다. [사용자 보고 검토 기록](../artifacts/learning/step34-review.json)
+상태: **사용자 학습·저장·설정 대조 실습 완료, 모델 선택 해석 대기**. 실행 폴더는 `work/my-tnbc-baseline.nD5R9k/`, 학습 당시 커밋은 `1d812eea0f3c44cf3e7ab4fc1dd6b51a371c54da`입니다. 사용자 모델 파일 SHA256 `aa0e259512f4ec491356782521e544408a1cd189363ee4dd82f455ccff6c7f91`이 보고서의 SHA와 일치했습니다. 사용자 선택은 epoch 13·threshold 0.35·validation Dice 0.5357829224369672입니다. 후속 보고의 `학습 설정 일치`와 `source-status.txt` 0바이트로 저장된 protocol 일치와 학습 시작 시 빈 Git 상태 기록도 확인했습니다. 같은 설정의 직접 실행·저장 기여로 기록하며 정확히 같은 수치·가중치 재현이나 새 모델 구현 기여로 바꾸지 않습니다. 수치 차이의 원인과 사용자 전체 테스트는 미확인입니다. [사용자 보고 검토 기록](../artifacts/learning/step34-review.json)
 
 | 항목 | 기존 기준 실행 | 사용자 Codespaces 실행 |
 |---|---|---|
@@ -26,7 +26,7 @@
 
 ## 초기 설정 참고: Codespace 생성과 환경 확인
 
-아래는 처음 환경을 만드는 절차입니다. 현재 사용자는 학습과 저장 결과까지 제출했으므로 새 Codespace 생성·설치·학습을 반복하지 않고 **학습 설정을 대조**합니다.
+아래는 처음 환경을 만드는 절차입니다. 현재 사용자는 실행·저장·설정 대조를 마쳤으므로 명령을 반복하지 않고 **모델 선택의 의미를 설명**합니다.
 
 1. [저장소](https://github.com/sokldjs554/pathology-edge)의 `main`에서 **Code → Codespaces → Create codespace on main**을 누릅니다. 기본 2-core급 CPU 환경으로 시작할 수 있으며 GPU는 필요 없습니다.
 2. 개발 컨테이너 빌드와 `postCreateCommand` 설치가 끝날 때까지 기다립니다. 새 설정은 Ubuntu 24.04/Python 3.12이며 모델 학습은 자동 실행하지 않습니다.
@@ -56,7 +56,7 @@ git status --short --branch
 
 ## 데이터 준비와 이후 학습 순서 — 한 번에 한 작업씩
 
-아래 명령은 모두 **Codespaces 저장소 루트**에서 실행합니다. 현재는 저장 결과까지 받았으므로 학습 설정 대조만 실행합니다. 기준 수치를 맞추려고 다시 학습하거나 조건을 바꾸지 않습니다.
+아래 명령은 모두 **Codespaces 저장소 루트**에서 실행한 기록 참고용입니다. 현재 추가 실행 과제는 없으며 기준 수치를 맞추려고 다시 학습하거나 조건을 바꾸지 않습니다.
 
 ### 완료한 데이터 준비 명령 — 재설치 시 참고
 
@@ -104,7 +104,7 @@ sed -n '/"best_epoch"/,$p' work/my-tnbc-baseline.nD5R9k/training.json
 
 `training.json`, `protocol.json`, `manifest.json`, `model.pt`, `train.log`, 두 소스 상태 파일을 해당 폴더에 보관합니다. 생성된 결과를 자동으로 Git에 올리지 않으며 기존 실험은 그대로 둡니다.
 
-### 지금 할 일: 기준 학습 설정과 대조
+### 완료한 기준 학습 설정 대조 — 기록 참고
 
 다음 명령은 기준과 사용자 실행의 `protocol.json`을 비교합니다. seed·epoch·steps·손실·증강·선택 기준·threshold 후보·데이터 manifest 해시가 모두 대상입니다. 같으면 `학습 설정 일치`가 출력되고, 이어 학습 시작 시 저장한 Git 상태 파일의 바이트 수를 표시합니다. `0`이면 당시 `git status --short`가 빈 출력이었다는 뜻입니다. 이는 기록된 시점의 범위이며 Git이 추적하지 않는 런타임 환경까지 같다는 뜻은 아닙니다.
 
@@ -117,9 +117,24 @@ wc -c work/my-tnbc-baseline.nD5R9k/source-status.txt
 
 차이가 있으면 `diff` 내용이 출력되고 이후 명령은 실행되지 않습니다. 그 내용을 그대로 제출하며 파일을 기준에 맞춰 수정하지 않습니다.
 
+사용자가 아래 출력을 제출해 이 대조를 완료했습니다.
+
+```text
+학습 설정 일치
+0 work/my-tnbc-baseline.nD5R9k/source-status.txt
+```
+
+`protocol.json`의 seed 20261107·16 epochs·20 steps·손실·증강·선택 규칙·threshold 후보·manifest 해시가 기준과 같다는 보고입니다. Git 상태 기록은 학습 시작 시점에 한정합니다. 실제 사용자 실행의 개별 tensor를 Codex가 직접 비교했거나 수치 차이의 원인을 분리 실험으로 입증한 것은 아닙니다.
+
+## 지금 할 일: 모델 선택 해석 한 가지
+
+**16 epochs를 학습했는데 왜 마지막 epoch 16 대신 epoch 13·threshold 0.35의 모델을 저장했을까요? 선택에 사용한 데이터와 기준을 포함해 한두 문장으로 설명해 주세요.**
+
+이번에는 명령을 실행하지 않습니다. 근거는 저장 보고서와 [학습 코드의 `train`](../src/pathology_edge/experiment.py)입니다. 해석 답변을 확인한 뒤 직접 작성할 비교 실험 하나로 넘어갑니다. 이 질문은 U46 예정 작업이며 실행 완료인 U45와 구분합니다.
+
 ## 결과를 보낼 때
 
-현재는 **학습 설정 대조 명령의 출력**을 보내 주세요. 선택 결과·환경·모델 해시는 이미 받았습니다. 학습 실행·저장 완료와 기준 실행의 정확한 수치 재현은 구분해 기록합니다.
+현재는 위 **모델 선택 해석 답변**만 보내 주세요. 실행·설정 대조 출력은 이미 확인했으며 다시 제출할 필요가 없습니다. 학습 실행·저장 완료와 기준 실행의 정확한 수치 재현은 구분해 기록합니다.
 
 오류라면 실행한 명령, 실행 폴더, traceback 전체, 생성된 run 경로, 코드 수정 여부를 함께 알려 주세요. `No module named ...`는 설치/복구 모드부터 확인하며 임의로 패키지 버전을 바꾸지 않습니다.
 
@@ -127,8 +142,8 @@ wc -c work/my-tnbc-baseline.nD5R9k/source-status.txt
 
 Codex가 Debian 호스트와 Ubuntu 24.04 컨테이너에서 각각 같은 seed·16 epoch 학습을 별도 폴더로 실행했습니다. 두 실행 모두 기존 학습 history·설정·모델 가중치 및 파일 SHA256이 일치했고, best epoch 12·threshold 0.5·validation Dice 0.530508395092291을 재현했습니다. 호스트와 컨테이너에서 기존 Python 테스트도 각각 **107개 통과**했습니다. 컨테이너의 실제 빌드·editable 설치·데이터 준비·실행 근거는 [준비 기록](../artifacts/learning/step34-preparation.json)에 있습니다.
 
-이는 **Codex의 로컬 Docker 검증**입니다. 이후 사용자 환경·데이터 준비·학습·모델 저장·선택 결과 보고는 별도 기록했습니다. 사용자 점수와 선택 epoch·threshold는 기준과 다르고 CPU 환경 차이도 확인했지만, 원인은 아직 확정하지 않았습니다. Codex 실행을 사용자의 기여로 기록하지 않으며 사용자 전체 테스트·새 test 평가·공개 결과 변경도 없습니다.
+이는 **Codex의 로컬 Docker 검증**입니다. 이후 사용자 환경·데이터 준비·학습·모델 저장·설정 대조 완료는 별도 기록했습니다. 사용자 점수와 선택 epoch·threshold는 기준과 다르고 CPU 환경 차이도 확인했지만, 원인은 아직 확정하지 않았습니다. Codex 실행을 사용자의 기여로 기록하지 않으며 사용자 전체 테스트·새 test 평가·공개 결과 변경도 없습니다.
 
-학습 보고 검토 후에만 사용자가 직접 작성할 손실/증강 등 비교 실험 하나를 배정합니다. WSI 배율 연결과 반복·비교 모델 보강은 그다음 순서로 유지합니다.
+학습 실행 보고 검토는 마쳤습니다. 모델 선택 해석 확인 후 사용자가 직접 작성할 손실/증강 등 비교 실험 하나를 배정합니다. WSI 배율 연결과 반복·비교 모델 보강은 그다음 순서로 유지합니다.
 
 [공고와 보완 순서](JOB_MATCH_2026-11-10.md) · [기여 기록](CONTRIBUTIONS.md) · [GitHub 개발 컨테이너 설명](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
