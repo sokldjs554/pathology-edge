@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-10",
+  "reviewer": "Fresh independent Codex reviewer (gpt-6-astra)",
+  "range": "89967a1..4dcaaf5",
+  "initial_verdict": "Ready for integration with one minor issue; no Critical/Important findings",
+  "finding": "Snapshot copying/run-path persistence outside exception handling can leave an old run pointer after a startup failure.",
+  "executor_severity_ruling": "Important for this handoff: a recovery command could read an older complete experiment and the user could submit the wrong run. Fixed before publication.",
+  "fix_commit": "b8f199fa2fb1af0aab8ef774fc50407736c62dd1",
+  "regression": "test_snapshot_copy_failure_replaces_stale_run_pointer: failed on stale path, then passed; existing-output preservation retained.",
+  "post_fix_tests": "16 targeted passed in 0.40s; 191 total passed in 9.54s",
+  "deferred_minors": [],
+  "reviewer_verified": [
+    "Actual six-run summary exactly reproduces retained and archived summaries",
+    "All archived reports/protocols/logs match originals and logs match histories",
+    "All 17 frozen package source hashes match current source",
+    "Pinned original runner checksum matches original script",
+    "Frozen imports, first-tie selection, sample SD, complete pairs and user/Codex scope separation"
+  ],
+  "rulings": [
+    {
+      "topic": "Pinned URL availability",
+      "decision": "Verify exact final pinned URL and checksum after authorized publication; do not claim before success",
+      "risk": "Unverified download could block user execution"
+    },
+    {
+      "topic": "Coordinated artifact forgery",
+      "decision": "Local hash/consistency audit is not signed provenance; no adversarial authenticity claim",
+      "risk": "Coordinated edits of payload and expected hash cannot be detected"
+    },
+    {
+      "topic": "Checkpoint deserialization/model replay",
+      "decision": "Checkpoint-file hash audit plus unchanged training code and saved histories suffice for recorded consistency; no new inference requested",
+      "risk": "This is not an independent replay of model predictions"
+    },
+    {
+      "topic": "Disk exhaustion/SIGKILL/host loss",
+      "decision": "Best-effort status persistence; identify fresh attempt early and retain original exception, no absolute crash guarantee",
+      "risk": "Abrupt failure can leave incomplete status"
+    },
+    {
+      "topic": "Concurrent external edits",
+      "decision": "Freeze all Python sources and verify data hashes each child; no atomic snapshot against competing writers claimed",
+      "risk": "User should not edit input data during the experiment"
+    },
+    {
+      "topic": "Duplicate/mislabel coverage",
+      "decision": "Exact plan/folder membership and complete seed/mode/config equality enforce rejection; existing mutation tests and review sufficient",
+      "risk": "No separately named fixture for every mislabelling variant"
+    },
+    {
+      "topic": "Environment completeness",
+      "decision": "Compare recorded environment and report descriptive timing only",
+      "risk": "System load and unrecorded dependencies can affect timing/reproducibility"
+    },
+    {
+      "topic": "Protected hashes/U53 attribution",
+      "decision": "Parent independently rechecked 2392 protected files and the native-edge record against user answer",
+      "risk": "User report remains distinct from direct access to their environment"
+    }
+  ]
+}

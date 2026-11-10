@@ -17,12 +17,17 @@
     "/workspace/pathology-edge-loss/work/codex-loss-repeats-step42/source/pathology_edge/learner_losses.py"
   ],
   "protected_file_hashes_unchanged": 2392,
-  "default_suite": "190 passed in 8.76s",
-  "targeted_tests": "15 passed in 0.36s",
+  "default_suite": "191 passed in 9.54s",
+  "targeted_tests": "16 passed in 0.40s",
   "all_six_audit_checks_passed": true,
   "test_evaluation_run": false,
   "new_deployment": false,
   "result_scope": "Codex host only; user Codespaces repeated experiment pending. Same previously used validation set, three seeds; no generalization or stable speed claim.",
   "user_handoff": "Pinned standalone runner and SHA-256; no Git update or learner source overwrite",
-  "review_status": "Pending fresh whole-branch review"
+  "review_status": "Fresh review completed; startup-failure finding fixed with a failing regression then green 16/191 tests",
+  "download_commit": "b8f199fa2fb1af0aab8ef774fc50407736c62dd1",
+  "download_sha256": "cdb84d646b41cf5cac713f0152aa7d389ad29679b469e9b36dc785df58ba4b1c",
+  "actual_training_runner_commit": "2538c4f58ba87fbf8ad2f0341c13e89dfc626582",
+  "final_fix_scope": "Startup failure reporting only; no training loop, learner source, selected seeds or aggregation change. Final runner re-audited all six saved runs and reproduced the exact summary without retraining.",
+  "publication_download_verified": false
 }

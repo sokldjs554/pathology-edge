@@ -1,0 +1,31 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_snapshot_copy_failure_replaces_stale_run_pointer _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-47/test_snapshot_copy_failure_rep0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f53995e0b00>
+capsys = <_pytest.capture.CaptureFixture object at 0x7f53994064b0>
+
+    def test_snapshot_copy_failure_replaces_stale_run_pointer(tmp_path, monkeypatch, capsys):
+        module = runner()
+        repo = source_repo(tmp_path)
+        data, out = dataset(tmp_path), tmp_path / 'new-run'
+        (repo / 'work').mkdir()
+        pointer = repo / 'work/step42-repeat-run-path.txt'
+        pointer.write_text('/older/completed/run\n')
+        before = (repo / 'src/pathology_edge/learner_losses.py').read_bytes()
+        def fail_copy(*args, **kwargs):
+            raise OSError('fixture copy failure')
+        monkeypatch.setattr(module.shutil, 'copyfile', fail_copy)
+        with pytest.raises(OSError, match='fixture copy failure'):
+            module.run(repo, data, out)
+>       assert pointer.read_text().strip() == str(out)
+E       AssertionError: assert '/older/completed/run' == '/tmp/pytest-..._rep0/new-run'
+E         
+E         - /tmp/pytest-of-agent/pytest-47/test_snapshot_copy_failure_rep0/new-run
+E         + /older/completed/run
+
+tests/test_loss_repeats.py:161: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_loss_repeats.py::test_snapshot_copy_failure_replaces_stale_run_pointer
+1 failed in 0.07s

@@ -26,7 +26,7 @@
 ### Task 1: Runner and audited paired summary
 
 **Files:** `scripts/run_loss_repeats.py`, `tests/test_loss_repeats.py`.
-**Interfaces:** `freeze(repo, data, output) -> dict`, `summarize(output) -> dict`, `run(repo, data, output) -> dict`; CLI `--data`, optional `--output`, or read-only `--summarize`.
+**Interfaces:** `freeze(repo, data, output, *, record_path=False) -> dict`, `summarize(output) -> dict`, `run(repo, data, output) -> dict`; CLI `--data`, optional `--output`, or read-only `--summarize`.
 
 - [x] Write fixtures with six reports and explicit positive/negative/tied paired outcomes; assert mean/sample SD and selection checks.
 - [x] Add rejection tests for missing report, changed controls/env/model/source/manifest, nonfinite history, wrong best selection and overwrite/failure preservation.
@@ -42,4 +42,4 @@
 - [x] Run all six actual experiments in a new ignored directory against prepared TNBC data; audit complete result, preserve all signs and costs.
 - [x] Verify frozen imports/source/protected original file hashes; inspect final JSON and document links.
 - [ ] Publish a pinned standalone runner + checksum command, requiring no Git update and preserving user files; verify download before final handoff.
-- [ ] Obtain one fresh whole-branch review under executing-plans, address material findings, commit and integrate within existing authorization.
+- [x] Obtain one fresh whole-branch review under executing-plans, address material findings, commit and integrate within existing authorization.

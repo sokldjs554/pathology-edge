@@ -26,8 +26,8 @@
 ```bash
 cd /workspaces/pathology-edge &&
 mkdir -p work &&
-curl -fL 'https://raw.githubusercontent.com/sokldjs554/pathology-edge/2538c4f58ba87fbf8ad2f0341c13e89dfc626582/scripts/run_loss_repeats.py' -o work/run-loss-repeats-step42.py &&
-printf '%s\n' '664fabf4bcbaade3ea988a8d1b048775acbe0a4776a64d767d21fe2408bd3067  work/run-loss-repeats-step42.py' | sha256sum -c - &&
+curl -fL 'https://raw.githubusercontent.com/sokldjs554/pathology-edge/b8f199fa2fb1af0aab8ef774fc50407736c62dd1/scripts/run_loss_repeats.py' -o work/run-loss-repeats-step42.py &&
+printf '%s\n' 'cdb84d646b41cf5cac713f0152aa7d389ad29679b469e9b36dc785df58ba4b1c  work/run-loss-repeats-step42.py' | sha256sum -c - &&
 python -u work/run-loss-repeats-step42.py --data data
 ```
 
@@ -37,7 +37,7 @@ python -u work/run-loss-repeats-step42.py --data data
 
 ## 중단·오류 또는 터미널 초기화
 
-실패한 실행도 새 출력 폴더에 보존합니다. 자동 재시도·좋은 seed 교체·일부 결과만 평균내기는 하지 않습니다. 오류면 마지막 메시지와 아래 경로를 보내고 임의로 학습을 다시 시작하지 않습니다.
+실패한 실행도 새 출력 폴더에 보존합니다. 자동 재시도·좋은 seed 교체·일부 결과만 평균내기는 하지 않습니다. 오류면 마지막 메시지와 화면에 출력된 최신 `Run:` 또는 `Failed; partial output preserved:` 경로를 보내고 임의로 학습을 다시 시작하지 않습니다. 터미널이 초기화됐을 때는 아래 파일에서 경로를 확인합니다.
 
 ```bash
 cd /workspaces/pathology-edge
@@ -61,4 +61,4 @@ validation 10장은 이미 epoch·threshold 선택에 사용한 같은 데이터
 
 ## Codex 별도 검증
 
-도구의 15개 검사와 기본 전체 190개 검사가 통과했습니다. Codex 호스트에서도 고정한 6회 학습을 완료하고 전체 기록 감사를 통과했습니다. 선택된 검증 Dice 평균±표본 SD는 A `0.508521±0.012424`, B `0.546342±0.006688`, seed별 B−A는 세 개 모두 양수였습니다. 이는 사용자 실행의 정답이나 사용자 수행 기록이 아닙니다. 사용자 환경의 결과도 좋아진/나빠진 방향과 관계없이 전부 보고합니다. [Codex 모든 결과·비용](../artifacts/learning/step42-codex/summary.json) · [검증 근거](../artifacts/learning/step42-preparation.json).
+시작 단계 실패 회귀를 포함한 도구의 16개 검사와 기본 전체 191개 검사가 통과했습니다. Codex 호스트에서도 고정한 6회 학습을 완료하고 전체 기록 감사를 통과했습니다. 선택된 검증 Dice 평균±표본 SD는 A `0.508521±0.012424`, B `0.546342±0.006688`, seed별 B−A는 세 개 모두 양수였습니다. 이는 사용자 실행의 정답이나 사용자 수행 기록이 아닙니다. 사용자 환경의 결과도 좋아진/나빠진 방향과 관계없이 전부 보고합니다. [Codex 모든 결과·비용](../artifacts/learning/step42-codex/summary.json) · [검증 근거](../artifacts/learning/step42-preparation.json).
