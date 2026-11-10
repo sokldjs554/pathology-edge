@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U48",
-  "status": "User training-result and environment report received; run path and actual loss mode confirmation pending",
+  "status": "BCE-only execution and result report confirmed; comparative conditions/file audit pending",
   "evidence_type": "User-pasted training.json ending; not direct Codex access to user files",
   "reported_training_summary": {
     "best_epoch": 12,
@@ -35,8 +35,8 @@
     "validation_images": 10
   },
   "assigned_mode": "bce_only",
-  "actual_mode_verified": false,
-  "run_path": null,
+  "actual_mode_verified": true,
+  "run_path": "/workspaces/pathology-edge/work/my-bce-only.FiYHbx",
   "full_history_received": false,
   "completed_16_epochs_independently_verified": false,
   "model_file_sha256_independently_recomputed": false,
@@ -75,14 +75,24 @@
     "new_deployment": false
   },
   "next_user_action": {
-    "reference": "docs/STEP_37.md",
-    "user_contribution_id": "U49",
+    "reference": "docs/STEP_38.md",
+    "user_contribution_id": "U50",
     "status": "Pending",
-    "task": "Check the saved BCE-only mode and unchanged learner source, then run learner_dice once in the same Codespace; submit the two final JSON summary lines."
+    "task": "Read and compare the two saved protocols, recorded environments/manifests/source snapshots, learner/model file hashes, 16-epoch history and best selection. Send the JSON check output; no retraining."
   },
   "limits": [
-    "Do not infer loss_mode, full history, original file integrity or source cleanliness from this report ending.",
+    "The first report ending omitted mode/path; later user JSON confirmed bce_only and its run path. Full history, file integrity and source audit remain pending.",
     "Configuration, manifest, source and environment equality for the two arms will be audited from their saved records after the second run.",
     "Validation selection is exploratory; no new test score, multi-seed effect, statistical significance, clinical result or speed improvement established."
-  ]
+  ],
+  "actual_mode_verification_basis": "User-pasted JSON summary reports loss_mode bce_only; not direct file access.",
+  "followup_summary": {
+    "run": "/workspaces/pathology-edge/work/my-bce-only.FiYHbx",
+    "loss_mode": "bce_only",
+    "best_epoch": 12,
+    "threshold": 0.5,
+    "best_validation_dice": 0.5211708103759707,
+    "seconds": 95.53081978800037,
+    "model_sha256": "b200555e5e8e3a1552e815fc731aacad6809df53ee46552d4d41ed1c915923ce"
+  }
 }

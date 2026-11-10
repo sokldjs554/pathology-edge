@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U47",
-  "status": "User body accepted unchanged; independent verification completed; comparison training pending",
+  "status": "User body accepted unchanged; independent code verification and subsequent user comparison execution reports completed",
   "user_test_report": {
     "verbatim": "8 passed in 21.06s",
     "passed": 8,
@@ -14,7 +14,7 @@
   "codex_code_review_completed": true,
   "codex_independent_learner_tests_completed": true,
   "user_implementation_merged": true,
-  "user_comparison_training_completed": false,
+  "user_comparison_training_completed": true,
   "codex_work": {
     "learner_contracts": "8 passed in 1.39s",
     "full_default_suite": "140 passed in 8.05s; 0 skipped",
@@ -28,9 +28,10 @@
     "new_deployment": false
   },
   "next_user_action": {
-    "working_directory": "/workspaces/pathology-edge",
-    "task": "Run one BCE-only comparison in a new directory, preserving local user code. Report Run path and final training metadata before the learner_dice arm.",
-    "reference": "docs/STEP_36.md"
+    "reference": "docs/STEP_38.md",
+    "user_contribution_id": "U50",
+    "status": "Pending",
+    "task": "Read and compare the two saved protocols, recorded environments/manifests/source snapshots, learner/model file hashes, 16-epoch history and best selection. Send the JSON check output; no retraining."
   },
   "accepted_calculation": {
     "path": "src/pathology_edge/learner_losses.py",
@@ -49,5 +50,6 @@
     "step35-codex-accepted-tests.txt",
     "step35-codex-accepted-ci-checks.txt",
     "step36-preparation.json"
-  ]
+  ],
+  "comparison_followup": "Two user execution summaries received in step37-review.json; saved conditions/file audit and user interpretation remain pending."
 }
