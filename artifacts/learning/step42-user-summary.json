@@ -1,0 +1,31 @@
+{
+  "run": "/workspaces/pathology-edge/work/my-loss-repeats.df60fd6e1211",
+  "seeds": [20261110, 20261111, 20261112],
+  "all_checks_passed": true,
+  "runs": [
+    {"seed": 20261110, "mode": "bce_only", "best_epoch": 15, "threshold": 0.35, "validation_dice": 0.5241390038046695, "seconds": 94.33119900999998, "model_sha256": "5bff9994d80e2259753c20c7aa3bc574c1dcdce6093b145f49168432b955886a"},
+    {"seed": 20261110, "mode": "learner_dice", "best_epoch": 15, "threshold": 0.5, "validation_dice": 0.5523018473962072, "seconds": 89.02790177300005, "model_sha256": "d132c6c4fa1e3e8f50aa4054c7f2914391dbf71eeb806f1f4df1af30fbe884a7"},
+    {"seed": 20261111, "mode": "learner_dice", "best_epoch": 10, "threshold": 0.35, "validation_dice": 0.5479836937088274, "seconds": 88.18306460899998, "model_sha256": "ef3c91babefa3090b05f747eb96ad3fab6fa111040a48a48902d3a8371dab061"},
+    {"seed": 20261111, "mode": "bce_only", "best_epoch": 11, "threshold": 0.35, "validation_dice": 0.5139738435483355, "seconds": 95.27309499499995, "model_sha256": "439e69de10b011ff975c5fd76d4df416740c5cf9c534638344a7d310dd577151"},
+    {"seed": 20261112, "mode": "bce_only", "best_epoch": 13, "threshold": 0.35, "validation_dice": 0.5165307399410273, "seconds": 89.18493491499987, "model_sha256": "6b4348699e65c62bcd1bd44a47fa8a0901dd6dfb679a9b576d4cff2044a382b0"},
+    {"seed": 20261112, "mode": "learner_dice", "best_epoch": 12, "threshold": 0.35, "validation_dice": 0.5384274082736085, "seconds": 89.46661956599996, "model_sha256": "cf277c926fa865ca3ca0f35ae4dd7a67df50364820c125b3d797827fe767b849"}
+  ],
+  "arms": {
+    "bce_only": {"dice_mean": 0.5182145290980108, "dice_sample_sd": 0.005287625195030304, "seconds_mean": 92.92974297333326, "seconds_sample_sd": 3.2771149746322323},
+    "learner_dice": {"dice_mean": 0.546237649792881, "dice_sample_sd": 0.0071001068484203, "seconds_mean": 88.89252864933333, "seconds_sample_sd": 0.6523976884295866}
+  },
+  "pairs": [
+    {"seed": 20261110, "delta_dice": 0.028162843591537756, "delta_seconds": -5.303297236999924},
+    {"seed": 20261111, "delta_dice": 0.03400985016049185, "delta_seconds": -7.090030385999967},
+    {"seed": 20261112, "delta_dice": 0.021896668332581193, "delta_seconds": 0.28168465100009143}
+  ],
+  "paired_delta": {"mean": 0.028023120694870268, "sample_sd": 0.00605779954809468, "wins_ties_losses": [3, 0, 0]},
+  "environment": {
+    "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "torch": "2.15.0+cpu", "numpy": "2.5.4", "opencv": "5.0.0",
+    "cpu_count": 2, "torch_threads": 4, "cuda": false, "cpu": "AMD EPYC 7763 64-Core Processor"
+  },
+  "test_evaluation_run": false,
+  "limitation": "Three paired seeds on the same previously used validation set; selected epoch/threshold scores, not independent test or clinical evidence. Training times are descriptive, not a controlled speed benchmark."
+}

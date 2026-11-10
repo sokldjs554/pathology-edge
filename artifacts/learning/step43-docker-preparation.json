@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-10",
+  "actor": "Codex",
+  "purpose": "Independent preparation for later Docker reproduction while user interprets STEP_42 results",
+  "status": "Source portability fix verified on host; complete Docker build and container tests blocked by host storage",
+  "user_docker_execution_confirmed": false,
+  "root_causes": [
+    "The complete fixture froze the real checkout ROOT, but Docker/source archives omit .git.",
+    "Disposable Git fixtures require the git executable, absent from the root Dockerfile."
+  ],
+  "changes": {
+    "tests/test_loss_repeats.py": "Use existing source_repo(tmp_path) disposable repository in complete fixture.",
+    "Dockerfile": "Install git with existing APT dependencies."
+  },
+  "verification": {
+    "before_fix_without_git_directory": {
+      "result": "Expected failure: git rev-parse HEAD outside a repository",
+      "log": "step43-portable-red.txt"
+    },
+    "after_fix_without_git_directory": {
+      "passed": 16,
+      "seconds": 0.41,
+      "log": "step43-portable-green.txt"
+    },
+    "host_full_suite": {
+      "passed": 191,
+      "skipped": 0,
+      "seconds": 9.21,
+      "log": "step43-host-suite.txt"
+    },
+    "new_root_docker_build": {
+      "completed": false,
+      "failed_stage": "COPY . /app",
+      "reason": "VFS snapshot preparation: no space left on device",
+      "log": "step43-docker-build-failure.txt"
+    },
+    "existing_ubuntu_image_source_check": {
+      "completed": false,
+      "tests_started": false,
+      "reason": "tar source extraction: no space left on device"
+    },
+    "container_test_success_claimed": false
+  },
+  "cleanup": {
+    "scope": "Only eight reclaimable, unshared cache entries created by this build attempt",
+    "cache_ids": [
+      "fenq8ebev1nxsucm37phq1pvl",
+      "0chcesa81177khqcjrfex60tn",
+      "dmb6aucn0poqqagjbc5ip53lj",
+      "xggdlnj7hl68w34fgubhjtyyb",
+      "n75zcqxd038a1lft8tdgpqip5",
+      "exqhqh2w3on993lh66jvypfjq",
+      "5lashqch1f2spc0puu9trpasj",
+      "p0bwrwzf0uwhfhld19ivgrd38"
+    ],
+    "preexisting_images_caches_and_training_files_removed": false
+  },
+  "modified_code_sha256": {
+    "Dockerfile": "a3505518a5e17d5f9d7f980b5fe15461e48632bf84c87e5518c28c04fd96c2d7",
+    "tests/test_loss_repeats.py": "44f61212fa4144597e77b6bf710337223d30453b00a1f8e15beb8e0bee1baf84"
+  },
+  "new_training": false,
+  "new_model_inference": false,
+  "new_test_set_evaluation": false,
+  "ui_deployment": false,
+  "next_user_task": "STEP_43 interpretation only; no Docker task assigned"
+}

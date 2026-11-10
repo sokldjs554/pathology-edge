@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U54",
+  "status": "User six-run execution and successful local audit reported; submitted summary arithmetic independently confirmed",
+  "evidence_type": "User-pasted SUMMARY JSON; not direct Codespaces file access",
+  "user_output": "step42-user-summary.json",
+  "checks_on_submitted_summary": {
+    "fixed_seeds": true,
+    "six_unique_pairs": true,
+    "reported_success_and_no_test": true,
+    "plausible_row_fields": true,
+    "sixteen_aggregate_values_match": true,
+    "win_tie_loss_counts_match": true
+  },
+  "recomputed_arms": {
+    "bce_only": {
+      "dice_mean": 0.5182145290980108,
+      "dice_sample_sd": 0.005287625195030304,
+      "seconds_mean": 92.92974297333326,
+      "seconds_sample_sd": 3.2771149746322323
+    },
+    "learner_dice": {
+      "dice_mean": 0.546237649792881,
+      "dice_sample_sd": 0.0071001068484203,
+      "seconds_mean": 88.89252864933333,
+      "seconds_sample_sd": 0.6523976884295866
+    }
+  },
+  "recomputed_pairs": [
+    {
+      "seed": 20261110,
+      "delta_dice": 0.028162843591537756,
+      "delta_seconds": -5.303297236999924
+    },
+    {
+      "seed": 20261111,
+      "delta_dice": 0.03400985016049185,
+      "delta_seconds": -7.090030385999967
+    },
+    {
+      "seed": 20261112,
+      "delta_dice": 0.021896668332581193,
+      "delta_seconds": 0.28168465100009143
+    }
+  ],
+  "recomputed_paired_delta": {
+    "mean": 0.028023120694870268,
+    "sample_sd": 0.00605779954809468,
+    "wins_ties_losses": [
+      3,
+      0,
+      0
+    ]
+  },
+  "mean_training_seconds_delta": -4.037214323999933,
+  "scope_of_all_checks_passed": "User-reported local runner audit of all six protocols/sources/manifests/environment/checkpoints/history selections; Codex has not re-opened those user files.",
+  "cross_host_observation": {
+    "reported_model_hashes_differ": 6,
+    "epoch_threshold_pairs_match": 6,
+    "reported_environment_fields_differ": [
+      "platform",
+      "python",
+      "cpu_count",
+      "cpu"
+    ],
+    "cause_established": false,
+    "user_raw_sources_histories_or_model_files_received": false,
+    "pooled_with_codex_results": false
+  },
+  "new_work_this_turn": "Parse user summary, recompute descriptive statistics, compare reported metadata and update contribution records; no new training/test evaluation.",
+  "next_user_action": {
+    "reference": "docs/STEP_43.md",
+    "user_contribution_id": "U55",
+    "status": "Pending",
+    "task": "Explain own contribution, repeated observed validation gain and limits in one or two interview sentences."
+  }
+}

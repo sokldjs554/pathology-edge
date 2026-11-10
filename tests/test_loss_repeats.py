@@ -34,7 +34,7 @@ def dataset(tmp_path):
 def complete(tmp_path):
     module = runner()
     out = tmp_path / 'out'
-    plan = module.freeze(ROOT, dataset(tmp_path), out)
+    plan = module.freeze(source_repo(tmp_path), dataset(tmp_path), out)
     scores = {(20261110, 'bce_only'): .4, (20261110, 'learner_dice'): .5,
               (20261111, 'bce_only'): .5, (20261111, 'learner_dice'): .48,
               (20261112, 'bce_only'): .6, (20261112, 'learner_dice'): .6}
