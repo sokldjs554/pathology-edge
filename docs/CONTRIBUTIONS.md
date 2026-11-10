@@ -55,7 +55,7 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | U49 | 사용자 | 비교 학습 실행 | 사용자 soft Dice 포함 비교군 학습·결과 제출 | 실행·결과 제출 완료 | `my-learner-dice.WKJxeD`·`learner_dice`·epoch 13·threshold 0.35·검증 Dice 0.5357829224369672·101.1919초·SHA `aa0e2595…` 보고. 34단계 baseline을 대신 쓰지 않고 별도 실행 결과를 제출. `step37-review.json`. 조건 대조는 U50, 본인 비교 해석은 U51에서 완료 |
 | U50 | 사용자 | 저장 결과 대조 | 두 학습의 protocol·환경·manifest·소스 기록·파일 해시·선택 규칙 검사 | 완료 | 12개 검사와 `all_passed: true` 사용자 출력 확인. 명령은 Codex 제공, 실행은 사용자. 사용자 원본 파일을 Codex가 직접 받은 것은 아님. `step38-review.json`. 새 학습·추론·test 평가 없음 |
 | U51 | 사용자 | 검토·해석 | 직접 작성·실행한 비교 실험을 검증 범위와 함께 설명 | 완료 | PyTorch soft Dice 직접 구현, 검증 Dice 0.521171→0.535783, 한 seed·검증 10장의 epoch/threshold 선택이므로 일반화 추가 검증 필요를 본인 문장으로 설명. `step39-review.json` |
-| U52 | 사용자 | 실습 수신·직접 구현·단위 테스트 | `learner_wsi.py:roi_points_to_level0` 메타데이터 연결 본문·8개 계약 테스트 | 실습 수신 보고 확인·구현/테스트 예정 | `STEP_40.md`, `step40-review.json`. “실습 파일 갱신 완료. 작성한 손실 함수 원본 보존.” 보고 확인. 갱신 후 HEAD는 미수신이며 파일 직접 조회 없음. 사용자 작성 코드·테스트 출력은 대기. 읽기·입력 검사·호출부·테스트는 Codex 제공 |
+| U52 | 사용자 | 실습 수신·직접 구현·단위 테스트 | `learner_wsi.py:roi_points_to_level0` 메타데이터 연결 본문·8개 계약 테스트 | 8개 통과 보고 확인·코드 검토 대기 | `STEP_40.md`, `step40-review.json`. 갱신·원본 보존 성공에 이어 `8 passed in 7.08s` 보고 수신. 사용자 함수 본문은 아직 미수신이며 Codex 독립 검증 전. 읽기·입력 검사·호출부·테스트는 Codex 제공 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |
 | C01 | Codex | 조사 | 회사·공개 데이터 확인, 공고 원문 접근 실패 기록 | 완료 | `docs/RESEARCH.md`, `artifacts/data-source.json` |
@@ -135,6 +135,7 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | C75 | Codex | 해석 검토·작업 상태 확인 | U51 설명을 실제 두 보고 값·검증 선택 규칙·한 seed 범위와 대조. 사용자 Codespaces 상태를 받아 수정 loss 파일 보존 갱신 절차 준비 | 완료 | `step39-review.json`, `STEP_40.md`. 사용자 파일 직접 접근·갱신 완료로 기록하지 않음 |
 | C76 | Codex | WSI ROI 읽기 기반·계약 준비·별도 검증 | validated metadata, 실제 OpenSlide 읽기·경계 crop·RGB/opacity resize·patch 호출부 구현. 사용자 변환 본문은 stub 유지. 실제 슬라이드 5조건과 native R1 픽셀 일치 확인 | 완료 | `step40-preparation.json`, `step40-real-roi-reads.json`, `step40-codex-*`. 기본 167통과/미완료 8skip, opt-in은 8개 예상 미구현 실패. 사용자 함수·native export 재연결·새 추론·배포는 미완료/미수행 |
 | C77 | Codex | 갱신 보고 기록·작성 범위 안내 | 보호 갱신 명령의 성공 문구를 사용자 보고로 기록하고 현재 함수 틀·8개 계약을 읽어 다음 구현 한 가지 안내 | 완료 | `step40-review.json`, `STEP_40.md`. 사용자 파일 직접 조회·새 구현·pytest·학습·추론·브라우저 검사·배포 없음 |
+| C78 | Codex | 테스트 보고 기록·코드 제출 안내 | 사용자 8개 통과 보고를 기록하고 함수 본문을 읽는 명령 안내. 코드 검토·독립 검증은 대기로 구분 | 완료 | `step40-review.json`, `STEP_40.md`. 사용자 파일 직접 접근·새 구현·pytest·학습·추론·브라우저 검사·배포 없음 |
 
 ## 검토 후 추가할 기록 형식
 
