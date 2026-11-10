@@ -51,7 +51,8 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | U45 | 사용자 | 실행·결과 검토 | Codespaces에서 기존 TinyUNet 학습 재현 | 실행·저장·설정 대조 완료 | 2026-11-10 환경·50쌍 준비·epoch 16 도달·모델 SHA `aa0e2595…`·커밋 `1d812ee`·학습 보고서 제출. epoch 13·threshold 0.35·validation Dice 0.5357829224369672·91.2955초, 파일/보고서 SHA 일치. 후속 protocol 일치·source-status 0바이트 확인. CPU·결과 차이도 기록. 정확한 수치 재현·새 모델 구현·전체 테스트 완료로 확장하지 않음. `step34-review.json`. 모델 구현·실행·복구 명령은 Codex 제공 |
 | U46 | 사용자 | 검토·해석 | epoch 13·threshold 0.35 선택 이유와 사용 데이터 설명 | 완료 | 검증 10장의 이미지별 평균 Dice로 epoch·threshold 후보를 비교하고 최고 조합을 저장했으며 test 7장은 선택에 사용하지 않았다고 설명. 코드·제출 요약과 일치. 전체 사용자 history의 최댓값을 Codex가 새로 계산한 것은 아님 |
 | U47 | 사용자 | 직접 구현·단위 테스트 | `learner_losses.py:soft_dice_loss`의 계산 본문·8개 계약 테스트 | 완료 | 사용자 본문과 `8 passed in 21.06s` 보고 확인. sigmoid·이미지별 합산·soft Dice·평균 반환 수식을 변경 없이 반영. Codex 독립 8개/전체 140개 통과는 별도 실행. 입력 검사·선언·테스트·BCE 조합·CLI는 Codex 제공. `step35-review.json` |
-| U48 | 사용자 | 비교 학습 실행 | 같은 Codespaces에서 BCE-only 첫 비교군 학습·보고 | 예정 | `STEP_36.md`. 첫 실행 결과를 받은 뒤 사용자 soft Dice 포함 실행을 배정. 실제 실행 출력 미수신. 기존 34단계 학습이나 Codex 실험으로 대체하지 않음 |
+| U48 | 사용자 | 비교 학습 실행 | 첫 비교군의 선택 결과·환경 보고 | 보고 확인·설정 대조 대기 | epoch 12·threshold 0.5·검증 Dice 0.5211708103759707·95.5308초·29,761 parameters·train 33/validation 10·SHA `b200555e…`. 환경은 앞선 Codespaces 보고와 일치. Run 경로·loss_mode·전체 history·모델 파일 해시 재계산 미확인. `step36-review.json` |
+| U49 | 사용자 | 비교 학습 실행 | 같은 Codespaces에서 사용자 soft Dice 포함 비교군 학습 | 예정 | `STEP_37.md`. 저장된 BCE-only 설정·사용자 함수 보관본 검사를 통과해야 실행. 출력 미수신; 이전 baseline·Codex 실행으로 대체하지 않음 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |
 | C01 | Codex | 조사 | 회사·공개 데이터 확인, 공고 원문 접근 실패 기록 | 완료 | `docs/RESEARCH.md`, `artifacts/data-source.json` |
@@ -125,6 +126,7 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 | C69 | Codex | 해석 검토·손실 실습 기반·독립 실행 | U46 설명 확인. 입력 검사·미구현 함수 틀·8개 opt-in 계약·손실 모드 연결·출력 보호 구현. 132개 통과/learner 8개 건너뜀, 선택 실행은 미구현으로 8개 예상 실패. 별도 기존/BCE-only 16 epoch 실행 및 기본 history·protocol·가중치 일치 확인 | 완료 | `step35-preparation.json`, `step35-codex-*`, `STEP_35.md`. 준비 당시 사용자 수식·테스트·비교 학습은 미완료. 원래 모델·공개 결과 유지, 새 test 평가·UI 변경·배포 없음. 통합 테스트의 learner 대역을 실제 사용자 구현으로 기록하지 않음 |
 | C70 | Codex | 테스트 보고 기록·코드 제출 안내 | 사용자 8개 통과 보고를 기록하고 기존 준비 근거의 소스 해시·8개 계약 구성을 확인. 함수 본문만 읽는 명령 안내 | 완료 | `step35-review.json`, `STEP_35.md`. 해당 기록 당시 사용자 코드는 미수신. 당시에는 새 pytest·학습·추론·코드 구현·배포 없음 |
 | C71 | Codex | 제출 코드 검토·독립 검증·비교 안내 | 사용자 수식 그대로 반영, 8개 계약을 기본 CI로 승격, 임시 함수 대신 실제 함수로 BCE·gradient·학습 해시 검사. 전체 140개 통과. 실제 learner 16 epoch에서 같은 호스트 기존 history·모델 해시·22개 Tensor 일치 확인 | 완료 | `step35-review.json`, `step35-codex-accepted-*`, `step36-preparation.json`, `step36-codex-learner-*`, `STEP_36.md`. 저장 Dice 42개·평균 6개와 정적 데모 검사 통과. 원래 공개 모델·결과·UI 유지. 새 test 평가·브라우저 실행·배포 없음. 사용자 비교 학습은 예정 |
+| C72 | Codex | 첫 비교군 보고 검토·다음 실행 안내 | 제출한 선택 결과·환경·고전 검증 점수 기록, 이전 사용자 환경·데이터 수와 대조. BCE 설정·코드 보관본 검사 후 learner_dice 학습 및 두 결과 요약 명령 준비 | 완료 | `step36-review.json`, `STEP_37.md`. 저장된 Codex 보고서에서 설정 검사 성공/거절·두 줄 JSON 요약 확인, Bash 문법·보관본 동일/차이 검사. 사용자 실제 경로·loss_mode는 대기. 새 학습·추론·pytest·브라우저·배포 없음 |
 
 ## 검토 후 추가할 기록 형식
 

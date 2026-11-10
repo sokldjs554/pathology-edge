@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U48",
+  "status": "User training-result and environment report received; run path and actual loss mode confirmation pending",
+  "evidence_type": "User-pasted training.json ending; not direct Codex access to user files",
+  "reported_training_summary": {
+    "best_epoch": 12,
+    "threshold": 0.5,
+    "best_validation_dice": 0.5211708103759707,
+    "classical_cutoff": 180,
+    "classical_validation_scores": {
+      "80": 0.0005296509971231312,
+      "100": 0.016400213334205705,
+      "120": 0.09728972964057743,
+      "140": 0.2729282050244357,
+      "160": 0.42286772080888124,
+      "180": 0.4344299149219369
+    },
+    "seconds": 95.53081978800037,
+    "parameter_count": 29761,
+    "model_sha256": "b200555e5e8e3a1552e815fc731aacad6809df53ee46552d4d41ed1c915923ce",
+    "environment": {
+      "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "opencv": "5.0.0",
+      "cpu_count": 2,
+      "torch_threads": 4,
+      "cuda": false,
+      "cpu": "AMD EPYC 7763 64-Core Processor"
+    },
+    "train_images": 33,
+    "validation_images": 10
+  },
+  "assigned_mode": "bce_only",
+  "actual_mode_verified": false,
+  "run_path": null,
+  "full_history_received": false,
+  "completed_16_epochs_independently_verified": false,
+  "model_file_sha256_independently_recomputed": false,
+  "protocol_manifest_and_source_audit_completed": false,
+  "comparison_to_step34": {
+    "matching_report_fields": [
+      "environment",
+      "train_images",
+      "validation_images",
+      "parameter_count",
+      "classical_cutoff",
+      "classical_validation_scores"
+    ],
+    "interpretation": "Reported environment and counts match the earlier Codespaces report. This alone does not verify the protocol or constitute the two-arm comparison. The earlier baseline is not substituted for a new learner_dice run."
+  },
+  "codex_work": {
+    "source_reference_commit": "82b849589e4e9186d6b14af59abe13ec1edae3e8",
+    "bash_syntax_checked": true,
+    "guard_checks": {
+      "existing_codex_bce_protocol": {
+        "exit_code": 0
+      },
+      "baseline_protocol_rejected": {
+        "exit_code": 1
+      },
+      "missing_protocol_rejected": {
+        "exit_code": 1
+      }
+    },
+    "cmp_same_and_changed_fixture_verified": true,
+    "summary_on_existing_codex_reports": "Exactly two parseable JSON lines; modes, scores and paths match saved reports. Not user runs.",
+    "new_training": false,
+    "new_inference": false,
+    "new_pytest_run": false,
+    "new_browser_execution": false,
+    "new_deployment": false
+  },
+  "next_user_action": {
+    "reference": "docs/STEP_37.md",
+    "user_contribution_id": "U49",
+    "status": "Pending",
+    "task": "Check the saved BCE-only mode and unchanged learner source, then run learner_dice once in the same Codespace; submit the two final JSON summary lines."
+  },
+  "limits": [
+    "Do not infer loss_mode, full history, original file integrity or source cleanliness from this report ending.",
+    "Configuration, manifest, source and environment equality for the two arms will be audited from their saved records after the second run.",
+    "Validation selection is exploratory; no new test score, multi-seed effect, statistical significance, clinical result or speed improvement established."
+  ]
+}
