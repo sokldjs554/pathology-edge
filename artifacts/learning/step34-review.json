@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U45",
-  "status": "User epoch 16, run directory, model file SHA and training commit confirmed; selected results/configuration/environment pending",
+  "status": "User training and model saving confirmed with selected result report; protocol equality review pending",
   "user_output_normalized": "Python: 3.12.3 /opt/venv/bin/python\nPyTorch: 2.15.0+cpu\nSource: /workspaces/pathology-edge/src/pathology_edge/__init__.py\nC++ import: OK",
   "confirmed_from_user_report": {
     "python": "3.12.3",
@@ -18,14 +18,31 @@
     "training_progress": "Complete epoch 14, 15, 16 log rows received; confirms user execution reached epoch 16.",
     "run_directory": "/workspaces/pathology-edge/work/my-tnbc-baseline.nD5R9k",
     "model_file_sha256": "aa0e259512f4ec491356782521e544408a1cd189363ee4dd82f455ccff6c7f91",
-    "training_source_commit": "1d812eea0f3c44cf3e7ab4fc1dd6b51a371c54da"
+    "training_source_commit": "1d812eea0f3c44cf3e7ab4fc1dd6b51a371c54da",
+    "training_and_model_saving": "Confirmed from epoch-16 log, readable model SHA and saved training report output.",
+    "selected_epoch": 13,
+    "selected_threshold": 0.35,
+    "best_validation_dice": 0.5357829224369672,
+    "training_seconds": 91.29545366999992,
+    "train_images": 33,
+    "validation_images": 10,
+    "parameter_count": 29761,
+    "training_environment": {
+      "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "opencv": "5.0.0",
+      "cpu_count": 2,
+      "torch_threads": 4,
+      "cuda": false,
+      "cpu": "AMD EPYC 7763 64-Core Processor"
+    }
   },
   "evidence_scope": "User-supplied command output from the requested Codespaces check; not a Codex remote inspection of their session.",
   "not_confirmed": [
-    "Training report configuration and full environment",
+    "Training protocol and saved manifest hash equality to baseline",
     "Training-time uncommitted Git changes",
-    "Final report contents and report-model hash agreement",
-    "Saved best epoch, selected threshold and validation Dice",
     "Cause of numerical differences and tensor-level comparison",
     "Full test suite execution"
   ],
@@ -77,7 +94,7 @@
         }
       }
     },
-    "current_review": "Rehashed baseline model; compared reported file SHA; verified reported commit and no subsequent changes to src, dependency lock, packaging or devcontainer in the repository. This does not audit uncommitted changes in the user Codespace.",
+    "current_review": "Compared reported selected result, file/report SHA, image counts, parameter count and classical scores against saved baseline. Compared environment against original and Ubuntu verification; did not train or alter settings.",
     "summary_command_verification": {
       "scope": "Executed exact documented read-only snippet on the previously saved Codex Ubuntu run, using the host mount path; not the user Codespace.",
       "exit_code": 0,
@@ -94,11 +111,19 @@
       "output_lines": 29,
       "selected_results_and_environment_present": true,
       "new_training_or_inference": false
+    },
+    "summary_comparison_correction": "Initial local comparison failed because Codex manually transcribed classical threshold 140/160 values incorrectly. Corrected against the user reply (140: 0.2729282050244357; 160: 0.42286772080888124), then all six scores matched. No user result or baseline artifact modified.",
+    "protocol_read_command_verification": {
+      "scope": "Read-only diff/wc on existing Codex Ubuntu run; user run not accessible.",
+      "diff_exit_code": 0,
+      "codex_recorded_source_status_bytes": 0,
+      "user_protocol_match": "Pending user output",
+      "new_training_or_inference": false
     }
   },
   "next_user_action": {
     "working_directory": "/workspaces/pathology-edge",
-    "task": "Run sed -n to read training.json from best_epoch to the end for the explicitly reported run; send the entire short output. No rerun or environment variable required.",
+    "task": "Compare artifacts/protocol.json with the saved user run protocol using diff -u; if equal, report byte count of its captured source-status.txt. Do not edit/retrain.",
     "run_directory": "/workspaces/pathology-edge/work/my-tnbc-baseline.nD5R9k",
     "reference": "docs/STEP_34.md"
   },
@@ -210,8 +235,76 @@
     "baseline_model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
     "file_sha_matches_baseline": false,
     "weights_compared": false,
-    "report_model_sha_agreement": "pending training.json output",
+    "report_model_sha_agreement": true,
     "source_status": "Not inferred clean from absent lines in a partial user reply.",
     "limitations": "A file SHA difference establishes non-identical file bytes, not by itself different tensor values or a failed training run."
+  },
+  "saved_training_summary_report": {
+    "best_epoch": 13,
+    "threshold": 0.35,
+    "best_validation_dice": 0.5357829224369672,
+    "classical_cutoff": 180,
+    "classical_validation_scores": {
+      "80": 0.0005296509971231312,
+      "100": 0.016400213334205705,
+      "120": 0.09728972964057743,
+      "140": 0.2729282050244357,
+      "160": 0.42286772080888124,
+      "180": 0.4344299149219369
+    },
+    "seconds": 91.29545366999992,
+    "parameter_count": 29761,
+    "model_sha256": "aa0e259512f4ec491356782521e544408a1cd189363ee4dd82f455ccff6c7f91",
+    "environment": {
+      "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "opencv": "5.0.0",
+      "cpu_count": 2,
+      "torch_threads": 4,
+      "cuda": false,
+      "cpu": "AMD EPYC 7763 64-Core Processor"
+    },
+    "train_images": 33,
+    "validation_images": 10
+  },
+  "training_comparison": {
+    "reference": "artifacts/training.json",
+    "baseline_selected": {
+      "best_epoch": 12,
+      "threshold": 0.5,
+      "best_validation_dice": 0.530508395092291,
+      "seconds": 42.56447553399994
+    },
+    "user_minus_baseline_best_validation_dice": 0.005274527344676261,
+    "image_counts_and_parameter_count_equal": true,
+    "classical_validation_scores_exactly_equal": true,
+    "ubuntu_reference": "artifacts/learning/step34-ubuntu-training.json",
+    "environment_differences_from_ubuntu": {
+      "platform": {
+        "codex_ubuntu": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "user": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.39"
+      },
+      "cpu_count": {
+        "codex_ubuntu": 5,
+        "user": 2
+      },
+      "cpu": {
+        "codex_ubuntu": "AMD EPYC 9V74 80-Core Processor",
+        "user": "AMD EPYC 7763 64-Core Processor"
+      }
+    },
+    "environment_equal_keys_from_ubuntu": [
+      "python",
+      "torch",
+      "numpy",
+      "opencv",
+      "torch_threads",
+      "cuda"
+    ],
+    "cause": "Unknown; differing CPU/kernel/resources observed, not isolated as cause. Protocol comparison requested.",
+    "interpretation": "A higher selected validation score on this rerun is not evidence of a model improvement or held-out gain. Timing conditions differ; no speed regression claim.",
+    "full_user_history_independently_checked": false
   }
 }
