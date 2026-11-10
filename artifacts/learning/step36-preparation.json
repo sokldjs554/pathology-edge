@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "source_base_commit": "88fae03f0358110bd80003b9b242b204ece9b145",
+  "source_sha256": {
+    "src/pathology_edge/learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "src/pathology_edge/model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "src/pathology_edge/experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "src/pathology_edge/cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548"
+  },
+  "accepted_user_body_changed_by_codex": false,
+  "run_command": "PYTHONPATH=src python -u -m pathology_edge.cli train --data /workspace/pathology-edge/data --output <new work/codex-accepted-dice directory> --seed 20261107 --epochs 16 --steps 20 --loss learner_dice",
+  "verification": {
+    "learner_contracts_before_acceptance": "8 failed with NotImplementedError in 1.13s",
+    "learner_contracts_after_acceptance": "8 passed in 1.39s",
+    "full_default_suite": "140 passed in 8.05s; 0 skipped",
+    "training_integration": "Actual user function used in loss/gradient and training provenance tests; previous test doubles removed.",
+    "same_host_baseline_history_exact": true,
+    "same_host_baseline_protocol_except_loss_identity_exact": true,
+    "same_host_baseline_model_file_exact": true,
+    "same_host_baseline_all_tensors_equal": true,
+    "manifest_exact": true,
+    "learner_source_hash_matches_run": true,
+    "new_test_evaluation": false,
+    "remaining_ci_checks": "audit_dice.py: 42/42 Dice, 6/6 means; node --check app/wsi/ihc; validate_demo.py all exit 0. See step35-codex-accepted-ci-checks.txt."
+  },
+  "run": {
+    "best_epoch": 12,
+    "threshold": 0.5,
+    "best_validation_dice": 0.530508395092291,
+    "seconds": 42.720617060986115,
+    "parameter_count": 29761,
+    "model_sha256": "62ac28ffe5d9851e91770b0fe13a92caf028092995cae50327fbc85a400e12b6",
+    "environment": {
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "opencv": "5.0.0",
+      "cpu_count": 5,
+      "torch_threads": 4,
+      "cuda": false,
+      "cpu": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "train_images": 33,
+    "validation_images": 10
+  },
+  "original_files_protected": {
+    "snapshot_count": 2481,
+    "all_hashes_unchanged_immediately_after_training": true,
+    "permitted_progress_update": [
+      "artifacts/learning/step35-review.json"
+    ],
+    "final_protected_count": 2480,
+    "final_protected_hashes_unchanged": true
+  },
+  "user_comparison_training_completed": false,
+  "next_user_action": "docs/STEP_36.md: first BCE-only run in the existing Codespace; keep local accepted source without git reset/pull.",
+  "limits": [
+    "This is a Codex run, not the user Codespaces comparison.",
+    "Same-host equality confirms wiring and arithmetic equivalence; it does not imply cross-host bitwise reproducibility.",
+    "One seed and validation-based selection do not establish generalization or clinical effects.",
+    "No new test-set evaluation, browser execution, UI change, or deployment.",
+    "step35-preparation.json is an immutable historical record of the earlier stub and must not be treated as the current learner status."
+  ]
+}

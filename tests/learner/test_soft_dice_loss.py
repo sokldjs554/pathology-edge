@@ -1,9 +1,6 @@
-"""User exercise contracts: opt in with --run-learner; no answer implementation."""
+"""Accepted user soft Dice implementation: contracts included in default CI."""
 import pytest
 import torch
-
-pytestmark = pytest.mark.learner
-
 
 @pytest.mark.parametrize("dtype", [torch.float32, torch.float64])
 def test_hand_calculated_loss_and_scalar_tensor(dtype):

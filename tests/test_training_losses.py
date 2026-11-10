@@ -54,18 +54,15 @@ def test_bce_only_removes_dice_and_keeps_gradients():
     assert label == "BCE only"
 
 
-def test_learner_term_is_added_to_bce(monkeypatch):
-    from pathology_edge import learner_losses
-    # The real learner function is intentionally pending. This double tests
-    # the consumer's addition/routing, not the user's future mathematics.
-    monkeypatch.setattr(learner_losses, "soft_dice_loss",
-                        lambda x, y: x.square().mean() + 0.125)
+def test_learner_term_is_added_to_bce():
     loss, _ = experiment._training_loss("learner_dice")
     x = torch.zeros((1, 1, 2, 2), requires_grad=True)
-    value = loss(x, torch.zeros_like(x))
-    assert value.item() == pytest.approx(math.log(2) + 0.125)
+    y = torch.tensor([[[[1., 0.], [1., 0.]]]])
+    value = loss(x, y)
+    assert value.item() == pytest.approx(math.log(2) + 0.4)
     value.backward()
-    assert torch.isfinite(x.grad).all()
+    # BCE gradients +/-0.125 plus the submitted Dice gradients -0.07/+0.03.
+    torch.testing.assert_close(x.grad, torch.tensor([[[[-.195, .155], [-.195, .155]]]]))
 
 
 def test_unknown_loss_rejected_before_data_or_output(tmp_path):
@@ -101,10 +98,9 @@ def test_cli_bce_training_records_actual_mode(tiny_data, tmp_path, monkeypatch):
     assert not (out / "evaluation.json").exists()
 
 
-def test_learner_run_records_source_hash(tiny_data, tmp_path, monkeypatch):
+def test_learner_run_records_source_hash(tiny_data, tmp_path):
     from pathlib import Path
     from pathology_edge import learner_losses
-    monkeypatch.setattr(learner_losses, "soft_dice_loss", lambda x, y: x.square().mean())
     out = tmp_path / "learner"
     report = experiment.train(tiny_data, out, epochs=1, steps=1, loss_mode="learner_dice")
     assert report["config"]["loss_mode"] == "learner_dice"

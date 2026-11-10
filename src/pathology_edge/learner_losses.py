@@ -32,5 +32,12 @@ def soft_dice_loss(
 ) -> torch.Tensor:
     """Return scalar image-macro soft Dice loss, preserving autograd. See STEP_35."""
     _validate_loss_inputs(logits, target, smooth)
-    # 사용자 작성 범위: 아래 예외를 계산과 반환으로 바꾸세요.
-    raise NotImplementedError("사용자 작성 예정: docs/STEP_35.md")
+    probabilities = torch.sigmoid(logits)
+    spatial_axes = (1, 2, 3)
+
+    overlap = (probabilities * target).sum(dim=spatial_axes)
+    predicted = probabilities.sum(dim=spatial_axes)
+    actual = target.sum(dim=spatial_axes)
+
+    dice_per_image = (2 * overlap + smooth) / (predicted + actual + smooth)
+    return (1 - dice_per_image).mean()

@@ -2,7 +2,7 @@
   "date": "2026-11-10",
   "timezone": "Asia/Seoul",
   "user_contribution_id": "U47",
-  "status": "User test-pass report confirmed; function submission and independent review pending",
+  "status": "User body accepted unchanged; independent verification completed; comparison training pending",
   "user_test_report": {
     "verbatim": "8 passed in 21.06s",
     "passed": 8,
@@ -10,29 +10,44 @@
     "evidence_type": "User-reported output following the requested learner contract command; not a Codex run"
   },
   "requested_test_command": "python -m pytest -q tests/learner/test_soft_dice_loss.py --run-learner",
-  "user_code_received": false,
-  "codex_code_review_completed": false,
-  "codex_independent_learner_tests_completed": false,
-  "user_implementation_merged": false,
+  "user_code_received": true,
+  "codex_code_review_completed": true,
+  "codex_independent_learner_tests_completed": true,
+  "user_implementation_merged": true,
   "user_comparison_training_completed": false,
   "codex_work": {
-    "preparation_source_hashes_match": {
-      "src/pathology_edge/experiment.py": true,
-      "src/pathology_edge/cli.py": true,
-      "src/pathology_edge/learner_losses.py": true,
-      "src/pathology_edge/model.py": true
-    },
-    "function_read_command_verified_on_repository_template": true,
-    "repository_math_body_still_stub": true,
-    "new_pytest_run": false,
-    "new_training": false,
-    "new_inference": false,
-    "new_code_implementation": false,
+    "learner_contracts": "8 passed in 1.39s",
+    "full_default_suite": "140 passed in 8.05s; 0 skipped",
+    "actual_function_integration_tests": true,
+    "learner_tests_promoted_to_default_ci": true,
+    "real_learner_training": "16 epochs on train 33 / validation 10; same-host history/model SHA/all tensors equal to existing baseline. See step36-preparation.json.",
+    "stored_dice_audit": "42/42 values and 6/6 image means match; no new inference for this audit.",
+    "static_ui_checks": "JavaScript syntax and validate_demo.py passed; not new browser verification.",
+    "preparation_source_hashes": "The learner source intentionally changed from the historical step35 stub; experiment.py, cli.py and model.py unchanged.",
+    "new_test_evaluation": false,
     "new_deployment": false
   },
   "next_user_action": {
     "working_directory": "/workspaces/pathology-edge",
-    "task": "Submit the existing soft_dice_loss function with the provided sed read command; no rerun or reset.",
-    "reference": "docs/STEP_35.md"
-  }
+    "task": "Run one BCE-only comparison in a new directory, preserving local user code. Report Run path and final training metadata before the learner_dice arm.",
+    "reference": "docs/STEP_36.md"
+  },
+  "accepted_calculation": {
+    "path": "src/pathology_edge/learner_losses.py",
+    "function": "soft_dice_loss",
+    "user_scope": "sigmoid, per-image reduction over (1,2,3), smoothed soft Dice, mean loss return",
+    "codex_provided_scope": "Signature, input validation/call, contract tests, BCE composition, training loop and CLI",
+    "algorithm_changed_by_codex": false,
+    "normalization": "Chat escaping and indentation only; pre-existing signature and validation retained.",
+    "review": [
+      "Batch axis retained until final mean; does not compute pooled batch Dice.",
+      "Returns scalar Tensor with autograd; no thresholding, detach, numpy or Python float conversion.",
+      "Smoothing matches contract; hand example returns 0.4."
+    ]
+  },
+  "evidence": [
+    "step35-codex-accepted-tests.txt",
+    "step35-codex-accepted-ci-checks.txt",
+    "step36-preparation.json"
+  ]
 }
