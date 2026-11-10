@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-10T13:53:08.187759+00:00",
+  "seeds": [
+    20261110,
+    20261111,
+    20261112
+  ],
+  "runs": [
+    {
+      "seed": 20261110,
+      "mode": "bce_only",
+      "directory": "runs/20261110/bce_only"
+    },
+    {
+      "seed": 20261110,
+      "mode": "learner_dice",
+      "directory": "runs/20261110/learner_dice"
+    },
+    {
+      "seed": 20261111,
+      "mode": "learner_dice",
+      "directory": "runs/20261111/learner_dice"
+    },
+    {
+      "seed": 20261111,
+      "mode": "bce_only",
+      "directory": "runs/20261111/bce_only"
+    },
+    {
+      "seed": 20261112,
+      "mode": "bce_only",
+      "directory": "runs/20261112/bce_only"
+    },
+    {
+      "seed": 20261112,
+      "mode": "learner_dice",
+      "directory": "runs/20261112/learner_dice"
+    }
+  ],
+  "reference_controls": {
+    "epochs": 16,
+    "steps_per_epoch": 20,
+    "batch_size": 8,
+    "crop": 128,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "width": 8,
+    "augmentations": [
+      "horizontal/vertical flip",
+      "90 degree rotations"
+    ],
+    "selection": "maximum validation image-macro Dice over epochs and thresholds",
+    "thresholds": [
+      0.35,
+      0.5,
+      0.65
+    ],
+    "seam_radius": 8,
+    "test_used_for_selection": false,
+    "patch_size": 128,
+    "overlap": 64,
+    "merge_iou": 0.3,
+    "merge_distance": 8,
+    "min_component_area": 12,
+    "centroid_match_radius": 12,
+    "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868"
+  },
+  "data_path": "/workspace/pathology-edge/data",
+  "source_commit": "2538c4f58ba87fbf8ad2f0341c13e89dfc626582",
+  "source_sha256": {
+    "__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
+    "cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+    "experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "metrics.py": "95584cd131ab54f0bb24485f56bc6a85b68b775bb318fbf5dfa0b9e24c6b8a78",
+    "model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "patches.py": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5",
+    "review_cases.py": "2830c555dcfebd097ab2ef19eb2cbc6cc594a21c3faa735455dc8bd9e67c007e",
+    "wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e"
+  },
+  "runner_sha256": "664fabf4bcbaade3ea988a8d1b048775acbe0a4776a64d767d21fe2408bd3067",
+  "source_import_root": "/workspace/pathology-edge-loss/work/codex-loss-repeats-step42/source",
+  "selection_scope": "Same previously used validation set; no new held-out evaluation",
+  "time_scope": "Existing train() total: epochs/validation/checkpoint writes/classical validation; excludes process startup/data loading",
+  "test_evaluation_run": false
+}

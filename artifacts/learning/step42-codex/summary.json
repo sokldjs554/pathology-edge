@@ -1,0 +1,118 @@
+{
+  "run": "/workspace/pathology-edge-loss/work/codex-loss-repeats-step42",
+  "seeds": [
+    20261110,
+    20261111,
+    20261112
+  ],
+  "all_checks_passed": true,
+  "runs": [
+    {
+      "seed": 20261110,
+      "mode": "bce_only",
+      "best_epoch": 15,
+      "threshold": 0.35,
+      "validation_dice": 0.5166972000142911,
+      "seconds": 43.052420227002585,
+      "model_sha256": "11719aac3da79f7acc16f2243a42238b29b436f7863560391e0503f53080884b"
+    },
+    {
+      "seed": 20261110,
+      "mode": "learner_dice",
+      "best_epoch": 15,
+      "threshold": 0.5,
+      "validation_dice": 0.5539107037920539,
+      "seconds": 43.95306994099519,
+      "model_sha256": "b2258e9128f48849e1ecaaf240230cee91a2f0c2a2b65db4a7966884b7316b6d"
+    },
+    {
+      "seed": 20261111,
+      "mode": "learner_dice",
+      "best_epoch": 10,
+      "threshold": 0.35,
+      "validation_dice": 0.5412291876128231,
+      "seconds": 43.92896890701377,
+      "model_sha256": "aa46fae541c7ebbff62277b1a1c7918483a71f1d8d71c5f00cb74587971c83e0"
+    },
+    {
+      "seed": 20261111,
+      "mode": "bce_only",
+      "best_epoch": 11,
+      "threshold": 0.35,
+      "validation_dice": 0.5146418638768223,
+      "seconds": 45.53931553498842,
+      "model_sha256": "d48b8c306b4e1f5c0a88b8c0f3b1b970d41ddc8f52b959158ec6f7698e3d6f65"
+    },
+    {
+      "seed": 20261112,
+      "mode": "bce_only",
+      "best_epoch": 13,
+      "threshold": 0.35,
+      "validation_dice": 0.49422393792915587,
+      "seconds": 41.710203052003635,
+      "model_sha256": "3a77ae0395a0ca317554450d06c331b8c3269886ab38af8ab2feaf875caf3d15"
+    },
+    {
+      "seed": 20261112,
+      "mode": "learner_dice",
+      "best_epoch": 12,
+      "threshold": 0.35,
+      "validation_dice": 0.5438851304232123,
+      "seconds": 44.20017877800274,
+      "model_sha256": "52ea227663f6594b6237319453a649b28be8d7f589eb4d6d615e2f68608e2d43"
+    }
+  ],
+  "arms": {
+    "bce_only": {
+      "dice_mean": 0.5085210006067564,
+      "dice_sample_sd": 0.012424194242079661,
+      "seconds_mean": 43.43397960466488,
+      "seconds_sample_sd": 1.9428629058296936
+    },
+    "learner_dice": {
+      "dice_mean": 0.5463416739426964,
+      "dice_sample_sd": 0.006688136339696016,
+      "seconds_mean": 44.02740587533723,
+      "seconds_sample_sd": 0.15011019912498075
+    }
+  },
+  "pairs": [
+    {
+      "seed": 20261110,
+      "delta_dice": 0.03721350377776278,
+      "delta_seconds": 0.9006497139926068
+    },
+    {
+      "seed": 20261111,
+      "delta_dice": 0.026587323736000812,
+      "delta_seconds": -1.61034662797465
+    },
+    {
+      "seed": 20261112,
+      "delta_dice": 0.04966119249405643,
+      "delta_seconds": 2.489975725999102
+    }
+  ],
+  "paired_delta": {
+    "mean": 0.037820673335940004,
+    "sample_sd": 0.011548911031793284,
+    "wins_ties_losses": [
+      3,
+      0,
+      0
+    ]
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "cpu_count": 5,
+    "torch_threads": 4,
+    "cuda": false,
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "test_evaluation_run": false,
+  "limitation": "Three paired seeds on the same previously used validation set; selected epoch/threshold scores, not independent test or clinical evidence. Training times are descriptive, not a controlled speed benchmark."
+}

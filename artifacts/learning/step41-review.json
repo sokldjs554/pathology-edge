@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U53",
+  "status": "Completed",
+  "user_answer_verbatim": "모델 입력의 오른쪽 아래 경계점 (15, 46)은 원본 슬라이드의 (46000, 32893)으로 변환되어야 합니다. x축: 45970 + (15 ÷ (15/30)) × 1 = 46000. y축: 32870 + (46 ÷ (46/23)) × 1 = 32893. 요청 크기 (128, 128)이 아니라 실제 읽기 크기 (30, 23)를 사용해야 하는 이유는 슬라이드 경계에서 잘린 실제 영상의 크기를 기준으로 리사이즈했기 때문입니다. 요청 크기를 사용하면 실제 읽지 않은 영역까지 좌표에 포함되어 원본 좌표가 잘못 계산됩니다.",
+  "review": {
+    "edge_coordinate_correct": true,
+    "independent_axis_scales_correct": true,
+    "actual_clipped_size_reason_correct": true,
+    "mapped_level0_xy": [
+      46000,
+      32893
+    ]
+  },
+  "evidence": "Answer matches native_edge geometry and accepted transform verified in step40-codex-real-mapping.json. No new user execution inferred.",
+  "assistance": "Codex supplied the actual geometry table and question; user supplied the arithmetic and explanation.",
+  "milestone": "User ROI coordinate adapter, eight-test report, independent review and edge-crop interpretation complete in the stated geometry scope.",
+  "next_user_action": {
+    "reference": "docs/STEP_42.md",
+    "user_contribution_id": "U54",
+    "status": "Pending",
+    "task": "Run all three fixed paired seeds using the provided standalone tool; submit Run path and final SUMMARY."
+  }
+}

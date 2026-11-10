@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-10",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_execution_reported": false,
+  "fixed_seeds": [
+    20261110,
+    20261111,
+    20261112
+  ],
+  "new_training_runs": 6,
+  "experiment_dir": "/workspace/pathology-edge-loss/work/codex-loss-repeats-step42",
+  "archived_reports": "artifacts/learning/step42-codex",
+  "model_files": "Retained under ignored experiment directory; SHA-256 independently checked for all six by summarizer",
+  "source_snapshot_imports": [
+    "/workspace/pathology-edge-loss/work/codex-loss-repeats-step42/source/pathology_edge/__init__.py",
+    "/workspace/pathology-edge-loss/work/codex-loss-repeats-step42/source/pathology_edge/learner_losses.py"
+  ],
+  "protected_file_hashes_unchanged": 2392,
+  "default_suite": "190 passed in 8.76s",
+  "targeted_tests": "15 passed in 0.36s",
+  "all_six_audit_checks_passed": true,
+  "test_evaluation_run": false,
+  "new_deployment": false,
+  "result_scope": "Codex host only; user Codespaces repeated experiment pending. Same previously used validation set, three seeds; no generalization or stable speed claim.",
+  "user_handoff": "Pinned standalone runner and SHA-256; no Git update or learner source overwrite",
+  "review_status": "Pending fresh whole-branch review"
+}

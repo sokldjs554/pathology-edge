@@ -28,18 +28,18 @@
 **Files:** `scripts/run_loss_repeats.py`, `tests/test_loss_repeats.py`.
 **Interfaces:** `freeze(repo, data, output) -> dict`, `summarize(output) -> dict`, `run(repo, data, output) -> dict`; CLI `--data`, optional `--output`, or read-only `--summarize`.
 
-- [ ] Write fixtures with six reports and explicit positive/negative/tied paired outcomes; assert mean/sample SD and selection checks.
-- [ ] Add rejection tests for missing report, changed controls/env/model/source/manifest, nonfinite history, wrong best selection and overwrite/failure preservation.
-- [ ] Run RED, implement minimal snapshot/run/audit functions, run targeted and default suites GREEN.
-- [ ] Commit task with results recorded in ledger.
+- [x] Write fixtures with six reports and explicit positive/negative/tied paired outcomes; assert mean/sample SD and selection checks.
+- [x] Add rejection tests for missing report, changed controls/env/model/source/manifest, nonfinite history, wrong best selection and overwrite/failure preservation.
+- [x] Run RED, implement minimal snapshot/run/audit functions, run targeted and default suites GREEN.
+- [x] Commit task with results recorded in ledger.
 
 ### Task 2: Actual verification and user handoff
 
 **Files:** STEP_41 review, STEP_42 protocol/commands, contribution/navigation docs, `artifacts/learning/step42-*` evidence.
 **Consumes:** runner CLI and frozen six-run outputs.
 
-- [ ] Record U53 accepted boundary answer; mark repeat execution U54 pending.
-- [ ] Run all six actual experiments in a new ignored directory against prepared TNBC data; audit complete result, preserve all signs and costs.
-- [ ] Verify frozen imports/source/protected original file hashes; inspect final JSON and document links.
+- [x] Record U53 accepted boundary answer; mark repeat execution U54 pending.
+- [x] Run all six actual experiments in a new ignored directory against prepared TNBC data; audit complete result, preserve all signs and costs.
+- [x] Verify frozen imports/source/protected original file hashes; inspect final JSON and document links.
 - [ ] Publish a pinned standalone runner + checksum command, requiring no Git update and preserving user files; verify download before final handoff.
 - [ ] Obtain one fresh whole-branch review under executing-plans, address material findings, commit and integrate within existing authorization.

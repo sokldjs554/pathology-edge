@@ -1,0 +1,409 @@
+EEEEEEEEEEEEFFE                                                          [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_all_pairs_keep_negative_and_zero_deltas_and_sample_sd _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_all_pairs_keep_negative_a0')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f5dbf50>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[missing] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten0')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f40d880>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[model] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten1')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f40e990>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[manifest] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten2')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f40fa70>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[source] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten3')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f413980>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[environment] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten4')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f410ef0>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[config] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten5')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f412270>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[selection] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten6')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f40e990>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[nan] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten7')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f40df10>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[score_range] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten8')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f4139b0>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[epochs] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten9')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f412000>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_ ERROR at setup of test_incomplete_or_inconsistent_records_are_not_averaged[extra] _
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_incomplete_or_inconsisten10')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f497590>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_______________ ERROR at setup of test_cli_summary_is_read_only ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_cli_summary_is_read_only0')
+
+    @pytest.fixture
+    def complete(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f494260>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+=================================== FAILURES ===================================
+__________________ test_existing_output_is_never_overwritten ___________________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_existing_output_is_never_0')
+
+    def test_existing_output_is_never_overwritten(tmp_path):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f495fa0>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+____________ test_failure_preserves_snapshot_and_records_no_summary ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-44/test_failure_preserves_snapsho0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f6e2f4954c0>
+
+    def test_failure_preserves_snapshot_and_records_no_summary(tmp_path, monkeypatch):
+>       module = runner()
+                 ^^^^^^^^
+
+tests/test_loss_repeats.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_loss_repeats.py:16: in runner
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7f6e2f495640>
+path = '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-loss/scripts/run_loss_repeats.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_loss_repeats.py::test_existing_output_is_never_overwritten
+FAILED tests/test_loss_repeats.py::test_failure_preserves_snapshot_and_records_no_summary
+ERROR tests/test_loss_repeats.py::test_all_pairs_keep_negative_and_zero_deltas_and_sample_sd
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[missing]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[model]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[manifest]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[source]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[environment]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[config]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[selection]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[nan]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[score_range]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[epochs]
+ERROR tests/test_loss_repeats.py::test_incomplete_or_inconsistent_records_are_not_averaged[extra]
+ERROR tests/test_loss_repeats.py::test_cli_summary_is_read_only - FileNotFoun...
+2 failed, 13 errors in 0.09s

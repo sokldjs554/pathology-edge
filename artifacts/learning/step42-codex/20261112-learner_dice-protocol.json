@@ -1,0 +1,32 @@
+{
+  "seed": 20261112,
+  "epochs": 16,
+  "steps_per_epoch": 20,
+  "batch_size": 8,
+  "crop": 128,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "loss": "BCE + learner soft Dice",
+  "width": 8,
+  "augmentations": [
+    "horizontal/vertical flip",
+    "90 degree rotations"
+  ],
+  "selection": "maximum validation image-macro Dice over epochs and thresholds",
+  "thresholds": [
+    0.35,
+    0.5,
+    0.65
+  ],
+  "seam_radius": 8,
+  "test_used_for_selection": false,
+  "patch_size": 128,
+  "overlap": 64,
+  "merge_iou": 0.3,
+  "merge_distance": 8,
+  "min_component_area": 12,
+  "centroid_match_radius": 12,
+  "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+  "loss_mode": "learner_dice",
+  "loss_source_sha256": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271"
+}
