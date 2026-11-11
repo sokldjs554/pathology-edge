@@ -16,6 +16,6 @@ Already isolated at `/workspace/pathology-edge-loss`, base9ce624b; existing201te
 - [x] User correctly distinguished extraction speed from full-inference speed; step52-review.json.
 - [x] STEP_53 user CNN/ViT execution, local audit success and both checkout-preservation reports received; arithmetic checked in step53-review.json.
 - [x] STEP_54 user per-image rows received;7/0/3, rounded means/deltas match summary. No new inference.
-- [ ] STEP_55 user actual ViT token input shape explanation; pending. No interview-writing task assigned.
+- [x] STEP_55 user actual ViT token input shape and count explanation confirmed; step55-review.json. Requested C++/ViT work closed within documented scope. No new user task or interview-writing assignment.
 
 Review focuses: mismatched token ordering, shared encoder initialization, data/seed/control drift, accepted score selected from false history, failure reported as success, accidental original-file overwrite, CPU benchmarks contaminated by concurrent training, report scope implying new test or clinical evidence.

@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-11",
+  "user_contribution_id": "U68",
+  "status": "Completed; user explained actual input token shape and token-count calculation",
+  "user_response": "Transformer 입력 shape는 (8, 256, 32)입니다. 배치 수: 8장. 토큰 수: (128 ÷ 8) × (128 ÷ 8) = 16 × 16 = 256개. 특징 차원: 각 토큰당 32차원. 즉, 128×128 RGB 이미지 8장을 각각 8×8 영역으로 나누어 이미지당 256개의 토큰을 만들고, 각 토큰을 32차원 특징 벡터로 변환해 Transformer에 입력합니다.",
+  "format_note": "Markdown emphasis and list formatting normalized; numeric content and explanation retained.",
+  "checks": {
+    "batch_axis_is_eight": true,
+    "token_count_is_16_times_16": true,
+    "embedding_dimension_is_32": true,
+    "sequence_order_is_batch_tokens_features": true
+  },
+  "implementation_check": {
+    "kind": "Synthetic zero-tensor forward with a pre-hook on the first encoder layer",
+    "input_shape": [
+      8,
+      3,
+      128,
+      128
+    ],
+    "observed_encoder_input_shape": [
+      8,
+      256,
+      32
+    ],
+    "observed_output_shape": [
+      8,
+      1,
+      128,
+      128
+    ],
+    "source_file": "src/pathology_edge/vit.py",
+    "source_sha256": "41a00cb0278921c9e2271e5aa1714ebdc3e59bb435e569513bc67805dee41932",
+    "executed_by_user": false,
+    "new_dataset_experiment": false,
+    "training_run": false
+  },
+  "limitations": [
+    "Confirms input patch/token representation, not complete Transformer theory or all segmentation-decoder details.",
+    "Model architecture and training runner are provided code; this explanation does not establish authorship of the whole model."
+  ],
+  "requested_cpp_vit_followups": {
+    "status": "Completed within the agreed implementation, reference-validation and user execution/review scope",
+    "completed_user_records": [
+      "U63",
+      "U64",
+      "U65",
+      "U66",
+      "U67",
+      "U68"
+    ],
+    "new_user_task_assigned": false,
+    "interview_writing": "Deferred at user request"
+  },
+  "remaining_scope_limits": [
+    "User raw checkpoints/probabilities/full logs have not been directly received; original local audit success is user-reported.",
+    "ViT comparison has one paired seed on reused validation selected over epochs/thresholds; no new test/external/clinical validation.",
+    "No user visual/causal diagnosis of the new ViT failure cases has been confirmed."
+  ]
+}

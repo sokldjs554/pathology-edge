@@ -48,7 +48,7 @@
   "next_user_action": {
     "step": 55,
     "user_contribution_id": "U68",
-    "status": "Pending",
+    "status": "Completed; see step55-review.json",
     "task": "Identify the actual SmallViTSegmenter input token tensor shape for batch8, RGB128x128, 8x8 token patches and embedding32"
   },
   "interview_writing": "Deferred at user request"
