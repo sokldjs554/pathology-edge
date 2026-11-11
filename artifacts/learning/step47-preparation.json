@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_contribution_id": "U59",
+  "user_commit_push_status": "Pending",
+  "rehearsal": {
+    "scope": "Codex-owned log staging and local bare remote, no GitHub upload",
+    "folder": "/workspace/pathology-edge-loss/work/my-repro-pr.UOH24C",
+    "remote": "/tmp/pathology-pr-push-116l2y21/remote.git",
+    "branch": "review/ubuntu-UOH24C",
+    "fixture_identity": "Codex local rehearsal / rehearsal@example.invalid",
+    "commit": "1b4ee4305369a6ea143ea34b19eeb2618d87df94",
+    "local_remote_hash_match": true,
+    "parent_is_pinned_source": true,
+    "original_worktree_status_unchanged": true,
+    "rehearsal_worktree_clean": true
+  },
+  "user_path_branch_received": false,
+  "uses_saved_user_path_pointer": true,
+  "expected_user_staged_files": 9,
+  "command_syntax": "passed",
+  "actual_user_github_auth_and_push_tested": false,
+  "new_model_tests_training_inference": false,
+  "docker_build": false,
+  "ui_deployment": false,
+  "pr_created": false,
+  "documentation_checks": {
+    "relative_links_present": 210,
+    "protected_original_files_unchanged": 2392,
+    "shell_syntax": "passed"
+  }
+}

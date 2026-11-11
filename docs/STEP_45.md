@@ -1,6 +1,6 @@
 # 45단계: 별도 소스 복사본으로 Ubuntu 재현 검사
 
-상태: **사용자 실행·성공 JSON 보고 확인 완료**. `my-ubuntu-repro.xzo4_nb_`에서 고정 소스 191개 테스트·Dice42/6·C++ 빌드·정적 데모 검사와 원본 보존 성공을 보고했습니다. [제출 요약](../artifacts/learning/step45-user-summary.json) · [검토 기록](../artifacts/learning/step45-review.json). 현재 할 일은 [46단계 PR용 로그 준비](STEP_46.md)이며 아래 재현 명령은 다시 실행하지 않습니다. 44단계에서 사용자 Codespaces는 `0b1cdea`, 수정 파일은 `src/pathology_edge/learner_wsi.py` 하나, 작업 폴더 여유 공간은 약26GB라는 보고를 받았습니다. Docker 실행 파일은 현재 경로에서 찾지 못했습니다. 43단계 면접 문장 작성은 계속 보류합니다.
+상태: **사용자 실행·성공 JSON 보고 확인 완료**. `my-ubuntu-repro.xzo4_nb_`에서 고정 소스 191개 테스트·Dice42/6·C++ 빌드·정적 데모 검사와 원본 보존 성공을 보고했습니다. [제출 요약](../artifacts/learning/step45-user-summary.json) · [검토 기록](../artifacts/learning/step45-review.json). 46단계 로그 staging 보고도 받아 현재 할 일은 [47단계 commit·push](STEP_47.md)이며 아래 재현 명령은 다시 실행하지 않습니다. 44단계에서 사용자 Codespaces는 `0b1cdea`, 수정 파일은 `src/pathology_edge/learner_wsi.py` 하나, 작업 폴더 여유 공간은 약26GB라는 보고를 받았습니다. Docker 실행 파일은 현재 경로에서 찾지 못했습니다. 43단계 면접 문장 작성은 계속 보류합니다.
 
 ## 완료한 실행 절차 — 참고용
 

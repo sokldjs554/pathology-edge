@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U58",
+  "status": "Nine staged evidence files reported; branch name and folder path not supplied in chat",
+  "user_report": {
+    "path_prefix": "artifacts/reproductions/ubuntu-9c55480/",
+    "files_and_added_lines": {
+      "cpp-build.log": 5,
+      "dependency-versions.json": 130,
+      "dice-audit.json": 668,
+      "pip-check.log": 1,
+      "pytest.log": 4,
+      "pytest.xml": 1,
+      "snapshot-imports.log": 1,
+      "static-demo.log": 1,
+      "summary.json": 32
+    },
+    "file_count": 9,
+    "insertions": 843,
+    "deletions": 0
+  },
+  "checks": {
+    "expected_filenames_match": true,
+    "counts_match": true,
+    "line_totals_match": true
+  },
+  "not_independently_observed": [
+    "User actual folder path and branch name",
+    "User file contents and staged Git objects"
+  ],
+  "next_step": {
+    "step": 47,
+    "contribution_id": "U59",
+    "status": "Pending",
+    "task": "Read saved local folder pointer, commit the staged evidence and push its review branch"
+  },
+  "user_commit_push_pr_completed": false,
+  "step43_interview": "Deferred"
+}
