@@ -109,3 +109,7 @@ seed20261113, train33/validation10/test7, validation2그룹, CPU2개·torch4스�
 이 사용자 실행에서 전체·경계·내부 평균은 모두 높아졌고, 후속 사용자 전체 Dice 표는7개 상승·0개 동일·3개 하락입니다. 하락 이미지는09_1(−0.058153),09_4(−0.025540),09_5(−0.047948)이며 가장 큰 상승은09_6(+0.285758)입니다. [제출10행](../artifacts/learning/step54-user-rows.json)의 평균은 이전 요약과 반올림 범위에서 일치합니다. 사용자 결과는 개발 참고 실행의8개 상승·2개 하락과 다릅니다. 이미지별 경계/내부 변화·영상 오류 원인을 확인한 결과로 확대하지 않습니다. 한 seed·이전부터 사용한 validation에서 선택한 결과라는 한계와 시간·메모리 측정 범위는 그대로 적용됩니다.
 
 [사용자 SUMMARY](../artifacts/learning/step53-user-summary.json) · [확인 기록](../artifacts/learning/step53-review.json) · [이미지별 결과](STEP_54.md) · [입력 토큰 이해·완료 범위](STEP_55.md).
+
+## 후속 보완
+
+사용자가 추가1–4번을 요청한 뒤, 개발 참고 환경에서CNN/ViT 비교의3개 seed를 완료했습니다. 기존 단일 실행·사용자 실행 수치를 바꾸지 않고 [후속 보고서](RESEARCH_FOLLOWUP.md)와 [전체 원본](../artifacts/experiments/cnn-vit-repeats-20261111/README.md)에 별도로 보관합니다. 사용자 원본과 직접 모델 변경은 진행 중입니다.

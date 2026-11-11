@@ -100,3 +100,25 @@ def test_full_saved_output_audit_renders_and_rejects_tampered_pixels(analysis, t
         analysis.analyze(run, data, tmp_path / 'invalid-report',
                          provenance_label='user-codespaces')
     assert not (tmp_path / 'invalid-report').exists()
+
+
+def test_mutation_during_render_never_leaves_completed_report(analysis, tmp_path, monkeypatch):
+    fixture_path = Path(__file__).with_name('test_model_repeats.py')
+    spec = importlib.util.spec_from_file_location('pair_fixture', fixture_path)
+    fixture = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fixture)
+    pair = fixture.load_script('run_model_comparison')
+    data = fixture.data.__wrapped__(tmp_path, pair)
+    run = fixture.completed_pair(pair, tmp_path / 'run', data)
+    original_write = analysis._write_html
+    def mutate_during_render(out, result):
+        original_write(out, result)
+        path = next((run / 'small_vit' / 'predictions').glob('*.npy'))
+        np.save(path, np.zeros((256, 256), np.float32))
+    monkeypatch.setattr(analysis, '_write_html', mutate_during_render)
+    output = tmp_path / 'report'
+    with pytest.raises(ValueError, match='Inputs changed while rendering'):
+        analysis.analyze(run, data, output, provenance_label='development-reference')
+    assert not (output / 'index.html').exists()
+    assert not (output / 'report.json').exists()
+    assert pair.read(output / 'status.json')['status'] == 'failed'

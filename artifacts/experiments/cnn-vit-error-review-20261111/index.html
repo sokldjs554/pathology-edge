@@ -1,0 +1,27 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CNN–ViT 저장 결과 오류 분석</title><style>body{font:16px/1.6 system-ui;margin:24px;color:#213440;max-width:1500px}table{border-collapse:collapse}td,th{border-bottom:1px solid #ccd5dc;padding:6px 16px;text-align:right}td:first-child,th:first-child{text-align:left}.figure{overflow-x:auto;border:1px solid #ccd5dc}.figure img{display:block;width:100%;min-width:1000px;height:auto}h2{margin-top:36px}small{color:#516671}a{color:#05669b}</style>
+<h1>CNN–ViT 저장 결과 오류 분석</h1>
+<p><b>실행 출처: development-reference</b> · seed 20261113 · 검증 10장 / 2개 그룹</p>
+<p>저장된 확률과 정답으로 다시 계산한 결과입니다. 이 보고서는 모델을 다시 실행하지 않았습니다. 전체·경계·내부 수치는 <a href="report.json">원본 JSON</a>에서 확인할 수 있습니다.</p>
+<p>Dice는 높을수록 좋습니다. Δ는 ViT − CNN이며 이미지 전체 점수입니다. 검증 데이터에서 epoch·threshold를 선택했으므로 독립적인 성능 검증으로 해석하지 않습니다.</p>
+<table><thead><tr><th>이미지</th><th>CNN Dice</th><th>ViT Dice</th><th>Δ</th><th>교정 px</th><th>악화 px</th></tr></thead><tbody>
+<tr><td>08_1</td><td>0.711778</td><td>0.681094</td><td>-0.030685</td><td>10198</td><td>11198</td></tr>
+<tr><td>08_2</td><td>0.664469</td><td>0.673426</td><td>+0.008957</td><td>21133</td><td>15961</td></tr>
+<tr><td>08_3</td><td>0.589587</td><td>0.607401</td><td>+0.017814</td><td>26110</td><td>17817</td></tr>
+<tr><td>08_4</td><td>0.518442</td><td>0.583041</td><td>+0.064600</td><td>30948</td><td>14170</td></tr>
+<tr><td>09_1</td><td>0.256810</td><td>0.344188</td><td>+0.087378</td><td>5740</td><td>4440</td></tr>
+<tr><td>09_2</td><td>0.395632</td><td>0.422238</td><td>+0.026606</td><td>10086</td><td>7322</td></tr>
+<tr><td>09_3</td><td>0.509439</td><td>0.527342</td><td>+0.017902</td><td>7216</td><td>8878</td></tr>
+<tr><td>09_4</td><td>0.666667</td><td>0.607646</td><td>-0.059020</td><td>4147</td><td>6532</td></tr>
+<tr><td>09_5</td><td>0.472320</td><td>0.478979</td><td>+0.006659</td><td>5816</td><td>5820</td></tr>
+<tr><td>09_6</td><td>0.621594</td><td>0.651067</td><td>+0.029473</td><td>486</td><td>586</td></tr>
+</tbody></table><p>오류 지도: <b style="color:#009ab5">청록 = FP (정답에는 없는 예측)</b>, <b style="color:#cc3686">분홍 = FN (놓친 정답)</b>, 회색 = 일치한 전경. 변화 지도: 초록 = 교정, 주황 = 악화. 모두 픽셀 수이며 핵 개수가 아닙니다.</p>
+<h2>09_1 · 전체 Dice 최대 상승</h2>
+<p>공통 확대 위치 xyxy: [384, 192, 512, 320] (끝 좌표 제외). 선택 영역 Dice 0.1834 → 0.4375; 교정 900px / 악화 303px.</p>
+<div class="figure"><img src="improved-full.png" alt="동일 위치 전체 이미지, 정답, CNN과 ViT 오류 및 변화 지도"></div>
+<p>노란 상자의 동일 영역 확대 — 최근접 보간 표시, 집계는 원본 픽셀 기준</p><div class="figure"><img src="improved-crop.png" alt="동일 관심 영역 확대 비교"></div>
+<h2>09_4 · 전체 Dice 최대 하락</h2>
+<p>공통 확대 위치 xyxy: [320, 224, 448, 352] (끝 좌표 제외). 선택 영역 Dice 0.7557 → 0.6614; 교정 830px / 악화 1470px.</p>
+<div class="figure"><img src="worsened-full.png" alt="동일 위치 전체 이미지, 정답, CNN과 ViT 오류 및 변화 지도"></div>
+<p>노란 상자의 동일 영역 확대 — 최근접 보간 표시, 집계는 원본 픽셀 기준</p><div class="figure"><img src="worsened-crop.png" alt="동일 관심 영역 확대 비교"></div>
+<h2>검토할 내용</h2><p>점수 차이가 FP 감소인지 FN 감소인지 먼저 확인하세요. 핵의 크기·밀집·염색 차이는 영상에서 관찰하고 별도로 검증할 가설입니다. 이 그림만으로 실패 원인을 확정하거나 개선된 핵의 개수를 주장하지 않습니다.</p><small>이미지: TNBC v1.1, CC-BY-4.0, DOI 10.5281/zenodo.2579118. 연구·교육용.</small></html>

@@ -1,0 +1,1195 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "provenance_label": "development-reference",
+  "source_run": "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be",
+  "source_commit": "478670eed931102d38412b9e13f94a519379a607",
+  "seed": 20261113,
+  "checkpoints": {
+    "tiny_unet": "cc0c046f20327d5be8ce7217304764ef2086fb2aeff7cc3ee456f023f677cb88",
+    "small_vit": "d7821143b3aafbb4849ed0cde38f1637d079262d065e3595c07c30c0b2bbcae1"
+  },
+  "thresholds": {
+    "tiny_unet": 0.35,
+    "small_vit": 0.35
+  },
+  "scope": "Previously used validation, 10 images / 2 case groups; selected checkpoint and threshold.",
+  "case_selection": "Largest positive and negative full-image Dice(ViT)-Dice(CNN); lexical ID tie break; absent directions omitted.",
+  "crop_selection": "128px square, 32px scan plus image endpoints; maximum signed net corrected pixels; first y/x tie. xyxy ends exclusive.",
+  "rows": [
+    {
+      "id": "08_1",
+      "group_id": "08",
+      "cnn": {
+        "tp": 28043,
+        "fp": 19529,
+        "fn": 3182,
+        "pixels": 262144,
+        "dice": 0.7117783671967207
+      },
+      "vit": {
+        "tp": 25320,
+        "fp": 17806,
+        "fn": 5905,
+        "pixels": 262144,
+        "dice": 0.6810937310863338
+      },
+      "delta_dice": -0.030684636110386965,
+      "corrected_pixels": 10198,
+      "worsened_pixels": 11198,
+      "changed_pixels": 21396,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 28043,
+            "fp": 19529,
+            "fn": 3182,
+            "pixels": 262144,
+            "dice": 0.7117783671967207,
+            "iou": 0.552527879575994,
+            "precision": 0.5894854115866476,
+            "recall": 0.8980944755804644
+          },
+          "boundary": {
+            "tp": 3704,
+            "fp": 3149,
+            "fn": 469,
+            "pixels": 46848,
+            "dice": 0.671866497369853,
+            "iou": 0.5058727123736684,
+            "precision": 0.540493214650518,
+            "recall": 0.8876108315360651
+          },
+          "interior": {
+            "tp": 24339,
+            "fp": 16380,
+            "fn": 2713,
+            "pixels": 215296,
+            "dice": 0.7182718271827183,
+            "iou": 0.5603932584269663,
+            "precision": 0.5977307890665291,
+            "recall": 0.8997116664202277
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 25320,
+            "fp": 17806,
+            "fn": 5905,
+            "pixels": 262144,
+            "dice": 0.6810937310863338,
+            "iou": 0.5164079867838715,
+            "precision": 0.5871168204795251,
+            "recall": 0.810888710968775
+          },
+          "boundary": {
+            "tp": 3244,
+            "fp": 2595,
+            "fn": 929,
+            "pixels": 46848,
+            "dice": 0.6480223731522173,
+            "iou": 0.4793144208037825,
+            "precision": 0.5555745846891591,
+            "recall": 0.7773783848550204
+          },
+          "interior": {
+            "tp": 22076,
+            "fp": 15211,
+            "fn": 4976,
+            "pixels": 215296,
+            "dice": 0.686240072118,
+            "iou": 0.5223481532309585,
+            "precision": 0.5920562126210207,
+            "recall": 0.8160579624427029
+          }
+        }
+      }
+    },
+    {
+      "id": "08_2",
+      "group_id": "08",
+      "cnn": {
+        "tp": 49291,
+        "fp": 38121,
+        "fn": 11659,
+        "pixels": 262144,
+        "dice": 0.664469338509861
+      },
+      "vit": {
+        "tp": 45993,
+        "fp": 29651,
+        "fn": 14957,
+        "pixels": 262144,
+        "dice": 0.6734263584052008
+      },
+      "delta_dice": 0.008957019895339813,
+      "corrected_pixels": 21133,
+      "worsened_pixels": 15961,
+      "changed_pixels": 37094,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 49291,
+            "fp": 38121,
+            "fn": 11659,
+            "pixels": 262144,
+            "dice": 0.664469338509861,
+            "iou": 0.49753207295777774,
+            "precision": 0.5638928293598133,
+            "recall": 0.8087120590648073
+          },
+          "boundary": {
+            "tp": 7367,
+            "fp": 8057,
+            "fn": 1578,
+            "pixels": 46848,
+            "dice": 0.6046206245639952,
+            "iou": 0.43330196447476765,
+            "precision": 0.4776322614107884,
+            "recall": 0.823588596981554
+          },
+          "interior": {
+            "tp": 41924,
+            "fp": 30064,
+            "fn": 10081,
+            "pixels": 215296,
+            "dice": 0.6762317227585428,
+            "iou": 0.5108384408241845,
+            "precision": 0.5823748402511529,
+            "recall": 0.8061532544947602
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 45993,
+            "fp": 29651,
+            "fn": 14957,
+            "pixels": 262144,
+            "dice": 0.6734263584052008,
+            "iou": 0.5076434034944427,
+            "precision": 0.6080191422981334,
+            "recall": 0.7546021328958162
+          },
+          "boundary": {
+            "tp": 6404,
+            "fp": 5551,
+            "fn": 2541,
+            "pixels": 46848,
+            "dice": 0.612822966507177,
+            "iou": 0.44177704194260486,
+            "precision": 0.5356754496026767,
+            "recall": 0.7159306875349357
+          },
+          "interior": {
+            "tp": 39589,
+            "fp": 24100,
+            "fn": 12416,
+            "pixels": 215296,
+            "dice": 0.6843742977163898,
+            "iou": 0.5201892122725182,
+            "precision": 0.6215987062130038,
+            "recall": 0.7612537256033074
+          }
+        }
+      }
+    },
+    {
+      "id": "08_3",
+      "group_id": "08",
+      "cnn": {
+        "tp": 50341,
+        "fp": 55229,
+        "fn": 14856,
+        "pixels": 262144,
+        "dice": 0.5895869810911945
+      },
+      "vit": {
+        "tp": 47800,
+        "fp": 44395,
+        "fn": 17397,
+        "pixels": 262144,
+        "dice": 0.6074006302734574
+      },
+      "delta_dice": 0.017813649182262914,
+      "corrected_pixels": 26110,
+      "worsened_pixels": 17817,
+      "changed_pixels": 43927,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 50341,
+            "fp": 55229,
+            "fn": 14856,
+            "pixels": 262144,
+            "dice": 0.5895869810911945,
+            "iou": 0.4180243469018318,
+            "precision": 0.4768494837548546,
+            "recall": 0.7721367547586545
+          },
+          "boundary": {
+            "tp": 7934,
+            "fp": 11436,
+            "fn": 2757,
+            "pixels": 46848,
+            "dice": 0.5278600179634743,
+            "iou": 0.3585664572693994,
+            "precision": 0.4096024780588539,
+            "recall": 0.7421195397998316
+          },
+          "interior": {
+            "tp": 42407,
+            "fp": 43793,
+            "fn": 12099,
+            "pixels": 215296,
+            "dice": 0.6027745796199167,
+            "iou": 0.4314082544074711,
+            "precision": 0.49196055684454754,
+            "recall": 0.778024437676586
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 47800,
+            "fp": 44395,
+            "fn": 17397,
+            "pixels": 262144,
+            "dice": 0.6074006302734574,
+            "iou": 0.436163223592963,
+            "precision": 0.5184662942675851,
+            "recall": 0.7331625688298541
+          },
+          "boundary": {
+            "tp": 7183,
+            "fp": 8451,
+            "fn": 3508,
+            "pixels": 46848,
+            "dice": 0.5457169990503323,
+            "iou": 0.37524814543934804,
+            "precision": 0.45944735832160677,
+            "recall": 0.6718735384903189
+          },
+          "interior": {
+            "tp": 40617,
+            "fp": 35944,
+            "fn": 13889,
+            "pixels": 215296,
+            "dice": 0.6197898784591087,
+            "iou": 0.4490547263681592,
+            "precision": 0.5305181489269993,
+            "recall": 0.7451840164385573
+          }
+        }
+      }
+    },
+    {
+      "id": "08_4",
+      "group_id": "08",
+      "cnn": {
+        "tp": 40398,
+        "fp": 64023,
+        "fn": 11025,
+        "pixels": 262144,
+        "dice": 0.5184415184415184
+      },
+      "vit": {
+        "tp": 40740,
+        "fp": 47587,
+        "fn": 10683,
+        "pixels": 262144,
+        "dice": 0.58304114490161
+      },
+      "delta_dice": 0.06459962646009154,
+      "corrected_pixels": 30948,
+      "worsened_pixels": 14170,
+      "changed_pixels": 45118,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 40398,
+            "fp": 64023,
+            "fn": 11025,
+            "pixels": 262144,
+            "dice": 0.5184415184415184,
+            "iou": 0.34992983732654226,
+            "precision": 0.38687620306260234,
+            "recall": 0.7856017735254652
+          },
+          "boundary": {
+            "tp": 6979,
+            "fp": 13421,
+            "fn": 788,
+            "pixels": 46848,
+            "dice": 0.495544431426847,
+            "iou": 0.32938455729658295,
+            "precision": 0.3421078431372549,
+            "recall": 0.8985451268185914
+          },
+          "interior": {
+            "tp": 33419,
+            "fp": 50602,
+            "fn": 10237,
+            "pixels": 215296,
+            "dice": 0.5234928765556834,
+            "iou": 0.35454815506376114,
+            "precision": 0.39774580164482687,
+            "recall": 0.7655076049111234
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 40740,
+            "fp": 47587,
+            "fn": 10683,
+            "pixels": 262144,
+            "dice": 0.58304114490161,
+            "iou": 0.41147358852641147,
+            "precision": 0.461240617251803,
+            "recall": 0.7922524940201855
+          },
+          "boundary": {
+            "tp": 6833,
+            "fp": 8486,
+            "fn": 934,
+            "pixels": 46848,
+            "dice": 0.5919604955384216,
+            "iou": 0.42041469267212206,
+            "precision": 0.44604739212742345,
+            "recall": 0.8797476503154371
+          },
+          "interior": {
+            "tp": 33907,
+            "fp": 39101,
+            "fn": 9749,
+            "pixels": 215296,
+            "dice": 0.5812761434547076,
+            "iou": 0.40971760696980314,
+            "precision": 0.4644285557747096,
+            "recall": 0.776685908008063
+          }
+        }
+      }
+    },
+    {
+      "id": "09_1",
+      "group_id": "09",
+      "cnn": {
+        "tp": 5987,
+        "fp": 1510,
+        "fn": 33142,
+        "pixels": 262144,
+        "dice": 0.2568095054261571
+      },
+      "vit": {
+        "tp": 8752,
+        "fp": 2975,
+        "fn": 30377,
+        "pixels": 262144,
+        "dice": 0.3441875098316816
+      },
+      "delta_dice": 0.08737800440552451,
+      "corrected_pixels": 5740,
+      "worsened_pixels": 4440,
+      "changed_pixels": 10180,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 5987,
+            "fp": 1510,
+            "fn": 33142,
+            "pixels": 262144,
+            "dice": 0.2568095054261571,
+            "iou": 0.14732153842368167,
+            "precision": 0.7985861011071095,
+            "recall": 0.15300672135756088
+          },
+          "boundary": {
+            "tp": 583,
+            "fp": 242,
+            "fn": 6467,
+            "pixels": 46848,
+            "dice": 0.14806349206349206,
+            "iou": 0.07995063082830499,
+            "precision": 0.7066666666666667,
+            "recall": 0.08269503546099291
+          },
+          "interior": {
+            "tp": 5404,
+            "fp": 1268,
+            "fn": 26675,
+            "pixels": 215296,
+            "dice": 0.27890893138241596,
+            "iou": 0.1620535580412031,
+            "precision": 0.8099520383693045,
+            "recall": 0.16845911655600238
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 8752,
+            "fp": 2975,
+            "fn": 30377,
+            "pixels": 262144,
+            "dice": 0.3441875098316816,
+            "iou": 0.20786623598707962,
+            "precision": 0.7463119297348,
+            "recall": 0.22367042347108282
+          },
+          "boundary": {
+            "tp": 925,
+            "fp": 257,
+            "fn": 6125,
+            "pixels": 46848,
+            "dice": 0.22473275024295433,
+            "iou": 0.1265909401943342,
+            "precision": 0.7825719120135364,
+            "recall": 0.13120567375886524
+          },
+          "interior": {
+            "tp": 7827,
+            "fp": 2718,
+            "fn": 24252,
+            "pixels": 215296,
+            "dice": 0.36725788288288286,
+            "iou": 0.22493318389516337,
+            "precision": 0.7422475106685633,
+            "recall": 0.24399139624053118
+          }
+        }
+      }
+    },
+    {
+      "id": "09_2",
+      "group_id": "09",
+      "cnn": {
+        "tp": 10997,
+        "fp": 11807,
+        "fn": 21791,
+        "pixels": 262144,
+        "dice": 0.3956324651028925
+      },
+      "vit": {
+        "tp": 11267,
+        "fp": 9313,
+        "fn": 21521,
+        "pixels": 262144,
+        "dice": 0.4222380452705741
+      },
+      "delta_dice": 0.02660558016768161,
+      "corrected_pixels": 10086,
+      "worsened_pixels": 7322,
+      "changed_pixels": 17408,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 10997,
+            "fp": 11807,
+            "fn": 21791,
+            "pixels": 262144,
+            "dice": 0.3956324651028925,
+            "iou": 0.2465971521471017,
+            "precision": 0.48223995790212243,
+            "recall": 0.335397096498719
+          },
+          "boundary": {
+            "tp": 2051,
+            "fp": 2231,
+            "fn": 5110,
+            "pixels": 46848,
+            "dice": 0.35847242855894434,
+            "iou": 0.21837734241908008,
+            "precision": 0.4789817842129846,
+            "recall": 0.28641251221896386
+          },
+          "interior": {
+            "tp": 8946,
+            "fp": 9576,
+            "fn": 16681,
+            "pixels": 215296,
+            "dice": 0.4052639923894086,
+            "iou": 0.25412606880095445,
+            "precision": 0.48299319727891155,
+            "recall": 0.34908494946735863
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 11267,
+            "fp": 9313,
+            "fn": 21521,
+            "pixels": 262144,
+            "dice": 0.4222380452705741,
+            "iou": 0.2676183463575687,
+            "precision": 0.5474732750242954,
+            "recall": 0.3436318165182384
+          },
+          "boundary": {
+            "tp": 2507,
+            "fp": 1663,
+            "fn": 4654,
+            "pixels": 46848,
+            "dice": 0.44250286823757834,
+            "iou": 0.28411151405258384,
+            "precision": 0.6011990407673861,
+            "recall": 0.35009076944560813
+          },
+          "interior": {
+            "tp": 8760,
+            "fp": 7650,
+            "fn": 16867,
+            "pixels": 215296,
+            "dice": 0.41677569759973354,
+            "iou": 0.26324488385371275,
+            "precision": 0.5338208409506399,
+            "recall": 0.34182697935770867
+          }
+        }
+      }
+    },
+    {
+      "id": "09_3",
+      "group_id": "09",
+      "cnn": {
+        "tp": 12359,
+        "fp": 8797,
+        "fn": 15005,
+        "pixels": 262144,
+        "dice": 0.509439406430338
+      },
+      "vit": {
+        "tp": 14205,
+        "fp": 12305,
+        "fn": 13159,
+        "pixels": 262144,
+        "dice": 0.5273415747856108
+      },
+      "delta_dice": 0.017902168355272807,
+      "corrected_pixels": 7216,
+      "worsened_pixels": 8878,
+      "changed_pixels": 16094,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 12359,
+            "fp": 8797,
+            "fn": 15005,
+            "pixels": 262144,
+            "dice": 0.509439406430338,
+            "iou": 0.341777052625757,
+            "precision": 0.5841841557950463,
+            "recall": 0.451651805291624
+          },
+          "boundary": {
+            "tp": 1296,
+            "fp": 1203,
+            "fn": 3599,
+            "pixels": 46848,
+            "dice": 0.3505545036516094,
+            "iou": 0.21252869793374876,
+            "precision": 0.5186074429771909,
+            "recall": 0.26475995914198164
+          },
+          "interior": {
+            "tp": 11063,
+            "fp": 7594,
+            "fn": 11406,
+            "pixels": 215296,
+            "dice": 0.5380051548898507,
+            "iou": 0.3679938795196753,
+            "precision": 0.5929677868896392,
+            "recall": 0.4923672615603721
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 14205,
+            "fp": 12305,
+            "fn": 13159,
+            "pixels": 262144,
+            "dice": 0.5273415747856108,
+            "iou": 0.35808817968690915,
+            "precision": 0.5358355337608449,
+            "recall": 0.519112702821225
+          },
+          "boundary": {
+            "tp": 1503,
+            "fp": 1056,
+            "fn": 3392,
+            "pixels": 46848,
+            "dice": 0.40327341024953045,
+            "iou": 0.2525625945219291,
+            "precision": 0.5873388042203986,
+            "recall": 0.30704800817160366
+          },
+          "interior": {
+            "tp": 12702,
+            "fp": 11249,
+            "fn": 9767,
+            "pixels": 215296,
+            "dice": 0.5472641102972856,
+            "iou": 0.37671273503766534,
+            "precision": 0.5303327627238946,
+            "recall": 0.5653122079309271
+          }
+        }
+      }
+    },
+    {
+      "id": "09_4",
+      "group_id": "09",
+      "cnn": {
+        "tp": 13060,
+        "fp": 5334,
+        "fn": 7726,
+        "pixels": 262144,
+        "dice": 0.6666666666666666
+      },
+      "vit": {
+        "tp": 11960,
+        "fp": 6619,
+        "fn": 8826,
+        "pixels": 262144,
+        "dice": 0.6076463863838435
+      },
+      "delta_dice": -0.059020280282823134,
+      "corrected_pixels": 4147,
+      "worsened_pixels": 6532,
+      "changed_pixels": 10679,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 13060,
+            "fp": 5334,
+            "fn": 7726,
+            "pixels": 262144,
+            "dice": 0.6666666666666666,
+            "iou": 0.5,
+            "precision": 0.7100141350440361,
+            "recall": 0.6283075146733378
+          },
+          "boundary": {
+            "tp": 2763,
+            "fp": 1159,
+            "fn": 2299,
+            "pixels": 46848,
+            "dice": 0.615093499554764,
+            "iou": 0.44414081337405564,
+            "precision": 0.7044875063742988,
+            "recall": 0.5458316870802055
+          },
+          "interior": {
+            "tp": 10297,
+            "fp": 4175,
+            "fn": 5427,
+            "pixels": 215296,
+            "dice": 0.6820108623658763,
+            "iou": 0.5174631891049801,
+            "precision": 0.7115118850193477,
+            "recall": 0.6548588145510048
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 11960,
+            "fp": 6619,
+            "fn": 8826,
+            "pixels": 262144,
+            "dice": 0.6076463863838435,
+            "iou": 0.43641671227878126,
+            "precision": 0.6437375531514075,
+            "recall": 0.5753872798999327
+          },
+          "boundary": {
+            "tp": 2669,
+            "fp": 1503,
+            "fn": 2393,
+            "pixels": 46848,
+            "dice": 0.5780810049815898,
+            "iou": 0.40654988575780654,
+            "precision": 0.6397411313518696,
+            "recall": 0.5272619517977084
+          },
+          "interior": {
+            "tp": 9291,
+            "fp": 5116,
+            "fn": 6433,
+            "pixels": 215296,
+            "dice": 0.6167070458995718,
+            "iou": 0.4458253358925144,
+            "precision": 0.6448948427847574,
+            "recall": 0.5908801831595014
+          }
+        }
+      }
+    },
+    {
+      "id": "09_5",
+      "group_id": "09",
+      "cnn": {
+        "tp": 10575,
+        "fp": 5113,
+        "fn": 18516,
+        "pixels": 262144,
+        "dice": 0.4723196141048259
+      },
+      "vit": {
+        "tp": 10863,
+        "fp": 5405,
+        "fn": 18228,
+        "pixels": 262144,
+        "dice": 0.4789788134659053
+      },
+      "delta_dice": 0.006659199361079393,
+      "corrected_pixels": 5816,
+      "worsened_pixels": 5820,
+      "changed_pixels": 11636,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 10575,
+            "fp": 5113,
+            "fn": 18516,
+            "pixels": 262144,
+            "dice": 0.4723196141048259,
+            "iou": 0.3091743655712782,
+            "precision": 0.6740821009688934,
+            "recall": 0.36351448901722183
+          },
+          "boundary": {
+            "tp": 1399,
+            "fp": 889,
+            "fn": 2741,
+            "pixels": 46848,
+            "dice": 0.43528313627878035,
+            "iou": 0.27818651819447204,
+            "precision": 0.611451048951049,
+            "recall": 0.33792270531400964
+          },
+          "interior": {
+            "tp": 9176,
+            "fp": 4224,
+            "fn": 15775,
+            "pixels": 215296,
+            "dice": 0.47852728742405676,
+            "iou": 0.314515852613539,
+            "precision": 0.6847761194029851,
+            "recall": 0.36776081118993226
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 10863,
+            "fp": 5405,
+            "fn": 18228,
+            "pixels": 262144,
+            "dice": 0.4789788134659053,
+            "iou": 0.31490607606679033,
+            "precision": 0.6677526432259651,
+            "recall": 0.3734144580798185
+          },
+          "boundary": {
+            "tp": 1487,
+            "fp": 862,
+            "fn": 2653,
+            "pixels": 46848,
+            "dice": 0.4583140699645554,
+            "iou": 0.297281087564974,
+            "precision": 0.6330353341847594,
+            "recall": 0.35917874396135263
+          },
+          "interior": {
+            "tp": 9376,
+            "fp": 4543,
+            "fn": 15575,
+            "pixels": 215296,
+            "dice": 0.48242860818111655,
+            "iou": 0.31789516511832916,
+            "precision": 0.6736116100294561,
+            "recall": 0.37577652198308686
+          }
+        }
+      }
+    },
+    {
+      "id": "09_6",
+      "group_id": "09",
+      "cnn": {
+        "tp": 616,
+        "fp": 362,
+        "fn": 388,
+        "pixels": 262144,
+        "dice": 0.6215943491422805
+      },
+      "vit": {
+        "tp": 793,
+        "fp": 639,
+        "fn": 211,
+        "pixels": 262144,
+        "dice": 0.6510673234811166
+      },
+      "delta_dice": 0.02947297433883611,
+      "corrected_pixels": 486,
+      "worsened_pixels": 586,
+      "changed_pixels": 1072,
+      "metrics_by_region": {
+        "tiny_unet": {
+          "all": {
+            "tp": 616,
+            "fp": 362,
+            "fn": 388,
+            "pixels": 262144,
+            "dice": 0.6215943491422805,
+            "iou": 0.45095168374816985,
+            "precision": 0.6298568507157464,
+            "recall": 0.6135458167330677
+          },
+          "boundary": {
+            "tp": 384,
+            "fp": 48,
+            "fn": 192,
+            "pixels": 46848,
+            "dice": 0.7619047619047619,
+            "iou": 0.6153846153846154,
+            "precision": 0.8888888888888888,
+            "recall": 0.6666666666666666
+          },
+          "interior": {
+            "tp": 232,
+            "fp": 314,
+            "fn": 196,
+            "pixels": 215296,
+            "dice": 0.47638603696098564,
+            "iou": 0.31266846361185985,
+            "precision": 0.4249084249084249,
+            "recall": 0.5420560747663551
+          }
+        },
+        "small_vit": {
+          "all": {
+            "tp": 793,
+            "fp": 639,
+            "fn": 211,
+            "pixels": 262144,
+            "dice": 0.6510673234811166,
+            "iou": 0.48265368228849664,
+            "precision": 0.5537709497206704,
+            "recall": 0.7898406374501992
+          },
+          "boundary": {
+            "tp": 484,
+            "fp": 156,
+            "fn": 92,
+            "pixels": 46848,
+            "dice": 0.7960526315789473,
+            "iou": 0.6612021857923497,
+            "precision": 0.75625,
+            "recall": 0.8402777777777778
+          },
+          "interior": {
+            "tp": 309,
+            "fp": 483,
+            "fn": 119,
+            "pixels": 215296,
+            "dice": 0.5065573770491804,
+            "iou": 0.3391877058177827,
+            "precision": 0.39015151515151514,
+            "recall": 0.7219626168224299
+          }
+        }
+      }
+    }
+  ],
+  "cases": [
+    {
+      "direction": "improved",
+      "id": "09_1",
+      "crop_xyxy": [
+        384,
+        192,
+        512,
+        320
+      ],
+      "crop_counts": {
+        "cnn": {
+          "tp": 380,
+          "fp": 201,
+          "fn": 3183,
+          "pixels": 16384,
+          "dice": 0.1833976833976834
+        },
+        "vit": {
+          "tp": 1084,
+          "fp": 308,
+          "fn": 2479,
+          "pixels": 16384,
+          "dice": 0.43753784056508577
+        },
+        "delta_dice": 0.25414015716740235,
+        "corrected_pixels": 900,
+        "worsened_pixels": 303,
+        "changed_pixels": 1203
+      },
+      "full_image": {
+        "id": "09_1",
+        "group_id": "09",
+        "cnn": {
+          "tp": 5987,
+          "fp": 1510,
+          "fn": 33142,
+          "pixels": 262144,
+          "dice": 0.2568095054261571
+        },
+        "vit": {
+          "tp": 8752,
+          "fp": 2975,
+          "fn": 30377,
+          "pixels": 262144,
+          "dice": 0.3441875098316816
+        },
+        "delta_dice": 0.08737800440552451,
+        "corrected_pixels": 5740,
+        "worsened_pixels": 4440,
+        "changed_pixels": 10180,
+        "metrics_by_region": {
+          "tiny_unet": {
+            "all": {
+              "tp": 5987,
+              "fp": 1510,
+              "fn": 33142,
+              "pixels": 262144,
+              "dice": 0.2568095054261571,
+              "iou": 0.14732153842368167,
+              "precision": 0.7985861011071095,
+              "recall": 0.15300672135756088
+            },
+            "boundary": {
+              "tp": 583,
+              "fp": 242,
+              "fn": 6467,
+              "pixels": 46848,
+              "dice": 0.14806349206349206,
+              "iou": 0.07995063082830499,
+              "precision": 0.7066666666666667,
+              "recall": 0.08269503546099291
+            },
+            "interior": {
+              "tp": 5404,
+              "fp": 1268,
+              "fn": 26675,
+              "pixels": 215296,
+              "dice": 0.27890893138241596,
+              "iou": 0.1620535580412031,
+              "precision": 0.8099520383693045,
+              "recall": 0.16845911655600238
+            }
+          },
+          "small_vit": {
+            "all": {
+              "tp": 8752,
+              "fp": 2975,
+              "fn": 30377,
+              "pixels": 262144,
+              "dice": 0.3441875098316816,
+              "iou": 0.20786623598707962,
+              "precision": 0.7463119297348,
+              "recall": 0.22367042347108282
+            },
+            "boundary": {
+              "tp": 925,
+              "fp": 257,
+              "fn": 6125,
+              "pixels": 46848,
+              "dice": 0.22473275024295433,
+              "iou": 0.1265909401943342,
+              "precision": 0.7825719120135364,
+              "recall": 0.13120567375886524
+            },
+            "interior": {
+              "tp": 7827,
+              "fp": 2718,
+              "fn": 24252,
+              "pixels": 215296,
+              "dice": 0.36725788288288286,
+              "iou": 0.22493318389516337,
+              "precision": 0.7422475106685633,
+              "recall": 0.24399139624053118
+            }
+          }
+        }
+      },
+      "full_panel": "improved-full.png",
+      "crop_panel": "improved-crop.png"
+    },
+    {
+      "direction": "worsened",
+      "id": "09_4",
+      "crop_xyxy": [
+        320,
+        224,
+        448,
+        352
+      ],
+      "crop_counts": {
+        "cnn": {
+          "tp": 2888,
+          "fp": 1230,
+          "fn": 637,
+          "pixels": 16384,
+          "dice": 0.7557241920711762
+        },
+        "vit": {
+          "tp": 2448,
+          "fp": 1430,
+          "fn": 1077,
+          "pixels": 16384,
+          "dice": 0.6613535053356747
+        },
+        "delta_dice": -0.09437068673550153,
+        "corrected_pixels": 830,
+        "worsened_pixels": 1470,
+        "changed_pixels": 2300
+      },
+      "full_image": {
+        "id": "09_4",
+        "group_id": "09",
+        "cnn": {
+          "tp": 13060,
+          "fp": 5334,
+          "fn": 7726,
+          "pixels": 262144,
+          "dice": 0.6666666666666666
+        },
+        "vit": {
+          "tp": 11960,
+          "fp": 6619,
+          "fn": 8826,
+          "pixels": 262144,
+          "dice": 0.6076463863838435
+        },
+        "delta_dice": -0.059020280282823134,
+        "corrected_pixels": 4147,
+        "worsened_pixels": 6532,
+        "changed_pixels": 10679,
+        "metrics_by_region": {
+          "tiny_unet": {
+            "all": {
+              "tp": 13060,
+              "fp": 5334,
+              "fn": 7726,
+              "pixels": 262144,
+              "dice": 0.6666666666666666,
+              "iou": 0.5,
+              "precision": 0.7100141350440361,
+              "recall": 0.6283075146733378
+            },
+            "boundary": {
+              "tp": 2763,
+              "fp": 1159,
+              "fn": 2299,
+              "pixels": 46848,
+              "dice": 0.615093499554764,
+              "iou": 0.44414081337405564,
+              "precision": 0.7044875063742988,
+              "recall": 0.5458316870802055
+            },
+            "interior": {
+              "tp": 10297,
+              "fp": 4175,
+              "fn": 5427,
+              "pixels": 215296,
+              "dice": 0.6820108623658763,
+              "iou": 0.5174631891049801,
+              "precision": 0.7115118850193477,
+              "recall": 0.6548588145510048
+            }
+          },
+          "small_vit": {
+            "all": {
+              "tp": 11960,
+              "fp": 6619,
+              "fn": 8826,
+              "pixels": 262144,
+              "dice": 0.6076463863838435,
+              "iou": 0.43641671227878126,
+              "precision": 0.6437375531514075,
+              "recall": 0.5753872798999327
+            },
+            "boundary": {
+              "tp": 2669,
+              "fp": 1503,
+              "fn": 2393,
+              "pixels": 46848,
+              "dice": 0.5780810049815898,
+              "iou": 0.40654988575780654,
+              "precision": 0.6397411313518696,
+              "recall": 0.5272619517977084
+            },
+            "interior": {
+              "tp": 9291,
+              "fp": 5116,
+              "fn": 6433,
+              "pixels": 215296,
+              "dice": 0.6167070458995718,
+              "iou": 0.4458253358925144,
+              "precision": 0.6448948427847574,
+              "recall": 0.5908801831595014
+            }
+          }
+        }
+      },
+      "full_panel": "worsened-full.png",
+      "crop_panel": "worsened-crop.png"
+    }
+  ],
+  "input_hashes": {
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/protocol.json": "4eafe158582ad0469f08dbab11c4d75d8d26f82cc44b5afaa921c970e27e0eb7",
+    "/workspace/pathology-edge/data/manifest.json": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_08/08_1.png": "024a2bfa09803985e0f8c529bdf6a6936009265a077f2aa295094548564d9c06",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_08/08_1.png": "efcf01ee161c2e2c6c4cde1e76a7e7107b7f8bbfeec97659aecc21583d866085",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/00.npy": "7663b8bd0cdcbf1c9df944ee26007d0abb750cf3bd672197d8716e37826d9b3e",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/training.json": "96677d0734bba0ffafac93120721994d0102ced23c8fd2016ec7a442aff80da3",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/model.pt": "cc0c046f20327d5be8ce7217304764ef2086fb2aeff7cc3ee456f023f677cb88",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/00.npy": "343b521da97d029a8a3499729281a92a3bc0e4f8c3740746ed749360e36fd01e",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/training.json": "6de17bc7efab3d997449ce8562976f28ce333bb5d997f6d5ee22b4276a59aaf8",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/model.pt": "d7821143b3aafbb4849ed0cde38f1637d079262d065e3595c07c30c0b2bbcae1",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_08/08_2.png": "b249da16dfea79be3b91382e77d47f0903950ec593b14484cd7d10298384376c",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_08/08_2.png": "d4dabc25df989a9278d31595efe3ed8af6bc54dbbe22d5a74af272a37ae79f02",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/01.npy": "5e48042042efe3dbb0d7989acd985c30e8d189b51281d942a57962ae1adb1b97",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/01.npy": "5ce2c20436c8f7d026c4a0109bae3361fa66db5d5125b05ad3e9da59da2506c2",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_08/08_3.png": "0f2bce2d32bd88321979032bb9ad665285c7e1ee6affe8a001e4da4309856343",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_08/08_3.png": "c893e6f6e640e22e54b7f771641710cec81b2dede3723bbab57398c1b86e47f9",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/02.npy": "dd0554531036f5e32107a0dc5510a8c9f5058b3dcb7f4499de42330bd5e84ccd",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/02.npy": "5a20900f195a4f96a2e603af5aa387e9eebc5ab0146f9b280cde7352bee099d4",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_08/08_4.png": "aa0cc0cc4cdb79114cbc99274582037a9f8694f5c95a94f66173fc7cf1577c84",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_08/08_4.png": "6c66f5f4e20bed75aee5c3de4cf8a9681fe31eca1aa507a9a9ecc12255f22b3a",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/03.npy": "ec074208f6fad7cc07ceed4c49015b621b57aa7fe727e8c745e4782a6ea8ee83",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/03.npy": "5fe0a90b968fe9d5fac8d9b270e34775f8c7a4bc82131c61bd3bc528b0586039",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_09/09_1.png": "b2281c1aaa6dfec03ab4c90c17f85d8ce693f6b60c48a0104515e8954a7f2dcb",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_09/09_1.png": "34a7161d5e6e7947f6cdc6888b4c73101a3f93655e11acea14fbe01a19f87e78",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/04.npy": "612473f2e3236ffd51106f8173f7f9b900aeaf79d3d9eedacc02c7fffd284d85",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/04.npy": "2beea042cc5b53608ded301c873f7f174d246399602b2cb44ef6d1425a4a0493",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_09/09_2.png": "705adbffbaa846896220fb3bc721eae0950c527f27606f31e8962ea8a075ad90",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_09/09_2.png": "f51734060aa24de44fdbc920f4edfea9a11a857aa1fa0f9aa749b5f038d6ae02",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/05.npy": "ee23cb4db18c51413983682b01d12f9f668309642aff3d4b20a9a1f3838412df",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/05.npy": "257647ef2a0df57e5329ed8209d2b6a48b282e62bdbc25a8d692b6266b7d4496",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_09/09_3.png": "df5a4d21495aa37cce20feb21ecd6df8e1c117f62e61013efca4cbee9ec2c041",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_09/09_3.png": "5e37a31ac13d6f4b10c9d8117b8ae55f66729262185ab8ea2a4e41ba26ec1423",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/06.npy": "bac38be826fa76e0afe6d0bf4ae6b40a0d400776ba4fcbb9c0c2ab3471c279a7",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/06.npy": "df46486afed75afc246420973fdc2aa7accce22d95e9426400be1ecb7489f7a2",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_09/09_4.png": "a173d799026d11bdad4abb959df6277307c20fb8834c19e98f4939a0075feed5",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_09/09_4.png": "6b53c5f8591749b8c21e0dd34f418b45b476ef41925d5b214b748f9690cd4ba3",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/07.npy": "cbb2a7c6b077920a68d78ab55026c0b318a0fc098c5117181bce9e66bfa9c987",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/07.npy": "fba8021d56d4f8c316a4770d57eaa8ab908ad1bbcbbebcbed907873a6cd60175",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_09/09_5.png": "074c01251cf4d7af632a3f5d3d9e6e08209292fb95a17a70d7dfc43a12e4f178",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_09/09_5.png": "e223607a4d01ff63ec3d9c3e61ee382f2f9f7d77934eb326376c45e343b5e88b",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/08.npy": "a403a8e9dce3c0053ba800cf625e7e7aa3dbae3c0eb470bd8b8ebf9c8bf9e21f",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/08.npy": "9dbd7d165a448d7324ede1873580e8e45d0817613e06e538d22967e2312a4931",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/Slide_09/09_6.png": "6c65f9eec8bebeb97ff1c144d75907cf7c7ccee35ddbf57619c6b646ee78f20f",
+    "/workspace/pathology-edge/data/raw/TNBC_dataset/GT_09/09_6.png": "ffcf2b335b32ed65b35c319baecf7b129bb2ca3e49e52146004b9c06f504ae3f",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/tiny_unet/predictions/09.npy": "654e3e8eda11d578335c6c96a3cd8294336bd62e8082e48c1637b7c868ec694e",
+    "/workspace/pathology-edge-loss/work/my-cnn-vit.d2a35da730be/small_vit/predictions/09.npy": "2a5b7d7df7d7d7695c6d5608aaf403b64ad87f25b2729cf7c342b74187c128c8"
+  },
+  "prediction_audit_regions": 60,
+  "model_inference_run": false,
+  "test_evaluation_run": false,
+  "limitation": "Post-hoc selected examples explain pixel errors, not prevalence or biological causes. Pixel changes are not nucleus counts. No independent test, external or clinical evidence."
+}

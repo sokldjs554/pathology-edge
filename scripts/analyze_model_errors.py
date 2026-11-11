@@ -158,7 +158,7 @@ def analyze(run, data, output, *, provenance_label):
             if saved['id'] != record['id']:
                 raise ValueError('Validation image IDs differ')
             path = run/arm/saved['prediction']
-            paths.extend([path, run/arm/'training.json'])
+            paths.extend([path, run/arm/'training.json', run/arm/'model.pt'])
             predictions.append(np.load(path, allow_pickle=False) >= report['threshold'])
             regional[arm] = saved['metrics']
         if rgb.shape[:2] != target.shape:
@@ -206,6 +206,9 @@ def analyze(run, data, output, *, provenance_label):
             raise ValueError('Inputs changed while rendering')
         return result
     except BaseException as exc:
+        # A late consistency failure must not leave a report claiming success.
+        for name in ('index.html', 'report.json'):
+            (out/name).unlink(missing_ok=True)
         (out/'status.json').write_text(json.dumps(dict(status='failed', error=str(exc)))+'\n')
         raise
 

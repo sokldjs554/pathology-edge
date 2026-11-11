@@ -77,6 +77,8 @@ Dice는 이미지별 점수의 평균입니다. 시간은 모델 로딩·디스�
 
 ## 핵심 구현
 
+[후속 네 가지 보완](docs/RESEARCH_FOLLOWUP.md): 개발 참고 CNN–ViT 비교를3개 seed로 확장해 검증 전체 Dice 평균0.537512→0.565899를 확인했습니다. 원본 ZIP·180영역 재감사·동일ROI 오류 그림을 보관하며, 사용자 원본 수신과 직접 모델 변경은 별도 진행 중입니다.
+
 추가로 [소형 ViT와 TinyUNet 비교 및 C++ 측정 도구](docs/CPP_VIT_COMPARISON.md)를 구현했습니다. **사용자 Codespaces 실행**의 validation10장 전체 Dice는 CNN0.503768→ViT0.557644였고, 검사·두 체크아웃 보존 성공 보고를 받았습니다. 외부 가중치 없는 작은 모델의 한 seed·검증 데이터 선택 결과이며 위의 공개 test 결과와 구분합니다. 개발 참고 실행0.540674→0.557642와 사용자 실행을 따로 기록합니다. [C++ 측정·범위 해석](docs/STEP_52.md)은 확인했고, [이미지별 표](docs/STEP_54.md)도 받아7개 상승·3개 하락을 확인했고, [입력 토큰 형상 설명](docs/STEP_55.md)까지 확인해 요청한 두 보완을 해당 범위에서 마무리했습니다.
 
 ```text
@@ -145,7 +147,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: C++/ViT 확장 후 **269 passed in 10.49s**, skip 없음. [최신 검사 근거](artifacts/experiments/cpp-vit-checks/summary.json). 이전 재현 도구의201개, 고정 소스 `9c55480`의191개 테스트·저장 Dice42/6·정적 데모 검사도 통과했습니다. [재현 도구 근거](artifacts/learning/step45-preparation.json). WSI 사용자 계약은 별도 검증의8개 통과와 사용자 **8 passed in 7.08s**를 따로 확인했습니다. [반복 도구 근거](artifacts/learning/step42-preparation.json) · [WSI 검토 근거](artifacts/learning/step40-review.json).
+- 일반 테스트: 후속 원본 보관·오류 분석·반복 실행 확장 후 **331 passed in 18.03s**, skip 없음. [최신 검사 근거](artifacts/experiments/final-followup-checks/summary.json). C++/ViT 최초 확장의269개 검사도 통과했습니다. [이전 검사 근거](artifacts/experiments/cpp-vit-checks/summary.json). 이전 재현 도구의201개, 고정 소스 `9c55480`의191개 테스트·저장 Dice42/6·정적 데모 검사도 통과했습니다. [재현 도구 근거](artifacts/learning/step45-preparation.json). WSI 사용자 계약은 별도 검증의8개 통과와 사용자 **8 passed in 7.08s**를 따로 확인했습니다. [반복 도구 근거](artifacts/learning/step42-preparation.json) · [WSI 검토 근거](artifacts/learning/step40-review.json).
 - 사용자가 그룹 누수 보고 함수와 **18 passed in 0.04s**를 제출했습니다. 별도 검증에서도18개 통과와 실제50개 목록의 그룹 누수 없음·메모리 복사본의 합성 누수 검출을 확인했습니다. [검토 기록](artifacts/learning/step09-review.json). 준비 당시89통과/18skip은 과거 기록입니다. 사용자도 실제 목록50개·11그룹의 `group_leaks: {}` 출력을 제출했습니다. [사용자 실행 보고 검토](artifacts/learning/step10-review.json).
 - 사용자가 Dice 함수와 **20 passed in 0.01s**를 제출했습니다. 별도 검증에서20개 통과와 실제 TNBC 점수42개·평균6개의 원 실험/화면 일치를 확인했습니다. [검토 기록](artifacts/learning/step04-review.json), [검산 기록](artifacts/learning/step04-real-dice-audit.json). 준비 당시69통과/20skip은 과거 기록입니다. 사용자도 로컬 빈 함수 오류 복구 안내 후 검산을 재실행해42/42·6/6 일치 출력을 제출했습니다. [사용자 실행 보고 검토](artifacts/learning/step05-review.json).
 - 사용자가 NMS 반례 테스트 본문과 **1 passed in 0.01s**를 제출했습니다. 독립 실행에서도1개 통과했고 기본 전체 검사에 편입했습니다. [검토 기록](artifacts/learning/step02-review.json). 준비 당시68통과/1skip은 과거 기록입니다.
@@ -183,7 +185,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 ## 남은 한계
 
-WSI 전체 모델 처리, 자동 IHC 검출·분할·Ki67 임상 지수, ViT/사전학습 비교, 공개 경계 비교의 다중 seed·신뢰구간,
+WSI 전체 모델 처리, 자동 IHC 검출·분할·Ki67 임상 지수, 사전학습 모델 비교, 공개 경계 비교의 다중 seed·신뢰구간,
 외부 정확도 검증·병리 전문가·임상 검증은 미수행입니다. 별도 BCE-only/soft Dice 손실 비교는 3개 seed·6회 학습을 완료했으며, 같은 validation에서 선택한 점수의 반복 결과입니다. CMU WSI에는 핵 정답이 없고, IHC는 단일 기관·제공 중심점 조건입니다. 전체 WSI JPEG 타일을 포함해 저장소 용량이 증가했습니다. 사용자 좌표·메타데이터 연결 함수는 실제 ROI 읽기·패치 영역 생성 경로에서 검증했습니다. 원래 공개 추론 exporter는 유지하며 일반 배율 모델 추론·중심점 보정은 별도 미수행입니다.
 단순 핵 foreground만으로 임상 세포 수를 정할 수 없고, 두 테스트 그룹의 성능 차이가 큽니다.
 현재 test를 보며 모델을 다시 선택하면 새 평가 설계가 필요합니다.

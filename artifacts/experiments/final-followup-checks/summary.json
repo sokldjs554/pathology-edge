@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-11",
+  "tests": {
+    "tests": 331,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pytest_seconds": 18.03,
+  "code_sha256": {
+    "scripts/export_research_evidence.py": "73949eff5462c8ea4f20d784bf464ea1ebd16c5e6a252dfb6493d53f847d0ed4",
+    "scripts/analyze_model_errors.py": "f59502ec37ae7d006a5c17afd200185ed17b80fdef742bb355545a76142a3b92",
+    "scripts/run_model_comparison.py": "f8859f78d48ac3d91c6c05fccab206ceb60c20fe625ffad7a33799e63225b68d",
+    "scripts/run_model_repeats.py": "16bb423e548adf5283ee09c8a315635a89a2ee456144d82f8a7d410164915a2f",
+    "src/pathology_edge/model_comparison.py": "099fc98884112f351ce4a22d88514f887df898e9a1c11da48c097bc41d57890e"
+  },
+  "protected_files_checked": 2666,
+  "protected_files_unchanged": true,
+  "stored_dice_checks": 42,
+  "stored_mean_checks": 6,
+  "repeat_regions_audited": 180,
+  "reference_error_regions_audited": 60,
+  "reference_repeat_source_commit": "589b04d22c5408ad082a0de4fe4a53121d10072f",
+  "reference_seed_reuse": [
+    20261113
+  ],
+  "newly_trained_seeds": [
+    20261114,
+    20261115
+  ],
+  "newly_trained_models": 4,
+  "user_archive_received": false,
+  "user_model_modification_completed": false,
+  "user_additional_training_claimed": false,
+  "docker_reproduction": {
+    "status": "pending"
+  },
+  "review": {
+    "independent_review": true,
+    "late_failure_report_bug": "Regression failed before fix, then passed; invalidated completed report and HTML on failure."
+  },
+  "limitation": "Reference experiments remain distinct from user results; no new test, external or clinical evaluation. Unit tests may execute synthetic model operations."
+}
