@@ -1,5 +1,6 @@
 # 사용자 보정 모듈 비교: 원본 감사 완료
 
+최신 요청에 따른 [Cowork 전달 자료](COWORK_HANDOFF.md), [보정 head 추가3개 seed](REFINEMENT_REPEATS_RESULTS.md), [외부 MoNuSeg 평가](EXTERNAL_MONUSEG_VALIDATION.md)를 추가했습니다. 아래는 기존 실험의 당시 감사 범위입니다.
 **59단계 원본 수신·독립 감사 완료.** [요청한 네 보완의 완료 범위](RESEARCH_FOLLOWUP.md). 추가 필수 사용자 과제는 없습니다. 면접 문장 작성은 보류 상태를 유지합니다.
 
 ## 받은 원본과 검증

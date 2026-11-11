@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "checkpoint_hashes_match_user": true,
+  "source_files": 22,
+  "report_file_hash_checks": 68,
+  "archive_payload_checks": 28,
+  "rerasterized_masks": 14,
+  "annotation_regions": 6697,
+  "independent_region_checks": 84,
+  "mean_checks": 6,
+  "means": {
+    "small_vit": {
+      "all": 0.5519744212183466,
+      "boundary": 0.5637935402979225,
+      "interior": 0.5486250629686231
+    },
+    "small_vit_refined": {
+      "all": 0.5349434477187164,
+      "boundary": 0.5469880010693375,
+      "interior": 0.5315512136430679
+    }
+  },
+  "wins_ties_losses": {
+    "all": [
+      1,
+      0,
+      13
+    ],
+    "boundary": [
+      0,
+      0,
+      14
+    ],
+    "interior": [
+      1,
+      0,
+      13
+    ]
+  },
+  "tnbc_images_redecoded": 50,
+  "exact_decoded_duplicates": 0,
+  "inference": false,
+  "training": false
+}

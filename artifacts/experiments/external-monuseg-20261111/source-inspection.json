@@ -1,0 +1,780 @@
+{
+  "source_url": "https://monuseg.grand-challenge.org/Data/",
+  "download_asset": "https://drive.google.com/file/d/1NKkSQ5T0ZNQ8aUhh0a8Dt2YKYCQXIViw/view",
+  "archive_name": "MoNuSegTestData.zip",
+  "archive_bytes": 41620178,
+  "archive_sha256": "13e522387ae8b1bcc0530e13ff9c7b4d91ec74959ef6f6e57747368d7ee6f88a",
+  "files": [
+    {
+      "name": "MoNuSegTestData/TCGA-2Z-A9J9-01A-01-TS1.tif",
+      "bytes": 3021260,
+      "sha256": "6f840831ec7a253f3999a022094813cf4d0dbde1acece834b5c8cd4a0228bef3",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "a412e063285c44ffa6074246d0552b21f52948614c23a690c68ff0ba7e3bc77c"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-2Z-A9J9-01A-01-TS1.xml",
+      "bytes": 1889043,
+      "sha256": "678fda1fe481ebdd0bf03ac85ede1cd57fa0409522311a6f5e516edee1991d75",
+      "regions": 575,
+      "vertices": 52901,
+      "case_id": "TCGA-2Z-A9J9",
+      "root_attributes": {
+        "MicronsPerPixel": "0.252700"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 1000.0,
+      "y_min": 0.986016,
+      "y_max": 1000.174833,
+      "noninteger_coordinate_count": 13471
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-44-2665-01B-06-BS6.tif",
+      "bytes": 3023510,
+      "sha256": "ccee75b157976a0028f4a97ae1609dc4825f409db6b0c83a91c84988769a687f",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "97c269f8529d125a758a91d42c4e9a25794e3f6bc2a0312d50931a8c6a6abcaa"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-44-2665-01B-06-BS6.xml",
+      "bytes": 2097633,
+      "sha256": "34083eac3a4537d850e2e2f15fa5b19e38610b086854b977e09a7a2e1639d34b",
+      "regions": 818,
+      "vertices": 56308,
+      "case_id": "TCGA-44-2665",
+      "root_attributes": {
+        "MicronsPerPixel": "0.246800"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 1000.011596,
+      "y_min": 0.0,
+      "y_max": 1001.0,
+      "noninteger_coordinate_count": 18870
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-69-7764-01A-01-TS1.tif",
+      "bytes": 3023982,
+      "sha256": "a7597618d03717959034e09e812d62520a3994b67dab2843b8323f9482d608c9",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "fa89cdebc90e8a4731149a5052ca6c4626c3c72870265f8727b112e2afc0920d"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-69-7764-01A-01-TS1.xml",
+      "bytes": 1144148,
+      "sha256": "a54ad3d4d1daeda0b134b10da8b3d01f7cdee96957d85684295c2d3aa87b2ed8",
+      "regions": 441,
+      "vertices": 31266,
+      "case_id": "TCGA-69-7764",
+      "root_attributes": {
+        "MicronsPerPixel": "0.252000"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 1.0,
+      "x_max": 1000.0,
+      "y_min": 1.0,
+      "y_max": 1001.0,
+      "noninteger_coordinate_count": 7656
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-A6-6782-01A-01-BS1.tif",
+      "bytes": 3024142,
+      "sha256": "fa25bd8974cbd8c69e12a71e2910aac4db381db97428b2d7a5d50a21a3ce85c3",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "17401d363c1ab4b6549cc2f329b2a1711ec3fb47d40df31e6c661c9937b71d89"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-A6-6782-01A-01-BS1.xml",
+      "bytes": 1205965,
+      "sha256": "bd156b56afca01170a2b9614d4a5a94a49e4f114d7999eef6815ea3cf37862d4",
+      "regions": 441,
+      "vertices": 31724,
+      "case_id": "TCGA-A6-6782",
+      "root_attributes": {
+        "MicronsPerPixel": "0.245700"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 999.517498,
+      "y_min": 1.0,
+      "y_max": 1000.286721,
+      "noninteger_coordinate_count": 14410
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-AC-A2FO-01A-01-TS1.tif",
+      "bytes": 3024734,
+      "sha256": "78e04aef83cb36d03d55a0c3b3e3145196f4cea9871ee8be932e60eb36aebaf1",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "347af94d6c6a9192b63b896e9a3439f75ffdb7ed69e04b109d44b09161ae188c"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-AC-A2FO-01A-01-TS1.xml",
+      "bytes": 1204293,
+      "sha256": "03dda5f552419d85a32891d63fd88fa8f0e6c003ea6b21e8545f327b04d5dc75",
+      "regions": 521,
+      "vertices": 34104,
+      "case_id": "TCGA-AC-A2FO",
+      "root_attributes": {
+        "MicronsPerPixel": "0.248000"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 1000.0,
+      "y_min": 1.0,
+      "y_max": 1001.0,
+      "noninteger_coordinate_count": 390
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-AO-A0J2-01A-01-BSA.tif",
+      "bytes": 3024666,
+      "sha256": "cb674ebeef747e098ac192671ee4899ddcd27316ce9ac7ba827bc5ec62b6238b",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "6a93f9a21000ba94556cf0052238965ef7e48d767b20c3fa329b95daa5f7c988"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-AO-A0J2-01A-01-BSA.xml",
+      "bytes": 990084,
+      "sha256": "8eff8e333a15b30f360ad0ceab1ceea60aebf125b70b652e9a10923d0dc5be26",
+      "regions": 356,
+      "vertices": 28613,
+      "case_id": "TCGA-AO-A0J2",
+      "root_attributes": {
+        "MicronsPerPixel": "0.248500"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 1000.0,
+      "y_min": 0.0,
+      "y_max": 999.0,
+      "noninteger_coordinate_count": 1076
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-CU-A0YN-01A-02-BSB.tif",
+      "bytes": 3024324,
+      "sha256": "ad3e7ada1f6c50204e6d797961f18945e80e55c113327ecaf24c1b1787d5000d",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "9f371665c70ed93397b1c458a70f946dfec4ccc5442b309a54d6df9e6d6cbba5"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-CU-A0YN-01A-02-BSB.xml",
+      "bytes": 1515536,
+      "sha256": "6501402be165f6a3e972956f83ccae91fecab7602a022c0f70a51c7f9deaf063",
+      "regions": 677,
+      "vertices": 39998,
+      "case_id": "TCGA-CU-A0YN",
+      "root_attributes": {
+        "MicronsPerPixel": "0.248500"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": -1.0,
+      "x_max": 1000.0,
+      "y_min": 1.0,
+      "y_max": 1000.0,
+      "noninteger_coordinate_count": 12246
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-EJ-A46H-01A-03-TSC.tif",
+      "bytes": 3022374,
+      "sha256": "160abd191a91a13ac760009e94337a3201e79183ac169a58349e178c3cc6c6c1",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "81468d5a2c1d98391b5d31394c6124cde09a959caedb491fdde2b4d99a40bc9c"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-EJ-A46H-01A-03-TSC.xml",
+      "bytes": 1044918,
+      "sha256": "f067e734247520ce1eb615a3849b19133456957ad90b8ff0ed9143527bc8a6b9",
+      "regions": 466,
+      "vertices": 28794,
+      "case_id": "TCGA-EJ-A46H",
+      "root_attributes": {
+        "MicronsPerPixel": "0.248000"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 1.0,
+      "x_max": 1000.0,
+      "y_min": 1.0,
+      "y_max": 1001.0,
+      "noninteger_coordinate_count": 3364
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-FG-A4MU-01B-01-TS1.tif",
+      "bytes": 3024492,
+      "sha256": "dc6e9f570879195067b2690a57e8f4f34d7fa80d03ab04741e63d3ab6d38edec",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "2ce78e4732697de0cd25e72b9806aa20f6f722d5e6ddc1fc4263dcf0183df070"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-FG-A4MU-01B-01-TS1.xml",
+      "bytes": 1608522,
+      "sha256": "063b478739343b6811db65f0da8501d32457f002ca4cceadc853177f83bf8304",
+      "regions": 465,
+      "vertices": 46408,
+      "case_id": "TCGA-FG-A4MU",
+      "root_attributes": {
+        "MicronsPerPixel": "0.246800"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 1000.0,
+      "y_min": 1.0,
+      "y_max": 1000.0,
+      "noninteger_coordinate_count": 6692
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-GL-6846-01A-01-BS1.tif",
+      "bytes": 3024462,
+      "sha256": "e39c83138708921d035e5358a30314b8ae4ee26a24c3425db4b71a7181028f11",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "1f42dd63ab909218de5dc925b9372d346212f6cf9cd0284fcea1de5e36762f68"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-GL-6846-01A-01-BS1.xml",
+      "bytes": 1222462,
+      "sha256": "fe1dde87c185b23c0bb8b1517522ab7ed374aac79e02a9c6b0f00eb2762b2ce5",
+      "regions": 355,
+      "vertices": 36055,
+      "case_id": "TCGA-GL-6846",
+      "root_attributes": {
+        "MicronsPerPixel": "0.246200"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 1.0,
+      "x_max": 1000.0,
+      "y_min": 1.0,
+      "y_max": 1000.0,
+      "noninteger_coordinate_count": 1120
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-HC-7209-01A-01-TS1.tif",
+      "bytes": 3023924,
+      "sha256": "b4853ff681af7d0c01ac00784c13324338b9a0e73a8350d5f4fce1391b1db4c7",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "4f1fde28ef1df7f0fe14c905fe9ba9134aa71e6b8cdff3b501008a07a9758a23"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-HC-7209-01A-01-TS1.xml",
+      "bytes": 807768,
+      "sha256": "4525fd6d084e0e2ca20919966290771a414657bf4988c0cd45b302438b3600bc",
+      "regions": 325,
+      "vertices": 22055,
+      "case_id": "TCGA-HC-7209",
+      "root_attributes": {
+        "MicronsPerPixel": "0.246200"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 1.0,
+      "x_max": 1001.0,
+      "y_min": 1.0,
+      "y_max": 999.0,
+      "noninteger_coordinate_count": 5020
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-HT-8564-01Z-00-DX1.tif",
+      "bytes": 3024690,
+      "sha256": "2a4a24f52889519a47ebe119a55e4b2bbf9cf3d072f6cb0c2d7639e0fca01fb5",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "133f90f73e8c47e0a4c8326f4beebcea0b555b4c0a396a6ef39763940fc77a82"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-HT-8564-01Z-00-DX1.xml",
+      "bytes": 800452,
+      "sha256": "4412a6dfc1955811d985aaaaadcba4d91d8653546c3665fe8e77de44575a9ba8",
+      "regions": 249,
+      "vertices": 20810,
+      "case_id": "TCGA-HT-8564",
+      "root_attributes": {
+        "MicronsPerPixel": "0.252500"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.90697,
+      "x_max": 1000.0,
+      "y_min": 2.0,
+      "y_max": 999.0,
+      "noninteger_coordinate_count": 12390
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-IZ-8196-01A-01-BS1.tif",
+      "bytes": 3024060,
+      "sha256": "25192feade6c6e1bb51a871f3944321ac45bc4a483fdc7c3c5d8c7f698e32dbc",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "a604b5597d38b1b70d1d8d10496928c515162a534d794f1dc8c5f54b7c522958"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-IZ-8196-01A-01-BS1.xml",
+      "bytes": 1676539,
+      "sha256": "96bae5683f3f3ef34263fbbb3f2c6ef84d8a47f6157b837798f935e846cf95d9",
+      "regions": 533,
+      "vertices": 49209,
+      "case_id": "TCGA-IZ-8196",
+      "root_attributes": {
+        "MicronsPerPixel": "0.245700"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": 0.0,
+      "x_max": 1001.0,
+      "y_min": 0.0,
+      "y_max": 999.0,
+      "noninteger_coordinate_count": 1423
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-ZF-A9R5-01A-01-TS1.tif",
+      "bytes": 3022224,
+      "sha256": "966b04a86252191f903044dc47452cd6f1b10ee8f91fee90edeb07d62e0168da",
+      "width": 1000,
+      "height": 1000,
+      "mode": "RGB",
+      "frames": 1,
+      "decoded_rgb_sha256": "cdc89b6a994c195a46e0a1f8b966279d4c8994b29258bded0a88bf2b1da76823"
+    },
+    {
+      "name": "MoNuSegTestData/TCGA-ZF-A9R5-01A-01-TS1.xml",
+      "bytes": 1031052,
+      "sha256": "075e7d3f9c2cc837c5a6efa60a48813d64b43643c779f8b30d3d7392e875b4dc",
+      "regions": 475,
+      "vertices": 27047,
+      "case_id": "TCGA-ZF-A9R5",
+      "root_attributes": {
+        "MicronsPerPixel": "0.252500"
+      },
+      "region_keys": [
+        "Analyze",
+        "Area",
+        "AreaMicrons",
+        "DisplayId",
+        "Id",
+        "ImageFocus",
+        "ImageLocation",
+        "InputRegionId",
+        "Length",
+        "LengthMicrons",
+        "NegativeROA",
+        "Selected",
+        "Text",
+        "Type",
+        "Zoom"
+      ],
+      "vertex_keys": [
+        "X",
+        "Y"
+      ],
+      "negative_regions": 0,
+      "x_min": -1.0,
+      "x_max": 1000.0,
+      "y_min": 0.0,
+      "y_max": 1000.0,
+      "noninteger_coordinate_count": 8946
+    }
+  ],
+  "total_xml_regions": 6697,
+  "unique_tcga_cases": [
+    "TCGA-2Z-A9J9",
+    "TCGA-44-2665",
+    "TCGA-69-7764",
+    "TCGA-A6-6782",
+    "TCGA-AC-A2FO",
+    "TCGA-AO-A0J2",
+    "TCGA-CU-A0YN",
+    "TCGA-EJ-A46H",
+    "TCGA-FG-A4MU",
+    "TCGA-GL-6846",
+    "TCGA-HC-7209",
+    "TCGA-HT-8564",
+    "TCGA-IZ-8196",
+    "TCGA-ZF-A9R5"
+  ],
+  "inspection_date_utc": "2026-11-11",
+  "license": "CC-BY-NC-SA-4.0",
+  "gdc_case_metadata": [
+    {
+      "case_id": "TCGA-69-7764",
+      "primary_site": "Bronchus and lung",
+      "project": "TCGA-LUAD"
+    },
+    {
+      "case_id": "TCGA-44-2665",
+      "primary_site": "Bronchus and lung",
+      "project": "TCGA-LUAD"
+    },
+    {
+      "case_id": "TCGA-EJ-A46H",
+      "primary_site": "Prostate gland",
+      "project": "TCGA-PRAD"
+    },
+    {
+      "case_id": "TCGA-FG-A4MU",
+      "primary_site": "Brain",
+      "project": "TCGA-LGG"
+    },
+    {
+      "case_id": "TCGA-A6-6782",
+      "primary_site": "Colon",
+      "project": "TCGA-COAD"
+    },
+    {
+      "case_id": "TCGA-GL-6846",
+      "primary_site": "Kidney",
+      "project": "TCGA-KIRP"
+    },
+    {
+      "case_id": "TCGA-IZ-8196",
+      "primary_site": "Kidney",
+      "project": "TCGA-KIRP"
+    },
+    {
+      "case_id": "TCGA-2Z-A9J9",
+      "primary_site": "Kidney",
+      "project": "TCGA-KIRP"
+    },
+    {
+      "case_id": "TCGA-ZF-A9R5",
+      "primary_site": "Bladder",
+      "project": "TCGA-BLCA"
+    },
+    {
+      "case_id": "TCGA-HT-8564",
+      "primary_site": "Brain",
+      "project": "TCGA-LGG"
+    },
+    {
+      "case_id": "TCGA-HC-7209",
+      "primary_site": "Prostate gland",
+      "project": "TCGA-PRAD"
+    },
+    {
+      "case_id": "TCGA-CU-A0YN",
+      "primary_site": "Bladder",
+      "project": "TCGA-BLCA"
+    },
+    {
+      "case_id": "TCGA-AC-A2FO",
+      "primary_site": "Breast",
+      "project": "TCGA-BRCA"
+    },
+    {
+      "case_id": "TCGA-AO-A0J2",
+      "primary_site": "Breast",
+      "project": "TCGA-BRCA"
+    }
+  ],
+  "tnbc_decoded_rgb_comparison": {
+    "tnbc_images": 50,
+    "tnbc_groups": 11,
+    "external_images": 14,
+    "exact_whole_image_duplicates": [],
+    "method": "SHA-256 over decoded RGB contiguous uint8 pixel bytes; dimensions also recorded",
+    "limitation": "Images have different shapes (TNBC 512x512; MoNuSeg1000x1000). This check does not detect shared patients, nested crops, adjacent tissue, or transformed duplicates. TNBC public Slide_01..11 identifiers have no TCGA crosswalk; individual patient disjointness is not directly auditable."
+  }
+}

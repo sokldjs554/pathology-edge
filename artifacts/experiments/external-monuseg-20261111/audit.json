@@ -1,0 +1,9 @@
+{
+  "all_checks_passed": true,
+  "region_checks": 84,
+  "mean_checks": 6,
+  "images": 14,
+  "protocol_sha256": "9345aea2298653abe4b3ea416f9a1d77cf489ae2fc0469b3a2f801eaf3891c4f",
+  "checkpoint_loading_during_audit": false,
+  "inference_during_audit": false
+}

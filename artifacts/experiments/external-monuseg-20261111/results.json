@@ -1,0 +1,1301 @@
+{
+  "protocol_sha256": "9345aea2298653abe4b3ea416f9a1d77cf489ae2fc0469b3a2f801eaf3891c4f",
+  "rows": [
+    {
+      "id": "TCGA-2Z-A9J9-01A-01-TS1",
+      "case_id": "TCGA-2Z-A9J9",
+      "annotation_regions": 575,
+      "target": "targets/TCGA-2Z-A9J9-01A-01-TS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-2Z-A9J9-01A-01-TS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 221850,
+              "fp": 405122,
+              "fn": 4573,
+              "pixels": 1000000,
+              "dice": 0.5199233649130824,
+              "iou": 0.35128138137424886,
+              "precision": 0.3538435528221356,
+              "recall": 0.9798032885351753
+            },
+            "boundary": {
+              "tp": 47571,
+              "fp": 88419,
+              "fn": 690,
+              "pixels": 211456,
+              "dice": 0.5163716886204145,
+              "iou": 0.34804653204565406,
+              "precision": 0.3498124862122215,
+              "recall": 0.9857027413439423
+            },
+            "interior": {
+              "tp": 174279,
+              "fp": 316703,
+              "fn": 3883,
+              "pixels": 788544,
+              "dice": 0.520901330655285,
+              "iou": 0.35217483556121365,
+              "precision": 0.35496005963558747,
+              "recall": 0.9782052289489341
+            }
+          },
+          "seconds_single_run": 0.08117349399253726,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-2Z-A9J9-01A-01-TS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 223591,
+              "fp": 444899,
+              "fn": 2832,
+              "pixels": 1000000,
+              "dice": 0.49969326627281085,
+              "iou": 0.333060736874406,
+              "precision": 0.3344717198462206,
+              "recall": 0.9874924367224178
+            },
+            "boundary": {
+              "tp": 47874,
+              "fp": 96720,
+              "fn": 387,
+              "pixels": 211456,
+              "dice": 0.4964766275180835,
+              "iou": 0.3302087859788524,
+              "precision": 0.3310925764554546,
+              "recall": 0.9919811027537764
+            },
+            "interior": {
+              "tp": 175717,
+              "fp": 348179,
+              "fn": 2445,
+              "pixels": 788544,
+              "dice": 0.5005768754148517,
+              "iou": 0.3338463087618103,
+              "precision": 0.3354043550628369,
+              "recall": 0.9862765348390791
+            }
+          },
+          "seconds_single_run": 0.10946739703649655,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-44-2665-01B-06-BS6",
+      "case_id": "TCGA-44-2665",
+      "annotation_regions": 818,
+      "target": "targets/TCGA-44-2665-01B-06-BS6.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-44-2665-01B-06-BS6-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 267968,
+              "fp": 162886,
+              "fn": 35249,
+              "pixels": 1000000,
+              "dice": 0.7300874166122896,
+              "iou": 0.5749115538840127,
+              "precision": 0.6219461813050361,
+              "recall": 0.883749921673257
+            },
+            "boundary": {
+              "tp": 59969,
+              "fp": 34183,
+              "fn": 7722,
+              "pixels": 211456,
+              "dice": 0.741076228196462,
+              "iou": 0.5886585389795237,
+              "precision": 0.636938142577959,
+              "recall": 0.8859227962358364
+            },
+            "interior": {
+              "tp": 207999,
+              "fp": 128703,
+              "fn": 27527,
+              "pixels": 788544,
+              "dice": 0.7269794557414178,
+              "iou": 0.571066554283157,
+              "precision": 0.6177539782953472,
+              "recall": 0.8831254298888446
+            }
+          },
+          "seconds_single_run": 0.08043323497986421,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-44-2665-01B-06-BS6-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 277254,
+              "fp": 180188,
+              "fn": 25963,
+              "pixels": 1000000,
+              "dice": 0.7289836838846316,
+              "iou": 0.5735439227976541,
+              "precision": 0.6060965105958788,
+              "recall": 0.9143748536526646
+            },
+            "boundary": {
+              "tp": 61925,
+              "fp": 37711,
+              "fn": 5766,
+              "pixels": 211456,
+              "dice": 0.7401674565371996,
+              "iou": 0.5875125709189579,
+              "precision": 0.6215123047894335,
+              "recall": 0.9148188089997193
+            },
+            "interior": {
+              "tp": 215329,
+              "fp": 142477,
+              "fn": 20197,
+              "pixels": 788544,
+              "dice": 0.7258297209656651,
+              "iou": 0.5696489181302794,
+              "precision": 0.6018037707584557,
+              "recall": 0.9142472593259343
+            }
+          },
+          "seconds_single_run": 0.10736457002349198,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-69-7764-01A-01-TS1",
+      "case_id": "TCGA-69-7764",
+      "annotation_regions": 441,
+      "target": "targets/TCGA-69-7764-01A-01-TS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-69-7764-01A-01-TS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 192743,
+              "fp": 136407,
+              "fn": 32386,
+              "pixels": 1000000,
+              "dice": 0.6954728575320371,
+              "iou": 0.5331225659408745,
+              "precision": 0.585578003949567,
+              "recall": 0.8561446992613124
+            },
+            "boundary": {
+              "tp": 42762,
+              "fp": 28066,
+              "fn": 6446,
+              "pixels": 211456,
+              "dice": 0.7124862541237629,
+              "iou": 0.5533814737169035,
+              "precision": 0.6037442819224036,
+              "recall": 0.8690050398309218
+            },
+            "interior": {
+              "tp": 149981,
+              "fp": 108341,
+              "fn": 25940,
+              "pixels": 788544,
+              "dice": 0.6907699145409367,
+              "iou": 0.5276153689202215,
+              "precision": 0.5805970842591804,
+              "recall": 0.8525474502759761
+            }
+          },
+          "seconds_single_run": 0.07687141501810402,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-69-7764-01A-01-TS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 197967,
+              "fp": 145745,
+              "fn": 27162,
+              "pixels": 1000000,
+              "dice": 0.696036326495453,
+              "iou": 0.5337850590766675,
+              "precision": 0.5759676706079508,
+              "recall": 0.8793491731407327
+            },
+            "boundary": {
+              "tp": 43703,
+              "fp": 29851,
+              "fn": 5505,
+              "pixels": 211456,
+              "dice": 0.7119955686613121,
+              "iou": 0.5527896887134924,
+              "precision": 0.5941621121896837,
+              "recall": 0.8881279466753373
+            },
+            "interior": {
+              "tp": 154264,
+              "fp": 115894,
+              "fn": 21657,
+              "pixels": 788544,
+              "dice": 0.6916443051567099,
+              "iou": 0.5286362935421415,
+              "precision": 0.5710139992152741,
+              "recall": 0.8768936056525373
+            }
+          },
+          "seconds_single_run": 0.10077541903592646,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-A6-6782-01A-01-BS1",
+      "case_id": "TCGA-A6-6782",
+      "annotation_regions": 441,
+      "target": "targets/TCGA-A6-6782-01A-01-BS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-A6-6782-01A-01-BS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 144944,
+              "fp": 163724,
+              "fn": 19184,
+              "pixels": 1000000,
+              "dice": 0.6131354749194156,
+              "iou": 0.4421019240388956,
+              "precision": 0.46957896510166264,
+              "recall": 0.8831156170793527
+            },
+            "boundary": {
+              "tp": 36823,
+              "fp": 35415,
+              "fn": 3986,
+              "pixels": 211456,
+              "dice": 0.6514635505586173,
+              "iou": 0.48308931570109154,
+              "precision": 0.5097455632769456,
+              "recall": 0.9023254674214022
+            },
+            "interior": {
+              "tp": 108121,
+              "fp": 128309,
+              "fn": 15198,
+              "pixels": 788544,
+              "dice": 0.601091316445633,
+              "iou": 0.42968588551353587,
+              "precision": 0.4573066023770249,
+              "recall": 0.8767586503296328
+            }
+          },
+          "seconds_single_run": 0.08455202798359096,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-A6-6782-01A-01-BS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 148869,
+              "fp": 179357,
+              "fn": 15259,
+              "pixels": 1000000,
+              "dice": 0.6047234307022996,
+              "iou": 0.4334075723830735,
+              "precision": 0.45355639102325834,
+              "recall": 0.9070298791187366
+            },
+            "boundary": {
+              "tp": 37488,
+              "fp": 38024,
+              "fn": 3321,
+              "pixels": 211456,
+              "dice": 0.6445611712416502,
+              "iou": 0.47553689444775665,
+              "precision": 0.49645089522195146,
+              "recall": 0.9186208924501948
+            },
+            "interior": {
+              "tp": 111381,
+              "fp": 141333,
+              "fn": 11938,
+              "pixels": 788544,
+              "dice": 0.5924001350945263,
+              "iou": 0.4208583347188005,
+              "precision": 0.44073933379235025,
+              "recall": 0.9031941549963914
+            }
+          },
+          "seconds_single_run": 0.10550113703357056,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-AC-A2FO-01A-01-TS1",
+      "case_id": "TCGA-AC-A2FO",
+      "annotation_regions": 521,
+      "target": "targets/TCGA-AC-A2FO-01A-01-TS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-AC-A2FO-01A-01-TS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 261653,
+              "fp": 387907,
+              "fn": 14447,
+              "pixels": 1000000,
+              "dice": 0.5653328435926798,
+              "iou": 0.39405156873346214,
+              "precision": 0.40281575220149024,
+              "recall": 0.9476747555233611
+            },
+            "boundary": {
+              "tp": 55417,
+              "fp": 82979,
+              "fn": 3216,
+              "pixels": 211456,
+              "dice": 0.5625263286115242,
+              "iou": 0.391329830805299,
+              "precision": 0.4004234226422729,
+              "recall": 0.9451503419576006
+            },
+            "interior": {
+              "tp": 206236,
+              "fp": 304928,
+              "fn": 11231,
+              "pixels": 788544,
+              "dice": 0.5660917528900088,
+              "iou": 0.39478938351247617,
+              "precision": 0.403463467693343,
+              "recall": 0.9483553826557592
+            }
+          },
+          "seconds_single_run": 0.07273815601365641,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-AC-A2FO-01A-01-TS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 267141,
+              "fp": 434564,
+              "fn": 8959,
+              "pixels": 1000000,
+              "dice": 0.5464095601883812,
+              "iou": 0.37590338050048966,
+              "precision": 0.3807027169537056,
+              "recall": 0.9675516117348787
+            },
+            "boundary": {
+              "tp": 56487,
+              "fp": 92954,
+              "fn": 2146,
+              "pixels": 211456,
+              "dice": 0.5429510654863173,
+              "iou": 0.3726374952997289,
+              "precision": 0.3779886376563326,
+              "recall": 0.9633994508212099
+            },
+            "interior": {
+              "tp": 210654,
+              "fp": 341610,
+              "fn": 6813,
+              "pixels": 788544,
+              "dice": 0.5473444618964287,
+              "iou": 0.376788885967407,
+              "precision": 0.3814371387597236,
+              "recall": 0.9686711087199437
+            }
+          },
+          "seconds_single_run": 0.12028608401305974,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-AO-A0J2-01A-01-BSA",
+      "case_id": "TCGA-AO-A0J2",
+      "annotation_regions": 356,
+      "target": "targets/TCGA-AO-A0J2-01A-01-BSA.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-AO-A0J2-01A-01-BSA-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 237324,
+              "fp": 399293,
+              "fn": 7840,
+              "pixels": 1000000,
+              "dice": 0.5382833152449418,
+              "iou": 0.36825420470256354,
+              "precision": 0.37278929089232615,
+              "recall": 0.968021406079196
+            },
+            "boundary": {
+              "tp": 50025,
+              "fp": 81587,
+              "fn": 1434,
+              "pixels": 211456,
+              "dice": 0.5465092778211732,
+              "iou": 0.375997775205568,
+              "precision": 0.3800945202565116,
+              "recall": 0.9721331545502244
+            },
+            "interior": {
+              "tp": 187299,
+              "fp": 317706,
+              "fn": 6406,
+              "pixels": 788544,
+              "dice": 0.5361280073277898,
+              "iou": 0.36623967806715146,
+              "precision": 0.3708854367778537,
+              "recall": 0.9669290932087452
+            }
+          },
+          "seconds_single_run": 0.09263852401636541,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-AO-A0J2-01A-01-BSA-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 239361,
+              "fp": 425639,
+              "fn": 5803,
+              "pixels": 1000000,
+              "dice": 0.5259733410682031,
+              "iou": 0.3568275633829902,
+              "precision": 0.3599413533834587,
+              "recall": 0.9763301300354049
+            },
+            "boundary": {
+              "tp": 50416,
+              "fp": 87505,
+              "fn": 1043,
+              "pixels": 211456,
+              "dice": 0.5324321470060196,
+              "iou": 0.3627989983017184,
+              "precision": 0.365542593223657,
+              "recall": 0.9797314366777434
+            },
+            "interior": {
+              "tp": 188945,
+              "fp": 338134,
+              "fn": 4760,
+              "pixels": 788544,
+              "dice": 0.5242763435370374,
+              "iou": 0.35526728953687114,
+              "precision": 0.358475674424517,
+              "recall": 0.9754265506827392
+            }
+          },
+          "seconds_single_run": 0.1212475749780424,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-CU-A0YN-01A-02-BSB",
+      "case_id": "TCGA-CU-A0YN",
+      "annotation_regions": 677,
+      "target": "targets/TCGA-CU-A0YN-01A-02-BSB.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-CU-A0YN-01A-02-BSB-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 242640,
+              "fp": 380875,
+              "fn": 12360,
+              "pixels": 1000000,
+              "dice": 0.552386698007433,
+              "iou": 0.3815844309023,
+              "precision": 0.3891486171142635,
+              "recall": 0.9515294117647058
+            },
+            "boundary": {
+              "tp": 49883,
+              "fp": 78819,
+              "fn": 3121,
+              "pixels": 211456,
+              "dice": 0.5490517649389673,
+              "iou": 0.37840892712197416,
+              "precision": 0.3875852745101086,
+              "recall": 0.9411176514980002
+            },
+            "interior": {
+              "tp": 192757,
+              "fp": 302056,
+              "fn": 9239,
+              "pixels": 788544,
+              "dice": 0.5532563442779872,
+              "iou": 0.38241490957282187,
+              "precision": 0.38955524612328296,
+              "recall": 0.9542614705241688
+            }
+          },
+          "seconds_single_run": 0.08867273305077106,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-CU-A0YN-01A-02-BSB-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 246827,
+              "fp": 417359,
+              "fn": 8173,
+              "pixels": 1000000,
+              "dice": 0.5370556122482283,
+              "iou": 0.36710596571177007,
+              "precision": 0.37162331033776685,
+              "recall": 0.9679490196078432
+            },
+            "boundary": {
+              "tp": 50811,
+              "fp": 86003,
+              "fn": 2193,
+              "pixels": 211456,
+              "dice": 0.5353654553308959,
+              "iou": 0.36552835468717404,
+              "precision": 0.3713874311108512,
+              "recall": 0.9586257640932759
+            },
+            "interior": {
+              "tp": 196016,
+              "fp": 331356,
+              "fn": 5980,
+              "pixels": 788544,
+              "dice": 0.5374954755349837,
+              "iou": 0.3675171369002085,
+              "precision": 0.37168450353829935,
+              "recall": 0.9703954533753144
+            }
+          },
+          "seconds_single_run": 0.118456922005862,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-EJ-A46H-01A-03-TSC",
+      "case_id": "TCGA-EJ-A46H",
+      "annotation_regions": 466,
+      "target": "targets/TCGA-EJ-A46H-01A-03-TSC.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-EJ-A46H-01A-03-TSC-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 160875,
+              "fp": 283563,
+              "fn": 8074,
+              "pixels": 1000000,
+              "dice": 0.5245464934861678,
+              "iou": 0.3555154338448483,
+              "precision": 0.36197399862298,
+              "recall": 0.9522104303665603
+            },
+            "boundary": {
+              "tp": 36939,
+              "fp": 62645,
+              "fn": 2098,
+              "pixels": 211456,
+              "dice": 0.5329495530980155,
+              "iou": 0.36327963651383727,
+              "precision": 0.37093308161953725,
+              "recall": 0.9462561159925199
+            },
+            "interior": {
+              "tp": 123936,
+              "fp": 220918,
+              "fn": 5976,
+              "pixels": 788544,
+              "dice": 0.5220929889671965,
+              "iou": 0.3532651141578542,
+              "precision": 0.359386870965684,
+              "recall": 0.9539996305191206
+            }
+          },
+          "seconds_single_run": 0.07597414503106847,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-EJ-A46H-01A-03-TSC-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 163553,
+              "fp": 311478,
+              "fn": 5396,
+              "pixels": 1000000,
+              "dice": 0.5079443460977049,
+              "iou": 0.3404325735231367,
+              "precision": 0.3442996351817039,
+              "recall": 0.9680613676316522
+            },
+            "boundary": {
+              "tp": 37653,
+              "fp": 67836,
+              "fn": 1384,
+              "pixels": 211456,
+              "dice": 0.5210550350801931,
+              "iou": 0.3523153649658941,
+              "precision": 0.3569376901857066,
+              "recall": 0.9645464559264287
+            },
+            "interior": {
+              "tp": 125900,
+              "fp": 243642,
+              "fn": 4012,
+              "pixels": 788544,
+              "dice": 0.5041505323813604,
+              "iou": 0.33703293232036063,
+              "precision": 0.3406919917086556,
+              "recall": 0.9691175564997845
+            }
+          },
+          "seconds_single_run": 0.13660143403103575,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-FG-A4MU-01B-01-TS1",
+      "case_id": "TCGA-FG-A4MU",
+      "annotation_regions": 465,
+      "target": "targets/TCGA-FG-A4MU-01B-01-TS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-FG-A4MU-01B-01-TS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 236384,
+              "fp": 323755,
+              "fn": 8558,
+              "pixels": 1000000,
+              "dice": 0.5872303532191171,
+              "iou": 0.41565895371348893,
+              "precision": 0.4220095369185149,
+              "recall": 0.9650611165092144
+            },
+            "boundary": {
+              "tp": 50033,
+              "fp": 67069,
+              "fn": 1693,
+              "pixels": 211456,
+              "dice": 0.5927097400905064,
+              "iou": 0.4211709247022181,
+              "precision": 0.42725999555942684,
+              "recall": 0.9672698449522484
+            },
+            "interior": {
+              "tp": 186351,
+              "fp": 256686,
+              "fn": 6865,
+              "pixels": 788544,
+              "dice": 0.5857764128420613,
+              "iou": 0.41420353765931245,
+              "precision": 0.42062175393928725,
+              "recall": 0.9644698161642928
+            }
+          },
+          "seconds_single_run": 0.07803680200595409,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-FG-A4MU-01B-01-TS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 239620,
+              "fp": 375164,
+              "fn": 5322,
+              "pixels": 1000000,
+              "dice": 0.5574334148321675,
+              "iou": 0.3864178059880085,
+              "precision": 0.3897629085987924,
+              "recall": 0.9782724073454124
+            },
+            "boundary": {
+              "tp": 50527,
+              "fp": 77855,
+              "fn": 1199,
+              "pixels": 211456,
+              "dice": 0.5610744664312524,
+              "iou": 0.38992599223651614,
+              "precision": 0.3935676340920067,
+              "recall": 0.9768201678072923
+            },
+            "interior": {
+              "tp": 189093,
+              "fp": 297309,
+              "fn": 4123,
+              "pixels": 788544,
+              "dice": 0.5564684867087099,
+              "iou": 0.38549105550175833,
+              "precision": 0.38875868109094947,
+              "recall": 0.9786611874792978
+            }
+          },
+          "seconds_single_run": 0.103575988963712,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-GL-6846-01A-01-BS1",
+      "case_id": "TCGA-GL-6846",
+      "annotation_regions": 355,
+      "target": "targets/TCGA-GL-6846-01A-01-BS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-GL-6846-01A-01-BS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 202704,
+              "fp": 327258,
+              "fn": 9752,
+              "pixels": 1000000,
+              "dice": 0.5460643465002195,
+              "iou": 0.3755766943232897,
+              "precision": 0.382487801012148,
+              "recall": 0.9540987310313664
+            },
+            "boundary": {
+              "tp": 40466,
+              "fp": 66227,
+              "fn": 1846,
+              "pixels": 211456,
+              "dice": 0.5431495587396397,
+              "iou": 0.37282451469057204,
+              "precision": 0.379275116455625,
+              "recall": 0.9563717148799395
+            },
+            "interior": {
+              "tp": 162238,
+              "fp": 261031,
+              "fn": 7906,
+              "pixels": 788544,
+              "dice": 0.5467962447738759,
+              "iou": 0.376269496144257,
+              "precision": 0.38329761924449934,
+              "recall": 0.95353347752492
+            }
+          },
+          "seconds_single_run": 0.07812592398840934,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-GL-6846-01A-01-BS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 205959,
+              "fp": 382171,
+              "fn": 6497,
+              "pixels": 1000000,
+              "dice": 0.5145206136505011,
+              "iou": 0.3463667139231821,
+              "precision": 0.3501929845442334,
+              "recall": 0.9694195504010242
+            },
+            "boundary": {
+              "tp": 41155,
+              "fp": 77330,
+              "fn": 1157,
+              "pixels": 211456,
+              "dice": 0.5118876595956392,
+              "iou": 0.34398455391919225,
+              "precision": 0.347343545596489,
+              "recall": 0.9726555114388353
+            },
+            "interior": {
+              "tp": 164804,
+              "fp": 304841,
+              "fn": 5340,
+              "pixels": 788544,
+              "dice": 0.5151823491807456,
+              "iou": 0.34696674631830476,
+              "precision": 0.35091185895729754,
+              "recall": 0.9686148203874365
+            }
+          },
+          "seconds_single_run": 0.1258725170046091,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-HC-7209-01A-01-TS1",
+      "case_id": "TCGA-HC-7209",
+      "annotation_regions": 325,
+      "target": "targets/TCGA-HC-7209-01A-01-TS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-HC-7209-01A-01-TS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 150577,
+              "fp": 312551,
+              "fn": 7534,
+              "pixels": 1000000,
+              "dice": 0.4847635129153192,
+              "iou": 0.31992597660316746,
+              "precision": 0.3251304175087665,
+              "recall": 0.9523499313773235
+            },
+            "boundary": {
+              "tp": 34335,
+              "fp": 61114,
+              "fn": 1634,
+              "pixels": 211456,
+              "dice": 0.5225311601150527,
+              "iou": 0.3536664503569111,
+              "precision": 0.35972089807122126,
+              "recall": 0.9545719925491395
+            },
+            "interior": {
+              "tp": 116242,
+              "fp": 251437,
+              "fn": 5900,
+              "pixels": 788544,
+              "dice": 0.4746305282950302,
+              "iou": 0.31115774708963834,
+              "precision": 0.31615077282085735,
+              "recall": 0.9516955674542745
+            }
+          },
+          "seconds_single_run": 0.10604298097314313,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-HC-7209-01A-01-TS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 152632,
+              "fp": 354205,
+              "fn": 5479,
+              "pixels": 1000000,
+              "dice": 0.459079506968966,
+              "iou": 0.2979254991060205,
+              "precision": 0.3011461278478091,
+              "recall": 0.9653471295482288
+            },
+            "boundary": {
+              "tp": 34685,
+              "fp": 68242,
+              "fn": 1284,
+              "pixels": 211456,
+              "dice": 0.49943842875244787,
+              "iou": 0.332834345702469,
+              "precision": 0.33698640784245143,
+              "recall": 0.964302593900303
+            },
+            "interior": {
+              "tp": 117947,
+              "fp": 285963,
+              "fn": 4195,
+              "pixels": 788544,
+              "dice": 0.4484233497829112,
+              "iou": 0.2890114063782605,
+              "precision": 0.2920130722190587,
+              "recall": 0.9656547297407935
+            }
+          },
+          "seconds_single_run": 0.12858337099896744,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-HT-8564-01Z-00-DX1",
+      "case_id": "TCGA-HT-8564",
+      "annotation_regions": 249,
+      "target": "targets/TCGA-HT-8564-01Z-00-DX1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-HT-8564-01Z-00-DX1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 99891,
+              "fp": 544482,
+              "fn": 3161,
+              "pixels": 1000000,
+              "dice": 0.267293708398836,
+              "iou": 0.15426371433777994,
+              "precision": 0.1550204617511907,
+              "recall": 0.9693261654310446
+            },
+            "boundary": {
+              "tp": 22142,
+              "fp": 109876,
+              "fn": 580,
+              "pixels": 211456,
+              "dice": 0.286183275171255,
+              "iou": 0.1669859273895534,
+              "precision": 0.1677195533942341,
+              "recall": 0.9744740779860928
+            },
+            "interior": {
+              "tp": 77749,
+              "fp": 434606,
+              "fn": 2581,
+              "pixels": 788544,
+              "dice": 0.2623619629314054,
+              "iou": 0.15098769555828298,
+              "precision": 0.15174829951888827,
+              "recall": 0.967870036101083
+            }
+          },
+          "seconds_single_run": 0.08682430197950453,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-HT-8564-01Z-00-DX1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 101052,
+              "fp": 643299,
+              "fn": 2000,
+              "pixels": 1000000,
+              "dice": 0.23849809358711263,
+              "iou": 0.13539474054432835,
+              "precision": 0.13575853327260928,
+              "recall": 0.9805923223227109
+            },
+            "boundary": {
+              "tp": 22331,
+              "fp": 130352,
+              "fn": 391,
+              "pixels": 211456,
+              "dice": 0.2546221601436675,
+              "iou": 0.1458836902413212,
+              "precision": 0.14625727815146414,
+              "recall": 0.982792007745797
+            },
+            "interior": {
+              "tp": 78721,
+              "fp": 512947,
+              "fn": 1609,
+              "pixels": 788544,
+              "dice": 0.23428938776603503,
+              "iou": 0.1326884406440836,
+              "precision": 0.13304927763543067,
+              "recall": 0.9799701232416282
+            }
+          },
+          "seconds_single_run": 0.12669522600481287,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-IZ-8196-01A-01-BS1",
+      "case_id": "TCGA-IZ-8196",
+      "annotation_regions": 533,
+      "target": "targets/TCGA-IZ-8196-01A-01-BS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-IZ-8196-01A-01-BS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 228482,
+              "fp": 299604,
+              "fn": 11936,
+              "pixels": 1000000,
+              "dice": 0.5946149922446727,
+              "iou": 0.4230975775061016,
+              "precision": 0.4326605893737005,
+              "recall": 0.9503531349566172
+            },
+            "boundary": {
+              "tp": 52766,
+              "fp": 61034,
+              "fn": 2940,
+              "pixels": 211456,
+              "dice": 0.6225856311870966,
+              "iou": 0.4519958882987836,
+              "precision": 0.4636731107205624,
+              "recall": 0.9472229203317416
+            },
+            "interior": {
+              "tp": 175716,
+              "fp": 238570,
+              "fn": 8996,
+              "pixels": 788544,
+              "dice": 0.5866997886470405,
+              "iou": 0.4151275036500489,
+              "precision": 0.4241417764539473,
+              "recall": 0.9512971544891506
+            }
+          },
+          "seconds_single_run": 0.08770144201116636,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-IZ-8196-01A-01-BS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 231888,
+              "fp": 332529,
+              "fn": 8530,
+              "pixels": 1000000,
+              "dice": 0.5762373654227264,
+              "iou": 0.40472853510010526,
+              "precision": 0.4108451729838045,
+              "recall": 0.9645201274447005
+            },
+            "boundary": {
+              "tp": 53541,
+              "fp": 67953,
+              "fn": 2165,
+              "pixels": 211456,
+              "dice": 0.6043002257336343,
+              "iou": 0.4329729336320041,
+              "precision": 0.4406884290582251,
+              "recall": 0.9611352457544968
+            },
+            "interior": {
+              "tp": 178347,
+              "fp": 264576,
+              "fn": 6365,
+              "pixels": 788544,
+              "dice": 0.5683143865463207,
+              "iou": 0.3969547372731967,
+              "precision": 0.40265915294532006,
+              "recall": 0.9655409502360431
+            }
+          },
+          "seconds_single_run": 0.1335876559605822,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    },
+    {
+      "id": "TCGA-ZF-A9R5-01A-01-TS1",
+      "case_id": "TCGA-ZF-A9R5",
+      "annotation_regions": 475,
+      "target": "targets/TCGA-ZF-A9R5-01A-01-TS1.png",
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-ZF-A9R5-01A-01-TS1-small_vit.npz",
+          "metrics": {
+            "all": {
+              "tp": 208567,
+              "fp": 399249,
+              "fn": 3929,
+              "pixels": 1000000,
+              "dice": 0.5085065194706404,
+              "iou": 0.3409378090544263,
+              "precision": 0.3431416744541111,
+              "recall": 0.9815102401927566
+            },
+            "boundary": {
+              "tp": 44235,
+              "fp": 82932,
+              "fn": 881,
+              "pixels": 211456,
+              "dice": 0.5135155528984288,
+              "iou": 0.3454563913532425,
+              "precision": 0.34784967798249544,
+              "recall": 0.9804725596240802
+            },
+            "interior": {
+              "tp": 164332,
+              "fp": 316317,
+              "fn": 3048,
+              "pixels": 788544,
+              "dice": 0.5071748332250563,
+              "iou": 0.33974161510201634,
+              "precision": 0.34189606136702666,
+              "recall": 0.9817899390608197
+            }
+          },
+          "seconds_single_run": 0.08609347796300426,
+          "patch_count": 64,
+          "skipped_background": 0
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-ZF-A9R5-01A-01-TS1-small_vit_refined.npz",
+          "metrics": {
+            "all": {
+              "tp": 209833,
+              "fp": 422716,
+              "fn": 2663,
+              "pixels": 1000000,
+              "dice": 0.4966197066428415,
+              "iou": 0.33033538409224006,
+              "precision": 0.33172607971872536,
+              "recall": 0.9874679993976357
+            },
+            "boundary": {
+              "tp": 44499,
+              "fp": 87847,
+              "fn": 617,
+              "pixels": 211456,
+              "dice": 0.5015045474524124,
+              "iou": 0.3346720516233839,
+              "precision": 0.33623230018285405,
+              "recall": 0.9863241422111889
+            },
+            "interior": {
+              "tp": 165334,
+              "fp": 334869,
+              "fn": 2046,
+              "pixels": 788544,
+              "dice": 0.4953211810366651,
+              "iou": 0.32918731545508306,
+              "precision": 0.33053380327587,
+              "recall": 0.9877763173616919
+            }
+          },
+          "seconds_single_run": 0.14174772397382185,
+          "patch_count": 64,
+          "skipped_background": 0
+        }
+      }
+    }
+  ],
+  "means": {
+    "small_vit": {
+      "all": 0.5519744212183466,
+      "boundary": 0.5637935402979225,
+      "interior": 0.5486250629686231
+    },
+    "small_vit_refined": {
+      "all": 0.5349434477187164,
+      "boundary": 0.5469880010693375,
+      "interior": 0.5315512136430679
+    }
+  },
+  "delta_refined_minus_baseline": {
+    "all": -0.01703097349963023,
+    "boundary": -0.016805539228584965,
+    "interior": -0.017073849325555224
+  },
+  "wins_ties_losses": {
+    "all": [
+      1,
+      0,
+      13
+    ],
+    "boundary": [
+      0,
+      0,
+      14
+    ],
+    "interior": [
+      1,
+      0,
+      13
+    ]
+  },
+  "files": {
+    "targets/TCGA-2Z-A9J9-01A-01-TS1.png": "0d6465e200138422e11eb04684d8e7ad538a0e0132399f656cfce89efc9e30f0",
+    "targets/TCGA-44-2665-01B-06-BS6.png": "52576936d8a78ba7cc1ccdc81be8eb6e1e056cfbf895d7c29d93aa20abb58f90",
+    "targets/TCGA-69-7764-01A-01-TS1.png": "2b8f6a799901a7cd4a3c25cc6d2a7cf112aa42a62376b452694cd2403c933873",
+    "targets/TCGA-A6-6782-01A-01-BS1.png": "62b2597b917af5f8f2e9098d61d63da6d2022c2b18229c4f548fb6afe29a9512",
+    "targets/TCGA-AC-A2FO-01A-01-TS1.png": "3f127a3316218be28462faea18b9362e29ecf911e67c9bc4216fa8b58b53056c",
+    "targets/TCGA-AO-A0J2-01A-01-BSA.png": "21583df5321b614338b53fc1550ac14d74c0610e66000c5a7bc8cc82def2c06e",
+    "targets/TCGA-CU-A0YN-01A-02-BSB.png": "180d1738934d12bbe5d24800dc43d3a59c4675fa8a5396f0c5294c5dc291ba5f",
+    "targets/TCGA-EJ-A46H-01A-03-TSC.png": "896824e842eed85661f6d15d1c7749190b929de7f158cf28737c8a443fff34f9",
+    "targets/TCGA-FG-A4MU-01B-01-TS1.png": "9218e736c25cc5eba9263e9908ee526f938b48887c60cd330288f639c0376293",
+    "targets/TCGA-GL-6846-01A-01-BS1.png": "61a29e661c1abdfcc40624359a04126c6d08b4bba30116d38ec9960c4627f875",
+    "targets/TCGA-HC-7209-01A-01-TS1.png": "701aa1dbd07a6b92d33ece9cfae3b2c7487a8f4bb211ebd62805220eb07ae783",
+    "targets/TCGA-HT-8564-01Z-00-DX1.png": "969bbdad224aa8468dc633abaefc3949b408531611fe93fade6ad58d73c53258",
+    "targets/TCGA-IZ-8196-01A-01-BS1.png": "e519f6c334d969ccaa123dd228780a8e897b31404f909fd40642de4eccbf434a",
+    "targets/TCGA-ZF-A9R5-01A-01-TS1.png": "b96d3b4b96311d3112a71043807eefdbc1714e412bc95e4edd8f270e80c95b5c",
+    "predictions/TCGA-2Z-A9J9-01A-01-TS1-small_vit.npz": "452faa06b6d03b575381d3e47934a0e56a9a53a5234a018cd1932ac6bd62c3a6",
+    "predictions/TCGA-2Z-A9J9-01A-01-TS1-small_vit_refined.npz": "c6e873c543c2f99daf9ca385fb1ae21047d714a989c80a7b5b4c3a4ed6f529fa",
+    "predictions/TCGA-44-2665-01B-06-BS6-small_vit.npz": "8acd31dc70f9a6c66c6a6c897a1516873885a80bcfc2e757c87479b25e5483ad",
+    "predictions/TCGA-44-2665-01B-06-BS6-small_vit_refined.npz": "8c92fa55a5575f59f20c0cf5e9a49785f02640975f2d33060f7ce45c146f30db",
+    "predictions/TCGA-69-7764-01A-01-TS1-small_vit.npz": "219ae722ee550dbc04379720a72a0e00a4dae97fc25fe4aa7b3179b903051a99",
+    "predictions/TCGA-69-7764-01A-01-TS1-small_vit_refined.npz": "ad465c3feedf35c7976d071aafd0c93fd3814c99e6d1aaf7da048a891087228a",
+    "predictions/TCGA-A6-6782-01A-01-BS1-small_vit.npz": "c3d575f71ad16ee2aaae93285425f34c2cd29fd1725b5998b4684366f3014793",
+    "predictions/TCGA-A6-6782-01A-01-BS1-small_vit_refined.npz": "330e80a022d20fa65ae7b9f3a222c95122c423cef183dacc9cc13483d883a9e6",
+    "predictions/TCGA-AC-A2FO-01A-01-TS1-small_vit.npz": "d3435615f2698c2ca4b948ccf700c1f3273e58db3f33de0d8a9821178df5f3b2",
+    "predictions/TCGA-AC-A2FO-01A-01-TS1-small_vit_refined.npz": "27c4f03dc484544de4fcf25661ec6fe62fe99585ffeb24d260096ddd247170db",
+    "predictions/TCGA-AO-A0J2-01A-01-BSA-small_vit.npz": "fb2dee9d3bb8ea573342fcedbcc2909765601904b3110f10875c62fdf00d2e4c",
+    "predictions/TCGA-AO-A0J2-01A-01-BSA-small_vit_refined.npz": "856c1dbbfe441788b5e7efcbb47401499bdfa342b2b42d6860f2f5a4f7db03e3",
+    "predictions/TCGA-CU-A0YN-01A-02-BSB-small_vit.npz": "f563f8d10115eca7bf27b82ad4ba197e4e202a4fdfb108f3ec1715a66bf146aa",
+    "predictions/TCGA-CU-A0YN-01A-02-BSB-small_vit_refined.npz": "0ececb48bd8f8baf515aaf50cab4b9045f31a5d56d784eed881de0c86cb99f03",
+    "predictions/TCGA-EJ-A46H-01A-03-TSC-small_vit.npz": "b1bb832653415f8b2ceb0d7e648b748c58d7ca61f073749ba1da9454b8651802",
+    "predictions/TCGA-EJ-A46H-01A-03-TSC-small_vit_refined.npz": "7be765b9da74a8cdd14785d825c4b428463c8805498cd556fe90c8366e4f71fa",
+    "predictions/TCGA-FG-A4MU-01B-01-TS1-small_vit.npz": "230bb204746fa4743097ccb3ef1967057613678ff450da6f9ef441027a38a637",
+    "predictions/TCGA-FG-A4MU-01B-01-TS1-small_vit_refined.npz": "5a30226040805f71e4bf37ad408858cfea2dfc17ce6f51a22aa18f0d63e8414f",
+    "predictions/TCGA-GL-6846-01A-01-BS1-small_vit.npz": "ea735a340ad2a6102809528adb88e2507e9a22e583a0ab02d0acec819f8c95d4",
+    "predictions/TCGA-GL-6846-01A-01-BS1-small_vit_refined.npz": "b89b982c6daeebe22301309f174957738e42d222929b74f9bbf305e513f324d6",
+    "predictions/TCGA-HC-7209-01A-01-TS1-small_vit.npz": "e4a2d93d7c231fe6ebb8353273490ed9fce20135fd29b5a12a776fe179b7d24d",
+    "predictions/TCGA-HC-7209-01A-01-TS1-small_vit_refined.npz": "9a5726c0a1fff8757ecb31479bf3a39860966ebb3b009431d8f90f201ab81efa",
+    "predictions/TCGA-HT-8564-01Z-00-DX1-small_vit.npz": "713210830374afa7cbadd80b48163b7d4cfd617f96a88e46ff4f8f7227658979",
+    "predictions/TCGA-HT-8564-01Z-00-DX1-small_vit_refined.npz": "a3a5a88223609d4a188243a519da2597031e081fea5fda24c3e59d54196421c5",
+    "predictions/TCGA-IZ-8196-01A-01-BS1-small_vit.npz": "0e1d99b4fae4767b9130ecd6877813b743eed971afeda1831044d1ebec78b41c",
+    "predictions/TCGA-IZ-8196-01A-01-BS1-small_vit_refined.npz": "b396de678fde9290ad14d47f41279a1cd32dc7d68b09836a69cb3172b08f9213",
+    "predictions/TCGA-ZF-A9R5-01A-01-TS1-small_vit.npz": "8a9d3aac57c459b878b43849e0f0a34f4b324f2e66d66ef5c582b9aec1ff59cf",
+    "predictions/TCGA-ZF-A9R5-01A-01-TS1-small_vit_refined.npz": "a392c3d321f4040f610b3cc16454ec449ebdd5bf6cf0f86b8fbc285a69bad8dc",
+    "models/small_vit-training.json": "48cb3ca9a9051fa6838f27bacc6e17c6bdf4fcf06008b270765947a6ac87e745",
+    "models/small_vit.pt": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898",
+    "models/small_vit_refined-training.json": "0a5532ae637c4e93025977739a4388ad336d70845ec4784e183775d4edb19ca6",
+    "models/small_vit_refined.pt": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f",
+    "source/pathology_edge/__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
+    "source/pathology_edge/cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "source/pathology_edge/data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+    "source/pathology_edge/experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "source/pathology_edge/external_validation.py": "69e27d0a17bb56ee696c3620921ebc1e7f1265f03da2756894605bd1dcf575cf",
+    "source/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "source/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "source/pathology_edge/learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "source/pathology_edge/learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "source/pathology_edge/learner_refinement.py": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+    "source/pathology_edge/learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "source/pathology_edge/learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "source/pathology_edge/merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "source/pathology_edge/metrics.py": "95584cd131ab54f0bb24485f56bc6a85b68b775bb318fbf5dfa0b9e24c6b8a78",
+    "source/pathology_edge/model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "source/pathology_edge/model_comparison.py": "2686a9ffabcbc587c2b4d0dc1b97dfeb913db1c2328c0c0b5edb2e08e8f6981d",
+    "source/pathology_edge/patches.py": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5",
+    "source/pathology_edge/refinement.py": "ef3f0f739f72214be97af3002e2089331dfc93fe561f05edf6799be2b74a7d22",
+    "source/pathology_edge/review_cases.py": "2830c555dcfebd097ab2ef19eb2cbc6cc594a21c3faa735455dc8bd9e67c007e",
+    "source/pathology_edge/vit.py": "41a00cb0278921c9e2271e5aa1714ebdc3e59bb435e569513bc67805dee41932",
+    "source/pathology_edge/wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "source/pathology_edge/wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e"
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "cpu_count": 5,
+    "torch_threads": 4,
+    "cuda": false,
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "external_training_run": false,
+  "external_threshold_selection": false,
+  "whole_wsi_validation": false,
+  "clinical_validation": false,
+  "timing_scope": "Single descriptive inference per image; not a speed benchmark"
+}

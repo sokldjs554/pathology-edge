@@ -1,0 +1,4 @@
+PASS: trusted --summarize equals saved summary.
+PASS: independently recounted 180 probability image-region results and 30 per-image region summaries.
+PASS: 88 frozen source copies match 22 hashes; source_dirty=true and untracked external helper recorded.
+PASS: complete run unchanged; no training, inference, or test evaluation.

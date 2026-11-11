@@ -8,6 +8,10 @@
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
 **WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
 
+[Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
+
+추가 보정 실험에서는 기존 TNBC validation10장의 3개 seed 평균 전체 Dice가 **0.555994→0.576699**였지만, 고정한 사용자 모델 쌍의 외부 MoNuSeg14ROI 평균은 **0.551974→0.534943**으로 하락했습니다. 두 실험은 모델·평가 범위가 달라 합산하지 않습니다. 공개 데모의 기존 결과는 유지합니다.
+
 ## 실제 WSI와 IHC 확장
 
 | 화면 | 실제 데이터·실행 범위 | 확인할 수 있는 것 | 평가 범위 |

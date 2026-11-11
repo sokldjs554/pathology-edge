@@ -1,0 +1,176 @@
+{
+  "dataset": "MoNuSeg2018 official test, all14 annotated ROIs",
+  "images": [
+    {
+      "id": "TCGA-2Z-A9J9-01A-01-TS1",
+      "case_id": "TCGA-2Z-A9J9",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-2Z-A9J9-01A-01-TS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-2Z-A9J9-01A-01-TS1.xml",
+      "image_sha256": "6f840831ec7a253f3999a022094813cf4d0dbde1acece834b5c8cd4a0228bef3",
+      "xml_sha256": "678fda1fe481ebdd0bf03ac85ede1cd57fa0409522311a6f5e516edee1991d75",
+      "rgb_sha256": "a412e063285c44ffa6074246d0552b21f52948614c23a690c68ff0ba7e3bc77c"
+    },
+    {
+      "id": "TCGA-44-2665-01B-06-BS6",
+      "case_id": "TCGA-44-2665",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-44-2665-01B-06-BS6.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-44-2665-01B-06-BS6.xml",
+      "image_sha256": "ccee75b157976a0028f4a97ae1609dc4825f409db6b0c83a91c84988769a687f",
+      "xml_sha256": "34083eac3a4537d850e2e2f15fa5b19e38610b086854b977e09a7a2e1639d34b",
+      "rgb_sha256": "97c269f8529d125a758a91d42c4e9a25794e3f6bc2a0312d50931a8c6a6abcaa"
+    },
+    {
+      "id": "TCGA-69-7764-01A-01-TS1",
+      "case_id": "TCGA-69-7764",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-69-7764-01A-01-TS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-69-7764-01A-01-TS1.xml",
+      "image_sha256": "a7597618d03717959034e09e812d62520a3994b67dab2843b8323f9482d608c9",
+      "xml_sha256": "a54ad3d4d1daeda0b134b10da8b3d01f7cdee96957d85684295c2d3aa87b2ed8",
+      "rgb_sha256": "fa89cdebc90e8a4731149a5052ca6c4626c3c72870265f8727b112e2afc0920d"
+    },
+    {
+      "id": "TCGA-A6-6782-01A-01-BS1",
+      "case_id": "TCGA-A6-6782",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-A6-6782-01A-01-BS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-A6-6782-01A-01-BS1.xml",
+      "image_sha256": "fa25bd8974cbd8c69e12a71e2910aac4db381db97428b2d7a5d50a21a3ce85c3",
+      "xml_sha256": "bd156b56afca01170a2b9614d4a5a94a49e4f114d7999eef6815ea3cf37862d4",
+      "rgb_sha256": "17401d363c1ab4b6549cc2f329b2a1711ec3fb47d40df31e6c661c9937b71d89"
+    },
+    {
+      "id": "TCGA-AC-A2FO-01A-01-TS1",
+      "case_id": "TCGA-AC-A2FO",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-AC-A2FO-01A-01-TS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-AC-A2FO-01A-01-TS1.xml",
+      "image_sha256": "78e04aef83cb36d03d55a0c3b3e3145196f4cea9871ee8be932e60eb36aebaf1",
+      "xml_sha256": "03dda5f552419d85a32891d63fd88fa8f0e6c003ea6b21e8545f327b04d5dc75",
+      "rgb_sha256": "347af94d6c6a9192b63b896e9a3439f75ffdb7ed69e04b109d44b09161ae188c"
+    },
+    {
+      "id": "TCGA-AO-A0J2-01A-01-BSA",
+      "case_id": "TCGA-AO-A0J2",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-AO-A0J2-01A-01-BSA.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-AO-A0J2-01A-01-BSA.xml",
+      "image_sha256": "cb674ebeef747e098ac192671ee4899ddcd27316ce9ac7ba827bc5ec62b6238b",
+      "xml_sha256": "8eff8e333a15b30f360ad0ceab1ceea60aebf125b70b652e9a10923d0dc5be26",
+      "rgb_sha256": "6a93f9a21000ba94556cf0052238965ef7e48d767b20c3fa329b95daa5f7c988"
+    },
+    {
+      "id": "TCGA-CU-A0YN-01A-02-BSB",
+      "case_id": "TCGA-CU-A0YN",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-CU-A0YN-01A-02-BSB.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-CU-A0YN-01A-02-BSB.xml",
+      "image_sha256": "ad3e7ada1f6c50204e6d797961f18945e80e55c113327ecaf24c1b1787d5000d",
+      "xml_sha256": "6501402be165f6a3e972956f83ccae91fecab7602a022c0f70a51c7f9deaf063",
+      "rgb_sha256": "9f371665c70ed93397b1c458a70f946dfec4ccc5442b309a54d6df9e6d6cbba5"
+    },
+    {
+      "id": "TCGA-EJ-A46H-01A-03-TSC",
+      "case_id": "TCGA-EJ-A46H",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-EJ-A46H-01A-03-TSC.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-EJ-A46H-01A-03-TSC.xml",
+      "image_sha256": "160abd191a91a13ac760009e94337a3201e79183ac169a58349e178c3cc6c6c1",
+      "xml_sha256": "f067e734247520ce1eb615a3849b19133456957ad90b8ff0ed9143527bc8a6b9",
+      "rgb_sha256": "81468d5a2c1d98391b5d31394c6124cde09a959caedb491fdde2b4d99a40bc9c"
+    },
+    {
+      "id": "TCGA-FG-A4MU-01B-01-TS1",
+      "case_id": "TCGA-FG-A4MU",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-FG-A4MU-01B-01-TS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-FG-A4MU-01B-01-TS1.xml",
+      "image_sha256": "dc6e9f570879195067b2690a57e8f4f34d7fa80d03ab04741e63d3ab6d38edec",
+      "xml_sha256": "063b478739343b6811db65f0da8501d32457f002ca4cceadc853177f83bf8304",
+      "rgb_sha256": "2ce78e4732697de0cd25e72b9806aa20f6f722d5e6ddc1fc4263dcf0183df070"
+    },
+    {
+      "id": "TCGA-GL-6846-01A-01-BS1",
+      "case_id": "TCGA-GL-6846",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-GL-6846-01A-01-BS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-GL-6846-01A-01-BS1.xml",
+      "image_sha256": "e39c83138708921d035e5358a30314b8ae4ee26a24c3425db4b71a7181028f11",
+      "xml_sha256": "fe1dde87c185b23c0bb8b1517522ab7ed374aac79e02a9c6b0f00eb2762b2ce5",
+      "rgb_sha256": "1f42dd63ab909218de5dc925b9372d346212f6cf9cd0284fcea1de5e36762f68"
+    },
+    {
+      "id": "TCGA-HC-7209-01A-01-TS1",
+      "case_id": "TCGA-HC-7209",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-HC-7209-01A-01-TS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-HC-7209-01A-01-TS1.xml",
+      "image_sha256": "b4853ff681af7d0c01ac00784c13324338b9a0e73a8350d5f4fce1391b1db4c7",
+      "xml_sha256": "4525fd6d084e0e2ca20919966290771a414657bf4988c0cd45b302438b3600bc",
+      "rgb_sha256": "4f1fde28ef1df7f0fe14c905fe9ba9134aa71e6b8cdff3b501008a07a9758a23"
+    },
+    {
+      "id": "TCGA-HT-8564-01Z-00-DX1",
+      "case_id": "TCGA-HT-8564",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-HT-8564-01Z-00-DX1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-HT-8564-01Z-00-DX1.xml",
+      "image_sha256": "2a4a24f52889519a47ebe119a55e4b2bbf9cf3d072f6cb0c2d7639e0fca01fb5",
+      "xml_sha256": "4412a6dfc1955811d985aaaaadcba4d91d8653546c3665fe8e77de44575a9ba8",
+      "rgb_sha256": "133f90f73e8c47e0a4c8326f4beebcea0b555b4c0a396a6ef39763940fc77a82"
+    },
+    {
+      "id": "TCGA-IZ-8196-01A-01-BS1",
+      "case_id": "TCGA-IZ-8196",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-IZ-8196-01A-01-BS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-IZ-8196-01A-01-BS1.xml",
+      "image_sha256": "25192feade6c6e1bb51a871f3944321ac45bc4a483fdc7c3c5d8c7f698e32dbc",
+      "xml_sha256": "96bae5683f3f3ef34263fbbb3f2c6ef84d8a47f6157b837798f935e846cf95d9",
+      "rgb_sha256": "a604b5597d38b1b70d1d8d10496928c515162a534d794f1dc8c5f54b7c522958"
+    },
+    {
+      "id": "TCGA-ZF-A9R5-01A-01-TS1",
+      "case_id": "TCGA-ZF-A9R5",
+      "image": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-ZF-A9R5-01A-01-TS1.tif",
+      "xml": "/workspace/pathology-edge-loss/work/external-data-research/MoNuSegTestData/TCGA-ZF-A9R5-01A-01-TS1.xml",
+      "image_sha256": "966b04a86252191f903044dc47452cd6f1b10ee8f91fee90edeb07d62e0168da",
+      "xml_sha256": "075e7d3f9c2cc837c5a6efa60a48813d64b43643c779f8b30d3d7392e875b4dc",
+      "rgb_sha256": "cdc89b6a994c195a46e0a1f8b966279d4c8994b29258bded0a88bf2b1da76823"
+    }
+  ],
+  "archive_sha256": "13e522387ae8b1bcc0530e13ff9c7b4d91ec74959ef6f6e57747368d7ee6f88a",
+  "source_url": "https://monuseg.grand-challenge.org/Data/",
+  "license": "CC BY-NC-SA 4.0; Kumar et al. MoNuSeg; TCGA source images",
+  "models": {
+    "small_vit": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898",
+    "small_vit_refined": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f"
+  },
+  "seed": 20261116,
+  "threshold": 0.35,
+  "model_selection": "Prespecified uploaded user pair, selected only on TNBC validation; no new external tuning",
+  "image_count": 14,
+  "case_count": 14,
+  "inference": "native1000x1000RGB,128px non-overlap,white pad,existing tissue gate,no stain normalization or resizing",
+  "rasterization": "np.rint(floatXY),OpenCV fillPoly per nucleus,canvas clips outside vertices,binary union; not official MATLAB/AJI parity",
+  "metrics": "image-macro binary foreground Dice;128px internal seams with8px half-width;all/boundary/interior",
+  "tnbc_manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868",
+  "exact_decoded_rgb_duplicates": 0,
+  "patient_independence": "Different public datasets; TNBC anonymized slide folders lack patient linkage, so patient-level non-overlap is not provable",
+  "annotation_scope": "14 cropped1000x1000ROIs, not entireWSI",
+  "clinical_validation": false,
+  "source_sha256": {
+    "__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
+    "cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+    "experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "external_validation.py": "69e27d0a17bb56ee696c3620921ebc1e7f1265f03da2756894605bd1dcf575cf",
+    "ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "learner_refinement.py": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+    "learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "metrics.py": "95584cd131ab54f0bb24485f56bc6a85b68b775bb318fbf5dfa0b9e24c6b8a78",
+    "model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "model_comparison.py": "2686a9ffabcbc587c2b4d0dc1b97dfeb913db1c2328c0c0b5edb2e08e8f6981d",
+    "patches.py": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5",
+    "refinement.py": "ef3f0f739f72214be97af3002e2089331dfc93fe561f05edf6799be2b74a7d22",
+    "review_cases.py": "2830c555dcfebd097ab2ef19eb2cbc6cc594a21c3faa735455dc8bd9e67c007e",
+    "vit.py": "41a00cb0278921c9e2271e5aa1714ebdc3e59bb435e569513bc67805dee41932",
+    "wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e"
+  },
+  "runner_sha256": "064d86bc010972832302432890f6a66fd93f558db05f08bc42249f7c858d362d"
+}

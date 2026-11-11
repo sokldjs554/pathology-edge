@@ -1,0 +1,167 @@
+{
+  "all_checks_passed": true,
+  "audit_command": [
+    "/workspace/work/venv/bin/python",
+    "/workspace/pathology-edge-loss/scripts/run_refinement_repeats.py",
+    "--summarize",
+    "/workspace/pathology-edge-loss/work/refinement-repeats-20261111",
+    "--data-override",
+    "/workspace/pathology-edge/data"
+  ],
+  "audit_exit_code": 0,
+  "saved_summary_matches_trusted_reaudit": true,
+  "manual_probability_region_checks": 180,
+  "manual_per_image_region_summaries_checked": 30,
+  "unique_validation_images": 10,
+  "validation_groups": 2,
+  "seeds": [
+    20261116,
+    20261117,
+    20261118
+  ],
+  "per_seed": [
+    {
+      "seed": 20261116,
+      "baseline": {
+        "all": 0.5705649614837927,
+        "boundary": 0.5588020280045188,
+        "interior": 0.5604740156946725
+      },
+      "refined": {
+        "all": 0.5838771018479527,
+        "boundary": 0.5501747818844873,
+        "interior": 0.5767416191331283
+      },
+      "paired_delta": {
+        "all": 0.013312140364160063,
+        "boundary": -0.008627246120031518,
+        "interior": 0.01626760343845579
+      }
+    },
+    {
+      "seed": 20261117,
+      "baseline": {
+        "all": 0.5417293355216903,
+        "boundary": 0.5286851209915511,
+        "interior": 0.5296974770765781
+      },
+      "refined": {
+        "all": 0.568274644336084,
+        "boundary": 0.5516145903084768,
+        "interior": 0.558304344618149
+      },
+      "paired_delta": {
+        "all": 0.026545308814393653,
+        "boundary": 0.022929469316925744,
+        "interior": 0.028606867541570935
+      }
+    },
+    {
+      "seed": 20261118,
+      "baseline": {
+        "all": 0.5556868624141272,
+        "boundary": 0.5292926540686184,
+        "interior": 0.5495423773673006
+      },
+      "refined": {
+        "all": 0.577946525846283,
+        "boundary": 0.5639443750385221,
+        "interior": 0.5663426201451732
+      },
+      "paired_delta": {
+        "all": 0.022259663432155796,
+        "boundary": 0.034651720969903765,
+        "interior": 0.01680024277787262
+      }
+    }
+  ],
+  "manual_aggregates": {
+    "all": {
+      "baseline": {
+        "mean": 0.5559937198065367,
+        "sample_sd": 0.01442026186485615,
+        "n": 3
+      },
+      "refined": {
+        "mean": 0.5766994240101065,
+        "sample_sd": 0.007875634409034184,
+        "n": 3
+      },
+      "paired_delta": {
+        "mean": 0.020705704203569836,
+        "sample_sd": 0.006752057373211888,
+        "n": 3,
+        "values": [
+          0.013312140364160063,
+          0.026545308814393653,
+          0.022259663432155796
+        ],
+        "wins": 3,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    "boundary": {
+      "baseline": {
+        "mean": 0.5389266010215628,
+        "sample_sd": 0.017215304889139974,
+        "n": 3
+      },
+      "refined": {
+        "mean": 0.5552445824104955,
+        "sample_sd": 0.007568557055505934,
+        "n": 3
+      },
+      "paired_delta": {
+        "mean": 0.016317981388932663,
+        "sample_sd": 0.022384170245050943,
+        "n": 3,
+        "values": [
+          -0.008627246120031518,
+          0.022929469316925744,
+          0.034651720969903765
+        ],
+        "wins": 2,
+        "ties": 0,
+        "losses": 1
+      }
+    },
+    "interior": {
+      "baseline": {
+        "mean": 0.5465712900461838,
+        "sample_sd": 0.015601902199092254,
+        "n": 3
+      },
+      "refined": {
+        "mean": 0.5671295279654834,
+        "sample_sd": 0.009243792015370357,
+        "n": 3
+      },
+      "paired_delta": {
+        "mean": 0.020558237919299782,
+        "sample_sd": 0.006975403591466885,
+        "n": 3,
+        "values": [
+          0.01626760343845579,
+          0.028606867541570935,
+          0.01680024277787262
+        ],
+        "wins": 3,
+        "ties": 0,
+        "losses": 0
+      }
+    }
+  },
+  "source_commit": "7826601fc8355493cad6cf1a34c97689f15c566f",
+  "source_dirty": true,
+  "frozen_source_files": 22,
+  "source_file_copies_hash_checked": 88,
+  "untracked_external_helper_frozen_and_hashed": true,
+  "source_provenance_note": "The Git commit alone is insufficient: this was commit 7826601fc8355493cad6cf1a34c97689f15c566f plus an untracked external_validation.py, explicitly source_dirty=true. All 22 exact Python source files and both orchestrators are frozen and hashed. The source header correctly says exact current checkout source and does not claim a clean commit.",
+  "original_before_after_equal": true,
+  "complete_run_files_unchanged_by_review": true,
+  "run_file_count": 228,
+  "new_training_or_inference_run": false,
+  "test_evaluation_run": false,
+  "interpretation": "Three paired seeds on the same ten reused TNBC validation images from two groups; 30 image-seed observations are repeated measurements, not independent images. Prior user and development seed16 runs excluded from aggregate."
+}

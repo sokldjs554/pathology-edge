@@ -1,5 +1,6 @@
 # 요청한 네 가지 보완의 완료 범위
 
+최신 요청에 따른 [Cowork 전달 자료](COWORK_HANDOFF.md), [보정 head 추가3개 seed](REFINEMENT_REPEATS_RESULTS.md), [외부 MoNuSeg 평가](EXTERNAL_MONUSEG_VALIDATION.md)를 추가했습니다. 아래는 기존 실험의 당시 감사 범위입니다.
 **요청한1–4번은 아래 범위에서 완료했습니다. 추가 필수 사용자 과제는 없습니다.** 기존 C++ 측정·ViT 단일 비교·손실 비교3개 seed 작업의 완료 상태를 유지합니다. 사용자 보정 비교의 [원본 수신·60영역 독립 감사](USER_REFINEMENT_AUDIT.md)까지 마쳤습니다. 면접 문장 작성은 보류하며, 외부·임상 검증까지 완료했다는 뜻은 아닙니다.
 
 | 항목 | 완료한 작업 | 확인 범위 |
