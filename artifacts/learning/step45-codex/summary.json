@@ -1,0 +1,32 @@
+{
+  "run": "/workspace/pathology-edge-loss/work/my-ubuntu-repro.8f88enfx",
+  "source_commit": "9c55480fc721d23160016e1c472b9bdcc8f8eb21",
+  "original_commit": "9c55480fc721d23160016e1c472b9bdcc8f8eb21",
+  "scope": "Pinned source reproduction using existing Ubuntu/Linux packages; not a Docker build",
+  "all_checks_passed": true,
+  "original_files_preserved": true,
+  "docker_build_run": false,
+  "new_dataset_experiment_run": false,
+  "unit_tests_may_run_synthetic_model_operations": true,
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/work/venv/bin/python",
+    "parent_python_optimize": 1
+  },
+  "checks": {
+    "tests": {
+      "tests": 191,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0
+    },
+    "dice_checks": 42,
+    "mean_checks": 6,
+    "snapshot_imports": true,
+    "locked_packages_match": true,
+    "pip_check": true,
+    "cpp_rebuilt": true,
+    "static_demo_check": true
+  }
+}

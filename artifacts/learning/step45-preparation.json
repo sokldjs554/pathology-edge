@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "actor": "Codex",
+  "user_task": "STEP_45 / U57 pending",
+  "source_commit": "9c55480fc721d23160016e1c472b9bdcc8f8eb21",
+  "runner_commit": "5dd3ed93c472f96ea14be362118b040cfcb4d36b",
+  "runner_sha256": "ce75b14cb851bdd20af7c050be70ff5fd724d9ad3adef625bdc09c2cd05dc321",
+  "design": {
+    "method": "Fresh shallow checkout inside new work directory; existing installed dependencies; in-place snapshot C++ build; child-only PYTHONPATH",
+    "original_source": "Backed up and hashed before/after; not overlaid into pinned checkout",
+    "package_install_or_editable_rebinding": false,
+    "docker_build": false,
+    "scope": "No new TNBC/WSI/IHC dataset experiment. Unit tests may exercise synthetic model operations. Static validator is not browser QA."
+  },
+  "checks": {
+    "helper_contracts": "10 passed in 0.12s",
+    "full_host_suite": "201 passed in 11.57s",
+    "pinned_snapshot": {
+      "tests": {
+        "tests": 191,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "dice_checks": 42,
+      "mean_checks": 6,
+      "snapshot_imports": true,
+      "locked_packages_match": true,
+      "pip_check": true,
+      "cpp_rebuilt": true,
+      "static_demo_check": true
+    },
+    "protected_scientific_files_unchanged": 2392,
+    "original_checkout_preserved": true
+  },
+  "verification_host": "Debian-based Codex Linux, Python3.12.14; user Ubuntu execution remains pending",
+  "failures_and_fixes": [
+    {
+      "failure": "First integration used Python default clang++, which was not installed",
+      "fix": "Child CC=gcc and CXX=g++ matching existing repo configuration; version log retained",
+      "result": "Subsequent complete GCC run passed"
+    },
+    {
+      "failure": "Independent review reproduced incorrect import-path acceptance with PYTHONOPTIMIZE=1",
+      "fix": "Remove inherited PYTHONOPTIMIZE, use explicit import-path exceptions, add subprocess regression",
+      "result": "Regression observed failing then passing; final entire reproduction passed with parent optimization=1; reviewer confirmed resolution"
+    }
+  ],
+  "review": {
+    "agent": "ubuntu_repro_review",
+    "final_status": "P2 resolved; no new important findings; read-only review"
+  },
+  "public_download_verified": true,
+  "user_environment_directly_accessed": false,
+  "user_reproduction_completed": false,
+  "step43_interview": "Deferred",
+  "evidence_directory": "step45-codex",
+  "public_download_verification": {
+    "method": "Downloaded pinned raw GitHub URL; sha256sum and byte comparison with tested runner passed",
+    "bytes": 8968
+  },
+  "documentation_checks": {
+    "relative_links_present": 196,
+    "shell_syntax": "passed"
+  }
+}

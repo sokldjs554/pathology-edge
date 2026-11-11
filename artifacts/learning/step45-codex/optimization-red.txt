@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_optimized_parent_cannot_disable_child_validation _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-56/test_optimized_parent_cannot_d0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc33c47b110>
+
+    def test_optimized_parent_cannot_disable_child_validation(tmp_path, monkeypatch):
+        import subprocess
+        import sys
+        module = runner()
+        monkeypatch.setenv('PYTHONOPTIMIZE', '1')
+>       assert hasattr(module, 'verification_environment'), 'Child validation environment is not isolated'
+E       AssertionError: Child validation environment is not isolated
+E       assert False
+E        +  where False = hasattr(<module 'reproduce_snapshot' from '/workspace/pathology-edge-loss/scripts/reproduce_snapshot.py'>, 'verification_environment')
+
+tests/test_reproduce_snapshot.py:99: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_reproduce_snapshot.py::test_optimized_parent_cannot_disable_child_validation
+1 failed in 0.03s
