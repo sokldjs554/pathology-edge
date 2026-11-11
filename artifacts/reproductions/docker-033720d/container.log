@@ -1,0 +1,17 @@
+Source hashes, locked versions and Python/C++ imports match.
+No broken requirements found.
+........................................................................ [ 21%]
+........................................................................ [ 43%]
+........................................................................ [ 65%]
+........................................................................ [ 87%]
+...........................................                              [100%]
+331 passed in 21.58s
+42/42 Dice values and 6/6 image means match.
+7 test images / 2 case groups; no inference run.
+method           all       boundary  interior
+no_overlap       0.558001  0.491793  0.572866
+overlap          0.560790  0.527261  0.569630
+Report: /evidence/dice-audit.json
+PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.
+{"tests": {"tests": 331, "skipped": 0, "failures": 0, "errors": 0}, "dice_checks": 42, "mean_checks": 6, "static_demo_check": true, "http_index_sha256": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656", "dataset_experiment_run": false, "browser_test_run": false, "unit_tests_may_run_synthetic_model_operations": true}
+All container checks passed; tracked source files stayed unchanged.

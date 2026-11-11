@@ -1,0 +1,7 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "executable": "/opt/venv/bin/python",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "package": "/app/src/pathology_edge/__init__.py",
+  "cpp": "/app/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so"
+}

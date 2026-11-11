@@ -33,11 +33,40 @@
   "user_model_modification_completed": false,
   "user_additional_training_claimed": false,
   "docker_reproduction": {
-    "status": "pending"
+    "status": "success",
+    "run_id": 43019941310,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43019941310",
+    "source_commit": "033720df774663a38b1aeb33d7dcb0af5d0cc95e",
+    "image_id": "sha256:2e46ea164f29ef10c86244b71d299b74531cd3ee4182cdd960976fa970d45ed7",
+    "artifact_sha256": "bf3cb13db19cddeecb54058da3fe82b7cd4413411c5e02f18ba104913eee1b72",
+    "artifact_files": 20,
+    "source_files_checked": 2880,
+    "locked_packages_match": 32,
+    "checks": {
+      "tests": {
+        "tests": 331,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "dice_checks": 42,
+      "mean_checks": 6,
+      "static_demo_check": true,
+      "http_index_sha256": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656",
+      "dataset_experiment_run": false,
+      "browser_test_run": false,
+      "unit_tests_may_run_synthetic_model_operations": true
+    },
+    "user_execution_confirmed": false
   },
   "review": {
     "independent_review": true,
     "late_failure_report_bug": "Regression failed before fix, then passed; invalidated completed report and HTML on failure."
   },
-  "limitation": "Reference experiments remain distinct from user results; no new test, external or clinical evaluation. Unit tests may execute synthetic model operations."
+  "limitation": "Reference experiments remain distinct from user results; no new test, external or clinical evaluation. Unit tests may execute synthetic model operations.",
+  "github_cpu_ci": {
+    "run_id": 43019877634,
+    "status": "success",
+    "source_commit": "033720df774663a38b1aeb33d7dcb0af5d0cc95e"
+  }
 }
