@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-12",
+  "timezone": "Asia/Seoul",
+  "tests": {
+    "tests": 359,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pytest_seconds": 20.94,
+  "exercise_tests_collected": 13,
+  "exercise_tests_passed_by_user": false,
+  "user_module_implemented": false,
+  "refinement_dataset_training_run": false,
+  "user_archive_received": true,
+  "user_stored_prediction_audit_regions": 60,
+  "protected_existing_scientific_and_demo_files": 2731,
+  "protected_files_unchanged": true,
+  "unit_tests_may_run_synthetic_model_operations": true,
+  "preflight_blocks_pending_learner": true,
+  "upcoming_seed": 20261116,
+  "comparison_parameter_counts": {
+    "small_vit": 33632,
+    "small_vit_refined": 33785
+  },
+  "review_status": "Independent review completed; no important/blocking findings",
+  "limitations": [
+    "Provided framework tests use explicitly synthetic Identity/scalar probe heads, not the user answer.",
+    "Opt-in 13 exercise cases remain pending until user code is submitted.",
+    "Original checkpoint probabilities were audited without inference; no new test/external/clinical results."
+  ],
+  "review_checks": {
+    "focused_tests_passed": 55,
+    "exercise_cases_collected": 13,
+    "source_files_match_pinned": 19,
+    "user_metric_regions_reaudited": 60,
+    "both_roi_panels_match_pixels": true,
+    "pending_stub_blocks_preflight": true
+  }
+}

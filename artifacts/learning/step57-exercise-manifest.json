@@ -1,0 +1,10 @@
+{
+  "archive_sha256": "3e2e01beb2e465659f99280351779ddf9c287ba7fc3a9c927017d40d017f094b",
+  "files": {
+    "learner_refinement.py": "60f3e7a2bace595fd1b609e9cee6282de6fce8e385233aea3cd0acba027c5af8",
+    "test_local_refinement.py": "d81d24d63b7f94937dee3b70b46bdffd883d2f80637362a4c0f3b5afd135a3ee",
+    "README.md": "d7e2f6271657f96409fca3db41e4be804a8698ba9d758de869bd69121d621370"
+  },
+  "user_bodies_implemented": false,
+  "test_cases": 13
+}

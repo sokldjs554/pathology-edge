@@ -17,6 +17,12 @@ import uuid
 
 ARCHITECTURES = ('tiny_unet', 'small_vit')
 SEED = 20261113
+COMPARISONS = {
+    'original': dict(architectures=ARCHITECTURES, parameters=(29761, 33632),
+                     delta_key='delta_vit_minus_cnn', seed=None),
+    'refinement': dict(architectures=('small_vit', 'small_vit_refined'), parameters=(33632, 33785),
+                       delta_key='delta_refined_minus_baseline', seed=20261116),
+}
 
 
 def require(condition, message):
@@ -124,9 +130,12 @@ def audit_predictions(folder, report, data, manifest):
             'Invalid aggregate timing')
 
 
-def validate_design(seed, architecture_order):
+def validate_design(seed, architecture_order, comparison='original'):
+    require(comparison in COMPARISONS, 'Unknown comparison design')
+    design = COMPARISONS[comparison]
     require(type(seed) is int and seed > 0, 'Positive integer seed required')
-    require(len(architecture_order) == 2 and set(architecture_order) == set(ARCHITECTURES),
+    require(design['seed'] is None or seed == design['seed'], 'Refinement seed is frozen at 20261116')
+    require(len(architecture_order) == 2 and set(architecture_order) == set(design['architectures']),
             'Expected each architecture exactly once')
 
 
@@ -146,7 +155,9 @@ def _audit_results(output, *, data_override=None):
     out = Path(output).resolve()
     plan = read(out/'protocol.json')
     seed = plan['seed']
-    validate_design(seed, plan['architectures'])
+    comparison = plan.get('comparison', 'original')
+    validate_design(seed, plan['architectures'], comparison)
+    design = COMPARISONS[comparison]
     verify_snapshot(out, plan['snapshot_hashes'])
     data = Path(data_override if data_override is not None else plan['data']).resolve()
     require(sha(data/'manifest.json') == plan['manifest_sha256'], 'Input manifest changed')
@@ -158,7 +169,7 @@ def _audit_results(output, *, data_override=None):
     require(counts == {'train': 33, 'validation': 10, 'test': 7}, 'Expected frozen TNBC 33/10/7 split')
     reports, rows = [], []
     source = {Path(k).name: v for k, v in plan['snapshot_hashes'].items() if k.startswith('source/pathology_edge/')}
-    for architecture, parameters in zip(ARCHITECTURES, (29761, 33632)):
+    for architecture, parameters in zip(design['architectures'], design['parameters']):
         folder = out/architecture
         report = read(folder/'training.json')
         config = report['config']
@@ -191,17 +202,33 @@ def _audit_results(output, *, data_override=None):
     require(reports[0]['config'] == reports[1]['config'], 'Controls differ between models')
     require(reports[0]['environment'] == reports[1]['environment'], 'Environments differ')
     require(reports[0]['augmentation_trace_sha256'] == reports[1]['augmentation_trace_sha256'], 'Crop/augmentation sequences differ')
+    initial = None
+    if comparison == 'refinement':
+        preflight = read(out/'refinement-preflight.json')
+        initial = preflight['initial_backbone_sha256']
+        require(isinstance(initial, str) and len(initial) == 64 and
+                all(c in '0123456789abcdef' for c in initial), 'Invalid initial backbone hash')
+        require(preflight['seed'] == seed and preflight['all_checks_passed'] is True and
+                preflight['parameter_counts'] == dict(zip(design['architectures'], design['parameters'])),
+                'Refinement preflight controls differ')
+        require(reports[0]['initial_backbone_sha256'] == reports[1]['initial_backbone_sha256'] == initial,
+                'Initial backbone weights differ from matched preflight')
     a, b = rows
-    return dict(run=str(out), all_checks_passed=True, seed=seed, architecture_order=plan['architectures'],
+    result = dict(run=str(out), all_checks_passed=True, seed=seed, architecture_order=plan['architectures'],
                 rows=rows, image_counts=counts,
                 validation_groups=len({r['group_id'] for r in manifest['records'] if r['split'] == 'validation'}),
-                delta_vit_minus_cnn={k: b['validation_dice'][k]-a['validation_dice'][k] for k in ('all', 'boundary', 'interior')},
                 environment=reports[0]['environment'], test_evaluation_run=False,
                 validation_metric_regions_checked=60,
                 limitation='One fixed seed on the same previously used validation set; epoch/threshold selected there. '
                            'From-scratch small segmentation adaptation, not pretrained ViT or an official paper reproduction. '
                            'Parameter counts differ; training/pipeline times and absolute whole-worker RSS are descriptive. '
                            'No independent test, external data or clinical validation; no claim that ViTs in general are better/worse.')
+    result[design['delta_key']] = {k: b['validation_dice'][k]-a['validation_dice'][k]
+                                 for k in ('all', 'boundary', 'interior')}
+    if comparison == 'refinement':
+        result['comparison'] = comparison
+        result['initial_backbone_sha256'] = initial
+    return result
 
 
 def summarize(output, *, data_override=None):
@@ -219,11 +246,14 @@ def summarize(output, *, data_override=None):
     return result
 
 
-def run(repo, data, output, *, seed=SEED, architecture_order=ARCHITECTURES, source_snapshot=None):
+def run(repo, data, output, *, seed=SEED, architecture_order=None, source_snapshot=None, comparison='original'):
     repo, data, out = Path(repo).resolve(), Path(data).resolve(), Path(output).resolve()
     if out.exists():
         raise FileExistsError(out)
-    validate_design(seed, architecture_order)
+    require(comparison in COMPARISONS, 'Unknown comparison design')
+    if architecture_order is None:
+        architecture_order = COMPARISONS[comparison]['architectures']
+    validate_design(seed, architecture_order, comparison)
     require(out.is_relative_to(repo/'work'), 'Output must be a fresh directory under repository work/')
     require(not data.is_relative_to(out) and not out.is_relative_to(data), 'Output/data overlap')
     before = original_state(repo)
@@ -241,9 +271,19 @@ def run(repo, data, output, *, seed=SEED, architecture_order=ARCHITECTURES, sour
         plan = dict(seed=seed, architectures=list(architecture_order), data=str(data),
                     source_commit=before['commit'], source_dirty=bool(before['status']),
                     manifest_sha256=sha(data/'manifest.json'), snapshot_hashes=snapshot_hashes(out))
+        if comparison != 'original':
+            plan['comparison'] = comparison
         dump(out/'protocol.json', plan)
         env = dict(os.environ, PYTHONPATH=str(out/'source'), PYTHONDONTWRITEBYTECODE='1')
         env.pop('PYTHONOPTIMIZE', None)
+        if comparison == 'refinement':
+            dump(out/'status.json', dict(status='preflight', comparison=comparison))
+            preflight = ('import json, pathlib, sys; '
+                         'from pathology_edge.refinement import refinement_preflight; '
+                         'result = refinement_preflight(int(sys.argv[1])); '
+                         'pathlib.Path(sys.argv[2]).write_text(json.dumps(result, indent=2) + "\\n")')
+            execute([sys.executable, '-u', '-c', preflight, str(seed), str(out/'refinement-preflight.json')],
+                    cwd=out, env=env, log=out/'refinement-preflight.log')
         for architecture in architecture_order:
             verify_snapshot(out, plan['snapshot_hashes'])
             dump(out/'status.json', dict(status='running', architecture=architecture))

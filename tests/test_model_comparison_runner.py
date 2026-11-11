@@ -155,3 +155,46 @@ def test_independent_pixel_audit_detects_tampering(runner, tmp_path, change):
         report['validation']['macro_dice']['all'] = .9
     with pytest.raises(ValueError):
         runner.audit_predictions(folder, report, tmp_path, manifest)
+
+
+@pytest.mark.parametrize('seed,order', [
+    (20261113, ('small_vit', 'small_vit_refined')),
+    (20261116, ('tiny_unet', 'small_vit')),
+    (20261116, ('small_vit_refined', 'small_vit_refined')),
+])
+def test_refinement_design_rejects_other_seed_or_pair_before_writes(runner, tmp_path, seed, order):
+    out = tmp_path/'work'/'new'
+    with pytest.raises(ValueError, match='seed|architecture'):
+        runner.run(tmp_path, tmp_path/'data', out, comparison='refinement',
+                   seed=seed, architecture_order=order)
+    assert not out.exists()
+
+
+def test_unimplemented_head_prevents_baseline_training_and_preserves_dirty_source(runner, tmp_path, monkeypatch):
+    import shutil
+    source = tmp_path/'src/pathology_edge'
+    shutil.copytree(SCRIPT.parents[1]/'src/pathology_edge', source,
+                    ignore=shutil.ignore_patterns('__pycache__', '*.so'))
+    # A deliberately incomplete learner; never supplies the exercise answer.
+    (source/'learner_refinement.py').write_text(
+        'from torch import nn\n'
+        'class LocalResidualHead(nn.Module):\n'
+        '    def __init__(self):\n'
+        '        raise NotImplementedError("learner head pending")\n')
+    data = tmp_path/'data'
+    data.mkdir()
+    (data/'manifest.json').write_text('{}')
+    state = dict(commit='abc', status=' M src/pathology_edge/learner_refinement.py\n',
+                 hashes={'src/pathology_edge/learner_refinement.py': runner.sha(source/'learner_refinement.py')})
+    monkeypatch.setattr(runner, 'original_state', lambda repo: state)
+    out = tmp_path/'work'/'new'
+    with pytest.raises(subprocess.CalledProcessError):
+        runner.run(tmp_path, data, out, comparison='refinement', seed=20261116)
+    assert not (out/'small_vit').exists() and not (out/'small_vit_refined').exists()
+    assert 'NotImplementedError: learner head pending' in (out/'refinement-preflight.log').read_text()
+    assert runner.read(out/'status.json')['status'] == 'failed'
+    assert runner.read(out/'original-before.json') == runner.read(out/'original-after.json') == state
+    with pytest.raises(ValueError, match='completed'):
+        runner.summarize(out)
+    with pytest.raises(FileExistsError):
+        runner.run(tmp_path, data, out, comparison='refinement', seed=20261116)

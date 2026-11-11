@@ -1,0 +1,324 @@
+{
+  "received_date": "2026-11-12",
+  "timezone": "Asia/Seoul",
+  "archive_sha256": "136a3c0ebae3f32ee7970160700922179485b27fa40b6f07df791d4d965d3895",
+  "archive_bytes": 20070666,
+  "archive_files": 112,
+  "expected_model_hashes_match": true,
+  "outer_launcher_preservation_records_match": true,
+  "pinned_source_matches": [
+    {
+      "path": "learner_split.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "learner_losses.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "vit.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "data.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "__init__.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "merge.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "ihc_baseline.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "learner_metrics.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "model.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "learner_coordinates.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "metrics.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "model_comparison.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "cli.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "learner_wsi.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "wsi_roi.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "patches.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "experiment.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "review_cases.py",
+      "matches_pinned_source": true
+    },
+    {
+      "path": "wsi_export.py",
+      "matches_pinned_source": true
+    }
+  ],
+  "cpp_cases": 8,
+  "cpp_raw_timings": 72,
+  "cpp_pasted_display_checks": [
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "field": "median_ms",
+      "raw": 0.5086880000817473,
+      "displayed": 0.509,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "field": "speedup_vs_python",
+      "raw": 1.0,
+      "displayed": 1.0,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "field": "peak_process_rss_mib",
+      "raw": 47.26953125,
+      "displayed": 47.3,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "field": "median_ms",
+      "raw": 0.26476299990463303,
+      "displayed": 0.265,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "field": "speedup_vs_python",
+      "raw": 1.921295650317361,
+      "displayed": 1.92,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "field": "peak_process_rss_mib",
+      "raw": 47.29296875,
+      "displayed": 47.3,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "field": "median_ms",
+      "raw": 0.8439339999313233,
+      "displayed": 0.844,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "field": "speedup_vs_python",
+      "raw": 0.6027580357268966,
+      "displayed": 0.6,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "field": "peak_process_rss_mib",
+      "raw": 47.515625,
+      "displayed": 47.5,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "field": "median_ms",
+      "raw": 1.070536000042921,
+      "displayed": 1.071,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "field": "speedup_vs_python",
+      "raw": 0.475171316108335,
+      "displayed": 0.48,
+      "matches": true
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "field": "peak_process_rss_mib",
+      "raw": 47.515625,
+      "displayed": 47.5,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "field": "median_ms",
+      "raw": 22.418209000079514,
+      "displayed": 22.418,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "field": "speedup_vs_python",
+      "raw": 1.0,
+      "displayed": 1.0,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "field": "peak_process_rss_mib",
+      "raw": 193.8515625,
+      "displayed": 193.9,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "field": "median_ms",
+      "raw": 12.425166999946669,
+      "displayed": 12.425,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "field": "speedup_vs_python",
+      "raw": 1.8042581641096445,
+      "displayed": 1.8,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "field": "peak_process_rss_mib",
+      "raw": 194.0859375,
+      "displayed": 194.1,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "field": "median_ms",
+      "raw": 13.59413700015466,
+      "displayed": 13.594,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "field": "speedup_vs_python",
+      "raw": 1.6491086561673214,
+      "displayed": 1.65,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "field": "peak_process_rss_mib",
+      "raw": 193.8671875,
+      "displayed": 193.9,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "field": "median_ms",
+      "raw": 11.45322499996837,
+      "displayed": 11.453,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "field": "speedup_vs_python",
+      "raw": 1.9573708715354343,
+      "displayed": 1.96,
+      "matches": true
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "field": "peak_process_rss_mib",
+      "raw": 193.83984375,
+      "displayed": 193.8,
+      "matches": true
+    }
+  ],
+  "vit_regions_reaudited": 60,
+  "vit_summary_matches_prior_submission": true,
+  "per_image_display_checks": 30,
+  "wins_ties_losses": [
+    7,
+    0,
+    3
+  ],
+  "training_run": false,
+  "model_inference_run": false,
+  "cpp_benchmark_rerun": false,
+  "test_evaluation_run": false,
+  "user_evidence_received": true,
+  "user_visual_review_confirmed": false,
+  "user_model_modification_completed": false,
+  "limitation": "Uploaded records checked for internal consistency and against known hashes/data; archived code and native binary were not executed. No independent test or clinical evidence.",
+  "archive_file_count_scope": "112 experiment payload files plus manifest.json; 113 ZIP entries"
+}

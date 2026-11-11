@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "run": "/workspaces/pathology-edge/work/my-cpp-review.nd9wyi24",
+  "repository": "/workspaces/pathology-edge",
+  "started_utc": "2026-11-11T08:23:09.473822+00:00",
+  "all_checks_passed": true,
+  "original_files_preserved": true,
+  "input": {
+    "seed": 42,
+    "dtype": "uint8",
+    "channels": "RGB",
+    "sizes": [
+      512,
+      2048
+    ],
+    "patch_size": 128,
+    "overlap": 64,
+    "meaning": "Synthetic engineering workload; not pathology accuracy evidence"
+  },
+  "rounds": 1,
+  "repeats_per_worker": 9,
+  "warmup": "one untimed parity call per backend",
+  "timing_scope": "allocation + crop copy + white padding through patches.extract (including its Python wrapper); no inference, input generation, grid creation, parity checking, hashing, or disk I/O",
+  "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+  "binary_build_provenance": "Existing installed extension; not rebuilt. Hashes do not prove which source/compiler built it.",
+  "aggregation": "median of all 9 or 27 timed calls; raw and per-round medians retained",
+  "order_note": "round 1 forward; round 2 reversed; round 3 interleaved; not a full Latin square",
+  "source_state": {
+    "commit": "0b1cdea47fb87baefa66c63ee1bf6a31cbba1b36",
+    "status": "M src/pathology_edge/learner_wsi.py"
+  },
+  "rows": [
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "patch_count": 64,
+      "median_ms": 0.5086880000817473,
+      "measurements_ms": [
+        4.194269999970857,
+        0.5608960000245133,
+        0.47808199997234624,
+        0.5086880000817473,
+        0.4722399999081972,
+        0.5150199999661709,
+        0.47615799985578633,
+        0.5303590000949043,
+        0.4792639999777748
+      ],
+      "peak_process_rss_mib": 47.26953125,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        64,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 1
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "patch_count": 64,
+      "median_ms": 0.26476299990463303,
+      "measurements_ms": [
+        6.659436000063579,
+        0.32323300001735333,
+        0.26093699989360175,
+        0.7963250000102562,
+        0.26476299990463303,
+        0.24025800007621,
+        0.23518800003330398,
+        0.23233299998537404,
+        0.2746319999005209
+      ],
+      "peak_process_rss_mib": 47.29296875,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        64,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 2
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "patch_count": 64,
+      "median_ms": 0.8439339999313233,
+      "measurements_ms": [
+        1.9487029999254446,
+        2.127206000068327,
+        0.4331770001044788,
+        0.38376499992409663,
+        0.4216859999814915,
+        0.9188029998767888,
+        1.0082200001306774,
+        0.8439339999313233,
+        0.40620799995849666
+      ],
+      "peak_process_rss_mib": 47.515625,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        64,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 3
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "patch_count": 64,
+      "median_ms": 1.070536000042921,
+      "measurements_ms": [
+        2.683251000007658,
+        1.0188199998992786,
+        1.070536000042921,
+        0.498899999911373,
+        2.4080600001070707,
+        1.0494670000298356,
+        0.8585509999647911,
+        1.1113919999843347,
+        1.0852929999600747
+      ],
+      "peak_process_rss_mib": 47.515625,
+      "sha256": "74288cdf2e38f1d07cbdad52fc93a3f732a6b0a0f95321f911c8904f43044cb3",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        64,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 4
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "patch_count": 1024,
+      "median_ms": 22.418209000079514,
+      "measurements_ms": [
+        27.291085000115345,
+        22.418209000079514,
+        17.12329600013618,
+        25.68025100003979,
+        21.789670000089245,
+        32.59885099987514,
+        35.23398500010444,
+        17.63601299990114,
+        17.398640000010346
+      ],
+      "peak_process_rss_mib": 193.8515625,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        1024,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 5
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "patch_count": 1024,
+      "median_ms": 12.425166999946669,
+      "measurements_ms": [
+        12.189978999913365,
+        12.700039000037577,
+        12.298310000005586,
+        12.695721000000049,
+        12.690611999914836,
+        12.677928000130123,
+        12.425166999946669,
+        12.331953000057183,
+        12.327735000098983
+      ],
+      "peak_process_rss_mib": 194.0859375,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        1024,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 6
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "patch_count": 1024,
+      "median_ms": 13.59413700015466,
+      "measurements_ms": [
+        10.88914299998578,
+        11.509610000075554,
+        15.1956520001022,
+        15.544091999800003,
+        16.020150000031208,
+        15.111194999917643,
+        12.706782000122985,
+        11.76465499997903,
+        13.59413700015466
+      ],
+      "peak_process_rss_mib": 193.8671875,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        1024,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 7
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "patch_count": 1024,
+      "median_ms": 11.45322499996837,
+      "measurements_ms": [
+        10.580621000144674,
+        11.45322499996837,
+        11.29300599995986,
+        12.872381000079258,
+        13.753995000115538,
+        11.255455999844344,
+        12.819911999940814,
+        11.357545999999274,
+        11.595670000133396
+      ],
+      "peak_process_rss_mib": 193.83984375,
+      "sha256": "3484220e5e720711659606c5266afb1853af347486702571b07b3b670035123c",
+      "equal_to_python": true,
+      "dtype": "uint8",
+      "output_shape": [
+        1024,
+        128,
+        128,
+        3
+      ],
+      "memory_scope": "absolute worker process peak RSS, including input, imports, both parity outputs and comparison temporaries; not incremental extractor memory or inference memory",
+      "imports": {
+        "package": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/__init__.py",
+          "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+        },
+        "patches": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/patches.py",
+          "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+        },
+        "cpp": {
+          "path": "/workspaces/pathology-edge/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "36124539502aeaa70eb3c952b53a1ec1368312b1c3f3965b2239cb3c86465cb2"
+        }
+      },
+      "round": 1,
+      "order": 8
+    }
+  ],
+  "runner_sha256": "eeabefd52b20563f2cafcb8d8b3a9438bde09b5516a3c614d050fb3b08fd43af",
+  "environment": {
+    "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/opt/venv/bin/python",
+    "python_optimize": 0,
+    "versions": {
+      "numpy": "2.5.4",
+      "torch": "2.15.0+cpu",
+      "pathology-edge": "0.1.0"
+    },
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "visible_logical_cpus": 2,
+    "affinity_cpus": [
+      0,
+      1
+    ],
+    "affinity_cpu_count": 2,
+    "cgroup": {
+      "cpu.max": "max 100000",
+      "cpuset.cpus.effective": "0-1",
+      "process_membership": "0::/"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "comparison": [
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "median_ms": 0.5086880000817473,
+      "speedup_vs_python": 1.0,
+      "peak_process_rss_mib": 47.26953125,
+      "round_medians_ms": [
+        0.5086880000817473
+      ]
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "median_ms": 0.26476299990463303,
+      "speedup_vs_python": 1.921295650317361,
+      "peak_process_rss_mib": 47.29296875,
+      "round_medians_ms": [
+        0.26476299990463303
+      ]
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "median_ms": 0.8439339999313233,
+      "speedup_vs_python": 0.6027580357268966,
+      "peak_process_rss_mib": 47.515625,
+      "round_medians_ms": [
+        0.8439339999313233
+      ]
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "median_ms": 1.070536000042921,
+      "speedup_vs_python": 0.475171316108335,
+      "peak_process_rss_mib": 47.515625,
+      "round_medians_ms": [
+        1.070536000042921
+      ]
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "median_ms": 22.418209000079514,
+      "speedup_vs_python": 1.0,
+      "peak_process_rss_mib": 193.8515625,
+      "round_medians_ms": [
+        22.418209000079514
+      ]
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "median_ms": 12.425166999946669,
+      "speedup_vs_python": 1.8042581641096445,
+      "peak_process_rss_mib": 194.0859375,
+      "round_medians_ms": [
+        12.425166999946669
+      ]
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "median_ms": 13.59413700015466,
+      "speedup_vs_python": 1.6491086561673214,
+      "peak_process_rss_mib": 193.8671875,
+      "round_medians_ms": [
+        13.59413700015466
+      ]
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "median_ms": 11.45322499996837,
+      "speedup_vs_python": 1.9573708715354343,
+      "peak_process_rss_mib": 193.83984375,
+      "round_medians_ms": [
+        11.45322499996837
+      ]
+    }
+  ],
+  "finished_utc": "2026-11-11T08:23:38.088461+00:00"
+}

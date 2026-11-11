@@ -1,4 +1,4 @@
-"""Isolated, from-scratch CNN/ViT comparison; never evaluates test images."""
+"""Isolated, from-scratch model comparisons; never evaluate test images."""
 import argparse
 import hashlib
 import json
@@ -20,7 +20,18 @@ from .model import TinyUNet
 from .patches import boundary_mask
 from .vit import SmallViTSegmenter
 
-ARCHITECTURES = ('tiny_unet', 'small_vit')
+ARCHITECTURES = ('tiny_unet', 'small_vit', 'small_vit_refined')
+
+
+def build_model(architecture):
+    if architecture == 'tiny_unet':
+        return TinyUNet()
+    if architecture == 'small_vit':
+        return SmallViTSegmenter()
+    if architecture == 'small_vit_refined':
+        from .refinement import RefinedViTSegmenter
+        return RefinedViTSegmenter()
+    raise ValueError('Unknown architecture')
 
 
 def select_best(history, thresholds):
@@ -116,12 +127,16 @@ def train_one(data, output, architecture, *, seed=20261113, epochs=16, steps=20)
                   selection='maximum validation image-macro Dice over epochs and thresholds; first tie',
                   test_used_for_selection=False, pretrained=False, manifest_sha256=sha256(root/'manifest.json'))
     before = source_hashes()
+    model = build_model(architecture)  # Pending learner code fails before any output is created.
+    model_spec = dict(width=8) if architecture == 'tiny_unet' else model.config
+    initial_backbone_hash = None
+    if architecture in ('small_vit', 'small_vit_refined'):
+        from .refinement import backbone_sha256
+        initial_backbone_hash = backbone_sha256(model)
     out.mkdir(parents=True)
     dump(out/'protocol.json', config)
     dump(out/'source-hashes.json', before)
     dump(out/'manifest.json', json.loads((root/'manifest.json').read_text()))
-    model = TinyUNet() if architecture == 'tiny_unet' else SmallViTSegmenter()
-    model_spec = dict(width=8) if architecture == 'tiny_unet' else model.config
     optimizer = torch.optim.Adam(model.parameters(), lr=.001)
     trace = hashlib.sha256()
     best_score, history = -1., []
@@ -189,6 +204,8 @@ def train_one(data, output, architecture, *, seed=20261113, epochs=16, steps=20)
                   augmentation_trace_sha256=trace.hexdigest(), validation=validation,
                   peak_process_rss_mib=rss, memory_scope='Absolute whole-worker high-water RSS including training and validation',
                   test_evaluation_run=False)
+    if initial_backbone_hash is not None:
+        report['initial_backbone_sha256'] = initial_backbone_hash
     dump(out/'training.json', report)
     return report
 
