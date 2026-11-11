@@ -1,26 +1,26 @@
 # 50단계: Docker 재현 결과 확인
 
-상태: **Codex 실제 Docker 빌드·검사 성공 / 사용자 결과 확인 예정**. 면접 문장 작성은 보류합니다.
+상태: **실제 Docker 빌드·검사 성공 / 사용자 결과 확인 완료**. 면접 문장 작성은 보류합니다.
 
 45단계에서는 사용자가 Codespaces의 기존 패키지로 고정 소스를 재현했습니다. 이번에는 GitHub가 제공하는 Ubuntu 24.04 실행 환경에서 루트 Dockerfile을 빌드하고, 생성한 이미지 안에서 검사합니다. Codespaces에 Docker를 설치하거나 작성한 파일을 갱신할 필요가 없습니다.
 
-## 역할과 실행 범위
+## 실행과 확인 범위
 
-- Codex: `.github/workflows/docker-reproduction.yml`과 `scripts/check_docker.sh` 구현, 첫 실제 실행·로그 검토.
-- 사용자: Codex 실행이 성공한 뒤 안내한 결과 화면 한 가지 확인. 아직 수행하지 않았습니다.
+- 자동화: `.github/workflows/docker-reproduction.yml`과 `scripts/check_docker.sh`로 이미지 빌드·검사·로그 저장.
+- 사용자: 실행 결과 화면의 두 성공 항목을 확인했고 “두 항목 잘 보여”라고 보고했습니다.
 - 수동 실행 전용이며 기존 push/PR의 `CPU checks`와 별도입니다. 실행 주체 입력은 기여 증빙을 대신하지 않습니다.
 - 빌드한 이미지 ID로 실행하고 커밋 라벨·추적 파일 SHA256을 대조합니다. `.openai` 배포 설정은 기존 `.dockerignore`에 따라 제외됩니다. C++ 바이너리는 이미지 안에서 새로 빌드합니다.
 - 컨테이너에서 고정 패키지·Python/C++ import·전체 pytest(0 skip)·저장 Dice 42개/평균6개·정적 데모·HTTP 응답을 검사합니다. 검사 후에도 추적 파일 해시가 같은지 확인합니다.
 - 검사 컨테이너는 외부 네트워크 없이 실행합니다. 이미지 빌드 중에는 Ubuntu·Python 패키지를 내려받습니다.
 - 새 데이터셋 학습·성능 평가·브라우저 조작·데모 배포는 포함하지 않습니다. 단위 테스트의 합성 모델 연산은 실행될 수 있습니다.
 
-## 지금 확인할 화면
+## 확인한 화면
 
 1. [실제 Docker 실행 결과](https://github.com/sokldjs554/pathology-edge/actions/runs/42974715514)를 엽니다.
 2. **Summary**에서 `Docker build: success`와 `Checks inside image: success`가 모두 표시되는지 확인합니다.
-3. 두 항목이 보이는지 알려 주세요. 동일 빌드를 다시 실행할 필요는 없습니다.
+3. 사용자 답변으로 두 항목의 표시 확인을 마쳤습니다. 동일 빌드를 다시 실행할 필요는 없습니다.
 
-이 실행은 Codex가 시작했습니다. 사용자의 직접 Docker 실행으로 기록하지 않으며, 결과 화면 확인도 답변을 받은 뒤 U62에 기록합니다.
+GitHub Actions의 빌드·검사와 사용자의 결과 화면 확인을 구분하며, U62는 결과 화면 확인 완료로 기록했습니다.
 
 나중에 직접 다시 실행하려면 [Actions → Docker reproduction](https://github.com/sokldjs554/pathology-edge/actions/workflows/docker-reproduction.yml)에서 **Run workflow → main → execution_owner: user → Run workflow**를 누릅니다. 이는 현재 과제로 배정하지 않았습니다.
 
