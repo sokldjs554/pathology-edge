@@ -198,8 +198,9 @@ def main():
     parser.add_argument('--data', required=True, type=Path)
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--architecture', required=True, choices=ARCHITECTURES)
+    parser.add_argument('--seed', type=int, default=20261113)
     args = parser.parse_args()
-    train_one(args.data, args.output, args.architecture)
+    train_one(args.data, args.output, args.architecture, seed=args.seed)
 
 
 if __name__ == '__main__':

@@ -124,11 +124,31 @@ def audit_predictions(folder, report, data, manifest):
             'Invalid aggregate timing')
 
 
-def _audit_results(output):
+def validate_design(seed, architecture_order):
+    require(type(seed) is int and seed > 0, 'Positive integer seed required')
+    require(len(architecture_order) == 2 and set(architecture_order) == set(ARCHITECTURES),
+            'Expected each architecture exactly once')
+
+
+def fixed_config(seed, manifest_sha256, loss_source_sha256):
+    """Exact scientific protocol shared by original and additional seed pairs."""
+    return dict(seed=seed, epochs=16, steps_per_epoch=20, batch_size=8, crop=128,
+                optimizer='Adam', learning_rate=.001, loss='BCE + learner soft Dice', loss_mode='learner_dice',
+                loss_source_sha256=loss_source_sha256,
+                augmentations=['horizontal/vertical flip', '90 degree rotations'],
+                thresholds=[.35, .5, .65], validation_mode='no_overlap', patch_size=128,
+                overlap=0, seam_radius=8, min_component_area=12, torch_threads=4,
+                selection='maximum validation image-macro Dice over epochs and thresholds; first tie',
+                test_used_for_selection=False, pretrained=False, manifest_sha256=manifest_sha256)
+
+
+def _audit_results(output, *, data_override=None):
     out = Path(output).resolve()
     plan = read(out/'protocol.json')
+    seed = plan['seed']
+    validate_design(seed, plan['architectures'])
     verify_snapshot(out, plan['snapshot_hashes'])
-    data = Path(plan['data'])
+    data = Path(data_override if data_override is not None else plan['data']).resolve()
     require(sha(data/'manifest.json') == plan['manifest_sha256'], 'Input manifest changed')
     manifest = read(data/'manifest.json')
     for row in manifest['records']:
@@ -143,13 +163,8 @@ def _audit_results(output):
         report = read(folder/'training.json')
         config = report['config']
         require(report['architecture'] == architecture and report['parameter_count'] == parameters, 'Wrong architecture/parameter count')
-        require(config == read(folder/'protocol.json') and config['seed'] == SEED and
-                config['epochs'] == 16 and config['steps_per_epoch'] == 20 and config['batch_size'] == 8 and
-                config['crop'] == 128 and config['optimizer'] == 'Adam' and config['learning_rate'] == .001 and
-                config['loss_mode'] == 'learner_dice' and config['loss_source_sha256'] == source['learner_losses.py'] and
-                config['validation_mode'] == 'no_overlap' and config['pretrained'] is False and
-                config['test_used_for_selection'] is False and config['thresholds'] == [.35, .5, .65] and
-                config['manifest_sha256'] == plan['manifest_sha256'], 'Fixed protocol changed')
+        require(config == read(folder/'protocol.json') ==
+                fixed_config(seed, plan['manifest_sha256'], source['learner_losses.py']), 'Fixed protocol changed')
         require(report['test_evaluation_run'] is False and not (folder/'evaluation.json').exists() and
                 not (folder/'evaluation_lock.json').exists(), 'Unexpected test evaluation')
         require(report['train_images'] == 33 and report['validation_images'] == 10, 'Wrong image counts')
@@ -177,7 +192,8 @@ def _audit_results(output):
     require(reports[0]['environment'] == reports[1]['environment'], 'Environments differ')
     require(reports[0]['augmentation_trace_sha256'] == reports[1]['augmentation_trace_sha256'], 'Crop/augmentation sequences differ')
     a, b = rows
-    return dict(run=str(out), all_checks_passed=True, seed=SEED, rows=rows, image_counts=counts,
+    return dict(run=str(out), all_checks_passed=True, seed=seed, architecture_order=plan['architectures'],
+                rows=rows, image_counts=counts,
                 validation_groups=len({r['group_id'] for r in manifest['records'] if r['split'] == 'validation'}),
                 delta_vit_minus_cnn={k: b['validation_dice'][k]-a['validation_dice'][k] for k in ('all', 'boundary', 'interior')},
                 environment=reports[0]['environment'], test_evaluation_run=False,
@@ -188,7 +204,7 @@ def _audit_results(output):
                            'No independent test, external data or clinical validation; no claim that ViTs in general are better/worse.')
 
 
-def summarize(output):
+def summarize(output, *, data_override=None):
     """Audit a completed attempt; never turn a failed run into overall success."""
     out = Path(output).resolve()
     status = read(out/'status.json')
@@ -198,15 +214,16 @@ def summarize(output):
     plan = read(out/'protocol.json')
     require(before == after and before['commit'] == plan['source_commit'] and
             bool(before['status']) == plan['source_dirty'], 'Original preservation evidence differs')
-    result = _audit_results(out)
+    result = _audit_results(out, data_override=data_override)
     result['original_files_preserved'] = True
     return result
 
 
-def run(repo, data, output):
+def run(repo, data, output, *, seed=SEED, architecture_order=ARCHITECTURES, source_snapshot=None):
     repo, data, out = Path(repo).resolve(), Path(data).resolve(), Path(output).resolve()
     if out.exists():
         raise FileExistsError(out)
+    validate_design(seed, architecture_order)
     require(out.is_relative_to(repo/'work'), 'Output must be a fresh directory under repository work/')
     require(not data.is_relative_to(out) and not out.is_relative_to(data), 'Output/data overlap')
     before = original_state(repo)
@@ -215,22 +232,25 @@ def run(repo, data, output):
     (out/'RUN.txt').write_text(str(out)+'\n')
     dump(out/'original-before.json', before)
     try:
-        for path in sorted((repo/'src/pathology_edge').glob('*.py')):
+        source = Path(source_snapshot) if source_snapshot is not None else repo/'src'
+        for path in sorted((source/'pathology_edge').glob('*.py')):
             target = out/'source/pathology_edge'/path.name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, target)
         shutil.copy2(__file__, out/'runner.py')
-        plan = dict(seed=SEED, architectures=list(ARCHITECTURES), data=str(data),
+        plan = dict(seed=seed, architectures=list(architecture_order), data=str(data),
                     source_commit=before['commit'], source_dirty=bool(before['status']),
                     manifest_sha256=sha(data/'manifest.json'), snapshot_hashes=snapshot_hashes(out))
         dump(out/'protocol.json', plan)
         env = dict(os.environ, PYTHONPATH=str(out/'source'), PYTHONDONTWRITEBYTECODE='1')
         env.pop('PYTHONOPTIMIZE', None)
-        for architecture in ARCHITECTURES:
+        for architecture in architecture_order:
             verify_snapshot(out, plan['snapshot_hashes'])
             dump(out/'status.json', dict(status='running', architecture=architecture))
-            execute([sys.executable, '-u', '-m', 'pathology_edge.model_comparison', '--data', str(data),
-                     '--output', str(out/architecture), '--architecture', architecture],
+            # Explicit function argument also supports the original frozen source's seedless CLI.
+            worker = ('import sys; from pathology_edge.model_comparison import train_one; '
+                      'train_one(sys.argv[1], sys.argv[2], sys.argv[3], seed=int(sys.argv[4]))')
+            execute([sys.executable, '-u', '-c', worker, str(data), str(out/architecture), architecture, str(seed)],
                     cwd=out, env=env, log=out/f'{architecture}.log')
         result = _audit_results(out)
         after = original_state(repo)
@@ -256,12 +276,16 @@ def main():
     parser.add_argument('--repo', type=Path, default=Path.cwd())
     parser.add_argument('--data', type=Path, default=Path('data'))
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--seed', type=int, default=SEED)
+    parser.add_argument('--architecture-order', nargs=2, choices=ARCHITECTURES, default=ARCHITECTURES)
+    parser.add_argument('--data-override', type=Path, help='Relocated data for a read-only saved-output audit')
     parser.add_argument('--summarize', type=Path, help='Audit saved predictions without training, inference or writes')
     args = parser.parse_args()
     if args.summarize:
-        print(json.dumps(summarize(args.summarize), ensure_ascii=False))
+        print(json.dumps(summarize(args.summarize, data_override=args.data_override), ensure_ascii=False))
     else:
-        run(args.repo, args.data, args.output or args.repo/'work'/f'my-cnn-vit.{uuid.uuid4().hex[:12]}')
+        run(args.repo, args.data, args.output or args.repo/'work'/f'my-cnn-vit.{uuid.uuid4().hex[:12]}',
+            seed=args.seed, architecture_order=args.architecture_order)
 
 
 if __name__ == '__main__':

@@ -67,6 +67,53 @@ def test_summary_rejects_incomplete_run(runner, tmp_path):
         runner.summarize(tmp_path)
 
 
+@pytest.mark.parametrize('seed,order', [(0, ('tiny_unet', 'small_vit')),
+                                      (True, ('tiny_unet', 'small_vit')),
+                                      (20261114, ('tiny_unet', 'tiny_unet'))])
+def test_run_rejects_invalid_seed_or_order_before_writes(runner, tmp_path, seed, order):
+    out = tmp_path/'work'/'new'
+    with pytest.raises(ValueError, match='seed|architecture'):
+        runner.run(tmp_path, tmp_path/'data', out, seed=seed, architecture_order=order)
+    assert not out.exists()
+
+
+def test_run_freezes_actual_seed_and_order_and_preserves_failure(runner, tmp_path, monkeypatch):
+    source = tmp_path/'src/pathology_edge'
+    source.mkdir(parents=True)
+    (source/'__init__.py').write_text('')
+    data = tmp_path/'data'
+    data.mkdir()
+    (data/'manifest.json').write_text('{}')
+    state = dict(commit='abc', status='', hashes={})
+    monkeypatch.setattr(runner, 'original_state', lambda repo: state)
+    commands = []
+    def failed(command, **kwargs):
+        commands.append(command)
+        raise RuntimeError('worker failed')
+    monkeypatch.setattr(runner, 'execute', failed)
+    out = tmp_path/'work'/'new'
+    order = ('small_vit', 'tiny_unet')
+    with pytest.raises(RuntimeError, match='worker failed'):
+        runner.run(tmp_path, data, out, seed=20261114, architecture_order=order)
+    plan = runner.read(out/'protocol.json')
+    assert plan['seed'] == 20261114
+    assert plan['architectures'] == list(order)
+    assert '20261114' in commands[0] and 'small_vit' in commands[0]
+    assert runner.read(out/'status.json')['status'] == 'failed'
+    assert runner.read(out/'original-before.json') == runner.read(out/'original-after.json')
+
+
+def test_worker_cli_passes_explicit_seed(monkeypatch, tmp_path):
+    from pathology_edge import model_comparison
+    calls = []
+    monkeypatch.setattr(model_comparison, 'train_one', lambda *args, **kwargs: calls.append((args, kwargs)))
+    monkeypatch.setattr(sys, 'argv', ['model_comparison', '--data', str(tmp_path/'data'),
+                                    '--output', str(tmp_path/'run'), '--architecture', 'small_vit',
+                                    '--seed', '20261115'])
+    model_comparison.main()
+    assert calls == [((tmp_path/'data', tmp_path/'run', 'small_vit'), {'seed': 20261115})]
+
+
 @pytest.mark.parametrize('status,preserved', [('failed', True), ('completed', False), ('running', True)])
 def test_summary_cannot_turn_failed_or_changed_run_into_success(runner, tmp_path, status, preserved):
     state = dict(commit='abc', status='', hashes={'file': 'original'})
