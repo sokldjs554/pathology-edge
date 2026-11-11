@@ -16,6 +16,31 @@ def load_refinement():
     return importlib.import_module('pathology_edge.refinement')
 
 
+def test_accepted_user_head_passes_preflight_and_trains_with_real_backbone():
+    refinement = load_refinement()
+    before_rng = torch.get_rng_state().clone()
+    report = refinement.refinement_preflight()
+    assert torch.equal(torch.get_rng_state(), before_rng)
+    assert report['all_checks_passed'] is True
+    assert report['parameter_counts'] == {'small_vit': 33632, 'small_vit_refined': 33785}
+    torch.manual_seed(20261116)
+    baseline = SmallViTSegmenter()
+    torch.manual_seed(20261116)
+    refined = refinement.RefinedViTSegmenter()
+    x = torch.rand(1, 3, 16, 24)
+    torch.testing.assert_close(refined(x), baseline(x), rtol=0, atol=0)
+    optimizer = torch.optim.Adam(refined.parameters(), lr=.001)
+    for _ in range(2):
+        optimizer.zero_grad()
+        refined(x).square().mean().backward()
+        optimizer.step()
+    for parameter in (refined.backbone.patch_embed.weight,
+                      refined.refinement_head.conv1.weight,
+                      refined.refinement_head.conv2.weight):
+        assert torch.isfinite(parameter.grad).all()
+        assert torch.count_nonzero(parameter.grad) > 0
+
+
 def test_identity_head_preserves_backbone_initial_weights_and_raw_output():
     refinement = load_refinement()
     torch.manual_seed(20261116)

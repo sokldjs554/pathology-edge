@@ -1,4 +1,4 @@
-"""STEP_57: user-owned local residual head. Training waits for these bodies."""
+"""STEP_57: local residual head submitted by the user and independently tested."""
 import torch
 from torch import nn
 
@@ -12,14 +12,26 @@ def _validate_logits(logits: torch.Tensor) -> None:
 
 
 class LocalResidualHead(nn.Module):
-    """Raw logits -> same-shaped raw logits; requirements in docs/STEP_57.md."""
+    """Raw logits -> same-shaped raw logits."""
 
     def __init__(self):
         super().__init__()
-        # User: define conv1/conv2 and zero-initialize conv2 weight and bias.
-        raise NotImplementedError('사용자 작성 예정: docs/STEP_57.md (__init__)')
+        self.conv1 = nn.Conv2d(
+            1, 8, kernel_size=3, stride=1,
+            padding=1, bias=True
+        )
+        self.conv2 = nn.Conv2d(
+            8, 1, kernel_size=3, stride=1,
+            padding=1, bias=True
+        )
+
+        nn.init.zeros_(self.conv2.weight)
+        nn.init.zeros_(self.conv2.bias)
 
     def forward(self, logits: torch.Tensor) -> torch.Tensor:
         _validate_logits(logits)
-        # User: local nonlinear correction plus the original logits.
-        raise NotImplementedError('사용자 작성 예정: docs/STEP_57.md (forward)')
+        correction = self.conv2(
+            torch.relu(self.conv1(logits))
+        )
+
+        return logits + correction
