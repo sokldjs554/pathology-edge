@@ -31,7 +31,7 @@
     "new_benchmark_required": false,
     "status": "Completed; see step52-review.json"
   },
-  "user_vit_execution": "STEP_53 execution assigned; no user training result received",
+  "user_vit_execution": "STEP_53 execution/results and local audit success reported; see step53-review.json",
   "interview_writing": "Deferred at user request",
   "measurement_output": "step51-user-measurements.json",
   "observations_from_displayed_values": {

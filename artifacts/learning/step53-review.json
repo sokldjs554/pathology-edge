@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-11",
+  "user_contribution_id": "U65",
+  "status": "User paired-model execution, result submission and local audit success reported; per-image review and interpretation pending",
+  "evidence_type": "User-pasted SUMMARY JSON plus ORIGINAL_FILES_PRESERVED=true; no direct access to Codespaces files",
+  "user_output": "step53-user-summary.json",
+  "original_checkout_marker": "ORIGINAL_FILES_PRESERVED=true",
+  "expected_source_commit_from_assigned_launcher": "917038feb5c80b1c7175d94ba44c208d9940220d",
+  "checks_on_submitted_summary": {
+    "success_reported": true,
+    "new_checkout_preserved_reported": true,
+    "original_checkout_preserved_reported": true,
+    "seed_matches_fixed_protocol": true,
+    "architectures_and_parameter_counts_match": true,
+    "split_counts_match": true,
+    "validation_groups_match": true,
+    "sixty_region_checks_reported": true,
+    "no_test_evaluation_reported": true,
+    "epochs_and_thresholds_in_declared_search": true,
+    "finite_metrics_times_memory": true,
+    "reported_model_hash_syntax": true,
+    "reported_deltas_match_submitted_scores": true
+  },
+  "checks_on_submitted_summary_all_passed": true,
+  "original_run_files_accessed": false,
+  "derived_from_submitted_values": {
+    "delta_dice": {
+      "all": 0.053876162452479504,
+      "boundary": 0.07688055572800834,
+      "interior": 0.0462719541032004
+    },
+    "median_pipeline_ms": {
+      "tiny_unet": 143.13084249988606,
+      "small_vit": 40.459465500134684
+    },
+    "cnn_over_vit_pipeline_time_ratio": 3.537635525595601
+  },
+  "reference_comparison": {
+    "user_tiny_unet_best_epoch": 8,
+    "reference_tiny_unet_best_epoch": 15,
+    "user_tiny_unet_dice": 0.5037679177818478,
+    "reference_tiny_unet_dice": 0.5406738212112455,
+    "exact_numerical_reproduction": false,
+    "cause": "Not determined from summaries; execution environments differ"
+  },
+  "limitations": [
+    "Full per-image records, source/protocol/crop-trace hashes, epoch histories, checkpoints and raw pipeline timings have not been directly received. Local audit success is user-reported.",
+    "One paired seed on a reused validation set with epoch/threshold selection; not independent test or clinical evidence.",
+    "Model parameter counts differ; recorded costs are descriptive, not an order-balanced repeat benchmark.",
+    "User trained with provided architectures/training code and their previously accepted loss; not a claim that the user wrote the whole model.",
+    "Reference-run per-image outcomes cannot be substituted for this user run."
+  ],
+  "next_user_action": {
+    "step": 54,
+    "user_contribution_id": "U67",
+    "status": "Pending",
+    "task": "Read saved validation image-wise Dice and report all ten paired rows; no new training/inference"
+  },
+  "interview_writing": "Deferred at user request"
+}

@@ -15,7 +15,7 @@
   "next_user_action": {
     "step": 53,
     "user_contribution_id": "U65",
-    "status": "Assigned; awaiting execution/results",
+    "status": "Execution/results and local audit success reported; see step53-review.json",
     "task": "Run the fixed CNN/ViT pair in a separate checkout and submit SUMMARY and original-preservation output",
     "source_commit": "917038feb5c80b1c7175d94ba44c208d9940220d"
   },

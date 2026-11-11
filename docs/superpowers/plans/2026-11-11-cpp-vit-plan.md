@@ -14,6 +14,7 @@ Already isolated at `/workspace/pathology-edge-loss`, base9ce624b; existing201te
 - [x] User C++ successful execution SUMMARY received:8cases, all checks and original preservation true, error null. Evidence in step51-user-summary.json.
 - [x] Receive actual C++ timing/CPU rows: eight rounded rows, two visible/affinity CPUs. Preserve separately from reference run; raw timings/hashes not received.
 - [x] User correctly distinguished extraction speed from full-inference speed; step52-review.json.
-- [ ] STEP_53 user CNN/ViT execution assigned using pinned917038f and original-checkout before/after checks; result pending.
+- [x] STEP_53 user CNN/ViT execution, local audit success and both checkout-preservation reports received; arithmetic checked in step53-review.json.
+- [ ] STEP_54 user per-image validation rows and later interpretation; no rerun or new test evaluation assigned.
 
 Review focuses: mismatched token ordering, shared encoder initialization, data/seed/control drift, accepted score selected from false history, failure reported as success, accidental original-file overwrite, CPU benchmarks contaminated by concurrent training, report scope implying new test or clinical evidence.
