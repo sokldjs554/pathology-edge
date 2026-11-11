@@ -1,0 +1,15 @@
+{
+  "tests": {
+    "tests": 366,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "dice_checks": 42,
+  "mean_checks": 6,
+  "static_demo_check": true,
+  "http_index_sha256": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656",
+  "dataset_experiment_run": false,
+  "browser_test_run": false,
+  "unit_tests_may_run_synthetic_model_operations": true
+}

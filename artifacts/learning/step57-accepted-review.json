@@ -1,0 +1,86 @@
+{
+  "user_report": {
+    "tests_passed": 13,
+    "seconds": 25.76,
+    "evidence": "Submitted class source and terminal summary in chat; detailed user pytest log was not uploaded"
+  },
+  "independent_exercise_tests": {
+    "passed": 13,
+    "seconds": 2.04
+  },
+  "user_class_ast_sha256": "1fc1d265bb7dab6ea6c5e89f69c8d44afd863a92a43813b2f28e5fc406656d35",
+  "integrated_file_sha256": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+  "contract": {
+    "channels": [
+      1,
+      8,
+      1
+    ],
+    "kernel_size": 3,
+    "padding": 1,
+    "stride": 1,
+    "bias": true,
+    "final_weight_and_bias_initially_zero": true,
+    "first_layer_default_initialization": true,
+    "residual_on_raw_logits": true,
+    "parameters": 153
+  },
+  "user_comparison_training_completed": false,
+  "development_comparison_training_completed": true,
+  "reviewed_at_utc": "2026-11-11T17:41:53.123554+00:00",
+  "project_tests": {
+    "passed": 366,
+    "seconds": 19.07,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "development_result": "artifacts/experiments/vit-refinement-reference-20261112/summary.json",
+  "fresh_review": "No important/blocking findings; guarded helper return after reviewer suggestion, failure test observed before fix",
+  "test_retry_note": "One full-suite retry encountered the existing 2 GiB free-space guard in two reproduction tests. Removed only completed synthetic pytest fixtures, then all366 passed.",
+  "docker_reproduction": {
+    "status": "success",
+    "run_id": 43070288195,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43070288195",
+    "source_commit": "1744544ec2f88bff1e3eac8a7bfe99b9335d9d48",
+    "artifact_sha256": "8b1e4c9ea80a3c85b1a38fe5c4ddae3820713378967a77f38cf07929a975e4bb",
+    "artifact_files": 20,
+    "source_files_verified": 2941,
+    "image_id": "sha256:987ca49eaff909c3f4dce900ff321ff26b5083de6fa2480863238438043389be",
+    "checks": {
+      "tests": {
+        "tests": 366,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "dice_checks": 42,
+      "mean_checks": 6,
+      "static_demo_check": true,
+      "http_index_sha256": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656",
+      "dataset_experiment_run": false,
+      "browser_test_run": false,
+      "unit_tests_may_run_synthetic_model_operations": true
+    },
+    "user_execution_confirmed": false
+  },
+  "github_cpu_ci": {
+    "run_id": 43070189101,
+    "source_commit": "1744544ec2f88bff1e3eac8a7bfe99b9335d9d48",
+    "status": "success"
+  },
+  "downloaded_launcher_sha256": "7809442b15076cd4baa3e1b86e8979fd668097db1a721527fdf0d628f15485b4",
+  "independent_evidence_review": {
+    "validation_metric_regions": 60,
+    "source_python_files_match_pinned": 21,
+    "runner_matches_pinned": true,
+    "archive_payload_files_verified": 71,
+    "whole_image_wins_ties_losses": [
+      7,
+      0,
+      3
+    ],
+    "important_findings": 0,
+    "new_training_run": false
+  }
+}

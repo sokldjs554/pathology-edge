@@ -1,0 +1,24 @@
+{
+  "reviewed_at_utc": "2026-11-11T17:41:53.123554+00:00",
+  "source_commit": "1744544ec2f88bff1e3eac8a7bfe99b9335d9d48",
+  "archive_sha256": "39d539190e89d94f9c27af38ac4eed8e7de22cea8af3547176bf47f6d7300123",
+  "payload_files": 71,
+  "validation_metric_regions_checked": 60,
+  "original_files_preserved": true,
+  "local_submitted_class_preserved": true,
+  "user_execution_confirmed": false,
+  "development_models_trained": 2,
+  "trained_head_nonzero_entries": {
+    "refinement_head.conv1.weight": 72,
+    "refinement_head.conv1.bias": 8,
+    "refinement_head.conv2.weight": 72,
+    "refinement_head.conv2.bias": 1
+  },
+  "wins_ties_losses_all": [
+    7,
+    0,
+    3
+  ],
+  "test_evaluation_run": false,
+  "note": "A preliminary checkout request used a mistyped commit and failed before source checkout or training. It was corrected to the pinned commit; this archive contains the only completed pair, with no score-driven reruns."
+}
