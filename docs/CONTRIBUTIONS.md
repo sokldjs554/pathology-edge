@@ -66,8 +66,9 @@
 | U60 | 사용자 | PR 생성·설명 등록 | 재현 로그 검토 요청을 main 대상으로 생성하고 본문 저장 | 완료·원격 확인 | PR #1·head e081406·9파일/843줄·PR CI 성공 확인. 병합 확인 화면과 설명 편집 위치 안내 후 사용자 완료 보고·실제 본문 저장 확인. `step48-review.json`, `step49-preparation.json`. 제목·본문은 제공된 초안을 사용. 실제 병합은 후속 U61에 기록 |
 | U61 | 사용자 | PR 병합 | 검토한 재현 로그 PR #1을 main에 병합 | 완료·원격 대조 확인 | 사용자 완료 보고 후 `merged: true`·병합 커밋2194ac9·main 반영·로그9개 동일·병합 후 CI 성공 대조. `step49-review.json`. 실제 사용자 병합 확인 |
 | U62 | 사용자 | 결과 화면 검토 | Docker 재현의 Summary 확인 | 완료·사용자 보고 확인 | “두 항목 잘 보여” 답변으로 `Docker build: success`·`Checks inside image: success` 확인 완료. `STEP_50.md`, `step50-review.json`. 직접 Docker 실행과 구분 |
-| U63 | 사용자 | 비교 측정 실행 | Codespaces에서 Python/C++ 1·2·4스레드 8조건 측정·결과 제출 | 실행·성공 요약 보고 확인, 수치·해석 대기 | `my-cpp-review.nd9wyi24`의 `all_checks_passed: true`·`original_files_preserved: true`·8조건·error null 보고. `step51-user-summary.json`, `step51-review.json`. 비교표·원시 시간·환경·원본 해시 기록은 미수신이며 개발 환경 수치로 대신하지 않음 |
+| U63 | 사용자 | 비교 측정 실행 | Codespaces에서 Python/C++ 1·2·4스레드 8조건 측정·결과 제출 | 실행·성공 요약·표·CPU 정보 제출 완료 | `my-cpp-review.nd9wyi24`의 검사·원본 보존 true·8조건·error null,8행 표와 CPU/affinity2개·cpuset0–1 제출. 512² C++1t0.265ms·2048² C++4t11.453ms가 각 최저. `step51-user-measurements.json`, `step51-review.json`. 반올림 출력이며 원시9회·소스/바이너리·전후 해시 파일은 미수신. 사용자 해석은 U66에서 구분 |
 | U64 | 사용자 | 방향 선택 | 추가 모델 비교를 ViT로 선택 | 선택 확인 | “ViT 비교 — 공고 우대사항 대응” 답변. 모델 구현·학습·결과 해석 완료를 뜻하지 않음 |
 | U65 | 사용자 | 모델 비교 실행·검토 | 고정 조건 CNN/소형 ViT 학습과 결과 검토 | 예정·아직 미배정 | 실행 도구·참고 결과는 `CPP_VIT_COMPARISON.md`. C++ 결과를 확인한 뒤 한 단계씩 진행 |
+| U66 | 사용자 | 검토·해석 | 패치 추출 속도와 전체 추론 속도를 구분 | 예정·질문 안내 | `STEP_52.md`. 1.96배 추출 속도를 전체 모델 속도에 그대로 적용할 수 있는지 설명하는 한 질문. 아직 사용자 해석 답변을 받지 않음 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |

@@ -1,0 +1,87 @@
+{
+  "evidence_type": "User-pasted formatted comparison and CPU lines, not raw summary.json",
+  "run": "/workspaces/pathology-edge/work/my-cpp-review.nd9wyi24",
+  "precision": {
+    "median_ms_decimals": 3,
+    "speedup_decimals": 2,
+    "peak_rss_decimals": 1
+  },
+  "comparison": [
+    {
+      "size": 512,
+      "backend": "python",
+      "threads": 1,
+      "median_ms": 0.509,
+      "speedup_vs_python": 1.0,
+      "peak_process_rss_mib": 47.3
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 1,
+      "median_ms": 0.265,
+      "speedup_vs_python": 1.92,
+      "peak_process_rss_mib": 47.3
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 2,
+      "median_ms": 0.844,
+      "speedup_vs_python": 0.6,
+      "peak_process_rss_mib": 47.5
+    },
+    {
+      "size": 512,
+      "backend": "cpp",
+      "threads": 4,
+      "median_ms": 1.071,
+      "speedup_vs_python": 0.48,
+      "peak_process_rss_mib": 47.5
+    },
+    {
+      "size": 2048,
+      "backend": "python",
+      "threads": 1,
+      "median_ms": 22.418,
+      "speedup_vs_python": 1.0,
+      "peak_process_rss_mib": 193.9
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 1,
+      "median_ms": 12.425,
+      "speedup_vs_python": 1.8,
+      "peak_process_rss_mib": 194.1
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 2,
+      "median_ms": 13.594,
+      "speedup_vs_python": 1.65,
+      "peak_process_rss_mib": 193.9
+    },
+    {
+      "size": 2048,
+      "backend": "cpp",
+      "threads": 4,
+      "median_ms": 11.453,
+      "speedup_vs_python": 1.96,
+      "peak_process_rss_mib": 193.8
+    }
+  ],
+  "reported_environment": {
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "visible_logical_cpus": 2,
+    "affinity_cpu_count": 2,
+    "cgroup": {
+      "cpu.max": "max 100000",
+      "cpuset.cpus.effective": "0-1",
+      "process_membership": "0::/"
+    }
+  },
+  "raw_timings_received": false,
+  "source_hashes_received": false
+}
