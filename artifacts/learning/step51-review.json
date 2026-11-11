@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-11",
+  "user_contribution_id": "U63",
+  "status": "User execution and successful summary report confirmed; measurements and interpretation pending",
+  "evidence_type": "User-pasted SUMMARY, not direct access to Codespaces files",
+  "user_output": "step51-user-summary.json",
+  "submitted_path_verbatim": "/workspaces/pathology-edge/work/my-cpp-review\\.nd9wyi24/summary.json",
+  "format_normalization": "Removed the Markdown escape before the dot in the submitted folder name. This is not a filesystem existence check.",
+  "checks_on_report": {
+    "all_checks_passed_is_true": true,
+    "original_files_preserved_is_true": true,
+    "completed_cases_is_expected_eight": true,
+    "error_is_null": true,
+    "reported_path_is_inside_expected_work_directory": true
+  },
+  "limitations": [
+    "Comparison rows, raw timings, environment, imported binary/source hashes and original before/after records have not been received.",
+    "No claim about which implementation or thread count was faster in the user's environment.",
+    "The development reference benchmark is not substituted for the user's measurements.",
+    "The supplied helper measures synthetic patch extraction, not model or clinical performance."
+  ],
+  "next_user_action": {
+    "task": "Read comparison rows and CPU allocation information from the existing summary.json and submit the output",
+    "new_benchmark_required": false,
+    "status": "Pending"
+  },
+  "user_vit_execution": "Not yet assigned or reported; implementation and reference experiment are already prepared",
+  "interview_writing": "Deferred at user request"
+}

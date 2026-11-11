@@ -1,6 +1,28 @@
 # 51단계: 현재 C++ 패치 추출 성능 직접 확인
 
-상태: **실행 도구 준비 / 사용자 실행·결과 해석 대기**. 이번 사용자 과제는 C++ 비교 한 가지입니다. ViT 비교는 이 결과를 확인한 뒤 진행합니다.
+상태: **사용자 실행·성공 요약 보고 확인 / 비교 수치·해석 대기**. `my-cpp-review.nd9wyi24`에서8조건·검사 성공·원본 보존·오류 없음 요약을 받았습니다. [제출 요약](../artifacts/learning/step51-user-summary.json)과 [확인 범위](../artifacts/learning/step51-review.json)를 기록했습니다. 원본 파일에 직접 접근하거나 실제 시간 수치를 확인한 상태는 아닙니다. ViT 구현·참고 학습은 준비됐으며 사용자 과제는 C++ 결과부터 한 단계씩 진행합니다.
+
+## 지금 할 일: 저장된 비교표 읽기
+
+Codespaces의 `/workspaces/pathology-edge`에서 아래 블록을 실행하고 출력을 보냅니다. 이미 저장된 JSON만 읽으며 파일 변경이나 새 측정은 없습니다. 경로의 `review.nd9wyi24`에는 역슬래시를 넣지 않습니다.
+
+```bash
+cd /workspaces/pathology-edge && python - <<'PY'
+import json
+from pathlib import Path
+
+data = json.loads(Path("work/my-cpp-review.nd9wyi24/summary.json").read_text())
+print("size  backend  threads  median_ms  Python대비  peak_MiB")
+for row in data["comparison"]:
+    print("{size:4d}  {backend:6s}  {threads}t  {median_ms:.3f}  {speedup_vs_python:.2f}x  {peak_process_rss_mib:.1f}".format(**row))
+env = data["environment"]
+print("CPU:", env["cpu_model"])
+print("논리 CPU / affinity:", env["visible_logical_cpus"], env["affinity_cpu_count"])
+print("CPU 할당 정보:", env["cgroup"])
+PY
+```
+
+`median_ms`는 작을수록 빠르고, `Python대비`는 같은 크기의 Python 시간을 해당 구현의 시간으로 나눈 값입니다. 1보다 크면 Python보다 빠릅니다. `peak_MiB`는 전체 프로세스의 최대 메모리이며 아래 측정 범위를 함께 봅니다. 파일을 찾지 못하면 오류 내용을 보내고 기존 실행 폴더를 확인합니다.
 
 기존 Codespaces의 Python 환경에서 현재 설치된 Python/C++ 패치 추출기를 비교합니다. 기존 체크아웃의 수정한 `learner_wsi.py`와 `artifacts/benchmark.json`을 보존하며, 설치·빌드·`git pull`·`stash`가 필요하지 않습니다. 이전 `scripts/benchmark.py`는 실행하지 않습니다.
 
@@ -16,7 +38,7 @@
 
 기본 실행은8조건 한 라운드로, 보통1분 이내에 끝나는 작은 점검입니다. 실제 시간은 Codespaces 부하에 따라 달라집니다. `--rounds 3`은 순방향·역방향·교차 순서의24개 독립 프로세스와 조건당27개 측정을 남기는 추가 확인 옵션입니다. 세 라운드는 모든 순서 효과를 완전히 상쇄하지 않습니다. 이번 사용자 실행은 기본 한 라운드입니다.
 
-## 한 번 실행하기
+## 처음 실행할 때 사용한 명령 — 기록용
 
 실행기는 커밋 `478670eed931102d38412b9e13f94a519379a607`에 고정합니다. 아래 명령은 실행기 한 파일만 새 `work` 폴더에 받고, 현재 설치된 코드를 측정합니다.
 
@@ -56,4 +78,4 @@ PY
 
 이 비교는 합성 입력의 패치 추출 속도입니다. 병리 정확도·전체 파이프라인 속도·임상 효용을 검증하지 않습니다. 설치된 C++ 바이너리를 재빌드하지 않으므로 파일 해시와 보관한 소스만으로 그 바이너리의 실제 빌드 소스·컴파일러·옵션까지 증명할 수는 없습니다.
 
-실행 도구의 개발 검증과 사용자의 Codespaces 실행을 구분합니다. **현재 사용자 측정값이나 성능 개선 결론은 기록하지 않았습니다.**
+실행 도구의 개발 검증과 사용자의 Codespaces 실행을 구분합니다. **사용자의 실행 성공 요약은 확인했으며, 아직 받지 못한 측정값이나 성능 개선 결론은 기록하지 않았습니다.**

@@ -11,6 +11,7 @@ Already isolated at `/workspace/pathology-edge-loss`, base9ce624b; existing201te
 - [x] Real seed20261113 TinyUNet/ViT pair, 60 region pixel audits, honest validation-only results and timing scope. Full suite/protected files checked in final validation.
 - [x] Independent review; fixed failed-run re-summary with regression tests. Final269tests, old Dice42/6, protected2392files pass. C++ download pinned to478670e.
 - [x] Published code/evidence at4eea78d on main; remote SHA verified. SHA-pinned478670e C++ runner downloaded over HTTPS and byte-compared with local source.
-- [ ] User C++ execution/report; pending until actually received. ViT execution/interpretation assigned after this first step.
+- [x] User C++ successful execution SUMMARY received:8cases, all checks and original preservation true, error null. Evidence in step51-user-summary.json.
+- [ ] Receive actual C++ timing/CPU rows and interpretation. User ViT execution/interpretation assigned after C++ review; tools/reference experiment already prepared.
 
 Review focuses: mismatched token ordering, shared encoder initialization, data/seed/control drift, accepted score selected from false history, failure reported as success, accidental original-file overwrite, CPU benchmarks contaminated by concurrent training, report scope implying new test or clinical evidence.
