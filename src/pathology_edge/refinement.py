@@ -9,6 +9,7 @@ from torch import nn
 from .vit import SmallViTSegmenter
 
 REFINEMENT_SEED = 20261116
+REFINEMENT_SEEDS = (REFINEMENT_SEED, 20261117, 20261118)
 
 
 def _require(condition, message):
@@ -99,7 +100,8 @@ def validate_local_residual_head(head):
 
 def refinement_preflight(seed=REFINEMENT_SEED):
     """Validate user code and identical initialization before either arm trains."""
-    _require(type(seed) is int and seed == REFINEMENT_SEED, 'Refinement seed is frozen at 20261116')
+    _require(type(seed) is int and seed in REFINEMENT_SEEDS,
+             'Refinement seed must be one of 20261116, 20261117, 20261118')
     with torch.random.fork_rng(devices=[]):
         torch.manual_seed(seed)
         baseline = SmallViTSegmenter()

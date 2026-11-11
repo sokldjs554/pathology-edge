@@ -21,7 +21,8 @@ COMPARISONS = {
     'original': dict(architectures=ARCHITECTURES, parameters=(29761, 33632),
                      delta_key='delta_vit_minus_cnn', seed=None),
     'refinement': dict(architectures=('small_vit', 'small_vit_refined'), parameters=(33632, 33785),
-                       delta_key='delta_refined_minus_baseline', seed=20261116),
+                       delta_key='delta_refined_minus_baseline', seed=20261116,
+                       allowed_seeds=(20261116, 20261117, 20261118)),
 }
 
 
@@ -134,7 +135,8 @@ def validate_design(seed, architecture_order, comparison='original'):
     require(comparison in COMPARISONS, 'Unknown comparison design')
     design = COMPARISONS[comparison]
     require(type(seed) is int and seed > 0, 'Positive integer seed required')
-    require(design['seed'] is None or seed == design['seed'], 'Refinement seed is frozen at 20261116')
+    require(design['seed'] is None or seed in design['allowed_seeds'],
+            'Refinement seed must be one of 20261116, 20261117, 20261118')
     require(len(architecture_order) == 2 and set(architecture_order) == set(design['architectures']),
             'Expected each architecture exactly once')
 
