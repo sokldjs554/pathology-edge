@@ -1,0 +1,91 @@
+name: Docker reproduction
+run-name: Docker reproduction (${{ inputs.execution_owner }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      execution_owner:
+        description: 'Who starts this run? This label alone is not contribution evidence.'
+        required: true
+        type: choice
+        default: user
+        options: [user, codex]
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Record source and runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/docker-reproduction
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test -z "$(git status --porcelain)"
+          printf '%s\n' "$GITHUB_SHA" > work/docker-reproduction/source-commit.txt
+          # .openai contains deployment metadata and is deliberately excluded by .dockerignore.
+          git ls-files -z -- . ':!.openai' | xargs -0 sha256sum > work/docker-reproduction/source-files.sha256
+          docker version > work/docker-reproduction/docker-version.txt
+          df -h > work/docker-reproduction/runner-disk.txt
+          python3 - <<'PY'
+          import json, os, platform
+          from pathlib import Path
+          keys = ('GITHUB_SHA', 'GITHUB_RUN_ID', 'GITHUB_RUN_ATTEMPT', 'GITHUB_ACTOR', 'GITHUB_REF')
+          record = {key: os.environ[key] for key in keys}
+          record['runner_platform'] = platform.platform()
+          Path('work/docker-reproduction/run.json').write_text(json.dumps(record, indent=2) + '\n')
+          PY
+      - name: Build Ubuntu image from this commit
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker build --pull --progress plain \
+            --label "org.opencontainers.image.revision=$GITHUB_SHA" \
+            --iidfile work/docker-reproduction/image-id.txt \
+            -t pathology-edge:verification . 2>&1 | tee work/docker-reproduction/build.log
+          IMAGE_ID="$(cat work/docker-reproduction/image-id.txt)"
+          test "$(docker image inspect --format '{{index .Config.Labels "org.opencontainers.image.revision"}}' "$IMAGE_ID")" = "$GITHUB_SHA"
+          docker image inspect --format '{{json .}}' "$IMAGE_ID" > work/docker-reproduction/image.json
+      - name: Verify inside the built image
+        id: checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          IMAGE_ID="$(cat work/docker-reproduction/image-id.txt)"
+          docker run --rm --network none \
+            --mount "type=bind,src=$PWD/work/docker-reproduction,dst=/evidence" \
+            "$IMAGE_ID" bash scripts/check_docker.sh /evidence \
+            2>&1 | tee work/docker-reproduction/container.log
+      - name: Upload build and verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-reproduction-${{ github.sha }}-${{ github.run_attempt }}
+          path: work/docker-reproduction/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Summarize scope
+        if: always()
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          CHECKS_OUTCOME: ${{ steps.checks.outcome }}
+          EXECUTION_OWNER: ${{ inputs.execution_owner }}
+        run: |
+          {
+            printf '## Docker reproduction\n\n'
+            printf -- '- Source commit: `%s`\n' "$GITHUB_SHA"
+            printf -- '- Initiator label: `%s` (see contribution record for confirmation)\n' "$EXECUTION_OWNER"
+            printf -- '- Docker build: **%s**\n' "$BUILD_OUTCOME"
+            printf -- '- Checks inside image: **%s**\n' "$CHECKS_OUTCOME"
+            printf '\nChecks: tracked source hashes, locked packages, Python/C++ imports, full pytest without skips, stored Dice 42/6, static demo, and default HTTP server.\n'
+            printf '\nNo dataset training, new dataset evaluation, browser interaction, or deployment. Unit tests may run synthetic model operations.\n'
+            printf '\nDownload the evidence artifact above; retained for 30 days.\n'
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-11",
+  "scope": "Manual GitHub-hosted Ubuntu Docker reproduction; preparation only",
+  "base_commit": "2194ac9c9d3945cda5e7f24d7e4dcde4fbbe7d60",
+  "implementation_owner": "Codex",
+  "workflow": ".github/workflows/docker-reproduction.yml",
+  "container_checks": "scripts/check_docker.sh",
+  "local_checks": {
+    "workflow_yaml_parsed": true,
+    "shell_and_inline_python_syntax": true,
+    "tests_passed": 201,
+    "pytest_seconds": 11.76,
+    "protected_files_checked": 2392,
+    "protected_files_changed": 0,
+    "git_diff_check": true
+  },
+  "docker_execution_status": "pending actual hosted run",
+  "user_docker_execution": false,
+  "user_result_review": false,
+  "new_dataset_experiment": false,
+  "interview_writing": "deferred at user request",
+  "independent_review": {
+    "reviewer": "docker_workflow_review",
+    "blocking_or_actionable_findings": 0,
+    "shell_inline_python_yaml_and_diff_checked": true,
+    "docker_run_performed_by_reviewer": false
+  }
+}

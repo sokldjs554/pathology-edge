@@ -1,16 +1,20 @@
 # 49단계: 검토한 재현 로그 PR 병합
 
-상태: **사용자 병합 예정**. [PR #1](https://github.com/sokldjs554/pathology-edge/pull/1)의 생성·본문 등록을 확인했습니다. 사용자 “했어” 보고 뒤 GitHub에서 본문이 저장됐음을 직접 확인했습니다. 면접 문장 작성은 계속 보류합니다.
+상태: **사용자 병합 완료·GitHub 대조 완료**. 사용자 “응 완료했어” 보고 뒤 [PR #1](https://github.com/sokldjs554/pathology-edge/pull/1)의 `merged: true`를 확인했습니다. 2026-11-11 06:32:32 UTC에 병합됐으며, 병합 커밋은 `2194ac9c9d3945cda5e7f24d7e4dcde4fbbe7d60`입니다. 면접 문장 작성은 계속 보류합니다.
 
-## 지금 할 일 하나
+병합 직후 main이 해당 커밋임을 확인했고, 사용자 로그9개의 내용은 검토한 head `e081406`과 같습니다. [병합 후 CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/42973159430)도 성공했습니다. Codex는 병합을 대행하지 않았습니다. [병합 확인 기록](../artifacts/learning/step49-review.json).
+
+아래는 완료한 조작의 기록입니다. 다시 실행할 필요가 없습니다. 다음은 [50단계 Docker 재현](STEP_50.md)입니다.
+
+## 사용자가 완료한 조작
 
 1. [PR #1](https://github.com/sokldjs554/pathology-edge/pull/1)의 Conversation 화면 아래로 이동합니다.
 2. **Merge pull request**를 누릅니다.
 3. 나오는 확인 화면에서 **Confirm merge**를 누릅니다. 커밋 메시지·Extended description은 추가로 수정할 필요가 없습니다.
 
-이번에는 변경 범위와 검사를 확인한 뒤 실제 병합을 수행하는 단계입니다. 앞선 화면에서 PR 본문을 입력하려던 상황과 구분합니다. 완료되면 보라색 **Merged** 상태 또는 **Pull request successfully merged and closed** 문구가 표시됩니다. 그 상태를 알려 주세요. 이 단계에는 브랜치 삭제나 Codespaces 폴더 갱신을 포함하지 않습니다.
+이 단계에서는 변경 범위와 검사를 확인한 뒤 실제 병합을 수행했습니다. 앞선 화면에서 PR 본문을 입력하려던 상황과 구분합니다. 완료되면 보라색 **Merged** 상태 또는 **Pull request successfully merged and closed** 문구가 표시됩니다. 사용자는 완료를 보고했고 GitHub에서 Merged 상태를 대조했습니다. 이 단계에는 브랜치 삭제나 Codespaces 폴더 갱신을 포함하지 않습니다.
 
-버튼이 비활성화됐거나 충돌·검사 대기·권한 오류가 나오면 표시 문구를 보내 주세요. 강제 병합이나 규칙 우회는 안내하지 않습니다. 사용자 U61은 GitHub에서 실제 병합 상태를 확인한 뒤 완료로 기록합니다.
+사용자 U61은 완료 보고와 실제 GitHub 병합 상태를 함께 확인한 뒤 완료로 변경했습니다. 브랜치 삭제나 Codespaces 폴더 갱신은 수행한 것으로 기록하지 않습니다.
 
 ## 확인한 근거
 

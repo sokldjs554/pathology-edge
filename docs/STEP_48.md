@@ -1,6 +1,6 @@
 # 48단계: 재현 로그 PR 만들기
 
-상태: **[PR #1](https://github.com/sokldjs554/pathology-edge/pull/1) 생성·본문 저장 확인 완료**. 사용자 완료 보고 후 실제 PR 본문 저장과 검사 성공을 확인했습니다. 현재 할 일은 [49단계 병합](STEP_49.md)이며 아직 병합은 수행하지 않았습니다. 사용자 commit·push 보고의 브랜치 `review/ubuntu-QEoc7d`와 커밋 `e0814061d9fee08bb0324d331d4d08e6d62a849a`를 GitHub에서 직접 확인했습니다. 로그9개·843줄 추가이고 기존 파일 삭제는 없습니다. 면접 문장 작성은 계속 보류합니다.
+상태: **[PR #1](https://github.com/sokldjs554/pathology-edge/pull/1) 생성·본문 저장 확인 완료**. 사용자 완료 보고 후 실제 PR 본문 저장과 검사 성공을 확인했습니다. 이후 [49단계 병합](STEP_49.md)도 사용자 완료 보고와 실제 GitHub 상태로 확인했습니다. 사용자 commit·push 보고의 브랜치 `review/ubuntu-QEoc7d`와 커밋 `e0814061d9fee08bb0324d331d4d08e6d62a849a`를 GitHub에서 직접 확인했습니다. 로그9개·843줄 추가이고 기존 파일 삭제는 없습니다. 면접 문장 작성은 계속 보류합니다.
 
 ## 완료한 본문 위치 안내 — 참고용
 
@@ -10,7 +10,7 @@
 2. [PR #1](https://github.com/sokldjs554/pathology-edge/pull/1)의 Conversation 탭에서 첫 설명 상자(`No description provided`) 오른쪽 위 **⋯ → Edit**를 선택합니다.
 3. 아래 제공한 본문을 붙여넣고 **Update comment**로 저장합니다. 작성 버튼 표기가 다르면 현재 설명 상자에서 보이는 문구를 알려 주세요.
 
-PR 생성 자체는 확인했습니다. 사용자가 설명을 올바른 위치에 저장했음을 확인했고 현재는 49단계에서 병합을 안내합니다. [화면·실제 PR 확인](../artifacts/learning/step48-review.json).
+PR 생성 자체는 확인했습니다. 사용자가 설명을 올바른 위치에 저장했음을 확인했고 49단계에서 실제 병합까지 확인했습니다. [화면·실제 PR 확인](../artifacts/learning/step48-review.json).
 
 ## 처음 안내한 PR 생성 절차 — 참고용
 
