@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-11-11T18:17:12.838346+00:00",
+  "basis": "User-pasted SUMMARY plus ORIGINAL_FILES_PRESERVED=true; no raw run archive received yet",
+  "reported_run": "/workspaces/pathology-edge/work/refinement-source.586qqgs1/work/my-vit-refinement.0881ce7d2afe",
+  "user_execution_success_reported": true,
+  "user_local_saved_pixel_audit_regions_reported": 60,
+  "reported_new_checkout_preserved": true,
+  "reported_original_checkout_and_exercise_preserved": true,
+  "summary_internal_arithmetic_matches": true,
+  "declared_protocol_fields_match": true,
+  "declared_initial_backbone_matches_reference": true,
+  "source_commit_expected": "1744544ec2f88bff1e3eac8a7bfe99b9335d9d48",
+  "source_commit_independently_verified": false,
+  "user_model_file_hashes_independently_verified": false,
+  "user_probabilities_independently_reaudited": false,
+  "raw_archive_received": false,
+  "training_run_by_reviewer_for_this_submission": false,
+  "prior_launcher_error_resolved_by_user_success_report": true,
+  "prior_user_file_difference_cause_confirmed": false,
+  "delta_dice": {
+    "all": 0.01982047212555127,
+    "boundary": 0.00023836781398733908,
+    "interior": 0.022524724409474062
+  },
+  "pipeline_time_delta_ms": 12.008591999801865,
+  "pipeline_time_relative_change_percent": 27.497502779998207,
+  "training_time_delta_seconds": 17.77873609300059,
+  "rss_delta_mib": 11.84765625,
+  "next_user_step": "Archive and submit this existing run only; no new training or model selection",
+  "limits": [
+    "One paired seed; same previously used validation10 images/2groups select epoch and threshold.",
+    "Boundary delta is small; no claim that boundary errors are solved or improvement generalizes.",
+    "Whole-worker RSS and CPU timings are descriptive; not a controlled speed benchmark.",
+    "User EPYC7763 run is separate from developer EPYC9V74 reference; do not pool them as extra seeds."
+  ]
+}

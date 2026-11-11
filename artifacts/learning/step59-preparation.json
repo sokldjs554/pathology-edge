@@ -1,0 +1,12 @@
+{
+  "method": "Standard-library python -m zipfile -c, exercised on the preserved development-reference run",
+  "archive": "/workspace/pathology-edge-loss/work/step59-transfer-check.p2rbljcu.zip",
+  "payload_files": 70,
+  "archive_bytes": 20102373,
+  "all_payload_hashes_match": true,
+  "source_files_unchanged": true,
+  "checkpoint_hashes_match_stored_reports": true,
+  "training_or_inference_run": false,
+  "user_export_completed": false,
+  "scope": "Packaging/transport validation only; not a new pixel audit or user original-run verification"
+}

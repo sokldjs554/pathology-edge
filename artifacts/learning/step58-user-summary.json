@@ -1,0 +1,69 @@
+{
+  "run": "/workspaces/pathology-edge/work/refinement-source.586qqgs1/work/my-vit-refinement.0881ce7d2afe",
+  "all_checks_passed": true,
+  "seed": 20261116,
+  "architecture_order": [
+    "small_vit",
+    "small_vit_refined"
+  ],
+  "rows": [
+    {
+      "architecture": "small_vit",
+      "parameter_count": 33632,
+      "best_epoch": 12,
+      "threshold": 0.35,
+      "validation_dice": {
+        "all": 0.5705653567535977,
+        "boundary": 0.5588020280045188,
+        "interior": 0.5604745004909001
+      },
+      "training_seconds": 34.85222550300023,
+      "median_pipeline_seconds": 0.04367157300021063,
+      "peak_process_rss_mib": 469.39453125,
+      "model_sha256": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898"
+    },
+    {
+      "architecture": "small_vit_refined",
+      "parameter_count": 33785,
+      "best_epoch": 14,
+      "threshold": 0.35,
+      "validation_dice": {
+        "all": 0.5903858288791489,
+        "boundary": 0.5590403958185062,
+        "interior": 0.5829992249003741
+      },
+      "training_seconds": 52.630961596000816,
+      "median_pipeline_seconds": 0.055680165000012494,
+      "peak_process_rss_mib": 481.2421875,
+      "model_sha256": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f"
+    }
+  ],
+  "image_counts": {
+    "train": 33,
+    "validation": 10,
+    "test": 7
+  },
+  "validation_groups": 2,
+  "environment": {
+    "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "cpu_count": 2,
+    "torch_threads": 4,
+    "cuda": false,
+    "cpu": "AMD EPYC 7763 64-Core Processor"
+  },
+  "test_evaluation_run": false,
+  "validation_metric_regions_checked": 60,
+  "limitation": "One fixed seed on the same previously used validation set; epoch/threshold selected there. From-scratch small segmentation adaptation, not pretrained ViT or an official paper reproduction. Parameter counts differ; training/pipeline times and absolute whole-worker RSS are descriptive. No independent test, external data or clinical validation; no claim that ViTs in general are better/worse.",
+  "delta_refined_minus_baseline": {
+    "all": 0.01982047212555127,
+    "boundary": 0.00023836781398733908,
+    "interior": 0.022524724409474062
+  },
+  "comparison": "refinement",
+  "initial_backbone_sha256": "b1d2e64db14c0e4dcb9b4dfa23967a9293001bc50c2fa3cf0291f8aaa9f075d1",
+  "original_files_preserved": true
+}
