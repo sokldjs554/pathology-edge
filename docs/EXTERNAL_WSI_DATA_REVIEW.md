@@ -74,11 +74,11 @@ TCGA case ID는 slide filename의 앞 세 barcode 요소이다. 다음 장기·p
 
 모델 결과를 보기 전에 고정해야 할 항목은 다음과 같다.
 
-1. 사용할 기존 CNN/ViT checkpoint의 실제 SHA-256, TNBC 학습 split·seed·code version. 외부 14장은 새 학습·early stopping·threshold 선택에 사용하지 않는다.
+1. 사용할 기존 기준 ViT/보정 ViT checkpoint의 실제 SHA-256, TNBC 학습 split·seed·code version. 외부 14장은 새 학습·early stopping·threshold 선택에 사용하지 않는다.
 2. 이미지 크기를 유지한 tile size/stride/Hann window/padding/crop, 기존 threshold, stain preprocessing 여부, 채택한 XML rasterizer. native MPP를 기록하되 TNBC MPP가 미상인 상태에서 물리 해상도가 일치한다고 주장하지 않는다.
 3. 제공 test 14장 모두를 평가하고 제외 기준은 처리 불가 파일·명백한 pairing 오류처럼 결과를 보지 않은 기술 기준으로 한정한다.
 4. 전체 foreground Dice/IoU와 동일한 tile-grid seam band의 Dice, seam 외 영역 Dice를 per case 및 집계로 저장한다. seam band Dice는 핵 윤곽 surface Dice와 다른 지표다.
-5. overlap minus non-overlap을 같은 image/model에서 쌍으로 계산한다. 두 모델의 비교는 그 delta의 차이로 요약한다. 이미지와 seed 수를 혼동하지 않으며 14 case를 bootstrap 단위로 쓴다. 장기별 1–3 case는 탐색적 결과이다.
+5. 실제 실행에서는 두 고정 모델 모두 no_overlap으로 처리하고 같은 이미지의 보정−기준 Dice를 비교했다. overlap−no_overlap 추가 비교와 case bootstrap은 수행하지 않았다. 이미지와 seed 수를 혼동하지 않으며 장기별 1–3 case를 독립된 충분한 장기별 검증으로 보지 않는다.
 6. 원본, masks, model/protocol hashes, per-case 수치, 실패·제외 목록을 기록한다. 대표 예시는 성공/실패를 모두 사전 규칙으로 고르며 임의의 좋은 사례만 남기지 않는다.
 
 이 평가는 “TNBC 학습 모델의 MoNuSeg test ROI zero-shot foreground segmentation”이다. 임상 유효성·핵 유형 분류·모든 기관의 일반화·WSI 전체 정확도는 별도 주장이다.

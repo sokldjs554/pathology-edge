@@ -38,7 +38,7 @@
 | `roi_points_to_level0` 연결 본문 | 모델 입력 크기와 실제 읽은 ROI 크기로 축별 scale을 계산해 기존 좌표 함수에 전달 | 8 passed | [코드](../src/pathology_edge/learner_wsi.py), [검토](../artifacts/learning/step40-review.json) |
 | `LocalResidualHead.__init__/forward` | 3×3 Conv 1→8→1, ReLU, 마지막 층 0 초기화, 원 logits에 잔차 합산. 총 153파라미터 | 13 passed | [코드](../src/pathology_edge/learner_refinement.py), [제출·통합 검사](../artifacts/learning/step57-accepted-review.json) |
 
-보정 head는 제공된 설계·계약을 따라 작성한 모델 구성요소입니다. 입력 검증 helper와 ViT backbone·학습 실행기는 제공 구현이며, 전체 모델을 독자 설계했다고 쓰지 않습니다. head는 각 128px 입력 타일 안에서 동작하므로 인접한 별도 타일을 직접 연결하지 않습니다.
+보정 head는 제공된 설계·계약을 따라 작성한 모델 구성요소입니다. 입력 검증 helper와 ViT backbone·학습 실행기는 제공 구현이며, 전체 모델을 독자 설계했다고 쓰지 않습니다. 여기서 보정은 공간 잔차를 더하는 처리이며 예측 점수의 확률 보정을 뜻하지 않습니다. head는 각 128px 입력 타일 안에서 동작하므로 인접한 별도 타일을 직접 연결하지 않습니다.
 
 ## 개인이 실행하고 제출한 실험·재현 작업
 

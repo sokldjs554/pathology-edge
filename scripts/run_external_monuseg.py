@@ -57,7 +57,28 @@ def audit(output):
         raise ValueError('External image IDs/counts differ from complete14-image protocol')
     if protocol['models'] != EXPECTED_MODELS or protocol['threshold'] != .35:
         raise ValueError('Prespecified model/threshold changed')
+    status = json.loads((out / 'status.json').read_text())
+    if status.get('completed') is not True or status.get('returncode') != 0:
+        raise ValueError('A failed or incomplete run cannot pass the audit')
+    source_hashes = {p.name: digest(p) for p in sorted((out/'source/pathology_edge').glob('*.py'))}
+    if source_hashes != protocol['source_sha256'] or digest(out/'runner.py') != protocol['runner_sha256']:
+        raise ValueError('Frozen source or runner differs from protocol')
+    required = {f'source/pathology_edge/{name}' for name in source_hashes}
+    for architecture, sha in EXPECTED_MODELS.items():
+        name = f'models/{architecture}.pt'
+        if digest(out/name) != sha:
+            raise ValueError('Fixed checkpoint differs')
+        required.add(name)
+    for row in report['rows']:
+        if set(row['models']) != set(EXPECTED_MODELS):
+            raise ValueError('Model result set differs')
+        required.add(row['target'])
+        required.update(v['probability'] for v in row['models'].values())
+    if not required <= set(report['files']):
+        raise ValueError('Required result assets missing from file manifest')
     for name, sha in report['files'].items():
+        if not (out/name).resolve().is_relative_to(out.resolve()):
+            raise ValueError('Result asset escapes the run directory')
         if digest(out / name) != sha:
             raise ValueError(f'Changed result file: {name}')
     from pathology_edge.patches import boundary_mask
@@ -157,7 +178,7 @@ def worker(output):
                   external_threshold_selection=False, whole_wsi_validation=False,
                   clinical_validation=False, timing_scope='Single descriptive inference per image; not a speed benchmark')
     save(out / 'results.json', report)
-    print(json.dumps(audit(out)), flush=True)
+    print(json.dumps(dict(inference_finished=True, images=len(rows))), flush=True)
 
 
 def run(data, model_run, tnbc, output):
@@ -221,7 +242,12 @@ def run(data, model_run, tnbc, output):
     save(out / 'status.json', dict(completed=proc.returncode == 0, returncode=proc.returncode))
     if proc.returncode:
         raise RuntimeError(f'External evaluation failed; retained evidence at {out}')
-    return audit(out)
+    try:
+        return audit(out)
+    except BaseException as exc:
+        save(out / 'status.json', dict(completed=False, returncode=proc.returncode,
+                                      phase='audit', error=type(exc).__name__, message=str(exc)))
+        raise
 
 
 if __name__ == '__main__':

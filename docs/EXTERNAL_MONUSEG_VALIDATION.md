@@ -35,7 +35,7 @@
 
 [원시 결과 ZIP](../artifacts/experiments/external-monuseg-20261111/evidence.zip)에는 동결 소스, 두 모델, 원시 확률28개, 변환한 정답14개, protocol·결과·실행 로그가 들어 있다. 원본 TIFF/XML은 공식 출처에서 받을 수 있으며 ZIP·파일 SHA를 제공한다. [파일 SHA](../artifacts/experiments/external-monuseg-20261111/file-manifest.json) · [ZIP SHA](../artifacts/experiments/external-monuseg-20261111/archive.json) · [감사 결과](../artifacts/experiments/external-monuseg-20261111/audit.json).
 
-별도 재계산에서 원본 ZIP28파일, polygon6,697개에서 재생성한 마스크14개, 확률28개에서 계산한 **84영역의 TP/FP/FN·Dice·IoU·precision/recall 및6평균**, 차이와 상승/하락 개수가 모두 일치했다. 재사용 검사기의 입력 ZIP 연결과 전체14장·차이 집계 검증도 회귀 테스트로 보완했다. 과거 실행기의 원본은 ZIP에 그대로 남기고, 수정한 신뢰 검사기로 기존 결과를 다시 감사했다. 모델 재추론은 하지 않았다.
+별도 재계산에서 원본 ZIP28파일, polygon6,697개에서 재생성한 마스크14개, 확률28개에서 계산한 **84영역의 TP/FP/FN·Dice·IoU·precision/recall 및6평균**, 차이와 상승/하락 개수가 모두 일치했다. 재사용 검사기의 입력 ZIP 연결, 전체14장·차이 집계, 성공 상태, 고정 모델·소스·runner SHA와 필수 파일 목록 검사도 회귀 테스트로 보완했다. 과거 실행기의 원본은 ZIP에 그대로 남기고, 수정한 신뢰 검사기로 기존 결과를 다시 감사했다. 모델 재추론은 하지 않았다.
 
 저장소 루트에서 새 실행은 `scripts/run_external_monuseg.py --data <공식압축해제폴더> --model-run <사용자보정run> --tnbc <TNBC폴더> --output <새폴더>`로 수행한다. 같은 Python 환경과 `PYTHONPATH=src`를 사용한다. ZIP을 푼 결과는 `PYTHONPATH=src python scripts/run_external_monuseg.py --audit <압축해제폴더>`로 새 추론 없이 검사한다.
 

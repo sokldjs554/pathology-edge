@@ -88,33 +88,73 @@ def test_extracted_payload_must_match_archive(tmp_path):
         module.verify_payloads(data, archive)
 
 
-@pytest.mark.parametrize('damage', ['missing_image', 'duplicate_image', 'wrong_delta', 'wrong_wins'])
-def test_audit_rejects_incomplete_or_misaggregated_external_results(tmp_path, damage):
+def external_fixture(tmp_path):
     from PIL import Image
     from pathology_edge.external_validation import score_probability
     module = runner()
+    (tmp_path/'models').mkdir()
+    (tmp_path/'source/pathology_edge').mkdir(parents=True)
+    for a in module.EXPECTED_MODELS:
+        (tmp_path/'models'/f'{a}.pt').write_bytes(a.encode())
+    # A small synthetic fixed model identity; no checkpoint is deserialized.
+    module.EXPECTED_MODELS = {a:module.digest(tmp_path/'models'/f'{a}.pt') for a in module.EXPECTED_MODELS}
+    (tmp_path/'source/pathology_edge/model.py').write_text('frozen synthetic source')
+    (tmp_path/'runner.py').write_text('frozen synthetic runner')
     protocol = {'images': [{'id': str(i), 'case_id': str(i)} for i in range(14)],
-                'threshold': .35, 'models': module.EXPECTED_MODELS, 'image_count': 14, 'case_count': 14}
-    module.save(tmp_path / 'protocol.json', protocol)
+                'threshold': .35, 'models': module.EXPECTED_MODELS, 'image_count': 14, 'case_count': 14,
+                'source_sha256': {'model.py': module.digest(tmp_path/'source/pathology_edge/model.py')},
+                'runner_sha256': module.digest(tmp_path/'runner.py')}
+    module.save(tmp_path/'protocol.json', protocol)
+    module.save(tmp_path/'status.json', {'completed':True, 'returncode':0})
     target = np.zeros((256, 256), bool)
     target[10:20, 10:20] = True
-    Image.fromarray(target.astype(np.uint8)*255).save(tmp_path / 'target.png')
+    Image.fromarray(target.astype(np.uint8)*255).save(tmp_path/'target.png')
     probability = target.astype(np.float32)
-    np.savez_compressed(tmp_path / 'prediction.npz', probability=probability)
+    np.savez_compressed(tmp_path/'prediction.npz', probability=probability)
     metrics = score_probability(probability, target, .35)
     rows = [{'id': str(i), 'case_id': str(i), 'target': 'target.png',
              'models': {a: {'probability': 'prediction.npz', 'metrics': metrics}
                         for a in module.EXPECTED_MODELS}} for i in range(14)]
+    assets = ['target.png','prediction.npz','source/pathology_edge/model.py'] + [f'models/{a}.pt' for a in module.EXPECTED_MODELS]
     report = {'rows': rows, 'protocol_sha256': module.digest(tmp_path/'protocol.json'),
-              'files': {'target.png': module.digest(tmp_path/'target.png'),
-                        'prediction.npz': module.digest(tmp_path/'prediction.npz')},
+              'files': {n:module.digest(tmp_path/n) for n in assets},
               'means': {a: {r: 1.0 for r in ('all','boundary','interior')} for a in module.EXPECTED_MODELS},
               'delta_refined_minus_baseline': {r: 0.0 for r in ('all','boundary','interior')},
               'wins_ties_losses': {r: [0,14,0] for r in ('all','boundary','interior')}}
+    module.save(tmp_path/'results.json', report)
+    return module, report
+
+
+@pytest.mark.parametrize('damage', ['missing_image', 'duplicate_image', 'wrong_delta', 'wrong_wins'])
+def test_audit_rejects_incomplete_or_misaggregated_external_results(tmp_path, damage):
+    module, report = external_fixture(tmp_path)
     if damage == 'missing_image': report['rows'].pop()
     if damage == 'duplicate_image': report['rows'][-1] = report['rows'][0]
     if damage == 'wrong_delta': report['delta_refined_minus_baseline']['all'] = 123
     if damage == 'wrong_wins': report['wins_ties_losses']['all'] = [14,0,0]
     module.save(tmp_path/'results.json', report)
     with pytest.raises(ValueError, match='image|aggregate'):
+        module.audit(tmp_path)
+
+
+def test_complete_external_evidence_audits_without_model_execution(tmp_path):
+    module, _ = external_fixture(tmp_path)
+    assert module.audit(tmp_path)['region_checks'] == 84
+
+
+@pytest.mark.parametrize('damage', ['failed_status','omitted_target','unlisted_altered_model','altered_source','altered_runner'])
+def test_audit_rejects_incomplete_provenance(tmp_path, damage):
+    module, report = external_fixture(tmp_path)
+    if damage == 'failed_status': module.save(tmp_path/'status.json', {'completed':False,'returncode':1})
+    if damage == 'omitted_target': report['files'].pop('target.png')
+    if damage == 'unlisted_altered_model':
+        report['files'].pop('models/small_vit.pt')
+        (tmp_path/'models/small_vit.pt').write_bytes(b'other checkpoint')
+    if damage == 'altered_source':
+        name = 'source/pathology_edge/model.py'
+        (tmp_path/name).write_text('altered')
+        report['files'][name] = module.digest(tmp_path/name)
+    if damage == 'altered_runner': (tmp_path/'runner.py').write_text('altered')
+    module.save(tmp_path/'results.json', report)
+    with pytest.raises(ValueError):
         module.audit(tmp_path)
