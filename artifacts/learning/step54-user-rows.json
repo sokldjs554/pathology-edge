@@ -1,0 +1,73 @@
+{
+  "evidence_type": "User-pasted six-decimal per-image display; full-precision training.json not directly accessed",
+  "run": "/workspaces/pathology-edge/work/vit-source.tdbTh0/work/my-cnn-vit.4de29faebea2",
+  "display_decimals": 6,
+  "rows": [
+    {
+      "id": "08_1",
+      "tiny_unet_dice": 0.636411,
+      "small_vit_dice": 0.681085,
+      "delta_vit_minus_cnn": 0.044673
+    },
+    {
+      "id": "08_2",
+      "tiny_unet_dice": 0.58204,
+      "small_vit_dice": 0.673421,
+      "delta_vit_minus_cnn": 0.091381
+    },
+    {
+      "id": "08_3",
+      "tiny_unet_dice": 0.528799,
+      "small_vit_dice": 0.607406,
+      "delta_vit_minus_cnn": 0.078607
+    },
+    {
+      "id": "08_4",
+      "tiny_unet_dice": 0.433865,
+      "small_vit_dice": 0.583037,
+      "delta_vit_minus_cnn": 0.149172
+    },
+    {
+      "id": "09_1",
+      "tiny_unet_dice": 0.402373,
+      "small_vit_dice": 0.34422,
+      "delta_vit_minus_cnn": -0.058153
+    },
+    {
+      "id": "09_2",
+      "tiny_unet_dice": 0.416992,
+      "small_vit_dice": 0.422238,
+      "delta_vit_minus_cnn": 0.005246
+    },
+    {
+      "id": "09_3",
+      "tiny_unet_dice": 0.511776,
+      "small_vit_dice": 0.527342,
+      "delta_vit_minus_cnn": 0.015566
+    },
+    {
+      "id": "09_4",
+      "tiny_unet_dice": 0.633186,
+      "small_vit_dice": 0.607646,
+      "delta_vit_minus_cnn": -0.02554
+    },
+    {
+      "id": "09_5",
+      "tiny_unet_dice": 0.526927,
+      "small_vit_dice": 0.478979,
+      "delta_vit_minus_cnn": -0.047948
+    },
+    {
+      "id": "09_6",
+      "tiny_unet_dice": 0.36531,
+      "small_vit_dice": 0.651067,
+      "delta_vit_minus_cnn": 0.285758
+    }
+  ],
+  "reported_wins_ties_losses": [
+    7,
+    0,
+    3
+  ],
+  "normalization": "Ignored the leading non-table fragment; preserved all ten data rows and the reported 7/0/3 aggregate."
+}

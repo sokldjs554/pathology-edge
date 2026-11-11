@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-11",
+  "user_contribution_id": "U67",
+  "status": "Per-image output submission confirmed; counts and means checked within display rounding",
+  "user_output": "step54-user-rows.json",
+  "checks": {
+    "expected_ten_unique_ids": true,
+    "finite_scores_in_unit_interval": true,
+    "row_deltas_consistent_with_six_decimal_rounding": true,
+    "reported_seven_zero_three_matches": true,
+    "both_image_macro_means_match_summary_within_rounding": true,
+    "mean_delta_matches_summary_within_rounding": true
+  },
+  "means_from_displayed_values": {
+    "tiny_unet": 0.5037679,
+    "small_vit": 0.5576441,
+    "delta": 0.0538762
+  },
+  "improved_ids": [
+    "08_1",
+    "08_2",
+    "08_3",
+    "08_4",
+    "09_2",
+    "09_3",
+    "09_6"
+  ],
+  "worsened_ids": [
+    "09_1",
+    "09_4",
+    "09_5"
+  ],
+  "largest_improvement": {
+    "id": "09_6",
+    "displayed_delta": 0.285758
+  },
+  "largest_decline": {
+    "id": "09_1",
+    "displayed_delta": -0.058153
+  },
+  "limitations": [
+    "Values are rounded user output, not a re-audit of probability arrays or exact metrics.",
+    "Per-image rows describe all-image Dice only; per-image boundary/interior outcomes were not submitted.",
+    "No causal error diagnosis from images/GT overlays was performed.",
+    "One paired seed on reused validation with epoch/threshold selection; not independent test or clinical evidence.",
+    "The development reference run has different per-image outcomes and is preserved separately."
+  ],
+  "next_user_action": {
+    "step": 55,
+    "user_contribution_id": "U68",
+    "status": "Pending",
+    "task": "Identify the actual SmallViTSegmenter input token tensor shape for batch8, RGB128x128, 8x8 token patches and embedding32"
+  },
+  "interview_writing": "Deferred at user request"
+}

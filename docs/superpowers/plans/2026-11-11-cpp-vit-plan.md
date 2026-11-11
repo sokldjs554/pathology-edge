@@ -15,6 +15,7 @@ Already isolated at `/workspace/pathology-edge-loss`, base9ce624b; existing201te
 - [x] Receive actual C++ timing/CPU rows: eight rounded rows, two visible/affinity CPUs. Preserve separately from reference run; raw timings/hashes not received.
 - [x] User correctly distinguished extraction speed from full-inference speed; step52-review.json.
 - [x] STEP_53 user CNN/ViT execution, local audit success and both checkout-preservation reports received; arithmetic checked in step53-review.json.
-- [ ] STEP_54 user per-image validation rows and later interpretation; no rerun or new test evaluation assigned.
+- [x] STEP_54 user per-image rows received;7/0/3, rounded means/deltas match summary. No new inference.
+- [ ] STEP_55 user actual ViT token input shape explanation; pending. No interview-writing task assigned.
 
 Review focuses: mismatched token ordering, shared encoder initialization, data/seed/control drift, accepted score selected from false history, failure reported as success, accidental original-file overwrite, CPU benchmarks contaminated by concurrent training, report scope implying new test or clinical evidence.

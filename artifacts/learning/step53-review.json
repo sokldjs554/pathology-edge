@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
   "user_contribution_id": "U65",
-  "status": "User paired-model execution, result submission and local audit success reported; per-image review and interpretation pending",
+  "status": "User paired-model execution/local-audit success and subsequent per-image output submission confirmed; model-structure understanding pending",
   "evidence_type": "User-pasted SUMMARY JSON plus ORIGINAL_FILES_PRESERVED=true; no direct access to Codespaces files",
   "user_output": "step53-user-summary.json",
   "original_checkout_marker": "ORIGINAL_FILES_PRESERVED=true",
@@ -44,7 +44,7 @@
     "cause": "Not determined from summaries; execution environments differ"
   },
   "limitations": [
-    "Full per-image records, source/protocol/crop-trace hashes, epoch histories, checkpoints and raw pipeline timings have not been directly received. Local audit success is user-reported.",
+    "Rounded per-image all-Dice rows were received in STEP_54; full-precision region rows, source/protocol/crop-trace hashes, epoch histories, checkpoints and raw pipeline timings have not been directly received. Local audit success is user-reported.",
     "One paired seed on a reused validation set with epoch/threshold selection; not independent test or clinical evidence.",
     "Model parameter counts differ; recorded costs are descriptive, not an order-balanced repeat benchmark.",
     "User trained with provided architectures/training code and their previously accepted loss; not a claim that the user wrote the whole model.",
@@ -53,7 +53,7 @@
   "next_user_action": {
     "step": 54,
     "user_contribution_id": "U67",
-    "status": "Pending",
+    "status": "Completed; see step54-review.json",
     "task": "Read saved validation image-wise Dice and report all ten paired rows; no new training/inference"
   },
   "interview_writing": "Deferred at user request"
