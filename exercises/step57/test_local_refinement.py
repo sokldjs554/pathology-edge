@@ -33,6 +33,8 @@ def test_two_spatial_layers_have_expected_dimensions_and_parameters(head):
 
 
 def test_last_layer_starts_at_zero_and_preserves_raw_logits(head):
+    # Zeroing both layers could make the correction branch unable to learn.
+    assert torch.count_nonzero(head.conv1.weight) > 0
     assert torch.count_nonzero(head.conv2.weight) == 0
     assert torch.count_nonzero(head.conv2.bias) == 0
     logits = torch.linspace(-3, 4, 77).reshape(1, 1, 7, 11)
