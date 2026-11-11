@@ -1,0 +1,28 @@
+{
+  "source_commit": "f90220d2d2d352196cfd31bed896ef5a7d808ae2",
+  "run_id": 43059842027,
+  "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43059842027",
+  "status": "blocked_by_build_dns",
+  "attempts": [
+    {
+      "attempt": 1,
+      "archive_sha256": "1a6ef24352c763657b6f158e39bb23ff150e13aa2dc35b3b7479e4032b49a18c",
+      "artifact_files": 6,
+      "source_files_verified": 2924,
+      "status": "build_failed",
+      "container_checks_run": false,
+      "reason": "Ubuntu package mirror DNS resolution failed before application dependencies or tests."
+    },
+    {
+      "attempt": 2,
+      "archive_sha256": "61c63f802e6478192239a645ddbd072404d176ff7b11587cf6622eeb0c63d656",
+      "artifact_files": 6,
+      "source_files_verified": 2924,
+      "status": "build_failed",
+      "container_checks_run": false,
+      "reason": "Ubuntu package mirror DNS resolution failed before application dependencies or tests."
+    }
+  ],
+  "user_execution_confirmed": false,
+  "dataset_experiment_run": false
+}

@@ -48,3 +48,5 @@ seed20261113·20261114·20261115. 기존20261113 동결 소스·환경을 재사
 Docker는 [실행43019941310](https://github.com/sokldjs554/pathology-edge/actions/runs/43019941310)의소스 `033720d`를 검증했습니다. [20개 원본 로그](../artifacts/reproductions/docker-033720d/evidence.zip)와 소스manifest를 내려받아 저장소 파일 해시를 다시 대조했습니다. 이후 변경은 실행 증빙·문서 기록이며, 검증된 코드 해시는검증JSON에 있습니다. Docker 검사 안에서 데이터셋 학습·평가는 실행하지 않았고, 별도 개발 참고 추가4회 학습과 구분합니다.
 
 2026-11-12 후속: 사용자 원본 수신·감사와359개 일반 테스트를 완료했습니다.13개 사용자 실습 검사는 별도이며 사용자 실행 완료로 기록하지 않았습니다. [검증·대기 범위](../artifacts/learning/step57-preparation.json). 이전 Docker033720d의331개 검증과 이번 모듈 준비 소스를 구분합니다.
+
+이번 준비 소스 `f90220d`의 [원격 CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/43059841269)는 성공했습니다. [Docker 재현](https://github.com/sokldjs554/pathology-edge/actions/runs/43059842027)은 두 번 모두 Ubuntu 패키지 서버의 DNS 조회 실패로 빌드 단계에서 중단됐습니다. 따라서 이번 소스의 컨테이너 내부 검사는 미실행이며 이전 성공으로 대체하지 않습니다. [실패 원본 로그·소스 해시 대조](../artifacts/reproductions/docker-f90220d/review.json)를 보관했습니다. Docker 설정을 임의로 바꾸거나 새 실험을 실행하지 않았습니다.

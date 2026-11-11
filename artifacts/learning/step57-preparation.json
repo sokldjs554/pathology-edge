@@ -36,5 +36,44 @@
     "user_metric_regions_reaudited": 60,
     "both_roi_panels_match_pixels": true,
     "pending_stub_blocks_preflight": true
+  },
+  "docker_reproduction": {
+    "source_commit": "f90220d2d2d352196cfd31bed896ef5a7d808ae2",
+    "run_id": 43059842027,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43059842027",
+    "status": "blocked_by_build_dns",
+    "attempts": [
+      {
+        "attempt": 1,
+        "archive_sha256": "1a6ef24352c763657b6f158e39bb23ff150e13aa2dc35b3b7479e4032b49a18c",
+        "artifact_files": 6,
+        "source_files_verified": 2924,
+        "status": "build_failed",
+        "container_checks_run": false,
+        "reason": "Ubuntu package mirror DNS resolution failed before application dependencies or tests."
+      },
+      {
+        "attempt": 2,
+        "archive_sha256": "61c63f802e6478192239a645ddbd072404d176ff7b11587cf6622eeb0c63d656",
+        "artifact_files": 6,
+        "source_files_verified": 2924,
+        "status": "build_failed",
+        "container_checks_run": false,
+        "reason": "Ubuntu package mirror DNS resolution failed before application dependencies or tests."
+      }
+    ],
+    "user_execution_confirmed": false,
+    "dataset_experiment_run": false
+  },
+  "github_cpu_ci": {
+    "run_id": 43059841269,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43059841269",
+    "source_commit": "f90220d2d2d352196cfd31bed896ef5a7d808ae2",
+    "status": "success"
+  },
+  "exercise_download_verified": {
+    "source_commit": "00f64310c50e95bf0cbb35a84838ed499a8666e2",
+    "sha256": "f9466bf39394f583426195901f698a7446d94d5acf567085ba68cf5600a7eff4",
+    "cases_collected": 13
   }
 }
