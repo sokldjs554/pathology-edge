@@ -170,7 +170,7 @@ Codex 실행 로그는 사용자 실행의 증거가 아닙니다. Git 커밋 �
 
 | C91 | Codex | 병합 검증 | 사용자 완료 보고 후 실제 PR 병합·main 커밋·로그9개 동일·push CI 성공 확인 | 완료 | `step49-review.json`. PR 대리 병합·새 모델 실행 없음 |
 
-| C92 | Codex | Docker 재현 자동화 | 수동 GitHub Actions 빌드·이미지 내부 검사·로그 보존 구현 및 실제 실행 | 검증 진행 중 | `STEP_50.md`. 성공 여부는 실제 실행 후 기록. 사용자 Docker 실행·화면 확인과 구분 |
+| C92 | Codex | Docker 재현 자동화 | 수동 GitHub Actions 빌드·이미지 내부 검사·로그 보존 구현 및 실제 실행 | 완료 | `step50-review.json`, `reproductions/docker-20cc5ac/`. 소스20cc5ac 실제 이미지 빌드·컨테이너201개/skip0·Dice42/6·패키지32개·소스2722개·C++·정적/HTTP 검사 성공. 원본 ZIP 보존. 사용자 실행·화면 확인과 구분 |
 
 ## 검토 후 추가할 기록 형식
 

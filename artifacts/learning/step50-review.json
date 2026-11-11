@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-11",
+  "implementation_and_execution_owner": "Codex",
+  "run": {
+    "id": 42974715514,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/42974715514",
+    "event": "workflow_dispatch",
+    "execution_owner_input": "codex",
+    "conclusion": "success",
+    "job_id": 130370994164
+  },
+  "source_commit": "20cc5ac9f52601cacef2d41324c14a6da234c6b4",
+  "image_id": "sha256:c402d00c72a1d29212aa3aed83eab1b4967e02dd9906ae2e04071db8cc1aad90",
+  "container_os": "Ubuntu 24.04.5 LTS",
+  "container_environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/opt/venv/bin/python",
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "package": "/app/src/pathology_edge/__init__.py",
+    "cpp": "/app/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so"
+  },
+  "checks": {
+    "tests": {
+      "tests": 201,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0
+    },
+    "dice_checks": 42,
+    "mean_checks": 6,
+    "static_demo_check": true,
+    "http_index_sha256": "2933ed5cde6832a5ec7c2e51f9eb627e2b4c260628b6d30477a4f108a716a656",
+    "dataset_experiment_run": false,
+    "browser_test_run": false,
+    "unit_tests_may_run_synthetic_model_operations": true,
+    "source_files_checked_before_and_after": 2722,
+    "downloaded_source_manifest_matches_reviewed_commit": true,
+    "locked_package_versions_matched": 32,
+    "cpp_import_inside_image": true,
+    "pip_check": true
+  },
+  "pytest_seconds": 7.2,
+  "artifact": {
+    "github_id": 13835057127,
+    "zip_sha256": "ab7fee6563ebe2b15ede45e251c35a07c270a29b1448ffd688864b721ca7a163",
+    "zip_bytes": 137309,
+    "zip_file_count": 20,
+    "preserved_archive": "artifacts/reproductions/docker-20cc5ac/evidence.zip",
+    "github_retention_days": 30
+  },
+  "push_cpu_ci": {
+    "id": 42974707584,
+    "conclusion": "success",
+    "source_commit": "20cc5ac9f52601cacef2d41324c14a6da234c6b4"
+  },
+  "local_host_tests": {
+    "passed": 201,
+    "seconds": 11.76
+  },
+  "protected_scientific_files_unchanged": 2392,
+  "user_result_review": {
+    "contribution_id": "U62",
+    "status": "pending",
+    "requested_action": "Open the linked run Summary and confirm Docker build and Checks inside image both show success"
+  },
+  "user_docker_execution": false,
+  "new_dataset_experiment": false,
+  "new_browser_test": false,
+  "deployment": false,
+  "limitations": [
+    "Ubuntu tag and apt packages are not pinned by digest/version; this is evidence for the recorded image, not future byte-identical builds.",
+    "Tests may run synthetic model operations. No new dataset training or evaluation.",
+    "GitHub account names alone do not establish human execution; this run was initiated by Codex."
+  ]
+}

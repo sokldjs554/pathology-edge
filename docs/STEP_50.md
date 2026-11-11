@@ -1,6 +1,6 @@
 # 50단계: Docker 재현 결과 확인
 
-상태: **Codex 실행 준비 중 / 사용자 결과 확인 예정**. 면접 문장 작성은 보류합니다.
+상태: **Codex 실제 Docker 빌드·검사 성공 / 사용자 결과 확인 예정**. 면접 문장 작성은 보류합니다.
 
 45단계에서는 사용자가 Codespaces의 기존 패키지로 고정 소스를 재현했습니다. 이번에는 GitHub가 제공하는 Ubuntu 24.04 실행 환경에서 루트 Dockerfile을 빌드하고, 생성한 이미지 안에서 검사합니다. Codespaces에 Docker를 설치하거나 작성한 파일을 갱신할 필요가 없습니다.
 
@@ -16,11 +16,27 @@
 
 ## 지금 확인할 화면
 
-Codex의 첫 실제 실행이 끝나면 실행 링크와 확인할 상태를 여기에 기록합니다. 사용자에게는 성공한 실행의 **Summary** 확인만 배정하며 동일 빌드 반복은 요구하지 않습니다.
+1. [실제 Docker 실행 결과](https://github.com/sokldjs554/pathology-edge/actions/runs/42974715514)를 엽니다.
+2. **Summary**에서 `Docker build: success`와 `Checks inside image: success`가 모두 표시되는지 확인합니다.
+3. 두 항목이 보이는지 알려 주세요. 동일 빌드를 다시 실행할 필요는 없습니다.
+
+이 실행은 Codex가 시작했습니다. 사용자의 직접 Docker 실행으로 기록하지 않으며, 결과 화면 확인도 답변을 받은 뒤 U62에 기록합니다.
 
 나중에 직접 다시 실행하려면 [Actions → Docker reproduction](https://github.com/sokldjs554/pathology-edge/actions/workflows/docker-reproduction.yml)에서 **Run workflow → main → execution_owner: user → Run workflow**를 누릅니다. 이는 현재 과제로 배정하지 않았습니다.
 
 로그는 실행 화면 **Artifacts**의 `docker-reproduction-커밋-시도번호`에서 30일간 내려받을 수 있습니다. 실행 실패 시 실행 URL과 실패한 단계 이름을 보내면 됩니다. 실패한 빌드나 일부 검사만으로 전체 성공을 기록하지 않습니다.
+
+## 실제 확인한 결과
+
+- 소스 커밋: `20cc5ac9f52601cacef2d41324c14a6da234c6b4`
+- 이미지 ID: `sha256:c402d00c72a1d29212aa3aed83eab1b4967e02dd9906ae2e04071db8cc1aad90`
+- Ubuntu 24.04.5 / Python 3.12.3 / 고정 패키지32개 일치 / 이미지 내부 C++ import 성공
+- pytest **201 passed in 7.20s**, skip/failure/error 0개
+- 저장 Dice **42/42**, 이미지 평균 **6/6** 일치; 새 추론 없음
+- 추적 소스2,722개 검사 전후 해시 일치·정적 데모·HTTP 응답 검사 성공
+- 같은 소스의 기존 `CPU checks`도 성공
+
+[검증 기록](../artifacts/learning/step50-review.json) · [보존한 원본 로그 ZIP](../artifacts/reproductions/docker-20cc5ac/evidence.zip) · [간단한 검사 로그](../artifacts/reproductions/docker-20cc5ac/container.log). GitHub의 30일 만료와 별개로 원본 ZIP을 저장소에도 보존했습니다. 후속 문서·로그 기록 커밋과 실제 빌드한 소스 커밋을 구분합니다.
 
 ## 재현의 한계
 
