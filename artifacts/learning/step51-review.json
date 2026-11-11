@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
   "user_contribution_id": "U63",
-  "status": "User execution, successful SUMMARY, eight formatted comparison rows and CPU information confirmed; user interpretation pending",
+  "status": "User execution, successful SUMMARY, eight formatted rows and CPU information confirmed; scope interpretation completed in step52-review.json",
   "evidence_type": "User-pasted SUMMARY, not direct access to Codespaces files",
   "user_output": "step51-user-summary.json",
   "submitted_path_verbatim": "/workspaces/pathology-edge/work/my-cpp-review\\.nd9wyi24/summary.json",
@@ -29,9 +29,9 @@
     "contribution_id": "U66",
     "task": "Explain whether patch-extraction speedup implies the same whole-inference speedup",
     "new_benchmark_required": false,
-    "status": "Pending"
+    "status": "Completed; see step52-review.json"
   },
-  "user_vit_execution": "Not yet assigned or reported; implementation and reference experiment are already prepared",
+  "user_vit_execution": "STEP_53 execution assigned; no user training result received",
   "interview_writing": "Deferred at user request",
   "measurement_output": "step51-user-measurements.json",
   "observations_from_displayed_values": {

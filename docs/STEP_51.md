@@ -1,6 +1,6 @@
 # 51단계: 현재 C++ 패치 추출 성능 직접 확인
 
-상태: **사용자 실행·성공 요약·8행 비교표·CPU 정보 제출 확인 완료**. `my-cpp-review.nd9wyi24`에서8조건·검사 성공·원본 보존·오류 없음 요약과 후속 표를 받았습니다. [제출 요약](../artifacts/learning/step51-user-summary.json), [제출 수치](../artifacts/learning/step51-user-measurements.json), [확인 범위](../artifacts/learning/step51-review.json)를 기록했습니다. 반올림된 출력이며 원시 시간·소스 해시 파일에는 직접 접근하지 않았습니다. 다음 사용자 과제는 [52단계의 해석 한 질문](STEP_52.md)입니다.
+상태: **사용자 실행·성공 요약·8행 비교표·CPU 정보 제출 확인 완료**. `my-cpp-review.nd9wyi24`에서8조건·검사 성공·원본 보존·오류 없음 요약과 후속 표를 받았습니다. [제출 요약](../artifacts/learning/step51-user-summary.json), [제출 수치](../artifacts/learning/step51-user-measurements.json), [확인 범위](../artifacts/learning/step51-review.json)를 기록했습니다. 반올림된 출력이며 원시 시간·소스 해시 파일에는 직접 접근하지 않았습니다. 후속 [52단계 범위 해석](STEP_52.md)도 확인했으며 현재 과제는 [53단계 CNN–ViT 실행](STEP_53.md)입니다.
 
 ## 완료한 작업: 저장된 비교표 읽기
 

@@ -1,0 +1,22 @@
+{
+  "source_commit": "917038feb5c80b1c7175d94ba44c208d9940220d",
+  "command_sha256": "c61f5b97278762b641f06ffa89817ed12a02cf4ea23b3e35844b2654a5b35ec5",
+  "checks": {
+    "success": {
+      "exit_code": 0,
+      "before_after_records_present": true
+    },
+    "training_failure": {
+      "exit_code": 1,
+      "before_after_records_present": true
+    },
+    "original_change": {
+      "exit_code": 1,
+      "before_after_records_present": true
+    }
+  },
+  "scope": "Inline launch wrapper checked with real Git original_state and stubbed training in temporary repositories; not new model training.",
+  "user_training_run": false,
+  "launcher_sha256": "91172a9240c00b69c229df7b3dc0b92dad6b0772c5641bbd9b0b6b22994195ca",
+  "launcher_body_matches_documented_and_smoke_checked_command": true
+}
