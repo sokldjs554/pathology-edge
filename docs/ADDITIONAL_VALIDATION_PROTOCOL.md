@@ -26,6 +26,8 @@
 - [x] 외부 데이터의 공개 정답과 라이선스를 확인하고 평가 protocol을 고정한다.
 - [x] 외부 추론과 지표 감사를 실행한다.
 - [x] 실제 전체 WSI 핵 정답·임상 자원 확보 여부를 확인하고 가능한 검증과 미실시 범위를 기록한다.
-- [ ] 새 근거를 Cowork 문서에 반영하고 코드·문서·결과를 검토한다.
+- [x] 새 근거를 Cowork 문서에 반영하고 코드·문서·결과를 검토한다.
 
 실행 결과: [3개 seed](REFINEMENT_REPEATS_RESULTS.md), [외부14ROI](EXTERNAL_MONUSEG_VALIDATION.md). WSI·임상 항목의 체크는 **자원·수행 가능 범위 확인 완료**이며 검증 수행 완료가 아니다. 실제 두 검증은 자료 미확보로 미실시다.
+
+최종 코드 `69885a3`의 [Ubuntu CI](https://github.com/sokldjs554/pathology-edge/actions/runs/43082861969): **405 tests passed**, 기존 Dice42/42·평균6/6, JS구문·정적 데모 검사 통과. 초기 로컬 전체 검사의2건은 여유 디스크2GiB 미달이었으며 원인은 숨기지 않고 [검증 기록](../artifacts/experiments/additional-validation-review.json)에 남겼다. 기존 보호 파일2731개의 SHA는 모두 같다.

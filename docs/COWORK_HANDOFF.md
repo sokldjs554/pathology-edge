@@ -181,3 +181,5 @@ Patherea Breast-P1의 실제 Ki67 자료 **29case·1,330patch·19,972점**을 �
 - **공고 조건은 서로 섞지 않습니다.** [사람인 55507517](https://m.saramin.co.kr/job-search/view?cn=job-industry&cns=recently-list&rec_idx=55507517&referNonce=&t_category=job_recruit&t_content=generic)의 확인된 마감은 2026-12-06 23:59입니다. C++/Ubuntu 등 상세 기술 목록의 추가 근거인 [병역일터 별도 공고](https://work.mma.go.kr/caisBYIS/search/cygonggogeomsaekView.do?byjjeopche_cd=&cygonggo_no=2000001538893&menu_id=m_m7_1)의 전문연구요원 조건·마감은 사람인 공고에 적용하지 않습니다. [공고 대조와 출처](JOB_MATCH_2026-11-10.md).
 
 현재 확인된 장점은 작은 구성요소를 직접 구현하고, 실제 실행 결과를 제출하며, 평균과 실패 사례·속도 비용·데이터 분리·주장 범위를 함께 설명할 수 있는 근거를 쌓았다는 점입니다. 연구 경력·임상 전문성·전체 시스템 단독 개발 실적으로 바꾸지 않습니다.
+
+최신 코드 검증: [Ubuntu CI405개 통과](https://github.com/sokldjs554/pathology-edge/actions/runs/43082861969), 기존 Dice42개·평균6개 재계산 일치, 기존 보호 파일2731개 SHA변경0. 새 브라우저 검사·배포나 사용자 직접 실행 실적으로 바꾸지 않습니다. [정확한 검증 범위](../artifacts/experiments/additional-validation-review.json).

@@ -1,0 +1,20 @@
+{
+  "code_commit": "69885a3627586307b03bb6e690be649617dbf48f",
+  "ci_url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43082861969",
+  "ci_conclusion": "success",
+  "tests_passed": 405,
+  "tests_failed": 0,
+  "dice_checks": 42,
+  "mean_checks": 6,
+  "static_demo": "passed",
+  "focused_external_and_repeat_tests": 31,
+  "refinement_regions_checked": 180,
+  "external_regions_checked": 84,
+  "protected_original_files": 2731,
+  "protected_files_changed": 0,
+  "local_full_suite_initial": "391 passed;2 reproduction tests failed because free disk was below2GiB. Later full pinned Ubuntu CI passed405 tests.",
+  "clinical_validation_performed": false,
+  "whole_wsi_ground_truth_validation_performed": false,
+  "user_personally_executed_new_runs": false,
+  "browser_or_deployment_changes": false
+}
