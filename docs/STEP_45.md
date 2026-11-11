@@ -1,12 +1,12 @@
 # 45단계: 별도 소스 복사본으로 Ubuntu 재현 검사
 
-상태: **Codex 검증 완료, 사용자 실행 예정**. 44단계에서 사용자 Codespaces는 `0b1cdea`, 수정 파일은 `src/pathology_edge/learner_wsi.py` 하나, 작업 폴더 여유 공간은 약26GB라는 보고를 받았습니다. Docker 실행 파일은 현재 경로에서 찾지 못했습니다. 43단계 면접 문장 작성은 계속 보류합니다.
+상태: **사용자 실행·성공 JSON 보고 확인 완료**. `my-ubuntu-repro.xzo4_nb_`에서 고정 소스 191개 테스트·Dice42/6·C++ 빌드·정적 데모 검사와 원본 보존 성공을 보고했습니다. [제출 요약](../artifacts/learning/step45-user-summary.json) · [검토 기록](../artifacts/learning/step45-review.json). 현재 할 일은 [46단계 PR용 로그 준비](STEP_46.md)이며 아래 재현 명령은 다시 실행하지 않습니다. 44단계에서 사용자 Codespaces는 `0b1cdea`, 수정 파일은 `src/pathology_edge/learner_wsi.py` 하나, 작업 폴더 여유 공간은 약26GB라는 보고를 받았습니다. Docker 실행 파일은 현재 경로에서 찾지 못했습니다. 43단계 면접 문장 작성은 계속 보류합니다.
 
-## 이번에 할 일 하나
+## 완료한 실행 절차 — 참고용
 
 현재 Ubuntu·Python 환경으로 **고정된 공개 소스 복사본을 검증**합니다. 기존 저장소를 갱신하거나 Python 패키지를 재설치하지 않습니다. 검증 대상은 제출 코드가 검토·반영된 소스 커밋 `9c55480fc721d23160016e1c472b9bdcc8f8eb21`입니다. 이후 추가한 안내 문서·재현 도구의 커밋과 구분합니다.
 
-**위치:** 기존 Codespaces Bash 터미널, `/workspaces/pathology-edge` 저장소 루트. 아래 블록 전체를 한 번 실행해 주세요.
+**위치:** 기존 Codespaces Bash 터미널, `/workspaces/pathology-edge` 저장소 루트. 아래는 완료한 실행 명령입니다.
 
 ```bash
 (
@@ -34,9 +34,9 @@ python -u "$REPRO_SCRIPT"
 
 전체 테스트에는 작은 합성 입력으로 모델 연산·학습 함수를 확인하는 검사가 포함됩니다. 새로운 TNBC 학습·테스트 성능 실험, WSI 추론, 브라우저 조작, Docker 이미지 빌드는 수행하지 않습니다. 정적 데모 검사는 실제 브라우저 화면 검사와 다릅니다.
 
-## 보내 줄 결과
+## 제출 완료한 결과와 검사 기준
 
-마지막 **`SUMMARY` 아래 JSON 전체**를 보내 주세요. `run`에 로그 경로가 포함됩니다. 기대 결과는 다음과 같습니다.
+마지막 `SUMMARY` JSON 전체를 받았습니다. 제출값은 아래 기준과 모두 일치합니다. 사용자 실행 폴더의 원본 로그를 Codex가 직접 열어 본 검증과 구분합니다.
 
 - `all_checks_passed: true`
 - `original_files_preserved: true`
@@ -45,7 +45,7 @@ python -u "$REPRO_SCRIPT"
 - `dice_checks: 42`, `mean_checks: 6`, `cpp_rebuilt: true`, `static_demo_check: true`
 - `docker_build_run: false`
 
-오류가 나면 자동 설치·재시도 대신 JSON과 오류 마지막 부분을 보내 주세요. 버전 불일치도 원본 환경을 바꾸지 않고 중단합니다. JSON이 나오기 전 실패했다면 마지막 출력만 보내면 됩니다. 사용자 U57은 성공·실패 출력을 받기 전까지 예정입니다.
+오류가 나면 자동 설치·재시도 대신 JSON과 오류 마지막 부분을 보내 주세요. 버전 불일치도 원본 환경을 바꾸지 않고 중단합니다. JSON이 나오기 전 실패했다면 마지막 출력만 보내면 됩니다. 사용자 U57은 성공 보고를 받아 완료로 기록했습니다.
 
 ## 역할과 Codex 검증
 

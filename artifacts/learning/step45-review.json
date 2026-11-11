@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U57",
+  "status": "User Ubuntu reproduction execution and success report confirmed",
+  "evidence_type": "User-pasted SUMMARY JSON, not direct access to Codespaces files",
+  "user_output": "step45-user-summary.json",
+  "format_normalization": "The Markdown-escaped underscore at the end of the submitted run path was normalized to a literal underscore.",
+  "checks_on_report": {
+    "source_commit_matches_pinned_runner": true,
+    "original_commit_matches_previous_short_head": true,
+    "exact_191_tests_without_skips_failures_errors": true,
+    "stored_dice_42_and_means_6": true,
+    "all_expected_check_flags_true": true,
+    "original_preservation_reported": true,
+    "docker_and_new_dataset_experiment_false": true,
+    "python_environment_matches_previously_reported_codespaces": true
+  },
+  "limitations": [
+    "User raw logs, original before/after hash records and environment were not independently accessed.",
+    "This verifies source at 9c55480 using existing packages, not every newer commit or a clean installation.",
+    "No Docker image build, browser interaction or new TNBC/WSI/IHC dataset experiment is reported. Unit tests may exercise synthetic model operations."
+  ],
+  "new_work_this_turn": "Review summary against pinned helper and earlier source/environment report; prepare isolated local PR evidence branch instructions; no new model runtime tests.",
+  "next_user_action": {
+    "step": 46,
+    "contribution_id": "U58",
+    "status": "Pending",
+    "task": "Prepare an isolated local branch staging the nine actual reproduction evidence files; submit folder/branch/diffstat before commit or PR."
+  },
+  "step43_interview_status": "Deferred at user request"
+}
