@@ -1,0 +1,60 @@
+{
+  "reviewed_at_utc": "2026-11-11T18:28:22.976683+00:00",
+  "archive_sha256": "a9d7a597e21528cbb81e07e881ed9f55fd13e6ef5fdcb299991c265ee65d17d1",
+  "archive_bytes": 20031212,
+  "payload_files": 70,
+  "archive_entries": 77,
+  "user_supplied_archive_sha_matches": true,
+  "source_commit": "1744544ec2f88bff1e3eac8a7bfe99b9335d9d48",
+  "source_python_files_match_pinned": 21,
+  "runner_matches_pinned": true,
+  "model_file_hashes_match_submitted_summary": true,
+  "source_data_and_crop_trace_audits_passed": true,
+  "validation_metric_regions_reaudited": 60,
+  "validation_macro_means_recomputed": 6,
+  "all_submitted_summary_fields_match_except_relocated_run_path": true,
+  "new_checkout_before_after_match": true,
+  "original_checkout_and_exercise_before_after_match": true,
+  "raw_submitted_file_sha_matches": true,
+  "normalized_submitted_class_matches": true,
+  "received_successful_run_class_difference": "Only the retained scaffold class docstring differs from the accepted class; executable AST matches. The file at the earlier failed attempt was not separately captured.",
+  "original_archive_preserved_byte_for_byte": true,
+  "new_training_run": false,
+  "model_checkpoint_deserialization_run": false,
+  "inference_run": false,
+  "test_evaluation_run": false,
+  "uploaded_code_executed": false,
+  "counts": {
+    "train": 33,
+    "validation": 10,
+    "test": 7
+  },
+  "validation_groups": 2,
+  "seed": 20261116,
+  "whole_image_wins_ties_losses": [
+    9,
+    0,
+    1
+  ],
+  "boundary_wins_ties_losses": [
+    6,
+    0,
+    4
+  ],
+  "worst_whole_image": "09_1",
+  "best_whole_image": "09_6",
+  "limits": [
+    "Same reused validation10 images/2groups and one paired seed; selected epoch/threshold scores.",
+    "Small positive mean boundary delta is not consistent improvement across images or proof of solved boundary errors.",
+    "No independent test, external or clinical validation.",
+    "User and developer runs have different environments; keep them separate, not extra seeds."
+  ],
+  "independent_review": {
+    "important_findings": 0,
+    "validation_regions_reaudited": 60,
+    "payload_hashes_verified": 70,
+    "source_files_verified": 21,
+    "runner_verified": true,
+    "training_inference_or_checkpoint_loading": false
+  }
+}

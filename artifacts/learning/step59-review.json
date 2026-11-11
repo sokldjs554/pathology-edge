@@ -1,0 +1,11 @@
+{
+  "user_zip_and_sha_received": true,
+  "raw_audit_completed": true,
+  "user_additional_training_claimed": false,
+  "result_directory": "artifacts/experiments/user-vit-refinement-20261112",
+  "archive_sha256": "a9d7a597e21528cbb81e07e881ed9f55fd13e6ef5fdcb299991c265ee65d17d1",
+  "payload_files": 70,
+  "validation_metric_regions_reaudited": 60,
+  "code_and_artifacts_unchanged_except_new_evidence": true,
+  "remaining_required_user_actions": []
+}

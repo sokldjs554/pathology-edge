@@ -75,7 +75,7 @@
 | U69 | 사용자 | 방향 선택 | 남은 네 가지 보완 모두 진행 요청 | 선택 확인 | 원본 보관·새 ViT 오류 분석·직접 모델 변경·추가 seed를 요청. 실행 완료를 뜻하지 않음 |
 | U70 | 사용자 | 원본 제출 | 기존 C++·ViT 실행 원본 ZIP 제출 | 제출·원본 감사 완료 | 2026-11-12 `research-evidence.zip`112파일 수신. 두 모델SHA, C++ 원시72회와24개 표시값, ViT60영역·30개 표시값 일치. `step56-user-evidence/review.json`. 별도 터미널 성공JSON은 미제출; 업로드된 파일로 확인. 새 학습·사용자 화면 검토와 구분 |
 | U71 | 사용자 | 모델 구성요소 작성·테스트 | LocalResidualHead.__init__/forward 작성 및13개 실습 검사 | 코드·통과 보고 확인 완료 | 제출 클래스 그대로 반영. 사용자 `13 passed in 25.76s`, 별도13개 통과·실제 ViT 연결/gradient 확인. `step57-accepted-review.json`. 사용자 상세 pytest 로그는 미수신이며 실제 비교 학습은 U72로 구분 |
-| U72 | 사용자 | 모델 변경 비교 실행 | 고정 seed20261116의 SmallViT/작성한 보정 모듈 비교 | 실행·검산·보존 성공 보고 확인 | `refinement-source.586qqgs1/work/my-vit-refinement.0881ce7d2afe`; 전체+0.019820·경계+0.000238·내부+0.022525,60영역·test 평가 false·새/원래 체크아웃과 실습 파일 보존 true 보고. `step58-user-summary.json`, `step58-user-review.json`. 원본 독립 감사는 아직 미수행. 이전 오류 후 성공 보고와 당시 원인 확정을 구분 |
-| U73 | 사용자 | 원본 제출 | 완료한 보정 비교의 원본 ZIP 보관·제출 | 예정 | `STEP_59.md`. 기존 성공 실행만 압축하며 추가 학습 없음. ZIP/SHA 제출 및 원본 독립 감사 대기 |
+| U72 | 사용자 | 모델 변경 비교 실행 | 고정 seed20261116의 SmallViT/작성한 보정 모듈 비교 | 실행·검산·보존 성공 보고 확인 | `refinement-source.586qqgs1/work/my-vit-refinement.0881ce7d2afe`; 전체+0.019820·경계+0.000238·내부+0.022525,60영역·test 평가 false·새/원래 체크아웃과 실습 파일 보존 true 보고. `step58-user-summary.json`, `step58-user-review.json`. 후속 U73에서 원본 독립 감사도 완료. 이전 오류 후 성공 보고와 당시 원인 확정을 구분 |
+| U73 | 사용자 | 원본 제출 | 완료한 보정 비교의 원본 ZIP 보관·제출 | 제출·원본 감사 완료 | `refinement-evidence.nvOJR4.zip`,SHA a9d7a597…65d17d1 수신·일치.70파일·두 모델SHA·소스21개/실행기·60영역·전후 보존 기록 확인. `step59-review.json`, `USER_REFINEMENT_AUDIT.md`. 새 사용자 학습·화면 검토·결과 해석 응답으로 확대하지 않음 |
 | U05 | 사용자 | 검토·결정 | 데이터 분리·결과·한계 검토 | 예정 | 자료 제공 후 검토 예정 |
 | U00 | 사용자 | 환경 정보 | macOS 11.7.11, Python 상, NumPy·Ubuntu 사용 가능 | 확인 | 채팅 답변. 실행 검증은 아님 |

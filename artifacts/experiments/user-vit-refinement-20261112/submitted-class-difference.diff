@@ -1,0 +1,9 @@
+--- accepted
++++ submitted
+@@ -1,5 +1,5 @@
+ class LocalResidualHead(nn.Module):
+-    """Raw logits -> same-shaped raw logits."""
++    """Raw logits -> same-shaped raw logits; requirements in docs/STEP_57.md."""
+ 
+     def __init__(self):
+         super().__init__()

@@ -1,6 +1,6 @@
 # 58단계: 작성한 보정 모듈의 실제 학습 비교
 
-상태: **사용자 두 모델 학습·검산 성공 SUMMARY와 ORIGINAL_FILES_PRESERVED=true 수신 완료**. `refinement-source.586qqgs1/work/my-vit-refinement.0881ce7d2afe`의 결과를 확인했습니다. 다음은 [59단계 원본 보관](STEP_59.md)입니다. 아래 학습 명령은 기록용이며 다시 실행할 필요가 없습니다.
+상태: **사용자 두 모델 학습·검산 성공 SUMMARY와 ORIGINAL_FILES_PRESERVED=true 수신 완료**. `refinement-source.586qqgs1/work/my-vit-refinement.0881ce7d2afe`의 결과를 확인했습니다. 후속 [59단계 원본 보관·독립 감사](USER_REFINEMENT_AUDIT.md)도 완료했습니다. 아래 학습 명령은 기록용이며 다시 실행할 필요가 없습니다.
 
 ## 확인한 코드
 
@@ -59,4 +59,4 @@ SUMMARY에는 두 모델 점수·선택 epoch/threshold·SHA·초기 가중치 S
 
 ## 받은 결과와 확인 범위
 
-[사용자 SUMMARY](../artifacts/learning/step58-user-summary.json)와 [채팅 수치 검산](../artifacts/learning/step58-user-review.json)을 보관했습니다. 전체 Dice0.570565→0.590386, 경계0.558802→0.559040, 내부0.560475→0.582999입니다. 세 차이와 선언된 프로토콜·초기 가중치 SHA를 대조했습니다. 기준epoch12/보정epoch14, 둘 다threshold0.35이며60영역·test 평가 false·새 체크아웃 보존 true와 별도 원래 체크아웃/실습 파일 보존 true를 보고받았습니다. 이전 검사기 오류 후 진행 성공은 확인됐지만 당시 로컬 파일의 구체적 차이를 원인으로 확정하지 않습니다. 원본 확률·체크포인트를 직접 받아 검산하는 일은59단계로 구분합니다.
+[사용자 SUMMARY](../artifacts/learning/step58-user-summary.json)와 [채팅 수치 검산](../artifacts/learning/step58-user-review.json)을 보관했습니다. 전체 Dice0.570565→0.590386, 경계0.558802→0.559040, 내부0.560475→0.582999입니다. 세 차이와 선언된 프로토콜·초기 가중치 SHA를 대조했습니다. 기준epoch12/보정epoch14, 둘 다threshold0.35이며60영역·test 평가 false·새 체크아웃 보존 true와 별도 원래 체크아웃/실습 파일 보존 true를 보고받았습니다. 이전 검사기 오류 후 진행 성공은 확인됐지만 당시 로컬 파일의 구체적 차이를 원인으로 확정하지 않습니다. 후속59단계에서 원본 ZIP을 받아 모델SHA·소스·확률맵60영역을 직접 검산했고 모두 일치했습니다.

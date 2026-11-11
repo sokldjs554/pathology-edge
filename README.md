@@ -77,7 +77,7 @@ Dice는 이미지별 점수의 평균입니다. 시간은 모델 로딩·디스�
 
 ## 핵심 구현
 
-[후속 네 가지 보완](docs/RESEARCH_FOLLOWUP.md): 개발 참고 CNN–ViT 비교를3개 seed로 확장해 검증 전체 Dice 평균0.537512→0.565899를 확인했습니다. 원본 ZIP·180영역 재감사·동일ROI 오류 그림과 고정 소스1744544의 Docker366개 검사 근거를 보관하며, 사용자 원본ZIP112파일·C++72회·ViT60영역 감사도 완료했고 [실제 사용자 오류 그림](docs/USER_RESEARCH_AUDIT.md)을 확인할 수 있습니다. 사용자가 [작은 보정 모듈](docs/STEP_57.md)을 작성해13개 검사를 통과했다고 보고했고 제출 코드를 검증·연결했습니다. [개발 참고 비교](artifacts/experiments/vit-refinement-reference-20261112/README.md)에서 전체 Dice는 상승하고 경계는 하락했습니다. [사용자 Codespaces 비교](docs/STEP_59.md)의 성공 보고도 받아 전체 Dice0.570565→0.590386·경계0.558802→0.559040을 확인했습니다. 경계 변화는 매우 작고 처리 시간은 늘었습니다. 사용자 원본 보관·독립 검산을 이어갑니다.
+[후속 네 가지 보완](docs/RESEARCH_FOLLOWUP.md): 개발 참고 CNN–ViT 비교를3개 seed로 확장해 검증 전체 Dice 평균0.537512→0.565899를 확인했습니다. 원본 ZIP·180영역 재감사·동일ROI 오류 그림과 고정 소스1744544의 Docker366개 검사 근거를 보관하며, 사용자 원본ZIP112파일·C++72회·ViT60영역 감사도 완료했고 [실제 사용자 오류 그림](docs/USER_RESEARCH_AUDIT.md)을 확인할 수 있습니다. 사용자가 [작은 보정 모듈](docs/STEP_57.md)을 작성해13개 검사를 통과했다고 보고했고 제출 코드를 검증·연결했습니다. [개발 참고 비교](artifacts/experiments/vit-refinement-reference-20261112/README.md)에서 전체 Dice는 상승하고 경계는 하락했습니다. [사용자 Codespaces 비교](docs/STEP_59.md)의 성공 보고도 받아 전체 Dice0.570565→0.590386·경계0.558802→0.559040을 확인했습니다. 경계 변화는 매우 작고 처리 시간은 늘었습니다. 사용자 원본70파일·모델SHA·60영역 독립 검산까지 [완료했습니다](docs/USER_REFINEMENT_AUDIT.md). 요청한 네 보완은 해당 범위에서 마무리했습니다.
 
 추가로 [소형 ViT와 TinyUNet 비교 및 C++ 측정 도구](docs/CPP_VIT_COMPARISON.md)를 구현했습니다. **사용자 Codespaces 실행**의 validation10장 전체 Dice는 CNN0.503768→ViT0.557644였고, 검사·두 체크아웃 보존 성공 보고를 받았습니다. 외부 가중치 없는 작은 모델의 한 seed·검증 데이터 선택 결과이며 위의 공개 test 결과와 구분합니다. 개발 참고 실행0.540674→0.557642와 사용자 실행을 따로 기록합니다. [C++ 측정·범위 해석](docs/STEP_52.md)은 확인했고, [이미지별 표](docs/STEP_54.md)도 받아7개 상승·3개 하락을 확인했고, [입력 토큰 형상 설명](docs/STEP_55.md)까지 확인해 요청한 두 보완을 해당 범위에서 마무리했습니다.
 
