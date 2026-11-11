@@ -1,6 +1,6 @@
 # 58단계: 작성한 보정 모듈의 실제 학습 비교
 
-상태: **57단계 코드·13개 테스트 사용자 보고 확인 / 이번 비교 학습의 사용자 실행 대기**. 지금 할 일은 아래 고정 비교를 한 번 실행하고 마지막 결과를 보내는 것입니다.
+상태: **57단계 코드·13개 테스트 사용자 보고 확인 / 58단계 클래스 대조에서 중단 보고, 수정 검사기로 재시도 대기**. 지금 할 일은 아래 고정 비교를 한 번 실행하고 마지막 결과를 보내는 것입니다.
 
 ## 확인한 코드
 
@@ -28,13 +28,13 @@ seed는 **20261116**으로 미리 고정했습니다. 이전 seed20261113의 모
 set -e
 cd /workspaces/pathology-edge
 PATHOLOGY_REFINEMENT_LAUNCHER="$(mktemp /workspaces/pathology-edge/work/start-refinement.XXXXXX.py)"
-curl -fsSL --retry 2 https://raw.githubusercontent.com/sokldjs554/pathology-edge/1744544ec2f88bff1e3eac8a7bfe99b9335d9d48/scripts/start_refinement_comparison.py -o "$PATHOLOGY_REFINEMENT_LAUNCHER"
-printf '%s  %s\n' '7809442b15076cd4baa3e1b86e8979fd668097db1a721527fdf0d628f15485b4' "$PATHOLOGY_REFINEMENT_LAUNCHER" | sha256sum -c -
+curl -fsSL --retry 2 https://raw.githubusercontent.com/sokldjs554/pathology-edge/b084453347c4d774c3e6835b850450e19037004d/scripts/start_refinement_comparison.py -o "$PATHOLOGY_REFINEMENT_LAUNCHER"
+printf '%s  %s\n' '55a0711a84ad17ba451270dd487aa7bd5c16c4c25125d5926bab11ca7f393744' "$PATHOLOGY_REFINEMENT_LAUNCHER" | sha256sum -c -
 /opt/venv/bin/python "$PATHOLOGY_REFINEMENT_LAUNCHER" --repo /workspaces/pathology-edge --source-commit 1744544ec2f88bff1e3eac8a7bfe99b9335d9d48
 )
 ```
 
-입력으로 기존 `data/manifest.json`과 `work/step57-refinement/learner_refinement.py`가 필요합니다. 둘 중 하나가 없으면 학습 전에 멈춥니다. **로컬 실습 파일은 보존·클래스 AST 대조용이고, 실제 학습은 고정 소스에 반영한 제출 클래스와 제공 import/helper를 사용합니다.** AST 대조는 클래스만 대상으로 하며 클래스 밖 코드를 실행하거나 자동으로 복사해 적용하지 않습니다. 공백·주석 차이는 허용하고, 클래스 내용이 다르면 학습을 멈춥니다. 클래스 밖의 변경을 연결했다고 주장하지 않습니다.
+입력으로 기존 `data/manifest.json`과 `work/step57-refinement/learner_refinement.py`가 필요합니다. 둘 중 하나가 없으면 학습 전에 멈춥니다. **로컬 실습 파일은 보존·클래스 AST 대조용이고, 실제 학습은 고정 소스에 반영한 제출 클래스와 제공 import/helper를 사용합니다.** AST 대조는 클래스만 대상으로 하며 클래스 밖 코드를 실행하거나 자동으로 복사해 적용하지 않습니다. 공백·주석·클래스/메서드 설명 문자열·인자/반환 타입 주석 차이는 허용합니다. 연산, 층 설정, 기본값, 함수 시그니처, decorator 등 나머지 AST가 다르면 차이(diff)를 출력하고 학습을 멈춥니다. 클래스 밖의 변경을 연결했다고 주장하지 않습니다.
 
 실행 중 원래 폴더나 새 체크아웃의 파일·브랜치를 변경하지 마세요. 코드·모델 선택을 바꿔 점수를 높이기 위한 재실행도 하지 않습니다. 결과가 낮아져도 그대로 기록합니다.
 
@@ -50,3 +50,9 @@ SUMMARY에는 두 모델 점수·선택 epoch/threshold·SHA·초기 가중치 S
 실패하면 traceback과 `PREPARING_SOURCE_DIR`, `SOURCE_DIR`, `RUN_DIR` 중 출력된 경로를 보내세요. `SUMMARY` 없이 보존 표시만 나왔다면 학습 완료가 아닙니다. 부분 출력은 지우지 말고 유지합니다. 터미널이 초기화돼도 새 체크아웃의 `work/SOURCE_PATH.txt`, 결과의 `RUN.txt`, `work/launcher-status.json`에서 위치·상태를 확인할 수 있습니다.
 
 사용자가 실행하기 전에는 학습 완료로 기록하지 않습니다. 동일한 기존 validation에서 선택한 한 seed 결과이므로 독립 test·외부 데이터·임상 검증이나 일반적인 개선을 입증하지 않습니다. 보정 모듈은 128px 입력 타일 안에서 작동하며 서로 다른 타일의 픽셀을 직접 연결하지 않습니다.
+
+## 클래스 불일치 오류의 수정
+
+사용자가 기존 검사기의 `The submitted class differs from the reviewed code` 오류를 보고했습니다. 이 검사는 학습 호출보다 앞서 실행되므로 해당 시도에서는 모델 학습이 시작되지 않았습니다. 초기 실습 파일의 설명 문자열만 그대로 남겨 둔 코드와 `__init__ -> None`만 추가한 코드가 거부되는 것을 별도로 재현했습니다. 사용자 파일의 실제 차이는 아직 받지 않았으므로 이 재현을 사용자 원인의 확정으로 기록하지 않습니다.
+
+새 launcher `b084453`는 설명 문자열과 인자/반환 타입 표시만 비교에서 제외하고, 나머지 차이를 보여 줍니다. **학습 소스는 계속 `1744544`, seed는20261116**이며 기존 데이터·모델·실험 결과는 그대로입니다. 위 명령은 새 검사기를 받되 같은 고정 학습 소스를 사용합니다. `learner-connection.json`의 `class_match_policy`에 정규화 범위를 기록합니다. 이전 기록의 raw AST 해시와 새 정책의 normalized AST 해시는 직접 비교하지 않습니다. 작성 파일은 수정할 필요가 없습니다. 다시 중단되면 새 메시지의 `reviewed class`/`local submitted class` diff를 보내 주세요.

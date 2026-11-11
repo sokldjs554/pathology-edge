@@ -1,0 +1,38 @@
+{
+  "recorded_at_utc": "2026-11-11T18:07:09.404160+00:00",
+  "user_report": "ValueError: The submitted class differs from the reviewed code; send your current class before training.",
+  "user_actual_file_diff_received": false,
+  "reported_attempt_training_started": false,
+  "user_retry_success_confirmed": false,
+  "reproductions": [
+    "Retaining the original scaffold class docstring rejects an otherwise identical class.",
+    "Adding __init__ return annotation None rejects an otherwise identical class."
+  ],
+  "fix": "Ignore only class/method docstrings and argument/return annotations; report remaining normalized AST diff before training. Preserve raw local file and explicit match policy.",
+  "launcher_commit": "b084453347c4d774c3e6835b850450e19037004d",
+  "launcher_sha256": "55a0711a84ad17ba451270dd487aa7bd5c16c4c25125d5926bab11ca7f393744",
+  "unchanged_model_source_commit": "1744544ec2f88bff1e3eac8a7bfe99b9335d9d48",
+  "unchanged_seed": 20261116,
+  "focused_tests": {
+    "passed": 43,
+    "seconds": 3.19
+  },
+  "fresh_review": {
+    "important_findings": 0,
+    "handoff_tests_passed": 14,
+    "defaults_signatures_decorators_still_rejected": true
+  },
+  "dataset_training_run_for_this_fix": false,
+  "model_outputs_changed": false,
+  "github_cpu_ci": {
+    "run_id": 43074502704,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43074502704",
+    "source_commit": "b084453347c4d774c3e6835b850450e19037004d",
+    "status": "success",
+    "tests_passed": 374,
+    "seconds": 17.84,
+    "stored_dice_checks": 42,
+    "stored_mean_checks": 6,
+    "static_demo_check": true
+  }
+}

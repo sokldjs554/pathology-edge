@@ -1,0 +1,3 @@
+test	Run python -m pytest -q	2026-11-11T18:07:13.5922231Z 374 passed in 17.84s
+test	Run python scripts/audit_dice.py --output work/dice-audit.json	2026-11-11T18:07:14.6542576Z 42/42 Dice values and 6/6 image means match.
+test	Run python scripts/validate_demo.py	2026-11-11T18:07:14.9101159Z PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.
