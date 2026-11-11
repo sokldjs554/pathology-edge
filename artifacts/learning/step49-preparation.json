@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U60",
+  "status": "PR creation and description save confirmed",
+  "user_reply": "했어",
+  "pr": {
+    "number": 1,
+    "url": "https://github.com/sokldjs554/pathology-edge/pull/1",
+    "title": "docs: record Ubuntu reproduction for 9c55480",
+    "body": "고정 소스 `9c55480`을 Codespaces Ubuntu 환경에서 재현한 원본 로그 9개를 추가합니다.\n\n- 패키지 버전·의존성 확인 및 C++ 확장 재빌드\n- 테스트 191개 통과, skip/failure/error 0개\n- 저장 Dice 42개·평균 6개 일치\n- 정적 데모 검사·원본 파일 보존 확인\n\n기존 설치 패키지를 사용한 재현이며 Docker 빌드·새 데이터 실험·브라우저 검사는 수행하지 않았습니다. 실행은 사용자가 수행했고 재현 도구와 검사 설계는 Codex가 제공했습니다.",
+    "head": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+    "base": "main",
+    "api_base_sha": "7d1520a301d53fd81d50065c05a135c38983ba45",
+    "state": "open",
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "files": 9,
+    "additions": 843,
+    "deletions": 0
+  },
+  "current_main_at_check": "c2bf86fb35070a4130ca93c95b109261bcdcda93",
+  "pr_ci": {
+    "run_id": 42971626064,
+    "event": "pull_request",
+    "head": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/42971626064"
+  },
+  "checks": {
+    "same_previously_audited_head": true,
+    "nine_evidence_files_only": true,
+    "description_matches_scope_and_contributions": true,
+    "ci_success": true,
+    "no_merge_conflict_reported": true,
+    "base_updates_since_previous_check_are_docs_only": true
+  },
+  "next_user_action": {
+    "step": 49,
+    "contribution_id": "U61",
+    "status": "Pending",
+    "task": "Merge PR #1 through Merge pull request then Confirm merge; report Merged status or URL."
+  },
+  "codex_changed_pr_or_merged": false,
+  "new_model_execution": false
+}
