@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U60",
+  "status": "PR creation pending",
+  "base": "main",
+  "head": "review/ubuntu-QEoc7d",
+  "head_commit": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+  "compare_url": "https://github.com/sokldjs554/pathology-edge/compare/main...review/ubuntu-QEoc7d?expand=1",
+  "proposed_title": "docs: record Ubuntu reproduction for 9c55480",
+  "proposed_body": "고정 소스 `9c55480`을 Codespaces Ubuntu 환경에서 재현한 원본 로그 9개를 추가합니다.\n\n- 패키지 버전·의존성 확인 및 C++ 확장 재빌드\n- 테스트 191개 통과, skip/failure/error 0개\n- 저장 Dice 42개·평균 6개 일치, 정적 데모 검사·원본 파일 보존 확인\n\n기존 설치 패키지를 사용한 재현이며 Docker 빌드·새 데이터 실험·브라우저 검사는 수행하지 않았습니다. 실행은 사용자가 수행했고 재현 도구와 검사 설계는 Codex가 제공했습니다.",
+  "title_and_body_author": "Codex",
+  "intended_user_work": "Review the displayed change scope and description, create PR, and send URL",
+  "github_read_verification": "step47-review.json",
+  "open_pr_at_check": false,
+  "codex_created_pr": false,
+  "merge_performed": false,
+  "new_model_execution": false,
+  "step43_interview": "Deferred",
+  "documentation_checks": {
+    "relative_links_present": 216,
+    "protected_original_files_unchanged": 2392,
+    "shell_reference_syntax": "passed"
+  }
+}

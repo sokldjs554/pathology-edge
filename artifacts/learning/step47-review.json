@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U59",
+  "status": "User commit and push report independently confirmed on GitHub",
+  "branch": "review/ubuntu-QEoc7d",
+  "commit": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+  "commit_url": "https://github.com/sokldjs554/pathology-edge/commit/e0814061d9fee08bb0324d331d4d08e6d62a849a",
+  "checked_files": {
+    "cpp-build.log": {
+      "git_blob_sha": "9c5e05a4239eb2316dbccd5e11cd6cd26781cff3",
+      "sha256": "d6f9438231fd372274d8a5c4f779a08526f28a61ece9a127c9d0c92814a393a9"
+    },
+    "dependency-versions.json": {
+      "git_blob_sha": "0eeb068243893e4febb895c61751d44c27787758",
+      "sha256": "f91d673575ce25e6fad17ac8edb73d60b50d4be2994b1c88c2cf0e8f2bbf25eb"
+    },
+    "dice-audit.json": {
+      "git_blob_sha": "c8c84a7ba54f0db3a2b236d4916e0c184b224a84",
+      "sha256": "5cc90149ec1bf997dacb544d562c0a07966c8fb678d7bab0a1fec54fa8a7a69f"
+    },
+    "pip-check.log": {
+      "git_blob_sha": "c688d8ccdad82420475fc31cb40020cccfeeef2b",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    "pytest.log": {
+      "git_blob_sha": "5794930ee00601aecb51ec2cfc0d8339d41e4684",
+      "sha256": "5b3db49ff2e06fe087ae3a78ad5a5e0602e1199e9880045f2b80d7c588b91350"
+    },
+    "pytest.xml": {
+      "git_blob_sha": "0fbe419b43d91404671637b8dbb81b295e19eca7",
+      "sha256": "4c202b72969860ae6142da633c8cc8e24f5d94f5626dffc83710e4bb75a14dcf"
+    },
+    "snapshot-imports.log": {
+      "git_blob_sha": "190103b9eb34c6fea726295396c851a60efd1b0d",
+      "sha256": "d7e9ecc4dfcc5a68dc67f5492a278ffaa5e17474c61fde14d1a777ca6cd39169"
+    },
+    "static-demo.log": {
+      "git_blob_sha": "83586ee0311ec030ae2c1d418242c8df898ba4a2",
+      "sha256": "e6f1a3bb56cdb8f5137f7dbc4b3d1e24246e0a89d5c56d22efd977f5a05f65aa"
+    },
+    "summary.json": {
+      "git_blob_sha": "1deff2af5fd67e11005fade6a4985bb5c137ebd8",
+      "sha256": "8983101f6c11345ab2c91cdc7e32f3421c4161807accfa8c73967ac949409494"
+    }
+  },
+  "verification": {
+    "branch_ref_equals_reported_commit": true,
+    "changed_files": 9,
+    "additions": 843,
+    "deletions": 0,
+    "source_merge_base": "9c55480fc721d23160016e1c472b9bdcc8f8eb21",
+    "summary_matches_user_report": true,
+    "xml_test_counts": {
+      "tests": 191,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0
+    },
+    "test_case_names_match_pinned_suite": true,
+    "pytest_log_summary": "191 passed in 72.25s (0:01:12)",
+    "locked_package_versions_match": 32,
+    "dice_rows_match_prior_independent_audit": 42,
+    "dice_means_match": 6,
+    "audit_input_file_hashes_match_pinned_git_files": 42,
+    "snapshot_import_paths_match_user_run": true,
+    "gcc_build_log_present": true,
+    "pip_check_and_static_demo_logs_match": true
+  },
+  "push_ci": {
+    "id": 42970338554,
+    "name": "CPU checks",
+    "event": "push",
+    "head_sha": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/42970338554",
+    "started_at": "2026-11-11T06:08:30Z",
+    "finished_at": "2026-11-11T06:09:55Z"
+  },
+  "open_pr_for_branch_at_check": false,
+  "limits": [
+    "Published evidence files were read; the live Codespace and original before/after inventory were not accessed.",
+    "Original-file preservation remains supported by the submitted summary; full before/after inventories are not among the nine published logs.",
+    "No new local model tests, training, inference, browser check or Docker build were run during this review.",
+    "No pull request was created, reviewed through GitHub review submission, or merged in this step."
+  ],
+  "next_user_action": {
+    "step": 48,
+    "contribution_id": "U60",
+    "status": "Pending",
+    "task": "Create a GitHub pull request from review/ubuntu-QEoc7d into main using supplied title/body, then send PR URL"
+  },
+  "step43_interview": "Deferred"
+}
