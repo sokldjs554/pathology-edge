@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "user_contribution_id": "U60",
+  "status": "PR creation confirmed; description still empty; not merged",
+  "user_evidence": "Screenshot shows Commit message, Extended description and Confirm merge; identifies merge confirmation panel",
+  "pr": {
+    "number": 1,
+    "url": "https://github.com/sokldjs554/pathology-edge/pull/1",
+    "head": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+    "base": "main",
+    "base_sha_at_check": "7d1520a301d53fd81d50065c05a135c38983ba45",
+    "state": "open",
+    "body": null,
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "files": 9,
+    "additions": 843,
+    "deletions": 0
+  },
+  "pr_ci": {
+    "run_id": 42971626064,
+    "event": "pull_request",
+    "head_sha": "e0814061d9fee08bb0324d331d4d08e6d62a849a",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/42971626064"
+  },
+  "next_user_action": "Cancel the merge confirmation, edit the PR description via its first comment menu, paste the supplied body and save",
+  "user_description_saved": false,
+  "codex_changed_pr_or_merged": false,
+  "new_model_execution": false
+}
