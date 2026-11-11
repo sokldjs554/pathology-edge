@@ -54,11 +54,53 @@ def test_matching_submission_trains_fixed_pair_and_preserves_source(launcher, in
     assert (source/'work/submitted_learner_refinement.py').read_bytes() == before
 
 
+@pytest.mark.parametrize('change', ['scaffold_docstring', 'method_docstring',
+                                  'return_annotation', 'remove_annotations'])
+def test_documentation_and_type_hints_do_not_reject_reviewed_computation(launcher, inputs, change):
+    original, source, learner = inputs
+    text = learner.read_text()
+    if change == 'scaffold_docstring':
+        text = text.replace('Raw logits -> same-shaped raw logits.',
+                            'Raw logits -> same-shaped raw logits; requirements in docs/STEP_57.md.')
+    elif change == 'method_docstring':
+        text = text.replace('        super().__init__()',
+                            '        """Initialize the two local layers."""\n        super().__init__()')
+    elif change == 'return_annotation':
+        text = text.replace('def __init__(self):', 'def __init__(self) -> None:')
+    else:
+        text = text.replace('logits: torch.Tensor', 'logits').replace(') -> torch.Tensor:', '):')
+    learner.write_text(text)
+    before = learner.read_bytes()
+    calls = []
+    report = launcher.run_existing_source(original, source, learner, helper=helper(calls))
+    assert report['all_checks_passed'] and len(calls) == 1
+    assert learner.read_bytes() == before
+    connection = json.loads((source/'work/learner-connection.json').read_text())
+    assert connection['class_ast_matches'] is True
+    assert connection['class_match_policy'] == 'ignore_docstrings_and_argument_return_annotations_v1'
+    assert connection['submitted_file_sha256'] != connection['accepted_file_sha256']
+
+
 def test_different_submission_stops_before_training(launcher, inputs):
     original, source, learner = inputs
     learner.write_text(learner.read_text().replace('return logits + correction', 'return logits - correction'))
     calls = []
-    with pytest.raises(ValueError, match='submitted class'):
+    with pytest.raises(ValueError, match='submitted class') as error:
+        launcher.run_existing_source(original, source, learner, helper=helper(calls))
+    assert calls == []
+    assert '-        return logits + correction' in str(error.value)
+    assert '+        return logits - correction' in str(error.value)
+
+
+@pytest.mark.parametrize('old,new', [('padding=1', 'padding=0'),
+                                   ('nn.init.zeros_(self.conv2.weight)', 'nn.init.ones_(self.conv2.weight)'),
+                                   ('        _validate_logits(logits)\n', ''),
+                                   ('torch.relu', 'torch.sigmoid')])
+def test_operation_and_layer_changes_still_stop_before_training(launcher, inputs, old, new):
+    original, source, learner = inputs
+    learner.write_text(learner.read_text().replace(old, new))
+    calls = []
+    with pytest.raises(ValueError):
         launcher.run_existing_source(original, source, learner, helper=helper(calls))
     assert calls == []
 

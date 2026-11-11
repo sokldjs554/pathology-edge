@@ -2,6 +2,7 @@
 """Fetch a pinned checkout and run the accepted user head without replacing local edits."""
 import argparse
 import ast
+import difflib
 import hashlib
 import json
 from pathlib import Path
@@ -16,12 +17,41 @@ def sha_bytes(value):
     return hashlib.sha256(value).hexdigest()
 
 
-def class_syntax(value):
+CLASS_MATCH_POLICY = 'ignore_docstrings_and_argument_return_annotations_v1'
+
+
+class _ComparisonSyntax(ast.NodeTransformer):
+    """Normalize metadata only; the pinned class never inspects this metadata."""
+    @staticmethod
+    def without_docstring(node):
+        if (node.body and isinstance(node.body[0], ast.Expr) and
+                isinstance(node.body[0].value, ast.Constant) and
+                isinstance(node.body[0].value.value, str)):
+            node.body = node.body[1:]
+        return node
+
+    def visit_ClassDef(self, node):
+        return self.without_docstring(self.generic_visit(node))
+
+    def visit_FunctionDef(self, node):
+        node.returns = None
+        return self.without_docstring(self.generic_visit(node))
+
+    def visit_arg(self, node):
+        node.annotation = None
+        return node
+
+
+def comparison_class(value):
     nodes = [node for node in ast.parse(value).body
              if isinstance(node, ast.ClassDef) and node.name == 'LocalResidualHead']
     if len(nodes) != 1:
         raise ValueError('Expected exactly one submitted class LocalResidualHead')
-    return ast.dump(nodes[0], include_attributes=False)
+    return _ComparisonSyntax().visit(nodes[0])
+
+
+def class_syntax(value):
+    return ast.dump(comparison_class(value), include_attributes=False)
 
 
 def dump(path, value):
@@ -34,7 +64,13 @@ def run_existing_source(original, source, learner, *, helper=None):
     submitted = learner.read_bytes()
     accepted = (source/'src/pathology_edge/learner_refinement.py').read_bytes()
     if class_syntax(submitted) != class_syntax(accepted):
-        raise ValueError('The submitted class differs from the reviewed code; send your current class before training.')
+        diff = ''.join(difflib.unified_diff(
+            (ast.unparse(comparison_class(accepted))+'\n').splitlines(keepends=True),
+            (ast.unparse(comparison_class(submitted))+'\n').splitlines(keepends=True),
+            fromfile='reviewed class', tofile='local submitted class'))
+        raise ValueError('The submitted class implementation differs after ignoring docstrings and '
+                         'argument/return annotations. No training started and no local code was replaced. '
+                         'Send the differences below for review:\n'+diff)
     if helper is None:
         helper = runpy.run_path(str(source/'scripts/run_model_comparison.py'))
     work = source/'work'
@@ -50,7 +86,8 @@ def run_existing_source(original, source, learner, *, helper=None):
     dump(work/'learner-connection.json', dict(
         submitted_file_sha256=sha_bytes(submitted), accepted_file_sha256=sha_bytes(accepted),
         class_ast_sha256=sha_bytes(class_syntax(accepted).encode()),
-        class_ast_matches=True, training_source='accepted class in the pinned source; local file is preserved'))
+        class_ast_matches=True, class_match_policy=CLASS_MATCH_POLICY,
+        training_source='accepted class in the pinned source; local file is preserved'))
     status = dict(status='running', all_checks_passed=False, original_files_preserved=False)
     dump(status_path, status)
     print('SOURCE_DIR='+str(source), flush=True)
