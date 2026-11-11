@@ -1,0 +1,93 @@
+# C++ 성능 검토 도구와 소형 ViT 비교
+
+2026-11-11 구현·검증 기록. 사용자는 추가 모델 방향으로 ViT를 선택했습니다. **여기 수치는 개발 검증 환경에서 실행한 참고 결과이며 사용자의 Codespaces 측정 결과가 아닙니다.** 사용자 직접 실행은 [51단계](STEP_51.md) C++ 측정부터 하나씩 진행합니다.
+
+## 구현과 기존 결과의 관계
+
+- `scripts/benchmark_cpp_review.py`: 현재 설치된 Python/C++ 추출기를 별도 프로세스에서 비교하고, 원시 시간·출력 일치·환경·소스/바이너리 해시·원본 보존을 기록합니다. 기존 `artifacts/benchmark.json`을 덮어쓰지 않습니다.
+- `src/pathology_edge/vit.py:SmallViTSegmenter`: RGB 패치 토큰을 Transformer로 처리하고 픽셀별 로짓으로 복원하는 작은 분할 모델입니다. PyTorch의 attention 계층을 사용하며 외부 가중치는 없습니다.
+- `src/pathology_edge/model_comparison.py:train_one`: 같은 학습·검증 조건으로 CNN 또는 ViT를 학습하고 최선 checkpoint를 저장합니다.
+- `scripts/run_model_comparison.py`: 소스를 고정 복사하고 두 학습을 순차 실행한 뒤 저장 확률맵으로 60개 영역의 지표를 독립 검산합니다. 실패·부분 결과와 원본 변경을 성공으로 처리하지 않습니다.
+
+원래 TNBC test 결과, WSI·IHC 모델과 공개 데모는 유지합니다. 새 비교는 공개 화면의 모델을 교체하거나 새 test 성능을 주장하지 않습니다.
+
+## C++ 실제 점검
+
+seed42 합성 RGB, 패치128/겹침64, 512²는64패치·2048²는1,024패치입니다. 각 조건은 새 프로세스에서 출력 일치를 검사하고9회 측정했습니다.
+
+| 입력 | Python | C++ 1스레드 | C++ 2스레드 | C++ 4스레드 |
+|---|---:|---:|---:|---:|
+| 512² 중앙값 ms | 0.292 | 0.142 | 0.241 | 3.976 |
+| 2048² 중앙값 ms | 12.437 | 8.887 | 6.916 | 4.318 |
+
+8조건 모두 Python 출력과 일치했고 원본 파일 보존도 통과했습니다. 작은 영상의4스레드 측정은 느리고 변동이 컸습니다. 스레드 생성 비용, 메모리 복사와 당시 부하가 섞인 측정이므로 “C++/멀티스레드이면 항상 빠르다”고 해석하지 않습니다. 한 라운드이며 순서 효과를 제거한 성능 실험은 아닙니다.
+
+환경은 AMD EPYC 9V74, 보이는 CPU/affinity5개, cgroup CPU quota4개였습니다. 출력 할당·crop·padding·Python wrapper의 시간이며 모델 추론은 포함하지 않습니다. 절대 peak RSS 약41/188MiB는 입력·import·출력 일치 비교 배열까지 포함합니다. 설치된 바이너리를 재빌드하지 않았고, 해시는 바이너리의 동일성을 나타낼 뿐 빌드 소스·컴파일러를 입증하지 않습니다.
+
+[원시9회·환경·요약](../artifacts/experiments/cpp-review-20261111/summary.json), [실제 import](../artifacts/experiments/cpp-review-20261111/imports.json), [실행 전](../artifacts/experiments/cpp-review-20261111/original-before.json) / [후](../artifacts/experiments/cpp-review-20261111/original-after.json).
+
+## CNN / ViT 실험 조건
+
+학습 소스: `478670eed931102d38412b9e13f94a519379a607`. 당시 미추적 `docs/STEP_51.md`가 있어 dirty 상태도 그대로 기록했습니다. 학습에 사용한 Python 소스는 commit과 고정 스냅샷 해시로 확인할 수 있습니다. 후속 runner 수정은 실패한 실행의 재요약 검사이며 모델·학습 계산은 바꾸지 않았습니다.
+
+| 조건 | 두 모델에 공통 적용 |
+|---|---|
+| 데이터 | TNBC train33장/7그룹, validation10장/2그룹(08·09) |
+| 선택에서 제외 | test7장/2그룹은 해시 무결성 검사만 수행. 픽셀 decode·추론·평가 없음 |
+| seed | 실행 전에 고정한20261113 한 개 |
+| 학습 | 128×128 crop, batch8, 16epochs×20steps, Adam lr0.001 |
+| 손실 | BCE + 기존 사용자 soft Dice |
+| 증강 | 수평·수직 뒤집기,90도 회전. 모델 초기화와 분리한 RNG로 crop/증강 순서 동일, 추적 해시 일치 |
+| 선택 | 모든 epoch와 threshold0.35/0.5/0.65의 검증 이미지별 평균 Dice 중 최대. 동점은 먼저 나온 조합 |
+| 추론 | 두 모델 모두 패치128, stride128, 무겹침. 경계는 내부128px 격자의 양쪽8px |
+| 실행 | CPU, PyTorch2.15.0+cpu, NumPy2.5.4, Python3.12.14, torch4스레드. 두 학습은 별도 프로세스에서 순차 실행 |
+
+TinyUNet은 width8·29,761파라미터입니다. ViT는8×8 RGB를32차원 토큰으로 만들며128px 입력에서256토큰을 사용합니다. 독립 초기화한 encoder2층,4heads, MLP64, 학습 가능한2D 위치 임베딩, 선형 픽셀 복원 head로 **33,632파라미터**입니다. 두 모델의 파라미터 수·연산량은 같지 않습니다. 고정 학습 조건에서 구조를 탐색한 비교이며 각 모델에 최적인 하이퍼파라미터를 찾은 결과도 아닙니다.
+
+## 실제 검증 결과
+
+점수는 높을수록 좋으며, **검증10장의 이미지별 Dice 평균**입니다. 기존 공개 test7장 평균과 직접 섞어 비교하지 않습니다.
+
+| 모델 | 선택 epoch / threshold | 전체 Dice | 경계 Dice | 내부 Dice | 학습·epoch 검증 초 | warm 파이프라인 ms/장 | 절대 peak RSS MiB |
+|---|---|---:|---:|---:|---:|---:|---:|
+| TinyUNet | 15 / 0.35 | 0.540674 | 0.496926 | 0.537987 | 43.950 | 69.669 | 559.3 |
+| SmallViTSegmenter | 15 / 0.35 | 0.557642 | 0.530148 | 0.550867 | 12.640 | 18.216 | 465.9 |
+| ViT−CNN | — | +0.016968 | +0.033222 | +0.012880 | — | — | — |
+
+학습 시간은 학습·매 epoch validation·checkpoint/진행 기록 쓰기이며 초기 데이터/모델 로딩과 최종 상세 검증은 제외합니다. 파이프라인은 한 번 예열 후 이미지마다3회 실행의 중앙값을 이미지 간 다시 중앙값으로 집계합니다. RGB 패치 추출·조직 검사·모델·결합·성분 추출을 포함하고 모델 로딩·디스크 I/O·정답 점수 계산은 제외합니다. 무겹침이므로 NMS는 실행하지 않습니다. RSS는 **학습과 검증을 모두 포함한 전체 프로세스의 절대 최대값**으로 추론만의 추가 메모리가 아닙니다.
+
+시간은 한 번의 순차 실행을 기술한 값입니다. 실행 순서를 교차한 반복 속도 실험이 아니므로 일반적인 ViT 속도 우위로 해석하지 않습니다.
+
+| validation 이미지 | CNN 전체 Dice | ViT 전체 Dice | ViT−CNN |
+|---|---:|---:|---:|
+| 08_1 | 0.711778 | 0.681094 | −0.030685 |
+| 08_2 | 0.664469 | 0.673426 | +0.008957 |
+| 08_3 | 0.589587 | 0.607401 | +0.017814 |
+| 08_4 | 0.518442 | 0.583041 | +0.064600 |
+| 09_1 | 0.256810 | 0.344188 | +0.087378 |
+| 09_2 | 0.395632 | 0.422238 | +0.026606 |
+| 09_3 | 0.509439 | 0.527342 | +0.017902 |
+| 09_4 | 0.666667 | 0.607646 | −0.059020 |
+| 09_5 | 0.472320 | 0.478979 | +0.006659 |
+| 09_6 | 0.621594 | 0.651067 | +0.029473 |
+
+전체 평균이 높아졌지만08_1·09_4에서는 낮아졌습니다. 반올림 전 원본 점수로 차이를 계산하므로 표시된 두 수의 뺄셈과 마지막 자리가 다를 수 있습니다. 이미 반복 사용한 validation에서 epoch/threshold를 고른 한 seed의 탐색 결과입니다. 외부·임상 성능, CNN/ViT 전반의 우열, 모든 영상의 개선은 주장하지 않습니다.
+
+## 공개 근거와 재현
+
+- [실행 요약](../artifacts/experiments/cnn-vit-20261113/summary.json), [고정 소스·데이터 해시](../artifacts/experiments/cnn-vit-20261113/protocol.json), [강화한 검사로 재감사](../artifacts/experiments/cnn-vit-20261113/re-audited-summary.json).
+- [CNN 학습·모든 이미지/영역 점수](../artifacts/experiments/cnn-vit-20261113/tiny_unet/training.json), [ViT 학습·모든 이미지/영역 점수](../artifacts/experiments/cnn-vit-20261113/small_vit/training.json). 16개 epoch·3개 threshold 기록과 선택 모델 파일도 각 폴더에 보존합니다.
+- [20개 이진 예측 마스크·해시](../artifacts/experiments/cnn-vit-20261113/mask-export.json). 저장 확률맵을 선택 threshold로 변환했고 PNG를 다시 읽어 픽셀 일치를 확인했습니다. float 확률맵은 원래 `work/my-cnn-vit.d2a35da730be` 실행 폴더에 보존하며 Git에는 작은 이진 마스크를 공개합니다.
+- 원래 실행 폴더를 가진 환경에서는 저장소 루트에서 `python scripts/run_model_comparison.py --summarize work/my-cnn-vit.d2a35da730be`로 학습·추론 없이 다시 감사합니다. 이 명령은 원본 실행 폴더와 데이터가 있어야 하며, 축약 공개 artifact 폴더를 그대로 입력하는 명령은 아닙니다.
+- 새 비교는 최신 코드가 있는 격리 체크아웃 루트에서 `python scripts/run_model_comparison.py --data /절대경로/data`로 실행합니다. 기존 실험은 덮어쓰지 않고 새 `work/my-cnn-vit.*`에 저장합니다. 사용자의 오래된 체크아웃을 안전하게 받는 구체 명령은51단계 결과 확인 후 안내합니다.
+
+구현 검사에는 토큰 순서·패딩/복원·gradient·독립 encoder 초기화·state 저장/복원, test 파일 비decode, 두 모델의 crop 순서 일치, 최선 선택·기존 파일 보존, 잘못된 픽셀/지표/시간/실행 상태 거절이 포함됩니다. 실행 결과 감사는60개 이미지·영역 조합의 혼동 픽셀 수, Dice·IoU·precision·recall·평균, 소스·모델·manifest 해시와 증강 순서를 대조했습니다.
+
+최종 전체 검사 **269 passed in10.49s**, skip/failure/error0입니다. 기존 저장 Dice42개·평균6개와 정적 데모·JavaScript 구문 검사도 통과했고, 보호한 기존 모델·실험·데모2,392개 파일의 해시가 모두 같습니다. 이번 변경은 UI를 바꾸지 않았으며 새 브라우저 조작·배포 검사를 수행했다고 기록하지 않습니다. [검사 로그·요약](../artifacts/experiments/cpp-vit-checks/summary.json), [pytest 로그](../artifacts/experiments/cpp-vit-checks/pytest.log).
+
+## 참고한 모델 자료
+
+- [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929): 이미지 패치를 토큰으로 바꿔 Transformer로 처리하는 구조를 참고했습니다. 원논문은 대규모 사전학습 분류 연구이며 여기의 작은 핵 분할 실험은 공식 재현이 아닙니다.
+- [PyTorch TransformerEncoder](https://docs.pytorch.org/docs/2.15/generated/torch.nn.TransformerEncoder.html): encoder layer 복제 시 같은 초기 파라미터가 생길 수 있어, 이번 모델은 층을 각각 생성합니다.
+
+에이비스 공고의 ViT 연구·구현 우대사항과 병리 패치 처리 업무에 연결되는 비교입니다. 제공된 모델·실행 도구를 활용하는 사용자 학습 경험과 모델 전체 직접 구현 경험은 구분합니다.

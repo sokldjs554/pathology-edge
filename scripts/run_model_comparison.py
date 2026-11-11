@@ -124,7 +124,7 @@ def audit_predictions(folder, report, data, manifest):
             'Invalid aggregate timing')
 
 
-def summarize(output):
+def _audit_results(output):
     out = Path(output).resolve()
     plan = read(out/'protocol.json')
     verify_snapshot(out, plan['snapshot_hashes'])
@@ -188,6 +188,21 @@ def summarize(output):
                            'No independent test, external data or clinical validation; no claim that ViTs in general are better/worse.')
 
 
+def summarize(output):
+    """Audit a completed attempt; never turn a failed run into overall success."""
+    out = Path(output).resolve()
+    status = read(out/'status.json')
+    require(status.get('status') == 'completed' and status.get('all_checks_passed') is True,
+            'Expected a completed successful run; failed/partial attempts remain failed')
+    before, after = read(out/'original-before.json'), read(out/'original-after.json')
+    plan = read(out/'protocol.json')
+    require(before == after and before['commit'] == plan['source_commit'] and
+            bool(before['status']) == plan['source_dirty'], 'Original preservation evidence differs')
+    result = _audit_results(out)
+    result['original_files_preserved'] = True
+    return result
+
+
 def run(repo, data, output):
     repo, data, out = Path(repo).resolve(), Path(data).resolve(), Path(output).resolve()
     if out.exists():
@@ -217,7 +232,7 @@ def run(repo, data, output):
             execute([sys.executable, '-u', '-m', 'pathology_edge.model_comparison', '--data', str(data),
                      '--output', str(out/architecture), '--architecture', architecture],
                     cwd=out, env=env, log=out/f'{architecture}.log')
-        result = summarize(out)
+        result = _audit_results(out)
         after = original_state(repo)
         dump(out/'original-after.json', after)
         require(after == before, 'Original files or Git state changed during experiment')
@@ -227,6 +242,10 @@ def run(repo, data, output):
         print('SUMMARY '+json.dumps(result, ensure_ascii=False), flush=True)
         return result
     except BaseException as exc:
+        try:
+            dump(out/'original-after.json', original_state(repo))
+        except OSError:
+            pass
         dump(out/'status.json', dict(status='failed', error=type(exc).__name__, message=str(exc)))
         print(f'Failure; partial outputs preserved: {out}', file=sys.stderr, flush=True)
         raise

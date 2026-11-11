@@ -77,6 +77,8 @@ Dice는 이미지별 점수의 평균입니다. 시간은 모델 로딩·디스�
 
 ## 핵심 구현
 
+추가로 [소형 ViT와 TinyUNet 비교 및 C++ 측정 도구](docs/CPP_VIT_COMPARISON.md)를 준비했습니다. 별도 고정 seed의 **validation10장**에서 전체 Dice는0.540674→0.557642였지만2개 이미지는 낮아졌습니다. 외부 가중치 없는 작은 분할 모델 비교이며 위의 공개 test 결과와 구분합니다. 사용자 직접 실행은 [C++ 성능 검토](docs/STEP_51.md)부터 진행하며 아직 결과를 받지 않았습니다.
+
 ```text
 공식 ZIP + checksum → 원본/GT 쌍 검사 → 케이스 그룹 분리
   → OpenCV 조직 마스크 / Python·C++ 패치 추출
@@ -143,7 +145,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 ## 실행과 검증 상태
 
 - 학습: Debian 13, AMD EPYC 9V74, 노출 CPU 5개, Torch thread4, GPU 없음. 약 **42.6초**.
-- 일반 테스트: 재현 도구 추가 후 별도 호스트 **201 passed in 11.57s**, skip 없음. 별도 고정 소스 `9c55480`의 191개 테스트·저장 Dice42/6·정적 데모 검사도 통과했습니다. [재현 도구 근거](artifacts/learning/step45-preparation.json). 직전 WSI 사용자 계약은 별도 검증의 8개 통과와 사용자 **8 passed in 7.08s**를 따로 확인했습니다. [반복 도구 근거](artifacts/learning/step42-preparation.json) · [WSI 검토 근거](artifacts/learning/step40-review.json).
+- 일반 테스트: C++/ViT 확장 후 **269 passed in 10.49s**, skip 없음. [최신 검사 근거](artifacts/experiments/cpp-vit-checks/summary.json). 이전 재현 도구의201개, 고정 소스 `9c55480`의191개 테스트·저장 Dice42/6·정적 데모 검사도 통과했습니다. [재현 도구 근거](artifacts/learning/step45-preparation.json). WSI 사용자 계약은 별도 검증의8개 통과와 사용자 **8 passed in 7.08s**를 따로 확인했습니다. [반복 도구 근거](artifacts/learning/step42-preparation.json) · [WSI 검토 근거](artifacts/learning/step40-review.json).
 - 사용자가 그룹 누수 보고 함수와 **18 passed in 0.04s**를 제출했습니다. 별도 검증에서도18개 통과와 실제50개 목록의 그룹 누수 없음·메모리 복사본의 합성 누수 검출을 확인했습니다. [검토 기록](artifacts/learning/step09-review.json). 준비 당시89통과/18skip은 과거 기록입니다. 사용자도 실제 목록50개·11그룹의 `group_leaks: {}` 출력을 제출했습니다. [사용자 실행 보고 검토](artifacts/learning/step10-review.json).
 - 사용자가 Dice 함수와 **20 passed in 0.01s**를 제출했습니다. 별도 검증에서20개 통과와 실제 TNBC 점수42개·평균6개의 원 실험/화면 일치를 확인했습니다. [검토 기록](artifacts/learning/step04-review.json), [검산 기록](artifacts/learning/step04-real-dice-audit.json). 준비 당시69통과/20skip은 과거 기록입니다. 사용자도 로컬 빈 함수 오류 복구 안내 후 검산을 재실행해42/42·6/6 일치 출력을 제출했습니다. [사용자 실행 보고 검토](artifacts/learning/step05-review.json).
 - 사용자가 NMS 반례 테스트 본문과 **1 passed in 0.01s**를 제출했습니다. 독립 실행에서도1개 통과했고 기본 전체 검사에 편입했습니다. [검토 기록](artifacts/learning/step02-review.json). 준비 당시68통과/1skip은 과거 기록입니다.

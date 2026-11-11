@@ -1,0 +1,31 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/work/venv/bin/python",
+  "python_optimize": 0,
+  "versions": {
+    "numpy": "2.5.4",
+    "torch": "2.15.0+cpu",
+    "pathology-edge": "0.1.0"
+  },
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "visible_logical_cpus": 5,
+  "affinity_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "affinity_cpu_count": 5,
+  "cgroup": {
+    "cpu.max": "400000 100000",
+    "cpuset.cpus.effective": "0-4",
+    "process_membership": "0::/"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+  }
+}

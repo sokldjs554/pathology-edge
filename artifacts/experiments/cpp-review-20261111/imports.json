@@ -1,0 +1,14 @@
+{
+  "package": {
+    "path": "/workspace/pathology-edge-loss/src/pathology_edge/__init__.py",
+    "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+  },
+  "patches": {
+    "path": "/workspace/pathology-edge-loss/src/pathology_edge/patches.py",
+    "sha256": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5"
+  },
+  "cpp": {
+    "path": "/workspace/pathology-edge-loss/src/pathology_edge/_patch_cpp.cpython-312-x86_64-linux-gnu.so",
+    "sha256": "b9dc6b7e09273db5b322976f537b3769d370ed341e6689ea3636c4b8eea79e89"
+  }
+}

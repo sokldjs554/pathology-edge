@@ -65,3 +65,46 @@ def test_summary_rejects_incomplete_run(runner, tmp_path):
     (tmp_path / 'protocol.json').write_text(json.dumps({}))
     with pytest.raises((ValueError, KeyError, FileNotFoundError)):
         runner.summarize(tmp_path)
+
+
+@pytest.mark.parametrize('status,preserved', [('failed', True), ('completed', False), ('running', True)])
+def test_summary_cannot_turn_failed_or_changed_run_into_success(runner, tmp_path, status, preserved):
+    state = dict(commit='abc', status='', hashes={'file': 'original'})
+    (tmp_path / 'original-before.json').write_text(json.dumps(state))
+    after = state if preserved else dict(state, hashes={'file': 'modified'})
+    (tmp_path / 'original-after.json').write_text(json.dumps(after))
+    (tmp_path / 'status.json').write_text(json.dumps(dict(status=status, all_checks_passed=True)))
+    (tmp_path / 'protocol.json').write_text(json.dumps(dict(source_commit='abc', source_dirty=False)))
+    # No model files exist: state validation must fail before attempting result audits.
+    with pytest.raises(ValueError, match='completed|Original'):
+        runner.summarize(tmp_path)
+
+
+@pytest.mark.parametrize('change', ['pixels', 'metric', 'timing', 'mean'])
+def test_independent_pixel_audit_detects_tampering(runner, tmp_path, change):
+    import numpy as np
+    from PIL import Image
+    folder = tmp_path / 'run'
+    (folder / 'predictions').mkdir(parents=True)
+    image = np.ones((256, 256), np.uint8)
+    Image.fromarray(image*255).save(tmp_path/'mask.png')
+    pred = folder/'predictions/00.npy'
+    np.save(pred, image.astype(np.float32))
+    metric = lambda pixels: dict(tp=pixels, fp=0, fn=0, pixels=pixels, dice=1., iou=1., precision=1., recall=1.)
+    row = dict(id='v', group_id='g', prediction='predictions/00.npy', prediction_sha256=runner.sha(pred),
+               metrics=dict(all=metric(65536), boundary=metric(7936), interior=metric(57600)),
+               timings_seconds=[1., 2., 3.], median_seconds=2.)
+    report = dict(threshold=.5, validation=dict(rows=[row], macro_dice=dict(all=1., boundary=1., interior=1.), median_image_seconds=2.))
+    manifest = dict(records=[dict(id='v', group_id='g', split='validation', mask='mask.png')])
+    runner.audit_predictions(folder, report, tmp_path, manifest)
+    if change == 'pixels':
+        np.save(pred, np.zeros((256, 256), np.float32))
+        row['prediction_sha256'] = runner.sha(pred)  # metric check, not just file hash
+    elif change == 'metric':
+        row['metrics']['boundary']['dice'] = .9
+    elif change == 'timing':
+        row['timings_seconds'][0] = float('nan')
+    else:
+        report['validation']['macro_dice']['all'] = .9
+    with pytest.raises(ValueError):
+        runner.audit_predictions(folder, report, tmp_path, manifest)

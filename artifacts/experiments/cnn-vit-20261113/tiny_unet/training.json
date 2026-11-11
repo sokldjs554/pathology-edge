@@ -1,0 +1,670 @@
+{
+  "architecture": "tiny_unet",
+  "model_spec": {
+    "width": 8
+  },
+  "config": {
+    "seed": 20261113,
+    "epochs": 16,
+    "steps_per_epoch": 20,
+    "batch_size": 8,
+    "crop": 128,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "BCE + learner soft Dice",
+    "loss_mode": "learner_dice",
+    "loss_source_sha256": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "augmentations": [
+      "horizontal/vertical flip",
+      "90 degree rotations"
+    ],
+    "thresholds": [
+      0.35,
+      0.5,
+      0.65
+    ],
+    "validation_mode": "no_overlap",
+    "patch_size": 128,
+    "overlap": 0,
+    "seam_radius": 8,
+    "min_component_area": 12,
+    "torch_threads": 4,
+    "selection": "maximum validation image-macro Dice over epochs and thresholds; first tie",
+    "test_used_for_selection": false,
+    "pretrained": false,
+    "manifest_sha256": "68f7d5bb0e893dd305027b6883733e26c5d3919c28a6c795015bf4db0e1ac868"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3777643501758576,
+      "validation_dice": {
+        "0.35": 0.011993889358744339,
+        "0.5": 0.0,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.2170788109302522,
+      "validation_dice": {
+        "0.35": 0.009096219095276163,
+        "0.5": 0.0,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1860510289669037,
+      "validation_dice": {
+        "0.35": 0.0020059386447861243,
+        "0.5": 0.0,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1728218615055084,
+      "validation_dice": {
+        "0.35": 0.010921484790227342,
+        "0.5": 0.0,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1825145065784455,
+      "validation_dice": {
+        "0.35": 0.030778767561864113,
+        "0.5": 0.0,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1119222342967987,
+      "validation_dice": {
+        "0.35": 0.15130241522090335,
+        "0.5": 0.002404942078488599,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.969121691584587,
+      "validation_dice": {
+        "0.35": 0.34631096985927456,
+        "0.5": 0.2722449758776181,
+        "0.65": 0.0
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.7933762788772583,
+      "validation_dice": {
+        "0.35": 0.5044711933850557,
+        "0.5": 0.5042839940421516,
+        "0.65": 0.4756640883074484
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.7756016075611114,
+      "validation_dice": {
+        "0.35": 0.35992543810624866,
+        "0.5": 0.3207110939379295,
+        "0.65": 0.2788593497862432
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.6948277503252029,
+      "validation_dice": {
+        "0.35": 0.4755850418783143,
+        "0.5": 0.4511589534500354,
+        "0.65": 0.42209889243571197
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.7302428245544433,
+      "validation_dice": {
+        "0.35": 0.4055524076667664,
+        "0.5": 0.3743405375377622,
+        "0.65": 0.3378853309521977
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.6040681436657905,
+      "validation_dice": {
+        "0.35": 0.48451446643170637,
+        "0.5": 0.4568853839519016,
+        "0.65": 0.42464468185455306
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.5738472014665603,
+      "validation_dice": {
+        "0.35": 0.5150487371314381,
+        "0.5": 0.49721490913254807,
+        "0.65": 0.467790924156407
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.6248876437544822,
+      "validation_dice": {
+        "0.35": 0.4361993595762471,
+        "0.5": 0.41698528547603597,
+        "0.65": 0.3960079170806409
+      }
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.5798728793859482,
+      "validation_dice": {
+        "0.35": 0.5406738212112455,
+        "0.5": 0.5281341386695553,
+        "0.65": 0.5064601939066888
+      }
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.5662070468068123,
+      "validation_dice": {
+        "0.35": 0.4598952216611961,
+        "0.5": 0.43897966639313435,
+        "0.65": 0.4110197273725684
+      }
+    }
+  ],
+  "best_epoch": 15,
+  "threshold": 0.35,
+  "best_validation_dice": 0.5406738212112455,
+  "seconds": 43.94994649,
+  "training_time_scope": "Training and epoch validation; excludes final detailed validation and model/data load",
+  "parameter_count": 29761,
+  "model_sha256": "cc0c046f20327d5be8ce7217304764ef2086fb2aeff7cc3ee456f023f677cb88",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "cpu_count": 5,
+    "torch_threads": 4,
+    "cuda": false,
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "train_images": 33,
+  "validation_images": 10,
+  "train_groups": 7,
+  "validation_groups": 2,
+  "augmentation_trace_sha256": "d9cf1a33a0a632afe7669ca526638df5e4a61de005d4f94c8b5b34b828b00206",
+  "validation": {
+    "rows": [
+      {
+        "id": "08_1",
+        "group_id": "08",
+        "metrics": {
+          "all": {
+            "tp": 28043,
+            "fp": 19529,
+            "fn": 3182,
+            "pixels": 262144,
+            "dice": 0.7117783671967207,
+            "iou": 0.552527879575994,
+            "precision": 0.5894854115866476,
+            "recall": 0.8980944755804644
+          },
+          "boundary": {
+            "tp": 3704,
+            "fp": 3149,
+            "fn": 469,
+            "pixels": 46848,
+            "dice": 0.671866497369853,
+            "iou": 0.5058727123736684,
+            "precision": 0.540493214650518,
+            "recall": 0.8876108315360651
+          },
+          "interior": {
+            "tp": 24339,
+            "fp": 16380,
+            "fn": 2713,
+            "pixels": 215296,
+            "dice": 0.7182718271827183,
+            "iou": 0.5603932584269663,
+            "precision": 0.5977307890665291,
+            "recall": 0.8997116664202277
+          }
+        },
+        "prediction": "predictions/00.npy",
+        "prediction_sha256": "7663b8bd0cdcbf1c9df944ee26007d0abb750cf3bd672197d8716e37826d9b3e",
+        "timings_seconds": [
+          0.08815231200424023,
+          0.08827925898367539,
+          0.07162652901024558
+        ],
+        "median_seconds": 0.08815231200424023,
+        "patch_count": 16
+      },
+      {
+        "id": "08_2",
+        "group_id": "08",
+        "metrics": {
+          "all": {
+            "tp": 49291,
+            "fp": 38121,
+            "fn": 11659,
+            "pixels": 262144,
+            "dice": 0.664469338509861,
+            "iou": 0.49753207295777774,
+            "precision": 0.5638928293598133,
+            "recall": 0.8087120590648073
+          },
+          "boundary": {
+            "tp": 7367,
+            "fp": 8057,
+            "fn": 1578,
+            "pixels": 46848,
+            "dice": 0.6046206245639952,
+            "iou": 0.43330196447476765,
+            "precision": 0.4776322614107884,
+            "recall": 0.823588596981554
+          },
+          "interior": {
+            "tp": 41924,
+            "fp": 30064,
+            "fn": 10081,
+            "pixels": 215296,
+            "dice": 0.6762317227585428,
+            "iou": 0.5108384408241845,
+            "precision": 0.5823748402511529,
+            "recall": 0.8061532544947602
+          }
+        },
+        "prediction": "predictions/01.npy",
+        "prediction_sha256": "5e48042042efe3dbb0d7989acd985c30e8d189b51281d942a57962ae1adb1b97",
+        "timings_seconds": [
+          0.09141270100371912,
+          0.08304284600308165,
+          0.08246581099228933
+        ],
+        "median_seconds": 0.08304284600308165,
+        "patch_count": 16
+      },
+      {
+        "id": "08_3",
+        "group_id": "08",
+        "metrics": {
+          "all": {
+            "tp": 50341,
+            "fp": 55229,
+            "fn": 14856,
+            "pixels": 262144,
+            "dice": 0.5895869810911945,
+            "iou": 0.4180243469018318,
+            "precision": 0.4768494837548546,
+            "recall": 0.7721367547586545
+          },
+          "boundary": {
+            "tp": 7934,
+            "fp": 11436,
+            "fn": 2757,
+            "pixels": 46848,
+            "dice": 0.5278600179634743,
+            "iou": 0.3585664572693994,
+            "precision": 0.4096024780588539,
+            "recall": 0.7421195397998316
+          },
+          "interior": {
+            "tp": 42407,
+            "fp": 43793,
+            "fn": 12099,
+            "pixels": 215296,
+            "dice": 0.6027745796199167,
+            "iou": 0.4314082544074711,
+            "precision": 0.49196055684454754,
+            "recall": 0.778024437676586
+          }
+        },
+        "prediction": "predictions/02.npy",
+        "prediction_sha256": "dd0554531036f5e32107a0dc5510a8c9f5058b3dcb7f4499de42330bd5e84ccd",
+        "timings_seconds": [
+          0.08950174099300057,
+          0.08740016899537295,
+          0.08458085698657669
+        ],
+        "median_seconds": 0.08740016899537295,
+        "patch_count": 16
+      },
+      {
+        "id": "08_4",
+        "group_id": "08",
+        "metrics": {
+          "all": {
+            "tp": 40398,
+            "fp": 64023,
+            "fn": 11025,
+            "pixels": 262144,
+            "dice": 0.5184415184415184,
+            "iou": 0.34992983732654226,
+            "precision": 0.38687620306260234,
+            "recall": 0.7856017735254652
+          },
+          "boundary": {
+            "tp": 6979,
+            "fp": 13421,
+            "fn": 788,
+            "pixels": 46848,
+            "dice": 0.495544431426847,
+            "iou": 0.32938455729658295,
+            "precision": 0.3421078431372549,
+            "recall": 0.8985451268185914
+          },
+          "interior": {
+            "tp": 33419,
+            "fp": 50602,
+            "fn": 10237,
+            "pixels": 215296,
+            "dice": 0.5234928765556834,
+            "iou": 0.35454815506376114,
+            "precision": 0.39774580164482687,
+            "recall": 0.7655076049111234
+          }
+        },
+        "prediction": "predictions/03.npy",
+        "prediction_sha256": "ec074208f6fad7cc07ceed4c49015b621b57aa7fe727e8c745e4782a6ea8ee83",
+        "timings_seconds": [
+          0.07631883199792355,
+          0.07530357097857632,
+          0.08521332600503229
+        ],
+        "median_seconds": 0.07631883199792355,
+        "patch_count": 16
+      },
+      {
+        "id": "09_1",
+        "group_id": "09",
+        "metrics": {
+          "all": {
+            "tp": 5987,
+            "fp": 1510,
+            "fn": 33142,
+            "pixels": 262144,
+            "dice": 0.2568095054261571,
+            "iou": 0.14732153842368167,
+            "precision": 0.7985861011071095,
+            "recall": 0.15300672135756088
+          },
+          "boundary": {
+            "tp": 583,
+            "fp": 242,
+            "fn": 6467,
+            "pixels": 46848,
+            "dice": 0.14806349206349206,
+            "iou": 0.07995063082830499,
+            "precision": 0.7066666666666667,
+            "recall": 0.08269503546099291
+          },
+          "interior": {
+            "tp": 5404,
+            "fp": 1268,
+            "fn": 26675,
+            "pixels": 215296,
+            "dice": 0.27890893138241596,
+            "iou": 0.1620535580412031,
+            "precision": 0.8099520383693045,
+            "recall": 0.16845911655600238
+          }
+        },
+        "prediction": "predictions/04.npy",
+        "prediction_sha256": "612473f2e3236ffd51106f8173f7f9b900aeaf79d3d9eedacc02c7fffd284d85",
+        "timings_seconds": [
+          0.07789595102076419,
+          0.07164069401915185,
+          0.07086937400163151
+        ],
+        "median_seconds": 0.07164069401915185,
+        "patch_count": 16
+      },
+      {
+        "id": "09_2",
+        "group_id": "09",
+        "metrics": {
+          "all": {
+            "tp": 10997,
+            "fp": 11807,
+            "fn": 21791,
+            "pixels": 262144,
+            "dice": 0.3956324651028925,
+            "iou": 0.2465971521471017,
+            "precision": 0.48223995790212243,
+            "recall": 0.335397096498719
+          },
+          "boundary": {
+            "tp": 2051,
+            "fp": 2231,
+            "fn": 5110,
+            "pixels": 46848,
+            "dice": 0.35847242855894434,
+            "iou": 0.21837734241908008,
+            "precision": 0.4789817842129846,
+            "recall": 0.28641251221896386
+          },
+          "interior": {
+            "tp": 8946,
+            "fp": 9576,
+            "fn": 16681,
+            "pixels": 215296,
+            "dice": 0.4052639923894086,
+            "iou": 0.25412606880095445,
+            "precision": 0.48299319727891155,
+            "recall": 0.34908494946735863
+          }
+        },
+        "prediction": "predictions/05.npy",
+        "prediction_sha256": "ee23cb4db18c51413983682b01d12f9f668309642aff3d4b20a9a1f3838412df",
+        "timings_seconds": [
+          0.050050859979819506,
+          0.053862213011598215,
+          0.059498932998394594
+        ],
+        "median_seconds": 0.053862213011598215,
+        "patch_count": 16
+      },
+      {
+        "id": "09_3",
+        "group_id": "09",
+        "metrics": {
+          "all": {
+            "tp": 12359,
+            "fp": 8797,
+            "fn": 15005,
+            "pixels": 262144,
+            "dice": 0.509439406430338,
+            "iou": 0.341777052625757,
+            "precision": 0.5841841557950463,
+            "recall": 0.451651805291624
+          },
+          "boundary": {
+            "tp": 1296,
+            "fp": 1203,
+            "fn": 3599,
+            "pixels": 46848,
+            "dice": 0.3505545036516094,
+            "iou": 0.21252869793374876,
+            "precision": 0.5186074429771909,
+            "recall": 0.26475995914198164
+          },
+          "interior": {
+            "tp": 11063,
+            "fp": 7594,
+            "fn": 11406,
+            "pixels": 215296,
+            "dice": 0.5380051548898507,
+            "iou": 0.3679938795196753,
+            "precision": 0.5929677868896392,
+            "recall": 0.4923672615603721
+          }
+        },
+        "prediction": "predictions/06.npy",
+        "prediction_sha256": "bac38be826fa76e0afe6d0bf4ae6b40a0d400776ba4fcbb9c0c2ab3471c279a7",
+        "timings_seconds": [
+          0.06002256000647321,
+          0.058331552980234846,
+          0.057640647020889446
+        ],
+        "median_seconds": 0.058331552980234846,
+        "patch_count": 16
+      },
+      {
+        "id": "09_4",
+        "group_id": "09",
+        "metrics": {
+          "all": {
+            "tp": 13060,
+            "fp": 5334,
+            "fn": 7726,
+            "pixels": 262144,
+            "dice": 0.6666666666666666,
+            "iou": 0.5,
+            "precision": 0.7100141350440361,
+            "recall": 0.6283075146733378
+          },
+          "boundary": {
+            "tp": 2763,
+            "fp": 1159,
+            "fn": 2299,
+            "pixels": 46848,
+            "dice": 0.615093499554764,
+            "iou": 0.44414081337405564,
+            "precision": 0.7044875063742988,
+            "recall": 0.5458316870802055
+          },
+          "interior": {
+            "tp": 10297,
+            "fp": 4175,
+            "fn": 5427,
+            "pixels": 215296,
+            "dice": 0.6820108623658763,
+            "iou": 0.5174631891049801,
+            "precision": 0.7115118850193477,
+            "recall": 0.6548588145510048
+          }
+        },
+        "prediction": "predictions/07.npy",
+        "prediction_sha256": "cbb2a7c6b077920a68d78ab55026c0b318a0fc098c5117181bce9e66bfa9c987",
+        "timings_seconds": [
+          0.05897101099253632,
+          0.05587023199768737,
+          0.06002425300539471
+        ],
+        "median_seconds": 0.05897101099253632,
+        "patch_count": 16
+      },
+      {
+        "id": "09_5",
+        "group_id": "09",
+        "metrics": {
+          "all": {
+            "tp": 10575,
+            "fp": 5113,
+            "fn": 18516,
+            "pixels": 262144,
+            "dice": 0.4723196141048259,
+            "iou": 0.3091743655712782,
+            "precision": 0.6740821009688934,
+            "recall": 0.36351448901722183
+          },
+          "boundary": {
+            "tp": 1399,
+            "fp": 889,
+            "fn": 2741,
+            "pixels": 46848,
+            "dice": 0.43528313627878035,
+            "iou": 0.27818651819447204,
+            "precision": 0.611451048951049,
+            "recall": 0.33792270531400964
+          },
+          "interior": {
+            "tp": 9176,
+            "fp": 4224,
+            "fn": 15775,
+            "pixels": 215296,
+            "dice": 0.47852728742405676,
+            "iou": 0.314515852613539,
+            "precision": 0.6847761194029851,
+            "recall": 0.36776081118993226
+          }
+        },
+        "prediction": "predictions/08.npy",
+        "prediction_sha256": "a403a8e9dce3c0053ba800cf625e7e7aa3dbae3c0eb470bd8b8ebf9c8bf9e21f",
+        "timings_seconds": [
+          0.06769783500931226,
+          0.07143652497325093,
+          0.06741469498956576
+        ],
+        "median_seconds": 0.06769783500931226,
+        "patch_count": 16
+      },
+      {
+        "id": "09_6",
+        "group_id": "09",
+        "metrics": {
+          "all": {
+            "tp": 616,
+            "fp": 362,
+            "fn": 388,
+            "pixels": 262144,
+            "dice": 0.6215943491422805,
+            "iou": 0.45095168374816985,
+            "precision": 0.6298568507157464,
+            "recall": 0.6135458167330677
+          },
+          "boundary": {
+            "tp": 384,
+            "fp": 48,
+            "fn": 192,
+            "pixels": 46848,
+            "dice": 0.7619047619047619,
+            "iou": 0.6153846153846154,
+            "precision": 0.8888888888888888,
+            "recall": 0.6666666666666666
+          },
+          "interior": {
+            "tp": 232,
+            "fp": 314,
+            "fn": 196,
+            "pixels": 215296,
+            "dice": 0.47638603696098564,
+            "iou": 0.31266846361185985,
+            "precision": 0.4249084249084249,
+            "recall": 0.5420560747663551
+          }
+        },
+        "prediction": "predictions/09.npy",
+        "prediction_sha256": "654e3e8eda11d578335c6c96a3cd8294336bd62e8082e48c1637b7c868ec694e",
+        "timings_seconds": [
+          0.06574637000449002,
+          0.06510685701505281,
+          0.0653668379818555
+        ],
+        "median_seconds": 0.0653668379818555,
+        "patch_count": 16
+      }
+    ],
+    "macro_dice": {
+      "all": 0.5406738212112455,
+      "boundary": 0.49692633933365216,
+      "interior": 0.5379873271529456
+    },
+    "median_image_seconds": 0.06966926451423205,
+    "timing_scope": "CPU no_overlap pipeline: RGB extraction, tissue gate, forward, stitch, components; excludes model load, disk I/O and scoring. One warmup; three repeats/image, median per image then median across validation images. No NMS in no_overlap."
+  },
+  "peak_process_rss_mib": 559.33984375,
+  "memory_scope": "Absolute whole-worker high-water RSS including training and validation",
+  "test_evaluation_run": false
+}
