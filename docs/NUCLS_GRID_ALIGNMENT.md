@@ -64,17 +64,18 @@
 
 - 새 grid 계약 테스트27개와 기존 WSI·외부 평가·보정 관련59개, 합계 **86개 통과**. 항등 변환·축별 차이·ID 보존·제외 영역·level0 모서리·잘못된 입력·tie 처리를 확인했다.
 - 51개 모두에서 최근접 변환을 독립적인 전체 배열 연산으로 다시 만들고 동일함을 확인했다. 새 클래스/인스턴스 tuple 생성이나 기존 핵 tuple 소실은 없었다. 정규화가 윤곽의 픽셀 면적까지 보존한다는 뜻은 아니다.
+- 별도 [GitHub 전체 CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/43265202789)에서 **462개 테스트 통과**, 기존 Dice42/42·평균6/6 일치, 정적 데모 검사를 확인했다. 실행 코드는6744ee5이며 후속 ZIP 라이선스·문서 포장은 코드 변경이 아니다. 새 브라우저 시험이나 데모 재배포를 수행한 것으로 기록하지 않는다.
 - 저장된 지표 **408개**, 집계 평균 **160개**를 별도 산술로 검산했다. 원자료153개·원본 crop51개·모델과 소스 해시를 대조했으며 기존15개의 지표가 그대로임을 확인했다.
 - 지표·평균·예측 재사용 여부를 변조한3개 부정 검사를 모두 거절했다. [검산 결과](../artifacts/experiments/nucls-alignment-20261113/independent-audit.json).
 - 새36시야 × 두 모델 = **72회 추론**, 기존15시야 × 두 모델의 **30개 저장 확률 재사용**이다. 기존 원본/제공 RGB 비교 전체60회를 재실행한 것이 아니다. 이번 시간 기록은 단일 실행이며 속도 비교 실험이 아니다.
 - 구현·추론·검산·위 그림 확인은 **제공된 개발 환경에서 수행**했다. 사용자 작성7개 코드 범위를 수정하지 않았다. 사용자의 이번51시야 재평가 실행·정렬 그림 직접 확인은 아직 확인하지 않았다. U84/U85는 이전15개 평가의 표시 확인·선택 편향 해석으로 보존한다.
 
-[추가 증거 ZIP](../artifacts/experiments/nucls-alignment-20261113/evidence.zip)은 **선행 증거 ZIP에 의존하는 보충 파일**이다. 모델·원본153개를 중복 넣지 않았다. 선행 ZIP SHA256은 `ae7b3ac863c02ddab9e1c6f52155465df7ebf366680f16e708fd7b0e798be9e8`이며 내용이 그대로임을 재확인했다. 저장소 루트에서, 의존성이 설치된 Python 환경으로 실행한다.
+[추가 증거 ZIP](../artifacts/experiments/nucls-alignment-20261113/evidence-v2.zip)은 **선행 증거 ZIP에 의존하는 보충 파일**이다. 모델·원본153개를 중복 넣지 않았다. 선행 ZIP SHA256은 `ae7b3ac863c02ddab9e1c6f52155465df7ebf366680f16e708fd7b0e798be9e8`이며 내용이 그대로임을 재확인했다. 저장소 루트에서, 의존성이 설치된 Python 환경으로 실행한다.
 
 ```bash
 # 서로 다른 새 폴더에 원본과 보충 증거를 풉니다.
 python -m zipfile -e artifacts/experiments/nucls-sp3-20261113/evidence.zip work/nucls-base-audit
-python -m zipfile -e artifacts/experiments/nucls-alignment-20261113/evidence.zip work/nucls-alignment-audit
+python -m zipfile -e artifacts/experiments/nucls-alignment-20261113/evidence-v2.zip work/nucls-alignment-audit
 # 저장 확률과 원자료만 읽어 대조합니다. 추론·학습은 실행하지 않습니다.
 python scripts/audit_nucls_alignment.py --base work/nucls-base-audit --supplement work/nucls-alignment-audit
 # 새로운 빈 출력 폴더로만 재평가하려면(36×2 추론 실행):

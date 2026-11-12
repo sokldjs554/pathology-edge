@@ -18,5 +18,5 @@
   "clinical_validation": false,
   "whole_wsi_validation": false,
   "fresh_supplement_extraction": true,
-  "base_evidence_sha_verified_separately": true
+  "archive": "evidence-v2.zip"
 }
