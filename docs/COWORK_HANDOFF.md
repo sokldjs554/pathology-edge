@@ -1,6 +1,6 @@
 # PathologyEdge — 자소서·포트폴리오 작성을 위한 Cowork 전달 자료
 
-**최종 진행·직접 수행 요약:** [FINAL_PROGRESS.md](FINAL_PROGRESS.md). 최신 전달 묶음은 [최종 ZIP](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261112.zip)이며 BCData402장·원본 WSI/주석 대조 결과까지 포함합니다. 아래 첫 ZIP 링크는 과거 보관본입니다.
+**최종 진행·직접 수행 요약:** [FINAL_PROGRESS.md](FINAL_PROGRESS.md). 최신 전달 묶음은 [최종 ZIP](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip)이며 BCData402장·원본 WSI/주석 대조 결과까지 포함합니다. 아래 첫 ZIP 링크는 과거 보관본입니다.
 
 [Cowork 전달 ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork.zip) · [파일 목록·SHA256](../artifacts/handoff/manifest.json). 문서와 실제 오류 그림 8개를 포함한 약2.1MB 묶음입니다. ZIP 안의 근거 링크는 커밋 `540b6e3`에 고정되어 있습니다.
 
@@ -24,7 +24,7 @@
 | 개인 구현의 중심 | 좌표 변환·ROI 연결, Dice 지표·soft Dice 손실, 그룹 누수 검사, NMS 반례 테스트, 153파라미터 잔차 보정 head |
 | 개인 실행의 중심 | CPU 학습, BCE/soft Dice 3개 seed 비교, CNN/ViT 비교, 보정 head 비교, C++ 패치 추출 측정, Ubuntu 재현, GitHub PR 작업 |
 | 성격 | 에이비스와 무관한 독립 프로젝트. 진단·치료 의사결정용 제품이나 임상 검증 프로젝트가 아님 |
-| 전체 기여 근거 | [직접 수행한 작업 U01–U82](CONTRIBUTIONS.md), [실행 안내](RUNBOOK.md), [프로젝트 README](../README.md) |
+| 전체 기여 근거 | [직접 수행한 작업 U01–U83](CONTRIBUTIONS.md), [실행 안내](RUNBOOK.md), [프로젝트 README](../README.md) |
 
 기술 목록은 프로젝트에 사용한 기술입니다. C++ 추출기·Transformer 전체 구조·학습 루프·WSI 뷰어·Docker 도구 전체를 지원자가 직접 구현했다는 뜻으로 바꾸지 않습니다.
 
@@ -182,7 +182,7 @@ Patherea Breast-P1의 실제 Ki67 자료 **29case·1,330patch·19,972점**을 �
 
 - **원래 TNBC test는 7장·2그룹입니다.** 후속 손실·CNN/ViT·보정 비교는 이미 반복 사용한 validation 10장·2그룹의 epoch/threshold 선택 결과입니다. 원래 test도 이후 결과를 상세히 열람했으므로 새 미열람 최종 검증으로 부르지 않습니다.
 - **실험별 seed를 분리합니다.** 사용자 손실 비교 3개 seed, 사용자 CNN/ViT 1개 seed, 개발 참고 CNN/ViT 3개 seed, 사용자 보정 head 1개 seed, 별도 개발 환경의 보정 head 3개 seed가 확인 범위입니다. 같은 seed의 다른 환경 실행을 독립 seed로 추가하지 않습니다.
-- **후속 범위를 구분합니다.** 추가 보정3개 seed, MoNuSeg 외부14ROI, 앞선 PanopTILs WSI 연결3ROI와 새 원본3개 연결, BCData 공식test402ROI 평가는 개발 환경에서 실제 실행·감사했습니다. BCData 최초10ROI는402장의 부분집합입니다. 사용자 업로드는 조사 문서였으며 실제 공개 입력은 별도 확보했습니다. 사용자는 현재 보유 자료가 그 조사 문서뿐이라고 확인했습니다. 임상 검증과 전체 WSI 핵 정답 기반 검증은 필요한 자료를 확보하지 못해 미실시입니다. 최종 ZIP 발행 뒤 A0ST 비교 그림의 사용자 표시 확인은 U74에 기록했습니다. BCData1206파일은 U75에서 사용자 수신 완료 보고와 기대 manifest SHA 일치를 확인했습니다. BCData109 원영상 표시는 U76에서, 같은 영상 한 장의 고정 모델 추론·기존 결과 일치 성공 보고는 U77에서 확인했습니다. BCData109 원영상·정답 중심·예측 세 패널 표시는 U78에서 확인했습니다. 109의 양성률과 세포 분류 정확도 구분은 U79에서 확인했습니다. 367 한 장의 사용자 추론·기존 결과 일치 성공과 비교 그림 표시는 U80–U81에서 확인했습니다.367의11/11과 비종양234개 제외 해석도 U82에서 확인했습니다. BCData 본인 재실행은109/367 두 장입니다. 다른 외부 사례 전체 검토·오류의 병리학적 원인 판정은 아직 미확인입니다.
+- **후속 범위를 구분합니다.** 추가 보정3개 seed, MoNuSeg 외부14ROI, 앞선 PanopTILs WSI 연결3ROI와 새 원본3개 연결, BCData 공식test402ROI 평가는 개발 환경에서 실제 실행·감사했습니다. BCData 최초10ROI는402장의 부분집합입니다. 사용자 업로드는 조사 문서였으며 실제 공개 입력은 별도 확보했습니다. 사용자는 당시 별도 임상·WSI 자료 없이 조사 문서만 보유했다고 확인했으며, 이후 BCData 공식test를 직접 받았습니다. 임상 검증과 전체 WSI 핵 정답 기반 검증은 필요한 자료를 확보하지 못해 미실시입니다. 최종 ZIP 발행 뒤 A0ST 비교 그림의 사용자 표시 확인은 U74에 기록했습니다. BCData1206파일은 U75에서 사용자 수신 완료 보고와 기대 manifest SHA 일치를 확인했습니다. BCData109 원영상 표시는 U76에서, 같은 영상 한 장의 고정 모델 추론·기존 결과 일치 성공 보고는 U77에서 확인했습니다. BCData109 원영상·정답 중심·예측 세 패널 표시는 U78에서 확인했습니다. 109의 양성률과 세포 분류 정확도 구분은 U79에서 확인했습니다. 367 한 장의 사용자 추론·기존 결과 일치 성공과 비교 그림 표시는 U80–U81에서 확인했습니다.367의11/11과 비종양234개 제외 해석도 U82에서 확인했습니다. BCData 본인 재실행은109/367 두 장입니다. MoNuSeg 외부 평균 하락·13장 악화와 최대 하락 사례의FP 증가/FN 감소 해석은 U83에서 확인했습니다. 데이터 전체의 개별 사례 전수 검토·오류의 병리학적 원인 판정은 수행한 것으로 기록하지 않습니다.
 - **전체 WSI 탐색과 분석은 다릅니다.** 현재 모델 분석은 3개 ROI뿐이며 GT 없는 예측 차이입니다. IHC는 제공 중심의 색상 통계 분류이고 자동 핵 검출·딥러닝 IHC·전체 슬라이드 임상 정량이 아닙니다.
 - **시간·메모리 수치는 측정 구간과 환경의 관찰값입니다.** 공유 CPU에서 얻은 순차 실행 결과이며 모델 로딩·I/O·정답 평가 등의 포함 여부를 확인해야 합니다. RSS는 전체 프로세스 최대값이지 모듈 단독 추가 메모리가 아닙니다.
 - **개인 정보는 미확인입니다.** 이름·연락처·학위·전공·졸업 여부·논문·기존 고용 경력·지원 자격·프로젝트 전체 시작/종료일은 이 저장소만으로 확정할 수 없습니다. 관련 전공·학력·전문연구요원 자격을 추정해 쓰지 않습니다.
