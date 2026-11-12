@@ -4,6 +4,8 @@
 
 압축을 풀어 `START_HERE.html` 또는 `START_HERE.txt`부터 읽습니다. 최종 진행 요약, 직접 작성7개 항목의 코드·범위, 사용자 실행·검토 U01–U73, 당시 단계 문서와 제출 근거, 최신 BCData402장·원본 WSI/주석 대조, 보관 화면·실제 오류 그림17개를 포함합니다. 큰 원본 증거 ZIP5개는 고정 다운로드·SHA로 연결합니다. ZIP CRC·모든 구성 파일 해시·HTML 내부 경로·문서 실행 예제 보존을 확인했습니다.
 
+ZIP 발행 뒤 A0ST 외부 비교 그림의 사용자 표시 확인을 [U74](../../docs/CONTRIBUTIONS.md)·[응답 기록](../learning/step60-review.json)에 추가했습니다. 기존 ZIP은 발행 시점의 보관본으로 내용·해시를 유지합니다. 다른 외부 결과 전체 검토·BCData 사용자 수신·새 실행을 완료한 것으로 기록하지 않습니다.
+
 임상 검증과 전체 WSI 핵 정답 검증, 새 외부 결과의 사용자 직접 검토는 미완료로 남깁니다. BCData 원영상·HDF5·개별 좌표는 포함하지 않습니다. 이번 포장은 새 학습·추론·브라우저 테스트·배포를 수행한 기록이 아닙니다. 아래 v1/v2는 원래 해시를 유지하는 이전 보관본입니다.
 
 **이전 v2:** [v2 ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork-v2.zip). 소스 `1db984979117d43bdbd09c08fee5a045f6e3529f`의 완료 작업 정리와 후속 PanopTILs·BCData 평가, 실패 그림을 포함합니다. 14개 파일, 3,579,126bytes. SHA256: `f276a4752c988215721a4966b973e89453a083f7b13f18b6fe5a62a76b2b4a8d`. [v2 목록·검사](manifest-v2.json).
