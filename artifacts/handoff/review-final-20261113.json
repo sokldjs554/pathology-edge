@@ -1,0 +1,15 @@
+{
+  "archive": "PathologyEdge-Final-Handoff-20261113.zip",
+  "all_checks_passed": true,
+  "previous_v2_bytes_unchanged": true,
+  "previous_v2_members_retained": 365,
+  "latest_members": 415,
+  "user_records_through": "U86",
+  "u86_scope": "three-panel display only",
+  "nucls_fovs": 51,
+  "nucls_cases": 5,
+  "score_text_matches_saved_results": true,
+  "seven_evidence_downloads": true,
+  "automatic_ki67_new_experiment_run": false,
+  "external_improvement_new_experiment_run": false
+}

@@ -1,12 +1,16 @@
 # Cowork 전달 파일
 
+**최신 통합 묶음(2026-11-13 KST):** [PathologyEdge-Final-Handoff-20261113.zip 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip). **415개 파일 · 16,397,030bytes(약16.4MB)**. 이전365개 파일의 범위를 유지하면서 최신 문서, NuCLS51시야·5케이스 결과/정렬 그림, U84–U86 확인을 통합했다. 압축을 풀어 `START_HERE.html`부터 읽는다. 큰 원본 증거ZIP7개는 고정 링크·SHA로 연결한다.
+
+SHA256: `a74b32bcfacf0f347600b2f6efd627d1b808cca338d0c975227a801def50b073`. [파일 목록·검사](manifest-final-20261113.json) · [독립 내용 대조](review-final-20261113.json). 기준 소스 `dced5d0cfaee955015f0ece599bb29ce808ccc1f`. 자동 Ki-67 검출과 외부 성능 개선 성공은 후속 연구 후보로 표시했으며 새 실험을 실행한 것으로 포함하지 않았다. 기존 발행 ZIP은 변경하지 않았다.
+
 **최신 추가 자료:** [NuCLS36쌍 격자 불일치 처리](../../docs/NUCLS_GRID_ALIGNMENT.md)로51시야·5케이스 모두 평가했다. Dice0.628150→0.613006,8상승·43하락. [보충 증거 ZIP](../experiments/nucls-alignment-20261113/evidence-v2.zip)은 선행NuCLS ZIP과 함께 사용한다. 아래최종v2와 선행15시야 ZIP의 내용·해시는 유지했다. 후속 응답으로 정렬 비교 세 패널의 사용자 표시 확인을 U86에 추가했다. 새 추론·독립 좌표 검증·전체36쌍 검토는 확인하지 않았다. U86은 보충 ZIP 발행 이후의 별도 기록이다.
 
 2026-11-13 KST에는 [NuCLS SP.3 원본 연결 평가](../../docs/NUCLS_SP3_EVALUATION.md)를 추가했습니다. 원본5개 해시 확인,15시야·4케이스 실제 평가,36쌍 치수 불일치 보류를 구분합니다. [추가 실험 근거 ZIP](../experiments/nucls-sp3-20261113/evidence.zip)은 별도 파일이며 아래최종v2 ZIP의 내용·해시는 바꾸지 않았습니다. 후속 응답으로 최대 악화 사례 네 패널 표시를 사용자 확인 U84에 기록했습니다. 선정15시야 평균의 선택 편향·전체51시야로의 일반화 제한 해석도 U85에 기록했습니다. 사용자 새 추론 실행은 확인하지 않았으며, U84–U85는 아래최종v2 ZIP 발행 이후의 추가 기록입니다.
 
 최종v2 발행 후 [추가 공개자료 조사 검토](../../docs/PUBLIC_DATA_UPLOAD_REVIEW.md)를 기록했습니다. 새 IHC 후보의 JSON 11개·영상/마스크 1쌍을 대조했으며 새 성능평가·임상 검증·전체 WSI 정답 검증은 아닙니다. 아래ZIP의 기존 내용·해시는 유지합니다.
 
-**최신 묶음:** [PathologyEdge-Final-Handoff-20261112-v2.zip 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip). **365개 파일 · 11,552,627 bytes(약11.6MB)**. [목록·검사](manifest-final-20261112-v2.json).
+**이전 최종v2 묶음:** [PathologyEdge-Final-Handoff-20261112-v2.zip 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip). **365개 파일 · 11,552,627 bytes(약11.6MB)**. [목록·검사](manifest-final-20261112-v2.json).
 
 소스 커밋: `a21bb05c4e22e4fd78718cd230312a59109243c7`
 SHA256: `ed4c0479ed515d8d448a007f586b7b1b36a5569a70ad3ab4f4abc9fc11ab35f1`
@@ -28,7 +32,7 @@ ZIP CRC, 구성 파일별SHA, HTML 내부 경로, 문서 실행 예제 보존 �
 
 ## 이전 보관본
 
-아래 파일의 내용과 기존 해시는 유지했습니다. 최신 직접 수행 기록은 위 최종v2를 사용하세요.
+아래 파일의 내용과 기존 해시는 유지했습니다. 최신 직접 수행 기록은 맨 위20261113 통합 묶음을 사용하세요.
 
 | 파일 | 범위 | SHA256 |
 |---|---|---|
