@@ -1,0 +1,29 @@
+{
+  "step": 71,
+  "contribution_id": "U85",
+  "recorded_at_utc": "2026-11-12T16:37:22.445115+00:00",
+  "user_response": "아니요. 전체 51개 중 크기가 일치하는 15개만 평가하고 나머지 36개를 제외했으므로, 선택 편향이 발생할 수 있어 15개의 평균 Dice를 전체 51개를 대표하는 성능으로 일반화할 수 없습니다.",
+  "prompt_scope": "51개 중 영상·마스크 크기가 일치하는15개만 평가하고36개를 제외한 결과의 대표성과 일반화 범위를 한 문장으로 설명하도록 요청",
+  "assessment": "correct",
+  "confirmed_understanding": [
+    "평가 대상15개와 확보한전체51개를 구분",
+    "치수 일치 조건에 따른 제외가 선택 편향을 일으킬 수 있음을 인식",
+    "15개 평균을51개 전체의 대표 성능으로 일반화할 수 없다고 설명"
+  ],
+  "help_provided": "전체51개·선정15개·크기불일치 제외36개라는 조건과 일반화 가능 여부 질문을 제공. 사용자가 선택 편향과 일반화 제한을 본인 문장으로 설명.",
+  "reference_counts": {
+    "acquired_fovs": 51,
+    "evaluated_fovs": 15,
+    "quarantined_shape_mismatch": 36,
+    "evaluated_case_groups": 4
+  },
+  "selection_scope_interpretation_confirmed": true,
+  "selection_bias_magnitude_estimated": false,
+  "new_user_inference": false,
+  "new_user_training": false,
+  "user_independent_pixel_recount": false,
+  "all_15_fovs_individually_reviewed": false,
+  "excluded_36_pairs_resolved": false,
+  "clinical_validation": false,
+  "whole_wsi_ground_truth_validation": false
+}
