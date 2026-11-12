@@ -1,0 +1,36 @@
+{
+  "step": 72,
+  "contribution_id": "U86",
+  "recorded_at_utc": "2026-11-12T17:15:34.769489+00:00",
+  "user_response": "응 그림 잘 보여",
+  "prompt_scope": "NuCLS 정렬 비교 그림의 왼쪽 원영상·가운데 원래 마스크·오른쪽 정렬된 청록 윤곽 세 패널이 보이는지 확인 요청",
+  "view": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/defb7b213bf5987d2ea2866e542ac076905e1302/artifacts/experiments/nucls-alignment-20261113/figures/alignment-example.png",
+  "figure_sha256": "3ff371cdba2809a3a55565228411bc1cfb519fc1e3c4c333eaf26904c54737c2",
+  "case_id": "TCGA-C8-A12V",
+  "bounds_level0": [
+    14852,
+    57177,
+    15177,
+    57515
+  ],
+  "source_mask_wh": [
+    404,
+    420
+  ],
+  "fixed_rgb_wh": [
+    403,
+    419
+  ],
+  "user_three_panel_display_confirmed": true,
+  "user_independent_coordinate_validation": false,
+  "user_interpretation_received": false,
+  "new_user_inference": false,
+  "new_user_training": false,
+  "user_independent_pixel_recount": false,
+  "all_36_normalized_pairs_individually_reviewed": false,
+  "user_implemented_alignment": false,
+  "clinical_validation": false,
+  "whole_wsi_ground_truth_validation": false,
+  "help_provided": "고정 PNG 링크와 세 패널의 명칭을 제공. 응답은 해당 그림의 표시 확인으로 한정. 주석 정확성·소수점 좌표 복원·전체 사례 검토 완료로 확대하지 않음.",
+  "archive_scope": "기존 발행 ZIP은 당시 기록으로 보존하며 이 응답은 후속 기록으로 추가."
+}
