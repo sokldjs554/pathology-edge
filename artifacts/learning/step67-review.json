@@ -1,0 +1,25 @@
+{
+  "step": 67,
+  "recorded_at_utc": "2026-11-12T09:06:09Z",
+  "user_response": "이미지 잘 보여",
+  "prompt_scope": "사용자367 실행 후 view 경로의 원영상·정답 중심·예측 비교 SVG 표시 확인",
+  "view": "/workspaces/pathology-edge/work/my-bcdata-review.HXNQ0T/compare109.HYlkPF/result-367/comparison-367.svg",
+  "user_comparison_display_confirmed": true,
+  "user_interpretation_received": false,
+  "individual_cell_by_cell_review_confirmed": false,
+  "all_external_cases_reviewed": false,
+  "new_user_inference_in_this_display_response": false,
+  "prior_user_replay_evidence": "artifacts/learning/step66-user-summary.json",
+  "reference_counts_at_supplied_centers": {
+    "centers": 245,
+    "gt_positive_tumor": 0,
+    "gt_negative_tumor": 245,
+    "predicted_positive_tumor": 11,
+    "predicted_negative_tumor": 0,
+    "predicted_positive_nontumor": 206,
+    "predicted_negative_nontumor": 28,
+    "gt_tumor_denominator": 245,
+    "predicted_tumor_denominator": 11
+  },
+  "next_step": "제공된 수치를 근거로 예측 양성률100%가245개 모두를 양성 종양으로 분류한 뜻인지 실제 분모를 설명하도록 질문. 답변 전에 해석 완료로 기록하지 않음."
+}

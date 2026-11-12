@@ -1,0 +1,18 @@
+{
+  "step": 66,
+  "recorded_at_utc": "2026-11-12T09:06:09Z",
+  "user_submitted_execution_summary": "artifacts/learning/step66-user-summary.json",
+  "expected_provided_runner_commit": "2cc72869954068da3be96280ea795b7009d9d07f",
+  "status": "user_reported_successful_single_case_frozen_model_replay",
+  "expected_case": {"image_id": "367", "cells": 245, "correct_cells": 0},
+  "submitted_counts_match_published_case": true,
+  "reported_published_case_check_passed": true,
+  "user_executed_new_inference_images": 1,
+  "user_executed_training": false,
+  "user_executed_full_402_case_evaluation": false,
+  "user_authored_review_runner": false,
+  "user_full_summary_file_received": false,
+  "direct_access_to_user_files": false,
+  "paths_normalized_from_chat_escaped_punctuation": true,
+  "followup_display_confirmation": "artifacts/learning/step67-review.json"
+}

@@ -1,0 +1,10 @@
+{
+  "image_id": "367",
+  "cells": 245,
+  "correct_cells": 0,
+  "matches_published_case": true,
+  "new_inference_images": 1,
+  "training_run": false,
+  "view": "/workspaces/pathology-edge/work/my-bcdata-review.HXNQ0T/compare109.HYlkPF/result-367/comparison-367.svg",
+  "report": "/workspaces/pathology-edge/work/my-bcdata-review.HXNQ0T/compare109.HYlkPF/result-367/summary.json"
+}
