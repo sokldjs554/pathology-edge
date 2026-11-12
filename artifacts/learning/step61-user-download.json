@@ -1,0 +1,32 @@
+{
+  "step": 61,
+  "source_commit": "f2713b212828b87bf42da03708de931fb4431d40",
+  "user_report": {
+    "files": 1206,
+    "range_bytes": 261185585,
+    "raw_bytes": 266720505,
+    "manifest_sha256": "ad7742bb3424bfd9810f737826341c660d73543022cbbe5aebab6e9f9195be64",
+    "completed_utc": "2026-11-12T07:58:24.199923+00:00",
+    "wall_seconds": 550.5354740129999,
+    "directory": "/workspaces/pathology-edge/work/my-bcdata-review.HXNQ0T"
+  },
+  "verification": {
+    "expected_files": 1206,
+    "expected_png_images": 402,
+    "expected_annotation_hdf5_files": 804,
+    "expected_raw_bytes": 266720505,
+    "expected_range_bytes": 261185585,
+    "expected_manifest_sha256": "ad7742bb3424bfd9810f737826341c660d73543022cbbe5aebab6e9f9195be64",
+    "reported_values_match": true,
+    "method": "Reconstructed the acquisition JSON in archive order from the locked source manifest and per-file SHA256 values, marking every entry http206-range with compressed_bytes+1025 range bytes; JSON indent=2 plus newline. Exact aggregate SHA matches the submitted report.",
+    "direct_access_to_user_files": false,
+    "hash_evidence_scope": "User-reported aggregate digest matches the expected 1,206 per-file records; the user's current filesystem has not been independently reopened."
+  },
+  "user_download_completion_confirmed": true,
+  "user_executed_provided_acquisition_code": true,
+  "user_authored_acquisition_code": false,
+  "user_bcdata_image_review_confirmed": false,
+  "user_bcdata_annotation_review_confirmed": false,
+  "user_bcdata_inference_run": false,
+  "next_step": "Codespaces에서109.png 원영상을 열어 표시를 확인한 뒤 원주석·고정 모델 출력 비교로 진행."
+}
