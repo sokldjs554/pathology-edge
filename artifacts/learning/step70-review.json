@@ -1,0 +1,27 @@
+{
+  "step": 70,
+  "contribution_id": "U84",
+  "recorded_at_utc": "2026-11-12T16:31:02.525315+00:00",
+  "user_response": "응 아주 잘 보여",
+  "prompt_scope": "공개 NuCLS 최대 악화 사례 화면의 원본·정답·기준·보정 네 패널이 잘 보이는지 확인 요청",
+  "view": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/f25bd6f/artifacts/experiments/nucls-sp3-20261113/largest-decrease.png",
+  "figure_sha256": "30d9e184ebaab7beab41223521799786f1c64ed1110000ce5f633fca107083fd",
+  "case_id": "TCGA-C8-A12V",
+  "bounds_level0": [
+    12079,
+    57471,
+    12351,
+    57729
+  ],
+  "user_four_panel_display_confirmed": true,
+  "user_interpretation_received": false,
+  "new_user_inference": false,
+  "new_user_training": false,
+  "user_independent_pixel_recount": false,
+  "all_15_fovs_individually_reviewed": false,
+  "excluded_36_pairs_resolved": false,
+  "clinical_validation": false,
+  "whole_wsi_ground_truth_validation": false,
+  "help_provided": "최대 악화 사례의 고정 PNG 링크와 네 패널 명칭을 제공. 사용자 응답은 해당 화면 표시 확인으로 한정.",
+  "next_prompt": "크기 불일치36쌍을 제외한15개 시야의 평균을 확보한51개 전체의 대표 성능으로 소개할 수 있는지 한 문장으로 설명. 답변 전 해석 완료로 기록하지 않음."
+}
