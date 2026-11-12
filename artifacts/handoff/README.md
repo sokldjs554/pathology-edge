@@ -1,5 +1,9 @@
 # Cowork 전달 파일
 
+**최신:** [v2 ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork-v2.zip). 소스 `1db984979117d43bdbd09c08fee5a045f6e3529f`의 완료 작업 정리와 후속 PanopTILs·BCData 평가, 실패 그림을 포함합니다. 14개 파일, 3,579,126bytes. SHA256: `f276a4752c988215721a4966b973e89453a083f7b13f18b6fe5a62a76b2b4a8d`. [v2 목록·검사](manifest-v2.json).
+
+`START_HERE.txt` → `COWORK_HANDOFF.md` 순서로 읽습니다. **임상 검증과 전체 WSI 핵 정답 검증은 여전히 미실시**입니다. 개발 환경에서 새로 실행한 연구 평가를 사용자 직접 실행으로 바꾸지 않습니다. 아래 v1은 이전 시점의 보관본입니다.
+
 [ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork.zip)
 
 `PathologyEdge-Cowork.zip`은 커밋 `540b6e35c83b63d0d09a3fdda4ab4682d1ad9d0b` 기준 전달 자료 8개를 담고 있습니다. 먼저 `START_HERE.txt`, 이어서 `COWORK_HANDOFF.md`를 읽으면 됩니다. 내부 문서의 근거 링크는 공개 저장소의 해당 커밋에 연결됩니다.

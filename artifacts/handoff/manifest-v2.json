@@ -1,0 +1,24 @@
+{
+  "bytes": 3579126,
+  "sha256": "f276a4752c988215721a4966b973e89453a083f7b13f18b6fe5a62a76b2b4a8d",
+  "members": [
+    "CLINICAL_WSI_VALIDATION_STATUS.md",
+    "COWORK_HANDOFF.md",
+    "EXTERNAL_BCDATA_VALIDATION.md",
+    "EXTERNAL_MONUSEG_VALIDATION.md",
+    "PANOPTILS_WSI_PROBE.md",
+    "REFINEMENT_REPEATS_RESULTS.md",
+    "START_HERE.txt",
+    "figures/TCGA-A1-A0SP-coordinate-overlay.png",
+    "figures/TCGA-A1-A0SP-errors.png",
+    "figures/TCGA-A2-A0CM-errors.png",
+    "figures/TCGA-A2-A0D0-errors.png",
+    "figures/monuseg-largest-decrease.png",
+    "figures/monuseg-largest-increase.png",
+    "verification.json"
+  ],
+  "source_commit": "1db984979117d43bdbd09c08fee5a045f6e3529f",
+  "zip_integrity": "passed",
+  "clinical_validation_performed": false,
+  "whole_wsi_ground_truth_validation_performed": false
+}

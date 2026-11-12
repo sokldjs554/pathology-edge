@@ -13,5 +13,29 @@
   "ui_changed": false,
   "clinical_validation": false,
   "whole_wsi_validation": false,
-  "user_ran_new_experiments": false
+  "user_ran_new_experiments": false,
+  "full_ci": {
+    "commit": "1db984979117d43bdbd09c08fee5a045f6e3529f",
+    "run_url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43137087331",
+    "result": "success",
+    "passed": 414,
+    "skipped": 0,
+    "failed": 0,
+    "seconds": 33.31,
+    "dice_values": 42,
+    "dice_means": 6,
+    "static_demo": "pass",
+    "cpp_build": "pass",
+    "javascript_syntax": "pass"
+  },
+  "packaged_evidence_reaudit": {
+    "region_checks": 18,
+    "mean_checks": 6,
+    "passed": true
+  },
+  "root_bcdata_review": {
+    "publication_hashes": 13,
+    "per_image_ratio_checks": 10,
+    "aggregate_counts_and_MAE_match": true
+  }
 }
