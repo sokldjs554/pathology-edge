@@ -8,6 +8,8 @@ ZIP 발행 뒤 A0ST 외부 비교 그림의 사용자 표시 확인을 [U74](../
 
 이후 BCData1206파일의 사용자 다운로드 완료 출력과 기대 manifest SHA 일치를 [U75](../../docs/CONTRIBUTIONS.md)·[수신 기록](../learning/step61-user-download.json)에 추가했습니다. 원자료의 시각적 검토와 모델 추론은 이 수신 완료와 별개입니다.
 
+그 뒤 BCData109 원영상 표시 확인은 [U76](../../docs/CONTRIBUTIONS.md)·[응답 기록](../learning/step62-review.json)에 추가했습니다. 원본/정답/예측 비교를 위한 [63단계](../../docs/STEP_63.md)는 준비했으며 사용자 추론·비교 화면 검토는 아직 미확인입니다.
+
 임상 검증과 전체 WSI 핵 정답 검증, 새 외부 결과의 사용자 직접 검토는 미완료로 남깁니다. BCData 원영상·HDF5·개별 좌표는 포함하지 않습니다. 이번 포장은 새 학습·추론·브라우저 테스트·배포를 수행한 기록이 아닙니다. 아래 v1/v2는 원래 해시를 유지하는 이전 보관본입니다.
 
 **이전 v2:** [v2 ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork-v2.zip). 소스 `1db984979117d43bdbd09c08fee5a045f6e3529f`의 완료 작업 정리와 후속 PanopTILs·BCData 평가, 실패 그림을 포함합니다. 14개 파일, 3,579,126bytes. SHA256: `f276a4752c988215721a4966b973e89453a083f7b13f18b6fe5a62a76b2b4a8d`. [v2 목록·검사](manifest-v2.json).

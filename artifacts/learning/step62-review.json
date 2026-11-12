@@ -1,0 +1,12 @@
+{
+  "step": 62,
+  "user_response": "109 원영상 잘 보여",
+  "image": "BCData/images/test/109.png",
+  "user_data_directory": "/workspaces/pathology-edge/work/my-bcdata-review.HXNQ0T/data",
+  "status": "user_confirmed_original_image_display",
+  "user_annotation_overlay_reviewed": false,
+  "user_prediction_overlay_reviewed": false,
+  "user_new_inference_run": false,
+  "user_interpretation_received": false,
+  "next_step": "제공된 고정 모델로109 한 장의 예측을 로컬에서 다시 계산하고, 원본·정답 중심·예측의 비공개 비교 그림을 확인. 실제 실행/화면 확인 응답 수신 전 완료로 기록하지 않음."
+}
