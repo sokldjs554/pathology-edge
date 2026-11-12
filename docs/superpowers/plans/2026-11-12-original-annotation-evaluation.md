@@ -22,18 +22,20 @@
 - BCData old10/new392 must be separate; undefined Ki67 denominators must not silently become zero.
 
 ## WSI deliverable
-- [ ] Lock first ROI of remaining3cases in the same initial manual-folder listings before predictions.
-- [ ] Download raw RGB/mask/CSV; derive valid masks using existing audited rules.
-- [ ] Read original SVS by byte range, compare entire stream size/MD5 where published and SHA256, preserve metadata and block checks.
-- [ ] Decode native ROI, map fixed edge coordinates, compare providedRGB; no score-dependent adjustment.
-- [ ] Evaluate direct-original and provided-RGB inputs separately; second is a paired rendering sensitivity check, not independent data.
-- [ ] Save raw probabilities, annotated coverage, counts, figures, independently audited results.
+- [x] Lock first ROI of remaining3cases in the same initial manual-folder listings before predictions.
+- [x] Download raw RGB/mask/CSV; derive valid masks using existing audited rules.
+- [x] Read original SVS by byte range, compare entire stream size/MD5 where published and SHA256, preserve metadata and block checks.
+- [x] Decode native ROI, map fixed edge coordinates, compare providedRGB; no score-dependent adjustment.
+- [x] Evaluate direct-original and provided-RGB inputs separately; second is a paired rendering sensitivity check, not independent data.
+- [x] Save raw probabilities, annotated coverage, counts, figures, independently audited results.
 
 ## IHC deliverable (delegated)
-- [ ] Lock all402officialtest PNG/HDF5pairs before new predictions, retaining original10known examples.
-- [ ] Verify1206entries by CRC/size/SHA, annotation bounds/classes/conflicts; no replacement of failures.
-- [ ] Evaluate frozen model and independently recount aggregated and perROI results; publish lawful subset only.
+- [x] Lock all402officialtest PNG/HDF5pairs before new predictions, retaining original10known examples.
+- [x] Verify1206entries by CRC/size/SHA, annotation bounds/classes/conflicts; no replacement of failures.
+- [x] Evaluate frozen model and independently recount aggregated and perROI results; publish lawful subset only.
 
 ## Integration
-- [ ] Independently review acquisition, arithmetic and scientific claims.
-- [ ] Run relevant tests and original-result preservation checks; publish docs and evidence with precise scope.
+- [x] Independently review acquisition, arithmetic and scientific claims.
+- [x] Run relevant tests and original-result preservation checks; publish docs and evidence with precise scope.
+
+Completed with explicit pre-inference amendments: directGDC source after mirror digest mismatch; mask/CSV agreement and a separate background-only control; BCData same-label center deduplication after strict audit failure. See docs/ORIGINAL_ANNOTATION_EVALUATION.md and docs/BCDATA_FULL_TEST.md. FullCI435 passed; local broad run failed from temporary-disk exhaustion and is not reported as passing.

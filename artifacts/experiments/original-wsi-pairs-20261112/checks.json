@@ -21,5 +21,26 @@
     "reason": "Temporary fixture copies filled local disk; exact affected tests require clean CI",
     "not_claimed_as_pass": true
   },
-  "browser_test_run": false
+  "browser_test_run": false,
+  "full_ci": {
+    "source_commit": "ffbeabd043949e22951068c44996607e60db440f",
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43156022905",
+    "status": "success",
+    "tests_passed": 435,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 35.49,
+    "original_dice_checks": 42,
+    "original_dice_means": 6,
+    "cpp_build": "passed",
+    "javascript_syntax": "passed",
+    "static_demo": "passed"
+  },
+  "bcdata_separate_regression_tests": 4,
+  "root_bcdata_ratio_recounts": 402,
+  "public_evidence_download": {
+    "status": 200,
+    "bytes": 63937336,
+    "sha256_matches": true
+  }
 }

@@ -81,3 +81,5 @@ PYTHONPATH=work/original-pair-audit/source python work/original-pair-audit/runne
 ```
 
 WSI byte-range 획득 도구는 기존 환경 외에 `tifffile==2026.11.8`, `imagecodecs==2026.3.6`을 별도 폴더에 설치해 사용했다. 실제 최초 미러 실패와 GDC 직접 재확인·입력 연결을 수행한 연구 스크립트도 근거 폴더에 있다. 이후 획득 CLI는 정확한 GDC 파일이 있으면 이를 우선한다. 모든 저장 데이터로 새 학습을 하지 않았으며 이 작업을 사용자 직접 실행·임상 전문가 판독으로 기록하지 않는다.
+
+검증 마무리: [Ubuntu CI](https://github.com/sokldjs554/pathology-edge/actions/runs/43156022905)에서 코드 `ffbeabd`의 **435개 테스트**가 통과했다. 별도 IHC 주석 처리 회귀 검사4개도 통과했다. 로컬 광범위 검사는 임시 복제본으로 디스크가 가득 차386통과·39오류·2제외였으며 성공으로 기록하지 않았다. 새 원격 환경에서 전체 검사를 완료했다. 기존 보호 파일2,731개의 SHA는 변경0이고, 공개 증거 ZIP63,937,336bytes를 다시 받아 해시 일치를 확인했다.
