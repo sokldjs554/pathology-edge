@@ -1,0 +1,126 @@
+{
+  "contact_sheets": [
+    {
+      "file": "normalized36-sheet-1.png",
+      "keys": [
+        "01",
+        "02",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "14",
+        "18"
+      ]
+    },
+    {
+      "file": "normalized36-sheet-2.png",
+      "keys": [
+        "19",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "35"
+      ]
+    },
+    {
+      "file": "normalized36-sheet-3.png",
+      "keys": [
+        "37",
+        "38",
+        "39",
+        "41",
+        "42",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50"
+      ]
+    }
+  ],
+  "alignment_example": {
+    "key": "37",
+    "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14852_top-57177_bottom-57515_right-15177",
+    "case_id": "TCGA-C8-A12V",
+    "grid": {
+      "source_wh": [
+        404,
+        420
+      ],
+      "target_wh": [
+        403,
+        419
+      ],
+      "identity": false,
+      "edge_scale_xy": [
+        0.9975247524752475,
+        0.9976190476190476
+      ],
+      "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+      "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+      "prerequisite": "Same ROI and level0 extent verified by caller"
+    },
+    "level0_bounds": [
+      14852,
+      57177,
+      15177,
+      57515
+    ],
+    "choice": "Known404-to403 floating half-pixel tie; geometry chosen, not performance cherry-pick"
+  },
+  "largest_decrease": {
+    "key": "33",
+    "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351",
+    "case_id": "TCGA-C8-A12V",
+    "level0_bounds": [
+      12079,
+      57471,
+      12351,
+      57729
+    ],
+    "delta": -0.05414519461590228,
+    "models": {
+      "small_vit": {
+        "tp": 8632,
+        "fp": 10460,
+        "fn": 1017,
+        "pixels": 101236,
+        "dice": 0.6006749939111374,
+        "iou": 0.4292605301108956,
+        "precision": 0.45212654514980094,
+        "recall": 0.8946004767333402
+      },
+      "small_vit_refined": {
+        "tp": 8918,
+        "fp": 14068,
+        "fn": 731,
+        "pixels": 101236,
+        "dice": 0.5465297992952352,
+        "iou": 0.3760172028502762,
+        "precision": 0.3879752893065344,
+        "recall": 0.9242408539745052
+      }
+    }
+  },
+  "figures": {
+    "normalized36-sheet-2.png": "e2e3ea55edc34097e501ae8060cb869935333458cc5f95505a0eee95750db2cc",
+    "alignment-example.png": "3ff371cdba2809a3a55565228411bc1cfb519fc1e3c4c333eaf26904c54737c2",
+    "normalized36-sheet-1.png": "c4ee2b8a07cbc87fb13a55be69cc263f776259534b6ff366255056639c5da139",
+    "largest-decrease51.png": "2222b1baba21771cd0ef2f288ed01bbb1e5db2583936e5cfd08f4bb2c17973bc",
+    "normalized36-sheet-3.png": "c24aa661650dd905b55f9762b1599d978704713b607b0c0b375caf16ab225249"
+  }
+}

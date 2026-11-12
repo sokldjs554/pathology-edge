@@ -1,0 +1,20 @@
+{
+  "all_checks_passed": true,
+  "evaluated_fovs": 51,
+  "case_groups": 5,
+  "normalized_fovs": 36,
+  "old15_unchanged": 15,
+  "raw_assets": 153,
+  "original_crops": 51,
+  "original_md5_matches": 5,
+  "region_metric_checks": 408,
+  "aggregate_mean_checks": 160,
+  "display_coordinate_sets": 51,
+  "label_tuple_checks": 51,
+  "categorical_exports": 51,
+  "model_loaded": false,
+  "inference_run": false,
+  "historical_exporter_reproduced": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "interrater/interrater_utils.py",
+    "tree": "a87ac50c05cbc8ea11a41516be819f6b31436be7",
+    "blob_sha1": "8e597c2a72224e9925ca2dd71c89c0abe29a3c97",
+    "sha256": "c2dc840a5dbe6c845b1f85c90393bc9034d517c5083c1ca2eb3584cea4f20fd6",
+    "url": "https://raw.githubusercontent.com/PathologyDataScience/NuCLS/a87ac50c05cbc8ea11a41516be819f6b31436be7/interrater/interrater_utils.py"
+  },
+  {
+    "path": "interrater/scripts/i1_get_all_nucleus_anchors.py",
+    "tree": "a87ac50c05cbc8ea11a41516be819f6b31436be7",
+    "blob_sha1": "a46bad6ad86e89efddb809592dec43c7b4a4edec",
+    "sha256": "0756882a38cf89052fca30d7da2d3442703d36664c0ee4dfe0a2755fe75fe523",
+    "url": "https://raw.githubusercontent.com/PathologyDataScience/NuCLS/a87ac50c05cbc8ea11a41516be819f6b31436be7/interrater/scripts/i1_get_all_nucleus_anchors.py"
+  },
+  {
+    "path": "configs/nucleus_style_defaults.py",
+    "tree": "a87ac50c05cbc8ea11a41516be819f6b31436be7",
+    "blob_sha1": "a5358d6236bbceac70ac6b744346c1c2fc1931da",
+    "sha256": "8c0207faee178f5efdfd71f9ca1b530ca8a86b2b510d61fef9d9195d36d14815",
+    "url": "https://raw.githubusercontent.com/PathologyDataScience/NuCLS/a87ac50c05cbc8ea11a41516be819f6b31436be7/configs/nucleus_style_defaults.py"
+  },
+  {
+    "path": "nucls_model/torchvision_detection_utils/transforms.py",
+    "tree": "a87ac50c05cbc8ea11a41516be819f6b31436be7",
+    "blob_sha1": "9b5f817d9f58df1e0b0ddff8b88f38e4cbfbc63d",
+    "sha256": "6b19e8bde0ea3a4e3b11bbb84bab45573350c410a2f91db7ff7d71920657ae0e",
+    "url": "https://raw.githubusercontent.com/PathologyDataScience/NuCLS/a87ac50c05cbc8ea11a41516be819f6b31436be7/nucls_model/torchvision_detection_utils/transforms.py"
+  },
+  {
+    "path": "interrater/scripts/i1f_parse_anchors_dataset.py",
+    "tree": "a87ac50c05cbc8ea11a41516be819f6b31436be7",
+    "blob_sha1": "c2a9600aa871738e15b85d667ac35d59cf7ee73a",
+    "sha256": "a3641168e4c97e1eaabc7aac8036e4a4efaa6d1ada49fa69e0f1a545e162553f",
+    "url": "https://github.com/PathologyDataScience/NuCLS/blob/a87ac50c05cbc8ea11a41516be819f6b31436be7/interrater/scripts/i1f_parse_anchors_dataset.py#L150",
+    "scope": "Inferred-anchor exporter, not proof of historical raw SP.3 exporter",
+    "relevant_lines": [
+      150,
+      156
+    ]
+  }
+]

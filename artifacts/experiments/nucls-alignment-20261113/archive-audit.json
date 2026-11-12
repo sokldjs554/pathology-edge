@@ -1,0 +1,10 @@
+{
+  "sha256": "56e8925a632a6729aaa8989bb1f7d946d67c4e618e6e98c3e3c1a8b60df18b41",
+  "bytes": 37541334,
+  "members": 287,
+  "payload_files": 286,
+  "all_crc_and_member_hashes_passed": true,
+  "base_sha256": "ae7b3ac863c02ddab9e1c6f52155465df7ebf366680f16e708fd7b0e798be9e8",
+  "base_unchanged": true,
+  "standalone": false
+}

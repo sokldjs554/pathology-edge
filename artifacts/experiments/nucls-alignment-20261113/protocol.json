@@ -1,0 +1,2948 @@
+{
+  "created_utc": "2026-11-12T16:50:51.669089+00:00",
+  "models": {
+    "small_vit": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898",
+    "small_vit_refined": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f"
+  },
+  "threshold": 0.35,
+  "mode": "no_overlap",
+  "patch_size": 128,
+  "boundary_radius": 8,
+  "images": [
+    {
+      "key": "00",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420.png",
+      "input_sha256": "cf5114abc4c70d5bdfd45199caa24a4b1d07f17a38a0912b186b4b5cbf353766",
+      "grid": {
+        "source_wh": [
+          418,
+          352
+        ],
+        "target_wh": [
+          418,
+          352
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        10088,
+        56511,
+        10420,
+        56791
+      ],
+      "label": "labels/00.npz",
+      "label_sha256": "043b446525b340020bb8fdb6f9c385dfed2603f66a7e6298f010c05a4d69241c",
+      "display_annotations": "annotations/00.json",
+      "display_annotations_sha256": "002ca7cfeac735e0e2a0144ccf13e4a99a61fd109a25049f29ced3bf5301f707",
+      "source_coverage": {
+        "image_pixels": 147136,
+        "explicit_background_pixels": 70741,
+        "unannotated_pixels": 33503,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 25,
+        "rectangle_rows": 1,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 10,
+        "base_valid_pixels": 113623,
+        "valid_pixels": 111358,
+        "foreground_valid_pixels": 41827,
+        "valid_fraction": 0.756837211831231,
+        "unsupported_foreground_pixels": 1056,
+        "contradictory_background_pixels": 1209
+      },
+      "valid_pixels": 111358,
+      "foreground_pixels": 41827,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/00-original-small_vit.npz",
+          "sha256": "a262720ba91421d70349ae5bf097bd894fb2d97113d59bba1f294f85448ecc7d"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/00-original-small_vit_refined.npz",
+          "sha256": "4aed75ccd77b3730b9eef34a3f100d4207c1c1482e1503342e6ca1a9a231608d"
+        }
+      }
+    },
+    {
+      "key": "01",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-7297_top-55226_bottom-55525_right-7614",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-7297_top-55226_bottom-55525_right-7614.png",
+      "input_sha256": "86c5de3a901e1d18ec7dadf18cce94b17d75b178986fd08908aea67e5c5651a5",
+      "grid": {
+        "source_wh": [
+          398,
+          377
+        ],
+        "target_wh": [
+          399,
+          376
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0025125628140703,
+          0.9973474801061007
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        7297,
+        55226,
+        7614,
+        55525
+      ],
+      "label": "labels/01.npz",
+      "label_sha256": "c703019600ecf7f6bd532b815050ca05969df7d8f6e8755035c5f8d5f53804bc",
+      "display_annotations": "annotations/01.json",
+      "display_annotations_sha256": "c94ee299d0b4074b6e18d3249c2ab1067bcd275693a4d8b0aef90ee3c88934fb",
+      "source_coverage": {
+        "image_pixels": 150046,
+        "explicit_background_pixels": 84465,
+        "unannotated_pixels": 37657,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 26,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 112389,
+        "valid_pixels": 110159,
+        "foreground_valid_pixels": 26784,
+        "valid_fraction": 0.7341681884222172,
+        "unsupported_foreground_pixels": 1140,
+        "contradictory_background_pixels": 1090
+      },
+      "valid_pixels": 110115,
+      "foreground_pixels": 26764,
+      "reuse": null
+    },
+    {
+      "key": "02",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8063_top-57013_bottom-57319_right-8343",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8063_top-57013_bottom-57319_right-8343.png",
+      "input_sha256": "6fac6342799db2c0bda00e8b013e5cf03bfdf4bfba01b5292483bc85fd87830d",
+      "grid": {
+        "source_wh": [
+          353,
+          385
+        ],
+        "target_wh": [
+          352,
+          385
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9971671388101983,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        8063,
+        57013,
+        8343,
+        57319
+      ],
+      "label": "labels/02.npz",
+      "label_sha256": "7a627ea7e60a48bacd2551270d2a29759915b79711781409d5dded0cd71e2292",
+      "display_annotations": "annotations/02.json",
+      "display_annotations_sha256": "b52641bf087d54a8cc1b0ac7bca840e0bad613f3b7dcd841e83e76e31d7f8d13",
+      "source_coverage": {
+        "image_pixels": 135905,
+        "explicit_background_pixels": 85377,
+        "unannotated_pixels": 29229,
+        "unlabeled_mask_pixels": 988,
+        "polyline_rows": 38,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 1,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 105649,
+        "valid_pixels": 103648,
+        "foreground_valid_pixels": 19447,
+        "valid_fraction": 0.7626503807806924,
+        "unsupported_foreground_pixels": 864,
+        "contradictory_background_pixels": 1137
+      },
+      "valid_pixels": 103329,
+      "foreground_pixels": 19415,
+      "reuse": null
+    },
+    {
+      "key": "03",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340.png",
+      "input_sha256": "7f1b4934f17e0b295cae777ff07669490b846fd88ec3b7201f3421c83cf13bc8",
+      "grid": {
+        "source_wh": [
+          331,
+          369
+        ],
+        "target_wh": [
+          331,
+          369
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        8077,
+        55501,
+        8340,
+        55794
+      ],
+      "label": "labels/03.npz",
+      "label_sha256": "8b27aee9c8c183e1a3f330c2264aea293d1bb524d4038300eb0d5510da50b397",
+      "display_annotations": "annotations/03.json",
+      "display_annotations_sha256": "36633e8b51e5389c21daa5c6c4d6543be6d708ead9954e3108432317d5a72a34",
+      "source_coverage": {
+        "image_pixels": 122139,
+        "explicit_background_pixels": 85339,
+        "unannotated_pixels": 16118,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 28,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106021,
+        "valid_pixels": 105780,
+        "foreground_valid_pixels": 20682,
+        "valid_fraction": 0.8660624370594159,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 241
+      },
+      "valid_pixels": 105780,
+      "foreground_pixels": 20682,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/01-original-small_vit.npz",
+          "sha256": "96050f30d467b43db0215437bb5698b9d698281f81142201d23959e2509aea94"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/01-original-small_vit_refined.npz",
+          "sha256": "916807184f1c88278da785a4c74e6ab1e4af8499dd0c1a4b01e73d0f5646bc27"
+        }
+      }
+    },
+    {
+      "key": "04",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334.png",
+      "input_sha256": "204984da77643ce42c3144a2b2bfd555bf9819373b5ff30a7f2d18bd50450ac1",
+      "grid": {
+        "source_wh": [
+          323,
+          361
+        ],
+        "target_wh": [
+          323,
+          361
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        8077,
+        55998,
+        8334,
+        56285
+      ],
+      "label": "labels/04.npz",
+      "label_sha256": "8907b7f7ed61fb581d7640307c9730e1887b420bc1fa710bdc895241ebbd79cb",
+      "display_annotations": "annotations/04.json",
+      "display_annotations_sha256": "fcae9d2f16838da2ca6a748df9fa82b1092b4e4733dbc5ee2d466b4dce68ec93",
+      "source_coverage": {
+        "image_pixels": 116603,
+        "explicit_background_pixels": 82523,
+        "unannotated_pixels": 11320,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 22,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 105283,
+        "valid_pixels": 105000,
+        "foreground_valid_pixels": 22760,
+        "valid_fraction": 0.9004914110271606,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 283
+      },
+      "valid_pixels": 105000,
+      "foreground_pixels": 22760,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/02-original-small_vit.npz",
+          "sha256": "9b7b207b4f06b1170f5808f6eb9cad82d7ef7a02a2161cd0a1cb77649cfbb372"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/02-original-small_vit_refined.npz",
+          "sha256": "5a868d5a5234c48d5db403cc505fae4f1c5d33edfecdbef8d019dbfe220389a1"
+        }
+      }
+    },
+    {
+      "key": "05",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8319_top-54473_bottom-54758_right-8596",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8319_top-54473_bottom-54758_right-8596.png",
+      "input_sha256": "c6de45e65f040b967ac17ffa43a567d899c4b905e181a81ed748eaa234da25c0",
+      "grid": {
+        "source_wh": [
+          348,
+          358
+        ],
+        "target_wh": [
+          349,
+          359
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0028735632183907,
+          1.0027932960893855
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        8319,
+        54473,
+        8596,
+        54758
+      ],
+      "label": "labels/05.npz",
+      "label_sha256": "8eda260ece24ef112c25312089ce9e2f351cc7c5f9967993ae39aea75ad25366",
+      "display_annotations": "annotations/05.json",
+      "display_annotations_sha256": "1141aff98a843169621f6f2b9eb636641117abf3f9aaaee85c517231105581d1",
+      "source_coverage": {
+        "image_pixels": 124584,
+        "explicit_background_pixels": 73972,
+        "unannotated_pixels": 17778,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 61,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106806,
+        "valid_pixels": 106190,
+        "foreground_valid_pixels": 32833,
+        "valid_fraction": 0.8523566429075965,
+        "unsupported_foreground_pixels": 1,
+        "contradictory_background_pixels": 615
+      },
+      "valid_pixels": 106844,
+      "foreground_pixels": 33003,
+      "reuse": null
+    },
+    {
+      "key": "06",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8325_top-57041_bottom-57303_right-8589",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8325_top-57041_bottom-57303_right-8589.png",
+      "input_sha256": "8ef955166a0baee035e440f8df21f4c9125c789a76d21c8ba570a8da0814f0c3",
+      "grid": {
+        "source_wh": [
+          333,
+          329
+        ],
+        "target_wh": [
+          332,
+          330
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.996996996996997,
+          1.0030395136778116
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        8325,
+        57041,
+        8589,
+        57303
+      ],
+      "label": "labels/06.npz",
+      "label_sha256": "af3eb7d8199ce17322d8be5b60d5c0bc0ccf63135306c82dfd824a263d2d1c62",
+      "display_annotations": "annotations/06.json",
+      "display_annotations_sha256": "27250d0fe170d4abdd1ca9471726c0f4fe2e3c41892b6755c58d097041c65b06",
+      "source_coverage": {
+        "image_pixels": 109557,
+        "explicit_background_pixels": 81707,
+        "unannotated_pixels": 5040,
+        "unlabeled_mask_pixels": 3499,
+        "polyline_rows": 32,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 4,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100987,
+        "valid_pixels": 100760,
+        "foreground_valid_pixels": 19309,
+        "valid_fraction": 0.9197038984273027,
+        "unsupported_foreground_pixels": 2,
+        "contradictory_background_pixels": 225
+      },
+      "valid_pixels": 100758,
+      "foreground_pixels": 19337,
+      "reuse": null
+    },
+    {
+      "key": "07",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8839_top-57297_bottom-57568_right-9111",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8839_top-57297_bottom-57568_right-9111.png",
+      "input_sha256": "a4560d9e6da8cc610f4dc5d64fe1b5bb7b5655168bb8e109f4f22ca093114c5a",
+      "grid": {
+        "source_wh": [
+          342,
+          340
+        ],
+        "target_wh": [
+          342,
+          341
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          1.0029411764705882
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        8839,
+        57297,
+        9111,
+        57568
+      ],
+      "label": "labels/07.npz",
+      "label_sha256": "c687f7bdfb7bb41141862c31aaa5299d44d2c64a6ff1d198753db6c79c57c6f9",
+      "display_annotations": "annotations/07.json",
+      "display_annotations_sha256": "600b0b5afce3b7b41a1fd8c846d9020ca1497a4ce632776f9eb0baf9cc652f58",
+      "source_coverage": {
+        "image_pixels": 116280,
+        "explicit_background_pixels": 82499,
+        "unannotated_pixels": 11038,
+        "unlabeled_mask_pixels": 3811,
+        "polyline_rows": 35,
+        "rectangle_rows": 1,
+        "unlabeled_polyline_rows": 6,
+        "excluded_rectangle_pixels": 84,
+        "base_valid_pixels": 101127,
+        "valid_pixels": 99224,
+        "foreground_valid_pixels": 18061,
+        "valid_fraction": 0.8533195734434125,
+        "unsupported_foreground_pixels": 827,
+        "contradictory_background_pixels": 1076
+      },
+      "valid_pixels": 99532,
+      "foreground_pixels": 18105,
+      "reuse": null
+    },
+    {
+      "key": "08",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9096_top-55725_bottom-56044_right-9372",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9096_top-55725_bottom-56044_right-9372.png",
+      "input_sha256": "5ef482b653dbe190c177f9d206b03877a324c89e1be271e7da5025a1735af9bb",
+      "grid": {
+        "source_wh": [
+          348,
+          401
+        ],
+        "target_wh": [
+          347,
+          402
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9971264367816092,
+          1.0024937655860349
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        9096,
+        55725,
+        9372,
+        56044
+      ],
+      "label": "labels/08.npz",
+      "label_sha256": "d3ea361bf2ebd774b6dcfee210b84a4f0d4541435664e7ef7ff179b219e46203",
+      "display_annotations": "annotations/08.json",
+      "display_annotations_sha256": "fe15c629a13da1b11fdbc2901bf0b3d6923f3fc15a397fe70c8ce3d211943a0d",
+      "source_coverage": {
+        "image_pixels": 139548,
+        "explicit_background_pixels": 66868,
+        "unannotated_pixels": 31925,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 21,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 107623,
+        "valid_pixels": 107257,
+        "foreground_valid_pixels": 40755,
+        "valid_fraction": 0.7686029179923753,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 366
+      },
+      "valid_pixels": 107254,
+      "foreground_pixels": 40753,
+      "reuse": null
+    },
+    {
+      "key": "09",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9322_top-53958_bottom-54231_right-9641",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9322_top-53958_bottom-54231_right-9641.png",
+      "input_sha256": "996ba54ec554d5ca8155396e2f978f85777effae7d0daa02e3307ee36d8a7a21",
+      "grid": {
+        "source_wh": [
+          401,
+          343
+        ],
+        "target_wh": [
+          402,
+          344
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0024937655860349,
+          1.0029154518950438
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        9322,
+        53958,
+        9641,
+        54231
+      ],
+      "label": "labels/09.npz",
+      "label_sha256": "d7a0ffdb0a8ce6742350b7a2eadc24d6c488ffae9049bba1b78affd915cccd65",
+      "display_annotations": "annotations/09.json",
+      "display_annotations_sha256": "eaa1575d3318b96637064a83e078c06134184dbd87873db8b221772d0ffa0910",
+      "source_coverage": {
+        "image_pixels": 137543,
+        "explicit_background_pixels": 81376,
+        "unannotated_pixels": 29877,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 34,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 107666,
+        "valid_pixels": 107286,
+        "foreground_valid_pixels": 26290,
+        "valid_fraction": 0.7800178853158649,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 380
+      },
+      "valid_pixels": 107931,
+      "foreground_pixels": 26400,
+      "reuse": null
+    },
+    {
+      "key": "10",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9343_top-55733_bottom-56028_right-9634",
+      "case_id": "TCGA-A1-A0SP",
+      "input": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9343_top-55733_bottom-56028_right-9634.png",
+      "input_sha256": "a8dc4320c003b458b104b44c70b27c53337a7e704a109bda4a002981061f7832",
+      "grid": {
+        "source_wh": [
+          366,
+          372
+        ],
+        "target_wh": [
+          366,
+          371
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          0.9973118279569892
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        9343,
+        55733,
+        9634,
+        56028
+      ],
+      "label": "labels/10.npz",
+      "label_sha256": "710ecb54b5cd0661178618c123fca4800e5d79146ee94bb337e9b80a999ee7b3",
+      "display_annotations": "annotations/10.json",
+      "display_annotations_sha256": "04c9654db4b28d0facd6fa86c641bb6d1355950b0e20fa5b50439a0defde8a10",
+      "source_coverage": {
+        "image_pixels": 136152,
+        "explicit_background_pixels": 65617,
+        "unannotated_pixels": 25475,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 26,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 110677,
+        "valid_pixels": 108435,
+        "foreground_valid_pixels": 43998,
+        "valid_fraction": 0.7964260532346201,
+        "unsupported_foreground_pixels": 1062,
+        "contradictory_background_pixels": 1180
+      },
+      "valid_pixels": 108118,
+      "foreground_pixels": 43902,
+      "reuse": null
+    },
+    {
+      "key": "11",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44237_top-19966_bottom-20243_right-44528",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44237_top-19966_bottom-20243_right-44528.png",
+      "input_sha256": "5f69939da71e286fa60d8c59f0358a25693bd43fa0f683ed65954080b5e6ac1a",
+      "grid": {
+        "source_wh": [
+          356,
+          340
+        ],
+        "target_wh": [
+          357,
+          340
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.002808988764045,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        44237,
+        19966,
+        44528,
+        20243
+      ],
+      "label": "labels/11.npz",
+      "label_sha256": "cbfa09bc46f4fc34b94f0672bb9d8fc9506b50902bfc0bc70c9425e8bfd40836",
+      "display_annotations": "annotations/11.json",
+      "display_annotations_sha256": "623a9fadba74fdbfc68c83da189192d5ec5c5ae51f7090a9aa8f2002ad834da0",
+      "source_coverage": {
+        "image_pixels": 121040,
+        "explicit_background_pixels": 82003,
+        "unannotated_pixels": 18410,
+        "unlabeled_mask_pixels": 1364,
+        "polyline_rows": 19,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 2,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101247,
+        "valid_pixels": 101120,
+        "foreground_valid_pixels": 19261,
+        "valid_fraction": 0.8354263053536021,
+        "unsupported_foreground_pixels": 2,
+        "contradictory_background_pixels": 125
+      },
+      "valid_pixels": 101434,
+      "foreground_pixels": 19362,
+      "reuse": null
+    },
+    {
+      "key": "12",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44242_top-25839_bottom-26111_right-44510",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44242_top-25839_bottom-26111_right-44510.png",
+      "input_sha256": "ae566fb321d7a481a315afbb33a22fadcaf6e7407e53ef8f10595c0bc13d0372",
+      "grid": {
+        "source_wh": [
+          328,
+          333
+        ],
+        "target_wh": [
+          329,
+          334
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0030487804878048,
+          1.003003003003003
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        44242,
+        25839,
+        44510,
+        26111
+      ],
+      "label": "labels/12.npz",
+      "label_sha256": "31d606bfcaf8e36061a090b9f512dc9727086979b3de4863cb9a0af20cee7b7f",
+      "display_annotations": "annotations/12.json",
+      "display_annotations_sha256": "308f37bdfcbe24cb48b5a203844cf37ae68fec6ffabdefc35c97b5653bf98566",
+      "source_coverage": {
+        "image_pixels": 109224,
+        "explicit_background_pixels": 81385,
+        "unannotated_pixels": 9423,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 22,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 99801,
+        "valid_pixels": 99626,
+        "foreground_valid_pixels": 18416,
+        "valid_fraction": 0.9121255401743207,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 175
+      },
+      "valid_pixels": 100247,
+      "foreground_pixels": 18574,
+      "reuse": null
+    },
+    {
+      "key": "13",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755.png",
+      "input_sha256": "7946d5329d01e5ee650b8b5bd1883a710e360cf297193e80c3c0316fc335145c",
+      "grid": {
+        "source_wh": [
+          343,
+          332
+        ],
+        "target_wh": [
+          343,
+          332
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        44475,
+        19196,
+        44755,
+        19467
+      ],
+      "label": "labels/13.npz",
+      "label_sha256": "b4361f76d9b374d45912cbe52c37e66268f533b75950181965ac92abc8b8cb87",
+      "display_annotations": "annotations/13.json",
+      "display_annotations_sha256": "0f2f3a7417b7a92c897cdc32e29fc55be40bd4a13596e4e0673fb347868f2a8d",
+      "source_coverage": {
+        "image_pixels": 113876,
+        "explicit_background_pixels": 77163,
+        "unannotated_pixels": 13076,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 19,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100800,
+        "valid_pixels": 100532,
+        "foreground_valid_pixels": 23637,
+        "valid_fraction": 0.8828199093751098,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 268
+      },
+      "valid_pixels": 100532,
+      "foreground_pixels": 23637,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/03-original-small_vit.npz",
+          "sha256": "cba57e9d6438c4687fe2c66ee73043f2dfefc95aa085f8dfc3f8ec9ad5545528"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/03-original-small_vit_refined.npz",
+          "sha256": "621054946c10472b0bfd9351af74a74cce6fadbb9f28ad76a04783c6a30feb5e"
+        }
+      }
+    },
+    {
+      "key": "14",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44477_top-19454_bottom-19730_right-44755",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44477_top-19454_bottom-19730_right-44755.png",
+      "input_sha256": "0f5df25ac7b08ec86948db7c22f6b70fae83a37faf8ba40f8f5e625803fd8d21",
+      "grid": {
+        "source_wh": [
+          341,
+          339
+        ],
+        "target_wh": [
+          341,
+          338
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          0.9970501474926253
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        44477,
+        19454,
+        44755,
+        19730
+      ],
+      "label": "labels/14.npz",
+      "label_sha256": "db9166a1e8fca2f60312ab1d920b3c659e5b99b784362040a8d72805a4cd2dfc",
+      "display_annotations": "annotations/14.json",
+      "display_annotations_sha256": "03dc80be1e52a05326dc0171aa8760f0183af8ffc17add3ec11944431ddd0df8",
+      "source_coverage": {
+        "image_pixels": 115599,
+        "explicit_background_pixels": 76551,
+        "unannotated_pixels": 15190,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 17,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100409,
+        "valid_pixels": 100226,
+        "foreground_valid_pixels": 23855,
+        "valid_fraction": 0.86701442053997,
+        "unsupported_foreground_pixels": 3,
+        "contradictory_background_pixels": 180
+      },
+      "valid_pixels": 99911,
+      "foreground_pixels": 23761,
+      "reuse": null
+    },
+    {
+      "key": "15",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755.png",
+      "input_sha256": "1cad840ede0f94c4e9ea657e99b539ca2da17d2e29e695331174e96247f11a52",
+      "grid": {
+        "source_wh": [
+          315,
+          361
+        ],
+        "target_wh": [
+          315,
+          361
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        44498,
+        25086,
+        44755,
+        25380
+      ],
+      "label": "labels/15.npz",
+      "label_sha256": "b85bdde211ab321d6b4506b081c984c87f89bacf2695c9bdc6ca633a4b282b5b",
+      "display_annotations": "annotations/15.json",
+      "display_annotations_sha256": "bc8d08d688ebb58f4008a9a5c8a5ca4423d569b6b83cfc680eb5520121a81b1f",
+      "source_coverage": {
+        "image_pixels": 113715,
+        "explicit_background_pixels": 88232,
+        "unannotated_pixels": 13358,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 11,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100357,
+        "valid_pixels": 100255,
+        "foreground_valid_pixels": 12125,
+        "valid_fraction": 0.8816339093347404,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 102
+      },
+      "valid_pixels": 100255,
+      "foreground_pixels": 12125,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/04-original-small_vit.npz",
+          "sha256": "56573d5f41fde6ba56a0c79f6638d9ba2c26aa24cbdd06030d1e9ec59c2f999f"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/04-original-small_vit_refined.npz",
+          "sha256": "e696d5c2a5b2fab89b2830e07eacd13e484a1e73d4070c8fe02f79b730af511b"
+        }
+      }
+    },
+    {
+      "key": "16",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069.png",
+      "input_sha256": "e93641b6c27a3dd1572952e15542d079278e4f3708f62a2ee424c65223efba12",
+      "grid": {
+        "source_wh": [
+          404,
+          327
+        ],
+        "target_wh": [
+          404,
+          327
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        45740,
+        22771,
+        46069,
+        23038
+      ],
+      "label": "labels/16.npz",
+      "label_sha256": "3a3d407ae253996dd3c73990b8bc12f7ae4684f565f600bb1ef38985a2b24b63",
+      "display_annotations": "annotations/16.json",
+      "display_annotations_sha256": "9a172bc1743939267fbd18a9e2e41ce8f9d81c681d4b9fc5be2bb701923a9458",
+      "source_coverage": {
+        "image_pixels": 132108,
+        "explicit_background_pixels": 80024,
+        "unannotated_pixels": 31021,
+        "unlabeled_mask_pixels": 1879,
+        "polyline_rows": 21,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 3,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 99116,
+        "valid_pixels": 97283,
+        "foreground_valid_pixels": 18288,
+        "valid_fraction": 0.7363899233960093,
+        "unsupported_foreground_pixels": 896,
+        "contradictory_background_pixels": 937
+      },
+      "valid_pixels": 97283,
+      "foreground_pixels": 18288,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/05-original-small_vit.npz",
+          "sha256": "785e56dcc78d0bb65c6f8071a130966fa44cee7437f5a80e9402ca1989b5c857"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/05-original-small_vit_refined.npz",
+          "sha256": "63c14ae10fadcaa3722307fa2541ce3ee8c267533de959928c94e0f1e53e4c39"
+        }
+      }
+    },
+    {
+      "key": "17",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038.png",
+      "input_sha256": "97f86d415bc64d742dfe9dcf3d0a55cda524dd1f87ab1cf816905d5e8ef8a599",
+      "grid": {
+        "source_wh": [
+          359,
+          359
+        ],
+        "target_wh": [
+          359,
+          359
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        45745,
+        22248,
+        46038,
+        22541
+      ],
+      "label": "labels/17.npz",
+      "label_sha256": "6e1b789b91daf0408045c0c009684eef55358a25b1e4fd5eafe7081a09f98473",
+      "display_annotations": "annotations/17.json",
+      "display_annotations_sha256": "2db1abde57d3565b409bcebed74696ae99a2cf9a4b0d473d3be895a31122cb7c",
+      "source_coverage": {
+        "image_pixels": 128881,
+        "explicit_background_pixels": 81611,
+        "unannotated_pixels": 25297,
+        "unlabeled_mask_pixels": 2865,
+        "polyline_rows": 21,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 4,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100555,
+        "valid_pixels": 99361,
+        "foreground_valid_pixels": 18510,
+        "valid_fraction": 0.7709514978934056,
+        "unsupported_foreground_pixels": 598,
+        "contradictory_background_pixels": 596
+      },
+      "valid_pixels": 99361,
+      "foreground_pixels": 18510,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/06-original-small_vit.npz",
+          "sha256": "7ffb0e45509a7846538d9c89a84e103d29412a14bd2087da1ca1362577958c20"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/06-original-small_vit_refined.npz",
+          "sha256": "4b0b318e2d9b0d558244e5ef1504eef93612e3b407a49836ead26900c1d69cbb"
+        }
+      }
+    },
+    {
+      "key": "18",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46538_top-26328_bottom-26623_right-46803",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46538_top-26328_bottom-26623_right-46803.png",
+      "input_sha256": "706891be251e59be9588a7a3e81fc6b4c4f269aa0bdae124ac872d0a0b2621dc",
+      "grid": {
+        "source_wh": [
+          325,
+          361
+        ],
+        "target_wh": [
+          325,
+          362
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          1.002770083102493
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        46538,
+        26328,
+        46803,
+        26623
+      ],
+      "label": "labels/18.npz",
+      "label_sha256": "e33e60b25ece570d6ea53171b5d4f93a8bafa69e55368755e7a36feab8a852cf",
+      "display_annotations": "annotations/18.json",
+      "display_annotations_sha256": "4e2181a698ade7fb5347004f984dd4aeb5e5b6464f9d343c3b00ad82fe863f11",
+      "source_coverage": {
+        "image_pixels": 117325,
+        "explicit_background_pixels": 87454,
+        "unannotated_pixels": 17137,
+        "unlabeled_mask_pixels": 3211,
+        "polyline_rows": 17,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 3,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 96798,
+        "valid_pixels": 95836,
+        "foreground_valid_pixels": 9050,
+        "valid_fraction": 0.8168421052631579,
+        "unsupported_foreground_pixels": 439,
+        "contradictory_background_pixels": 523
+      },
+      "valid_pixels": 96129,
+      "foreground_pixels": 9050,
+      "reuse": null
+    },
+    {
+      "key": "19",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46802_top-21244_bottom-21502_right-47067",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46802_top-21244_bottom-21502_right-47067.png",
+      "input_sha256": "ee68f09b9730114b2c98ac5a421ad4d1a507641c19a44d9cded5341e8755ab09",
+      "grid": {
+        "source_wh": [
+          325,
+          317
+        ],
+        "target_wh": [
+          325,
+          316
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          0.9968454258675079
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        46802,
+        21244,
+        47067,
+        21502
+      ],
+      "label": "labels/19.npz",
+      "label_sha256": "4b29af4bbe039713bd92d742758aebacbaa11d4eef84e8cf98d1cc8e9b62bb62",
+      "display_annotations": "annotations/19.json",
+      "display_annotations_sha256": "d407fc75007b5f3440f638d58d792d4f9c2ff7124a5f7ccc859aade0888d21be",
+      "source_coverage": {
+        "image_pixels": 103025,
+        "explicit_background_pixels": 81100,
+        "unannotated_pixels": 4319,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 29,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 98706,
+        "valid_pixels": 97043,
+        "foreground_valid_pixels": 16877,
+        "valid_fraction": 0.9419364231982529,
+        "unsupported_foreground_pixels": 729,
+        "contradictory_background_pixels": 934
+      },
+      "valid_pixels": 96741,
+      "foreground_pixels": 16773,
+      "reuse": null
+    },
+    {
+      "key": "20",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586.png",
+      "input_sha256": "20233228e1d9ee375d9cd1244578aff42c4273ee481e2c75cbf409303445e3c8",
+      "grid": {
+        "source_wh": [
+          374,
+          342
+        ],
+        "target_wh": [
+          374,
+          342
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        47281,
+        24556,
+        47586,
+        24835
+      ],
+      "label": "labels/20.npz",
+      "label_sha256": "b83a30598706ccd918a310dfec20cd61a979dc7f721f8992e865553b8ae5ec1d",
+      "display_annotations": "annotations/20.json",
+      "display_annotations_sha256": "67e118185414bfb8b849cb2123f925e5d5775752720bf60beff13399643c8d73",
+      "source_coverage": {
+        "image_pixels": 127908,
+        "explicit_background_pixels": 72215,
+        "unannotated_pixels": 25056,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 19,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102852,
+        "valid_pixels": 102668,
+        "foreground_valid_pixels": 30637,
+        "valid_fraction": 0.8026706695437346,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 184
+      },
+      "valid_pixels": 102668,
+      "foreground_pixels": 30637,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/07-original-small_vit.npz",
+          "sha256": "1335c0716ede2f34772920d4f476077a4770bebc914818a261f5bcc0fe959124"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/07-original-small_vit_refined.npz",
+          "sha256": "5233054f8f50b8e7a88a75ecb6311a04608ba1759fa0ae984b54853f5c17263d"
+        }
+      }
+    },
+    {
+      "key": "21",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633.png",
+      "input_sha256": "8f0c315e55ce4fa4e84e4b47ae1c12db82958042b857e584ee3858da9bd34e57",
+      "grid": {
+        "source_wh": [
+          418,
+          332
+        ],
+        "target_wh": [
+          418,
+          332
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        47292,
+        21488,
+        47633,
+        21759
+      ],
+      "label": "labels/21.npz",
+      "label_sha256": "0482320632735d10ee0980316fdb27c46d2060ef196ed90d18d645296d29316a",
+      "display_annotations": "annotations/21.json",
+      "display_annotations_sha256": "a045f1a3860825122b3fe0d56a6bd973845e1a1aca6f35f5c3ced8c87bfdbbf8",
+      "source_coverage": {
+        "image_pixels": 138776,
+        "explicit_background_pixels": 85633,
+        "unannotated_pixels": 36281,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 12,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102495,
+        "valid_pixels": 102392,
+        "foreground_valid_pixels": 16860,
+        "valid_fraction": 0.7378221018043466,
+        "unsupported_foreground_pixels": 2,
+        "contradictory_background_pixels": 101
+      },
+      "valid_pixels": 102392,
+      "foreground_pixels": 16860,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/08-original-small_vit.npz",
+          "sha256": "e1349b2929c7909227e94b3639ed987b681dbba876c8eb26d3b1ef54827aba47"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/08-original-small_vit_refined.npz",
+          "sha256": "1302df61884fe5367c7ac65d7d94c7646d35ab08a3f4417724547df61ad126c6"
+        }
+      }
+    },
+    {
+      "key": "22",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47296_top-24820_bottom-25106_right-47594",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47296_top-24820_bottom-25106_right-47594.png",
+      "input_sha256": "15f32ece932e12dcb08deb2919f19d33113c0032efc9ae8fa86e81b0f7ecbe7a",
+      "grid": {
+        "source_wh": [
+          365,
+          350
+        ],
+        "target_wh": [
+          365,
+          351
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          1.002857142857143
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        47296,
+        24820,
+        47594,
+        25106
+      ],
+      "label": "labels/22.npz",
+      "label_sha256": "3aab37eea7edd9711c645977678147aec248c4df1c622a9d0b218a12baa382ef",
+      "display_annotations": "annotations/22.json",
+      "display_annotations_sha256": "da14add564e6519189b5dccb8b7882a4423adc8800885aa978578bb51e6e9e3a",
+      "source_coverage": {
+        "image_pixels": 127750,
+        "explicit_background_pixels": 77539,
+        "unannotated_pixels": 26248,
+        "unlabeled_mask_pixels": 2597,
+        "polyline_rows": 17,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 2,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 98774,
+        "valid_pixels": 97452,
+        "foreground_valid_pixels": 20688,
+        "valid_fraction": 0.7628336594911937,
+        "unsupported_foreground_pixels": 678,
+        "contradictory_background_pixels": 644
+      },
+      "valid_pixels": 97767,
+      "foreground_pixels": 20688,
+      "reuse": null
+    },
+    {
+      "key": "23",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47815_top-20990_bottom-21256_right-48124",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47815_top-20990_bottom-21256_right-48124.png",
+      "input_sha256": "84db055e76a1ede4dcb921d5d07d276c1cb02ea6703cf8fb193ae66abfb97dd7",
+      "grid": {
+        "source_wh": [
+          378,
+          327
+        ],
+        "target_wh": [
+          379,
+          326
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0026455026455026,
+          0.9969418960244648
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        47815,
+        20990,
+        48124,
+        21256
+      ],
+      "label": "labels/23.npz",
+      "label_sha256": "9c0617bb4d4ea849212ccb652e3edbed291ec80b73e55046fa88e02be6069041",
+      "display_annotations": "annotations/23.json",
+      "display_annotations_sha256": "eb30bbd0360b0efe43babf6875905b7b17616398953e243c3c78dac615ff1506",
+      "source_coverage": {
+        "image_pixels": 123606,
+        "explicit_background_pixels": 84284,
+        "unannotated_pixels": 23068,
+        "unlabeled_mask_pixels": 1873,
+        "polyline_rows": 20,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 3,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 98550,
+        "valid_pixels": 97405,
+        "foreground_valid_pixels": 13844,
+        "valid_fraction": 0.7880280892513308,
+        "unsupported_foreground_pixels": 530,
+        "contradictory_background_pixels": 615
+      },
+      "valid_pixels": 97397,
+      "foreground_pixels": 13832,
+      "reuse": null
+    },
+    {
+      "key": "24",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48323_top-20990_bottom-21265_right-48616",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48323_top-20990_bottom-21265_right-48616.png",
+      "input_sha256": "065b6fd8a101919b54382452bf6cb1bff56d3ba6f283cbb569ed3040fcc17166",
+      "grid": {
+        "source_wh": [
+          360,
+          337
+        ],
+        "target_wh": [
+          359,
+          337
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9972222222222222,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        48323,
+        20990,
+        48616,
+        21265
+      ],
+      "label": "labels/24.npz",
+      "label_sha256": "771cb84f9e6708cd9a39f75349b1fd5c6845597d872ed1a9e70134a4a6648bbb",
+      "display_annotations": "annotations/24.json",
+      "display_annotations_sha256": "0943e8b8e7cbb2c51c03cc8d21042f43a5050a9d2375520ccf8f40c28c8cc2dc",
+      "source_coverage": {
+        "image_pixels": 121320,
+        "explicit_background_pixels": 80557,
+        "unannotated_pixels": 20477,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 20,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100843,
+        "valid_pixels": 100724,
+        "foreground_valid_pixels": 20286,
+        "valid_fraction": 0.830234091658424,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 119
+      },
+      "valid_pixels": 100409,
+      "foreground_pixels": 20261,
+      "reuse": null
+    },
+    {
+      "key": "25",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48798_top-20990_bottom-21274_right-49107",
+      "case_id": "TCGA-A7-A0DA",
+      "input": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48798_top-20990_bottom-21274_right-49107.png",
+      "input_sha256": "8eb80c651d1a80155b562d8adcac7b1a29448fa88bb42243674d28c97cd01cdb",
+      "grid": {
+        "source_wh": [
+          378,
+          348
+        ],
+        "target_wh": [
+          379,
+          348
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0026455026455026,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        48798,
+        20990,
+        49107,
+        21274
+      ],
+      "label": "labels/25.npz",
+      "label_sha256": "92ab874f49f75fa833c0b331912de25f257a6f1eedccb9f134d27ab84cb57b3a",
+      "display_annotations": "annotations/25.json",
+      "display_annotations_sha256": "82f95a11532f3e9bbb3d4398a8e5f80ef18a260a95bad96420714c7e68aa82fb",
+      "source_coverage": {
+        "image_pixels": 131544,
+        "explicit_background_pixels": 88871,
+        "unannotated_pixels": 30224,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 6,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101320,
+        "valid_pixels": 100585,
+        "foreground_valid_pixels": 12082,
+        "valid_fraction": 0.7646490907985161,
+        "unsupported_foreground_pixels": 367,
+        "contradictory_background_pixels": 368
+      },
+      "valid_pixels": 100899,
+      "foreground_pixels": 12118,
+      "reuse": null
+    },
+    {
+      "key": "26",
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-14231_top-31888_bottom-32186_right-14506",
+      "case_id": "TCGA-AR-A1AR",
+      "input": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-14231_top-31888_bottom-32186_right-14506.png",
+      "input_sha256": "7c3a6f15c135996e120a1d1578a655120e8acc0849571be6ba3a0783b5d76264",
+      "grid": {
+        "source_wh": [
+          338,
+          367
+        ],
+        "target_wh": [
+          339,
+          367
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0029585798816567,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        14231,
+        31888,
+        14506,
+        32186
+      ],
+      "label": "labels/26.npz",
+      "label_sha256": "cebfb956b74a9580db6aff2866e1a22df21794e97c095e6a8695294fb1c7e1f7",
+      "display_annotations": "annotations/26.json",
+      "display_annotations_sha256": "114ba9f9fb391402cbf15efb95060e0784d2e5126e6243532c049a169d66246a",
+      "source_coverage": {
+        "image_pixels": 124046,
+        "explicit_background_pixels": 86880,
+        "unannotated_pixels": 23370,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 27,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100676,
+        "valid_pixels": 99193,
+        "foreground_valid_pixels": 13130,
+        "valid_fraction": 0.7996469051803363,
+        "unsupported_foreground_pixels": 666,
+        "contradictory_background_pixels": 817
+      },
+      "valid_pixels": 99502,
+      "foreground_pixels": 13192,
+      "reuse": null
+    },
+    {
+      "key": "27",
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305",
+      "case_id": "TCGA-AR-A1AR",
+      "input": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305.png",
+      "input_sha256": "24fb88c740cf09e0736a2ea66fc5963ae54f51b66074e7c3e70647052a9fe276",
+      "grid": {
+        "source_wh": [
+          343,
+          340
+        ],
+        "target_wh": [
+          343,
+          340
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        16027,
+        30363,
+        16305,
+        30639
+      ],
+      "label": "labels/27.npz",
+      "label_sha256": "5a83c74e2acac110f6cdad84ddfa2ef3be4c17ef3532c11ff33142c6e88f860f",
+      "display_annotations": "annotations/27.json",
+      "display_annotations_sha256": "f5481ed25e13e1cfe53bc16b9d3be530cfad207ac7cd74dbb4ea6eea511c8ca2",
+      "source_coverage": {
+        "image_pixels": 116620,
+        "explicit_background_pixels": 70318,
+        "unannotated_pixels": 14431,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 30,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102189,
+        "valid_pixels": 99816,
+        "foreground_valid_pixels": 30769,
+        "valid_fraction": 0.8559080775167209,
+        "unsupported_foreground_pixels": 1102,
+        "contradictory_background_pixels": 1271
+      },
+      "valid_pixels": 99816,
+      "foreground_pixels": 30769,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/09-original-small_vit.npz",
+          "sha256": "6e57528de384783c65b900e81e7c9b5c7b76b381b782c299e5b2eb5ce5f170b2"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/09-original-small_vit_refined.npz",
+          "sha256": "48b70d28987a697d780e763d7facccf7327eac4c6ecf2e66eb470ec68220597b"
+        }
+      }
+    },
+    {
+      "key": "28",
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16536_top-31126_bottom-31420_right-16804",
+      "case_id": "TCGA-AR-A1AR",
+      "input": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16536_top-31126_bottom-31420_right-16804.png",
+      "input_sha256": "9ca34361c5c48c99b896eb154b26f034f6252387229f6f8089bcf2e30da46b53",
+      "grid": {
+        "source_wh": [
+          330,
+          363
+        ],
+        "target_wh": [
+          330,
+          362
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          0.9972451790633609
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        16536,
+        31126,
+        16804,
+        31420
+      ],
+      "label": "labels/28.npz",
+      "label_sha256": "05d8cf20949aa387632f642834af6b893f60f4965e09eb4a1d00f88172d62e03",
+      "display_annotations": "annotations/28.json",
+      "display_annotations_sha256": "85d15e4ea96045d1163c51527601c259540afd8d15a36588d5ca7bc8ecbd830c",
+      "source_coverage": {
+        "image_pixels": 119790,
+        "explicit_background_pixels": 78223,
+        "unannotated_pixels": 17017,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 24,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102773,
+        "valid_pixels": 102569,
+        "foreground_valid_pixels": 24549,
+        "valid_fraction": 0.8562400868185992,
+        "unsupported_foreground_pixels": 1,
+        "contradictory_background_pixels": 203
+      },
+      "valid_pixels": 102253,
+      "foreground_pixels": 24372,
+      "reuse": null
+    },
+    {
+      "key": "29",
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16803_top-29838_bottom-30134_right-17060",
+      "case_id": "TCGA-AR-A1AR",
+      "input": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16803_top-29838_bottom-30134_right-17060.png",
+      "input_sha256": "ae58e7f0330146f0a7b0015c232f292f60166110489fd326f4a8ad70d1717bc3",
+      "grid": {
+        "source_wh": [
+          316,
+          364
+        ],
+        "target_wh": [
+          317,
+          365
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0031645569620253,
+          1.0027472527472527
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        16803,
+        29838,
+        17060,
+        30134
+      ],
+      "label": "labels/29.npz",
+      "label_sha256": "61162b4eebf7ac41fa308bcdabddb303bb6054bc11229edfabc14fd897c18e1d",
+      "display_annotations": "annotations/29.json",
+      "display_annotations_sha256": "a49a7d2652de5f23f9a7852977b1de75451cc1225b5c5d307804e5cbf1ecae8f",
+      "source_coverage": {
+        "image_pixels": 115024,
+        "explicit_background_pixels": 85754,
+        "unannotated_pixels": 12631,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 23,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102393,
+        "valid_pixels": 100755,
+        "foreground_valid_pixels": 15883,
+        "valid_fraction": 0.875947628321046,
+        "unsupported_foreground_pixels": 756,
+        "contradictory_background_pixels": 882
+      },
+      "valid_pixels": 101395,
+      "foreground_pixels": 16025,
+      "reuse": null
+    },
+    {
+      "key": "30",
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-17049_top-29867_bottom-30142_right-17315",
+      "case_id": "TCGA-AR-A1AR",
+      "input": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-17049_top-29867_bottom-30142_right-17315.png",
+      "input_sha256": "9deb15745b2dae4bdbaac795067364082a9ad36e6850f616898cabe5a1754e8e",
+      "grid": {
+        "source_wh": [
+          328,
+          338
+        ],
+        "target_wh": [
+          328,
+          339
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          1.0029585798816567
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        17049,
+        29867,
+        17315,
+        30142
+      ],
+      "label": "labels/30.npz",
+      "label_sha256": "7afcfedbc6db08fec828dd5c41ab079172af1adfebfed23c1fe6e0c61cb2e3e4",
+      "display_annotations": "annotations/30.json",
+      "display_annotations_sha256": "7c67ba66396ce4b8004ddaf3fb26b379640b8420362d2f83c71dca25357eba59",
+      "source_coverage": {
+        "image_pixels": 110864,
+        "explicit_background_pixels": 72825,
+        "unannotated_pixels": 10147,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 40,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100717,
+        "valid_pixels": 98008,
+        "foreground_valid_pixels": 26664,
+        "valid_fraction": 0.884038100736037,
+        "unsupported_foreground_pixels": 1228,
+        "contradictory_background_pixels": 1481
+      },
+      "valid_pixels": 98311,
+      "foreground_pixels": 26749,
+      "reuse": null
+    },
+    {
+      "key": "31",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11564_top-57983_bottom-58241_right-11824",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11564_top-57983_bottom-58241_right-11824.png",
+      "input_sha256": "1666e7b7d26fe480eaa277ec6a12c49bd47de3270782a4b12a36b6113bc67809",
+      "grid": {
+        "source_wh": [
+          322,
+          319
+        ],
+        "target_wh": [
+          323,
+          320
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0031055900621118,
+          1.0031347962382444
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        11564,
+        57983,
+        11824,
+        58241
+      ],
+      "label": "labels/31.npz",
+      "label_sha256": "8e5e3511660153815e0f6bb701dba36343a0511cb3673837047cef346c4cbd4c",
+      "display_annotations": "annotations/31.json",
+      "display_annotations_sha256": "671b42e3e4b8d8b3c9aa4641001c6a09a643ff26b243928060d6c46e38246b7e",
+      "source_coverage": {
+        "image_pixels": 102718,
+        "explicit_background_pixels": 86098,
+        "unannotated_pixels": 1512,
+        "unlabeled_mask_pixels": 951,
+        "polyline_rows": 13,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 1,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100218,
+        "valid_pixels": 99016,
+        "foreground_valid_pixels": 13643,
+        "valid_fraction": 0.9639595786522324,
+        "unsupported_foreground_pixels": 514,
+        "contradictory_background_pixels": 688
+      },
+      "valid_pixels": 99653,
+      "foreground_pixels": 13682,
+      "reuse": null
+    },
+    {
+      "key": "32",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11823_top-57216_bottom-57473_right-12087",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11823_top-57216_bottom-57473_right-12087.png",
+      "input_sha256": "e5357e206792f45df55df0802f14792dddb88bbcce6834e97539dc9d9a9dfb95",
+      "grid": {
+        "source_wh": [
+          327,
+          318
+        ],
+        "target_wh": [
+          328,
+          319
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.003058103975535,
+          1.0031446540880504
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        11823,
+        57216,
+        12087,
+        57473
+      ],
+      "label": "labels/32.npz",
+      "label_sha256": "7ac3217dbc92f0df6e71b1083d81a50a6b5c1956b5cd9081a64e47a9786cc53d",
+      "display_annotations": "annotations/32.json",
+      "display_annotations_sha256": "c24ccaddee29137de41ddb7128fb8e70a60674c34838b6dfcd7c86acb0effca3",
+      "source_coverage": {
+        "image_pixels": 103986,
+        "explicit_background_pixels": 86119,
+        "unannotated_pixels": 2779,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 21,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101207,
+        "valid_pixels": 99561,
+        "foreground_valid_pixels": 14359,
+        "valid_fraction": 0.9574461946800531,
+        "unsupported_foreground_pixels": 729,
+        "contradictory_background_pixels": 917
+      },
+      "valid_pixels": 100190,
+      "foreground_pixels": 14427,
+      "reuse": null
+    },
+    {
+      "key": "33",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351.png",
+      "input_sha256": "82164c1ce7b15fb99d69211bad83e312a9b1b7b3b47282b9a8fd019cf77e66ad",
+      "grid": {
+        "source_wh": [
+          337,
+          320
+        ],
+        "target_wh": [
+          337,
+          320
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        12079,
+        57471,
+        12351,
+        57729
+      ],
+      "label": "labels/33.npz",
+      "label_sha256": "634af1c12c8e8cc000a14f31aea8da2a3f4c03ee17424528a2fc7b556526fb81",
+      "display_annotations": "annotations/33.json",
+      "display_annotations_sha256": "ae3d5721c4d231f54bb7144f91a4a76a51f1dc4dbadb08978100926f56c72d1b",
+      "source_coverage": {
+        "image_pixels": 107840,
+        "explicit_background_pixels": 91741,
+        "unannotated_pixels": 6450,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 17,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101390,
+        "valid_pixels": 101236,
+        "foreground_valid_pixels": 9649,
+        "valid_fraction": 0.9387611275964391,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 154
+      },
+      "valid_pixels": 101236,
+      "foreground_pixels": 9649,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/10-original-small_vit.npz",
+          "sha256": "ad9f779a167569a888aa51e3d16122b6fd18b39738e544aea757a1e883b7e290"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/10-original-small_vit_refined.npz",
+          "sha256": "67f1284078ea4bf33f253dd27aaeb2859df4547023611ab526b3812757f20087"
+        }
+      }
+    },
+    {
+      "key": "34",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372.png",
+      "input_sha256": "7fd3cd7c6c6832a23d3e62590a4377ea94c3f5357c948ac1f62eadc6f3b382bd",
+      "grid": {
+        "source_wh": [
+          349,
+          342
+        ],
+        "target_wh": [
+          349,
+          342
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        13091,
+        56439,
+        13372,
+        56715
+      ],
+      "label": "labels/34.npz",
+      "label_sha256": "9b6c35f92d8f21dc91937aab6228659ed19c52749a9cb1a83115dded210cef08",
+      "display_annotations": "annotations/34.json",
+      "display_annotations_sha256": "f2f13bac62ef180cb9a1c91142564222aa431ec57e85ac0572ccf6d975328cd2",
+      "source_coverage": {
+        "image_pixels": 119358,
+        "explicit_background_pixels": 75149,
+        "unannotated_pixels": 16396,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 62,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102962,
+        "valid_pixels": 102341,
+        "foreground_valid_pixels": 27810,
+        "valid_fraction": 0.8574289113423482,
+        "unsupported_foreground_pixels": 3,
+        "contradictory_background_pixels": 618
+      },
+      "valid_pixels": 102341,
+      "foreground_pixels": 27810,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/11-original-small_vit.npz",
+          "sha256": "3b362a3c5482660f0e866cd1a57ba59d02d2bccd289cd7636bf65b9f86274409"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/11-original-small_vit_refined.npz",
+          "sha256": "80b0c87cccda6697c441476a4dcc96c1694a5596b59359e438ed74ffe753a199"
+        }
+      }
+    },
+    {
+      "key": "35",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13342_top-57444_bottom-57741_right-13635",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13342_top-57444_bottom-57741_right-13635.png",
+      "input_sha256": "d9c1bbfe79849332d116c07d86eeaa9b91bb79d69f4cfc861b6d453db1c73d4e",
+      "grid": {
+        "source_wh": [
+          364,
+          368
+        ],
+        "target_wh": [
+          364,
+          369
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          1.002717391304348
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        13342,
+        57444,
+        13635,
+        57741
+      ],
+      "label": "labels/35.npz",
+      "label_sha256": "f76bc6102bdaf02c064c22a0765910f85c5918c0ebdcda83d490ed8ceb54c32c",
+      "display_annotations": "annotations/35.json",
+      "display_annotations_sha256": "80aea2daf121eee431328022b81828d645451036d3c61242b75a76a6c7ec003c",
+      "source_coverage": {
+        "image_pixels": 133952,
+        "explicit_background_pixels": 79254,
+        "unannotated_pixels": 29343,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 20,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 104609,
+        "valid_pixels": 104412,
+        "foreground_valid_pixels": 25355,
+        "valid_fraction": 0.7794732441471572,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 197
+      },
+      "valid_pixels": 104749,
+      "foreground_pixels": 25409,
+      "reuse": null
+    },
+    {
+      "key": "36",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400.png",
+      "input_sha256": "39d895e9dabe8c23e69679f5480d08a28f1527a4c390ac5c72fb11d7505e71c1",
+      "grid": {
+        "source_wh": [
+          392,
+          359
+        ],
+        "target_wh": [
+          392,
+          359
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        14084,
+        57462,
+        14400,
+        57751
+      ],
+      "label": "labels/36.npz",
+      "label_sha256": "07cbb5caa19a94f7b20cf1213cb3f9a19f431e08d8a4dc3a7e2c4f36b163422c",
+      "display_annotations": "annotations/36.json",
+      "display_annotations_sha256": "23263e86cef378d3512f5dc457122d2662f3c0f0704934f6357e1d16f9310f0a",
+      "source_coverage": {
+        "image_pixels": 140728,
+        "explicit_background_pixels": 74309,
+        "unannotated_pixels": 34148,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 28,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106580,
+        "valid_pixels": 106258,
+        "foreground_valid_pixels": 32268,
+        "valid_fraction": 0.75505940537775,
+        "unsupported_foreground_pixels": 3,
+        "contradictory_background_pixels": 319
+      },
+      "valid_pixels": 106258,
+      "foreground_pixels": 32268,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/12-original-small_vit.npz",
+          "sha256": "35e7dd5ded65325cfe1252c8a39c8b6d03d76241fc3f5031231a7bb7d7b5c69c"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/12-original-small_vit_refined.npz",
+          "sha256": "350718006640a64353ba2c1349f871d38bb72926c03976bfba77e0ece1bca92e"
+        }
+      }
+    },
+    {
+      "key": "37",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14852_top-57177_bottom-57515_right-15177",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14852_top-57177_bottom-57515_right-15177.png",
+      "input_sha256": "ace1e19c4a56f4d00966ccf7cb1f319a1008fc1852f4c2d27cc45fb8fa4c99f5",
+      "grid": {
+        "source_wh": [
+          404,
+          420
+        ],
+        "target_wh": [
+          403,
+          419
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9975247524752475,
+          0.9976190476190476
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        14852,
+        57177,
+        15177,
+        57515
+      ],
+      "label": "labels/37.npz",
+      "label_sha256": "0bc3b4dc3d1ba8539eb48aa86b8e7f54b13438f008f9789042a7a1a6dfb21ffc",
+      "display_annotations": "annotations/37.json",
+      "display_annotations_sha256": "8eef83770da8d8990bb1b1d2267460ce07f1df476e7e6aed62ba26a252d82c83",
+      "source_coverage": {
+        "image_pixels": 169680,
+        "explicit_background_pixels": 63686,
+        "unannotated_pixels": 55007,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 26,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 114673,
+        "valid_pixels": 114387,
+        "foreground_valid_pixels": 50987,
+        "valid_fraction": 0.6741336633663366,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 286
+      },
+      "valid_pixels": 113728,
+      "foreground_pixels": 50670,
+      "reuse": null
+    },
+    {
+      "key": "38",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14878_top-56436_bottom-56704_right-15177",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14878_top-56436_bottom-56704_right-15177.png",
+      "input_sha256": "182496d65d2446a1d1c7200dc3789a9b86fffe6830a0d3b281c0a0fe47d348fb",
+      "grid": {
+        "source_wh": [
+          370,
+          333
+        ],
+        "target_wh": [
+          371,
+          332
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0027027027027027,
+          0.996996996996997
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        14878,
+        56436,
+        15177,
+        56704
+      ],
+      "label": "labels/38.npz",
+      "label_sha256": "a7c6363cf85c89d9d9f26f5b1e185c1ec839d722b7ef103fe8d7fbdb5dfcd7f8",
+      "display_annotations": "annotations/38.json",
+      "display_annotations_sha256": "8d8b31b163ebd6b5683e6d68b18316a2c6b652f323ae8d0906e58b84e447134c",
+      "source_coverage": {
+        "image_pixels": 123210,
+        "explicit_background_pixels": 64372,
+        "unannotated_pixels": 18605,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 20,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 104605,
+        "valid_pixels": 102437,
+        "foreground_valid_pixels": 39199,
+        "valid_fraction": 0.8314016719422125,
+        "unsupported_foreground_pixels": 1034,
+        "contradictory_background_pixels": 1134
+      },
+      "valid_pixels": 102426,
+      "foreground_pixels": 39164,
+      "reuse": null
+    },
+    {
+      "key": "39",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-15133_top-57203_bottom-57495_right-15444",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-15133_top-57203_bottom-57495_right-15444.png",
+      "input_sha256": "6cdcbd5bf3e6d8423f84d505d4eee89d9359f09ecc3e1b455ce92914f1e4dddb",
+      "grid": {
+        "source_wh": [
+          386,
+          363
+        ],
+        "target_wh": [
+          386,
+          362
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          0.9972451790633609
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        15133,
+        57203,
+        15444,
+        57495
+      ],
+      "label": "labels/39.npz",
+      "label_sha256": "bb6cf98e9d5c9a0a112bf6e6a2f7c31c3c5b4f5199b8f79deef0a2c508b65cf5",
+      "display_annotations": "annotations/39.json",
+      "display_annotations_sha256": "7bb11c8d850b9b6030e8c3f3360f1605fbed339e2ad6be8c34ecf3c514568ccd",
+      "source_coverage": {
+        "image_pixels": 140118,
+        "explicit_background_pixels": 56869,
+        "unannotated_pixels": 31719,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 29,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 108399,
+        "valid_pixels": 108067,
+        "foreground_valid_pixels": 51527,
+        "valid_fraction": 0.7712570833154913,
+        "unsupported_foreground_pixels": 3,
+        "contradictory_background_pixels": 329
+      },
+      "valid_pixels": 107728,
+      "foreground_pixels": 51390,
+      "reuse": null
+    },
+    {
+      "key": "40",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698.png",
+      "input_sha256": "9a44ac186e26443e336ca954bf65a92b12bdebcd938cf341056eafd368a0f913",
+      "grid": {
+        "source_wh": [
+          361,
+          392
+        ],
+        "target_wh": [
+          361,
+          392
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        16407,
+        56662,
+        16698,
+        56978
+      ],
+      "label": "labels/40.npz",
+      "label_sha256": "a4c846a9f5c1e7ee3b52d741a72ce352bea39b97ca4eeb5fb552fe3b50ddef40",
+      "display_annotations": "annotations/40.json",
+      "display_annotations_sha256": "26ce5510b01fd570c92c7134bdb9e7d51b07fd8f77576927331a8f4d50d2264d",
+      "source_coverage": {
+        "image_pixels": 141512,
+        "explicit_background_pixels": 77378,
+        "unannotated_pixels": 35246,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 37,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106266,
+        "valid_pixels": 105908,
+        "foreground_valid_pixels": 28888,
+        "valid_fraction": 0.7484029622929504,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 358
+      },
+      "valid_pixels": 105908,
+      "foreground_pixels": 28888,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/13-original-small_vit.npz",
+          "sha256": "bca1717b1744186d02f450d341816aa66345446d54846f44aef08d71c3bbfb4f"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/13-original-small_vit_refined.npz",
+          "sha256": "3a57b4467e04634c0cc8d18bcb726251867acb4eaf5775beb59c5f1386be8417"
+        }
+      }
+    },
+    {
+      "key": "41",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55653_bottom-55936_right-17209",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55653_bottom-55936_right-17209.png",
+      "input_sha256": "a7ed7efaac6b9cc0980e75320408d6ce6084e0dd605612a0d0073fd9e3981e49",
+      "grid": {
+        "source_wh": [
+          359,
+          351
+        ],
+        "target_wh": [
+          360,
+          351
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0027855153203342,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        16919,
+        55653,
+        17209,
+        55936
+      ],
+      "label": "labels/41.npz",
+      "label_sha256": "47e37d44bc677b5093dad63db8469a952575fb0e1e474323ebe1e85027404f6c",
+      "display_annotations": "annotations/41.json",
+      "display_annotations_sha256": "69c43578cd55c7677371a5758895e9a7dd00a12a188e52793e3b8e392cf92e55",
+      "source_coverage": {
+        "image_pixels": 126009,
+        "explicit_background_pixels": 65187,
+        "unannotated_pixels": 20819,
+        "unlabeled_mask_pixels": 1492,
+        "polyline_rows": 25,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 2,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 103583,
+        "valid_pixels": 100365,
+        "foreground_valid_pixels": 37035,
+        "valid_fraction": 0.7964907268528438,
+        "unsupported_foreground_pixels": 1476,
+        "contradictory_background_pixels": 1742
+      },
+      "valid_pixels": 100699,
+      "foreground_pixels": 37198,
+      "reuse": null
+    },
+    {
+      "key": "42",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55919_bottom-56213_right-17200",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55919_bottom-56213_right-17200.png",
+      "input_sha256": "cb6767d5188cdc147395326d3efa5919f8988821cfd32ad245ae4dfa0e1fb463",
+      "grid": {
+        "source_wh": [
+          348,
+          365
+        ],
+        "target_wh": [
+          349,
+          365
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0028735632183907,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        16919,
+        55919,
+        17200,
+        56213
+      ],
+      "label": "labels/42.npz",
+      "label_sha256": "6fc6af021bdf580b4e819800cbbd2fd2435204b619e02f5b974a281c9457d5ef",
+      "display_annotations": "annotations/42.json",
+      "display_annotations_sha256": "24c79611d1523702721b3324a44630fb34dfff663d19ec0663f5ec6dc9893680",
+      "source_coverage": {
+        "image_pixels": 127020,
+        "explicit_background_pixels": 77064,
+        "unannotated_pixels": 22232,
+        "unlabeled_mask_pixels": 2389,
+        "polyline_rows": 37,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 1,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102307,
+        "valid_pixels": 99839,
+        "foreground_valid_pixels": 24184,
+        "valid_fraction": 0.7860100771532043,
+        "unsupported_foreground_pixels": 1151,
+        "contradictory_background_pixels": 1317
+      },
+      "valid_pixels": 100157,
+      "foreground_pixels": 24243,
+      "reuse": null
+    },
+    {
+      "key": "43",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738",
+      "case_id": "TCGA-C8-A12V",
+      "input": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738.png",
+      "input_sha256": "ecf344658832fc05a339b9c4a6d01e5c9494424b2be1a249f96195b049451d21",
+      "grid": {
+        "source_wh": [
+          361,
+          357
+        ],
+        "target_wh": [
+          361,
+          357
+        ],
+        "identity": true,
+        "edge_scale_xy": [
+          1.0,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        17447,
+        58233,
+        17738,
+        58521
+      ],
+      "label": "labels/43.npz",
+      "label_sha256": "e4cfcaa2b19e90a15d92a677716e505c33969def1dd14334ac8ddc500e17cf59",
+      "display_annotations": "annotations/43.json",
+      "display_annotations_sha256": "fcbb97edd7c1d4d4c5bdbdae8a1d4f8f158b86d5cabab4d5fb75d4e839a29768",
+      "source_coverage": {
+        "image_pixels": 128877,
+        "explicit_background_pixels": 83143,
+        "unannotated_pixels": 23875,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 26,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 105002,
+        "valid_pixels": 103148,
+        "foreground_valid_pixels": 20976,
+        "valid_fraction": 0.8003600332099599,
+        "unsupported_foreground_pixels": 883,
+        "contradictory_background_pixels": 971
+      },
+      "valid_pixels": 103148,
+      "foreground_pixels": 20976,
+      "reuse": {
+        "small_vit": {
+          "path": "evaluation/predictions/14-original-small_vit.npz",
+          "sha256": "e3f85565d905e0d651c4798c0527ce21e3c85a342d5e8484099ea6e3e334ac58"
+        },
+        "small_vit_refined": {
+          "path": "evaluation/predictions/14-original-small_vit_refined.npz",
+          "sha256": "dfa0e2311930dc0918a6b8fd3045ededa01907115524396ee5073656a328f4f4"
+        }
+      }
+    },
+    {
+      "key": "44",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56338_top-26127_bottom-26386_right-56595",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56338_top-26127_bottom-26386_right-56595.png",
+      "input_sha256": "c08f24e717a0aafbad8eec9dff18bc5f27530a1804dfc6b51fd9da19268a0b84",
+      "grid": {
+        "source_wh": [
+          316,
+          319
+        ],
+        "target_wh": [
+          317,
+          319
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0031645569620253,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        56338,
+        26127,
+        56595,
+        26386
+      ],
+      "label": "labels/44.npz",
+      "label_sha256": "a3d643420c3114b0aa7337f098562e8c15cea7c83855bccef6fb16cf3522eb7c",
+      "display_annotations": "annotations/44.json",
+      "display_annotations_sha256": "e51d88e1a2749c6b8081c4986a83bf4933c1e229176c026c5ddadebdd3f1ef58",
+      "source_coverage": {
+        "image_pixels": 100804,
+        "explicit_background_pixels": 95344,
+        "unannotated_pixels": 905,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 8,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 99899,
+        "valid_pixels": 99802,
+        "foreground_valid_pixels": 4555,
+        "valid_fraction": 0.9900599182572121,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 97
+      },
+      "valid_pixels": 100118,
+      "foreground_pixels": 4610,
+      "reuse": null
+    },
+    {
+      "key": "45",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56850_top-27407_bottom-27664_right-57107",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56850_top-27407_bottom-27664_right-57107.png",
+      "input_sha256": "8a98066f87ec1ea6cf00294f2a67c4c47c2a99dbe35e7f464bb2aacd192ec5fb",
+      "grid": {
+        "source_wh": [
+          316,
+          316
+        ],
+        "target_wh": [
+          317,
+          317
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0031645569620253,
+          1.0031645569620253
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        56850,
+        27407,
+        57107,
+        27664
+      ],
+      "label": "labels/45.npz",
+      "label_sha256": "639f77065774135360143cc73fd9f828f23b71c80b348845022634e319bb8961",
+      "display_annotations": "annotations/45.json",
+      "display_annotations_sha256": "88089db29ce798cdd277dec5f2ac132fc69f15b0f6a8dd1b3b0d039c9f422b11",
+      "source_coverage": {
+        "image_pixels": 99856,
+        "explicit_background_pixels": 97967,
+        "unannotated_pixels": 0,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 4,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 99856,
+        "valid_pixels": 99606,
+        "foreground_valid_pixels": 1782,
+        "valid_fraction": 0.9974963948085243,
+        "unsupported_foreground_pixels": 107,
+        "contradictory_background_pixels": 143
+      },
+      "valid_pixels": 100239,
+      "foreground_pixels": 1782,
+      "reuse": null
+    },
+    {
+      "key": "46",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-57100_top-27151_bottom-27408_right-57373",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-57100_top-27151_bottom-27408_right-57373.png",
+      "input_sha256": "0f852cf7f77d9d983ae720897107d0d017f664a9e42b45c18cb85b6d2eddd7c9",
+      "grid": {
+        "source_wh": [
+          337,
+          316
+        ],
+        "target_wh": [
+          336,
+          317
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9970326409495549,
+          1.0031645569620253
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        57100,
+        27151,
+        57373,
+        27408
+      ],
+      "label": "labels/46.npz",
+      "label_sha256": "8e244c5df3be041e4db988d7261c9866a3732b2b50a9acceb6aeed5c79e83828",
+      "display_annotations": "annotations/46.json",
+      "display_annotations_sha256": "b5246dfaff8275ed08805e02aa972d1a95e943309163cc747b13d5a2d6bc14d8",
+      "source_coverage": {
+        "image_pixels": 106492,
+        "explicit_background_pixels": 89989,
+        "unannotated_pixels": 6494,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 10,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 99998,
+        "valid_pixels": 99897,
+        "foreground_valid_pixels": 10009,
+        "valid_fraction": 0.9380704653870713,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 101
+      },
+      "valid_pixels": 99895,
+      "foreground_pixels": 10012,
+      "reuse": null
+    },
+    {
+      "key": "47",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58118_top-27642_bottom-27938_right-58386",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58118_top-27642_bottom-27938_right-58386.png",
+      "input_sha256": "22937cbd055d13949e92c9d26651736d33459c1ddb2a79745b45f3f4c0e5b1aa",
+      "grid": {
+        "source_wh": [
+          331,
+          364
+        ],
+        "target_wh": [
+          330,
+          365
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9969788519637462,
+          1.0027472527472527
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        58118,
+        27642,
+        58386,
+        27938
+      ],
+      "label": "labels/47.npz",
+      "label_sha256": "5b290b7b487e96c4879eada9bd5120c1994888e91910c7e3a40bfde75eb9e93b",
+      "display_annotations": "annotations/47.json",
+      "display_annotations_sha256": "2ddc3ebca85ead09305548b43a4aa7db107c6dfb7f7368d34797a6d22c77d911",
+      "source_coverage": {
+        "image_pixels": 120484,
+        "explicit_background_pixels": 76809,
+        "unannotated_pixels": 17611,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 26,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102873,
+        "valid_pixels": 102629,
+        "foreground_valid_pixels": 26064,
+        "valid_fraction": 0.8518060489359583,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 244
+      },
+      "valid_pixels": 102639,
+      "foreground_pixels": 26071,
+      "reuse": null
+    },
+    {
+      "key": "48",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58369_top-26873_bottom-27151_right-58643",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58369_top-26873_bottom-27151_right-58643.png",
+      "input_sha256": "a63f977d0e43bffb482fa19e17785655cf70bc155c6d0a42251c5b426618fd45",
+      "grid": {
+        "source_wh": [
+          337,
+          343
+        ],
+        "target_wh": [
+          338,
+          343
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.002967359050445,
+          1.0
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        58369,
+        26873,
+        58643,
+        27151
+      ],
+      "label": "labels/48.npz",
+      "label_sha256": "aaec23cfd0b85d5b027765ee933fda9cfc37c22aadcad3a6673f38f4776b3bd8",
+      "display_annotations": "annotations/48.json",
+      "display_annotations_sha256": "c431c29948d749620664ef53d0b4e987d98ba5b106df5e5d0595daf56a8b044e",
+      "source_coverage": {
+        "image_pixels": 115591,
+        "explicit_background_pixels": 84570,
+        "unannotated_pixels": 13606,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 17,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101985,
+        "valid_pixels": 101854,
+        "foreground_valid_pixels": 17415,
+        "valid_fraction": 0.8811585677085586,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 131
+      },
+      "valid_pixels": 102170,
+      "foreground_pixels": 17464,
+      "reuse": null
+    },
+    {
+      "key": "49",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59119_top-27915_bottom-28176_right-59422",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59119_top-27915_bottom-28176_right-59422.png",
+      "input_sha256": "8dc582de34b8d37da7774698b8dacc4fa0f5cb73bfbecbdf36fa9656dedd070a",
+      "grid": {
+        "source_wh": [
+          373,
+          321
+        ],
+        "target_wh": [
+          373,
+          322
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          1.0,
+          1.0031152647975077
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        59119,
+        27915,
+        59422,
+        28176
+      ],
+      "label": "labels/49.npz",
+      "label_sha256": "473715cc2c03779d3db6a3b02a672df75317f0a4a6a14f48d9eeff391df769d4",
+      "display_annotations": "annotations/49.json",
+      "display_annotations_sha256": "c7016c6c7df0ec4e1bc4064226a36039c8ee662e86f8c688eb1666f1e1fd89e4",
+      "source_coverage": {
+        "image_pixels": 119733,
+        "explicit_background_pixels": 86836,
+        "unannotated_pixels": 17691,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 15,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102042,
+        "valid_pixels": 101073,
+        "foreground_valid_pixels": 14711,
+        "valid_fraction": 0.8441532409611385,
+        "unsupported_foreground_pixels": 495,
+        "contradictory_background_pixels": 474
+      },
+      "valid_pixels": 101431,
+      "foreground_pixels": 14854,
+      "reuse": null
+    },
+    {
+      "key": "50",
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59143_top-26895_bottom-27151_right-59429",
+      "case_id": "TCGA-E2-A158",
+      "input": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59143_top-26895_bottom-27151_right-59429.png",
+      "input_sha256": "a1f53584ebfd0bacd589fc01885a7c22a5d4652ef9111e57be623849dc0fbd4d",
+      "grid": {
+        "source_wh": [
+          353,
+          316
+        ],
+        "target_wh": [
+          352,
+          315
+        ],
+        "identity": false,
+        "edge_scale_xy": [
+          0.9971671388101983,
+          0.9968354430379747
+        ],
+        "sampling": "SciPy zoom(order=0, grid_mode=True, prefilter=False, mode=nearest) on source indices",
+        "interpolation": "nearest; complete categorical tuples; no anti-aliasing",
+        "prerequisite": "Same ROI and level0 extent verified by caller"
+      },
+      "level0_bounds": [
+        59143,
+        26895,
+        59429,
+        27151
+      ],
+      "label": "labels/50.npz",
+      "label_sha256": "e6d9472a74cfeeca4ed8c4fcf73cde64baec8e560c05afd44a226bb7aafa0d0d",
+      "display_annotations": "annotations/50.json",
+      "display_annotations_sha256": "43e6c49f160fc85158e9963fc6b1a4819a71dc935f564c1bf325f4e1dfef3d0c",
+      "source_coverage": {
+        "image_pixels": 111548,
+        "explicit_background_pixels": 87735,
+        "unannotated_pixels": 10175,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 18,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101373,
+        "valid_pixels": 101242,
+        "foreground_valid_pixels": 13638,
+        "valid_fraction": 0.9076092803098218,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 131
+      },
+      "valid_pixels": 100611,
+      "foreground_pixels": 13546,
+      "reuse": null
+    }
+  ],
+  "image_count": 51,
+  "case_count": 5,
+  "new_inference_fovs": 36,
+  "reused_fovs": 15,
+  "base_protocol_sha256": "0623d24445f886733f02fe81d17a808d330e6f23fe599c55a2f99c6e85b60b63",
+  "base_results_sha256": "91da7a806e6335de45fb4ac3f73e5ff91160a4c439b78bc72da24477193241ef",
+  "base_original_acquisition_sha256": "2338db7fbbc1ffed843780c753fa63a67004284c51b616139288520d9fefca47",
+  "base_annotation_acquisition_sha256": "b59f240ce696a6e33c13f7b3a2db3f15db164f28e1b746ef4f3035c044fea8c0",
+  "support_sha256": "daaca702ef6717088c4088029c4a5b2e1f0d9f5850e247c4ffbdb4d46d55f2c0",
+  "source_sha256": {
+    "__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
+    "annotation_grid.py": "0d9034e15b5e8f245bd62b6c696b33061beeb986099e7c9851a7867e89bd1c64",
+    "cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+    "experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "external_validation.py": "69e27d0a17bb56ee696c3620921ebc1e7f1265f03da2756894605bd1dcf575cf",
+    "ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "learner_refinement.py": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+    "learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "metrics.py": "95584cd131ab54f0bb24485f56bc6a85b68b775bb318fbf5dfa0b9e24c6b8a78",
+    "model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "model_comparison.py": "2686a9ffabcbc587c2b4d0dc1b97dfeb913db1c2328c0c0b5edb2e08e8f6981d",
+    "panoptils.py": "750828229838d0520652c1eaf1f178d6d44a7371a26faf5dcd89f6067a9ddd50",
+    "patches.py": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5",
+    "refinement.py": "ef3f0f739f72214be97af3002e2089331dfc93fe561f05edf6799be2b74a7d22",
+    "review_cases.py": "2830c555dcfebd097ab2ef19eb2cbc6cc594a21c3faa735455dc8bd9e67c007e",
+    "vit.py": "41a00cb0278921c9e2271e5aa1714ebdc3e59bb435e569513bc67805dee41932",
+    "wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e",
+    "wsi_source.py": "2f54fab54d4f8ff8c2babf82e953152eebd24642d994768c7e6a05d6212dd7df"
+  },
+  "runner_sha256": "23862d6e5cba529f3278e3fe55adc6307b578aff97cafa79009453d66e0b8f56",
+  "primary": "Author-guided categorical grid normalization to fixed RGB; sampled existing support policy",
+  "historical_exporter_reproduced": false,
+  "registration_optimized_using_predictions": false,
+  "training_run": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "previous_external_patient_overlap": [
+    "TCGA-A1-A0SP"
+  ]
+}

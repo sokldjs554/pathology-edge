@@ -1,0 +1,15 @@
+{
+  "independent_review_completed": true,
+  "blocking_findings": [],
+  "tests_rechecked": 27,
+  "metrics_recounted": 408,
+  "normalized_label_sets": 51,
+  "categorical_exports_checked": 51,
+  "contact_sheets_viewed": 3,
+  "detailed_alignment_viewed": true,
+  "old15_results_unchanged": true,
+  "historical_exporter_recovery_claimed": false,
+  "user_execution": false,
+  "user_review": false,
+  "scope": "Code, frozen records, independent arithmetic, figures and report reviewed; archive extraction was separately audited by the primary execution environment"
+}

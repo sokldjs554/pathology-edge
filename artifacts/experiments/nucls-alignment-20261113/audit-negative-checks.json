@@ -1,0 +1,20 @@
+{
+  "all_rejected": true,
+  "checks": [
+    {
+      "tamper": "metric",
+      "rejected": true,
+      "reason": "old15 exact metrics"
+    },
+    {
+      "tamper": "mean",
+      "rejected": true,
+      "reason": "FOV means"
+    },
+    {
+      "tamper": "reuse",
+      "rejected": true,
+      "reason": "reuse rule"
+    }
+  ]
+}
