@@ -1,0 +1,252 @@
+[
+  {
+    "id": "12bSgbDmwHoEvFl8X3IZs7Yepz3zFpeV4",
+    "name": "ALL_FOV_LOCATIONS.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1M_TjDN9lbmn4Eqw0PkIraT6Kf-rQEyOS",
+    "name": "TCGA-A1-A0SP-DX1_left-7582_top-55032_bottom-56251_right-8801.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1vgMchuCw5Cc5Gmc7rU-qJQjN5EEtBYHK",
+    "name": "TCGA-A1-A0SP-DX1_left-7590_top-56559_bottom-57778_right-8809.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1JNmhUiCD4_5dlJWMkZ11WoM2KTS6hbMR",
+    "name": "TCGA-A1-A0SP-DX1_left-7591_top-55530_bottom-56749_right-8810.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1In5AhYQMC8M5i5ybavMl_F4lYG6isNrP",
+    "name": "TCGA-A1-A0SP-DX1_left-7853_top-56559_bottom-57778_right-9072.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1CemOFhYIW6zqd9HSoe0X36fSVmsFozuT",
+    "name": "TCGA-A1-A0SP-DX1_left-8114_top-53749_bottom-54968_right-9333.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "19xuNBqXdCIf6hv1DtIRl6Ra66yxw_hSv",
+    "name": "TCGA-A1-A0SP-DX1_left-8364_top-55533_bottom-56752_right-9582.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1riX1Ub8-CER8MSszWdgZRE03pFD_3zYJ",
+    "name": "TCGA-A1-A0SP-DX1_left-8365_top-54248_bottom-55467_right-9584.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1HnF--gHOKgjyHq20SNs6BXglxVVvIYiI",
+    "name": "TCGA-A1-A0SP-DX1_left-8617_top-56559_bottom-57778_right-9836.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1pOWOo-FbEaowmskxtjiZfdLXUIBV30LF",
+    "name": "TCGA-A1-A0SP-DX1_left-8622_top-54234_bottom-55453_right-9841.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1XxtGwKFwL5IQtpwqJqVXF3A4HauREj8v",
+    "name": "TCGA-A1-A0SP-DX1_left-8623_top-55315_bottom-56533_right-9842.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1gzoX-E4NGBVfVqQJloTzNedUeDmSnUem",
+    "name": "TCGA-A1-A0SP-DX1_left-8883_top-55260_bottom-56478_right-10101.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1oksQwVL0G4Tv5zNK8XxSlJ6bChKVxGd9",
+    "name": "TCGA-A1-A0SP-DX1_left-9133_top-56574_bottom-57792_right-10351.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "16F4RvpPwC_b3u044ZZoDhLRfjcV92mgC",
+    "name": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1b6-rhs9eduB3ov2GdqvfNMJjVVcqrv2H",
+    "name": "TCGA-A1-A0SP-DX1_left-11187_top-54012_bottom-55231_right-12406.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1MLhvLlueqvDWcmIX8YETJvkx6XmkGZ2B",
+    "name": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1bXxfa8EWk3fWZ5N3BMJAHpRHQKCKvYio",
+    "name": "TCGA-A2-A0CM-DX1_left-20111_top-57141_bottom-58378_right-21347.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1RvYlt-Y2XiNgnRkjlmJXXo78bj-P97qq",
+    "name": "TCGA-A2-A0CM-DX1_left-21404_top-57901_bottom-59137_right-22640.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1DpOM-6bWVMc2H-g6FhAkAPbSJjlF0Y2L",
+    "name": "TCGA-A2-A0CM-DX1_left-21641_top-58921_bottom-60158_right-22877.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1j_-Vn6xTybBWNO4uHBYeqBSJqvkpgTtj",
+    "name": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1mBIyY-1-W0SJfiGBiFXFSxhiU5H_2wmq",
+    "name": "TCGA-A2-A0D0-DX1_left-68766_top-40634_bottom-41870_right-70003.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1Y5gtoZXAPiApNEyVF1s8PZTpPCNsIrdm",
+    "name": "TCGA-A2-A0D0-DX1_left-71561_top-45494_bottom-46730_right-72798.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1bLsZIBhLdqN5CA_mccMKy71h9EkBvNKW",
+    "name": "TCGA-A2-A0D0-DX1_left-72344_top-42421_bottom-43657_right-73580.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1x2Vc4Htn4bya2SqbWWoM01Wh_1o0kIUf",
+    "name": "TCGA-A2-A0D0-DX1_left-73108_top-43951_bottom-45187_right-74344.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1hsEs5z1wUxeeS1McfukTUc6cDdXdHGF-",
+    "name": "TCGA-A2-A0D0-DX1_left-74651_top-44203_bottom-45439_right-75887.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1Rb3iloSx4eY4poqkjgw-ut73E7Ww4jaP",
+    "name": "TCGA-A2-A0D0-DX1_left-75158_top-44466_bottom-45702_right-76394.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1cp98Z3RpfBrV01MSwZiE7NsejjMBYR7m",
+    "name": "TCGA-A2-A0D2-DX1_left-97174_top-23865_bottom-25104_right-98413.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1aRPVLTUxZQn5vILlhzgBaN-yV_FwLjfl",
+    "name": "TCGA-A2-A0D2-DX1_left-97183_top-22827_bottom-24066_right-98422.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "16uoe0f2OHc7OWbYQT7PcNKxS9vcTGrad",
+    "name": "TCGA-A2-A0D2-DX1_left-97396_top-23087_bottom-24326_right-98634.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "14tEk-cP2KeuDdaO9tbMd3KQn38KcMtxi",
+    "name": "TCGA-A2-A0D2-DX1_left-97918_top-23844_bottom-25083_right-99157.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1EGfXYfcEEp9l9xIfl-WRNruap6u-cBDV",
+    "name": "TCGA-A2-A0D2-DX1_left-97946_top-22328_bottom-23566_right-99185.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1CYmdFGGnNtlCkWPHU18tzAMobOBHRudM",
+    "name": "TCGA-A2-A0D2-DX1_left-98187_top-22842_bottom-24080_right-99426.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1pY1TpfSEqxozZdYvkA4gWbPqFTgP9YSU",
+    "name": "TCGA-A2-A0D2-DX1_left-98460_top-23865_bottom-25104_right-99699.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1J-oL9mzSH3OdfdeJ1hu1BuGrzc7UuCBY",
+    "name": "TCGA-A2-A0D2-DX1_left-98697_top-22568_bottom-23807_right-99936.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1mhN0fDk0vGmJTawvi-q7npl3OWpmW_0Y",
+    "name": "TCGA-A2-A0D2-DX1_left-98961_top-23338_bottom-24576_right-100200.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1bvU7VAvpJ81TE1-nkD2IDZ9tzNjHOS8Q",
+    "name": "TCGA-A2-A0D2-DX1_left-99219_top-22334_bottom-23572_right-100457.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "14lI8SnEfKWNOig8m7CmNvveyLsdjm5Gt",
+    "name": "TCGA-A2-A0D2-DX1_left-99474_top-22321_bottom-23560_right-100713.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1Wr4NNLPliDlQ7RWESBjTsj3lEW4eqzd-",
+    "name": "TCGA-A2-A0D2-DX1_left-99722_top-22842_bottom-24080_right-100961.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1LP12Ab7ue370TEMGu0U0tuTT2NdDU8fi",
+    "name": "TCGA-A2-A0ST-DX1_left-109461_top-20850_bottom-22089_right-110700.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1GB7yPUu6ePLlLxQuwf-CsVYBIYDyaXbk",
+    "name": "TCGA-A2-A0ST-DX1_left-111729_top-20104_bottom-21343_right-112968.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1LaAZ18ArdJMZUY6dwLkVtY7AGl2V4vD3",
+    "name": "TCGA-A2-A0ST-DX1_left-113304_top-18549_bottom-19788_right-114543.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1QllBJhQxw26bUmYX0g4WRDgI-Rt9qfgq",
+    "name": "TCGA-A2-A0SX-DX1_left-53824_top-56708_bottom-57947_right-55063.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1eNqTrbEp5dQniEAK-OvAtLDu_F1hikhO",
+    "name": "TCGA-A2-A0SX-DX1_left-54057_top-58746_bottom-59985_right-55295.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1AyNcpr5LoyjR3ClwK9XDgQz5uQiyBQaD",
+    "name": "TCGA-A2-A0SX-DX1_left-54317_top-56701_bottom-57939_right-55555.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "14xc0ZrNID_Nxe5lToFGgtHx725q-M9V5",
+    "name": "TCGA-A2-A0SX-DX1_left-54317_top-57737_bottom-58976_right-55555.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1DszshfSLv8kAIiQApNsWrNoHc6IKF9yl",
+    "name": "TCGA-A2-A0SX-DX1_left-54326_top-58501_bottom-59739_right-55565.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "16FO7PJXuG8qsdAtAOu8Y0r7wwkKiXQt_",
+    "name": "TCGA-A2-A0SX-DX1_left-54570_top-56962_bottom-58201_right-55808.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1ACmjBGbtTuolchSuikuKm37myt0noyx_",
+    "name": "TCGA-A2-A0SX-DX1_left-54571_top-58256_bottom-59495_right-55810.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1LEZySvQkmPcsDJzCDU43mbLvYpPw4Y_8",
+    "name": "TCGA-A2-A0SX-DX1_left-54584_top-59012_bottom-60251_right-55823.csv",
+    "mime": "text/csv"
+  },
+  {
+    "id": "1WI0C8S8I7Y5QOgEoAS8MzzLtgSkA4JzR",
+    "name": "TCGA-A2-A0SX-DX1_left-54584_top-59765_bottom-61004_right-55823.csv",
+    "mime": "text/csv"
+  }
+]

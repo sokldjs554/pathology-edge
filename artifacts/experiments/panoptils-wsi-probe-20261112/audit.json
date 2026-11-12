@@ -1,0 +1,9 @@
+{
+  "all_checks_passed": true,
+  "region_checks": 18,
+  "mean_checks": 6,
+  "raw_annotation_reconstruction": true,
+  "coordinate_corner_checks": 3,
+  "results_sha256": "6f7852270d201202cd7080c6a0a936bb6251482ae3424d873588ae6ac80ef1f8",
+  "inference_run_during_audit": false
+}

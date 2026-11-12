@@ -1,0 +1,117 @@
+{
+  "verified_utc": "2026-11-12T01:36:21.360744+00:00",
+  "hashes_unchanged_since_inference_lock": {
+    "protocol_sha256": true,
+    "selected_manifest_sha256": true,
+    "pre_inference_audit_sha256": true,
+    "runner_sha256": true,
+    "model_sha256": true,
+    "feature_module_sha256": true
+  },
+  "persisted_per_image_ratios_independently_recomputed": true,
+  "independent_mean_absolute_error_pp": 24.260319077251978,
+  "selected_image_crc32_and_size_collision_candidates_among_all_bcdata_images": [],
+  "collision_check_limit": "CRC32+size is only a screening check; no proof of patient independence or near-duplicate/subimage absence.",
+  "per_image_counts": [
+    {
+      "image": "BCData/images/test/0.png",
+      "gt_positive": 32,
+      "gt_negative": 106,
+      "predicted_positive_tumor": 28,
+      "predicted_negative_tumor": 6,
+      "gt_percent": 23.18840579710145,
+      "predicted_percent": 82.35294117647058,
+      "absolute_error_pp": 59.164535379369134
+    },
+    {
+      "image": "BCData/images/test/1.png",
+      "gt_positive": 19,
+      "gt_negative": 90,
+      "predicted_positive_tumor": 14,
+      "predicted_negative_tumor": 13,
+      "gt_percent": 17.431192660550458,
+      "predicted_percent": 51.85185185185185,
+      "absolute_error_pp": 34.42065919130139
+    },
+    {
+      "image": "BCData/images/test/10.png",
+      "gt_positive": 45,
+      "gt_negative": 53,
+      "predicted_positive_tumor": 25,
+      "predicted_negative_tumor": 8,
+      "gt_percent": 45.91836734693878,
+      "predicted_percent": 75.75757575757575,
+      "absolute_error_pp": 29.83920841063698
+    },
+    {
+      "image": "BCData/images/test/100.png",
+      "gt_positive": 143,
+      "gt_negative": 126,
+      "predicted_positive_tumor": 107,
+      "predicted_negative_tumor": 20,
+      "gt_percent": 53.159851301115246,
+      "predicted_percent": 84.25196850393701,
+      "absolute_error_pp": 31.092117202821758
+    },
+    {
+      "image": "BCData/images/test/101.png",
+      "gt_positive": 108,
+      "gt_negative": 38,
+      "predicted_positive_tumor": 60,
+      "predicted_negative_tumor": 15,
+      "gt_percent": 73.97260273972603,
+      "predicted_percent": 80.0,
+      "absolute_error_pp": 6.027397260273981
+    },
+    {
+      "image": "BCData/images/test/102.png",
+      "gt_positive": 100,
+      "gt_negative": 53,
+      "predicted_positive_tumor": 67,
+      "predicted_negative_tumor": 12,
+      "gt_percent": 65.359477124183,
+      "predicted_percent": 84.81012658227847,
+      "absolute_error_pp": 19.45064945809547
+    },
+    {
+      "image": "BCData/images/test/103.png",
+      "gt_positive": 116,
+      "gt_negative": 35,
+      "predicted_positive_tumor": 68,
+      "predicted_negative_tumor": 11,
+      "gt_percent": 76.82119205298014,
+      "predicted_percent": 86.07594936708861,
+      "absolute_error_pp": 9.254757314108474
+    },
+    {
+      "image": "BCData/images/test/104.png",
+      "gt_positive": 110,
+      "gt_negative": 10,
+      "predicted_positive_tumor": 55,
+      "predicted_negative_tumor": 13,
+      "gt_percent": 91.66666666666666,
+      "predicted_percent": 80.88235294117648,
+      "absolute_error_pp": 10.784313725490192
+    },
+    {
+      "image": "BCData/images/test/105.png",
+      "gt_positive": 81,
+      "gt_negative": 36,
+      "predicted_positive_tumor": 44,
+      "predicted_negative_tumor": 10,
+      "gt_percent": 69.23076923076923,
+      "predicted_percent": 81.48148148148148,
+      "absolute_error_pp": 12.250712250712247
+    },
+    {
+      "image": "BCData/images/test/106.png",
+      "gt_positive": 49,
+      "gt_negative": 26,
+      "predicted_positive_tumor": 44,
+      "predicted_negative_tumor": 2,
+      "gt_percent": 65.33333333333333,
+      "predicted_percent": 95.65217391304348,
+      "absolute_error_pp": 30.318840579710148
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-11-12T01:35:28.573499+00:00",
+  "protocol_sha256": "6052d56a11b70271608a56500229651d3ae2da3321526919607d490332cbb4dd",
+  "model_sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+  "feature_module_sha256": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+  "selected_manifest_sha256": "38e764480a6ff8093a8a46688120fbdbcce2cf06d5e6a199922232058fa1a5f5",
+  "pre_inference_audit_sha256": "a98f5f05349ff0df3196193a4eb7ea5b2d28e375f335e8628a74e4278cbc584c",
+  "runner_sha256": "e0b2886da485b2a6d82eec5c4018ac3a7000044832f7702def1c1ae03076f25c",
+  "training_or_tuning": false
+}

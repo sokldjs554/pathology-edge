@@ -1,0 +1,19 @@
+{
+  "upload": {
+    "file": "PathologyEdge_WSI_자료조사.zip",
+    "sha256": "3533a6d48c50b652ec0d874cacba328250ff5cc16e839748be1640cd0d2ab6e6",
+    "content": "Three research markdown notes, no clinical or image data"
+  },
+  "panoptils": "https://sites.google.com/view/panoptils/home",
+  "manual_folder": "https://drive.google.com/drive/folders/17HvYYPkBOyeexXetxih5q8KxJUlt6aRT",
+  "license": "CC0-1.0 stated on official PanopTILs site; public TCGA source WSIs",
+  "dsa": "https://demo.kitware.com/histomicstk/api/v1/",
+  "fov": {
+    "drive_id": "12bSgbDmwHoEvFl8X3IZs7Yepz3zFpeV4",
+    "name": "ALL_FOV_LOCATIONS.csv"
+  },
+  "model_seed": 20261116,
+  "prior_monuseg_case_overlap": [],
+  "tnbc_identical_png_file_hashes": 0,
+  "patient_level_disjointness_proven": false
+}

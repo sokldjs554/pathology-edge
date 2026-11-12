@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-11-12T01:44:58.747217+00:00",
+  "reproduction_runner_sha256": "09141cb6f550fed62084bd79f89ad8443b2f02a1b4b82d03c5515ab2668251ac",
+  "original_runner_snapshot_matches_inference_lock": true,
+  "published_results_sha256": "50a1871739f1994d8e5442ef3012bee0d0b49c679b47592f5f6ad82f5a327854",
+  "aggregate_reproduction_output_sha256": "ac4983055a45c071a8e1185feb65fab1d9a65e62d44b621f7c0c3423cf98f7af",
+  "all_original_per_image_and_pooled_aggregate_results_match": true,
+  "existing_output_refused": true,
+  "same_length_changed_input_hash_refused_before_inference": true,
+  "syntax_parsing_passed": true,
+  "input_coordinates_or_cell_records_written_by_reproduction_runner": false,
+  "test_scope": "One replay of the locked ten-image sample plus output-overwrite and altered-input rejection. No broader production-input guarantee."
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "three WSI-linked annotated ROI feasibility probe, not full-WSI or clinical validation",
+  "selection": "First lexicographic ROI per first3case IDs with RGB/mask/CSV visible in all three initial public GoogleDrive folder pages; no prediction-based selection. Pages are capped at50entries, not a full dataset inventory.",
+  "rois": [
+    "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129",
+    "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861",
+    "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753"
+  ],
+  "model_seed": 20261116,
+  "architectures": [
+    "small_vit",
+    "small_vit_refined"
+  ],
+  "threshold": 0.35,
+  "inference": "native ROI output1024x1024,128px no_overlap,current frozen model pipeline",
+  "evaluation_scope": "Intersection of FOV rectangle, tissue-channel nonzero, nucleus classes1..7 or9; exclude ambiguous8, unlabeled0, and inclusive rectangles from CSV before any score; preserve ignored counts.",
+  "metrics": "binary foreground Dice/IoU/precision/recall in valid pixels only; seam bands128px with8px halfwidth intersectvalidmask; perROI then macro3ROI",
+  "annotation_source": "PanopTILs ManualNucleiManualRegions_06062021",
+  "data_license": "CC0-1.0",
+  "expected_models": {
+    "small_vit": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898",
+    "small_vit_refined": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f"
+  },
+  "coordinate_check": "Compare server region from encoded level0bounds at1024output against providedRGB; recordcorrelation,MAE,phase-shift and visually inspectoverlay; no label/predictiondriven alignment or scoreselection",
+  "scale_caveat": "EffectiveMPP derives from serverlevel0MPP*bboxwidth/1024; check against advertised0.25MPP without assuming match."
+}

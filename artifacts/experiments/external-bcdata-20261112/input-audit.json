@@ -1,0 +1,303 @@
+{
+  "protocol_sha256": "6052d56a11b70271608a56500229651d3ae2da3321526919607d490332cbb4dd",
+  "selected_manifest_sha256": "38e764480a6ff8093a8a46688120fbdbcce2cf06d5e6a199922232058fa1a5f5",
+  "images": [
+    {
+      "image": "BCData/images/test/0.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            32,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            106,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 32,
+      "negative": 106,
+      "pixel_sha256": "faff258862e4a465aa9843429d6b8edc4692378f0334e6124145b4d8531f9adb"
+    },
+    {
+      "image": "BCData/images/test/1.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            19,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            90,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 19,
+      "negative": 90,
+      "pixel_sha256": "bc97e98fdd9e8d55c7fb24679ceeceef0537d61098fd5a39d7d5d5ddb4dd6b52"
+    },
+    {
+      "image": "BCData/images/test/10.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            45,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            53,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 45,
+      "negative": 53,
+      "pixel_sha256": "f50f46f7baab4910e806930a78b76a5e03bb973c9791b41226dfc5d52784338e"
+    },
+    {
+      "image": "BCData/images/test/100.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            143,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            126,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 143,
+      "negative": 126,
+      "pixel_sha256": "7acc5841bf7b9084d85d8c3e24875f6a72cf7122a314f4a848e12d11d6a29614"
+    },
+    {
+      "image": "BCData/images/test/101.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            108,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            38,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 108,
+      "negative": 38,
+      "pixel_sha256": "5bb89a263762d911b5e3558daf80d54895ba775a4e8238c57cac80f733dd9a81"
+    },
+    {
+      "image": "BCData/images/test/102.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            100,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            53,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 100,
+      "negative": 53,
+      "pixel_sha256": "2303739700aec1cfdada10c1562461248878013a64320fbc5b87da72e8d0cd26"
+    },
+    {
+      "image": "BCData/images/test/103.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            116,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            35,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 116,
+      "negative": 35,
+      "pixel_sha256": "0ab3c4eabde6e5c828ba21433512eff51be46a6ec221a3e1bdef4db7a7c40116"
+    },
+    {
+      "image": "BCData/images/test/104.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            110,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            10,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 110,
+      "negative": 10,
+      "pixel_sha256": "2fe785d14ef433a28c86b85c07b5888c7f06ea0184e23fcdc1cf5a22879dea2d"
+    },
+    {
+      "image": "BCData/images/test/105.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            81,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            36,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 81,
+      "negative": 36,
+      "pixel_sha256": "129030af4d856995eac91c9702637ccbedb36c5aaed3068a9443a132e10a823d"
+    },
+    {
+      "image": "BCData/images/test/106.png",
+      "image_metadata": {},
+      "point_sources": [
+        {
+          "label": "positive",
+          "shape": [
+            49,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        },
+        {
+          "label": "negative",
+          "shape": [
+            26,
+            2
+          ],
+          "dtype": "int64",
+          "file_attributes": {},
+          "coordinate_attributes": {}
+        }
+      ],
+      "positive": 49,
+      "negative": 26,
+      "pixel_sha256": "da02ae276ca29572d9def19d67caa742fe3644cbabb00ae8d0603e845c6a71e6"
+    }
+  ],
+  "total_points": 1376,
+  "all_coordinates_valid_unique_and_nonconflicting": true,
+  "all_selected_pixels_distinct": true,
+  "exact_file_hash_matches_to_Patherea_source_manifest": [],
+  "duplicate_check_limit": "No identical whole-image file hashes; subimages, near duplicates and patient identities are not established by this check.",
+  "physical_resolution": "No per-image MPP metadata. Native pixels preserved; physical-scale equivalence not established.",
+  "patient_mapping": "Absent from source ZIP."
+}

@@ -1,0 +1,377 @@
+{
+  "created_utc": "2026-11-12T01:47:45.250876+00:00",
+  "all_checks_passed": true,
+  "review_scope": "Independent read-only reconstruction and recount of the completed three-ROI convenience probe; no inference or clinical review.",
+  "run_directory": "work/panoptils-probe-20261112-complete",
+  "results_sha256": "6f7852270d201202cd7080c6a0a936bb6251482ae3424d873588ae6ac80ef1f8",
+  "lock_sha256": "50ef723cbbc4859bff321a689aed5da4e7caddc1ae577699ee88f833f6e67c19",
+  "checks": {
+    "input_source_model_hashes": 41,
+    "prediction_hashes": 9,
+    "region_metric_recounts": 18,
+    "macro_mean_recounts": 6,
+    "raw_annotation_reconstructions": 3,
+    "coordinate_corner_checks": 3,
+    "rgb_comparison_recomputations": 3,
+    "raw_server_pixel_equality_checks": 3,
+    "selection_reconstructed_from_initial_50_entry_listings": true
+  },
+  "methods": {
+    "annotation_reconstruction": "Independent NumPy coordinate inequalities for FOV and inclusive rectangle bounds; no production annotation helper imported.",
+    "metric_recount": "Independent NumPy TP/FP/FN counts and explicit Dice/IoU/precision/recall formulas; no production score/metric helper imported.",
+    "coordinate_check": "Parsed encoded integer bounds; checked stored corners and MPP arithmetic. This does not certify pixel-exact registration.",
+    "visual_check": "Inspected the three existing side-by-side coordinate overlays; gross morphology agrees, color differences visible."
+  },
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src /workspace/work/venv/bin/python -m pytest tests/test_panoptils.py -q -p no:cacheprovider",
+    "passed": 9
+  },
+  "official_semantics": {
+    "url": "https://sites.google.com/view/panoptils/home",
+    "retrieved_utc": "2026-11-12T01:47:45.251151+00:00",
+    "response_sha256": "57a4167f992e4948626d035d49dc466bb58114c6013907072a9e8d5341c3bd13",
+    "verified_excerpts": [
+      "First channel : is the region semantic segmentation mask.",
+      "Second channel : is the nucleus semantic segmentation mask.",
+      "Third channel : is a binary mask of nuclear boundary edges.",
+      "8: Unknown/Ambiguous nucleus 9: Background (non-nuclear material)",
+      "All labels are approved by pathologists (for model validation )",
+      "0.25 microns-per-pixel (MPP)",
+      "This dataset is licensed by a CC0 1.0 license"
+    ]
+  },
+  "listing_sizes": {
+    "rgbs": 50,
+    "masks": 50,
+    "csv": 50
+  },
+  "rows": [
+    {
+      "id": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129",
+      "case_id": "TCGA-A1-A0SP",
+      "coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 46225,
+        "valid_pixels": 31712,
+        "valid_fraction": 0.030242919921875,
+        "ignored_pixels": 1016864,
+        "foreground_valid_pixels": 12620,
+        "rectangle_annotations_excluded": 15,
+        "rectangle_pixels_inside_fov": 14375,
+        "ambiguous_pixels_inside_fov": 0
+      },
+      "foreground_pixels_by_region": {
+        "all": 12620,
+        "boundary": 1085,
+        "interior": 11535
+      },
+      "metrics": {
+        "small_vit": {
+          "all": {
+            "tp": 11016,
+            "fp": 7091,
+            "fn": 1604,
+            "pixels": 31712,
+            "dice": 0.7170241155986592,
+            "iou": 0.5588757546547612,
+            "precision": 0.6083834980946595,
+            "recall": 0.8729001584786054
+          },
+          "boundary": {
+            "tp": 977,
+            "fp": 1200,
+            "fn": 108,
+            "pixels": 4132,
+            "dice": 0.5990190067443286,
+            "iou": 0.4275711159737418,
+            "precision": 0.4487827285254938,
+            "recall": 0.9004608294930876
+          },
+          "interior": {
+            "tp": 10039,
+            "fp": 5891,
+            "fn": 1496,
+            "pixels": 27580,
+            "dice": 0.7310395048243219,
+            "iou": 0.5760931940778148,
+            "precision": 0.6301946013810421,
+            "recall": 0.870307758994365
+          }
+        },
+        "small_vit_refined": {
+          "all": {
+            "tp": 11653,
+            "fp": 9036,
+            "fn": 967,
+            "pixels": 31712,
+            "dice": 0.6996907742652136,
+            "iou": 0.5380956778721833,
+            "precision": 0.563246169462033,
+            "recall": 0.9233755942947702
+          },
+          "boundary": {
+            "tp": 1009,
+            "fp": 1543,
+            "fn": 76,
+            "pixels": 4132,
+            "dice": 0.55485290074237,
+            "iou": 0.3839421613394216,
+            "precision": 0.39537617554858934,
+            "recall": 0.9299539170506912
+          },
+          "interior": {
+            "tp": 10644,
+            "fp": 7493,
+            "fn": 891,
+            "pixels": 27580,
+            "dice": 0.7174440550013481,
+            "iou": 0.5593861677527854,
+            "precision": 0.586866626233666,
+            "recall": 0.9227568270481145
+          }
+        }
+      },
+      "rgb_correlation": 0.9846803723147896,
+      "rgb_mae": 7.660635312398274,
+      "phase_shift_xy": [
+        0.4360971095987338,
+        0.69702967332654
+      ],
+      "effective_mpp_xy": [
+        0.2998611328125,
+        0.30010732421874997
+      ],
+      "raw_server_pixels_equal_evaluation_input": true
+    },
+    {
+      "id": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861",
+      "case_id": "TCGA-A2-A0CM",
+      "coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 44944,
+        "valid_pixels": 30990,
+        "valid_fraction": 0.029554367065429688,
+        "ignored_pixels": 1017586,
+        "foreground_valid_pixels": 2635,
+        "rectangle_annotations_excluded": 17,
+        "rectangle_pixels_inside_fov": 13954,
+        "ambiguous_pixels_inside_fov": 168
+      },
+      "foreground_pixels_by_region": {
+        "all": 2635,
+        "boundary": 0,
+        "interior": 2635
+      },
+      "metrics": {
+        "small_vit": {
+          "all": {
+            "tp": 2501,
+            "fp": 9838,
+            "fn": 134,
+            "pixels": 30990,
+            "dice": 0.33404567917724054,
+            "iou": 0.20051310831395816,
+            "precision": 0.2026906556447038,
+            "recall": 0.949146110056926
+          },
+          "boundary": {
+            "tp": 0,
+            "fp": 1597,
+            "fn": 0,
+            "pixels": 4304,
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "interior": {
+            "tp": 2501,
+            "fp": 8241,
+            "fn": 134,
+            "pixels": 26686,
+            "dice": 0.3739253943335576,
+            "iou": 0.22995586612725266,
+            "precision": 0.23282442748091603,
+            "recall": 0.949146110056926
+          }
+        },
+        "small_vit_refined": {
+          "all": {
+            "tp": 2537,
+            "fp": 14652,
+            "fn": 98,
+            "pixels": 30990,
+            "dice": 0.25595238095238093,
+            "iou": 0.14675767918088736,
+            "precision": 0.14759439176217348,
+            "recall": 0.96280834914611
+          },
+          "boundary": {
+            "tp": 0,
+            "fp": 2153,
+            "fn": 0,
+            "pixels": 4304,
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "interior": {
+            "tp": 2537,
+            "fp": 12499,
+            "fn": 98,
+            "pixels": 26686,
+            "dice": 0.2871371173108483,
+            "iou": 0.16763578696973702,
+            "precision": 0.16872838520883213,
+            "recall": 0.96280834914611
+          }
+        }
+      },
+      "rgb_correlation": 0.969472116949061,
+      "rgb_mae": 12.741490364074707,
+      "phase_shift_xy": [
+        0.33321023644344905,
+        0.39597533461829926
+      ],
+      "effective_mpp_xy": [
+        0.30018994140625005,
+        0.299947265625
+      ],
+      "raw_server_pixels_equal_evaluation_input": true
+    },
+    {
+      "id": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753",
+      "case_id": "TCGA-A2-A0D0",
+      "coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 45369,
+        "valid_pixels": 39357,
+        "valid_fraction": 0.03753376007080078,
+        "ignored_pixels": 1009219,
+        "foreground_valid_pixels": 2615,
+        "rectangle_annotations_excluded": 20,
+        "rectangle_pixels_inside_fov": 6012,
+        "ambiguous_pixels_inside_fov": 0
+      },
+      "foreground_pixels_by_region": {
+        "all": 2615,
+        "boundary": 437,
+        "interior": 2178
+      },
+      "metrics": {
+        "small_vit": {
+          "all": {
+            "tp": 2323,
+            "fp": 7093,
+            "fn": 292,
+            "pixels": 39357,
+            "dice": 0.3861690632532624,
+            "iou": 0.2392871858261228,
+            "precision": 0.24670773152081563,
+            "recall": 0.8883365200764818
+          },
+          "boundary": {
+            "tp": 423,
+            "fp": 1217,
+            "fn": 14,
+            "pixels": 4879,
+            "dice": 0.4073182474723158,
+            "iou": 0.25574365175332525,
+            "precision": 0.2579268292682927,
+            "recall": 0.9679633867276888
+          },
+          "interior": {
+            "tp": 1900,
+            "fp": 5876,
+            "fn": 278,
+            "pixels": 34478,
+            "dice": 0.3817560779586096,
+            "iou": 0.2359076235410976,
+            "precision": 0.24434156378600824,
+            "recall": 0.8723599632690542
+          }
+        },
+        "small_vit_refined": {
+          "all": {
+            "tp": 2370,
+            "fp": 8516,
+            "fn": 245,
+            "pixels": 39357,
+            "dice": 0.35108510480705135,
+            "iou": 0.21291887521336808,
+            "precision": 0.21771082123828772,
+            "recall": 0.9063097514340345
+          },
+          "boundary": {
+            "tp": 423,
+            "fp": 1313,
+            "fn": 14,
+            "pixels": 4879,
+            "dice": 0.3893235158766682,
+            "iou": 0.24171428571428571,
+            "precision": 0.2436635944700461,
+            "recall": 0.9679633867276888
+          },
+          "interior": {
+            "tp": 1947,
+            "fp": 7203,
+            "fn": 231,
+            "pixels": 34478,
+            "dice": 0.34375,
+            "iou": 0.20754716981132076,
+            "precision": 0.21278688524590164,
+            "recall": 0.8939393939393939
+          }
+        }
+      },
+      "rgb_correlation": 0.9643357181794114,
+      "rgb_mae": 13.732316335042318,
+      "phase_shift_xy": [
+        0.1572858228870473,
+        0.7143000001219093
+      ],
+      "effective_mpp_xy": [
+        0.299947265625,
+        0.30018994140625005
+      ],
+      "raw_server_pixels_equal_evaluation_input": true
+    }
+  ],
+  "means": {
+    "small_vit": {
+      "all": 0.47907961934305404,
+      "boundary": 0.33544575140554816,
+      "interior": 0.4955736590388297
+    },
+    "small_vit_refined": {
+      "all": 0.43557608667488196,
+      "boundary": 0.3147254722063461,
+      "interior": 0.44944372410406547
+    }
+  },
+  "delta_refined_minus_baseline_all": -0.043503532668172085,
+  "inference_run_during_review": false,
+  "training_run_during_review": false,
+  "whole_wsi_validation": false,
+  "clinical_validation": false,
+  "pixel_exact_registration_claimed": false,
+  "findings": [
+    {
+      "priority": "interpretation",
+      "message": "A0CM boundary region has zero valid foreground pixels and 4304 valid background pixels; boundary Dice zero is false-positive-only evidence, not a positive-nucleus seam recovery test."
+    },
+    {
+      "priority": "limitation",
+      "message": "Only 31712, 30990 and 39357 pixels are scored, respectively 3.0243%, 2.9554% and 3.7534% of each 1024x1024 ROI."
+    },
+    {
+      "priority": "limitation",
+      "message": "Effective MPP is about 0.30; official page advertises 0.25. Subpixel phase shifts and RGB differences persist; no corrected registration or scale harmonization was performed."
+    },
+    {
+      "priority": "limitation",
+      "message": "Three convenience-selected cases do not establish representative, full-WSI, clinical, or patient-independent external performance. TNBC patient crosswalk remains unavailable."
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+[
+  {
+    "id": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129",
+    "case_id": "TCGA-A1-A0SP",
+    "slide_name": "TCGA-A1-A0SP-01Z-00-DX1.20D689C6-EFA5-4694-BE76-24475A89ACC0.svs",
+    "dsa_item_id": "5bbdee5be629140048d01afd",
+    "dsa_files": [
+      {
+        "_id": "5bbdee5be629140048d01afe",
+        "_modelType": "file",
+        "created": "2018-10-10T12:19:39.768000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "20d689c6-efa5-4694-be76-24475a89acc0",
+          "svs"
+        ],
+        "itemId": "5bbdee5be629140048d01afd",
+        "mimeType": null,
+        "name": "TCGA-A1-A0SP-01Z-00-DX1.20D689C6-EFA5-4694-BE76-24475A89ACC0.svs",
+        "size": 1566627208
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002521,
+      "mm_y": 0.0002521,
+      "sizeX": 109434,
+      "sizeY": 90504,
+      "tileHeight": 256,
+      "tileWidth": 256
+    },
+    "bounds_level0": {
+      "left": 10911,
+      "top": 54005,
+      "right": 12129,
+      "bottom": 55224
+    },
+    "server_url": "https://demo.kitware.com/histomicstk/api/v1/item/5bbdee5be629140048d01afd/tiles/region?left=10911&top=54005&right=12129&bottom=55224&units=base_pixels&width=1024&height=1024&encoding=PNG",
+    "server_output_wh": [
+      1024,
+      1024
+    ],
+    "evaluation_input_wh": [
+      1024,
+      1024
+    ],
+    "rgb_correlation": 0.9846803723147896,
+    "rgb_mae": 7.660635312398274,
+    "phase_shift_xy": [
+      0.4360971095987338,
+      0.69702967332654
+    ],
+    "phase_response": 0.9790533083141781,
+    "effective_mpp_xy": [
+      0.2998611328125,
+      0.30010732421874997
+    ],
+    "source_assets": {
+      "rgbs": {
+        "drive_id": "1f1g1Gv9u6Du5gGpQhPcO1jtwxG9aJD9l",
+        "name": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129.png",
+        "sha256": "5931bb62a3ff44d4867601d150751dfe65a79afc6e5b8cefe9e3f07b8faa233b"
+      },
+      "masks": {
+        "drive_id": "1GsXfTGHmVLpFAhb0Q7NzpAPlodCh2nOW",
+        "name": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129.png",
+        "sha256": "0acafbea09ba6b75f40d6e319f3491f1146d1a99b5519e2b3316f37170730cd0"
+      },
+      "csv": {
+        "drive_id": "16F4RvpPwC_b3u044ZZoDhLRfjcV92mgC",
+        "name": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129.csv",
+        "sha256": "679b013b6c98be6e6e2a9804c73e03da0d20a5ffa56adf895e8da3f3f7888a2d"
+      }
+    },
+    "wsi_png_sha256": "01ce1a10a9f7cbb011939946a4640f874483b8bafbcc08e18ca474bca54cfd42"
+  },
+  {
+    "id": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861",
+    "case_id": "TCGA-A2-A0CM",
+    "slide_name": "TCGA-A2-A0CM-01Z-00-DX1.AC4901DE-4B6D-4185-BB9F-156033839828.svs",
+    "dsa_item_id": "5bbdeec6e629140048d01bb9",
+    "dsa_files": [
+      {
+        "_id": "5bbdeec6e629140048d01bba",
+        "_modelType": "file",
+        "created": "2018-10-10T12:21:26.705000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "ac4901de-4b6d-4185-bb9f-156033839828",
+          "svs"
+        ],
+        "itemId": "5bbdeec6e629140048d01bb9",
+        "mimeType": null,
+        "name": "TCGA-A2-A0CM-01Z-00-DX1.AC4901DE-4B6D-4185-BB9F-156033839828.svs",
+        "size": 931808591
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002485,
+      "mm_y": 0.0002485,
+      "sizeX": 95758,
+      "sizeY": 76873,
+      "tileHeight": 256,
+      "tileWidth": 256
+    },
+    "bounds_level0": {
+      "left": 19624,
+      "top": 56888,
+      "right": 20861,
+      "bottom": 58124
+    },
+    "server_url": "https://demo.kitware.com/histomicstk/api/v1/item/5bbdeec6e629140048d01bb9/tiles/region?left=19624&top=56888&right=20861&bottom=58124&units=base_pixels&width=1024&height=1024&encoding=PNG",
+    "server_output_wh": [
+      1024,
+      1024
+    ],
+    "evaluation_input_wh": [
+      1024,
+      1024
+    ],
+    "rgb_correlation": 0.969472116949061,
+    "rgb_mae": 12.741490364074707,
+    "phase_shift_xy": [
+      0.33321023644344905,
+      0.39597533461829926
+    ],
+    "phase_response": 0.9858606194611639,
+    "effective_mpp_xy": [
+      0.30018994140625005,
+      0.299947265625
+    ],
+    "source_assets": {
+      "rgbs": {
+        "drive_id": "1gtb9zUjw5mOO1Vn1u7TPqfMTxatWXB23",
+        "name": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861.png",
+        "sha256": "44ab59dc8f6133df7af36392200deba43fbe67a941f103975f047280cbe5e398"
+      },
+      "masks": {
+        "drive_id": "1CgRdPjKGZaMsUuv5_Gf5uDgA9oXtU1nU",
+        "name": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861.png",
+        "sha256": "83c51aab697c508bc98ec5d34c50606d17b606cfa3345df985df5a4efe83b8b4"
+      },
+      "csv": {
+        "drive_id": "1MLhvLlueqvDWcmIX8YETJvkx6XmkGZ2B",
+        "name": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861.csv",
+        "sha256": "3d55e82635ad996620d9aabcdd0e8fa32105541233fe1133d2023e567b8d269d"
+      }
+    },
+    "wsi_png_sha256": "b4604a8ec1cc001c2cdf64131fb0657aa5cd1a2bb942bbd2d514b01883a3f048"
+  },
+  {
+    "id": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753",
+    "case_id": "TCGA-A2-A0D0",
+    "slide_name": "TCGA-A2-A0D0-01Z-00-DX1.4FF6B8E5-703B-400F-920A-104F56E0F874.svs",
+    "dsa_item_id": "5bbdeedde629140048d01bdf",
+    "dsa_files": [
+      {
+        "_id": "5bbdeedde629140048d01be0",
+        "_modelType": "file",
+        "created": "2018-10-10T12:21:49.017000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "4ff6b8e5-703b-400f-920a-104f56e0f874",
+          "svs"
+        ],
+        "itemId": "5bbdeedde629140048d01bdf",
+        "mimeType": null,
+        "name": "TCGA-A2-A0D0-01Z-00-DX1.4FF6B8E5-703B-400F-920A-104F56E0F874.svs",
+        "size": 1149281117
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002485,
+      "mm_y": 0.0002485,
+      "sizeX": 112037,
+      "sizeY": 88255,
+      "tileHeight": 256,
+      "tileWidth": 256
+    },
+    "bounds_level0": {
+      "left": 68517,
+      "top": 42674,
+      "right": 69753,
+      "bottom": 43911
+    },
+    "server_url": "https://demo.kitware.com/histomicstk/api/v1/item/5bbdeedde629140048d01bdf/tiles/region?left=68517&top=42674&right=69753&bottom=43911&units=base_pixels&width=1024&height=1024&encoding=PNG",
+    "server_output_wh": [
+      1024,
+      1024
+    ],
+    "evaluation_input_wh": [
+      1024,
+      1024
+    ],
+    "rgb_correlation": 0.9643357181794114,
+    "rgb_mae": 13.732316335042318,
+    "phase_shift_xy": [
+      0.1572858228870473,
+      0.7143000001219093
+    ],
+    "phase_response": 0.952058497001417,
+    "effective_mpp_xy": [
+      0.299947265625,
+      0.30018994140625005
+    ],
+    "source_assets": {
+      "rgbs": {
+        "drive_id": "1M7E1PHpxQ6ysP5iYCoqEDGrYCGJH8zKa",
+        "name": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753.png",
+        "sha256": "b2f740e7a7f3df6a27567ee1ae0bc1d1da4784430917cab14820052b188f33fb"
+      },
+      "masks": {
+        "drive_id": "1rZbF2-qAKAwq9aR6oLPWlaUyxxiPuZ_t",
+        "name": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753.png",
+        "sha256": "764d56898a201114d5497abe015500881add1fdf851ed145ab2092407bb29b02"
+      },
+      "csv": {
+        "drive_id": "1j_-Vn6xTybBWNO4uHBYeqBSJqvkpgTtj",
+        "name": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753.csv",
+        "sha256": "d12143788ccffcca5e4a2a682cde837cf8b617db36c757f007640602317b5cdd"
+      }
+    },
+    "wsi_png_sha256": "e539e52c8cd5b25073a3e72575265fb7e227662e6514e355a6f8f08462ec5bf9"
+  }
+]

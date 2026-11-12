@@ -1,0 +1,64 @@
+{
+  "schema": "bcdata-fixed-model-protocol-v1",
+  "locked_at_utc": "2026-11-12T01:33:21.576653+00:00",
+  "locked_before_any_BCData_model_predictions": true,
+  "purpose": "Bounded external native-pixel GT-center engineering stress test; not clinical validation, detection, WSI scoring, or a representative full BCData benchmark.",
+  "selection_rule": "First 10 full archive paths in Python lexicographic order among official BCData/images/test/*.png; all provided positive and negative coordinates; no image replacement.",
+  "selected_images": [
+    "BCData/images/test/0.png",
+    "BCData/images/test/1.png",
+    "BCData/images/test/10.png",
+    "BCData/images/test/100.png",
+    "BCData/images/test/101.png",
+    "BCData/images/test/102.png",
+    "BCData/images/test/103.png",
+    "BCData/images/test/104.png",
+    "BCData/images/test/105.png",
+    "BCData/images/test/106.png"
+  ],
+  "selection_knowledge": "Only test/0.png pixels, metadata and coordinates inspected before locking; no model inference on BCData before this lock.",
+  "label_mapping": {
+    "positive": "positive_tumor_cell (class 0)",
+    "negative": "negative_tumor_cell (class 1)"
+  },
+  "features": "Unchanged local 40 RGB/HSV/optical-density features with integer-radius disks 3 and 7 in native pixels; centers Nx2 interpreted as x,y.",
+  "preprocessing": "Native 640x640 uint8 RGB; no resizing, stain normalization, calibration, label-dependent transforms, fine-tuning, refitting, threshold selection, or parameter search.",
+  "class_decision": "Unchanged four-class softmax argmax. Predictions of either non-tumor class are errors for these tumor-only reference points, never remapped to correct staining status.",
+  "metrics": [
+    "Unchanged four-class confusion matrix, accuracy and per-class precision/recall/F1, with absent-class support exposed. Four-class macro-F1 uses the original zero_division=0 convention and is not comparable to a complete four-class test.",
+    "Tumor-positive/negative reference-class mean F1 (supplementary); retain all predictions including non-tumor errors.",
+    "Per-image GT ratio positive/(positive+negative); predicted ratio predicted_class0/(predicted_class0+predicted_class1); undefined when denominator=0; report every image and all undefined counts.",
+    "Unweighted mean per-image absolute error in percentage points over defined images; all exclusions explicit.",
+    "Independent confusion/count/ratio arithmetic from saved predictions must reproduce project metrics."
+  ],
+  "validation_rules": [
+    "All coordinates numeric finite integer Nx2 and within image; duplicate or cross-class conflicting centers cause stop and explicit report, never silent deletion.",
+    "Archive CRC32 and byte sizes checked for each selected entry; SHA256 for images/labels/protocol/model/code recorded.",
+    "Check exact selected-image byte/pixel duplicates and exact whole-image hashes against prior Patherea source manifest; do not claim patient-level independence or absence of subimage overlap.",
+    "No patient/slide linkage exists in archive; first ten filenames are convenience sample, cannot estimate patient-level performance or confidence intervals."
+  ],
+  "physical_scale": {
+    "native_shape": [
+      640,
+      640
+    ],
+    "mpp_in_downloaded_metadata": null,
+    "magnification_reported": "40x in primary comparative Patherea paper Table 1; microscope with camera in section 2.2",
+    "mpp_reported_by_later_users": 0.2239,
+    "mpp_primary_source_verified": false,
+    "handling": "No physical-scale matching asserted; maintain original pixels and explicitly qualify results as native-pixel domain shift.",
+    "source": "https://arxiv.org/html/2412.16425v2"
+  },
+  "noncommercial_use_only": true,
+  "source_url": "https://sites.google.com/view/bcdataset",
+  "paper_url": "https://link.springer.com/chapter/10.1007/978-3-030-59722-1_28",
+  "archive_url": "https://drive.google.com/file/d/16W04QOR1E-G3ifc4061Be4eGpjRYDlkA/view",
+  "archive_bytes": 853879248,
+  "archive_full_sha256": null,
+  "archive_manifest_sha256": "c40aa87b806ed2fef45359e61d449555419d6b1d351725c96015a977aa3efb92",
+  "archive_central_directory_sha256": "3d1569d2c1d6ac1eff50fcbb2ef4978118b0596f9153351c1379cd95fa6ca69d",
+  "model_path": "artifacts/ihc/model.json",
+  "model_sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+  "feature_module_path": "src/pathology_edge/ihc_baseline.py",
+  "feature_module_sha256": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe"
+}

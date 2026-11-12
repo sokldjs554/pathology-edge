@@ -1,0 +1,17 @@
+{
+  "local_tests": {
+    "passed": 412,
+    "deselected": 2,
+    "reason": "Two snapshot reproduction tests require at least2GiB free; full suite delegated to clean CI"
+  },
+  "protected_files": 2731,
+  "protected_changed": 0,
+  "dice_values_checked": 42,
+  "dice_means_checked": 6,
+  "static_demo_check": true,
+  "new_browser_check": false,
+  "ui_changed": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "user_ran_new_experiments": false
+}

@@ -1,0 +1,121 @@
+{
+  "checked_date": "2026-11-12",
+  "timezone": "Asia/Seoul",
+  "purpose": "Candidate-source feasibility plus bounded external native-pixel GT-center classifier stress test. No clinical validation or whole-slide scoring completed.",
+  "dataset": {
+    "id": "BCData",
+    "primary_urls": [
+      "https://sites.google.com/view/bcdataset",
+      "https://link.springer.com/chapter/10.1007/978-3-030-59722-1_28",
+      "https://drive.google.com/file/d/16W04QOR1E-G3ifc4061Be4eGpjRYDlkA/view",
+      "https://aimia-pku.github.io/research/"
+    ],
+    "license": "Original paper abstract explicitly permits non-commercial research only. No standalone license entry in ZIP.",
+    "access": "Public ZIP byte-range requests returned HTTP206; full ZIP not downloaded.",
+    "archive_bytes": 853879248,
+    "archive_entries": 4029,
+    "png_images": 1338,
+    "hdf5_annotations": 2676,
+    "image_counts_by_split": {
+      "train": 803,
+      "validation": 133,
+      "test": 402
+    },
+    "reference_type": "Positive and negative Ki67 tumor-cell center coordinates; no non-tumor references, nuclear outlines, patient/slide map or clinical endpoint.",
+    "results": "results.json",
+    "existing_classifier_compatibility": "Supports conditional classification of provided tumor points using fixed model and explicit native-pixel domain-shift limitations. Cannot assess detector, non-tumor sensitivity, whole-slide Ki67 or clinical validity.",
+    "resolution": {
+      "pixel_shape": [
+        640,
+        640
+      ],
+      "mpp_verified_from_raw_data": false,
+      "nominal_magnification": "40x in Patherea comparative study",
+      "microscope_vs_wsi": "Primary Patherea comparative study describes microscope with camera, not WSI scanner. Do not assert 394 released WSIs.",
+      "comparison_source": "https://arxiv.org/html/2412.16425v2",
+      "later_mpp_report": {
+        "value": 0.2239,
+        "primary_dataset_confirmation": false,
+        "source": "https://www.medrxiv.org/content/medrxiv/early/2025/04/29/2025.04.28.25326603/DC1/embed/media-1.pdf?download=true"
+      }
+    }
+  },
+  "related_candidate_findings": [
+    {
+      "id": "ACROBAT",
+      "primary_urls": [
+        "https://researchdata.se/en/catalogue/dataset/2022-190-1/1/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10449765/",
+        "https://api.researchdata.se/dataset/2022-190-1/1/file/documentation/df_acrobat_meta.csv",
+        "https://api.researchdata.se/dataset/2022-190-1/1/file/documentation/df_acrobat_meta_readme.txt"
+      ],
+      "license": "CC BY 4.0",
+      "access": "Open raw WSI archives advertised, metadata directly downloaded HTTP200. No WSI downloaded in this subtask.",
+      "reference_type": "Image-registration landmarks; no Ki67 percentage or cell-class reference in published metadata.",
+      "patient_key": "(set, anon_id), not anon_id alone",
+      "existing_classifier_compatibility": "Not directly scorable: no GT cell centers/Ki67 labels; 10x images differ from native Patherea pixel scale."
+    },
+    {
+      "id": "BCNB",
+      "primary_urls": [
+        "https://bcnb.grand-challenge.org/Home/",
+        "https://bupt-ai-cz.github.io/BCNB/",
+        "https://github.com/bupt-ai-cz/BALNMP",
+        "https://raw.githubusercontent.com/bupt-ai-cz/BALNMP/main/download_dataset.md",
+        "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2021.759007/full",
+        "https://drive.google.com/drive/folders/1HcAgplKwbSZ7ZZl2m6PZdvVF70QJmVuR?usp=sharing"
+      ],
+      "license": "Non-commercial research/education/personal use, attribution required, no raw or modified dataset redistribution; abstract derivative works allowed subject to terms.",
+      "access": "Grand Challenge HTTP403 in web tool, official site readable and has registration form; official GitHub also supplies direct public download links. Public official Drive folder and 77,507-byte XLSX downloaded without login. No form submitted.",
+      "reference_type": "Patient table Ki67 values: 1003 numeric fractions, 55 textual intervals/inequalities; reference scoring method and slide-level linkage not independently verified.",
+      "existing_classifier_compatibility": "H&E biopsy images cannot be passed to Ki67-IHC color classifier as equivalent measurement; no tumor-cell Ki67 point references."
+    },
+    {
+      "id": "IKWG",
+      "primary_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8487652/",
+        "https://doi.org/10.1093/jnci/djaa201"
+      ],
+      "role": "Clinical scoring/validation guidance, not an evaluation dataset.",
+      "consequence": "Prespecify intended use, reference scoring/training and endpoints; representative specimens and independent blinded scorers; distinguish analytical validity from clinical validity/utility. Public selected ROI classification cannot establish these."
+    }
+  ],
+  "original_file_map": [
+    {
+      "published_file": "protocol.json",
+      "original_work_filename": "bcdata-evaluation-protocol.json",
+      "sha256": "6052d56a11b70271608a56500229651d3ae2da3321526919607d490332cbb4dd"
+    },
+    {
+      "published_file": "inference-lock.json",
+      "original_work_filename": "bcdata-inference-lock.json",
+      "sha256": "0223910f93a1ecd571e6b1fb689da9d643022874855cc3fadbbf11023f8ac754"
+    },
+    {
+      "published_file": "selected-manifest.json",
+      "original_work_filename": "bcdata-selected-manifest.json",
+      "sha256": "38e764480a6ff8093a8a46688120fbdbcce2cf06d5e6a199922232058fa1a5f5"
+    },
+    {
+      "published_file": "input-audit.json",
+      "original_work_filename": "bcdata-pre-inference-audit.json",
+      "sha256": "a98f5f05349ff0df3196193a4eb7ea5b2d28e375f335e8628a74e4278cbc584c"
+    },
+    {
+      "published_file": "results.json",
+      "original_work_filename": "bcdata-results.json",
+      "sha256": "50a1871739f1994d8e5442ef3012bee0d0b49c679b47592f5f6ad82f5a327854"
+    },
+    {
+      "published_file": "verification.json",
+      "original_work_filename": "bcdata-post-verification.json",
+      "sha256": "e4d9581078483a8443d0b329447d7f53ed12e44b1c871d0b239b51939681101c"
+    },
+    {
+      "published_file": "runner-original.py",
+      "original_work_filename": "bcdata_external_check.py",
+      "sha256": "e0b2886da485b2a6d82eec5c4018ac3a7000044832f7702def1c1ae03076f25c"
+    }
+  ],
+  "publication_policy": "Only own code, protocols, hashes, file-level manifests and aggregate derived metrics are included. No images, HDF5, cell-level coordinates/annotations/predictions, raw clinical metadata, or copied source articles are included."
+}

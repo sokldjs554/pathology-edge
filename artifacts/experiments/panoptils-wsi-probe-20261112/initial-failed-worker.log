@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/pathology-edge/work/panoptils-probe-20261112/runner.py", line 216, in <module>
+    worker(Path(args.worker))
+  File "/workspace/pathology-edge/work/panoptils-probe-20261112/runner.py", line 91, in worker
+    target, valid, coverage = masks(out, name)
+                              ^^^^^^^^^^^^^^^^
+  File "/workspace/pathology-edge/work/panoptils-probe-20261112/runner.py", line 42, in masks
+    raise ValueError('Exactly one matching FOV required')
+ValueError: Exactly one matching FOV required
