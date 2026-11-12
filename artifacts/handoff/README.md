@@ -1,5 +1,7 @@
 # Cowork 전달 파일
 
+최종v2 발행 후 [추가 공개자료 조사 검토](../../docs/PUBLIC_DATA_UPLOAD_REVIEW.md)를 기록했습니다. 새 IHC 후보의 JSON 11개·영상/마스크 1쌍을 대조했으며 새 성능평가·임상 검증·전체 WSI 정답 검증은 아닙니다. 아래ZIP의 기존 내용·해시는 유지합니다.
+
 **최신 묶음:** [PathologyEdge-Final-Handoff-20261112-v2.zip 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip). **365개 파일 · 11,552,627 bytes(약11.6MB)**. [목록·검사](manifest-final-20261112-v2.json).
 
 소스 커밋: `a21bb05c4e22e4fd78718cd230312a59109243c7`

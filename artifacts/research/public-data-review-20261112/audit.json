@@ -1,0 +1,843 @@
+{
+  "recorded_at_utc": "2026-11-12T10:03:43.021611+00:00",
+  "scope": "Uploaded candidate research review and bounded primary-source/metadata/image-pair inspection; no model evaluation",
+  "performed_by": "provided development environment; not user execution or expert review",
+  "upload": {
+    "filename": "WSI_Nuclei_Ki67_Public_Data_Research_20261112.zip",
+    "bytes": 28544,
+    "sha256": "fef93e8785b9f6eef20d56fa2144d701a04cc01558cea0985a3082de1664da8d",
+    "crc": "passed",
+    "members": [
+      {
+        "name": "WSI_Public_Data_Research/01_first_acquisition_plan.md",
+        "bytes": 5181,
+        "sha256": "c5de99be9a3ad2b6994427b38fc81ceaf9bee022c36d09580d9ff6f8ca698a6b"
+      },
+      {
+        "name": "WSI_Public_Data_Research/02_evaluation_acceptance.md",
+        "bytes": 3399,
+        "sha256": "fe2683c56927ec0a684ed24a0800131ae00639d44e605a2d8b0cdad29fca9eeb"
+      },
+      {
+        "name": "WSI_Public_Data_Research/03_ki67_clinical_gap.md",
+        "bytes": 3212,
+        "sha256": "76a69d86701bead75a687c41d000eaa9450dd9340b21eeccbbbea74fa2637a13"
+      },
+      {
+        "name": "WSI_Public_Data_Research/04_questions_to_data_owner.md",
+        "bytes": 1349,
+        "sha256": "ae2bbec9fd9fc3733b029a101b8ba50d8f5a3c1d1a0f4ef03717fcb739a2116f"
+      },
+      {
+        "name": "WSI_Public_Data_Research/README_ko.md",
+        "bytes": 4892,
+        "sha256": "f23a4314fb90fdba8c77f6e0b9805e360670cb41077948c05505f2fb27c3207f"
+      },
+      {
+        "name": "WSI_Public_Data_Research/candidates.csv",
+        "bytes": 11188,
+        "sha256": "9c0432032048e1afc70b19a289747a5b5d7ef55ca12c90257228e4494789237e"
+      },
+      {
+        "name": "WSI_Public_Data_Research/candidates.json",
+        "bytes": 15309,
+        "sha256": "482f0c8032eb487f53c17d55d9e176a0671a09922dfdd0ad7945ea47f8223d4f"
+      },
+      {
+        "name": "WSI_Public_Data_Research/listed_files_checksums.csv",
+        "bytes": 1286,
+        "sha256": "d86cf16fcf62efef6002a0871954d6cb5554d247d08f4e88100eb904d17952f6"
+      },
+      {
+        "name": "WSI_Public_Data_Research/sources.csv",
+        "bytes": 3471,
+        "sha256": "c7932454466cd258f6f86acba1a43d2ac752723ef4db9460e5148cb393ab6c05"
+      },
+      {
+        "name": "WSI_Public_Data_Research/templates/pairing_record.csv",
+        "bytes": 592,
+        "sha256": "93209256f75470fabfa552138bbbaf9ac526b69a9ac7c205845da62340530dc8"
+      },
+      {
+        "name": "WSI_Public_Data_Research/tools/check_listed_md5.py",
+        "bytes": 1299,
+        "sha256": "094492028bdd8a4c76640f302a24700fe1d6b111cfa52c2fedc8fada02dc100a"
+      },
+      {
+        "name": "WSI_Public_Data_Research/tools/gdc_find_slide.py",
+        "bytes": 1780,
+        "sha256": "7b5517d22f20a229cbe10f336140cb4b7e4508b8a399684f0c6b3afa468cef32"
+      },
+      {
+        "name": "WSI_Public_Data_Research/tools/zenodo_catalog_probe.py",
+        "bytes": 1175,
+        "sha256": "e8a21aa90de129c74fff757f6334727ceccc150040a483491e22d9938cbae92b"
+      }
+    ],
+    "actual_wsi_or_annotation_files": 0,
+    "candidate_count": 14,
+    "authorship_not_inferred_from_submission": true,
+    "attached_scripts_executed": false
+  },
+  "catalogue_checks": [
+    {
+      "dataset": "IDC-v2",
+      "name": "TCGA-AF-2687.zip",
+      "bytes": 229979371,
+      "published_md5": "8561f51951db90a0bc19be3e5c78562e",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "TCGA-AF-2689.zip",
+      "bytes": 235042955,
+      "published_md5": "958d919376cd675146c09c7c9944bbf9",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "TCGA-AF-2690.zip",
+      "bytes": 697542930,
+      "published_md5": "1913d3e9d11538c48951f13410856bae",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "polygon_annotations.zip",
+      "bytes": 232157504,
+      "published_md5": "586f3be859eec37a27d1026327e3486e",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "point_annotations.zip",
+      "bytes": 16710806,
+      "published_md5": "5a8a457e3e99fd72339a5a7591c5b14e",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "rectangle_annotations.zip",
+      "bytes": 23214078,
+      "published_md5": "a6b6c005806cffdcef6e2311636b3eb1",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "ellipse_annotations.zip",
+      "bytes": 48441034,
+      "published_md5": "730082371fa5eb64177c4f589660dc60",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IDC-v2",
+      "name": "run_verify.sh",
+      "bytes": 577,
+      "published_md5": "e0475be3316902d6e6585930752f8206",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "IHC-2026",
+      "name": "dataset_images_AHIHCI.zip",
+      "bytes": 518528624,
+      "published_md5": "0000ba6852760fe13e3a2fedbdb932d4",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    },
+    {
+      "dataset": "NuInsSeg",
+      "name": "NuInsSeg.zip",
+      "bytes": 1627427342,
+      "published_md5": "08f9a33e23e983d82ee93aa58e69d095",
+      "catalogue_match": true,
+      "whole_file_digest_verified": false
+    }
+  ],
+  "zenodo_licenses_from_api": {
+    "10822033": {
+      "id": "cc-by-4.0"
+    },
+    "21487212": {
+      "id": "cc-by-nc-4.0"
+    },
+    "10518968": {
+      "id": "cc-by-4.0"
+    }
+  },
+  "ihc_2026": {
+    "record": "https://zenodo.org/records/21487212",
+    "paper": "https://www.mdpi.com/2306-5729/11/9/214",
+    "archive_bytes": 518528624,
+    "archive_published_md5": "0000ba6852760fe13e3a2fedbdb932d4",
+    "whole_archive_md5_verified": false,
+    "listed_members": 146,
+    "listed_directories": 25,
+    "listed_json_files": 11,
+    "listed_jpeg_files": 55,
+    "listed_png_files": 55,
+    "metadata_files_downloaded_and_crc_checked": 11,
+    "metadata": [
+      {
+        "member": "dataset_images_AHIHCI/ID0001.json",
+        "bytes": 2914,
+        "sha256": "4060e55645237d0f5c6653ee3b59714811cfec93dedf83ffc68ee53ae2ea331a",
+        "crc32_passed": true,
+        "case_id": "0001",
+        "ki67_mask_type": "only_positive_tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0002.json",
+        "bytes": 2882,
+        "sha256": "9366d3c0bdd4f1f502f0c2cfb6157d3167f438051ca14add57b8eff0014069b4",
+        "crc32_passed": true,
+        "case_id": "0002",
+        "ki67_mask_type": "tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0003.json",
+        "bytes": 2908,
+        "sha256": "2436479f274f3359b3026d407b70ffb6e2752cede6c114b1d94a085b8b594d1e",
+        "crc32_passed": true,
+        "case_id": "0003",
+        "ki67_mask_type": "tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0004.json",
+        "bytes": 2858,
+        "sha256": "ecacaa95e24fe8271d41215a57a35d04d9d7ead4b65358751a1fb55370e35340",
+        "crc32_passed": true,
+        "case_id": "0004",
+        "ki67_mask_type": "tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0005.json",
+        "bytes": 2861,
+        "sha256": "e45d34c85efdb72c5492c527b4ef984f3c53f5f5d36263c0d8cf638f90b977cd",
+        "crc32_passed": true,
+        "case_id": "0005",
+        "ki67_mask_type": "only_positive_tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0006.json",
+        "bytes": 2872,
+        "sha256": "b31417a74cccf7ef65c502c339682814b21d2361ebce179916b3f213fdb7b1a6",
+        "crc32_passed": true,
+        "case_id": "0006",
+        "ki67_mask_type": "only_positive_tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0007.json",
+        "bytes": 2869,
+        "sha256": "e6c0db6587565c6feda3e3e2db788e1a4b2bd45459ff16267e8b52d3bc78517f",
+        "crc32_passed": true,
+        "case_id": "0007",
+        "ki67_mask_type": "only_positive_tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0008.json",
+        "bytes": 2867,
+        "sha256": "b8ce1f6847d3ec8b9540302982ecf89971ed7eee22d9c458717317ea511e0056",
+        "crc32_passed": true,
+        "case_id": "0008",
+        "ki67_mask_type": "only_positive_tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0009.json",
+        "bytes": 2880,
+        "sha256": "ffa975121fc5de546a98089b8ff38ef5f00b5dab50edc541c6c0b7dddd756bed",
+        "crc32_passed": true,
+        "case_id": "0009",
+        "ki67_mask_type": "tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0010.json",
+        "bytes": 2864,
+        "sha256": "af0dde936a8fb4ad98244f00ed162ba20ef01cd4e5d7508b42cd11e5238802d9",
+        "crc32_passed": true,
+        "case_id": "0010",
+        "ki67_mask_type": "tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      },
+      {
+        "member": "dataset_images_AHIHCI/ID0011.json",
+        "bytes": 2852,
+        "sha256": "21a5f8917241ca08d7598637522c007d3a198cbb8dbb7e20a859d6dcde6578ed",
+        "crc32_passed": true,
+        "case_id": "0011",
+        "ki67_mask_type": "tumor_cells",
+        "ki67_assessment_keys": [
+          "antibody",
+          "positive_cell_percentage",
+          "result",
+          "staining_intensity"
+        ]
+      }
+    ],
+    "json_image_mask_references_checked": 110,
+    "exact_image_path_matches": 55,
+    "exact_mask_path_matches": 0,
+    "unique_casefold_mask_path_matches": 55,
+    "path_case_mismatches": [
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0001/ID0001_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0001/ID0001_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0001/ID0001_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0001/ID0001_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0001/ID0001_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0001/ID0001_her2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0001/ID0001_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0001/ID0001_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0001/ID0001_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0001/ID0001_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0002/ID0002_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0002/ID0002_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0002/ID0002_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0002/ID0002_Er_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0002/ID0002_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0002/ID0002_her2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0002/ID0002_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0002/ID0002_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0002/ID0002_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0002/ID0002_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0003/ID0003_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0003/ID0003_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0003/ID0003_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0003/ID0003_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0003/ID0003_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0003/ID0003_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0003/ID0003_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0003/ID0003_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0003/ID0003_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0003/ID0003_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0004/ID0004_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0004/ID0004_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0004/ID0004_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0004/ID0004_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0004/ID0004_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0004/ID0004_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0004/ID0004_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0004/ID0004_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0004/ID0004_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0004/ID0004_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0005/ID0005_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0005/ID0005_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0005/ID0005_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0005/ID0005_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0005/ID0005_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0005/ID0005_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0005/ID0005_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0005/ID0005_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0005/ID0005_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0005/ID0005_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0006/ID0006_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0006/ID0006_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0006/ID0006_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0006/ID0006_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0006/ID0006_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0006/ID0006_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0006/ID0006_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0006/ID0006_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0006/ID0006_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0006/ID0006_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0007/ID0007_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0007/ID0007_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0007/ID0007_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0007/ID0007_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0007/ID0007_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0007/ID0007_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0007/ID0007_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0007/ID0007_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0007/ID0007_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0007/ID0007_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0008/ID0008_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0008/ID0008_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0008/ID0008_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0008/ID0008_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0008/ID0008_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0008/ID0008_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0008/ID0008_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0008/ID0008_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0008/ID0008_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0008/ID0008_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0009/ID0009_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0009/ID0009_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0009/ID0009_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0009/ID0009_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0009/ID0009_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0009/ID0009_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0009/ID0009_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0009/ID0009_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0009/ID0009_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0009/ID0009_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0010/ID0010_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0010/ID0010_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0010/ID0010_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0010/ID0010_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0010/ID0010_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0010/ID0010_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0010/ID0010_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0010/ID0010_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0010/ID0010_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0010/ID0010_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0011/ID0011_H&E_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0011/ID0011_H&E_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0011/ID0011_ER_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0011/ID0011_ER_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0011/ID0011_HER2_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0011/ID0011_HER2_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0011/ID0011_KI67_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0011/ID0011_KI67_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      },
+      {
+        "kind": "mask_path",
+        "json_path": "dataset_images_AHIHCI/masks/0011/ID0011_PR_1_mask.png",
+        "actual_member": "dataset_images_AHIHCI/masks/0011/ID0011_PR_1_MASK.png",
+        "exact_match": false,
+        "case_insensitive_match_unique": true
+      }
+    ],
+    "ki67_mask_types": {
+      "only_positive_tumor_cells": 5,
+      "tumor_cells": 6
+    },
+    "selected_pair": {
+      "selected_case": "0001",
+      "selection": "lexicographically first case; feasibility check before any prediction",
+      "files": [
+        {
+          "member": "dataset_images_AHIHCI/images/0001/ID0001_KI67_1.jpg",
+          "bytes": 9122529,
+          "sha256": "db46569b71c685bcb99130ec41a93be6ac878e35c739976a9ce7a971d54c6757",
+          "zip_member_crc": "passed",
+          "format": "JPEG",
+          "mode": "RGB",
+          "size_wh": [
+            4096,
+            3286
+          ]
+        },
+        {
+          "member": "dataset_images_AHIHCI/masks/0001/ID0001_KI67_1_MASK.png",
+          "bytes": 15825,
+          "sha256": "e0a41dfb6d9aab1d9e9b88e9428c1a8a54c8a47815636ffeebe7c456c5aab483",
+          "zip_member_crc": "passed",
+          "format": "PNG",
+          "mode": "1",
+          "size_wh": [
+            4096,
+            3286
+          ],
+          "colors": [
+            [
+              13287524,
+              0
+            ],
+            [
+              171932,
+              255
+            ]
+          ]
+        }
+      ],
+      "range_bytes": 9387232,
+      "ranges": [
+        {
+          "start": 518520832,
+          "end": 518528623,
+          "bytes": 7792,
+          "sha256": "2bfb8ba7bd592226e70e80ba3a6cb8494a5374f4a3de9b64fbc66a75c50434bd"
+        },
+        {
+          "start": 518455296,
+          "end": 518528623,
+          "bytes": 73328,
+          "sha256": "e9da1b36a2e6ab13a805043d052b66211e9b288a300556cc0602457fab708496"
+        },
+        {
+          "start": 26935296,
+          "end": 27000831,
+          "bytes": 65536,
+          "sha256": "e6e8e642574bbfda220451418dd6f5c57f9a9498964c5b6b7c35867e81e096cb"
+        },
+        {
+          "start": 26935296,
+          "end": 36110335,
+          "bytes": 9175040,
+          "sha256": "44cddba393d1ee2c1214eaa33e3a29c5654d2be7bfabb70626a2534b7f7477dc"
+        },
+        {
+          "start": 514064384,
+          "end": 514129919,
+          "bytes": 65536,
+          "sha256": "fe75320782edf1c0826104eb155b1ea557a2e2f82e004a382fc54368a4d41ade"
+        }
+      ],
+      "whole_archive_md5_verified": false,
+      "new_inference": false
+    },
+    "metadata_range_bytes": 146656,
+    "member_crc_scope": "11 JSON files and selected Ki67 JPEG/PNG only; not whole ZIP",
+    "preview": "Chromium displayed original and same-coordinate mask overlay; screenshot remains private",
+    "expert_annotation_correctness_or_completeness_verified": false
+  },
+  "acrobat_existing_metadata": {
+    "source": "https://api.researchdata.se/dataset/2022-190-1/1/file/documentation/df_acrobat_meta.csv",
+    "sha256": "d18bd71c3686a90a8d1a6e0486a06615407745bcb3c90aa097f82e0ccd9fd1ae",
+    "rows": 4212,
+    "ki67_rows": 843,
+    "has_ki67_score_column": false,
+    "new_download": false
+  },
+  "new_training_run": false,
+  "new_inference_run": false,
+  "new_performance_metrics": false,
+  "whole_wsi_ground_truth_validation_performed": false,
+  "clinical_validation_performed": false,
+  "limitations": [
+    "IHC metadata Ki67 percentage describes specimen, not necessarily local FOV (paper section3.5).",
+    "No supplied cell centers/class labels for existing four-class classifier in inspected IHC JSONs/archive listing.",
+    "Binary group/region masks cannot automatically be treated as instance labels or all-nuclei targets.",
+    "NuCLS manual SP.3 FOVs may support additional ROI-level research; not whole-WSI exhaustive GT.",
+    "New uploaded study is not evidence that user independently authored it, ran code, or performed clinical review."
+  ],
+  "access_notes": [
+    "Initial IHC small-range request encountered HTTP503; bounded cached retry succeeded. This was not evidence of a corrupt source ZIP.",
+    "TIGER/ACROBAT challenge pages returned403 in web reader; authoritative AWS/SND pages were used. No authenticated/private access bypass.",
+    "No large complete WSI/annotation archive downloaded this turn."
+  ]
+}
