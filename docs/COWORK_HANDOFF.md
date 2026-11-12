@@ -1,5 +1,7 @@
 # PathologyEdge — 자소서·포트폴리오 작성을 위한 Cowork 전달 자료
 
+[Cowork 전달 ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork.zip) · [파일 목록·SHA256](../artifacts/handoff/manifest.json). 문서와 실제 오류 그림 8개를 포함한 약2.1MB 묶음입니다. ZIP 안의 근거 링크는 커밋 `540b6e3`에 고정되어 있습니다.
+
 기존 근거 기준: 커밋 `ad739fd`. 최신 추가 실험은 아래 별도 보고서와 원본 SHA로 연결합니다. 원본 감사 문서의 날짜 표기는 해당 기록을 유지했습니다. 이 문서는 확인된 프로젝트 결과와 개인 기여를 정리한 작성 자료입니다. 외부 서비스 전송이나 지원서 제출은 수행하지 않았습니다.
 
 ## Cowork에 전달할 작성 요청

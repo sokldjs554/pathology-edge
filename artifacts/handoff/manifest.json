@@ -1,0 +1,18 @@
+{
+  "bytes": 2104347,
+  "sha256": "03162180b9fb3d7b8696d698b9a20eb0f93f3de1fb58d42a52b648e33159af57",
+  "members": [
+    "CLINICAL_WSI_VALIDATION_STATUS.md",
+    "COWORK_HANDOFF.md",
+    "EXTERNAL_MONUSEG_VALIDATION.md",
+    "REFINEMENT_REPEATS_RESULTS.md",
+    "START_HERE.txt",
+    "largest-decrease.png",
+    "largest-increase.png",
+    "verification.json"
+  ],
+  "source_commit": "540b6e35c83b63d0d09a3fdda4ab4682d1ad9d0b",
+  "zip_integrity": "passed",
+  "clinical_validation_performed": false,
+  "whole_wsi_ground_truth_validation_performed": false
+}
