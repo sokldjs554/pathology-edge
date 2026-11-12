@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "region_checks": 240,
+  "aggregate_mean_checks": 96,
+  "raw_assets": 153,
+  "original_crops": 51,
+  "evaluated_fovs": 15,
+  "case_groups": 4,
+  "excluded_shape_mismatch": 36,
+  "original_stream_bytes": 5082513388,
+  "original_md5_matches": 5,
+  "checkpoint_loading": false,
+  "inference_run": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false
+}

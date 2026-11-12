@@ -1,5 +1,7 @@
 # Cowork 전달 파일
 
+2026-11-13 KST에는 [NuCLS SP.3 원본 연결 평가](../../docs/NUCLS_SP3_EVALUATION.md)를 추가했습니다. 원본5개 해시 확인,15시야·4케이스 실제 평가,36쌍 치수 불일치 보류를 구분합니다. [추가 실험 근거 ZIP](../experiments/nucls-sp3-20261113/evidence.zip)은 별도 파일이며 아래최종v2 ZIP의 내용·해시는 바꾸지 않았습니다. 새 작업의 사용자 직접 실행·검토는 아직 확인하지 않았습니다.
+
 최종v2 발행 후 [추가 공개자료 조사 검토](../../docs/PUBLIC_DATA_UPLOAD_REVIEW.md)를 기록했습니다. 새 IHC 후보의 JSON 11개·영상/마스크 1쌍을 대조했으며 새 성능평가·임상 검증·전체 WSI 정답 검증은 아닙니다. 아래ZIP의 기존 내용·해시는 유지합니다.
 
 **최신 묶음:** [PathologyEdge-Final-Handoff-20261112-v2.zip 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip). **365개 파일 · 11,552,627 bytes(약11.6MB)**. [목록·검사](manifest-final-20261112-v2.json).

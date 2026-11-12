@@ -1,0 +1,10 @@
+{
+  "bytes": 56975068,
+  "sha256": "ae7b3ac863c02ddab9e1c6f52155465df7ebf366680f16e708fd7b0e798be9e8",
+  "members": 382,
+  "manifest_files_checked": 379,
+  "crc_passed": true,
+  "all_member_hashes_match": true,
+  "whole_wsi_files_included": false,
+  "report_source_commit": "6ffd54162ce95fc9a106ff081a2a9172644f8d00"
+}

@@ -1,0 +1,1520 @@
+{
+  "created_utc": "2026-11-12T16:13:30.363465+00:00",
+  "source_commit": "6ffd54162ce95fc9a106ff081a2a9172644f8d00",
+  "models": {
+    "small_vit": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898",
+    "small_vit_refined": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f"
+  },
+  "threshold": 0.35,
+  "patch_size": 128,
+  "mode": "no_overlap",
+  "boundary_radius": 8,
+  "selection": "All51 SP.3 U-control FOVs acquired;15 equal-shape pairs pass;36 shape-mismatched pairs quarantined before inference",
+  "image_count": 15,
+  "case_count": 4,
+  "images": [
+    {
+      "key": "00",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420",
+      "case_id": "TCGA-A1-A0SP",
+      "inputs": {
+        "original": {
+          "path": "inputs/00-original.png",
+          "sha256": "cf5114abc4c70d5bdfd45199caa24a4b1d07f17a38a0912b186b4b5cbf353766"
+        },
+        "provided": {
+          "path": "inputs/00-provided.png",
+          "sha256": "18f76241d369f2e53f25abca0d83ba66b3614558d52d71b47d51860a2c6a3845"
+        }
+      },
+      "label": "labels/00.npz",
+      "label_sha256": "043b446525b340020bb8fdb6f9c385dfed2603f66a7e6298f010c05a4d69241c",
+      "support": {
+        "image_pixels": 147136,
+        "explicit_background_pixels": 70741,
+        "unannotated_pixels": 33503,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 25,
+        "rectangle_rows": 1,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 10,
+        "base_valid_pixels": 113623,
+        "valid_pixels": 111358,
+        "foreground_valid_pixels": 41827,
+        "valid_fraction": 0.756837211831231,
+        "unsupported_foreground_pixels": 1056,
+        "contradictory_background_pixels": 1209
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420",
+        "case_id": "TCGA-A1-A0SP",
+        "bounds_level0": [
+          10088,
+          56511,
+          10420,
+          56791
+        ],
+        "output_wh": [
+          418,
+          352
+        ],
+        "effective_mpp_xy": [
+          0.20023253588516746,
+          0.20053409090909088
+        ],
+        "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420.png",
+        "original_sha256": "cf5114abc4c70d5bdfd45199caa24a4b1d07f17a38a0912b186b4b5cbf353766",
+        "provided_sha256": "18f76241d369f2e53f25abca0d83ba66b3614558d52d71b47d51860a2c6a3845",
+        "decoded_tile_indices": [
+          94199,
+          94200,
+          94627,
+          94628
+        ],
+        "rgb_correlation": 0.9993131062769156,
+        "rgb_mae": 1.1404165760475569,
+        "phase_shift_xy": [
+          0.009389274172775686,
+          -0.00010143400513129563
+        ],
+        "phase_response": 0.9955781189011939,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "01",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340",
+      "case_id": "TCGA-A1-A0SP",
+      "inputs": {
+        "original": {
+          "path": "inputs/01-original.png",
+          "sha256": "7f1b4934f17e0b295cae777ff07669490b846fd88ec3b7201f3421c83cf13bc8"
+        },
+        "provided": {
+          "path": "inputs/01-provided.png",
+          "sha256": "a256715526ccdab2c214d2c934415b9b77371070f85ae9ddd2b57c12837814a7"
+        }
+      },
+      "label": "labels/01.npz",
+      "label_sha256": "8b27aee9c8c183e1a3f330c2264aea293d1bb524d4038300eb0d5510da50b397",
+      "support": {
+        "image_pixels": 122139,
+        "explicit_background_pixels": 85339,
+        "unannotated_pixels": 16118,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 28,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106021,
+        "valid_pixels": 105780,
+        "foreground_valid_pixels": 20682,
+        "valid_fraction": 0.8660624370594159,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 241
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340",
+        "case_id": "TCGA-A1-A0SP",
+        "bounds_level0": [
+          8077,
+          55501,
+          8340,
+          55794
+        ],
+        "output_wh": [
+          331,
+          369
+        ],
+        "effective_mpp_xy": [
+          0.20030906344410876,
+          0.20017696476964766
+        ],
+        "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340.png",
+        "original_sha256": "7f1b4934f17e0b295cae777ff07669490b846fd88ec3b7201f3421c83cf13bc8",
+        "provided_sha256": "a256715526ccdab2c214d2c934415b9b77371070f85ae9ddd2b57c12837814a7",
+        "decoded_tile_indices": [
+          92479,
+          92480,
+          92907,
+          92908
+        ],
+        "rgb_correlation": 0.9993595799765949,
+        "rgb_mae": 1.1776036592188681,
+        "phase_shift_xy": [
+          -0.00553357393377496,
+          0.4959098459745235
+        ],
+        "phase_response": 0.9983690824720595,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "02",
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334",
+      "case_id": "TCGA-A1-A0SP",
+      "inputs": {
+        "original": {
+          "path": "inputs/02-original.png",
+          "sha256": "204984da77643ce42c3144a2b2bfd555bf9819373b5ff30a7f2d18bd50450ac1"
+        },
+        "provided": {
+          "path": "inputs/02-provided.png",
+          "sha256": "1d98607145c29829c2e3562e5266ef820029f1e81fd756f8dadfb30ca65c1138"
+        }
+      },
+      "label": "labels/02.npz",
+      "label_sha256": "8907b7f7ed61fb581d7640307c9730e1887b420bc1fa710bdc895241ebbd79cb",
+      "support": {
+        "image_pixels": 116603,
+        "explicit_background_pixels": 82523,
+        "unannotated_pixels": 11320,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 22,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 105283,
+        "valid_pixels": 105000,
+        "foreground_valid_pixels": 22760,
+        "valid_fraction": 0.9004914110271606,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 283
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334",
+        "case_id": "TCGA-A1-A0SP",
+        "bounds_level0": [
+          8077,
+          55998,
+          8334,
+          56285
+        ],
+        "output_wh": [
+          323,
+          361
+        ],
+        "effective_mpp_xy": [
+          0.20058730650154796,
+          0.2004229916897507
+        ],
+        "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334.png",
+        "original_sha256": "204984da77643ce42c3144a2b2bfd555bf9819373b5ff30a7f2d18bd50450ac1",
+        "provided_sha256": "1d98607145c29829c2e3562e5266ef820029f1e81fd756f8dadfb30ca65c1138",
+        "decoded_tile_indices": [
+          93335,
+          93336,
+          93763,
+          93764
+        ],
+        "rgb_correlation": 0.9992445959252735,
+        "rgb_mae": 1.2404940982078791,
+        "phase_shift_xy": [
+          -0.007825290418622899,
+          0.5020656550242677
+        ],
+        "phase_response": 0.9996069273772064,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "03",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755",
+      "case_id": "TCGA-A7-A0DA",
+      "inputs": {
+        "original": {
+          "path": "inputs/03-original.png",
+          "sha256": "7946d5329d01e5ee650b8b5bd1883a710e360cf297193e80c3c0316fc335145c"
+        },
+        "provided": {
+          "path": "inputs/03-provided.png",
+          "sha256": "1969a49c3a47f5466055b95012cf06b3e88d05080ae335846497c43001821630"
+        }
+      },
+      "label": "labels/03.npz",
+      "label_sha256": "b4361f76d9b374d45912cbe52c37e66268f533b75950181965ac92abc8b8cb87",
+      "support": {
+        "image_pixels": 113876,
+        "explicit_background_pixels": 77163,
+        "unannotated_pixels": 13076,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 19,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100800,
+        "valid_pixels": 100532,
+        "foreground_valid_pixels": 23637,
+        "valid_fraction": 0.8828199093751098,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 268
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755",
+        "case_id": "TCGA-A7-A0DA",
+        "bounds_level0": [
+          44475,
+          19196,
+          44755,
+          19467
+        ],
+        "output_wh": [
+          343,
+          332
+        ],
+        "effective_mpp_xy": [
+          0.20048979591836735,
+          0.20047469879518073
+        ],
+        "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755.png",
+        "original_sha256": "7946d5329d01e5ee650b8b5bd1883a710e360cf297193e80c3c0316fc335145c",
+        "provided_sha256": "1969a49c3a47f5466055b95012cf06b3e88d05080ae335846497c43001821630",
+        "decoded_tile_indices": [
+          28388,
+          28389,
+          28745,
+          28746,
+          29102,
+          29103
+        ],
+        "rgb_correlation": 0.9992560633858854,
+        "rgb_mae": 1.5379916166122214,
+        "phase_shift_xy": [
+          -0.004937988759252221,
+          0.005329090133045611
+        ],
+        "phase_response": 0.9950297927856445,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "04",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755",
+      "case_id": "TCGA-A7-A0DA",
+      "inputs": {
+        "original": {
+          "path": "inputs/04-original.png",
+          "sha256": "1cad840ede0f94c4e9ea657e99b539ca2da17d2e29e695331174e96247f11a52"
+        },
+        "provided": {
+          "path": "inputs/04-provided.png",
+          "sha256": "05792e1acb286e1e4325fda0ae223f827c00cf846cd8402d75d0a2aea9b0e75b"
+        }
+      },
+      "label": "labels/04.npz",
+      "label_sha256": "b85bdde211ab321d6b4506b081c984c87f89bacf2695c9bdc6ca633a4b282b5b",
+      "support": {
+        "image_pixels": 113715,
+        "explicit_background_pixels": 88232,
+        "unannotated_pixels": 13358,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 11,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100357,
+        "valid_pixels": 100255,
+        "foreground_valid_pixels": 12125,
+        "valid_fraction": 0.8816339093347404,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 102
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755",
+        "case_id": "TCGA-A7-A0DA",
+        "bounds_level0": [
+          44498,
+          25086,
+          44755,
+          25380
+        ],
+        "output_wh": [
+          315,
+          361
+        ],
+        "effective_mpp_xy": [
+          0.20037841269841272,
+          0.20001772853185595
+        ],
+        "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755.png",
+        "original_sha256": "1cad840ede0f94c4e9ea657e99b539ca2da17d2e29e695331174e96247f11a52",
+        "provided_sha256": "05792e1acb286e1e4325fda0ae223f827c00cf846cd8402d75d0a2aea9b0e75b",
+        "decoded_tile_indices": [
+          37313,
+          37314,
+          37670,
+          37671
+        ],
+        "rgb_correlation": 0.999125763602187,
+        "rgb_mae": 1.5924284395198522,
+        "phase_shift_xy": [
+          -0.015835091714563987,
+          0.4913191135411239
+        ],
+        "phase_response": 0.9930551915486654,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "05",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069",
+      "case_id": "TCGA-A7-A0DA",
+      "inputs": {
+        "original": {
+          "path": "inputs/05-original.png",
+          "sha256": "e93641b6c27a3dd1572952e15542d079278e4f3708f62a2ee424c65223efba12"
+        },
+        "provided": {
+          "path": "inputs/05-provided.png",
+          "sha256": "3df4f00b7b4ea369aee9ba827c812ad222e63c18cb9efc46163696655308cd21"
+        }
+      },
+      "label": "labels/05.npz",
+      "label_sha256": "3a3d407ae253996dd3c73990b8bc12f7ae4684f565f600bb1ef38985a2b24b63",
+      "support": {
+        "image_pixels": 132108,
+        "explicit_background_pixels": 80024,
+        "unannotated_pixels": 31021,
+        "unlabeled_mask_pixels": 1879,
+        "polyline_rows": 21,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 3,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 99116,
+        "valid_pixels": 97283,
+        "foreground_valid_pixels": 18288,
+        "valid_fraction": 0.7363899233960093,
+        "unsupported_foreground_pixels": 896,
+        "contradictory_background_pixels": 937
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069",
+        "case_id": "TCGA-A7-A0DA",
+        "bounds_level0": [
+          45740,
+          22771,
+          46069,
+          23038
+        ],
+        "output_wh": [
+          404,
+          327
+        ],
+        "effective_mpp_xy": [
+          0.20000594059405943,
+          0.2005357798165138
+        ],
+        "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069.png",
+        "original_sha256": "e93641b6c27a3dd1572952e15542d079278e4f3708f62a2ee424c65223efba12",
+        "provided_sha256": "3df4f00b7b4ea369aee9ba827c812ad222e63c18cb9efc46163696655308cd21",
+        "decoded_tile_indices": [
+          33748,
+          33749,
+          34105,
+          34106
+        ],
+        "rgb_correlation": 0.9991641992967184,
+        "rgb_mae": 1.6472179328024545,
+        "phase_shift_xy": [
+          0.5001287251803603,
+          -0.005937419377005426
+        ],
+        "phase_response": 0.9910728799953382,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "06",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038",
+      "case_id": "TCGA-A7-A0DA",
+      "inputs": {
+        "original": {
+          "path": "inputs/06-original.png",
+          "sha256": "97f86d415bc64d742dfe9dcf3d0a55cda524dd1f87ab1cf816905d5e8ef8a599"
+        },
+        "provided": {
+          "path": "inputs/06-provided.png",
+          "sha256": "df66dad08428b37734832af6734631bbecc9601d59b3a8a1f23ded8462d441f5"
+        }
+      },
+      "label": "labels/06.npz",
+      "label_sha256": "6e1b789b91daf0408045c0c009684eef55358a25b1e4fd5eafe7081a09f98473",
+      "support": {
+        "image_pixels": 128881,
+        "explicit_background_pixels": 81611,
+        "unannotated_pixels": 25297,
+        "unlabeled_mask_pixels": 2865,
+        "polyline_rows": 21,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 4,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 100555,
+        "valid_pixels": 99361,
+        "foreground_valid_pixels": 18510,
+        "valid_fraction": 0.7709514978934056,
+        "unsupported_foreground_pixels": 598,
+        "contradictory_background_pixels": 596
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038",
+        "case_id": "TCGA-A7-A0DA",
+        "bounds_level0": [
+          45745,
+          22248,
+          46038,
+          22541
+        ],
+        "output_wh": [
+          359,
+          359
+        ],
+        "effective_mpp_xy": [
+          0.20044791086350977,
+          0.20044791086350977
+        ],
+        "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038.png",
+        "original_sha256": "97f86d415bc64d742dfe9dcf3d0a55cda524dd1f87ab1cf816905d5e8ef8a599",
+        "provided_sha256": "df66dad08428b37734832af6734631bbecc9601d59b3a8a1f23ded8462d441f5",
+        "decoded_tile_indices": [
+          33034,
+          33035,
+          33391,
+          33392
+        ],
+        "rgb_correlation": 0.9991547289940377,
+        "rgb_mae": 1.55974374293599,
+        "phase_shift_xy": [
+          -0.012634324149985332,
+          0.0015217813818821924
+        ],
+        "phase_response": 0.9807537322574191,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "07",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586",
+      "case_id": "TCGA-A7-A0DA",
+      "inputs": {
+        "original": {
+          "path": "inputs/07-original.png",
+          "sha256": "20233228e1d9ee375d9cd1244578aff42c4273ee481e2c75cbf409303445e3c8"
+        },
+        "provided": {
+          "path": "inputs/07-provided.png",
+          "sha256": "af60fbc0887f7f75beaa6656ed92ea29f82ffc1e2209e30ca7326ae680417696"
+        }
+      },
+      "label": "labels/07.npz",
+      "label_sha256": "b83a30598706ccd918a310dfec20cd61a979dc7f721f8992e865553b8ae5ec1d",
+      "support": {
+        "image_pixels": 127908,
+        "explicit_background_pixels": 72215,
+        "unannotated_pixels": 25056,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 19,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102852,
+        "valid_pixels": 102668,
+        "foreground_valid_pixels": 30637,
+        "valid_fraction": 0.8026706695437346,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 184
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586",
+        "case_id": "TCGA-A7-A0DA",
+        "bounds_level0": [
+          47281,
+          24556,
+          47586,
+          24835
+        ],
+        "output_wh": [
+          374,
+          342
+        ],
+        "effective_mpp_xy": [
+          0.20028877005347595,
+          0.20035789473684212
+        ],
+        "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586.png",
+        "original_sha256": "20233228e1d9ee375d9cd1244578aff42c4273ee481e2c75cbf409303445e3c8",
+        "provided_sha256": "af60fbc0887f7f75beaa6656ed92ea29f82ffc1e2209e30ca7326ae680417696",
+        "decoded_tile_indices": [
+          36611,
+          36612,
+          36968,
+          36969
+        ],
+        "rgb_correlation": 0.9989890957622791,
+        "rgb_mae": 1.5825020066506135,
+        "phase_shift_xy": [
+          0.4888418338142628,
+          -0.005229048687226623
+        ],
+        "phase_response": 0.9892813429090712,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "08",
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633",
+      "case_id": "TCGA-A7-A0DA",
+      "inputs": {
+        "original": {
+          "path": "inputs/08-original.png",
+          "sha256": "8f0c315e55ce4fa4e84e4b47ae1c12db82958042b857e584ee3858da9bd34e57"
+        },
+        "provided": {
+          "path": "inputs/08-provided.png",
+          "sha256": "d8f285f841fefa926eb2bc2bd4647e0f8637c3ad16205dfbbe395d1b3883129d"
+        }
+      },
+      "label": "labels/08.npz",
+      "label_sha256": "0482320632735d10ee0980316fdb27c46d2060ef196ed90d18d645296d29316a",
+      "support": {
+        "image_pixels": 138776,
+        "explicit_background_pixels": 85633,
+        "unannotated_pixels": 36281,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 12,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102495,
+        "valid_pixels": 102392,
+        "foreground_valid_pixels": 16860,
+        "valid_fraction": 0.7378221018043466,
+        "unsupported_foreground_pixels": 2,
+        "contradictory_background_pixels": 101
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633",
+        "case_id": "TCGA-A7-A0DA",
+        "bounds_level0": [
+          47292,
+          21488,
+          47633,
+          21759
+        ],
+        "output_wh": [
+          418,
+          332
+        ],
+        "effective_mpp_xy": [
+          0.2003578947368421,
+          0.20047469879518073
+        ],
+        "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633.png",
+        "original_sha256": "8f0c315e55ce4fa4e84e4b47ae1c12db82958042b857e584ee3858da9bd34e57",
+        "provided_sha256": "d8f285f841fefa926eb2bc2bd4647e0f8637c3ad16205dfbbe395d1b3883129d",
+        "decoded_tile_indices": [
+          31970,
+          31971,
+          32327,
+          32328
+        ],
+        "rgb_correlation": 0.9989527253219652,
+        "rgb_mae": 1.715805806959897,
+        "phase_shift_xy": [
+          0.004049169653143281,
+          -0.007438040469423868
+        ],
+        "phase_response": 0.9890175379843378,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "09",
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305",
+      "case_id": "TCGA-AR-A1AR",
+      "inputs": {
+        "original": {
+          "path": "inputs/09-original.png",
+          "sha256": "24fb88c740cf09e0736a2ea66fc5963ae54f51b66074e7c3e70647052a9fe276"
+        },
+        "provided": {
+          "path": "inputs/09-provided.png",
+          "sha256": "6e37e96639942312bd38e0df63a447ca0e1fd0ebf2ee9103c38ad140e265b3bf"
+        }
+      },
+      "label": "labels/09.npz",
+      "label_sha256": "5a83c74e2acac110f6cdad84ddfa2ef3be4c17ef3532c11ff33142c6e88f860f",
+      "support": {
+        "image_pixels": 116620,
+        "explicit_background_pixels": 70318,
+        "unannotated_pixels": 14431,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 30,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102189,
+        "valid_pixels": 99816,
+        "foreground_valid_pixels": 30769,
+        "valid_fraction": 0.8559080775167209,
+        "unsupported_foreground_pixels": 1102,
+        "contradictory_background_pixels": 1271
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305",
+        "case_id": "TCGA-AR-A1AR",
+        "bounds_level0": [
+          16027,
+          30363,
+          16305,
+          30639
+        ],
+        "output_wh": [
+          343,
+          340
+        ],
+        "effective_mpp_xy": [
+          0.20003032069970844,
+          0.2003435294117647
+        ],
+        "original_path": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305.png",
+        "original_sha256": "24fb88c740cf09e0736a2ea66fc5963ae54f51b66074e7c3e70647052a9fe276",
+        "provided_sha256": "6e37e96639942312bd38e0df63a447ca0e1fd0ebf2ee9103c38ad140e265b3bf",
+        "decoded_tile_indices": [
+          34086,
+          34087,
+          34356,
+          34357
+        ],
+        "rgb_correlation": 0.9985778224287327,
+        "rgb_mae": 1.7661464585834334,
+        "phase_shift_xy": [
+          -0.0035528544798921757,
+          -0.0047211145890742046
+        ],
+        "phase_response": 0.991956822430646,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "10",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351",
+      "case_id": "TCGA-C8-A12V",
+      "inputs": {
+        "original": {
+          "path": "inputs/10-original.png",
+          "sha256": "82164c1ce7b15fb99d69211bad83e312a9b1b7b3b47282b9a8fd019cf77e66ad"
+        },
+        "provided": {
+          "path": "inputs/10-provided.png",
+          "sha256": "420416dc26eb4d5b8ac6ac7909d7fc3f6f02981192e2484c33b687a356cfff9e"
+        }
+      },
+      "label": "labels/10.npz",
+      "label_sha256": "634af1c12c8e8cc000a14f31aea8da2a3f4c03ee17424528a2fc7b556526fb81",
+      "support": {
+        "image_pixels": 107840,
+        "explicit_background_pixels": 91741,
+        "unannotated_pixels": 6450,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 17,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 101390,
+        "valid_pixels": 101236,
+        "foreground_valid_pixels": 9649,
+        "valid_fraction": 0.9387611275964391,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 154
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351",
+        "case_id": "TCGA-C8-A12V",
+        "bounds_level0": [
+          12079,
+          57471,
+          12351,
+          57729
+        ],
+        "output_wh": [
+          337,
+          320
+        ],
+        "effective_mpp_xy": [
+          0.20056973293768546,
+          0.200353125
+        ],
+        "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351.png",
+        "original_sha256": "82164c1ce7b15fb99d69211bad83e312a9b1b7b3b47282b9a8fd019cf77e66ad",
+        "provided_sha256": "420416dc26eb4d5b8ac6ac7909d7fc3f6f02981192e2484c33b687a356cfff9e",
+        "decoded_tile_indices": [
+          71279,
+          71280,
+          71597,
+          71598
+        ],
+        "rgb_correlation": 0.9989593612652083,
+        "rgb_mae": 1.4944114737883283,
+        "phase_shift_xy": [
+          -0.0009159753540473048,
+          -0.024856752264895476
+        ],
+        "phase_response": 0.9933634379174974,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "11",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372",
+      "case_id": "TCGA-C8-A12V",
+      "inputs": {
+        "original": {
+          "path": "inputs/11-original.png",
+          "sha256": "7fd3cd7c6c6832a23d3e62590a4377ea94c3f5357c948ac1f62eadc6f3b382bd"
+        },
+        "provided": {
+          "path": "inputs/11-provided.png",
+          "sha256": "8adff8c14342080c24af616951638e9be9738391d46e559e759fccf7313fb19a"
+        }
+      },
+      "label": "labels/11.npz",
+      "label_sha256": "9b6c35f92d8f21dc91937aab6228659ed19c52749a9cb1a83115dded210cef08",
+      "support": {
+        "image_pixels": 119358,
+        "explicit_background_pixels": 75149,
+        "unannotated_pixels": 16396,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 62,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 102962,
+        "valid_pixels": 102341,
+        "foreground_valid_pixels": 27810,
+        "valid_fraction": 0.8574289113423482,
+        "unsupported_foreground_pixels": 3,
+        "contradictory_background_pixels": 618
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372",
+        "case_id": "TCGA-C8-A12V",
+        "bounds_level0": [
+          13091,
+          56439,
+          13372,
+          56715
+        ],
+        "output_wh": [
+          349,
+          342
+        ],
+        "effective_mpp_xy": [
+          0.2000816618911175,
+          0.2005438596491228
+        ],
+        "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372.png",
+        "original_sha256": "7fd3cd7c6c6832a23d3e62590a4377ea94c3f5357c948ac1f62eadc6f3b382bd",
+        "provided_sha256": "8adff8c14342080c24af616951638e9be9738391d46e559e759fccf7313fb19a",
+        "decoded_tile_indices": [
+          70011,
+          70012,
+          70329,
+          70330
+        ],
+        "rgb_correlation": 0.9993434800264496,
+        "rgb_mae": 1.812424247501913,
+        "phase_shift_xy": [
+          -0.0073411190576280205,
+          0.0016179157453848347
+        ],
+        "phase_response": 0.9975723746970848,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "12",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400",
+      "case_id": "TCGA-C8-A12V",
+      "inputs": {
+        "original": {
+          "path": "inputs/12-original.png",
+          "sha256": "39d895e9dabe8c23e69679f5480d08a28f1527a4c390ac5c72fb11d7505e71c1"
+        },
+        "provided": {
+          "path": "inputs/12-provided.png",
+          "sha256": "7953b09c23fa3e42f35b938f202026790bfcc98a789622ee753c0d2dd4947a50"
+        }
+      },
+      "label": "labels/12.npz",
+      "label_sha256": "07cbb5caa19a94f7b20cf1213cb3f9a19f431e08d8a4dc3a7e2c4f36b163422c",
+      "support": {
+        "image_pixels": 140728,
+        "explicit_background_pixels": 74309,
+        "unannotated_pixels": 34148,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 28,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106580,
+        "valid_pixels": 106258,
+        "foreground_valid_pixels": 32268,
+        "valid_fraction": 0.75505940537775,
+        "unsupported_foreground_pixels": 3,
+        "contradictory_background_pixels": 319
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400",
+        "case_id": "TCGA-C8-A12V",
+        "bounds_level0": [
+          14084,
+          57462,
+          14400,
+          57751
+        ],
+        "output_wh": [
+          392,
+          359
+        ],
+        "effective_mpp_xy": [
+          0.20032142857142857,
+          0.20004596100278552
+        ],
+        "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400.png",
+        "original_sha256": "39d895e9dabe8c23e69679f5480d08a28f1527a4c390ac5c72fb11d7505e71c1",
+        "provided_sha256": "7953b09c23fa3e42f35b938f202026790bfcc98a789622ee753c0d2dd4947a50",
+        "decoded_tile_indices": [
+          71287,
+          71288,
+          71605,
+          71606
+        ],
+        "rgb_correlation": 0.9988778787700845,
+        "rgb_mae": 1.7121776287116517,
+        "phase_shift_xy": [
+          0.006165063109136781,
+          -0.004268348226446506
+        ],
+        "phase_response": 1.000993128882514,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "13",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698",
+      "case_id": "TCGA-C8-A12V",
+      "inputs": {
+        "original": {
+          "path": "inputs/13-original.png",
+          "sha256": "9a44ac186e26443e336ca954bf65a92b12bdebcd938cf341056eafd368a0f913"
+        },
+        "provided": {
+          "path": "inputs/13-provided.png",
+          "sha256": "279af204281cdee6c8cc706c1f5483d69e8fc2ae4ed7384ae4f37b23304c81e4"
+        }
+      },
+      "label": "labels/13.npz",
+      "label_sha256": "a4c846a9f5c1e7ee3b52d741a72ce352bea39b97ca4eeb5fb552fe3b50ddef40",
+      "support": {
+        "image_pixels": 141512,
+        "explicit_background_pixels": 77378,
+        "unannotated_pixels": 35246,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 37,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 106266,
+        "valid_pixels": 105908,
+        "foreground_valid_pixels": 28888,
+        "valid_fraction": 0.7484029622929504,
+        "unsupported_foreground_pixels": 0,
+        "contradictory_background_pixels": 358
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698",
+        "case_id": "TCGA-C8-A12V",
+        "bounds_level0": [
+          16407,
+          56662,
+          16698,
+          56978
+        ],
+        "output_wh": [
+          361,
+          392
+        ],
+        "effective_mpp_xy": [
+          0.20031440443213297,
+          0.20032142857142857
+        ],
+        "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698.png",
+        "original_sha256": "9a44ac186e26443e336ca954bf65a92b12bdebcd938cf341056eafd368a0f913",
+        "provided_sha256": "279af204281cdee6c8cc706c1f5483d69e8fc2ae4ed7384ae4f37b23304c81e4",
+        "decoded_tile_indices": [
+          70342,
+          70343,
+          70660,
+          70661
+        ],
+        "rgb_correlation": 0.9989159785797588,
+        "rgb_mae": 1.8652269772174799,
+        "phase_shift_xy": [
+          0.5110519389151875,
+          -0.010313046552283822
+        ],
+        "phase_response": 0.9904896451822917,
+        "registration_correction_applied": false
+      }
+    },
+    {
+      "key": "14",
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738",
+      "case_id": "TCGA-C8-A12V",
+      "inputs": {
+        "original": {
+          "path": "inputs/14-original.png",
+          "sha256": "ecf344658832fc05a339b9c4a6d01e5c9494424b2be1a249f96195b049451d21"
+        },
+        "provided": {
+          "path": "inputs/14-provided.png",
+          "sha256": "c45ab38c6565c0ce660f877e34f2684a1c18386c71a9f0202499ae2d512e9bb7"
+        }
+      },
+      "label": "labels/14.npz",
+      "label_sha256": "e4cfcaa2b19e90a15d92a677716e505c33969def1dd14334ac8ddc500e17cf59",
+      "support": {
+        "image_pixels": 128877,
+        "explicit_background_pixels": 83143,
+        "unannotated_pixels": 23875,
+        "unlabeled_mask_pixels": 0,
+        "polyline_rows": 26,
+        "rectangle_rows": 0,
+        "unlabeled_polyline_rows": 0,
+        "excluded_rectangle_pixels": 0,
+        "base_valid_pixels": 105002,
+        "valid_pixels": 103148,
+        "foreground_valid_pixels": 20976,
+        "valid_fraction": 0.8003600332099599,
+        "unsupported_foreground_pixels": 883,
+        "contradictory_background_pixels": 971
+      },
+      "linkage": {
+        "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738",
+        "case_id": "TCGA-C8-A12V",
+        "bounds_level0": [
+          17447,
+          58233,
+          17738,
+          58521
+        ],
+        "output_wh": [
+          361,
+          357
+        ],
+        "effective_mpp_xy": [
+          0.20031440443213297,
+          0.20047058823529412
+        ],
+        "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738.png",
+        "original_sha256": "ecf344658832fc05a339b9c4a6d01e5c9494424b2be1a249f96195b049451d21",
+        "provided_sha256": "c45ab38c6565c0ce660f877e34f2684a1c18386c71a9f0202499ae2d512e9bb7",
+        "decoded_tile_indices": [
+          72254,
+          72255,
+          72572,
+          72573
+        ],
+        "rgb_correlation": 0.998886155821186,
+        "rgb_mae": 1.934433607237909,
+        "phase_shift_xy": [
+          0.4953134014118916,
+          0.006659771416622107
+        ],
+        "phase_response": 0.9991736237702546,
+        "registration_correction_applied": false
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-7297_top-55226_bottom-55525_right-7614",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        399,
+        376
+      ],
+      "mask_wh": [
+        398,
+        377
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8063_top-57013_bottom-57319_right-8343",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        352,
+        385
+      ],
+      "mask_wh": [
+        353,
+        385
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8319_top-54473_bottom-54758_right-8596",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        349,
+        359
+      ],
+      "mask_wh": [
+        348,
+        358
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8325_top-57041_bottom-57303_right-8589",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        332,
+        330
+      ],
+      "mask_wh": [
+        333,
+        329
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8839_top-57297_bottom-57568_right-9111",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        342,
+        341
+      ],
+      "mask_wh": [
+        342,
+        340
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9096_top-55725_bottom-56044_right-9372",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        347,
+        402
+      ],
+      "mask_wh": [
+        348,
+        401
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9322_top-53958_bottom-54231_right-9641",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        402,
+        344
+      ],
+      "mask_wh": [
+        401,
+        343
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9343_top-55733_bottom-56028_right-9634",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        366,
+        371
+      ],
+      "mask_wh": [
+        366,
+        372
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44237_top-19966_bottom-20243_right-44528",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        357,
+        340
+      ],
+      "mask_wh": [
+        356,
+        340
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44242_top-25839_bottom-26111_right-44510",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        329,
+        334
+      ],
+      "mask_wh": [
+        328,
+        333
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44477_top-19454_bottom-19730_right-44755",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        341,
+        338
+      ],
+      "mask_wh": [
+        341,
+        339
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46538_top-26328_bottom-26623_right-46803",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        325,
+        362
+      ],
+      "mask_wh": [
+        325,
+        361
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46802_top-21244_bottom-21502_right-47067",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        325,
+        316
+      ],
+      "mask_wh": [
+        325,
+        317
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47296_top-24820_bottom-25106_right-47594",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        365,
+        351
+      ],
+      "mask_wh": [
+        365,
+        350
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47815_top-20990_bottom-21256_right-48124",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        379,
+        326
+      ],
+      "mask_wh": [
+        378,
+        327
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48323_top-20990_bottom-21265_right-48616",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        359,
+        337
+      ],
+      "mask_wh": [
+        360,
+        337
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48798_top-20990_bottom-21274_right-49107",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        379,
+        348
+      ],
+      "mask_wh": [
+        378,
+        348
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-14231_top-31888_bottom-32186_right-14506",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        339,
+        367
+      ],
+      "mask_wh": [
+        338,
+        367
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16536_top-31126_bottom-31420_right-16804",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        330,
+        362
+      ],
+      "mask_wh": [
+        330,
+        363
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16803_top-29838_bottom-30134_right-17060",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        317,
+        365
+      ],
+      "mask_wh": [
+        316,
+        364
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-17049_top-29867_bottom-30142_right-17315",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        328,
+        339
+      ],
+      "mask_wh": [
+        328,
+        338
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11564_top-57983_bottom-58241_right-11824",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        323,
+        320
+      ],
+      "mask_wh": [
+        322,
+        319
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11823_top-57216_bottom-57473_right-12087",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        328,
+        319
+      ],
+      "mask_wh": [
+        327,
+        318
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13342_top-57444_bottom-57741_right-13635",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        364,
+        369
+      ],
+      "mask_wh": [
+        364,
+        368
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14852_top-57177_bottom-57515_right-15177",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        403,
+        419
+      ],
+      "mask_wh": [
+        404,
+        420
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14878_top-56436_bottom-56704_right-15177",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        371,
+        332
+      ],
+      "mask_wh": [
+        370,
+        333
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-15133_top-57203_bottom-57495_right-15444",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        386,
+        362
+      ],
+      "mask_wh": [
+        386,
+        363
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55653_bottom-55936_right-17209",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        360,
+        351
+      ],
+      "mask_wh": [
+        359,
+        351
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55919_bottom-56213_right-17200",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        349,
+        365
+      ],
+      "mask_wh": [
+        348,
+        365
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56338_top-26127_bottom-26386_right-56595",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        317,
+        319
+      ],
+      "mask_wh": [
+        316,
+        319
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56850_top-27407_bottom-27664_right-57107",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        317,
+        317
+      ],
+      "mask_wh": [
+        316,
+        316
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-57100_top-27151_bottom-27408_right-57373",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        336,
+        317
+      ],
+      "mask_wh": [
+        337,
+        316
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58118_top-27642_bottom-27938_right-58386",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        330,
+        365
+      ],
+      "mask_wh": [
+        331,
+        364
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58369_top-26873_bottom-27151_right-58643",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        338,
+        343
+      ],
+      "mask_wh": [
+        337,
+        343
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59119_top-27915_bottom-28176_right-59422",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        373,
+        322
+      ],
+      "mask_wh": [
+        373,
+        321
+      ]
+    },
+    {
+      "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59143_top-26895_bottom-27151_right-59429",
+      "reason": "Published RGB/mask dimensions differ; no label resizing or inferred alignment",
+      "rgb_wh": [
+        352,
+        315
+      ],
+      "mask_wh": [
+        353,
+        316
+      ]
+    }
+  ],
+  "annotation_scope": "Explicit background253 or named nuclear structure1..12; ignore0/99, inclusive rectangle extents, unlabeled CSV polygons; primary requires CSV/published-mask foreground agreement",
+  "annotation_limit": "Intended FOV CSV not present in inspected folders; labeled nuclear extensions may be included. This is annotated-support scoring, not exhaustive FOV/WSI coverage.",
+  "primary_input": "Original GDC level0 crop resized with Pillow BILINEAR to native supplied RGB dimensions (~0.2um/px)",
+  "secondary_input": "Supplied RGB of the SAME FOVs, rendering sensitivity only",
+  "previous_external_patient_overlap": [
+    "TCGA-A1-A0SP"
+  ],
+  "new_cases_relative_to_previous_external": [
+    "TCGA-A7-A0DA",
+    "TCGA-AR-A1AR",
+    "TCGA-C8-A12V"
+  ],
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "external_training": false,
+  "threshold_tuning": false,
+  "source_sha256": {
+    "__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
+    "cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+    "experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "external_validation.py": "69e27d0a17bb56ee696c3620921ebc1e7f1265f03da2756894605bd1dcf575cf",
+    "ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "learner_refinement.py": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+    "learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "metrics.py": "95584cd131ab54f0bb24485f56bc6a85b68b775bb318fbf5dfa0b9e24c6b8a78",
+    "model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "model_comparison.py": "2686a9ffabcbc587c2b4d0dc1b97dfeb913db1c2328c0c0b5edb2e08e8f6981d",
+    "panoptils.py": "750828229838d0520652c1eaf1f178d6d44a7371a26faf5dcd89f6067a9ddd50",
+    "patches.py": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5",
+    "refinement.py": "ef3f0f739f72214be97af3002e2089331dfc93fe561f05edf6799be2b74a7d22",
+    "review_cases.py": "2830c555dcfebd097ab2ef19eb2cbc6cc594a21c3faa735455dc8bd9e67c007e",
+    "vit.py": "41a00cb0278921c9e2271e5aa1714ebdc3e59bb435e569513bc67805dee41932",
+    "wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e",
+    "wsi_source.py": "2f54fab54d4f8ff8c2babf82e953152eebd24642d994768c7e6a05d6212dd7df"
+  },
+  "runner_sha256": "5cfde8f5cf29a47cdaec7fd6f36c691015b45ee7c6de4be81e1e96d26f5e8c02",
+  "support_sha256": "daaca702ef6717088c4088029c4a5b2e1f0d9f5850e247c4ffbdb4d46d55f2c0",
+  "original_acquisition_sha256": "2338db7fbbc1ffed843780c753fa63a67004284c51b616139288520d9fefca47",
+  "annotation_acquisition_sha256": "b59f240ce696a6e33c13f7b3a2db3f15db164f28e1b746ef4f3035c044fea8c0",
+  "support_audit_sha256": "5eb8debf79022667305e1430e65baf353d60cc3fd8b1194e181f5311f532eb67"
+}

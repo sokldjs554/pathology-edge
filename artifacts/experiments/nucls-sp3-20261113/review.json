@@ -1,0 +1,20 @@
+{
+  "review_type": "Independent read-only review after evaluation",
+  "publication_blockers": [],
+  "verified": {
+    "triplet_ids": 51,
+    "same_shape_fovs": 15,
+    "one_pixel_shape_exclusions": 36,
+    "metric_checks": 240,
+    "mean_checks": 96,
+    "frozen_source_files_matching_6ffd541": 24,
+    "zip_manifest_payload_hashes": 379,
+    "all_four_case_means_declined": true,
+    "previous_A0SP_patient_overlap_disclosed": true,
+    "contact_sheet_visually_inspected": true
+  },
+  "inference_run_by_reviewer": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "user_review_completed": false
+}

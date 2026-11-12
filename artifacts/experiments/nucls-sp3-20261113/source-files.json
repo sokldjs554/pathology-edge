@@ -1,0 +1,242 @@
+[
+  {
+    "slide_id": "TCGA-A1-A0SP-01Z-00-DX1",
+    "case_id": "TCGA-A1-A0SP",
+    "dsa_item_id": "5bbdee5be629140048d01afd",
+    "dsa_files": [
+      {
+        "_id": "5bbdee5be629140048d01afe",
+        "_modelType": "file",
+        "created": "2018-10-10T12:19:39.768000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "20d689c6-efa5-4694-be76-24475a89acc0",
+          "svs"
+        ],
+        "itemId": "5bbdee5be629140048d01afd",
+        "mimeType": null,
+        "name": "TCGA-A1-A0SP-01Z-00-DX1.20D689C6-EFA5-4694-BE76-24475A89ACC0.svs",
+        "size": 1566627208
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002521,
+      "mm_y": 0.0002521,
+      "sizeX": 109434,
+      "sizeY": 90504,
+      "tileHeight": 256,
+      "tileWidth": 256
+    },
+    "gdc_matching": [
+      {
+        "id": "aa8c4f21-2fce-4ccb-b270-4a1ad633f36e",
+        "cases": [
+          {
+            "submitter_id": "TCGA-A1-A0SP"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-A1-A0SP-01Z-00-DX1.20D689C6-EFA5-4694-BE76-24475A89ACC0.svs",
+        "md5sum": "077167e178514b5b6517e2e78bab565e",
+        "file_id": "aa8c4f21-2fce-4ccb-b270-4a1ad633f36e",
+        "file_size": 1566627208
+      }
+    ]
+  },
+  {
+    "slide_id": "TCGA-A7-A0DA-01Z-00-DX1",
+    "case_id": "TCGA-A7-A0DA",
+    "dsa_item_id": "5bbdee59e629140048d01af5",
+    "dsa_files": [
+      {
+        "_id": "5bbdee59e629140048d01af6",
+        "_modelType": "file",
+        "created": "2018-10-10T12:19:37.581000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "5f087009-16e9-4a07-ba24-62340e108b17",
+          "svs"
+        ],
+        "itemId": "5bbdee59e629140048d01af5",
+        "mimeType": null,
+        "name": "TCGA-A7-A0DA-01Z-00-DX1.5F087009-16E9-4A07-BA24-62340E108B17.svs",
+        "size": 703721377
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002456,
+      "mm_y": 0.0002456,
+      "sizeX": 85680,
+      "sizeY": 47955,
+      "tileHeight": 240,
+      "tileWidth": 240
+    },
+    "gdc_matching": [
+      {
+        "id": "0c3f3ba3-7da4-4b1e-9bb9-2c58436b0d44",
+        "cases": [
+          {
+            "submitter_id": "TCGA-A7-A0DA"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-A7-A0DA-01Z-00-DX1.5F087009-16E9-4A07-BA24-62340E108B17.svs",
+        "md5sum": "fb0bc706805f55e555a4d77c1f4dc568",
+        "file_id": "0c3f3ba3-7da4-4b1e-9bb9-2c58436b0d44",
+        "file_size": 703721377
+      }
+    ]
+  },
+  {
+    "slide_id": "TCGA-AR-A1AR-01Z-00-DX1",
+    "case_id": "TCGA-AR-A1AR",
+    "dsa_item_id": "5bbdee65e629140048d01b13",
+    "dsa_files": [
+      {
+        "_id": "5bbdee65e629140048d01b14",
+        "_modelType": "file",
+        "created": "2018-10-10T12:19:49.347000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "e7b7f6f0-9cc0-4d4f-8c9f-443a74d2be40",
+          "svs"
+        ],
+        "itemId": "5bbdee65e629140048d01b13",
+        "mimeType": null,
+        "name": "TCGA-AR-A1AR-01Z-00-DX1.E7B7F6F0-9CC0-4D4F-8C9F-443A74D2BE40.svs",
+        "size": 657805107
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002468,
+      "mm_y": 0.0002468,
+      "sizeX": 64736,
+      "sizeY": 57072,
+      "tileHeight": 240,
+      "tileWidth": 240
+    },
+    "gdc_matching": [
+      {
+        "id": "742e81be-ad02-4e99-bc69-9cb1d44228ca",
+        "cases": [
+          {
+            "submitter_id": "TCGA-AR-A1AR"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-AR-A1AR-01Z-00-DX1.E7B7F6F0-9CC0-4D4F-8C9F-443A74D2BE40.svs",
+        "md5sum": "fbc092b292e7009c88d0c8ca9bdf4500",
+        "file_id": "742e81be-ad02-4e99-bc69-9cb1d44228ca",
+        "file_size": 657805107
+      }
+    ]
+  },
+  {
+    "slide_id": "TCGA-C8-A12V-01Z-00-DX1",
+    "case_id": "TCGA-C8-A12V",
+    "dsa_item_id": "5bbdeed7e629140048d01bd5",
+    "dsa_files": [
+      {
+        "_id": "5bbdeed7e629140048d01bd6",
+        "_modelType": "file",
+        "created": "2018-10-10T12:21:43.487000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "84b29360-b87b-4648-a697-b6610336c2bb",
+          "svs"
+        ],
+        "itemId": "5bbdeed7e629140048d01bd5",
+        "mimeType": null,
+        "name": "TCGA-C8-A12V-01Z-00-DX1.84B29360-B87B-4648-A697-B6610336C2BB.svs",
+        "size": 1318438387
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 10,
+      "magnification": 40.0,
+      "mm_x": 0.0002485,
+      "mm_y": 0.0002485,
+      "sizeX": 81394,
+      "sizeY": 75937,
+      "tileHeight": 256,
+      "tileWidth": 256
+    },
+    "gdc_matching": [
+      {
+        "id": "c92280a3-2025-463e-b791-1946c09964dd",
+        "cases": [
+          {
+            "submitter_id": "TCGA-C8-A12V"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-C8-A12V-01Z-00-DX1.84B29360-B87B-4648-A697-B6610336C2BB.svs",
+        "md5sum": "28797623aabac0474f91328b9c8adb43",
+        "file_id": "c92280a3-2025-463e-b791-1946c09964dd",
+        "file_size": 1318438387
+      }
+    ]
+  },
+  {
+    "slide_id": "TCGA-E2-A158-01Z-00-DX1",
+    "case_id": "TCGA-E2-A158",
+    "dsa_item_id": "5bbdeeabe629140048d01b89",
+    "dsa_files": [
+      {
+        "_id": "5bbdeeabe629140048d01b8a",
+        "_modelType": "file",
+        "created": "2018-10-10T12:20:59.266000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "994c60fe-e651-4224-95e7-4669834f2338",
+          "svs"
+        ],
+        "itemId": "5bbdeeabe629140048d01b89",
+        "mimeType": null,
+        "name": "TCGA-E2-A158-01Z-00-DX1.994C60FE-E651-4224-95E7-4669834F2338.svs",
+        "size": 835921309
+      }
+    ],
+    "tiles": {
+      "bandCount": 4,
+      "dtype": "uint8",
+      "levels": 11,
+      "magnification": 40.0,
+      "mm_x": 0.0002468,
+      "mm_y": 0.0002468,
+      "sizeX": 126616,
+      "sizeY": 71160,
+      "tileHeight": 240,
+      "tileWidth": 240
+    },
+    "gdc_matching": [
+      {
+        "id": "672685f0-fe97-415f-b52b-e451ac87294f",
+        "cases": [
+          {
+            "submitter_id": "TCGA-E2-A158"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-E2-A158-01Z-00-DX1.994C60FE-E651-4224-95E7-4669834F2338.svs",
+        "md5sum": "5c30db3b3737a6901df482c432311350",
+        "file_id": "672685f0-fe97-415f-b52b-e451ac87294f",
+        "file_size": 835921309
+      }
+    ]
+  }
+]

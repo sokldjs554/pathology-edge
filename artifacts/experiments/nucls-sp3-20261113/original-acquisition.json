@@ -1,0 +1,2479 @@
+{
+  "cases": [
+    {
+      "case_id": "TCGA-A1-A0SP",
+      "source": {
+        "id": "aa8c4f21-2fce-4ccb-b270-4a1ad633f36e",
+        "cases": [
+          {
+            "submitter_id": "TCGA-A1-A0SP"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-A1-A0SP-01Z-00-DX1.20D689C6-EFA5-4694-BE76-24475A89ACC0.svs",
+        "md5sum": "077167e178514b5b6517e2e78bab565e",
+        "file_id": "aa8c4f21-2fce-4ccb-b270-4a1ad633f36e",
+        "file_size": 1566627208
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/aa8c4f21-2fce-4ccb-b270-4a1ad633f36e",
+      "metadata": {
+        "size_wh": [
+          109434,
+          90504
+        ],
+        "mpp": 0.2521,
+        "description_sha256": "b9045c73ac651ed2f0fcd691a45e8f3fffd0de02de7544f5cca0e352a5ff67fe",
+        "tile_wh": [
+          256,
+          256
+        ],
+        "compression": 7
+      },
+      "rows": [
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            10088,
+            56511,
+            10420,
+            56791
+          ],
+          "output_wh": [
+            418,
+            352
+          ],
+          "effective_mpp_xy": [
+            0.20023253588516746,
+            0.20053409090909088
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-10088_top-56511_bottom-56791_right-10420.png",
+          "original_sha256": "cf5114abc4c70d5bdfd45199caa24a4b1d07f17a38a0912b186b4b5cbf353766",
+          "provided_sha256": "18f76241d369f2e53f25abca0d83ba66b3614558d52d71b47d51860a2c6a3845",
+          "decoded_tile_indices": [
+            94199,
+            94200,
+            94627,
+            94628
+          ],
+          "rgb_correlation": 0.9993131062769156,
+          "rgb_mae": 1.1404165760475569,
+          "phase_shift_xy": [
+            0.009389274172775686,
+            -0.00010143400513129563
+          ],
+          "phase_response": 0.9955781189011939,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-7297_top-55226_bottom-55525_right-7614",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            7297,
+            55226,
+            7614,
+            55525
+          ],
+          "output_wh": [
+            399,
+            376
+          ],
+          "effective_mpp_xy": [
+            0.20028997493734335,
+            0.20047313829787233
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-7297_top-55226_bottom-55525_right-7614.png",
+          "original_sha256": "86c5de3a901e1d18ec7dadf18cce94b17d75b178986fd08908aea67e5c5651a5",
+          "provided_sha256": "b5a188e599662a4f480f08f0dca36f5ba2ab6b4d0ee62d216725ccd6a8221b25",
+          "decoded_tile_indices": [
+            92048,
+            92049,
+            92476,
+            92477
+          ],
+          "rgb_correlation": 0.9994249609161903,
+          "rgb_mae": 1.1576836595033684,
+          "phase_shift_xy": [
+            0.004251096175238445,
+            0.0022528289263732404
+          ],
+          "phase_response": 0.9967431245247523,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8063_top-57013_bottom-57319_right-8343",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            8063,
+            57013,
+            8343,
+            57319
+          ],
+          "output_wh": [
+            352,
+            385
+          ],
+          "effective_mpp_xy": [
+            0.20053409090909088,
+            0.2003703896103896
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8063_top-57013_bottom-57319_right-8343.png",
+          "original_sha256": "6fac6342799db2c0bda00e8b013e5cf03bfdf4bfba01b5292483bc85fd87830d",
+          "provided_sha256": "458f1c075604dc4d921a58fd01f329355c30cdae8b83bc62928cf162bc66df04",
+          "decoded_tile_indices": [
+            95047,
+            95048,
+            95475,
+            95476
+          ],
+          "rgb_correlation": 0.9994206989568517,
+          "rgb_mae": 1.2102813852813852,
+          "phase_shift_xy": [
+            -0.0012844464999659522,
+            0.007431000246441499
+          ],
+          "phase_response": 0.9972866558498806,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            8077,
+            55501,
+            8340,
+            55794
+          ],
+          "output_wh": [
+            331,
+            369
+          ],
+          "effective_mpp_xy": [
+            0.20030906344410876,
+            0.20017696476964766
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55501_bottom-55794_right-8340.png",
+          "original_sha256": "7f1b4934f17e0b295cae777ff07669490b846fd88ec3b7201f3421c83cf13bc8",
+          "provided_sha256": "a256715526ccdab2c214d2c934415b9b77371070f85ae9ddd2b57c12837814a7",
+          "decoded_tile_indices": [
+            92479,
+            92480,
+            92907,
+            92908
+          ],
+          "rgb_correlation": 0.9993595799765949,
+          "rgb_mae": 1.1776036592188681,
+          "phase_shift_xy": [
+            -0.00553357393377496,
+            0.4959098459745235
+          ],
+          "phase_response": 0.9983690824720595,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            8077,
+            55998,
+            8334,
+            56285
+          ],
+          "output_wh": [
+            323,
+            361
+          ],
+          "effective_mpp_xy": [
+            0.20058730650154796,
+            0.2004229916897507
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8077_top-55998_bottom-56285_right-8334.png",
+          "original_sha256": "204984da77643ce42c3144a2b2bfd555bf9819373b5ff30a7f2d18bd50450ac1",
+          "provided_sha256": "1d98607145c29829c2e3562e5266ef820029f1e81fd756f8dadfb30ca65c1138",
+          "decoded_tile_indices": [
+            93335,
+            93336,
+            93763,
+            93764
+          ],
+          "rgb_correlation": 0.9992445959252735,
+          "rgb_mae": 1.2404940982078791,
+          "phase_shift_xy": [
+            -0.007825290418622899,
+            0.5020656550242677
+          ],
+          "phase_response": 0.9996069273772064,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8319_top-54473_bottom-54758_right-8596",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            8319,
+            54473,
+            8596,
+            54758
+          ],
+          "output_wh": [
+            349,
+            359
+          ],
+          "effective_mpp_xy": [
+            0.20009083094555874,
+            0.2001350974930362
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8319_top-54473_bottom-54758_right-8596.png",
+          "original_sha256": "c6de45e65f040b967ac17ffa43a567d899c4b905e181a81ed748eaa234da25c0",
+          "provided_sha256": "f1a7ef8b4608180db761018a5673eb0a191ab9435e25a5127cb5dba5f5131d70",
+          "decoded_tile_indices": [
+            90768,
+            90769,
+            91196,
+            91197
+          ],
+          "rgb_correlation": 0.9995105429038507,
+          "rgb_mae": 1.2437605254966437,
+          "phase_shift_xy": [
+            0.000950605391864201,
+            -0.0023146171585040065
+          ],
+          "phase_response": 0.9966630648389274,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8325_top-57041_bottom-57303_right-8589",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            8325,
+            57041,
+            8589,
+            57303
+          ],
+          "output_wh": [
+            332,
+            330
+          ],
+          "effective_mpp_xy": [
+            0.20046506024096386,
+            0.20015212121212123
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8325_top-57041_bottom-57303_right-8589.png",
+          "original_sha256": "8ef955166a0baee035e440f8df21f4c9125c789a76d21c8ba570a8da0814f0c3",
+          "provided_sha256": "1412241398d901762d8237551698e19d522f5599bb0723841805a07b17ab6425",
+          "decoded_tile_indices": [
+            95048,
+            95049,
+            95476,
+            95477
+          ],
+          "rgb_correlation": 0.9992764367051127,
+          "rgb_mae": 1.2697578191554095,
+          "phase_shift_xy": [
+            -0.008027051521281692,
+            0.009771141896237623
+          ],
+          "phase_response": 0.993634966744317,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8839_top-57297_bottom-57568_right-9111",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            8839,
+            57297,
+            9111,
+            57568
+          ],
+          "output_wh": [
+            342,
+            341
+          ],
+          "effective_mpp_xy": [
+            0.20050058479532165,
+            0.20034926686217006
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-8839_top-57297_bottom-57568_right-9111.png",
+          "original_sha256": "a4560d9e6da8cc610f4dc5d64fe1b5bb7b5655168bb8e109f4f22ca093114c5a",
+          "provided_sha256": "ac7c125280970d5f7e51a48f405608db1bcbb005d2a893a888d92388205e0447",
+          "decoded_tile_indices": [
+            95478,
+            95479,
+            95906,
+            95907
+          ],
+          "rgb_correlation": 0.9992115213231556,
+          "rgb_mae": 1.2796899384335718,
+          "phase_shift_xy": [
+            -0.0044383819762003895,
+            0.019740493722622432
+          ],
+          "phase_response": 0.9948909890798875,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9096_top-55725_bottom-56044_right-9372",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            9096,
+            55725,
+            9372,
+            56044
+          ],
+          "output_wh": [
+            347,
+            402
+          ],
+          "effective_mpp_xy": [
+            0.20051757925072045,
+            0.20004950248756218
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9096_top-55725_bottom-56044_right-9372.png",
+          "original_sha256": "5ef482b653dbe190c177f9d206b03877a324c89e1be271e7da5025a1735af9bb",
+          "provided_sha256": "fa939dbad55b0532ed3189a229c4767c93a753450c2ed9a59cb0e3cea5282b21",
+          "decoded_tile_indices": [
+            92911,
+            92912,
+            93339,
+            93340
+          ],
+          "rgb_correlation": 0.9991444410834619,
+          "rgb_mae": 1.0720198240306633,
+          "phase_shift_xy": [
+            -0.0029040424618926863,
+            0.4995439235390222
+          ],
+          "phase_response": 1.0100474466708462,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9322_top-53958_bottom-54231_right-9641",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            9322,
+            53958,
+            9641,
+            54231
+          ],
+          "output_wh": [
+            402,
+            344
+          ],
+          "effective_mpp_xy": [
+            0.20004950248756218,
+            0.20006773255813953
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9322_top-53958_bottom-54231_right-9641.png",
+          "original_sha256": "996ba54ec554d5ca8155396e2f978f85777effae7d0daa02e3307ee36d8a7a21",
+          "provided_sha256": "57b49a23640112ead5ee45ba5211636dbb6d009578a2d7da650b7723ff4b848c",
+          "decoded_tile_indices": [
+            89916,
+            89917,
+            90344,
+            90345
+          ],
+          "rgb_correlation": 0.9994951961858556,
+          "rgb_mae": 1.1030458174245055,
+          "phase_shift_xy": [
+            0.4977364614110229,
+            0.0009286436800834963
+          ],
+          "phase_response": 1.0058656066141012,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9343_top-55733_bottom-56028_right-9634",
+          "case_id": "TCGA-A1-A0SP",
+          "bounds_level0": [
+            9343,
+            55733,
+            9634,
+            56028
+          ],
+          "output_wh": [
+            366,
+            371
+          ],
+          "effective_mpp_xy": [
+            0.2004401639344262,
+            0.20045687331536388
+          ],
+          "original_path": "originals/TCGA-A1-A0SP/SP.3_#_U-control_#_TCGA-A1-A0SP-01Z-00-DX1_id-5e83b060ddda5f83987c6497_left-9343_top-55733_bottom-56028_right-9634.png",
+          "original_sha256": "a8dc4320c003b458b104b44c70b27c53337a7e704a109bda4a002981061f7832",
+          "provided_sha256": "04cc97af1bc690480a5e11f1ff24f65c53c5ea9592a6b983a9b92849e5872db7",
+          "decoded_tile_indices": [
+            92912,
+            92913,
+            93340,
+            93341
+          ],
+          "rgb_correlation": 0.9992528567369593,
+          "rgb_mae": 1.1168578989488362,
+          "phase_shift_xy": [
+            0.5004881771089629,
+            0.49581282995509923
+          ],
+          "phase_response": 0.9879547118055556,
+          "registration_correction_applied": false
+        }
+      ],
+      "original_stream": {
+        "bytes": 1566627208,
+        "md5": "077167e178514b5b6517e2e78bab565e",
+        "sha256": "609647357d4b100b8e131690a6eaa213222b18c7548486a61b3a924a2239dac7",
+        "reference_md5_verified": true,
+        "verified_ranges": 18,
+        "verified_range_bytes": 18874368
+      },
+      "source_ranges": [
+        {
+          "offset": 0,
+          "bytes": 1048576,
+          "sha256": "939a7e82a2fec1a86abf0ac2abd8a2c8d4f4aa6582d469788976b66a17ee3af3"
+        },
+        {
+          "offset": 852492288,
+          "bytes": 1048576,
+          "sha256": "d39b0062e4e45fb90f8b6e57ee025dec83d0a024c0ad067d2fdf26be0c8fa99a"
+        },
+        {
+          "offset": 856686592,
+          "bytes": 1048576,
+          "sha256": "b1326675f11a73b58a408dec90ed5b5186ec6d17749aa21dcf18ca2fe2812b7f"
+        },
+        {
+          "offset": 861929472,
+          "bytes": 1048576,
+          "sha256": "18d8accd9ec70439a7803ff0c72d6e0e3a516628abb360ea3a5048b210a872fb"
+        },
+        {
+          "offset": 866123776,
+          "bytes": 1048576,
+          "sha256": "bf3d65ee4a99f144d387a88fd250c25f6e0ef0c66c2bec3f9d73b83ce4349d18"
+        },
+        {
+          "offset": 875560960,
+          "bytes": 1048576,
+          "sha256": "46332d933f7be2b8241c2fc00e296d83534b3ec4da803216a11be13cd241f2d7"
+        },
+        {
+          "offset": 880803840,
+          "bytes": 1048576,
+          "sha256": "9904941f13db003312a60ad58e59608d25e2ccaed3f2252c0043553af869b1a4"
+        },
+        {
+          "offset": 886046720,
+          "bytes": 1048576,
+          "sha256": "dacf055d1f33b1bf15875396bd87356893b690dd25b3395b75b8730e6d97ff36"
+        },
+        {
+          "offset": 890241024,
+          "bytes": 1048576,
+          "sha256": "9ce62cbe517519342f07d1343d3167be7a282a3f7690d09dd96c8d0cf1f3808a"
+        },
+        {
+          "offset": 895483904,
+          "bytes": 1048576,
+          "sha256": "143efcd5d99427e674038afe675f4608d8a9839ebf76f661cdf2c16cfe9f50c2"
+        },
+        {
+          "offset": 899678208,
+          "bytes": 1048576,
+          "sha256": "c8988083f6c4141e896ebce684dfd0079a54b391c16a652efdc9e76b8cc7aa8b"
+        },
+        {
+          "offset": 904921088,
+          "bytes": 1048576,
+          "sha256": "ab0ed64c9487925ed3583ad4698f16f2c302881bc7ba7f5392f2ba7aa144494e"
+        },
+        {
+          "offset": 910163968,
+          "bytes": 1048576,
+          "sha256": "2156b0623ed54133a6f88303249d299b452fa829e171cea0563b998eaaa5cf20"
+        },
+        {
+          "offset": 914358272,
+          "bytes": 1048576,
+          "sha256": "71117ef0b375b5d97bd47ec84da95b0f497e4478ba37f0f335cb8e2482f2ce2c"
+        },
+        {
+          "offset": 919601152,
+          "bytes": 1048576,
+          "sha256": "1703ba17670b7a0ca69955f5ccd53c5206e56563590be53f4345a36222cc823a"
+        },
+        {
+          "offset": 1300234240,
+          "bytes": 1048576,
+          "sha256": "c83df9181f17bc846f9d47b20a204223dff2147b45131fc6de8973cfb84955bb"
+        },
+        {
+          "offset": 1301282816,
+          "bytes": 1048576,
+          "sha256": "95222f31722c238536352773688b45ac11b0dbbd32d68574e250e92d870bcb65"
+        },
+        {
+          "offset": 1302331392,
+          "bytes": 1048576,
+          "sha256": "e88ba6388cc293b6716b3eaec710c5ae87c4a484194870f8e6bfb3557e8bd445"
+        }
+      ],
+      "whole_file_retained": false,
+      "whole_slide_inference": false
+    },
+    {
+      "case_id": "TCGA-A7-A0DA",
+      "source": {
+        "id": "0c3f3ba3-7da4-4b1e-9bb9-2c58436b0d44",
+        "cases": [
+          {
+            "submitter_id": "TCGA-A7-A0DA"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-A7-A0DA-01Z-00-DX1.5F087009-16E9-4A07-BA24-62340E108B17.svs",
+        "md5sum": "fb0bc706805f55e555a4d77c1f4dc568",
+        "file_id": "0c3f3ba3-7da4-4b1e-9bb9-2c58436b0d44",
+        "file_size": 703721377
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/0c3f3ba3-7da4-4b1e-9bb9-2c58436b0d44",
+      "metadata": {
+        "size_wh": [
+          85680,
+          47955
+        ],
+        "mpp": 0.2456,
+        "description_sha256": "53908f7cb68b625656c031b9e3c8ee470c11f68f3806d5c77493f6cb47ef2d01",
+        "tile_wh": [
+          240,
+          240
+        ],
+        "compression": 7
+      },
+      "rows": [
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44237_top-19966_bottom-20243_right-44528",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            44237,
+            19966,
+            44528,
+            20243
+          ],
+          "output_wh": [
+            357,
+            340
+          ],
+          "effective_mpp_xy": [
+            0.20019495798319328,
+            0.20009176470588236
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44237_top-19966_bottom-20243_right-44528.png",
+          "original_sha256": "5f69939da71e286fa60d8c59f0358a25693bd43fa0f683ed65954080b5e6ac1a",
+          "provided_sha256": "8445ec54a70729ae3cbe36b47c6298198216da675102dcafbe59c433a4506a34",
+          "decoded_tile_indices": [
+            29815,
+            29816,
+            30172,
+            30173
+          ],
+          "rgb_correlation": 0.9995279037490302,
+          "rgb_mae": 1.467962871423079,
+          "phase_shift_xy": [
+            0.010172703560130003,
+            0.004185053236938074
+          ],
+          "phase_response": 1.001073699468448,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44242_top-25839_bottom-26111_right-44510",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            44242,
+            25839,
+            44510,
+            26111
+          ],
+          "output_wh": [
+            329,
+            334
+          ],
+          "effective_mpp_xy": [
+            0.2000632218844985,
+            0.20000958083832338
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44242_top-25839_bottom-26111_right-44510.png",
+          "original_sha256": "ae566fb321d7a481a315afbb33a22fadcaf6e7407e53ef8f10595c0bc13d0372",
+          "provided_sha256": "71c2e1a4000f0caa117978c37946cb20930c1c08f034b2bfb4def31cc7c2ee06",
+          "decoded_tile_indices": [
+            38383,
+            38384,
+            38740,
+            38741
+          ],
+          "rgb_correlation": 0.9992059898498789,
+          "rgb_mae": 1.6663724223285952,
+          "phase_shift_xy": [
+            -0.00330952047247024,
+            0.011727627838467924
+          ],
+          "phase_response": 0.9915558800873933,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            44475,
+            19196,
+            44755,
+            19467
+          ],
+          "output_wh": [
+            343,
+            332
+          ],
+          "effective_mpp_xy": [
+            0.20048979591836735,
+            0.20047469879518073
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44475_top-19196_bottom-19467_right-44755.png",
+          "original_sha256": "7946d5329d01e5ee650b8b5bd1883a710e360cf297193e80c3c0316fc335145c",
+          "provided_sha256": "1969a49c3a47f5466055b95012cf06b3e88d05080ae335846497c43001821630",
+          "decoded_tile_indices": [
+            28388,
+            28389,
+            28745,
+            28746,
+            29102,
+            29103
+          ],
+          "rgb_correlation": 0.9992560633858854,
+          "rgb_mae": 1.5379916166122214,
+          "phase_shift_xy": [
+            -0.004937988759252221,
+            0.005329090133045611
+          ],
+          "phase_response": 0.9950297927856445,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44477_top-19454_bottom-19730_right-44755",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            44477,
+            19454,
+            44755,
+            19730
+          ],
+          "output_wh": [
+            341,
+            338
+          ],
+          "effective_mpp_xy": [
+            0.200225219941349,
+            0.20054911242603551
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44477_top-19454_bottom-19730_right-44755.png",
+          "original_sha256": "0f5df25ac7b08ec86948db7c22f6b70fae83a37faf8ba40f8f5e625803fd8d21",
+          "provided_sha256": "6eb70c281b2d6cee9a0bf8d6f8cd6e9fa6483ab9f2b09a162b7b9a9d28c17aaf",
+          "decoded_tile_indices": [
+            29102,
+            29103,
+            29459,
+            29460
+          ],
+          "rgb_correlation": 0.9990315806511896,
+          "rgb_mae": 1.6660506573657938,
+          "phase_shift_xy": [
+            -0.005807104044265543,
+            -0.004676620839489942
+          ],
+          "phase_response": 0.9880142090644366,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            44498,
+            25086,
+            44755,
+            25380
+          ],
+          "output_wh": [
+            315,
+            361
+          ],
+          "effective_mpp_xy": [
+            0.20037841269841272,
+            0.20001772853185595
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-44498_top-25086_bottom-25380_right-44755.png",
+          "original_sha256": "1cad840ede0f94c4e9ea657e99b539ca2da17d2e29e695331174e96247f11a52",
+          "provided_sha256": "05792e1acb286e1e4325fda0ae223f827c00cf846cd8402d75d0a2aea9b0e75b",
+          "decoded_tile_indices": [
+            37313,
+            37314,
+            37670,
+            37671
+          ],
+          "rgb_correlation": 0.999125763602187,
+          "rgb_mae": 1.5924284395198522,
+          "phase_shift_xy": [
+            -0.015835091714563987,
+            0.4913191135411239
+          ],
+          "phase_response": 0.9930551915486654,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            45740,
+            22771,
+            46069,
+            23038
+          ],
+          "output_wh": [
+            404,
+            327
+          ],
+          "effective_mpp_xy": [
+            0.20000594059405943,
+            0.2005357798165138
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45740_top-22771_bottom-23038_right-46069.png",
+          "original_sha256": "e93641b6c27a3dd1572952e15542d079278e4f3708f62a2ee424c65223efba12",
+          "provided_sha256": "3df4f00b7b4ea369aee9ba827c812ad222e63c18cb9efc46163696655308cd21",
+          "decoded_tile_indices": [
+            33748,
+            33749,
+            34105,
+            34106
+          ],
+          "rgb_correlation": 0.9991641992967184,
+          "rgb_mae": 1.6472179328024545,
+          "phase_shift_xy": [
+            0.5001287251803603,
+            -0.005937419377005426
+          ],
+          "phase_response": 0.9910728799953382,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            45745,
+            22248,
+            46038,
+            22541
+          ],
+          "output_wh": [
+            359,
+            359
+          ],
+          "effective_mpp_xy": [
+            0.20044791086350977,
+            0.20044791086350977
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-45745_top-22248_bottom-22541_right-46038.png",
+          "original_sha256": "97f86d415bc64d742dfe9dcf3d0a55cda524dd1f87ab1cf816905d5e8ef8a599",
+          "provided_sha256": "df66dad08428b37734832af6734631bbecc9601d59b3a8a1f23ded8462d441f5",
+          "decoded_tile_indices": [
+            33034,
+            33035,
+            33391,
+            33392
+          ],
+          "rgb_correlation": 0.9991547289940377,
+          "rgb_mae": 1.55974374293599,
+          "phase_shift_xy": [
+            -0.012634324149985332,
+            0.0015217813818821924
+          ],
+          "phase_response": 0.9807537322574191,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46538_top-26328_bottom-26623_right-46803",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            46538,
+            26328,
+            46803,
+            26623
+          ],
+          "output_wh": [
+            325,
+            362
+          ],
+          "effective_mpp_xy": [
+            0.20025846153846155,
+            0.20014364640883978
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46538_top-26328_bottom-26623_right-46803.png",
+          "original_sha256": "706891be251e59be9588a7a3e81fc6b4c4f269aa0bdae124ac872d0a0b2621dc",
+          "provided_sha256": "19f87c143a76e704f06828df1ee86114efbf4d11845441702f38ef2e590c75c3",
+          "decoded_tile_indices": [
+            39106,
+            39107,
+            39108,
+            39463,
+            39464,
+            39465
+          ],
+          "rgb_correlation": 0.9993088048700798,
+          "rgb_mae": 1.6004193228502621,
+          "phase_shift_xy": [
+            -0.0008330523578479188,
+            0.4892243995969352
+          ],
+          "phase_response": 0.9934887295193142,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46802_top-21244_bottom-21502_right-47067",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            46802,
+            21244,
+            47067,
+            21502
+          ],
+          "output_wh": [
+            325,
+            316
+          ],
+          "effective_mpp_xy": [
+            0.20025846153846155,
+            0.20052151898734177
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-46802_top-21244_bottom-21502_right-47067.png",
+          "original_sha256": "ee68f09b9730114b2c98ac5a421ad4d1a507641c19a44d9cded5341e8755ab09",
+          "provided_sha256": "2c8531873794fc12b7a609feb2121328009abc31ed1681f8de66440ce34f645a",
+          "decoded_tile_indices": [
+            31611,
+            31612,
+            31968,
+            31969
+          ],
+          "rgb_correlation": 0.9994900730455561,
+          "rgb_mae": 1.5892112950340798,
+          "phase_shift_xy": [
+            -0.00037834086023735836,
+            -0.008533244493179382
+          ],
+          "phase_response": 0.9948557750384013,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            47281,
+            24556,
+            47586,
+            24835
+          ],
+          "output_wh": [
+            374,
+            342
+          ],
+          "effective_mpp_xy": [
+            0.20028877005347595,
+            0.20035789473684212
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47281_top-24556_bottom-24835_right-47586.png",
+          "original_sha256": "20233228e1d9ee375d9cd1244578aff42c4273ee481e2c75cbf409303445e3c8",
+          "provided_sha256": "af60fbc0887f7f75beaa6656ed92ea29f82ffc1e2209e30ca7326ae680417696",
+          "decoded_tile_indices": [
+            36611,
+            36612,
+            36968,
+            36969
+          ],
+          "rgb_correlation": 0.9989890957622791,
+          "rgb_mae": 1.5825020066506135,
+          "phase_shift_xy": [
+            0.4888418338142628,
+            -0.005229048687226623
+          ],
+          "phase_response": 0.9892813429090712,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            47292,
+            21488,
+            47633,
+            21759
+          ],
+          "output_wh": [
+            418,
+            332
+          ],
+          "effective_mpp_xy": [
+            0.2003578947368421,
+            0.20047469879518073
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47292_top-21488_bottom-21759_right-47633.png",
+          "original_sha256": "8f0c315e55ce4fa4e84e4b47ae1c12db82958042b857e584ee3858da9bd34e57",
+          "provided_sha256": "d8f285f841fefa926eb2bc2bd4647e0f8637c3ad16205dfbbe395d1b3883129d",
+          "decoded_tile_indices": [
+            31970,
+            31971,
+            32327,
+            32328
+          ],
+          "rgb_correlation": 0.9989527253219652,
+          "rgb_mae": 1.715805806959897,
+          "phase_shift_xy": [
+            0.004049169653143281,
+            -0.007438040469423868
+          ],
+          "phase_response": 0.9890175379843378,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47296_top-24820_bottom-25106_right-47594",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            47296,
+            24820,
+            47594,
+            25106
+          ],
+          "output_wh": [
+            365,
+            351
+          ],
+          "effective_mpp_xy": [
+            0.2005172602739726,
+            0.20011851851851853
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47296_top-24820_bottom-25106_right-47594.png",
+          "original_sha256": "15f32ece932e12dcb08deb2919f19d33113c0032efc9ae8fa86e81b0f7ecbe7a",
+          "provided_sha256": "5f56a2f923b19a9e558254c97f12b1e24fd070ea4020376f0395ec830faea19e",
+          "decoded_tile_indices": [
+            36968,
+            36969,
+            37325,
+            37326
+          ],
+          "rgb_correlation": 0.9992449503387355,
+          "rgb_mae": 1.5514628784035176,
+          "phase_shift_xy": [
+            0.5019444708363494,
+            -0.005453496566445892
+          ],
+          "phase_response": 0.9874248940644441,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47815_top-20990_bottom-21256_right-48124",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            47815,
+            20990,
+            48124,
+            21256
+          ],
+          "output_wh": [
+            379,
+            326
+          ],
+          "effective_mpp_xy": [
+            0.20023852242744064,
+            0.20039754601226994
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-47815_top-20990_bottom-21256_right-48124.png",
+          "original_sha256": "84db055e76a1ede4dcb921d5d07d276c1cb02ea6703cf8fb193ae66abfb97dd7",
+          "provided_sha256": "4e02daa52c2ff0d88307d3b34a6726c0cbe96b18baeb7d68c878f93ae52c04bb",
+          "decoded_tile_indices": [
+            31258,
+            31259,
+            31615,
+            31616
+          ],
+          "rgb_correlation": 0.9991760470594495,
+          "rgb_mae": 1.7744494984649086,
+          "phase_shift_xy": [
+            -0.001208753350937286,
+            0.0017093848393585631
+          ],
+          "phase_response": 0.9886158916685316,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48323_top-20990_bottom-21265_right-48616",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            48323,
+            20990,
+            48616,
+            21265
+          ],
+          "output_wh": [
+            359,
+            337
+          ],
+          "effective_mpp_xy": [
+            0.20044791086350977,
+            0.20041543026706232
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48323_top-20990_bottom-21265_right-48616.png",
+          "original_sha256": "065b6fd8a101919b54382452bf6cb1bff56d3ba6f283cbb569ed3040fcc17166",
+          "provided_sha256": "c7f12966369d6f2128e192d29e6a61675481211badf6c72d0dca353956651e8a",
+          "decoded_tile_indices": [
+            31260,
+            31261,
+            31617,
+            31618
+          ],
+          "rgb_correlation": 0.9991306921388983,
+          "rgb_mae": 1.7517006521577412,
+          "phase_shift_xy": [
+            0.007361365783083329,
+            0.005851535333817992
+          ],
+          "phase_response": 0.9899725466893043,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48798_top-20990_bottom-21274_right-49107",
+          "case_id": "TCGA-A7-A0DA",
+          "bounds_level0": [
+            48798,
+            20990,
+            49107,
+            21274
+          ],
+          "output_wh": [
+            379,
+            348
+          ],
+          "effective_mpp_xy": [
+            0.20023852242744064,
+            0.20043218390804599
+          ],
+          "original_path": "originals/TCGA-A7-A0DA/SP.3_#_U-control_#_TCGA-A7-A0DA-01Z-00-DX1_id-5e83b061ddda5f83987c660d_left-48798_top-20990_bottom-21274_right-49107.png",
+          "original_sha256": "8eb80c651d1a80155b562d8adcac7b1a29448fa88bb42243674d28c97cd01cdb",
+          "provided_sha256": "1bb16c71861cb26beb955262b6813e5a4fe67c7216af58ce667ebade046bc05b",
+          "decoded_tile_indices": [
+            31262,
+            31263,
+            31619,
+            31620
+          ],
+          "rgb_correlation": 0.9989922865285173,
+          "rgb_mae": 1.6855811320373235,
+          "phase_shift_xy": [
+            0.004845444075044725,
+            0.0023783398793284505
+          ],
+          "phase_response": 0.9905272448504413,
+          "registration_correction_applied": false
+        }
+      ],
+      "original_stream": {
+        "bytes": 703721377,
+        "md5": "fb0bc706805f55e555a4d77c1f4dc568",
+        "sha256": "fff8a82d18aae75239d6b0c9ab97a51884cb5cf39b6cce2994f6f3ba8a585f53",
+        "reference_md5_verified": true,
+        "verified_ranges": 24,
+        "verified_range_bytes": 25165824
+      },
+      "source_ranges": [
+        {
+          "offset": 0,
+          "bytes": 1048576,
+          "sha256": "e4c0e6ae5e2eacf09673c493a0248191fce58301cf77577f991a324b2da2c122"
+        },
+        {
+          "offset": 314572800,
+          "bytes": 1048576,
+          "sha256": "c3a2ec4920abd0061e848552404c220da37abc330e11cd283468aa5a23f1ab6a"
+        },
+        {
+          "offset": 315621376,
+          "bytes": 1048576,
+          "sha256": "53d4070ec3c40282296017cc8a73cb1fd819255c08056de31c36e99c86a7dc38"
+        },
+        {
+          "offset": 316669952,
+          "bytes": 1048576,
+          "sha256": "5b4bfe430bc77d57e57195e7ee6eeceaeab9c7fc9aaa937d277c14cdc0ceaed8"
+        },
+        {
+          "offset": 317718528,
+          "bytes": 1048576,
+          "sha256": "e7a1bdd72dcbf90a9a6385efd0b66f3ecde100daabec7845871697b7e6eec783"
+        },
+        {
+          "offset": 318767104,
+          "bytes": 1048576,
+          "sha256": "d68689bbcc416f7a639862c22b0989cd9ff048abed3666eb931cf6800a3ef8ab"
+        },
+        {
+          "offset": 319815680,
+          "bytes": 1048576,
+          "sha256": "a77c43960dc89ee9c0f96d2e72e19e9aff670a0ca9dce26ab735b69a9a3e42b0"
+        },
+        {
+          "offset": 328204288,
+          "bytes": 1048576,
+          "sha256": "66c6303a5ca6830a6621555ba11fb987aeffcdb22f16cf7db478b41149ea87bb"
+        },
+        {
+          "offset": 330301440,
+          "bytes": 1048576,
+          "sha256": "7920c1e49fd74f48fa4c3205ffcbb47f1422ad085ec73fc1c5455dd99cff00cc"
+        },
+        {
+          "offset": 334495744,
+          "bytes": 1048576,
+          "sha256": "1365c5d99f4b67320e304bd6b31355591569555ea51930f1b42614c7943fd144"
+        },
+        {
+          "offset": 336592896,
+          "bytes": 1048576,
+          "sha256": "26ebd2e2bf9082796f4f448c346fade1fb73a14d2244dad757860be37076062c"
+        },
+        {
+          "offset": 338690048,
+          "bytes": 1048576,
+          "sha256": "418de459d32f6157ec27a1214b62a30c4519dca9d010ad1e543d5be5679fe4eb"
+        },
+        {
+          "offset": 339738624,
+          "bytes": 1048576,
+          "sha256": "fcd4ce5ddee545c748dcf3808ac53ccd01a54c3753e9694def55a12a48bc9061"
+        },
+        {
+          "offset": 340787200,
+          "bytes": 1048576,
+          "sha256": "48c852d364c81e3b28387a37c898cda3beb2838fe75e9b0f570136731c67ce5d"
+        },
+        {
+          "offset": 343932928,
+          "bytes": 1048576,
+          "sha256": "3bb594eff052e20e984bcd44da09e6dc41d12f090900f8a91deb8c3d0ae00864"
+        },
+        {
+          "offset": 346030080,
+          "bytes": 1048576,
+          "sha256": "764a5c1578fcbb433a34a5fa043cca6fd1c742cbfb9d26792ef2bb039707d790"
+        },
+        {
+          "offset": 348127232,
+          "bytes": 1048576,
+          "sha256": "8b9b04509b652a675b5ceb6c504353970667ba217e8144fd3f0ac3ad8ffdb78b"
+        },
+        {
+          "offset": 350224384,
+          "bytes": 1048576,
+          "sha256": "4e5f16335d0554aa4e0a46e7a620f283dcdff2ffc5adbcfcf56dc1cc237545be"
+        },
+        {
+          "offset": 352321536,
+          "bytes": 1048576,
+          "sha256": "2b0d174552a2d032211d650dd4d5701b641955a8b0d0cad3e93d3952e52f7f5e"
+        },
+        {
+          "offset": 354418688,
+          "bytes": 1048576,
+          "sha256": "26e6a2b1dfd56f8a9c8f90d0f74f5445a4d3b5c0726a189c1e52037dcdcbbb6b"
+        },
+        {
+          "offset": 356515840,
+          "bytes": 1048576,
+          "sha256": "cc19c8117e208f16db4a0a23ea9c752d66d0627fff5d82baadb6630ca4d33d46"
+        },
+        {
+          "offset": 358612992,
+          "bytes": 1048576,
+          "sha256": "0934afdb0b74dc249a8346983b3919416a6c1e7e1ea801b6beea0bc368527327"
+        },
+        {
+          "offset": 595591168,
+          "bytes": 1048576,
+          "sha256": "4c34e41fac2df0f783acf9a6387d548dc16d4cde04a6e918e29af8af7ee7f5c2"
+        },
+        {
+          "offset": 596639744,
+          "bytes": 1048576,
+          "sha256": "6892ed9bec5931cd178004a93316dbafbab3c1c4703d8d34ed2cbec737a565dd"
+        }
+      ],
+      "whole_file_retained": false,
+      "whole_slide_inference": false
+    },
+    {
+      "case_id": "TCGA-AR-A1AR",
+      "source": {
+        "id": "742e81be-ad02-4e99-bc69-9cb1d44228ca",
+        "cases": [
+          {
+            "submitter_id": "TCGA-AR-A1AR"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-AR-A1AR-01Z-00-DX1.E7B7F6F0-9CC0-4D4F-8C9F-443A74D2BE40.svs",
+        "md5sum": "fbc092b292e7009c88d0c8ca9bdf4500",
+        "file_id": "742e81be-ad02-4e99-bc69-9cb1d44228ca",
+        "file_size": 657805107
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/742e81be-ad02-4e99-bc69-9cb1d44228ca",
+      "metadata": {
+        "size_wh": [
+          64736,
+          57072
+        ],
+        "mpp": 0.2468,
+        "description_sha256": "05c98c071aaf9f5c661ecefc23be9937fbb9475cb169b7a54160e2f6e3d01bc9",
+        "tile_wh": [
+          240,
+          240
+        ],
+        "compression": 7
+      },
+      "rows": [
+        {
+          "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-14231_top-31888_bottom-32186_right-14506",
+          "case_id": "TCGA-AR-A1AR",
+          "bounds_level0": [
+            14231,
+            31888,
+            14506,
+            32186
+          ],
+          "output_wh": [
+            339,
+            367
+          ],
+          "effective_mpp_xy": [
+            0.20020648967551624,
+            0.20039891008174385
+          ],
+          "original_path": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-14231_top-31888_bottom-32186_right-14506.png",
+          "original_sha256": "7c3a6f15c135996e120a1d1578a655120e8acc0849571be6ba3a0783b5d76264",
+          "provided_sha256": "90cc8cc4cac50ffbbd6be661ff3c8d1ff6c691962c8c888ea6e64ff2162d1b92",
+          "decoded_tile_indices": [
+            35699,
+            35700,
+            35969,
+            35970,
+            36239,
+            36240
+          ],
+          "rgb_correlation": 0.9987367068052364,
+          "rgb_mae": 1.8517169963481843,
+          "phase_shift_xy": [
+            0.0005428085890457623,
+            0.510981758414573
+          ],
+          "phase_response": 0.9941048511646412,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305",
+          "case_id": "TCGA-AR-A1AR",
+          "bounds_level0": [
+            16027,
+            30363,
+            16305,
+            30639
+          ],
+          "output_wh": [
+            343,
+            340
+          ],
+          "effective_mpp_xy": [
+            0.20003032069970844,
+            0.2003435294117647
+          ],
+          "original_path": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16027_top-30363_bottom-30639_right-16305.png",
+          "original_sha256": "24fb88c740cf09e0736a2ea66fc5963ae54f51b66074e7c3e70647052a9fe276",
+          "provided_sha256": "6e37e96639942312bd38e0df63a447ca0e1fd0ebf2ee9103c38ad140e265b3bf",
+          "decoded_tile_indices": [
+            34086,
+            34087,
+            34356,
+            34357
+          ],
+          "rgb_correlation": 0.9985778224287327,
+          "rgb_mae": 1.7661464585834334,
+          "phase_shift_xy": [
+            -0.0035528544798921757,
+            -0.0047211145890742046
+          ],
+          "phase_response": 0.991956822430646,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16536_top-31126_bottom-31420_right-16804",
+          "case_id": "TCGA-AR-A1AR",
+          "bounds_level0": [
+            16536,
+            31126,
+            16804,
+            31420
+          ],
+          "output_wh": [
+            330,
+            362
+          ],
+          "effective_mpp_xy": [
+            0.20043151515151514,
+            0.20043977900552487
+          ],
+          "original_path": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16536_top-31126_bottom-31420_right-16804.png",
+          "original_sha256": "9ca34361c5c48c99b896eb154b26f034f6252387229f6f8089bcf2e30da46b53",
+          "provided_sha256": "b4ccfe2013b335d98be3eff9cafcfc2c9576f2188d59f2647e44f44fcc7baf76",
+          "decoded_tile_indices": [
+            34898,
+            34899,
+            34900,
+            35168,
+            35169,
+            35170
+          ],
+          "rgb_correlation": 0.9986466910049211,
+          "rgb_mae": 1.937412802053686,
+          "phase_shift_xy": [
+            -0.0017166503887153794,
+            0.5061761666751465
+          ],
+          "phase_response": 0.9967078902633102,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16803_top-29838_bottom-30134_right-17060",
+          "case_id": "TCGA-AR-A1AR",
+          "bounds_level0": [
+            16803,
+            29838,
+            17060,
+            30134
+          ],
+          "output_wh": [
+            317,
+            365
+          ],
+          "effective_mpp_xy": [
+            0.20008706624605677,
+            0.20014465753424654
+          ],
+          "original_path": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-16803_top-29838_bottom-30134_right-17060.png",
+          "original_sha256": "ae58e7f0330146f0a7b0015c232f292f60166110489fd326f4a8ad70d1717bc3",
+          "provided_sha256": "7b2fb635428b2a22d8a4ca5022756bc482a078849123b1707792769cb3746ad6",
+          "decoded_tile_indices": [
+            33550,
+            33551,
+            33820,
+            33821
+          ],
+          "rgb_correlation": 0.9988732707264993,
+          "rgb_mae": 1.734727683908791,
+          "phase_shift_xy": [
+            0.01345420954348242,
+            0.4944088568446432
+          ],
+          "phase_response": 0.9940550435384115,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-17049_top-29867_bottom-30142_right-17315",
+          "case_id": "TCGA-AR-A1AR",
+          "bounds_level0": [
+            17049,
+            29867,
+            17315,
+            30142
+          ],
+          "output_wh": [
+            328,
+            339
+          ],
+          "effective_mpp_xy": [
+            0.20014878048780485,
+            0.20020648967551624
+          ],
+          "original_path": "originals/TCGA-AR-A1AR/SP.3_#_U-control_#_TCGA-AR-A1AR-01Z-00-DX1_id-5e83b062ddda5f83987c673b_left-17049_top-29867_bottom-30142_right-17315.png",
+          "original_sha256": "9deb15745b2dae4bdbaac795067364082a9ad36e6850f616898cabe5a1754e8e",
+          "provided_sha256": "17a465bfabb34411c25d277755816fa74aed11ab7a93c131ca8c5f7afbf02779",
+          "decoded_tile_indices": [
+            33551,
+            33552,
+            33821,
+            33822
+          ],
+          "rgb_correlation": 0.9987824980681325,
+          "rgb_mae": 1.9183304554284482,
+          "phase_shift_xy": [
+            0.014683303465943709,
+            -0.0006508857871097007
+          ],
+          "phase_response": 0.9938085504225743,
+          "registration_correction_applied": false
+        }
+      ],
+      "original_stream": {
+        "bytes": 657805107,
+        "md5": "fbc092b292e7009c88d0c8ca9bdf4500",
+        "sha256": "c14985281423b65eae9bcf4221e0eb1436a3dedcf07c3ab65333bc9ce9d3e082",
+        "reference_md5_verified": true,
+        "verified_ranges": 12,
+        "verified_range_bytes": 12582912
+      },
+      "source_ranges": [
+        {
+          "offset": 0,
+          "bytes": 1048576,
+          "sha256": "acb3587f3755a7fef44a00f87650b15ef5a97f21ab42b7aee63f735751e96603"
+        },
+        {
+          "offset": 81788928,
+          "bytes": 1048576,
+          "sha256": "93e7b5189b06e23835dd75f7674811daca914de2628cf96f3f4d73afec32bbcd"
+        },
+        {
+          "offset": 83886080,
+          "bytes": 1048576,
+          "sha256": "85eb5135de9c7c63ea6f65d131d091e8bade31224a0c09110e046ca15c798821"
+        },
+        {
+          "offset": 97517568,
+          "bytes": 1048576,
+          "sha256": "a6f4c1209b93c325262d41dd96eaffd362a4264933647d1ec817266707c0752a"
+        },
+        {
+          "offset": 100663296,
+          "bytes": 1048576,
+          "sha256": "86e2476c6a2f2869334015b54bac67b0f78251f30add67275d70b82aa54ba74e"
+        },
+        {
+          "offset": 102760448,
+          "bytes": 1048576,
+          "sha256": "35c4fbdeab8ad7264bf979f018ab2be0bf2598e1bf6c35f3cb72994ee0a8e86e"
+        },
+        {
+          "offset": 104857600,
+          "bytes": 1048576,
+          "sha256": "d7c01a83b06fbf754adb4f670d70561c0f24b8c1956eac32f37bfa1c411f7fb5"
+        },
+        {
+          "offset": 108003328,
+          "bytes": 1048576,
+          "sha256": "c27ca800d1b62fe2c6dd5e60578c3434890335e48b92318bb03eb244f5e828d9"
+        },
+        {
+          "offset": 110100480,
+          "bytes": 1048576,
+          "sha256": "7c1f1177ba8b345c305b1024f88a1187658e8c040b522cf4b188926a1be364a0"
+        },
+        {
+          "offset": 113246208,
+          "bytes": 1048576,
+          "sha256": "277d97bb40fc418f8a9e4642196b16f8f41fe405d3bd32fd8fd0690d0af98025"
+        },
+        {
+          "offset": 553648128,
+          "bytes": 1048576,
+          "sha256": "278fb2f5ac930bc65bec816e7cd131d2c55ec6c638da47972b03bd55c2a92e2a"
+        },
+        {
+          "offset": 554696704,
+          "bytes": 1048576,
+          "sha256": "569500a2b50ff8a08b21b74d1ef05e10c72277aa46e8a07958491732747f8d7b"
+        }
+      ],
+      "whole_file_retained": false,
+      "whole_slide_inference": false
+    },
+    {
+      "case_id": "TCGA-C8-A12V",
+      "source": {
+        "id": "c92280a3-2025-463e-b791-1946c09964dd",
+        "cases": [
+          {
+            "submitter_id": "TCGA-C8-A12V"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-C8-A12V-01Z-00-DX1.84B29360-B87B-4648-A697-B6610336C2BB.svs",
+        "md5sum": "28797623aabac0474f91328b9c8adb43",
+        "file_id": "c92280a3-2025-463e-b791-1946c09964dd",
+        "file_size": 1318438387
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/c92280a3-2025-463e-b791-1946c09964dd",
+      "metadata": {
+        "size_wh": [
+          81394,
+          75937
+        ],
+        "mpp": 0.2485,
+        "description_sha256": "5669560d879e9caca56107f68fa072d15fb4f24cf2de33f1c14a1818ee4fdbce",
+        "tile_wh": [
+          256,
+          256
+        ],
+        "compression": 7
+      },
+      "rows": [
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11564_top-57983_bottom-58241_right-11824",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            11564,
+            57983,
+            11824,
+            58241
+          ],
+          "output_wh": [
+            323,
+            320
+          ],
+          "effective_mpp_xy": [
+            0.200030959752322,
+            0.200353125
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11564_top-57983_bottom-58241_right-11824.png",
+          "original_sha256": "1666e7b7d26fe480eaa277ec6a12c49bd47de3270782a4b12a36b6113bc67809",
+          "provided_sha256": "6ad2134fb956b82d9723cd13c55ad235a0655b578409546430745c6420c42e20",
+          "decoded_tile_indices": [
+            71913,
+            71914,
+            72231,
+            72232
+          ],
+          "rgb_correlation": 0.999085864594808,
+          "rgb_mae": 1.3811371259029928,
+          "phase_shift_xy": [
+            0.0027767985720004162,
+            0.004899863087501899
+          ],
+          "phase_response": 0.9854595786259498,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11823_top-57216_bottom-57473_right-12087",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            11823,
+            57216,
+            12087,
+            57473
+          ],
+          "output_wh": [
+            328,
+            319
+          ],
+          "effective_mpp_xy": [
+            0.20001219512195123,
+            0.20020219435736678
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-11823_top-57216_bottom-57473_right-12087.png",
+          "original_sha256": "e5357e206792f45df55df0802f14792dddb88bbcce6834e97539dc9d9a9dfb95",
+          "provided_sha256": "1634d294a9f31b555f39e406cd9a2ba439552c8c428e70474ac1d6d7a15f4ae2",
+          "decoded_tile_indices": [
+            70960,
+            70961,
+            71278,
+            71279
+          ],
+          "rgb_correlation": 0.9991321365600139,
+          "rgb_mae": 1.4881584983561433,
+          "phase_shift_xy": [
+            0.001481662659301719,
+            -0.01125753332991053
+          ],
+          "phase_response": 1.003348746324579,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            12079,
+            57471,
+            12351,
+            57729
+          ],
+          "output_wh": [
+            337,
+            320
+          ],
+          "effective_mpp_xy": [
+            0.20056973293768546,
+            0.200353125
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-12079_top-57471_bottom-57729_right-12351.png",
+          "original_sha256": "82164c1ce7b15fb99d69211bad83e312a9b1b7b3b47282b9a8fd019cf77e66ad",
+          "provided_sha256": "420416dc26eb4d5b8ac6ac7909d7fc3f6f02981192e2484c33b687a356cfff9e",
+          "decoded_tile_indices": [
+            71279,
+            71280,
+            71597,
+            71598
+          ],
+          "rgb_correlation": 0.9989593612652083,
+          "rgb_mae": 1.4944114737883283,
+          "phase_shift_xy": [
+            -0.0009159753540473048,
+            -0.024856752264895476
+          ],
+          "phase_response": 0.9933634379174974,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            13091,
+            56439,
+            13372,
+            56715
+          ],
+          "output_wh": [
+            349,
+            342
+          ],
+          "effective_mpp_xy": [
+            0.2000816618911175,
+            0.2005438596491228
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13091_top-56439_bottom-56715_right-13372.png",
+          "original_sha256": "7fd3cd7c6c6832a23d3e62590a4377ea94c3f5357c948ac1f62eadc6f3b382bd",
+          "provided_sha256": "8adff8c14342080c24af616951638e9be9738391d46e559e759fccf7313fb19a",
+          "decoded_tile_indices": [
+            70011,
+            70012,
+            70329,
+            70330
+          ],
+          "rgb_correlation": 0.9993434800264496,
+          "rgb_mae": 1.812424247501913,
+          "phase_shift_xy": [
+            -0.0073411190576280205,
+            0.0016179157453848347
+          ],
+          "phase_response": 0.9975723746970848,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13342_top-57444_bottom-57741_right-13635",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            13342,
+            57444,
+            13635,
+            57741
+          ],
+          "output_wh": [
+            364,
+            369
+          ],
+          "effective_mpp_xy": [
+            0.20002884615384617,
+            0.20001219512195123
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-13342_top-57444_bottom-57741_right-13635.png",
+          "original_sha256": "d9c1bbfe79849332d116c07d86eeaa9b91bb79d69f4cfc861b6d453db1c73d4e",
+          "provided_sha256": "87a43d7caca508b95f16f3e5a5175a5472b246e7bcf8b97229b0db08a8539c08",
+          "decoded_tile_indices": [
+            71284,
+            71285,
+            71602,
+            71603
+          ],
+          "rgb_correlation": 0.9990116240868534,
+          "rgb_mae": 1.500513713928348,
+          "phase_shift_xy": [
+            0.4981762189281653,
+            0.49730573270070977
+          ],
+          "phase_response": 0.9940245978732639,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            14084,
+            57462,
+            14400,
+            57751
+          ],
+          "output_wh": [
+            392,
+            359
+          ],
+          "effective_mpp_xy": [
+            0.20032142857142857,
+            0.20004596100278552
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14084_top-57462_bottom-57751_right-14400.png",
+          "original_sha256": "39d895e9dabe8c23e69679f5480d08a28f1527a4c390ac5c72fb11d7505e71c1",
+          "provided_sha256": "7953b09c23fa3e42f35b938f202026790bfcc98a789622ee753c0d2dd4947a50",
+          "decoded_tile_indices": [
+            71287,
+            71288,
+            71605,
+            71606
+          ],
+          "rgb_correlation": 0.9988778787700845,
+          "rgb_mae": 1.7121776287116517,
+          "phase_shift_xy": [
+            0.006165063109136781,
+            -0.004268348226446506
+          ],
+          "phase_response": 1.000993128882514,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14852_top-57177_bottom-57515_right-15177",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            14852,
+            57177,
+            15177,
+            57515
+          ],
+          "output_wh": [
+            403,
+            419
+          ],
+          "effective_mpp_xy": [
+            0.20040322580645162,
+            0.20046062052505964
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14852_top-57177_bottom-57515_right-15177.png",
+          "original_sha256": "ace1e19c4a56f4d00966ccf7cb1f319a1008fc1852f4c2d27cc45fb8fa4c99f5",
+          "provided_sha256": "8056a262a0fd7e97a011b9693126ad42224613c7ee38352af9d68142870599d2",
+          "decoded_tile_indices": [
+            70972,
+            70973,
+            71290,
+            71291
+          ],
+          "rgb_correlation": 0.9986480804204974,
+          "rgb_mae": 1.77097978368284,
+          "phase_shift_xy": [
+            0.4853913229593161,
+            0.0016564079856493663
+          ],
+          "phase_response": 0.9936936863819431,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14878_top-56436_bottom-56704_right-15177",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            14878,
+            56436,
+            15177,
+            56704
+          ],
+          "output_wh": [
+            371,
+            332
+          ],
+          "effective_mpp_xy": [
+            0.20027358490566038,
+            0.20059638554216866
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-14878_top-56436_bottom-56704_right-15177.png",
+          "original_sha256": "182496d65d2446a1d1c7200dc3789a9b86fffe6830a0d3b281c0a0fe47d348fb",
+          "provided_sha256": "2bd632b4d2e8f91c3519b90f24bfe6bc9c4744666adeb7ae141e02996f0c3f3c",
+          "decoded_tile_indices": [
+            70018,
+            70019,
+            70336,
+            70337
+          ],
+          "rgb_correlation": 0.9986709744179559,
+          "rgb_mae": 1.5708683791770857,
+          "phase_shift_xy": [
+            0.5047341972879735,
+            -0.0023834411807683864
+          ],
+          "phase_response": 0.997425060583044,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-15133_top-57203_bottom-57495_right-15444",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            15133,
+            57203,
+            15444,
+            57495
+          ],
+          "output_wh": [
+            386,
+            362
+          ],
+          "effective_mpp_xy": [
+            0.20021632124352332,
+            0.2004475138121547
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-15133_top-57203_bottom-57495_right-15444.png",
+          "original_sha256": "6cdcbd5bf3e6d8423f84d505d4eee89d9359f09ecc3e1b455ce92914f1e4dddb",
+          "provided_sha256": "3b035e49c7e693136dadc00f2c4a00da36ea0c77df2b967f7e53f191dfd1be16",
+          "decoded_tile_indices": [
+            70973,
+            70974,
+            71291,
+            71292
+          ],
+          "rgb_correlation": 0.9986743553504582,
+          "rgb_mae": 1.8038602467580798,
+          "phase_shift_xy": [
+            0.020941926393419408,
+            0.5015175934395302
+          ],
+          "phase_response": 1.0006194604492187,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            16407,
+            56662,
+            16698,
+            56978
+          ],
+          "output_wh": [
+            361,
+            392
+          ],
+          "effective_mpp_xy": [
+            0.20031440443213297,
+            0.20032142857142857
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16407_top-56662_bottom-56978_right-16698.png",
+          "original_sha256": "9a44ac186e26443e336ca954bf65a92b12bdebcd938cf341056eafd368a0f913",
+          "provided_sha256": "279af204281cdee6c8cc706c1f5483d69e8fc2ae4ed7384ae4f37b23304c81e4",
+          "decoded_tile_indices": [
+            70342,
+            70343,
+            70660,
+            70661
+          ],
+          "rgb_correlation": 0.9989159785797588,
+          "rgb_mae": 1.8652269772174799,
+          "phase_shift_xy": [
+            0.5110519389151875,
+            -0.010313046552283822
+          ],
+          "phase_response": 0.9904896451822917,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55653_bottom-55936_right-17209",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            16919,
+            55653,
+            17209,
+            55936
+          ],
+          "output_wh": [
+            360,
+            351
+          ],
+          "effective_mpp_xy": [
+            0.20018055555555556,
+            0.20035754985754986
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55653_bottom-55936_right-17209.png",
+          "original_sha256": "a7ed7efaac6b9cc0980e75320408d6ce6084e0dd605612a0d0073fd9e3981e49",
+          "provided_sha256": "70bff1082116b476269342a93b6e18959b0c45ff1d38f9512f08acb902e0234f",
+          "decoded_tile_indices": [
+            69072,
+            69073,
+            69390,
+            69391
+          ],
+          "rgb_correlation": 0.9986974507490209,
+          "rgb_mae": 1.805014772607365,
+          "phase_shift_xy": [
+            -0.0025879726989046503,
+            0.0038301421840856165
+          ],
+          "phase_response": 0.9922637642754448,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55919_bottom-56213_right-17200",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            16919,
+            55919,
+            17200,
+            56213
+          ],
+          "output_wh": [
+            349,
+            365
+          ],
+          "effective_mpp_xy": [
+            0.2000816618911175,
+            0.20016164383561644
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-16919_top-55919_bottom-56213_right-17200.png",
+          "original_sha256": "cb6767d5188cdc147395326d3efa5919f8988821cfd32ad245ae4dfa0e1fb463",
+          "provided_sha256": "fdbf1faab8096ef97a30c0d6359aa1f12ea0fb93652c5db43ca7cae950dc6f04",
+          "decoded_tile_indices": [
+            69390,
+            69391,
+            69708,
+            69709
+          ],
+          "rgb_correlation": 0.9989731317713271,
+          "rgb_mae": 1.7680496133767711,
+          "phase_shift_xy": [
+            -0.0014864886250904874,
+            0.4972685951326241
+          ],
+          "phase_response": 0.9937987300166378,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738",
+          "case_id": "TCGA-C8-A12V",
+          "bounds_level0": [
+            17447,
+            58233,
+            17738,
+            58521
+          ],
+          "output_wh": [
+            361,
+            357
+          ],
+          "effective_mpp_xy": [
+            0.20031440443213297,
+            0.20047058823529412
+          ],
+          "original_path": "originals/TCGA-C8-A12V/SP.3_#_U-control_#_TCGA-C8-A12V-01Z-00-DX1_id-5e83b063ddda5f83987c67d7_left-17447_top-58233_bottom-58521_right-17738.png",
+          "original_sha256": "ecf344658832fc05a339b9c4a6d01e5c9494424b2be1a249f96195b049451d21",
+          "provided_sha256": "c45ab38c6565c0ce660f877e34f2684a1c18386c71a9f0202499ae2d512e9bb7",
+          "decoded_tile_indices": [
+            72254,
+            72255,
+            72572,
+            72573
+          ],
+          "rgb_correlation": 0.998886155821186,
+          "rgb_mae": 1.934433607237909,
+          "phase_shift_xy": [
+            0.4953134014118916,
+            0.006659771416622107
+          ],
+          "phase_response": 0.9991736237702546,
+          "registration_correction_applied": false
+        }
+      ],
+      "original_stream": {
+        "bytes": 1318438387,
+        "md5": "28797623aabac0474f91328b9c8adb43",
+        "sha256": "c48cdc72269c9513281d0e1d85e896700c7c5eae499242a7f2010b672849896d",
+        "reference_md5_verified": true,
+        "verified_ranges": 23,
+        "verified_range_bytes": 24117248
+      },
+      "source_ranges": [
+        {
+          "offset": 0,
+          "bytes": 1048576,
+          "sha256": "7849223076d68d453f577624bab2e2357a72a5c0aba3320ea623f6ef27f17ec5"
+        },
+        {
+          "offset": 71303168,
+          "bytes": 1048576,
+          "sha256": "326159798a1e645b19586763cb44171f7b964b6bb59ea94bb2c060e13d41a30e"
+        },
+        {
+          "offset": 73400320,
+          "bytes": 1048576,
+          "sha256": "1933cb387598690f803759763890a40ebe0c7c46e6920a16fb329205025a6183"
+        },
+        {
+          "offset": 74448896,
+          "bytes": 1048576,
+          "sha256": "7b504d0c83af1dce383f003cef9491e0d8c331d3d803ef3c178c98deb958e22f"
+        },
+        {
+          "offset": 76546048,
+          "bytes": 1048576,
+          "sha256": "f8f90acd056ecbb10ba17c988ba3ca75455f4ae0c67ebc8340261c92ca54ba20"
+        },
+        {
+          "offset": 77594624,
+          "bytes": 1048576,
+          "sha256": "91da604de6dd749e7c8ed4958399e028742a2d0241201d459b13fdf3f9ca2c18"
+        },
+        {
+          "offset": 80740352,
+          "bytes": 1048576,
+          "sha256": "08e601131ebd6fda387a1bc3220537aaf011044b03ef536f4badbd40db5711f5"
+        },
+        {
+          "offset": 90177536,
+          "bytes": 1048576,
+          "sha256": "59251b347dc55da4e9aa257db2b6cbd57d12b1be6fbfd85ea3925c342b784071"
+        },
+        {
+          "offset": 93323264,
+          "bytes": 1048576,
+          "sha256": "42d6b461dc6ae7934492a92e648d4a09f4d9545c9e9b86d61df3e5c22fcfb525"
+        },
+        {
+          "offset": 96468992,
+          "bytes": 1048576,
+          "sha256": "79e384533c6ea018051df5fd0f3f6dc167d62758c70dac3a0b43ebd8deff33da"
+        },
+        {
+          "offset": 103809024,
+          "bytes": 1048576,
+          "sha256": "0296e6083366452edf544d031547b31dbdc1b7e827b9529ea970af1f4154ffa2"
+        },
+        {
+          "offset": 106954752,
+          "bytes": 1048576,
+          "sha256": "146548aa461582113c30cdf8d4fabb94ff052a283dbce3d86af755008f6bcdd5"
+        },
+        {
+          "offset": 114294784,
+          "bytes": 1048576,
+          "sha256": "844716868cf933b064b87c71df408cee802c7cb80ab4bcfca6eca07e360eabcb"
+        },
+        {
+          "offset": 117440512,
+          "bytes": 1048576,
+          "sha256": "8d54e05b5ba3931bb59bf30fd67e0f12465b9222b6886e43b8523118b7070872"
+        },
+        {
+          "offset": 120586240,
+          "bytes": 1048576,
+          "sha256": "dfe77b2065fed03d76c0ba420fe4642a4385205d6a07b91bc5ab3eb951fc28cb"
+        },
+        {
+          "offset": 135266304,
+          "bytes": 1048576,
+          "sha256": "cc675361963165bc7e6afa93368b4ab1f744dac61f14af7fc474b7685cf2c683"
+        },
+        {
+          "offset": 139460608,
+          "bytes": 1048576,
+          "sha256": "7087fa210e4c10dddd220d45eccee19954d99481099a330b84d39e3877239fb6"
+        },
+        {
+          "offset": 142606336,
+          "bytes": 1048576,
+          "sha256": "a120c6b8b817ffe8fbeb75dd691752b7dde5e44bf3388f425fa4aae5ea5c6b43"
+        },
+        {
+          "offset": 146800640,
+          "bytes": 1048576,
+          "sha256": "12d5d4d29d443253f5ddbcfed4a8bd13c0857673af94bfb5caa3cf39dd2a0b27"
+        },
+        {
+          "offset": 149946368,
+          "bytes": 1048576,
+          "sha256": "e3cfabb2be4cfc1c2d91c8ec6d6259ec538e026eff3694b79f4ef5d8eca9629e"
+        },
+        {
+          "offset": 150994944,
+          "bytes": 1048576,
+          "sha256": "c719412a26d13cbefa4bec64746efcd29a98cfbae7a5b3dedaa08045ed0e6e24"
+        },
+        {
+          "offset": 154140672,
+          "bytes": 1048576,
+          "sha256": "9b68965a4ea41fc6b6fbd3b14bbf6bf9943efed23e3062a06b748566c4e4a56b"
+        },
+        {
+          "offset": 1105199104,
+          "bytes": 1048576,
+          "sha256": "39193ae1679b0b4decc047e01139273fe50dad2b70ac6d8cb1218c2285ae64b1"
+        }
+      ],
+      "whole_file_retained": false,
+      "whole_slide_inference": false
+    },
+    {
+      "case_id": "TCGA-E2-A158",
+      "source": {
+        "id": "672685f0-fe97-415f-b52b-e451ac87294f",
+        "cases": [
+          {
+            "submitter_id": "TCGA-E2-A158"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-E2-A158-01Z-00-DX1.994C60FE-E651-4224-95E7-4669834F2338.svs",
+        "md5sum": "5c30db3b3737a6901df482c432311350",
+        "file_id": "672685f0-fe97-415f-b52b-e451ac87294f",
+        "file_size": 835921309
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/672685f0-fe97-415f-b52b-e451ac87294f",
+      "metadata": {
+        "size_wh": [
+          126616,
+          71160
+        ],
+        "mpp": 0.2468,
+        "description_sha256": "6f68e46f10ee7cd0ae2604bfe4206cd4955be50176810cf5da34182327dff87d",
+        "tile_wh": [
+          240,
+          240
+        ],
+        "compression": 7
+      },
+      "rows": [
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56338_top-26127_bottom-26386_right-56595",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            56338,
+            26127,
+            56595,
+            26386
+          ],
+          "output_wh": [
+            317,
+            319
+          ],
+          "effective_mpp_xy": [
+            0.20008706624605677,
+            0.20037993730407525
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56338_top-26127_bottom-26386_right-56595.png",
+          "original_sha256": "c08f24e717a0aafbad8eec9dff18bc5f27530a1804dfc6b51fd9da19268a0b84",
+          "provided_sha256": "b842072e76ac171639e7d366cc23139acda1b624e7ea76fbde029b60b570759a",
+          "decoded_tile_indices": [
+            57258,
+            57259,
+            57786,
+            57787
+          ],
+          "rgb_correlation": 0.9992929312449748,
+          "rgb_mae": 1.1838124528214815,
+          "phase_shift_xy": [
+            0.0020798127657997156,
+            0.0005329680814156745
+          ],
+          "phase_response": 0.9999719715118408,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56850_top-27407_bottom-27664_right-57107",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            56850,
+            27407,
+            57107,
+            27664
+          ],
+          "output_wh": [
+            317,
+            317
+          ],
+          "effective_mpp_xy": [
+            0.20008706624605677,
+            0.20008706624605677
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-56850_top-27407_bottom-27664_right-57107.png",
+          "original_sha256": "8a98066f87ec1ea6cf00294f2a67c4c47c2a99dbe35e7f464bb2aacd192ec5fb",
+          "provided_sha256": "1f8c2311d4424992cea4e28521b4f09055b63d26d6c44182e9e2a8393013eb53",
+          "decoded_tile_indices": [
+            60428,
+            60429,
+            60956,
+            60957
+          ],
+          "rgb_correlation": 0.9986633518384164,
+          "rgb_mae": 1.735622804486063,
+          "phase_shift_xy": [
+            -0.0018581757577749158,
+            0.004383028055315208
+          ],
+          "phase_response": 1.010258621685207,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-57100_top-27151_bottom-27408_right-57373",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            57100,
+            27151,
+            57373,
+            27408
+          ],
+          "output_wh": [
+            336,
+            317
+          ],
+          "effective_mpp_xy": [
+            0.200525,
+            0.20008706624605677
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-57100_top-27151_bottom-27408_right-57373.png",
+          "original_sha256": "0f852cf7f77d9d983ae720897107d0d017f664a9e42b45c18cb85b6d2eddd7c9",
+          "provided_sha256": "35275fd3b8b04ebdf7c0b25eb5c63226b2cb202749d8767e688419abd84584e3",
+          "decoded_tile_indices": [
+            59901,
+            59902,
+            59903,
+            60429,
+            60430,
+            60431
+          ],
+          "rgb_correlation": 0.9989696339686026,
+          "rgb_mae": 1.5345250613389414,
+          "phase_shift_xy": [
+            -0.0009558536428926345,
+            0.0048050791432388
+          ],
+          "phase_response": 1.0053268044524724,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58118_top-27642_bottom-27938_right-58386",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            58118,
+            27642,
+            58386,
+            27938
+          ],
+          "output_wh": [
+            330,
+            365
+          ],
+          "effective_mpp_xy": [
+            0.20043151515151514,
+            0.20014465753424654
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58118_top-27642_bottom-27938_right-58386.png",
+          "original_sha256": "22937cbd055d13949e92c9d26651736d33459c1ddb2a79745b45f3f4c0e5b1aa",
+          "provided_sha256": "2674d198f3522754871adaae4b140998870bc8baa0c78aadbaf54f680d1812d3",
+          "decoded_tile_indices": [
+            60962,
+            60963,
+            61490,
+            61491
+          ],
+          "rgb_correlation": 0.9993874020049509,
+          "rgb_mae": 1.3926968313269683,
+          "phase_shift_xy": [
+            0.004167064809990961,
+            0.49850232555658636
+          ],
+          "phase_response": 0.997057992779767,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58369_top-26873_bottom-27151_right-58643",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            58369,
+            26873,
+            58643,
+            27151
+          ],
+          "output_wh": [
+            338,
+            343
+          ],
+          "effective_mpp_xy": [
+            0.20006863905325442,
+            0.20003032069970844
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-58369_top-26873_bottom-27151_right-58643.png",
+          "original_sha256": "a63f977d0e43bffb482fa19e17785655cf70bc155c6d0a42251c5b426618fd45",
+          "provided_sha256": "108227b95accec7da6ec54d64a5732584218a548a74e7dab934f076f08958a5d",
+          "decoded_tile_indices": [
+            58851,
+            58852,
+            59379,
+            59380,
+            59907,
+            59908
+          ],
+          "rgb_correlation": 0.9992479678061899,
+          "rgb_mae": 1.4637034864664378,
+          "phase_shift_xy": [
+            -0.003162383246973377,
+            0.013174778053638647
+          ],
+          "phase_response": 0.9990296456843246,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59119_top-27915_bottom-28176_right-59422",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            59119,
+            27915,
+            59422,
+            28176
+          ],
+          "output_wh": [
+            373,
+            322
+          ],
+          "effective_mpp_xy": [
+            0.20048364611260053,
+            0.20004596273291925
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59119_top-27915_bottom-28176_right-59422.png",
+          "original_sha256": "8dc582de34b8d37da7774698b8dacc4fa0f5cb73bfbecbdf36fa9656dedd070a",
+          "provided_sha256": "8247e51a324808eb2890782e4a22c17c11c0fc11a4c9867d73d8dd022a69eb90",
+          "decoded_tile_indices": [
+            61494,
+            61495,
+            62022,
+            62023
+          ],
+          "rgb_correlation": 0.9991572359606612,
+          "rgb_mae": 1.4505908669564107,
+          "phase_shift_xy": [
+            0.49882224924118646,
+            -0.002180056433843447
+          ],
+          "phase_response": 1.0133748904883617,
+          "registration_correction_applied": false
+        },
+        {
+          "id": "SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59143_top-26895_bottom-27151_right-59429",
+          "case_id": "TCGA-E2-A158",
+          "bounds_level0": [
+            59143,
+            26895,
+            59429,
+            27151
+          ],
+          "output_wh": [
+            352,
+            315
+          ],
+          "effective_mpp_xy": [
+            0.200525,
+            0.20057396825396825
+          ],
+          "original_path": "originals/TCGA-E2-A158/SP.3_#_U-control_#_TCGA-E2-A158-01Z-00-DX1_id-5e83b065ddda5f83987c695c_left-59143_top-26895_bottom-27151_right-59429.png",
+          "original_sha256": "a1f53584ebfd0bacd589fc01885a7c22a5d4652ef9111e57be623849dc0fbd4d",
+          "provided_sha256": "323eef9f5750548afbffa2c1424dffb3e7733f9e4e9cf9f57b3075df3363890e",
+          "decoded_tile_indices": [
+            59382,
+            59383,
+            59910,
+            59911
+          ],
+          "rgb_correlation": 0.9991164778991866,
+          "rgb_mae": 1.5844757094757094,
+          "phase_shift_xy": [
+            0.013996682993479226,
+            0.008042711294081073
+          ],
+          "phase_response": 0.9973315562142266,
+          "registration_correction_applied": false
+        }
+      ],
+      "original_stream": {
+        "bytes": 835921309,
+        "md5": "5c30db3b3737a6901df482c432311350",
+        "sha256": "66e361e56d976af9bd529d93e0251f0bfdf97cb0450782020ba6c09113278f8f",
+        "reference_md5_verified": true,
+        "verified_ranges": 14,
+        "verified_range_bytes": 14680064
+      },
+      "source_ranges": [
+        {
+          "offset": 0,
+          "bytes": 1048576,
+          "sha256": "78cffd533620b336e6b76ed1a850622097f9e45b5b70cbc747a79d3efdd52b06"
+        },
+        {
+          "offset": 298844160,
+          "bytes": 1048576,
+          "sha256": "30d4707f2b0c6f873870286c5b51f3af8048c492675cd21bd1605dfb6a7dfa78"
+        },
+        {
+          "offset": 300941312,
+          "bytes": 1048576,
+          "sha256": "c7b3f71238e7c66b78e76126c2f573ea65327e6822db6dc815f95436e9e742d7"
+        },
+        {
+          "offset": 301989888,
+          "bytes": 1048576,
+          "sha256": "7f44d071dfd2f53c574693e0ea58f65ee19c61bcdea823927c6f8a7d7819923f"
+        },
+        {
+          "offset": 304087040,
+          "bytes": 1048576,
+          "sha256": "745b05dddc3f903f7b3295afff860c9f952c82c33a0378bd38b336eeebb0cd3d"
+        },
+        {
+          "offset": 306184192,
+          "bytes": 1048576,
+          "sha256": "e6bde4ffa20b472f222b942d643699be4596179fd17625e6bb9b3369661147f8"
+        },
+        {
+          "offset": 307232768,
+          "bytes": 1048576,
+          "sha256": "c82f9533fd379e5e6097656a8db65243f4b798e82eb2e59670d80f51a1ea59d4"
+        },
+        {
+          "offset": 312475648,
+          "bytes": 1048576,
+          "sha256": "3a11caa29ca24508f286bdff264ca12a2697a70489365280a68535a3da3b8a8d"
+        },
+        {
+          "offset": 314572800,
+          "bytes": 1048576,
+          "sha256": "a2829a937c92efafa84aa17a5852afea60f806fac7f511d5168281a6d6c4e372"
+        },
+        {
+          "offset": 316669952,
+          "bytes": 1048576,
+          "sha256": "7e109c6ffb4cc435e5838eb23904288ceb57013464988f96b45fac6e50a2192e"
+        },
+        {
+          "offset": 319815680,
+          "bytes": 1048576,
+          "sha256": "40f11d9b988915c76d4b536d3d2fb295296bfcaa08f049eeb7c784cb108f308b"
+        },
+        {
+          "offset": 321912832,
+          "bytes": 1048576,
+          "sha256": "d409578a40dbfcb089c1ce1e59acbec3ef4bf3bb4aeec814889673dfcce2c84c"
+        },
+        {
+          "offset": 703594496,
+          "bytes": 1048576,
+          "sha256": "dc87448b4fb33515abf683cbd0e5f67dea074fe184a1d3f45147f6fc17115cde"
+        },
+        {
+          "offset": 704643072,
+          "bytes": 1048576,
+          "sha256": "aea8189b7a3702fd2539ae6b459c3450b1bd1425a9deba4adb50cfbcf94c7d8f"
+        }
+      ],
+      "whole_file_retained": false,
+      "whole_slide_inference": false
+    }
+  ],
+  "files": 5,
+  "roi_count": 51,
+  "total_original_bytes": 5082513388
+}
