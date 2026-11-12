@@ -1,0 +1,16 @@
+{
+  "filename": "PathologyEdge-Final-Handoff-20261112.zip",
+  "bytes": 11528072,
+  "sha256": "643cb7d5f52d675e4490430e71d8b41cb0bdd8fd8afed29175c5104f18efab73",
+  "members": 348,
+  "source_commit": "e2833ded53bedb71611e72f148a093b78b298412",
+  "created_at_utc": "2026-11-12T06:43:29.176003+00:00",
+  "zip_crc": "passed",
+  "all_member_hashes": "passed",
+  "html_local_targets": "passed",
+  "large_archive_crc_checks": 5,
+  "historical_unresolved_links": [],
+  "contains_bcdata_raw_inputs": false,
+  "clinical_validation_performed": false,
+  "whole_wsi_ground_truth_validation_performed": false
+}
