@@ -1,0 +1,30 @@
+[
+  {
+    "case": "TCGA-A2-A0ST",
+    "gdc_status": 206,
+    "gdc_length": 4096,
+    "gdc_range": "0-4095/722419787",
+    "gdc_first8": "49492a000c764925",
+    "dsa_header_equal": true,
+    "gdc_headers": {
+      "content-length": "4096",
+      "content-range": "0-4095/722419787",
+      "content-md5": "69ad852c4fde246c6e276195fc651904",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "case": "TCGA-A2-A0SX",
+    "gdc_status": 206,
+    "gdc_length": 4096,
+    "gdc_range": "0-4095/1315819883",
+    "gdc_first8": "49492a0028b46a43",
+    "dsa_header_equal": true,
+    "gdc_headers": {
+      "content-length": "4096",
+      "content-range": "0-4095/1315819883",
+      "content-md5": "ba27c8f0c392bb069ef3ffe9b609fd39",
+      "content-type": "application/octet-stream"
+    }
+  }
+]

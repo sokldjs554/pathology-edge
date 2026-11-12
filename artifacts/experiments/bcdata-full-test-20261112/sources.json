@@ -1,0 +1,31 @@
+{
+  "dataset": "BCData",
+  "official_page": "https://sites.google.com/view/bcdataset",
+  "paper": "https://link.springer.com/chapter/10.1007/978-3-030-59722-1_28",
+  "archive": "https://drive.google.com/file/d/16W04QOR1E-G3ifc4061Be4eGpjRYDlkA/view",
+  "original_archive_bytes": 853879248,
+  "full_archive_sha256": null,
+  "full_archive_downloaded": false,
+  "access_probe": {
+    "entry": "BCData/images/test/107.png",
+    "status": 206,
+    "content_range": "bytes 8255824-8255887/853879248",
+    "bytes": 64
+  },
+  "archive_manifest_sha256": "c40aa87b806ed2fef45359e61d449555419d6b1d351725c96015a977aa3efb92",
+  "archive_central_directory_sha256": "3d1569d2c1d6ac1eff50fcbb2ef4978118b0596f9153351c1379cd95fa6ca69d",
+  "selected_entries_exactly_match_full_central_directory_manifest": true,
+  "all_official_test_images_exactly_selected": true,
+  "image_counts": {
+    "train": 803,
+    "validation": 133,
+    "test": 402
+  },
+  "license": "Original paper permits non-commercial research. No standalone archive license entry or raw-data redistribution right established. Original images/HDF5 and cell-level records excluded from public bundle.",
+  "prior_source_audit": "../external-bcdata-20261112/sources.json",
+  "clinical_or_patient_endpoint_reference_available": false,
+  "metadata_or_pixel_scale_matching": "No patient/slide mapping and no verified per-image MPP; preserve native 640x640 pixels.",
+  "prior_evaluation_known_before_protocol": 10,
+  "new_images_before_model_predictions": 392,
+  "no_held_out_success_threshold_or_patient_level_confidence_interval_claimed": true
+}

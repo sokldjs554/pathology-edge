@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "region_checks": 36,
+  "mean_checks": 12,
+  "raw_annotation_reconstruction": true,
+  "results_sha256": "c99b29bbdff830a0c45de79647d91401ccb07b674d8240c20dc36766ce1ccab0",
+  "new_inference_during_audit": false
+}

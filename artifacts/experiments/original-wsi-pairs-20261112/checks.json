@@ -1,0 +1,25 @@
+{
+  "source_full_stream_count": 3,
+  "gdc_reference_md5_matches": 2,
+  "primary_contour_cases": 2,
+  "background_only_cases": 1,
+  "full_wsi_inference": false,
+  "full_wsi_gt_validation": false,
+  "clinical_validation": false,
+  "user_executed_new_runs": false,
+  "protected_files": 2731,
+  "protected_changes": 0,
+  "focused_pytest_passed": 30,
+  "jpeg_tiled_crop_parity_checks": 4,
+  "original_dice_checks": 42,
+  "original_dice_means": 6,
+  "static_demo_passed": true,
+  "local_broad_suite": {
+    "passed": 386,
+    "deselected": 2,
+    "errors": 39,
+    "reason": "Temporary fixture copies filled local disk; exact affected tests require clean CI",
+    "not_claimed_as_pass": true
+  },
+  "browser_test_run": false
+}

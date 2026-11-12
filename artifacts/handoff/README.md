@@ -6,6 +6,8 @@
 
 v2 발행 뒤 사용자는 현재 보유 자료가 업로드한 조사 문서뿐이라고 확인했습니다. 별도 임상·전체 WSI 정답 자료가 전달 대기 중인 것으로 해석하지 않습니다. 이 확인은 [최신 검증 상태](../../docs/CLINICAL_WSI_VALIDATION_STATUS.md)에 반영했으며 기존 ZIP의 내용·해시는 유지했습니다.
 
+그 뒤 [원본 WSI·원주석 직접 대조와 새 사례 평가](../../docs/ORIGINAL_ANNOTATION_EVALUATION.md), [BCData 공식test402장 평가](../../docs/BCDATA_FULL_TEST.md)를 추가했습니다. 이 후속 결과와 이전3ROI의 엄격 재평가는 v2 ZIP에 포함되지 않으므로 최신 온라인 보고서를 함께 전달합니다.
+
 [ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork.zip)
 
 `PathologyEdge-Cowork.zip`은 커밋 `540b6e35c83b63d0d09a3fdda4ab4682d1ad9d0b` 기준 전달 자료 8개를 담고 있습니다. 먼저 `START_HERE.txt`, 이어서 `COWORK_HANDOFF.md`를 읽으면 됩니다. 내부 문서의 근거 링크는 공개 저장소의 해당 커밋에 연결됩니다.

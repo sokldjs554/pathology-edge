@@ -1,0 +1,408 @@
+{
+  "selection": "All minimum/maximum ties for per-image absolute tumor ratio error and four-class accuracy over all402; source filenames and hashes only, no image pixels or coordinates.",
+  "official_source": "https://sites.google.com/view/bcdataset",
+  "official_archive": "https://drive.google.com/file/d/16W04QOR1E-G3ifc4061Be4eGpjRYDlkA/view",
+  "cases": [
+    {
+      "image": "BCData/images/test/109.png",
+      "reasons": [
+        "ratio_absolute_error_pp_minimum"
+      ],
+      "source_files": [
+        {
+          "name": "BCData/images/test/109.png",
+          "uncompressed_bytes": 751898,
+          "crc32": 2015682527,
+          "sha256": "5767f05d4e93a91b287336696d1d34e72f622b691d25e37561b3daa0c2c7ba15"
+        },
+        {
+          "name": "BCData/annotations/test/positive/109.h5",
+          "uncompressed_bytes": 3712,
+          "crc32": 976930086,
+          "sha256": "1568b3e600258d7f7bb2ea505aa48590f58cb56a547e1264cbdc9b3ce121cdb1"
+        },
+        {
+          "name": "BCData/annotations/test/negative/109.h5",
+          "uncompressed_bytes": 2512,
+          "crc32": 2759438004,
+          "sha256": "3da93c48f23b29d9e5f10baa5744bf28b254971e539032dc4f0f2d232e9a3af5"
+        }
+      ],
+      "raw_annotation_records": 133,
+      "same_label_duplicate_excess_records": 0,
+      "unique_centers": 133,
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "accuracy": 0.3007518796992481,
+      "confusion_matrix": [
+        [
+          40,
+          14,
+          11,
+          39
+        ],
+        [
+          10,
+          0,
+          6,
+          13
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "tumor_ratio": {
+        "gt": 0.7819548872180451,
+        "predicted": 0.78125,
+        "gt_tumor_cell_count": 133,
+        "predicted_tumor_cell_count": 64,
+        "absolute_error_percentage_points": 0.07048872180450694,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "image": "BCData/images/test/208.png",
+      "reasons": [
+        "accuracy_maximum"
+      ],
+      "source_files": [
+        {
+          "name": "BCData/images/test/208.png",
+          "uncompressed_bytes": 758895,
+          "crc32": 784691962,
+          "sha256": "04f0e2727cb1b8f62576859e00aa2671b7f5695c3019ec77416d2aef74c85c26"
+        },
+        {
+          "name": "BCData/annotations/test/positive/208.h5",
+          "uncompressed_bytes": 3984,
+          "crc32": 2757036551,
+          "sha256": "bfe2371f12c8bd7dac944d805dd30bb8199660ab074bfe07ce8449a2320d7e95"
+        },
+        {
+          "name": "BCData/annotations/test/negative/208.h5",
+          "uncompressed_bytes": 2736,
+          "crc32": 724006439,
+          "sha256": "6255f26b7ec78ad7bb42da5847bd9c7669897dcf644060bdc28b4da677030c15"
+        }
+      ],
+      "raw_annotation_records": 164,
+      "same_label_duplicate_excess_records": 1,
+      "unique_centers": 163,
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "accuracy": 0.5521472392638037,
+      "confusion_matrix": [
+        [
+          90,
+          13,
+          6,
+          11
+        ],
+        [
+          4,
+          0,
+          30,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "tumor_ratio": {
+        "gt": 0.7361963190184049,
+        "predicted": 0.8785046728971962,
+        "gt_tumor_cell_count": 163,
+        "predicted_tumor_cell_count": 107,
+        "absolute_error_percentage_points": 14.230835387879138,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "image": "BCData/images/test/367.png",
+      "reasons": [
+        "ratio_absolute_error_pp_maximum",
+        "accuracy_minimum"
+      ],
+      "source_files": [
+        {
+          "name": "BCData/images/test/367.png",
+          "uncompressed_bytes": 662733,
+          "crc32": 2031002341,
+          "sha256": "32842f66c4263a46faa4c323317e8e26e51ab811d880469196f251088fce66d1"
+        },
+        {
+          "name": "BCData/annotations/test/positive/367.h5",
+          "uncompressed_bytes": 1400,
+          "crc32": 2319890196,
+          "sha256": "d4b61059af8363a75d40bf25a72a406f27eb1647fe8345296828cb5d5c76f84f"
+        },
+        {
+          "name": "BCData/annotations/test/negative/367.h5",
+          "uncompressed_bytes": 6048,
+          "crc32": 1839083901,
+          "sha256": "aae0426f8ba13a9b64a22c02e94aa94038cda6acfe9fc0ecdaa3f1ad485deb1f"
+        }
+      ],
+      "raw_annotation_records": 250,
+      "same_label_duplicate_excess_records": 5,
+      "unique_centers": 245,
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "accuracy": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          206,
+          28
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "tumor_ratio": {
+        "gt": 0.0,
+        "predicted": 1.0,
+        "gt_tumor_cell_count": 245,
+        "predicted_tumor_cell_count": 11,
+        "absolute_error_percentage_points": 100.0,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "image": "BCData/images/test/378.png",
+      "reasons": [
+        "ratio_absolute_error_pp_maximum",
+        "accuracy_minimum"
+      ],
+      "source_files": [
+        {
+          "name": "BCData/images/test/378.png",
+          "uncompressed_bytes": 661284,
+          "crc32": 2730852484,
+          "sha256": "a5d632ed0f418968f91f3bb43c8d41e9e2b59a7ccf760ba59e9bb8f014931e7e"
+        },
+        {
+          "name": "BCData/annotations/test/positive/378.h5",
+          "uncompressed_bytes": 1400,
+          "crc32": 1463523063,
+          "sha256": "0f773d98b52fcdbfa79a3808d99e17fdcf474ac2ac37499baa078c52eaedf5ac"
+        },
+        {
+          "name": "BCData/annotations/test/negative/378.h5",
+          "uncompressed_bytes": 6176,
+          "crc32": 3616345939,
+          "sha256": "5286980a2089841aa8bafa4f442bd66af0ace22f399afc0ef0c5700f88d886d6"
+        }
+      ],
+      "raw_annotation_records": 258,
+      "same_label_duplicate_excess_records": 9,
+      "unique_centers": 249,
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "accuracy": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          191,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "tumor_ratio": {
+        "gt": 0.0,
+        "predicted": 1.0,
+        "gt_tumor_cell_count": 249,
+        "predicted_tumor_cell_count": 28,
+        "absolute_error_percentage_points": 100.0,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "image": "BCData/images/test/379.png",
+      "reasons": [
+        "ratio_absolute_error_pp_maximum",
+        "accuracy_minimum"
+      ],
+      "source_files": [
+        {
+          "name": "BCData/images/test/379.png",
+          "uncompressed_bytes": 636462,
+          "crc32": 3300672273,
+          "sha256": "23c954042a5c88929f9f80fa9e59a9221833b9f2db1e706587c0dbc2db0fd822"
+        },
+        {
+          "name": "BCData/annotations/test/positive/379.h5",
+          "uncompressed_bytes": 1400,
+          "crc32": 1463523063,
+          "sha256": "0f773d98b52fcdbfa79a3808d99e17fdcf474ac2ac37499baa078c52eaedf5ac"
+        },
+        {
+          "name": "BCData/annotations/test/negative/379.h5",
+          "uncompressed_bytes": 5968,
+          "crc32": 675283334,
+          "sha256": "01350e8f98e4e23fe067c9beeeae2ef03c01cb9b77bdac0d87b288a3ff8dbc88"
+        }
+      ],
+      "raw_annotation_records": 245,
+      "same_label_duplicate_excess_records": 18,
+      "unique_centers": 227,
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "accuracy": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          31,
+          0,
+          160,
+          36
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "tumor_ratio": {
+        "gt": 0.0,
+        "predicted": 1.0,
+        "gt_tumor_cell_count": 227,
+        "predicted_tumor_cell_count": 31,
+        "absolute_error_percentage_points": 100.0,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    },
+    {
+      "image": "BCData/images/test/381.png",
+      "reasons": [
+        "accuracy_minimum"
+      ],
+      "source_files": [
+        {
+          "name": "BCData/images/test/381.png",
+          "uncompressed_bytes": 638400,
+          "crc32": 690235698,
+          "sha256": "b72db269bda12cf32d7403652437e0f046da1ce932b2811ab623b9ced786f575"
+        },
+        {
+          "name": "BCData/annotations/test/positive/381.h5",
+          "uncompressed_bytes": 2080,
+          "crc32": 111729709,
+          "sha256": "acedb65a2f3bec6f5fc285375092a340f17eedbc0652814ec6cb8462203f02e5"
+        },
+        {
+          "name": "BCData/annotations/test/negative/381.h5",
+          "uncompressed_bytes": 5520,
+          "crc32": 2394780594,
+          "sha256": "6eea20579e882dffd7727172e16b1a3a4340407a1282f0984671f44a02238650"
+        }
+      ],
+      "raw_annotation_records": 219,
+      "same_label_duplicate_excess_records": 0,
+      "unique_centers": 219,
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "accuracy": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          157,
+          36
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "tumor_ratio": {
+        "gt": 0.0091324200913242,
+        "predicted": 0.9230769230769231,
+        "gt_tumor_cell_count": 219,
+        "predicted_tumor_cell_count": 26,
+        "absolute_error_percentage_points": 91.39445029855989,
+        "scope": "annotated_cells_at_GT_centers_only; not a whole-slide or clinical Ki67 index"
+      }
+    }
+  ],
+  "private_review_generator": "make_private_review.py",
+  "caveat": "Ratio agreement can conceal incorrect cell labels and tumor-denominator errors; 109.png has only40/133 correct cell labels despite0.07049pp ratio error."
+}

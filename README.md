@@ -14,6 +14,8 @@
 
 후속 공개 자료 점검에서 [실제 WSI 연결 PanopTILs 3ROI](docs/PANOPTILS_WSI_PROBE.md)의 유효 정답 영역 Dice는 **0.479080→0.435576**, [BCData 외부 IHC 10ROI](docs/EXTERNAL_BCDATA_VALIDATION.md)의 정답 중심 조건 분류 accuracy는 **31.61%**, 양성률 MAE는 **24.26%p**였습니다. 전이 실패를 포함한 연구 결과이며 전체 WSI 정답 검증·임상 검증으로 해석하지 않습니다.
 
+**원본·주석 직접 대조 확대:** [새 WSI 원본과 연결 사례](docs/ORIGINAL_ANNOTATION_EVALUATION.md)는 전체 바이트 확인 후 윤곽 정답2case의 ROI를 평가해 Dice **0.654638→0.654510**을 얻었고, 사각형만 있는1case는 배경 대조로 분리했습니다. 앞선3ROI의 CSV/mask 엄격 일치 영역 재평가는 **0.481569→0.437627**입니다. [BCData 공식test402장](docs/BCDATA_FULL_TEST.md)은 원본1,206파일과 주석 중복을 대조한 뒤65,165중심에서 **accuracy19.97%·양성률MAE44.74%p**를 확인했습니다. 원자료 품질 문제와 실패 사례도 보존합니다.
+
 ## 실제 WSI와 IHC 확장
 
 | 화면 | 실제 데이터·실행 범위 | 확인할 수 있는 것 | 평가 범위 |

@@ -1,0 +1,93 @@
+[
+  {
+    "case_id": "TCGA-A2-A0D2",
+    "dsa_item_id": "5bbdee2ee629140048d01aa1",
+    "dsa_files": [
+      {
+        "_id": "5bbdee2ee629140048d01aa2",
+        "_modelType": "file",
+        "created": "2018-10-10T12:18:54.958000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "ecd890f5-ba01-4998-b472-7b683bd6d7b1",
+          "svs"
+        ],
+        "itemId": "5bbdee2ee629140048d01aa1",
+        "mimeType": null,
+        "name": "TCGA-A2-A0D2-01Z-00-DX1.ECD890F5-BA01-4998-B472-7B683BD6D7B1.svs",
+        "size": 1782750153
+      }
+    ],
+    "gdc_matching": []
+  },
+  {
+    "case_id": "TCGA-A2-A0ST",
+    "dsa_item_id": "5bbdee4ee629140048d01add",
+    "dsa_files": [
+      {
+        "_id": "5bbdee4ee629140048d01ade",
+        "_modelType": "file",
+        "created": "2018-10-10T12:19:26.006000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "ae05a5db-4861-40de-b0f5-7955fc903a96",
+          "svs"
+        ],
+        "itemId": "5bbdee4ee629140048d01add",
+        "mimeType": null,
+        "name": "TCGA-A2-A0ST-01Z-00-DX1.AE05A5DB-4861-40DE-B0F5-7955FC903A96.svs",
+        "size": 722419787
+      }
+    ],
+    "gdc_matching": [
+      {
+        "id": "95ff8d8c-f9d3-40cd-8fd8-232b3163e680",
+        "cases": [
+          {
+            "submitter_id": "TCGA-A2-A0ST"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-A2-A0ST-01Z-00-DX1.AE05A5DB-4861-40DE-B0F5-7955FC903A96.svs",
+        "md5sum": "69ad852c4fde246c6e276195fc651904",
+        "file_id": "95ff8d8c-f9d3-40cd-8fd8-232b3163e680",
+        "file_size": 722419787
+      }
+    ]
+  },
+  {
+    "case_id": "TCGA-A2-A0SX",
+    "dsa_item_id": "5bbdee9fe629140048d01b75",
+    "dsa_files": [
+      {
+        "_id": "5bbdee9fe629140048d01b76",
+        "_modelType": "file",
+        "created": "2018-10-10T12:20:47.784000+00:00",
+        "creatorId": "589e026192ca9a00110fc221",
+        "exts": [
+          "219a994c-8974-4458-98fa-fb1f14868e04",
+          "svs"
+        ],
+        "itemId": "5bbdee9fe629140048d01b75",
+        "mimeType": null,
+        "name": "TCGA-A2-A0SX-01Z-00-DX1.219A994C-8974-4458-98FA-FB1F14868E04.svs",
+        "size": 1315819883
+      }
+    ],
+    "gdc_matching": [
+      {
+        "id": "64093c9e-aebe-4367-adbb-3ea85e3234c9",
+        "cases": [
+          {
+            "submitter_id": "TCGA-A2-A0SX"
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-A2-A0SX-01Z-00-DX1.219A994C-8974-4458-98FA-FB1F14868E04.svs",
+        "md5sum": "ba27c8f0c392bb069ef3ffe9b609fd39",
+        "file_id": "64093c9e-aebe-4367-adbb-3ea85e3234c9",
+        "file_size": 1315819883
+      }
+    ]
+  }
+]

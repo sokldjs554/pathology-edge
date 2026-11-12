@@ -86,3 +86,43 @@ def score_roi(probability, target, valid, threshold):
     regions = {'all': valid, 'boundary': valid & seams, 'interior': valid & ~seams}
     return {name: binary_metrics(probability >= threshold, target, region) if region.any() else None
             for name, region in regions.items()}
+
+
+def contour_agreement_region(mask, annotations, fov):
+    """Score only mask/CSV contour agreement; disagreements become ignored pixels.
+
+    Pillow integer polygons include their outline. This is a conservative audit
+    convention, not proof of the historical mask exporter's exact rasterization.
+    A case with no polylines can supply background only, not contour accuracy.
+    """
+    from PIL import Image, ImageDraw
+    annotations = list(annotations)
+    target, valid, stats = annotation_region(mask, annotations, fov)
+    canvas = Image.new('1', (mask.shape[1], mask.shape[0]))
+    draw = ImageDraw.Draw(canvas)
+    count = 0
+    for row in annotations:
+        if row['type'] != 'polyline':
+            continue
+        try:
+            x = [float(v) for v in row['coords_x'].split(',')]
+            y = [float(v) for v in row['coords_y'].split(',')]
+            if (len(x) != len(y) or len(x) < 3 or any(not math.isfinite(v) or v != int(v)
+                    or abs(v) >= 2**30 for v in x+y)):
+                raise ValueError
+        except (KeyError, TypeError, ValueError, AttributeError) as exc:
+            raise ValueError('Finite integer CSV polygon vertices required') from exc
+        draw.polygon([(int(a),int(b)) for a,b in zip(x,y)], outline=1, fill=1)
+        count += 1
+    contours = np.asarray(canvas, dtype=bool)
+    unsupported = valid & target & ~contours
+    contradictory = valid & ~target & contours
+    stats.update(base_valid_pixels=int(valid.sum()), polyline_records=count,
+                 unsupported_foreground_pixels=int(unsupported.sum()),
+                 contradictory_background_pixels=int(contradictory.sum()))
+    valid = valid & ~(unsupported | contradictory)
+    if not valid.any():
+        raise ValueError('No mask/CSV agreement pixels remain')
+    stats.update(valid_pixels=int(valid.sum()), valid_fraction=float(valid.mean()),
+                 ignored_pixels=int((~valid).sum()), foreground_valid_pixels=int((target&valid).sum()))
+    return target, valid, stats

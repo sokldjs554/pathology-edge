@@ -1,0 +1,6083 @@
+{
+  "verified_utc": "2026-11-12T04:25:17.344399+00:00",
+  "verifier_sha256": "328ece11aedf5c86a4834674cb194b91c40cd2063a60e46cc612e691af7e1cf6",
+  "results_sha256": "9fc4282208ff2ed4d172c682e1f6e54496bac23ddfdd13800f312a338782c754",
+  "unchanged_hashes": {
+    "protocol_sha256": true,
+    "strict_protocol_sha256": true,
+    "canonicalizer_sha256": true,
+    "canonical_points_and_duplicate_map_sha256": true,
+    "input_manifest_sha256": true,
+    "input_audit_sha256": true,
+    "model_sha256": true,
+    "feature_module_sha256": true,
+    "runner_sha256": true,
+    "inference_lock_sha256": true,
+    "private_predictions_sha256": true
+  },
+  "source_input_files_rehashed_crc32_size_sha256": 1206,
+  "original_HDF5_to_canonical_points_labels_and_duplicate_map_independently_verified": true,
+  "strict_failure_audit_recounted_from_original_HDF5": true,
+  "saved_probability_argmax_verified": true,
+  "independent_of_project_metric_implementation": true,
+  "per_image_metrics_ratios_and_pixel_hashes_verified": 402,
+  "groups": {
+    "all_402": {
+      "image_count": 402,
+      "cell_count": 65165,
+      "all_metrics_ratios_and_extrema_recounted": true
+    },
+    "new_392": {
+      "image_count": 392,
+      "cell_count": 63789,
+      "all_metrics_ratios_and_extrema_recounted": true
+    },
+    "previous_10": {
+      "image_count": 10,
+      "cell_count": 1376,
+      "all_metrics_ratios_and_extrema_recounted": true
+    },
+    "clean_336": {
+      "image_count": 336,
+      "cell_count": 53826,
+      "all_metrics_ratios_and_extrema_recounted": true
+    },
+    "affected_66": {
+      "image_count": 66,
+      "cell_count": 11339,
+      "all_metrics_ratios_and_extrema_recounted": true
+    }
+  },
+  "per_image_counts": [
+    {
+      "image": "BCData/images/test/0.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 138,
+      "duplicate_excess": 0,
+      "gt_positive": 32,
+      "gt_negative": 106,
+      "predicted_counts": [
+        28,
+        6,
+        25,
+        79
+      ]
+    },
+    {
+      "image": "BCData/images/test/1.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 19,
+      "gt_negative": 90,
+      "predicted_counts": [
+        14,
+        13,
+        8,
+        74
+      ]
+    },
+    {
+      "image": "BCData/images/test/10.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 98,
+      "duplicate_excess": 0,
+      "gt_positive": 45,
+      "gt_negative": 53,
+      "predicted_counts": [
+        25,
+        8,
+        34,
+        31
+      ]
+    },
+    {
+      "image": "BCData/images/test/100.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 269,
+      "duplicate_excess": 0,
+      "gt_positive": 143,
+      "gt_negative": 126,
+      "predicted_counts": [
+        107,
+        20,
+        109,
+        33
+      ]
+    },
+    {
+      "image": "BCData/images/test/101.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 146,
+      "duplicate_excess": 0,
+      "gt_positive": 108,
+      "gt_negative": 38,
+      "predicted_counts": [
+        60,
+        15,
+        26,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/102.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 153,
+      "duplicate_excess": 0,
+      "gt_positive": 100,
+      "gt_negative": 53,
+      "predicted_counts": [
+        67,
+        12,
+        35,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/103.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 151,
+      "duplicate_excess": 0,
+      "gt_positive": 116,
+      "gt_negative": 35,
+      "predicted_counts": [
+        68,
+        11,
+        44,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/104.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 120,
+      "duplicate_excess": 0,
+      "gt_positive": 110,
+      "gt_negative": 10,
+      "predicted_counts": [
+        55,
+        13,
+        18,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/105.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 117,
+      "duplicate_excess": 0,
+      "gt_positive": 81,
+      "gt_negative": 36,
+      "predicted_counts": [
+        44,
+        10,
+        29,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/106.png",
+      "cohort": "previous_10",
+      "source_quality": "clean_336",
+      "raw_records": 75,
+      "duplicate_excess": 0,
+      "gt_positive": 49,
+      "gt_negative": 26,
+      "predicted_counts": [
+        44,
+        2,
+        11,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/107.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 76,
+      "duplicate_excess": 0,
+      "gt_positive": 54,
+      "gt_negative": 22,
+      "predicted_counts": [
+        27,
+        3,
+        10,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/108.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 88,
+      "duplicate_excess": 0,
+      "gt_positive": 73,
+      "gt_negative": 15,
+      "predicted_counts": [
+        37,
+        8,
+        11,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/109.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 133,
+      "duplicate_excess": 0,
+      "gt_positive": 104,
+      "gt_negative": 29,
+      "predicted_counts": [
+        50,
+        14,
+        17,
+        52
+      ]
+    },
+    {
+      "image": "BCData/images/test/11.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 94,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 65,
+      "predicted_counts": [
+        31,
+        15,
+        6,
+        42
+      ]
+    },
+    {
+      "image": "BCData/images/test/110.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 118,
+      "duplicate_excess": 2,
+      "gt_positive": 93,
+      "gt_negative": 23,
+      "predicted_counts": [
+        41,
+        15,
+        25,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/111.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 213,
+      "duplicate_excess": 0,
+      "gt_positive": 162,
+      "gt_negative": 51,
+      "predicted_counts": [
+        89,
+        21,
+        53,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/112.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 250,
+      "duplicate_excess": 0,
+      "gt_positive": 141,
+      "gt_negative": 109,
+      "predicted_counts": [
+        98,
+        21,
+        82,
+        49
+      ]
+    },
+    {
+      "image": "BCData/images/test/113.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 286,
+      "duplicate_excess": 0,
+      "gt_positive": 189,
+      "gt_negative": 97,
+      "predicted_counts": [
+        115,
+        19,
+        83,
+        69
+      ]
+    },
+    {
+      "image": "BCData/images/test/114.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 122,
+      "duplicate_excess": 0,
+      "gt_positive": 51,
+      "gt_negative": 71,
+      "predicted_counts": [
+        42,
+        8,
+        54,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/115.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 126,
+      "duplicate_excess": 0,
+      "gt_positive": 63,
+      "gt_negative": 63,
+      "predicted_counts": [
+        42,
+        12,
+        55,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/116.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 124,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 78,
+      "predicted_counts": [
+        46,
+        4,
+        60,
+        14
+      ]
+    },
+    {
+      "image": "BCData/images/test/117.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 168,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 115,
+      "predicted_counts": [
+        60,
+        5,
+        63,
+        40
+      ]
+    },
+    {
+      "image": "BCData/images/test/118.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 174,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 121,
+      "predicted_counts": [
+        65,
+        9,
+        71,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/119.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 166,
+      "duplicate_excess": 0,
+      "gt_positive": 58,
+      "gt_negative": 108,
+      "predicted_counts": [
+        63,
+        7,
+        66,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/12.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 152,
+      "duplicate_excess": 0,
+      "gt_positive": 70,
+      "gt_negative": 82,
+      "predicted_counts": [
+        44,
+        10,
+        36,
+        62
+      ]
+    },
+    {
+      "image": "BCData/images/test/120.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 172,
+      "duplicate_excess": 0,
+      "gt_positive": 48,
+      "gt_negative": 124,
+      "predicted_counts": [
+        55,
+        10,
+        61,
+        46
+      ]
+    },
+    {
+      "image": "BCData/images/test/121.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 163,
+      "duplicate_excess": 0,
+      "gt_positive": 41,
+      "gt_negative": 122,
+      "predicted_counts": [
+        75,
+        2,
+        48,
+        38
+      ]
+    },
+    {
+      "image": "BCData/images/test/122.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 198,
+      "duplicate_excess": 0,
+      "gt_positive": 70,
+      "gt_negative": 128,
+      "predicted_counts": [
+        73,
+        14,
+        100,
+        11
+      ]
+    },
+    {
+      "image": "BCData/images/test/123.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 222,
+      "duplicate_excess": 0,
+      "gt_positive": 157,
+      "gt_negative": 65,
+      "predicted_counts": [
+        110,
+        19,
+        77,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/124.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 179,
+      "duplicate_excess": 0,
+      "gt_positive": 96,
+      "gt_negative": 83,
+      "predicted_counts": [
+        95,
+        12,
+        60,
+        12
+      ]
+    },
+    {
+      "image": "BCData/images/test/125.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 195,
+      "duplicate_excess": 0,
+      "gt_positive": 121,
+      "gt_negative": 74,
+      "predicted_counts": [
+        65,
+        20,
+        67,
+        43
+      ]
+    },
+    {
+      "image": "BCData/images/test/126.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 226,
+      "duplicate_excess": 0,
+      "gt_positive": 118,
+      "gt_negative": 108,
+      "predicted_counts": [
+        69,
+        20,
+        62,
+        75
+      ]
+    },
+    {
+      "image": "BCData/images/test/127.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 210,
+      "duplicate_excess": 0,
+      "gt_positive": 91,
+      "gt_negative": 119,
+      "predicted_counts": [
+        59,
+        12,
+        84,
+        55
+      ]
+    },
+    {
+      "image": "BCData/images/test/128.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 207,
+      "duplicate_excess": 0,
+      "gt_positive": 122,
+      "gt_negative": 85,
+      "predicted_counts": [
+        81,
+        14,
+        73,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/129.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 208,
+      "duplicate_excess": 0,
+      "gt_positive": 75,
+      "gt_negative": 133,
+      "predicted_counts": [
+        94,
+        11,
+        54,
+        49
+      ]
+    },
+    {
+      "image": "BCData/images/test/13.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 153,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 100,
+      "predicted_counts": [
+        31,
+        16,
+        22,
+        84
+      ]
+    },
+    {
+      "image": "BCData/images/test/130.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 214,
+      "duplicate_excess": 0,
+      "gt_positive": 74,
+      "gt_negative": 140,
+      "predicted_counts": [
+        86,
+        4,
+        73,
+        51
+      ]
+    },
+    {
+      "image": "BCData/images/test/131.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 115,
+      "duplicate_excess": 0,
+      "gt_positive": 81,
+      "gt_negative": 34,
+      "predicted_counts": [
+        48,
+        6,
+        48,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/132.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 216,
+      "duplicate_excess": 0,
+      "gt_positive": 77,
+      "gt_negative": 139,
+      "predicted_counts": [
+        66,
+        17,
+        117,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/133.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 136,
+      "duplicate_excess": 0,
+      "gt_positive": 32,
+      "gt_negative": 104,
+      "predicted_counts": [
+        63,
+        9,
+        48,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/134.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 143,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 107,
+      "predicted_counts": [
+        59,
+        9,
+        45,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/135.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 214,
+      "duplicate_excess": 0,
+      "gt_positive": 68,
+      "gt_negative": 146,
+      "predicted_counts": [
+        72,
+        8,
+        103,
+        31
+      ]
+    },
+    {
+      "image": "BCData/images/test/136.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 123,
+      "duplicate_excess": 0,
+      "gt_positive": 44,
+      "gt_negative": 79,
+      "predicted_counts": [
+        33,
+        8,
+        68,
+        14
+      ]
+    },
+    {
+      "image": "BCData/images/test/137.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 123,
+      "duplicate_excess": 0,
+      "gt_positive": 20,
+      "gt_negative": 103,
+      "predicted_counts": [
+        25,
+        6,
+        85,
+        7
+      ]
+    },
+    {
+      "image": "BCData/images/test/138.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 176,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 140,
+      "predicted_counts": [
+        45,
+        6,
+        90,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/139.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 259,
+      "duplicate_excess": 0,
+      "gt_positive": 61,
+      "gt_negative": 198,
+      "predicted_counts": [
+        67,
+        18,
+        114,
+        60
+      ]
+    },
+    {
+      "image": "BCData/images/test/14.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 129,
+      "duplicate_excess": 0,
+      "gt_positive": 51,
+      "gt_negative": 78,
+      "predicted_counts": [
+        34,
+        16,
+        18,
+        61
+      ]
+    },
+    {
+      "image": "BCData/images/test/140.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 226,
+      "duplicate_excess": 0,
+      "gt_positive": 131,
+      "gt_negative": 95,
+      "predicted_counts": [
+        90,
+        16,
+        95,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/141.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 179,
+      "duplicate_excess": 0,
+      "gt_positive": 119,
+      "gt_negative": 60,
+      "predicted_counts": [
+        70,
+        19,
+        78,
+        12
+      ]
+    },
+    {
+      "image": "BCData/images/test/142.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 157,
+      "duplicate_excess": 0,
+      "gt_positive": 106,
+      "gt_negative": 51,
+      "predicted_counts": [
+        68,
+        22,
+        60,
+        7
+      ]
+    },
+    {
+      "image": "BCData/images/test/143.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 144,
+      "duplicate_excess": 0,
+      "gt_positive": 89,
+      "gt_negative": 55,
+      "predicted_counts": [
+        79,
+        15,
+        39,
+        11
+      ]
+    },
+    {
+      "image": "BCData/images/test/144.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 186,
+      "duplicate_excess": 0,
+      "gt_positive": 108,
+      "gt_negative": 78,
+      "predicted_counts": [
+        73,
+        16,
+        73,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/145.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 248,
+      "duplicate_excess": 0,
+      "gt_positive": 124,
+      "gt_negative": 124,
+      "predicted_counts": [
+        114,
+        16,
+        90,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/146.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 212,
+      "duplicate_excess": 0,
+      "gt_positive": 110,
+      "gt_negative": 102,
+      "predicted_counts": [
+        94,
+        18,
+        76,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/147.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 241,
+      "duplicate_excess": 0,
+      "gt_positive": 107,
+      "gt_negative": 134,
+      "predicted_counts": [
+        100,
+        24,
+        85,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/148.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 196,
+      "duplicate_excess": 0,
+      "gt_positive": 138,
+      "gt_negative": 58,
+      "predicted_counts": [
+        85,
+        23,
+        72,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/149.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 246,
+      "duplicate_excess": 0,
+      "gt_positive": 89,
+      "gt_negative": 157,
+      "predicted_counts": [
+        98,
+        33,
+        75,
+        40
+      ]
+    },
+    {
+      "image": "BCData/images/test/15.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 265,
+      "duplicate_excess": 0,
+      "gt_positive": 122,
+      "gt_negative": 143,
+      "predicted_counts": [
+        73,
+        17,
+        75,
+        100
+      ]
+    },
+    {
+      "image": "BCData/images/test/150.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 207,
+      "duplicate_excess": 0,
+      "gt_positive": 91,
+      "gt_negative": 116,
+      "predicted_counts": [
+        106,
+        18,
+        64,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/151.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 162,
+      "duplicate_excess": 0,
+      "gt_positive": 60,
+      "gt_negative": 102,
+      "predicted_counts": [
+        39,
+        6,
+        95,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/152.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 204,
+      "duplicate_excess": 0,
+      "gt_positive": 79,
+      "gt_negative": 125,
+      "predicted_counts": [
+        51,
+        5,
+        112,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/153.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 134,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 88,
+      "predicted_counts": [
+        47,
+        5,
+        58,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/154.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 119,
+      "duplicate_excess": 0,
+      "gt_positive": 40,
+      "gt_negative": 79,
+      "predicted_counts": [
+        55,
+        9,
+        42,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/155.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 122,
+      "duplicate_excess": 0,
+      "gt_positive": 39,
+      "gt_negative": 83,
+      "predicted_counts": [
+        39,
+        6,
+        53,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/156.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 95,
+      "duplicate_excess": 0,
+      "gt_positive": 31,
+      "gt_negative": 64,
+      "predicted_counts": [
+        37,
+        5,
+        38,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/157.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 129,
+      "duplicate_excess": 0,
+      "gt_positive": 66,
+      "gt_negative": 63,
+      "predicted_counts": [
+        69,
+        5,
+        34,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/158.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 161,
+      "duplicate_excess": 0,
+      "gt_positive": 92,
+      "gt_negative": 69,
+      "predicted_counts": [
+        53,
+        3,
+        54,
+        51
+      ]
+    },
+    {
+      "image": "BCData/images/test/159.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 218,
+      "duplicate_excess": 0,
+      "gt_positive": 125,
+      "gt_negative": 93,
+      "predicted_counts": [
+        58,
+        25,
+        85,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/16.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 125,
+      "duplicate_excess": 0,
+      "gt_positive": 58,
+      "gt_negative": 67,
+      "predicted_counts": [
+        42,
+        11,
+        19,
+        53
+      ]
+    },
+    {
+      "image": "BCData/images/test/160.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 262,
+      "duplicate_excess": 0,
+      "gt_positive": 173,
+      "gt_negative": 89,
+      "predicted_counts": [
+        77,
+        22,
+        89,
+        74
+      ]
+    },
+    {
+      "image": "BCData/images/test/161.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 252,
+      "duplicate_excess": 0,
+      "gt_positive": 66,
+      "gt_negative": 186,
+      "predicted_counts": [
+        49,
+        14,
+        148,
+        41
+      ]
+    },
+    {
+      "image": "BCData/images/test/162.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 250,
+      "duplicate_excess": 0,
+      "gt_positive": 154,
+      "gt_negative": 96,
+      "predicted_counts": [
+        85,
+        16,
+        93,
+        56
+      ]
+    },
+    {
+      "image": "BCData/images/test/163.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 55,
+      "duplicate_excess": 1,
+      "gt_positive": 47,
+      "gt_negative": 7,
+      "predicted_counts": [
+        24,
+        2,
+        11,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/164.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 164,
+      "duplicate_excess": 2,
+      "gt_positive": 24,
+      "gt_negative": 138,
+      "predicted_counts": [
+        74,
+        22,
+        47,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/165.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 25,
+      "duplicate_excess": 0,
+      "gt_positive": 6,
+      "gt_negative": 19,
+      "predicted_counts": [
+        6,
+        3,
+        12,
+        4
+      ]
+    },
+    {
+      "image": "BCData/images/test/166.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 38,
+      "duplicate_excess": 0,
+      "gt_positive": 6,
+      "gt_negative": 32,
+      "predicted_counts": [
+        9,
+        0,
+        21,
+        8
+      ]
+    },
+    {
+      "image": "BCData/images/test/167.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 91,
+      "duplicate_excess": 5,
+      "gt_positive": 8,
+      "gt_negative": 78,
+      "predicted_counts": [
+        28,
+        23,
+        16,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/168.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 79,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 68,
+      "predicted_counts": [
+        10,
+        4,
+        45,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/169.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 138,
+      "duplicate_excess": 1,
+      "gt_positive": 10,
+      "gt_negative": 127,
+      "predicted_counts": [
+        7,
+        1,
+        99,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/17.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 121,
+      "duplicate_excess": 0,
+      "gt_positive": 40,
+      "gt_negative": 81,
+      "predicted_counts": [
+        27,
+        16,
+        16,
+        62
+      ]
+    },
+    {
+      "image": "BCData/images/test/170.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 284,
+      "duplicate_excess": 0,
+      "gt_positive": 80,
+      "gt_negative": 204,
+      "predicted_counts": [
+        57,
+        35,
+        36,
+        156
+      ]
+    },
+    {
+      "image": "BCData/images/test/171.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 130,
+      "duplicate_excess": 0,
+      "gt_positive": 34,
+      "gt_negative": 96,
+      "predicted_counts": [
+        44,
+        12,
+        23,
+        51
+      ]
+    },
+    {
+      "image": "BCData/images/test/172.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 302,
+      "duplicate_excess": 0,
+      "gt_positive": 59,
+      "gt_negative": 243,
+      "predicted_counts": [
+        36,
+        23,
+        37,
+        206
+      ]
+    },
+    {
+      "image": "BCData/images/test/173.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 212,
+      "duplicate_excess": 0,
+      "gt_positive": 61,
+      "gt_negative": 151,
+      "predicted_counts": [
+        61,
+        20,
+        25,
+        106
+      ]
+    },
+    {
+      "image": "BCData/images/test/174.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 111,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 82,
+      "predicted_counts": [
+        33,
+        17,
+        30,
+        31
+      ]
+    },
+    {
+      "image": "BCData/images/test/175.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 195,
+      "duplicate_excess": 1,
+      "gt_positive": 26,
+      "gt_negative": 168,
+      "predicted_counts": [
+        15,
+        29,
+        10,
+        140
+      ]
+    },
+    {
+      "image": "BCData/images/test/176.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 215,
+      "duplicate_excess": 6,
+      "gt_positive": 45,
+      "gt_negative": 164,
+      "predicted_counts": [
+        39,
+        15,
+        59,
+        96
+      ]
+    },
+    {
+      "image": "BCData/images/test/177.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 166,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 113,
+      "predicted_counts": [
+        62,
+        10,
+        32,
+        62
+      ]
+    },
+    {
+      "image": "BCData/images/test/178.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 156,
+      "duplicate_excess": 0,
+      "gt_positive": 44,
+      "gt_negative": 112,
+      "predicted_counts": [
+        47,
+        35,
+        14,
+        60
+      ]
+    },
+    {
+      "image": "BCData/images/test/179.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 211,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 165,
+      "predicted_counts": [
+        56,
+        27,
+        21,
+        107
+      ]
+    },
+    {
+      "image": "BCData/images/test/18.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 84,
+      "duplicate_excess": 0,
+      "gt_positive": 67,
+      "gt_negative": 17,
+      "predicted_counts": [
+        30,
+        11,
+        21,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/180.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 139,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 103,
+      "predicted_counts": [
+        41,
+        10,
+        16,
+        72
+      ]
+    },
+    {
+      "image": "BCData/images/test/181.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 174,
+      "duplicate_excess": 0,
+      "gt_positive": 47,
+      "gt_negative": 127,
+      "predicted_counts": [
+        30,
+        32,
+        22,
+        90
+      ]
+    },
+    {
+      "image": "BCData/images/test/182.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 219,
+      "duplicate_excess": 0,
+      "gt_positive": 35,
+      "gt_negative": 184,
+      "predicted_counts": [
+        39,
+        13,
+        97,
+        70
+      ]
+    },
+    {
+      "image": "BCData/images/test/183.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 194,
+      "duplicate_excess": 0,
+      "gt_positive": 35,
+      "gt_negative": 159,
+      "predicted_counts": [
+        31,
+        16,
+        57,
+        90
+      ]
+    },
+    {
+      "image": "BCData/images/test/184.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 177,
+      "duplicate_excess": 0,
+      "gt_positive": 30,
+      "gt_negative": 147,
+      "predicted_counts": [
+        18,
+        1,
+        68,
+        90
+      ]
+    },
+    {
+      "image": "BCData/images/test/185.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 248,
+      "duplicate_excess": 1,
+      "gt_positive": 28,
+      "gt_negative": 219,
+      "predicted_counts": [
+        16,
+        4,
+        81,
+        146
+      ]
+    },
+    {
+      "image": "BCData/images/test/186.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 116,
+      "duplicate_excess": 1,
+      "gt_positive": 90,
+      "gt_negative": 25,
+      "predicted_counts": [
+        58,
+        17,
+        31,
+        9
+      ]
+    },
+    {
+      "image": "BCData/images/test/187.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 155,
+      "duplicate_excess": 0,
+      "gt_positive": 30,
+      "gt_negative": 125,
+      "predicted_counts": [
+        11,
+        5,
+        33,
+        106
+      ]
+    },
+    {
+      "image": "BCData/images/test/188.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 155,
+      "duplicate_excess": 1,
+      "gt_positive": 47,
+      "gt_negative": 107,
+      "predicted_counts": [
+        29,
+        2,
+        34,
+        89
+      ]
+    },
+    {
+      "image": "BCData/images/test/189.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 127,
+      "duplicate_excess": 0,
+      "gt_positive": 34,
+      "gt_negative": 93,
+      "predicted_counts": [
+        35,
+        14,
+        14,
+        64
+      ]
+    },
+    {
+      "image": "BCData/images/test/19.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 77,
+      "duplicate_excess": 0,
+      "gt_positive": 58,
+      "gt_negative": 19,
+      "predicted_counts": [
+        29,
+        9,
+        20,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/190.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 105,
+      "duplicate_excess": 0,
+      "gt_positive": 34,
+      "gt_negative": 71,
+      "predicted_counts": [
+        45,
+        14,
+        11,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/191.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 160,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 107,
+      "predicted_counts": [
+        77,
+        15,
+        30,
+        38
+      ]
+    },
+    {
+      "image": "BCData/images/test/192.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 112,
+      "duplicate_excess": 0,
+      "gt_positive": 51,
+      "gt_negative": 61,
+      "predicted_counts": [
+        47,
+        21,
+        28,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/193.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 149,
+      "duplicate_excess": 0,
+      "gt_positive": 39,
+      "gt_negative": 110,
+      "predicted_counts": [
+        52,
+        7,
+        28,
+        62
+      ]
+    },
+    {
+      "image": "BCData/images/test/194.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 161,
+      "duplicate_excess": 0,
+      "gt_positive": 41,
+      "gt_negative": 120,
+      "predicted_counts": [
+        54,
+        22,
+        59,
+        26
+      ]
+    },
+    {
+      "image": "BCData/images/test/195.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 214,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 168,
+      "predicted_counts": [
+        77,
+        24,
+        86,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/196.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 248,
+      "duplicate_excess": 0,
+      "gt_positive": 66,
+      "gt_negative": 182,
+      "predicted_counts": [
+        72,
+        29,
+        100,
+        47
+      ]
+    },
+    {
+      "image": "BCData/images/test/197.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 118,
+      "duplicate_excess": 0,
+      "gt_positive": 34,
+      "gt_negative": 84,
+      "predicted_counts": [
+        40,
+        15,
+        43,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/198.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 135,
+      "duplicate_excess": 0,
+      "gt_positive": 71,
+      "gt_negative": 64,
+      "predicted_counts": [
+        41,
+        13,
+        45,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/199.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 217,
+      "duplicate_excess": 0,
+      "gt_positive": 45,
+      "gt_negative": 172,
+      "predicted_counts": [
+        96,
+        15,
+        71,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/2.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 62,
+      "duplicate_excess": 0,
+      "gt_positive": 44,
+      "gt_negative": 18,
+      "predicted_counts": [
+        20,
+        5,
+        17,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/20.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 65,
+      "gt_negative": 44,
+      "predicted_counts": [
+        37,
+        12,
+        17,
+        43
+      ]
+    },
+    {
+      "image": "BCData/images/test/200.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 192,
+      "duplicate_excess": 0,
+      "gt_positive": 33,
+      "gt_negative": 159,
+      "predicted_counts": [
+        81,
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "image": "BCData/images/test/201.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 177,
+      "duplicate_excess": 0,
+      "gt_positive": 42,
+      "gt_negative": 135,
+      "predicted_counts": [
+        97,
+        20,
+        39,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/202.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 122,
+      "duplicate_excess": 0,
+      "gt_positive": 17,
+      "gt_negative": 105,
+      "predicted_counts": [
+        27,
+        24,
+        26,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/203.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 201,
+      "duplicate_excess": 0,
+      "gt_positive": 47,
+      "gt_negative": 154,
+      "predicted_counts": [
+        73,
+        18,
+        78,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/204.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 217,
+      "duplicate_excess": 0,
+      "gt_positive": 154,
+      "gt_negative": 63,
+      "predicted_counts": [
+        112,
+        29,
+        63,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/205.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 188,
+      "duplicate_excess": 0,
+      "gt_positive": 132,
+      "gt_negative": 56,
+      "predicted_counts": [
+        98,
+        17,
+        52,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/206.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 278,
+      "duplicate_excess": 0,
+      "gt_positive": 49,
+      "gt_negative": 229,
+      "predicted_counts": [
+        29,
+        32,
+        22,
+        195
+      ]
+    },
+    {
+      "image": "BCData/images/test/207.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 175,
+      "duplicate_excess": 0,
+      "gt_positive": 63,
+      "gt_negative": 112,
+      "predicted_counts": [
+        43,
+        18,
+        23,
+        91
+      ]
+    },
+    {
+      "image": "BCData/images/test/208.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 164,
+      "duplicate_excess": 1,
+      "gt_positive": 120,
+      "gt_negative": 43,
+      "predicted_counts": [
+        94,
+        13,
+        36,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/209.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 176,
+      "duplicate_excess": 0,
+      "gt_positive": 145,
+      "gt_negative": 31,
+      "predicted_counts": [
+        87,
+        33,
+        29,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/21.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 123,
+      "duplicate_excess": 0,
+      "gt_positive": 30,
+      "gt_negative": 93,
+      "predicted_counts": [
+        28,
+        26,
+        13,
+        56
+      ]
+    },
+    {
+      "image": "BCData/images/test/210.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 230,
+      "duplicate_excess": 0,
+      "gt_positive": 98,
+      "gt_negative": 132,
+      "predicted_counts": [
+        90,
+        19,
+        94,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/211.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 209,
+      "duplicate_excess": 0,
+      "gt_positive": 101,
+      "gt_negative": 108,
+      "predicted_counts": [
+        72,
+        16,
+        72,
+        49
+      ]
+    },
+    {
+      "image": "BCData/images/test/212.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 162,
+      "duplicate_excess": 0,
+      "gt_positive": 78,
+      "gt_negative": 84,
+      "predicted_counts": [
+        77,
+        5,
+        61,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/213.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 137,
+      "duplicate_excess": 0,
+      "gt_positive": 87,
+      "gt_negative": 50,
+      "predicted_counts": [
+        49,
+        17,
+        63,
+        8
+      ]
+    },
+    {
+      "image": "BCData/images/test/214.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 151,
+      "duplicate_excess": 0,
+      "gt_positive": 88,
+      "gt_negative": 63,
+      "predicted_counts": [
+        54,
+        11,
+        80,
+        6
+      ]
+    },
+    {
+      "image": "BCData/images/test/215.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 153,
+      "duplicate_excess": 0,
+      "gt_positive": 38,
+      "gt_negative": 115,
+      "predicted_counts": [
+        29,
+        19,
+        84,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/216.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 254,
+      "duplicate_excess": 0,
+      "gt_positive": 48,
+      "gt_negative": 206,
+      "predicted_counts": [
+        46,
+        8,
+        177,
+        23
+      ]
+    },
+    {
+      "image": "BCData/images/test/217.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 194,
+      "duplicate_excess": 0,
+      "gt_positive": 59,
+      "gt_negative": 135,
+      "predicted_counts": [
+        56,
+        12,
+        102,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/218.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 80,
+      "predicted_counts": [
+        31,
+        11,
+        32,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/219.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 100,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 64,
+      "predicted_counts": [
+        31,
+        10,
+        41,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/22.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 146,
+      "duplicate_excess": 0,
+      "gt_positive": 76,
+      "gt_negative": 70,
+      "predicted_counts": [
+        43,
+        18,
+        25,
+        60
+      ]
+    },
+    {
+      "image": "BCData/images/test/220.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 126,
+      "duplicate_excess": 0,
+      "gt_positive": 57,
+      "gt_negative": 69,
+      "predicted_counts": [
+        44,
+        12,
+        44,
+        26
+      ]
+    },
+    {
+      "image": "BCData/images/test/221.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 103,
+      "duplicate_excess": 0,
+      "gt_positive": 47,
+      "gt_negative": 56,
+      "predicted_counts": [
+        34,
+        10,
+        37,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/222.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 91,
+      "duplicate_excess": 0,
+      "gt_positive": 21,
+      "gt_negative": 70,
+      "predicted_counts": [
+        28,
+        8,
+        35,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/223.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 198,
+      "duplicate_excess": 0,
+      "gt_positive": 169,
+      "gt_negative": 29,
+      "predicted_counts": [
+        102,
+        32,
+        30,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/224.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 204,
+      "duplicate_excess": 0,
+      "gt_positive": 167,
+      "gt_negative": 37,
+      "predicted_counts": [
+        96,
+        26,
+        35,
+        47
+      ]
+    },
+    {
+      "image": "BCData/images/test/225.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 165,
+      "duplicate_excess": 0,
+      "gt_positive": 133,
+      "gt_negative": 32,
+      "predicted_counts": [
+        86,
+        36,
+        23,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/226.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 202,
+      "duplicate_excess": 0,
+      "gt_positive": 153,
+      "gt_negative": 49,
+      "predicted_counts": [
+        102,
+        34,
+        31,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/227.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 125,
+      "duplicate_excess": 0,
+      "gt_positive": 92,
+      "gt_negative": 33,
+      "predicted_counts": [
+        65,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/228.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 216,
+      "duplicate_excess": 0,
+      "gt_positive": 86,
+      "gt_negative": 130,
+      "predicted_counts": [
+        57,
+        11,
+        51,
+        97
+      ]
+    },
+    {
+      "image": "BCData/images/test/229.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 293,
+      "duplicate_excess": 0,
+      "gt_positive": 64,
+      "gt_negative": 229,
+      "predicted_counts": [
+        72,
+        21,
+        35,
+        165
+      ]
+    },
+    {
+      "image": "BCData/images/test/23.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 154,
+      "duplicate_excess": 0,
+      "gt_positive": 20,
+      "gt_negative": 134,
+      "predicted_counts": [
+        13,
+        10,
+        6,
+        125
+      ]
+    },
+    {
+      "image": "BCData/images/test/230.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 154,
+      "duplicate_excess": 0,
+      "gt_positive": 71,
+      "gt_negative": 83,
+      "predicted_counts": [
+        52,
+        5,
+        72,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/231.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 228,
+      "duplicate_excess": 0,
+      "gt_positive": 112,
+      "gt_negative": 116,
+      "predicted_counts": [
+        68,
+        12,
+        99,
+        49
+      ]
+    },
+    {
+      "image": "BCData/images/test/232.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 160,
+      "duplicate_excess": 0,
+      "gt_positive": 71,
+      "gt_negative": 89,
+      "predicted_counts": [
+        62,
+        8,
+        74,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/233.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 105,
+      "duplicate_excess": 0,
+      "gt_positive": 47,
+      "gt_negative": 58,
+      "predicted_counts": [
+        37,
+        4,
+        49,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/234.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 155,
+      "duplicate_excess": 0,
+      "gt_positive": 77,
+      "gt_negative": 78,
+      "predicted_counts": [
+        69,
+        7,
+        61,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/235.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 125,
+      "duplicate_excess": 0,
+      "gt_positive": 76,
+      "gt_negative": 49,
+      "predicted_counts": [
+        47,
+        11,
+        59,
+        8
+      ]
+    },
+    {
+      "image": "BCData/images/test/236.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 170,
+      "duplicate_excess": 0,
+      "gt_positive": 54,
+      "gt_negative": 116,
+      "predicted_counts": [
+        70,
+        9,
+        68,
+        23
+      ]
+    },
+    {
+      "image": "BCData/images/test/237.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 200,
+      "duplicate_excess": 0,
+      "gt_positive": 58,
+      "gt_negative": 142,
+      "predicted_counts": [
+        70,
+        15,
+        87,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/238.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 159,
+      "duplicate_excess": 0,
+      "gt_positive": 72,
+      "gt_negative": 87,
+      "predicted_counts": [
+        58,
+        16,
+        60,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/239.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 170,
+      "duplicate_excess": 0,
+      "gt_positive": 64,
+      "gt_negative": 106,
+      "predicted_counts": [
+        65,
+        12,
+        67,
+        26
+      ]
+    },
+    {
+      "image": "BCData/images/test/24.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 144,
+      "duplicate_excess": 0,
+      "gt_positive": 55,
+      "gt_negative": 89,
+      "predicted_counts": [
+        29,
+        37,
+        25,
+        53
+      ]
+    },
+    {
+      "image": "BCData/images/test/240.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 200,
+      "duplicate_excess": 0,
+      "gt_positive": 30,
+      "gt_negative": 170,
+      "predicted_counts": [
+        27,
+        7,
+        84,
+        82
+      ]
+    },
+    {
+      "image": "BCData/images/test/241.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 164,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 128,
+      "predicted_counts": [
+        69,
+        4,
+        78,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/242.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 176,
+      "duplicate_excess": 0,
+      "gt_positive": 100,
+      "gt_negative": 76,
+      "predicted_counts": [
+        80,
+        16,
+        64,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/243.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 163,
+      "duplicate_excess": 0,
+      "gt_positive": 115,
+      "gt_negative": 48,
+      "predicted_counts": [
+        86,
+        16,
+        54,
+        7
+      ]
+    },
+    {
+      "image": "BCData/images/test/244.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 211,
+      "duplicate_excess": 0,
+      "gt_positive": 130,
+      "gt_negative": 81,
+      "predicted_counts": [
+        103,
+        22,
+        71,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/245.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 235,
+      "duplicate_excess": 0,
+      "gt_positive": 49,
+      "gt_negative": 186,
+      "predicted_counts": [
+        76,
+        6,
+        132,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/246.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 190,
+      "duplicate_excess": 0,
+      "gt_positive": 65,
+      "gt_negative": 125,
+      "predicted_counts": [
+        68,
+        6,
+        95,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/247.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 202,
+      "duplicate_excess": 0,
+      "gt_positive": 85,
+      "gt_negative": 117,
+      "predicted_counts": [
+        70,
+        15,
+        101,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/248.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 125,
+      "duplicate_excess": 0,
+      "gt_positive": 43,
+      "gt_negative": 82,
+      "predicted_counts": [
+        32,
+        4,
+        72,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/249.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 138,
+      "duplicate_excess": 0,
+      "gt_positive": 52,
+      "gt_negative": 86,
+      "predicted_counts": [
+        31,
+        10,
+        69,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/25.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 84,
+      "duplicate_excess": 0,
+      "gt_positive": 39,
+      "gt_negative": 45,
+      "predicted_counts": [
+        22,
+        12,
+        14,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/250.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 132,
+      "duplicate_excess": 0,
+      "gt_positive": 38,
+      "gt_negative": 94,
+      "predicted_counts": [
+        47,
+        3,
+        76,
+        6
+      ]
+    },
+    {
+      "image": "BCData/images/test/251.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 149,
+      "duplicate_excess": 0,
+      "gt_positive": 54,
+      "gt_negative": 95,
+      "predicted_counts": [
+        40,
+        14,
+        82,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/252.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 129,
+      "duplicate_excess": 0,
+      "gt_positive": 47,
+      "gt_negative": 82,
+      "predicted_counts": [
+        43,
+        2,
+        75,
+        9
+      ]
+    },
+    {
+      "image": "BCData/images/test/253.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 280,
+      "duplicate_excess": 0,
+      "gt_positive": 131,
+      "gt_negative": 149,
+      "predicted_counts": [
+        74,
+        15,
+        155,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/254.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 421,
+      "duplicate_excess": 0,
+      "gt_positive": 193,
+      "gt_negative": 228,
+      "predicted_counts": [
+        115,
+        28,
+        228,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/255.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 161,
+      "duplicate_excess": 0,
+      "gt_positive": 72,
+      "gt_negative": 89,
+      "predicted_counts": [
+        48,
+        9,
+        74,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/256.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 154,
+      "duplicate_excess": 0,
+      "gt_positive": 86,
+      "gt_negative": 68,
+      "predicted_counts": [
+        46,
+        7,
+        69,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/257.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 129,
+      "duplicate_excess": 0,
+      "gt_positive": 94,
+      "gt_negative": 35,
+      "predicted_counts": [
+        42,
+        12,
+        41,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/258.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 147,
+      "duplicate_excess": 0,
+      "gt_positive": 108,
+      "gt_negative": 39,
+      "predicted_counts": [
+        68,
+        12,
+        40,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/259.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 122,
+      "duplicate_excess": 0,
+      "gt_positive": 49,
+      "gt_negative": 73,
+      "predicted_counts": [
+        43,
+        6,
+        58,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/26.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 164,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 118,
+      "predicted_counts": [
+        27,
+        16,
+        19,
+        102
+      ]
+    },
+    {
+      "image": "BCData/images/test/260.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 152,
+      "duplicate_excess": 0,
+      "gt_positive": 59,
+      "gt_negative": 93,
+      "predicted_counts": [
+        50,
+        5,
+        78,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/261.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 246,
+      "duplicate_excess": 0,
+      "gt_positive": 180,
+      "gt_negative": 66,
+      "predicted_counts": [
+        85,
+        18,
+        74,
+        69
+      ]
+    },
+    {
+      "image": "BCData/images/test/262.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 101,
+      "duplicate_excess": 0,
+      "gt_positive": 17,
+      "gt_negative": 84,
+      "predicted_counts": [
+        23,
+        3,
+        59,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/263.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 95,
+      "duplicate_excess": 0,
+      "gt_positive": 14,
+      "gt_negative": 81,
+      "predicted_counts": [
+        16,
+        0,
+        75,
+        4
+      ]
+    },
+    {
+      "image": "BCData/images/test/264.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 106,
+      "duplicate_excess": 0,
+      "gt_positive": 15,
+      "gt_negative": 91,
+      "predicted_counts": [
+        27,
+        0,
+        66,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/265.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 120,
+      "duplicate_excess": 2,
+      "gt_positive": 19,
+      "gt_negative": 99,
+      "predicted_counts": [
+        14,
+        5,
+        65,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/266.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 14,
+      "gt_negative": 95,
+      "predicted_counts": [
+        16,
+        4,
+        64,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/267.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 106,
+      "duplicate_excess": 0,
+      "gt_positive": 18,
+      "gt_negative": 88,
+      "predicted_counts": [
+        26,
+        2,
+        75,
+        3
+      ]
+    },
+    {
+      "image": "BCData/images/test/268.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 108,
+      "duplicate_excess": 0,
+      "gt_positive": 20,
+      "gt_negative": 88,
+      "predicted_counts": [
+        20,
+        0,
+        64,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/269.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 88,
+      "duplicate_excess": 0,
+      "gt_positive": 21,
+      "gt_negative": 67,
+      "predicted_counts": [
+        24,
+        4,
+        46,
+        14
+      ]
+    },
+    {
+      "image": "BCData/images/test/27.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 84,
+      "duplicate_excess": 0,
+      "gt_positive": 28,
+      "gt_negative": 56,
+      "predicted_counts": [
+        15,
+        21,
+        8,
+        40
+      ]
+    },
+    {
+      "image": "BCData/images/test/270.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 86,
+      "duplicate_excess": 0,
+      "gt_positive": 13,
+      "gt_negative": 73,
+      "predicted_counts": [
+        12,
+        3,
+        49,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/271.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 95,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 84,
+      "predicted_counts": [
+        9,
+        5,
+        64,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/272.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 79,
+      "duplicate_excess": 0,
+      "gt_positive": 23,
+      "gt_negative": 56,
+      "predicted_counts": [
+        19,
+        7,
+        36,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/273.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 119,
+      "duplicate_excess": 0,
+      "gt_positive": 31,
+      "gt_negative": 88,
+      "predicted_counts": [
+        31,
+        2,
+        59,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/274.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 114,
+      "duplicate_excess": 0,
+      "gt_positive": 38,
+      "gt_negative": 76,
+      "predicted_counts": [
+        27,
+        5,
+        58,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/275.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 144,
+      "duplicate_excess": 0,
+      "gt_positive": 40,
+      "gt_negative": 104,
+      "predicted_counts": [
+        28,
+        7,
+        77,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/276.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 137,
+      "duplicate_excess": 0,
+      "gt_positive": 14,
+      "gt_negative": 123,
+      "predicted_counts": [
+        25,
+        8,
+        76,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/277.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 152,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 141,
+      "predicted_counts": [
+        15,
+        10,
+        60,
+        67
+      ]
+    },
+    {
+      "image": "BCData/images/test/278.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 130,
+      "duplicate_excess": 0,
+      "gt_positive": 7,
+      "gt_negative": 123,
+      "predicted_counts": [
+        7,
+        11,
+        74,
+        38
+      ]
+    },
+    {
+      "image": "BCData/images/test/279.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 126,
+      "duplicate_excess": 1,
+      "gt_positive": 18,
+      "gt_negative": 107,
+      "predicted_counts": [
+        22,
+        5,
+        66,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/28.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 93,
+      "duplicate_excess": 0,
+      "gt_positive": 57,
+      "gt_negative": 36,
+      "predicted_counts": [
+        43,
+        8,
+        13,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/280.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 107,
+      "duplicate_excess": 0,
+      "gt_positive": 18,
+      "gt_negative": 89,
+      "predicted_counts": [
+        11,
+        2,
+        47,
+        47
+      ]
+    },
+    {
+      "image": "BCData/images/test/281.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 117,
+      "duplicate_excess": 0,
+      "gt_positive": 25,
+      "gt_negative": 92,
+      "predicted_counts": [
+        17,
+        5,
+        66,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/282.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 144,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 108,
+      "predicted_counts": [
+        32,
+        4,
+        85,
+        23
+      ]
+    },
+    {
+      "image": "BCData/images/test/283.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 132,
+      "duplicate_excess": 0,
+      "gt_positive": 9,
+      "gt_negative": 123,
+      "predicted_counts": [
+        15,
+        7,
+        69,
+        41
+      ]
+    },
+    {
+      "image": "BCData/images/test/284.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 127,
+      "duplicate_excess": 1,
+      "gt_positive": 36,
+      "gt_negative": 90,
+      "predicted_counts": [
+        32,
+        5,
+        54,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/285.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 138,
+      "duplicate_excess": 0,
+      "gt_positive": 17,
+      "gt_negative": 121,
+      "predicted_counts": [
+        18,
+        7,
+        71,
+        42
+      ]
+    },
+    {
+      "image": "BCData/images/test/286.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 113,
+      "duplicate_excess": 0,
+      "gt_positive": 28,
+      "gt_negative": 85,
+      "predicted_counts": [
+        25,
+        5,
+        54,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/287.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 155,
+      "duplicate_excess": 0,
+      "gt_positive": 37,
+      "gt_negative": 118,
+      "predicted_counts": [
+        22,
+        5,
+        92,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/288.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 112,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 59,
+      "predicted_counts": [
+        42,
+        3,
+        52,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/289.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 28,
+      "gt_negative": 81,
+      "predicted_counts": [
+        27,
+        4,
+        54,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/29.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 136,
+      "duplicate_excess": 1,
+      "gt_positive": 6,
+      "gt_negative": 129,
+      "predicted_counts": [
+        4,
+        9,
+        1,
+        121
+      ]
+    },
+    {
+      "image": "BCData/images/test/290.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 126,
+      "duplicate_excess": 0,
+      "gt_positive": 26,
+      "gt_negative": 100,
+      "predicted_counts": [
+        25,
+        5,
+        70,
+        26
+      ]
+    },
+    {
+      "image": "BCData/images/test/291.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 111,
+      "duplicate_excess": 0,
+      "gt_positive": 13,
+      "gt_negative": 98,
+      "predicted_counts": [
+        18,
+        4,
+        33,
+        56
+      ]
+    },
+    {
+      "image": "BCData/images/test/292.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 103,
+      "duplicate_excess": 0,
+      "gt_positive": 14,
+      "gt_negative": 89,
+      "predicted_counts": [
+        16,
+        5,
+        53,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/293.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 101,
+      "duplicate_excess": 0,
+      "gt_positive": 33,
+      "gt_negative": 68,
+      "predicted_counts": [
+        26,
+        2,
+        60,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/294.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 127,
+      "duplicate_excess": 0,
+      "gt_positive": 14,
+      "gt_negative": 113,
+      "predicted_counts": [
+        18,
+        7,
+        49,
+        53
+      ]
+    },
+    {
+      "image": "BCData/images/test/295.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 98,
+      "predicted_counts": [
+        15,
+        8,
+        58,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/296.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 158,
+      "duplicate_excess": 1,
+      "gt_positive": 29,
+      "gt_negative": 128,
+      "predicted_counts": [
+        23,
+        8,
+        95,
+        31
+      ]
+    },
+    {
+      "image": "BCData/images/test/297.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 15,
+      "gt_negative": 94,
+      "predicted_counts": [
+        22,
+        2,
+        46,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/298.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 111,
+      "duplicate_excess": 0,
+      "gt_positive": 31,
+      "gt_negative": 80,
+      "predicted_counts": [
+        18,
+        5,
+        53,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/299.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 137,
+      "duplicate_excess": 1,
+      "gt_positive": 17,
+      "gt_negative": 119,
+      "predicted_counts": [
+        18,
+        4,
+        82,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/3.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 39,
+      "duplicate_excess": 0,
+      "gt_positive": 32,
+      "gt_negative": 7,
+      "predicted_counts": [
+        16,
+        3,
+        5,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/30.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 125,
+      "duplicate_excess": 0,
+      "gt_positive": 61,
+      "gt_negative": 64,
+      "predicted_counts": [
+        57,
+        13,
+        19,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/300.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 101,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 90,
+      "predicted_counts": [
+        9,
+        3,
+        53,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/301.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 138,
+      "duplicate_excess": 0,
+      "gt_positive": 13,
+      "gt_negative": 125,
+      "predicted_counts": [
+        20,
+        7,
+        61,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/302.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 107,
+      "duplicate_excess": 2,
+      "gt_positive": 17,
+      "gt_negative": 88,
+      "predicted_counts": [
+        19,
+        4,
+        30,
+        52
+      ]
+    },
+    {
+      "image": "BCData/images/test/303.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 140,
+      "duplicate_excess": 0,
+      "gt_positive": 24,
+      "gt_negative": 116,
+      "predicted_counts": [
+        19,
+        11,
+        58,
+        52
+      ]
+    },
+    {
+      "image": "BCData/images/test/304.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 127,
+      "duplicate_excess": 0,
+      "gt_positive": 16,
+      "gt_negative": 111,
+      "predicted_counts": [
+        13,
+        3,
+        68,
+        43
+      ]
+    },
+    {
+      "image": "BCData/images/test/305.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 333,
+      "duplicate_excess": 0,
+      "gt_positive": 179,
+      "gt_negative": 154,
+      "predicted_counts": [
+        114,
+        22,
+        164,
+        33
+      ]
+    },
+    {
+      "image": "BCData/images/test/306.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 263,
+      "duplicate_excess": 0,
+      "gt_positive": 123,
+      "gt_negative": 140,
+      "predicted_counts": [
+        92,
+        7,
+        131,
+        33
+      ]
+    },
+    {
+      "image": "BCData/images/test/307.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 272,
+      "duplicate_excess": 0,
+      "gt_positive": 125,
+      "gt_negative": 147,
+      "predicted_counts": [
+        86,
+        20,
+        134,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/308.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 300,
+      "duplicate_excess": 0,
+      "gt_positive": 123,
+      "gt_negative": 177,
+      "predicted_counts": [
+        74,
+        17,
+        170,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/309.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 242,
+      "duplicate_excess": 0,
+      "gt_positive": 28,
+      "gt_negative": 214,
+      "predicted_counts": [
+        45,
+        4,
+        180,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/31.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 175,
+      "duplicate_excess": 0,
+      "gt_positive": 69,
+      "gt_negative": 106,
+      "predicted_counts": [
+        36,
+        59,
+        36,
+        44
+      ]
+    },
+    {
+      "image": "BCData/images/test/310.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 232,
+      "duplicate_excess": 0,
+      "gt_positive": 26,
+      "gt_negative": 206,
+      "predicted_counts": [
+        59,
+        5,
+        153,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/311.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 166,
+      "duplicate_excess": 0,
+      "gt_positive": 64,
+      "gt_negative": 102,
+      "predicted_counts": [
+        64,
+        10,
+        69,
+        23
+      ]
+    },
+    {
+      "image": "BCData/images/test/312.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 166,
+      "duplicate_excess": 0,
+      "gt_positive": 61,
+      "gt_negative": 105,
+      "predicted_counts": [
+        73,
+        6,
+        62,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/313.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 202,
+      "duplicate_excess": 0,
+      "gt_positive": 96,
+      "gt_negative": 106,
+      "predicted_counts": [
+        103,
+        6,
+        71,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/314.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 154,
+      "duplicate_excess": 2,
+      "gt_positive": 49,
+      "gt_negative": 103,
+      "predicted_counts": [
+        38,
+        12,
+        57,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/315.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 149,
+      "duplicate_excess": 0,
+      "gt_positive": 37,
+      "gt_negative": 112,
+      "predicted_counts": [
+        32,
+        9,
+        77,
+        31
+      ]
+    },
+    {
+      "image": "BCData/images/test/316.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 168,
+      "duplicate_excess": 13,
+      "gt_positive": 41,
+      "gt_negative": 114,
+      "predicted_counts": [
+        47,
+        5,
+        64,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/317.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 135,
+      "duplicate_excess": 6,
+      "gt_positive": 37,
+      "gt_negative": 92,
+      "predicted_counts": [
+        27,
+        6,
+        56,
+        40
+      ]
+    },
+    {
+      "image": "BCData/images/test/318.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 116,
+      "duplicate_excess": 15,
+      "gt_positive": 23,
+      "gt_negative": 78,
+      "predicted_counts": [
+        21,
+        6,
+        45,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/319.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 151,
+      "duplicate_excess": 5,
+      "gt_positive": 49,
+      "gt_negative": 97,
+      "predicted_counts": [
+        38,
+        14,
+        62,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/32.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 187,
+      "duplicate_excess": 0,
+      "gt_positive": 63,
+      "gt_negative": 124,
+      "predicted_counts": [
+        43,
+        58,
+        35,
+        51
+      ]
+    },
+    {
+      "image": "BCData/images/test/320.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 130,
+      "duplicate_excess": 2,
+      "gt_positive": 15,
+      "gt_negative": 113,
+      "predicted_counts": [
+        28,
+        4,
+        58,
+        38
+      ]
+    },
+    {
+      "image": "BCData/images/test/321.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 140,
+      "duplicate_excess": 2,
+      "gt_positive": 34,
+      "gt_negative": 104,
+      "predicted_counts": [
+        34,
+        5,
+        63,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/322.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 235,
+      "duplicate_excess": 0,
+      "gt_positive": 65,
+      "gt_negative": 170,
+      "predicted_counts": [
+        43,
+        14,
+        107,
+        71
+      ]
+    },
+    {
+      "image": "BCData/images/test/323.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 142,
+      "duplicate_excess": 0,
+      "gt_positive": 30,
+      "gt_negative": 112,
+      "predicted_counts": [
+        30,
+        3,
+        70,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/324.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 99,
+      "duplicate_excess": 0,
+      "gt_positive": 19,
+      "gt_negative": 80,
+      "predicted_counts": [
+        32,
+        5,
+        44,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/325.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 140,
+      "duplicate_excess": 0,
+      "gt_positive": 45,
+      "gt_negative": 95,
+      "predicted_counts": [
+        48,
+        5,
+        63,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/326.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 173,
+      "duplicate_excess": 0,
+      "gt_positive": 64,
+      "gt_negative": 109,
+      "predicted_counts": [
+        45,
+        7,
+        76,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/327.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 194,
+      "duplicate_excess": 0,
+      "gt_positive": 79,
+      "gt_negative": 115,
+      "predicted_counts": [
+        71,
+        13,
+        75,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/328.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 149,
+      "duplicate_excess": 0,
+      "gt_positive": 69,
+      "gt_negative": 80,
+      "predicted_counts": [
+        58,
+        15,
+        52,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/329.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 168,
+      "duplicate_excess": 0,
+      "gt_positive": 62,
+      "gt_negative": 106,
+      "predicted_counts": [
+        44,
+        17,
+        73,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/33.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 158,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 112,
+      "predicted_counts": [
+        21,
+        56,
+        42,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/330.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 147,
+      "duplicate_excess": 0,
+      "gt_positive": 51,
+      "gt_negative": 96,
+      "predicted_counts": [
+        51,
+        11,
+        52,
+        33
+      ]
+    },
+    {
+      "image": "BCData/images/test/331.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 142,
+      "duplicate_excess": 0,
+      "gt_positive": 61,
+      "gt_negative": 81,
+      "predicted_counts": [
+        39,
+        13,
+        63,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/332.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 197,
+      "duplicate_excess": 4,
+      "gt_positive": 27,
+      "gt_negative": 166,
+      "predicted_counts": [
+        60,
+        8,
+        92,
+        33
+      ]
+    },
+    {
+      "image": "BCData/images/test/333.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 88,
+      "duplicate_excess": 0,
+      "gt_positive": 19,
+      "gt_negative": 69,
+      "predicted_counts": [
+        40,
+        3,
+        29,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/334.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 121,
+      "duplicate_excess": 0,
+      "gt_positive": 10,
+      "gt_negative": 111,
+      "predicted_counts": [
+        45,
+        1,
+        43,
+        32
+      ]
+    },
+    {
+      "image": "BCData/images/test/335.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 116,
+      "duplicate_excess": 0,
+      "gt_positive": 14,
+      "gt_negative": 102,
+      "predicted_counts": [
+        7,
+        2,
+        81,
+        26
+      ]
+    },
+    {
+      "image": "BCData/images/test/336.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 76,
+      "duplicate_excess": 1,
+      "gt_positive": 26,
+      "gt_negative": 49,
+      "predicted_counts": [
+        29,
+        3,
+        32,
+        11
+      ]
+    },
+    {
+      "image": "BCData/images/test/337.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 72,
+      "duplicate_excess": 1,
+      "gt_positive": 25,
+      "gt_negative": 46,
+      "predicted_counts": [
+        30,
+        3,
+        31,
+        7
+      ]
+    },
+    {
+      "image": "BCData/images/test/338.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 64,
+      "duplicate_excess": 1,
+      "gt_positive": 39,
+      "gt_negative": 24,
+      "predicted_counts": [
+        27,
+        2,
+        24,
+        10
+      ]
+    },
+    {
+      "image": "BCData/images/test/339.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 172,
+      "duplicate_excess": 0,
+      "gt_positive": 94,
+      "gt_negative": 78,
+      "predicted_counts": [
+        50,
+        8,
+        65,
+        49
+      ]
+    },
+    {
+      "image": "BCData/images/test/34.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 117,
+      "duplicate_excess": 0,
+      "gt_positive": 37,
+      "gt_negative": 80,
+      "predicted_counts": [
+        15,
+        35,
+        17,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/340.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 149,
+      "duplicate_excess": 2,
+      "gt_positive": 105,
+      "gt_negative": 42,
+      "predicted_counts": [
+        37,
+        8,
+        36,
+        66
+      ]
+    },
+    {
+      "image": "BCData/images/test/341.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 236,
+      "duplicate_excess": 0,
+      "gt_positive": 2,
+      "gt_negative": 234,
+      "predicted_counts": [
+        55,
+        3,
+        151,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/342.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 177,
+      "duplicate_excess": 0,
+      "gt_positive": 6,
+      "gt_negative": 171,
+      "predicted_counts": [
+        29,
+        2,
+        129,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/343.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 111,
+      "duplicate_excess": 1,
+      "gt_positive": 5,
+      "gt_negative": 105,
+      "predicted_counts": [
+        47,
+        1,
+        53,
+        9
+      ]
+    },
+    {
+      "image": "BCData/images/test/344.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 150,
+      "duplicate_excess": 0,
+      "gt_positive": 18,
+      "gt_negative": 132,
+      "predicted_counts": [
+        79,
+        1,
+        54,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/345.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 132,
+      "duplicate_excess": 4,
+      "gt_positive": 13,
+      "gt_negative": 115,
+      "predicted_counts": [
+        28,
+        0,
+        85,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/346.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 104,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 93,
+      "predicted_counts": [
+        20,
+        0,
+        64,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/347.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 153,
+      "duplicate_excess": 0,
+      "gt_positive": 13,
+      "gt_negative": 140,
+      "predicted_counts": [
+        30,
+        2,
+        75,
+        46
+      ]
+    },
+    {
+      "image": "BCData/images/test/348.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 111,
+      "duplicate_excess": 0,
+      "gt_positive": 11,
+      "gt_negative": 100,
+      "predicted_counts": [
+        26,
+        4,
+        45,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/349.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 79,
+      "duplicate_excess": 0,
+      "gt_positive": 9,
+      "gt_negative": 70,
+      "predicted_counts": [
+        11,
+        2,
+        38,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/35.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 119,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 83,
+      "predicted_counts": [
+        22,
+        26,
+        15,
+        56
+      ]
+    },
+    {
+      "image": "BCData/images/test/350.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 122,
+      "duplicate_excess": 0,
+      "gt_positive": 20,
+      "gt_negative": 102,
+      "predicted_counts": [
+        26,
+        4,
+        58,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/351.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 155,
+      "duplicate_excess": 0,
+      "gt_positive": 10,
+      "gt_negative": 145,
+      "predicted_counts": [
+        18,
+        4,
+        77,
+        56
+      ]
+    },
+    {
+      "image": "BCData/images/test/352.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 131,
+      "duplicate_excess": 0,
+      "gt_positive": 23,
+      "gt_negative": 108,
+      "predicted_counts": [
+        40,
+        3,
+        38,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/353.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 77,
+      "duplicate_excess": 0,
+      "gt_positive": 37,
+      "gt_negative": 40,
+      "predicted_counts": [
+        32,
+        8,
+        28,
+        9
+      ]
+    },
+    {
+      "image": "BCData/images/test/354.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 87,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 58,
+      "predicted_counts": [
+        39,
+        7,
+        31,
+        10
+      ]
+    },
+    {
+      "image": "BCData/images/test/355.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 94,
+      "duplicate_excess": 0,
+      "gt_positive": 48,
+      "gt_negative": 46,
+      "predicted_counts": [
+        39,
+        2,
+        38,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/356.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 79,
+      "duplicate_excess": 0,
+      "gt_positive": 17,
+      "gt_negative": 62,
+      "predicted_counts": [
+        41,
+        3,
+        25,
+        10
+      ]
+    },
+    {
+      "image": "BCData/images/test/357.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 83,
+      "duplicate_excess": 0,
+      "gt_positive": 17,
+      "gt_negative": 66,
+      "predicted_counts": [
+        33,
+        2,
+        37,
+        11
+      ]
+    },
+    {
+      "image": "BCData/images/test/358.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 138,
+      "duplicate_excess": 0,
+      "gt_positive": 67,
+      "gt_negative": 71,
+      "predicted_counts": [
+        58,
+        4,
+        60,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/359.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 83,
+      "duplicate_excess": 1,
+      "gt_positive": 29,
+      "gt_negative": 53,
+      "predicted_counts": [
+        38,
+        3,
+        29,
+        12
+      ]
+    },
+    {
+      "image": "BCData/images/test/36.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 418,
+      "duplicate_excess": 0,
+      "gt_positive": 79,
+      "gt_negative": 339,
+      "predicted_counts": [
+        43,
+        33,
+        53,
+        289
+      ]
+    },
+    {
+      "image": "BCData/images/test/360.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 112,
+      "duplicate_excess": 2,
+      "gt_positive": 59,
+      "gt_negative": 51,
+      "predicted_counts": [
+        44,
+        4,
+        44,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/361.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 169,
+      "duplicate_excess": 1,
+      "gt_positive": 35,
+      "gt_negative": 133,
+      "predicted_counts": [
+        39,
+        2,
+        114,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/362.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 93,
+      "duplicate_excess": 1,
+      "gt_positive": 23,
+      "gt_negative": 69,
+      "predicted_counts": [
+        19,
+        4,
+        49,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/363.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 156,
+      "duplicate_excess": 2,
+      "gt_positive": 20,
+      "gt_negative": 134,
+      "predicted_counts": [
+        35,
+        3,
+        91,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/364.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 119,
+      "duplicate_excess": 0,
+      "gt_positive": 18,
+      "gt_negative": 101,
+      "predicted_counts": [
+        20,
+        2,
+        76,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/365.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 171,
+      "duplicate_excess": 6,
+      "gt_positive": 29,
+      "gt_negative": 136,
+      "predicted_counts": [
+        25,
+        8,
+        95,
+        37
+      ]
+    },
+    {
+      "image": "BCData/images/test/366.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 146,
+      "duplicate_excess": 3,
+      "gt_positive": 36,
+      "gt_negative": 107,
+      "predicted_counts": [
+        33,
+        5,
+        84,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/367.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 250,
+      "duplicate_excess": 5,
+      "gt_positive": 0,
+      "gt_negative": 245,
+      "predicted_counts": [
+        11,
+        0,
+        206,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/368.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 176,
+      "duplicate_excess": 1,
+      "gt_positive": 23,
+      "gt_negative": 152,
+      "predicted_counts": [
+        29,
+        2,
+        118,
+        26
+      ]
+    },
+    {
+      "image": "BCData/images/test/369.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 197,
+      "duplicate_excess": 5,
+      "gt_positive": 19,
+      "gt_negative": 173,
+      "predicted_counts": [
+        15,
+        3,
+        145,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/37.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 259,
+      "duplicate_excess": 0,
+      "gt_positive": 60,
+      "gt_negative": 199,
+      "predicted_counts": [
+        35,
+        14,
+        45,
+        165
+      ]
+    },
+    {
+      "image": "BCData/images/test/370.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 203,
+      "duplicate_excess": 1,
+      "gt_positive": 15,
+      "gt_negative": 187,
+      "predicted_counts": [
+        24,
+        1,
+        141,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/371.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 198,
+      "duplicate_excess": 5,
+      "gt_positive": 12,
+      "gt_negative": 181,
+      "predicted_counts": [
+        37,
+        0,
+        138,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/372.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 262,
+      "duplicate_excess": 3,
+      "gt_positive": 4,
+      "gt_negative": 255,
+      "predicted_counts": [
+        31,
+        1,
+        197,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/373.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 307,
+      "duplicate_excess": 17,
+      "gt_positive": 34,
+      "gt_negative": 256,
+      "predicted_counts": [
+        31,
+        3,
+        227,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/374.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 279,
+      "duplicate_excess": 10,
+      "gt_positive": 38,
+      "gt_negative": 231,
+      "predicted_counts": [
+        28,
+        6,
+        216,
+        19
+      ]
+    },
+    {
+      "image": "BCData/images/test/375.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 188,
+      "duplicate_excess": 11,
+      "gt_positive": 18,
+      "gt_negative": 159,
+      "predicted_counts": [
+        14,
+        1,
+        125,
+        37
+      ]
+    },
+    {
+      "image": "BCData/images/test/376.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 216,
+      "duplicate_excess": 20,
+      "gt_positive": 13,
+      "gt_negative": 183,
+      "predicted_counts": [
+        30,
+        0,
+        143,
+        23
+      ]
+    },
+    {
+      "image": "BCData/images/test/377.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 228,
+      "duplicate_excess": 14,
+      "gt_positive": 13,
+      "gt_negative": 201,
+      "predicted_counts": [
+        28,
+        0,
+        168,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/378.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 258,
+      "duplicate_excess": 9,
+      "gt_positive": 0,
+      "gt_negative": 249,
+      "predicted_counts": [
+        28,
+        0,
+        191,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/379.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 245,
+      "duplicate_excess": 18,
+      "gt_positive": 0,
+      "gt_negative": 227,
+      "predicted_counts": [
+        31,
+        0,
+        160,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/38.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 119,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 90,
+      "predicted_counts": [
+        14,
+        29,
+        24,
+        52
+      ]
+    },
+    {
+      "image": "BCData/images/test/380.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 190,
+      "duplicate_excess": 0,
+      "gt_positive": 2,
+      "gt_negative": 188,
+      "predicted_counts": [
+        25,
+        0,
+        151,
+        14
+      ]
+    },
+    {
+      "image": "BCData/images/test/381.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 219,
+      "duplicate_excess": 0,
+      "gt_positive": 2,
+      "gt_negative": 217,
+      "predicted_counts": [
+        24,
+        2,
+        157,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/382.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 206,
+      "duplicate_excess": 1,
+      "gt_positive": 13,
+      "gt_negative": 192,
+      "predicted_counts": [
+        15,
+        5,
+        157,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/383.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 205,
+      "duplicate_excess": 6,
+      "gt_positive": 8,
+      "gt_negative": 191,
+      "predicted_counts": [
+        20,
+        0,
+        154,
+        25
+      ]
+    },
+    {
+      "image": "BCData/images/test/384.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 179,
+      "duplicate_excess": 4,
+      "gt_positive": 10,
+      "gt_negative": 165,
+      "predicted_counts": [
+        35,
+        3,
+        120,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/385.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 209,
+      "duplicate_excess": 4,
+      "gt_positive": 5,
+      "gt_negative": 200,
+      "predicted_counts": [
+        43,
+        1,
+        150,
+        11
+      ]
+    },
+    {
+      "image": "BCData/images/test/386.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 187,
+      "duplicate_excess": 1,
+      "gt_positive": 7,
+      "gt_negative": 179,
+      "predicted_counts": [
+        12,
+        2,
+        127,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/387.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 116,
+      "duplicate_excess": 0,
+      "gt_positive": 3,
+      "gt_negative": 113,
+      "predicted_counts": [
+        4,
+        21,
+        0,
+        91
+      ]
+    },
+    {
+      "image": "BCData/images/test/388.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 303,
+      "duplicate_excess": 8,
+      "gt_positive": 34,
+      "gt_negative": 261,
+      "predicted_counts": [
+        11,
+        7,
+        140,
+        137
+      ]
+    },
+    {
+      "image": "BCData/images/test/389.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 295,
+      "duplicate_excess": 6,
+      "gt_positive": 50,
+      "gt_negative": 239,
+      "predicted_counts": [
+        30,
+        4,
+        138,
+        117
+      ]
+    },
+    {
+      "image": "BCData/images/test/39.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 104,
+      "duplicate_excess": 0,
+      "gt_positive": 21,
+      "gt_negative": 83,
+      "predicted_counts": [
+        18,
+        23,
+        16,
+        47
+      ]
+    },
+    {
+      "image": "BCData/images/test/390.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 172,
+      "duplicate_excess": 4,
+      "gt_positive": 34,
+      "gt_negative": 134,
+      "predicted_counts": [
+        22,
+        5,
+        96,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/391.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 300,
+      "duplicate_excess": 2,
+      "gt_positive": 26,
+      "gt_negative": 272,
+      "predicted_counts": [
+        17,
+        2,
+        154,
+        125
+      ]
+    },
+    {
+      "image": "BCData/images/test/392.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 266,
+      "duplicate_excess": 1,
+      "gt_positive": 82,
+      "gt_negative": 183,
+      "predicted_counts": [
+        42,
+        11,
+        129,
+        83
+      ]
+    },
+    {
+      "image": "BCData/images/test/393.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 320,
+      "duplicate_excess": 2,
+      "gt_positive": 29,
+      "gt_negative": 289,
+      "predicted_counts": [
+        18,
+        7,
+        147,
+        146
+      ]
+    },
+    {
+      "image": "BCData/images/test/394.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 355,
+      "duplicate_excess": 0,
+      "gt_positive": 23,
+      "gt_negative": 332,
+      "predicted_counts": [
+        15,
+        2,
+        188,
+        150
+      ]
+    },
+    {
+      "image": "BCData/images/test/395.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 279,
+      "duplicate_excess": 0,
+      "gt_positive": 24,
+      "gt_negative": 255,
+      "predicted_counts": [
+        23,
+        2,
+        166,
+        88
+      ]
+    },
+    {
+      "image": "BCData/images/test/396.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 321,
+      "duplicate_excess": 1,
+      "gt_positive": 49,
+      "gt_negative": 271,
+      "predicted_counts": [
+        27,
+        4,
+        154,
+        135
+      ]
+    },
+    {
+      "image": "BCData/images/test/397.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 245,
+      "duplicate_excess": 1,
+      "gt_positive": 51,
+      "gt_negative": 193,
+      "predicted_counts": [
+        27,
+        11,
+        129,
+        77
+      ]
+    },
+    {
+      "image": "BCData/images/test/398.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 327,
+      "duplicate_excess": 0,
+      "gt_positive": 36,
+      "gt_negative": 291,
+      "predicted_counts": [
+        30,
+        4,
+        183,
+        110
+      ]
+    },
+    {
+      "image": "BCData/images/test/399.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 309,
+      "duplicate_excess": 0,
+      "gt_positive": 45,
+      "gt_negative": 264,
+      "predicted_counts": [
+        25,
+        7,
+        156,
+        121
+      ]
+    },
+    {
+      "image": "BCData/images/test/4.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 82,
+      "duplicate_excess": 0,
+      "gt_positive": 64,
+      "gt_negative": 18,
+      "predicted_counts": [
+        29,
+        22,
+        16,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/40.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 295,
+      "duplicate_excess": 0,
+      "gt_positive": 40,
+      "gt_negative": 255,
+      "predicted_counts": [
+        41,
+        45,
+        67,
+        142
+      ]
+    },
+    {
+      "image": "BCData/images/test/400.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 274,
+      "duplicate_excess": 0,
+      "gt_positive": 19,
+      "gt_negative": 255,
+      "predicted_counts": [
+        15,
+        4,
+        122,
+        133
+      ]
+    },
+    {
+      "image": "BCData/images/test/401.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 413,
+      "duplicate_excess": 0,
+      "gt_positive": 15,
+      "gt_negative": 398,
+      "predicted_counts": [
+        5,
+        1,
+        136,
+        271
+      ]
+    },
+    {
+      "image": "BCData/images/test/41.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 207,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 178,
+      "predicted_counts": [
+        32,
+        19,
+        86,
+        70
+      ]
+    },
+    {
+      "image": "BCData/images/test/42.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 251,
+      "duplicate_excess": 0,
+      "gt_positive": 33,
+      "gt_negative": 218,
+      "predicted_counts": [
+        37,
+        27,
+        113,
+        74
+      ]
+    },
+    {
+      "image": "BCData/images/test/43.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 240,
+      "duplicate_excess": 0,
+      "gt_positive": 39,
+      "gt_negative": 201,
+      "predicted_counts": [
+        45,
+        49,
+        49,
+        97
+      ]
+    },
+    {
+      "image": "BCData/images/test/44.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 120,
+      "duplicate_excess": 0,
+      "gt_positive": 30,
+      "gt_negative": 90,
+      "predicted_counts": [
+        15,
+        38,
+        30,
+        37
+      ]
+    },
+    {
+      "image": "BCData/images/test/45.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 147,
+      "duplicate_excess": 0,
+      "gt_positive": 33,
+      "gt_negative": 114,
+      "predicted_counts": [
+        17,
+        56,
+        27,
+        47
+      ]
+    },
+    {
+      "image": "BCData/images/test/46.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 146,
+      "duplicate_excess": 0,
+      "gt_positive": 53,
+      "gt_negative": 93,
+      "predicted_counts": [
+        31,
+        49,
+        38,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/47.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 137,
+      "duplicate_excess": 0,
+      "gt_positive": 44,
+      "gt_negative": 93,
+      "predicted_counts": [
+        23,
+        40,
+        35,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/48.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 111,
+      "duplicate_excess": 0,
+      "gt_positive": 27,
+      "gt_negative": 84,
+      "predicted_counts": [
+        16,
+        36,
+        24,
+        35
+      ]
+    },
+    {
+      "image": "BCData/images/test/49.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 168,
+      "duplicate_excess": 0,
+      "gt_positive": 48,
+      "gt_negative": 120,
+      "predicted_counts": [
+        34,
+        48,
+        39,
+        47
+      ]
+    },
+    {
+      "image": "BCData/images/test/5.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 112,
+      "duplicate_excess": 0,
+      "gt_positive": 56,
+      "gt_negative": 56,
+      "predicted_counts": [
+        42,
+        14,
+        20,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/50.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 160,
+      "duplicate_excess": 0,
+      "gt_positive": 99,
+      "gt_negative": 61,
+      "predicted_counts": [
+        70,
+        15,
+        60,
+        15
+      ]
+    },
+    {
+      "image": "BCData/images/test/51.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 148,
+      "duplicate_excess": 0,
+      "gt_positive": 87,
+      "gt_negative": 61,
+      "predicted_counts": [
+        51,
+        39,
+        46,
+        12
+      ]
+    },
+    {
+      "image": "BCData/images/test/52.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 100,
+      "duplicate_excess": 0,
+      "gt_positive": 73,
+      "gt_negative": 27,
+      "predicted_counts": [
+        45,
+        13,
+        36,
+        6
+      ]
+    },
+    {
+      "image": "BCData/images/test/53.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 140,
+      "duplicate_excess": 0,
+      "gt_positive": 103,
+      "gt_negative": 37,
+      "predicted_counts": [
+        69,
+        24,
+        33,
+        14
+      ]
+    },
+    {
+      "image": "BCData/images/test/54.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 175,
+      "duplicate_excess": 0,
+      "gt_positive": 128,
+      "gt_negative": 47,
+      "predicted_counts": [
+        87,
+        34,
+        31,
+        23
+      ]
+    },
+    {
+      "image": "BCData/images/test/55.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 66,
+      "duplicate_excess": 0,
+      "gt_positive": 26,
+      "gt_negative": 40,
+      "predicted_counts": [
+        17,
+        5,
+        34,
+        10
+      ]
+    },
+    {
+      "image": "BCData/images/test/56.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 109,
+      "duplicate_excess": 0,
+      "gt_positive": 43,
+      "gt_negative": 66,
+      "predicted_counts": [
+        38,
+        12,
+        50,
+        9
+      ]
+    },
+    {
+      "image": "BCData/images/test/57.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 157,
+      "duplicate_excess": 0,
+      "gt_positive": 89,
+      "gt_negative": 68,
+      "predicted_counts": [
+        57,
+        21,
+        50,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/58.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 174,
+      "duplicate_excess": 0,
+      "gt_positive": 65,
+      "gt_negative": 109,
+      "predicted_counts": [
+        46,
+        16,
+        62,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/59.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 173,
+      "duplicate_excess": 0,
+      "gt_positive": 78,
+      "gt_negative": 95,
+      "predicted_counts": [
+        60,
+        12,
+        34,
+        67
+      ]
+    },
+    {
+      "image": "BCData/images/test/6.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 136,
+      "duplicate_excess": 0,
+      "gt_positive": 77,
+      "gt_negative": 59,
+      "predicted_counts": [
+        42,
+        21,
+        23,
+        50
+      ]
+    },
+    {
+      "image": "BCData/images/test/60.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 147,
+      "duplicate_excess": 0,
+      "gt_positive": 81,
+      "gt_negative": 66,
+      "predicted_counts": [
+        42,
+        11,
+        63,
+        31
+      ]
+    },
+    {
+      "image": "BCData/images/test/61.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 197,
+      "duplicate_excess": 0,
+      "gt_positive": 115,
+      "gt_negative": 82,
+      "predicted_counts": [
+        56,
+        17,
+        78,
+        46
+      ]
+    },
+    {
+      "image": "BCData/images/test/62.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 146,
+      "duplicate_excess": 0,
+      "gt_positive": 77,
+      "gt_negative": 69,
+      "predicted_counts": [
+        51,
+        7,
+        49,
+        39
+      ]
+    },
+    {
+      "image": "BCData/images/test/63.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 172,
+      "duplicate_excess": 0,
+      "gt_positive": 101,
+      "gt_negative": 71,
+      "predicted_counts": [
+        60,
+        21,
+        46,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/64.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 214,
+      "duplicate_excess": 0,
+      "gt_positive": 60,
+      "gt_negative": 154,
+      "predicted_counts": [
+        40,
+        24,
+        44,
+        106
+      ]
+    },
+    {
+      "image": "BCData/images/test/65.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 180,
+      "duplicate_excess": 0,
+      "gt_positive": 43,
+      "gt_negative": 137,
+      "predicted_counts": [
+        35,
+        19,
+        52,
+        74
+      ]
+    },
+    {
+      "image": "BCData/images/test/66.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 191,
+      "duplicate_excess": 0,
+      "gt_positive": 41,
+      "gt_negative": 150,
+      "predicted_counts": [
+        29,
+        17,
+        59,
+        86
+      ]
+    },
+    {
+      "image": "BCData/images/test/67.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 205,
+      "duplicate_excess": 0,
+      "gt_positive": 54,
+      "gt_negative": 151,
+      "predicted_counts": [
+        37,
+        17,
+        62,
+        89
+      ]
+    },
+    {
+      "image": "BCData/images/test/68.png",
+      "cohort": "new_392",
+      "source_quality": "affected_66",
+      "raw_records": 96,
+      "duplicate_excess": 1,
+      "gt_positive": 32,
+      "gt_negative": 63,
+      "predicted_counts": [
+        33,
+        14,
+        24,
+        24
+      ]
+    },
+    {
+      "image": "BCData/images/test/69.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 195,
+      "duplicate_excess": 0,
+      "gt_positive": 26,
+      "gt_negative": 169,
+      "predicted_counts": [
+        85,
+        38,
+        32,
+        40
+      ]
+    },
+    {
+      "image": "BCData/images/test/7.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 90,
+      "duplicate_excess": 0,
+      "gt_positive": 65,
+      "gt_negative": 25,
+      "predicted_counts": [
+        41,
+        14,
+        21,
+        14
+      ]
+    },
+    {
+      "image": "BCData/images/test/70.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 133,
+      "duplicate_excess": 0,
+      "gt_positive": 45,
+      "gt_negative": 88,
+      "predicted_counts": [
+        33,
+        17,
+        21,
+        62
+      ]
+    },
+    {
+      "image": "BCData/images/test/71.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 85,
+      "duplicate_excess": 0,
+      "gt_positive": 31,
+      "gt_negative": 54,
+      "predicted_counts": [
+        21,
+        18,
+        12,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/72.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 102,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 56,
+      "predicted_counts": [
+        35,
+        11,
+        16,
+        40
+      ]
+    },
+    {
+      "image": "BCData/images/test/73.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 130,
+      "duplicate_excess": 0,
+      "gt_positive": 39,
+      "gt_negative": 91,
+      "predicted_counts": [
+        32,
+        17,
+        16,
+        65
+      ]
+    },
+    {
+      "image": "BCData/images/test/74.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 230,
+      "duplicate_excess": 0,
+      "gt_positive": 79,
+      "gt_negative": 151,
+      "predicted_counts": [
+        94,
+        25,
+        66,
+        45
+      ]
+    },
+    {
+      "image": "BCData/images/test/75.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 160,
+      "duplicate_excess": 0,
+      "gt_positive": 68,
+      "gt_negative": 92,
+      "predicted_counts": [
+        78,
+        14,
+        47,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/76.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 221,
+      "duplicate_excess": 0,
+      "gt_positive": 73,
+      "gt_negative": 148,
+      "predicted_counts": [
+        85,
+        22,
+        76,
+        38
+      ]
+    },
+    {
+      "image": "BCData/images/test/77.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 302,
+      "duplicate_excess": 0,
+      "gt_positive": 113,
+      "gt_negative": 189,
+      "predicted_counts": [
+        126,
+        20,
+        122,
+        34
+      ]
+    },
+    {
+      "image": "BCData/images/test/78.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 256,
+      "duplicate_excess": 0,
+      "gt_positive": 114,
+      "gt_negative": 142,
+      "predicted_counts": [
+        110,
+        14,
+        95,
+        37
+      ]
+    },
+    {
+      "image": "BCData/images/test/79.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 116,
+      "duplicate_excess": 0,
+      "gt_positive": 46,
+      "gt_negative": 70,
+      "predicted_counts": [
+        49,
+        6,
+        45,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/8.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 120,
+      "duplicate_excess": 0,
+      "gt_positive": 79,
+      "gt_negative": 41,
+      "predicted_counts": [
+        46,
+        21,
+        23,
+        30
+      ]
+    },
+    {
+      "image": "BCData/images/test/80.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 116,
+      "duplicate_excess": 0,
+      "gt_positive": 32,
+      "gt_negative": 84,
+      "predicted_counts": [
+        38,
+        8,
+        54,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/81.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 111,
+      "duplicate_excess": 0,
+      "gt_positive": 34,
+      "gt_negative": 77,
+      "predicted_counts": [
+        37,
+        8,
+        53,
+        13
+      ]
+    },
+    {
+      "image": "BCData/images/test/82.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 175,
+      "duplicate_excess": 0,
+      "gt_positive": 43,
+      "gt_negative": 132,
+      "predicted_counts": [
+        78,
+        20,
+        40,
+        37
+      ]
+    },
+    {
+      "image": "BCData/images/test/83.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 147,
+      "duplicate_excess": 0,
+      "gt_positive": 27,
+      "gt_negative": 120,
+      "predicted_counts": [
+        63,
+        16,
+        24,
+        44
+      ]
+    },
+    {
+      "image": "BCData/images/test/84.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 133,
+      "duplicate_excess": 0,
+      "gt_positive": 29,
+      "gt_negative": 104,
+      "predicted_counts": [
+        40,
+        19,
+        31,
+        43
+      ]
+    },
+    {
+      "image": "BCData/images/test/85.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 130,
+      "duplicate_excess": 0,
+      "gt_positive": 28,
+      "gt_negative": 102,
+      "predicted_counts": [
+        59,
+        27,
+        22,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/86.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 156,
+      "duplicate_excess": 0,
+      "gt_positive": 37,
+      "gt_negative": 119,
+      "predicted_counts": [
+        57,
+        19,
+        25,
+        55
+      ]
+    },
+    {
+      "image": "BCData/images/test/87.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 60,
+      "duplicate_excess": 0,
+      "gt_positive": 23,
+      "gt_negative": 37,
+      "predicted_counts": [
+        23,
+        3,
+        23,
+        11
+      ]
+    },
+    {
+      "image": "BCData/images/test/88.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 102,
+      "duplicate_excess": 0,
+      "gt_positive": 87,
+      "gt_negative": 15,
+      "predicted_counts": [
+        46,
+        9,
+        25,
+        22
+      ]
+    },
+    {
+      "image": "BCData/images/test/89.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 94,
+      "duplicate_excess": 0,
+      "gt_positive": 69,
+      "gt_negative": 25,
+      "predicted_counts": [
+        42,
+        2,
+        23,
+        27
+      ]
+    },
+    {
+      "image": "BCData/images/test/9.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 73,
+      "duplicate_excess": 0,
+      "gt_positive": 25,
+      "gt_negative": 48,
+      "predicted_counts": [
+        18,
+        10,
+        9,
+        36
+      ]
+    },
+    {
+      "image": "BCData/images/test/90.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 91,
+      "duplicate_excess": 0,
+      "gt_positive": 72,
+      "gt_negative": 19,
+      "predicted_counts": [
+        40,
+        6,
+        25,
+        20
+      ]
+    },
+    {
+      "image": "BCData/images/test/91.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 73,
+      "duplicate_excess": 0,
+      "gt_positive": 35,
+      "gt_negative": 38,
+      "predicted_counts": [
+        24,
+        2,
+        19,
+        28
+      ]
+    },
+    {
+      "image": "BCData/images/test/92.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 141,
+      "duplicate_excess": 0,
+      "gt_positive": 70,
+      "gt_negative": 71,
+      "predicted_counts": [
+        60,
+        11,
+        53,
+        17
+      ]
+    },
+    {
+      "image": "BCData/images/test/93.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 141,
+      "duplicate_excess": 0,
+      "gt_positive": 76,
+      "gt_negative": 65,
+      "predicted_counts": [
+        58,
+        9,
+        45,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/94.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 119,
+      "duplicate_excess": 0,
+      "gt_positive": 75,
+      "gt_negative": 44,
+      "predicted_counts": [
+        55,
+        8,
+        38,
+        18
+      ]
+    },
+    {
+      "image": "BCData/images/test/95.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 107,
+      "duplicate_excess": 0,
+      "gt_positive": 64,
+      "gt_negative": 43,
+      "predicted_counts": [
+        50,
+        10,
+        31,
+        16
+      ]
+    },
+    {
+      "image": "BCData/images/test/96.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 84,
+      "duplicate_excess": 0,
+      "gt_positive": 56,
+      "gt_negative": 28,
+      "predicted_counts": [
+        35,
+        12,
+        30,
+        7
+      ]
+    },
+    {
+      "image": "BCData/images/test/97.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 121,
+      "duplicate_excess": 0,
+      "gt_positive": 82,
+      "gt_negative": 39,
+      "predicted_counts": [
+        43,
+        15,
+        34,
+        29
+      ]
+    },
+    {
+      "image": "BCData/images/test/98.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 128,
+      "duplicate_excess": 0,
+      "gt_positive": 85,
+      "gt_negative": 43,
+      "predicted_counts": [
+        60,
+        7,
+        40,
+        21
+      ]
+    },
+    {
+      "image": "BCData/images/test/99.png",
+      "cohort": "new_392",
+      "source_quality": "clean_336",
+      "raw_records": 239,
+      "duplicate_excess": 0,
+      "gt_positive": 98,
+      "gt_negative": 141,
+      "predicted_counts": [
+        55,
+        15,
+        98,
+        71
+      ]
+    }
+  ]
+}

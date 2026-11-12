@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-11-12T04:24:08.661732+00:00",
+  "protocol_sha256": "a99c6940893dee8683eac620ba0ee5282dc8ffd93289497477571b2cf22e4369",
+  "strict_protocol_sha256": "6a203fe17e6a5f153b2a4ff38f7b11bb80999821f004b91d2b02a7534eb7aa39",
+  "canonical_points_and_duplicate_map_sha256": "5d27852984dce930e8fed74624c9385cba2ffed60d39fbb741640b1abb0cd2d7",
+  "input_manifest_sha256": "fe4ae2ab24b1c15cead74859781bd366a158912aef42162de26f613c1bfd6f9c",
+  "input_audit_sha256": "dea5bca5095dfca4ea520e971707f31068566e7489b964b3457e73314abc7d1d",
+  "model_sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+  "feature_module_sha256": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+  "runner_sha256": "55f2f0ec717ba9dee0ed7ca547634d335bb8ab3b598a3491669239c8ec4afdc1",
+  "canonicalizer_sha256": "7957588816914108ccaf6e0f341ec8db6f998e78d393fd6dd43812fa6a8db3d9",
+  "training_or_tuning": false,
+  "new_images": 392,
+  "previously_evaluated_images": 10
+}

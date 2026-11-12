@@ -1,0 +1,619 @@
+{
+  "passed": true,
+  "review_type": "Independent offline recount, no model inference",
+  "threshold": 0.35,
+  "convention": "Full-image Pillow integer polygon union with outline included. Keep raw mask foreground1..7 only inside polyline union and raw background9 only outside union; retain existing FOV/tissue/ambiguous/rectangle exclusions. Disagreements are ignored, never relabelled.",
+  "historical_exporter_reproduced": false,
+  "case_selection_unchanged": true,
+  "historical_results_unchanged": true,
+  "new_inference": false,
+  "original_report_sha256": "6f7852270d201202cd7080c6a0a936bb6251482ae3424d873588ae6ac80ef1f8",
+  "original_lock_sha256": "50ef723cbbc4859bff321a689aed5da4e7caddc1ae577699ee88f833f6e67c19",
+  "source_archive": "artifacts/experiments/panoptils-wsi-probe-20261112/evidence.zip",
+  "source_archive_sha256": "6d583d9e49600c7ea5564342eb9c3c88e4da94e2692b2a5a3972cb1630d4d171",
+  "raw_annotation_sha256": {
+    "csv/ALL_FOV_LOCATIONS.csv": "f213905d1a6425cf79e9763049165ae7163648b8473e444789390b3bb64b0218",
+    "masks/TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129.png": "0acafbea09ba6b75f40d6e319f3491f1146d1a99b5519e2b3316f37170730cd0",
+    "csv/TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129.csv": "679b013b6c98be6e6e2a9804c73e03da0d20a5ffa56adf895e8da3f3f7888a2d",
+    "masks/TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861.png": "83c51aab697c508bc98ec5d34c50606d17b606cfa3345df985df5a4efe83b8b4",
+    "csv/TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861.csv": "3d55e82635ad996620d9aabcdd0e8fa32105541233fe1133d2023e567b8d269d",
+    "masks/TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753.png": "764d56898a201114d5497abe015500881add1fdf851ed145ab2092407bb29b02",
+    "csv/TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753.csv": "d12143788ccffcca5e4a2a682cde837cf8b617db36c757f007640602317b5cdd"
+  },
+  "source_probability_sha256": {
+    "predictions/TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129-small_vit.npz": "c11fb0379d93266f7237d14e808927c7b7730b2d0ccd7d27776f14467a59e20d",
+    "predictions/TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129-small_vit_refined.npz": "c63f6d62e0e93b0d26cb9e0b88c167e3a9548a2f80ae6942ba94d211eaff627c",
+    "predictions/TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861-small_vit.npz": "843445c5532405c87052f0dadb2ac179d6d42c03430ad75102d426a217550cb9",
+    "predictions/TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861-small_vit_refined.npz": "ea218dcabe6b6ada5a092edddad3b283c9c15fc21095105666f3b13062909df8",
+    "predictions/TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753-small_vit.npz": "54909703e1b24969a87e2480f266583ee8ab241f9ffcadf98bc68d9ca9437beb",
+    "predictions/TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753-small_vit_refined.npz": "519511e87e5d8da02ae90c44b00afb88d4ceaa0cd653e74639f97f9379702e2d"
+  },
+  "old_region_metric_checks": 18,
+  "new_region_metrics": 18,
+  "old_mean_checks": 6,
+  "new_means_count": 6,
+  "rows": [
+    {
+      "case_id": "TCGA-A1-A0SP",
+      "id": "TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129",
+      "old_coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 46225,
+        "valid_pixels": 31712,
+        "valid_fraction": 0.030242919921875,
+        "ignored_pixels": 1016864,
+        "foreground_valid_pixels": 12620,
+        "rectangle_annotations_excluded": 15,
+        "rectangle_pixels_inside_fov": 14375,
+        "ambiguous_pixels_inside_fov": 0
+      },
+      "strict_coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 46225,
+        "base_valid_pixels": 31712,
+        "valid_pixels": 31247,
+        "valid_fraction": 0.029799461364746094,
+        "foreground_valid_pixels": 12538,
+        "base_foreground_valid_pixels": 12620,
+        "unsupported_foreground_pixels": 82,
+        "contradictory_background_pixels": 383,
+        "polyline_records": 17,
+        "rectangle_records": 15
+      },
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129-small_vit.npz",
+          "probability_sha256": "c11fb0379d93266f7237d14e808927c7b7730b2d0ccd7d27776f14467a59e20d",
+          "old_metrics": {
+            "all": {
+              "tp": 11016,
+              "fp": 7091,
+              "fn": 1604,
+              "pixels": 31712,
+              "dice": 0.7170241155986592,
+              "iou": 0.5588757546547612,
+              "precision": 0.6083834980946595,
+              "recall": 0.8729001584786054
+            },
+            "boundary": {
+              "tp": 977,
+              "fp": 1200,
+              "fn": 108,
+              "pixels": 4132,
+              "dice": 0.5990190067443286,
+              "iou": 0.4275711159737418,
+              "precision": 0.4487827285254938,
+              "recall": 0.9004608294930876
+            },
+            "interior": {
+              "tp": 10039,
+              "fp": 5891,
+              "fn": 1496,
+              "pixels": 27580,
+              "dice": 0.7310395048243219,
+              "iou": 0.5760931940778148,
+              "precision": 0.6301946013810421,
+              "recall": 0.870307758994365
+            }
+          },
+          "strict_metrics": {
+            "all": {
+              "tp": 10963,
+              "fp": 6890,
+              "fn": 1575,
+              "pixels": 31247,
+              "dice": 0.7214635911947616,
+              "iou": 0.5642886555486926,
+              "precision": 0.6140704643477287,
+              "recall": 0.8743818790875738
+            },
+            "boundary": {
+              "tp": 958,
+              "fp": 1183,
+              "fn": 103,
+              "pixels": 4075,
+              "dice": 0.5983760149906309,
+              "iou": 0.4269162210338681,
+              "precision": 0.44745446053246146,
+              "recall": 0.9029217719132894
+            },
+            "interior": {
+              "tp": 10005,
+              "fp": 5707,
+              "fn": 1472,
+              "pixels": 27172,
+              "dice": 0.7359593953437051,
+              "iou": 0.5822276536312849,
+              "precision": 0.6367744399185336,
+              "recall": 0.8717434869739479
+            }
+          }
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-A1-A0SP-DX1_left-10911_top-54005_bottom-55224_right-12129-small_vit_refined.npz",
+          "probability_sha256": "c63f6d62e0e93b0d26cb9e0b88c167e3a9548a2f80ae6942ba94d211eaff627c",
+          "old_metrics": {
+            "all": {
+              "tp": 11653,
+              "fp": 9036,
+              "fn": 967,
+              "pixels": 31712,
+              "dice": 0.6996907742652136,
+              "iou": 0.5380956778721833,
+              "precision": 0.563246169462033,
+              "recall": 0.9233755942947702
+            },
+            "boundary": {
+              "tp": 1009,
+              "fp": 1543,
+              "fn": 76,
+              "pixels": 4132,
+              "dice": 0.55485290074237,
+              "iou": 0.3839421613394216,
+              "precision": 0.39537617554858934,
+              "recall": 0.9299539170506912
+            },
+            "interior": {
+              "tp": 10644,
+              "fp": 7493,
+              "fn": 891,
+              "pixels": 27580,
+              "dice": 0.7174440550013481,
+              "iou": 0.5593861677527854,
+              "precision": 0.586866626233666,
+              "recall": 0.9227568270481145
+            }
+          },
+          "strict_metrics": {
+            "all": {
+              "tp": 11591,
+              "fp": 8785,
+              "fn": 947,
+              "pixels": 31247,
+              "dice": 0.7043203500030383,
+              "iou": 0.5435914270975003,
+              "precision": 0.5688555162936788,
+              "recall": 0.9244696123783698
+            },
+            "boundary": {
+              "tp": 989,
+              "fp": 1520,
+              "fn": 72,
+              "pixels": 4075,
+              "dice": 0.55406162464986,
+              "iou": 0.3831848120883379,
+              "precision": 0.39418094858509367,
+              "recall": 0.9321394910461829
+            },
+            "interior": {
+              "tp": 10602,
+              "fp": 7265,
+              "fn": 875,
+              "pixels": 27172,
+              "dice": 0.7226008724100327,
+              "iou": 0.5656813573791485,
+              "precision": 0.593384451782616,
+              "recall": 0.9237605646074758
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "TCGA-A2-A0CM",
+      "id": "TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861",
+      "old_coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 44944,
+        "valid_pixels": 30990,
+        "valid_fraction": 0.029554367065429688,
+        "ignored_pixels": 1017586,
+        "foreground_valid_pixels": 2635,
+        "rectangle_annotations_excluded": 17,
+        "rectangle_pixels_inside_fov": 13954,
+        "ambiguous_pixels_inside_fov": 168
+      },
+      "strict_coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 44944,
+        "base_valid_pixels": 30990,
+        "valid_pixels": 30787,
+        "valid_fraction": 0.02936077117919922,
+        "foreground_valid_pixels": 2601,
+        "base_foreground_valid_pixels": 2635,
+        "unsupported_foreground_pixels": 34,
+        "contradictory_background_pixels": 169,
+        "polyline_records": 9,
+        "rectangle_records": 17
+      },
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861-small_vit.npz",
+          "probability_sha256": "843445c5532405c87052f0dadb2ac179d6d42c03430ad75102d426a217550cb9",
+          "old_metrics": {
+            "all": {
+              "tp": 2501,
+              "fp": 9838,
+              "fn": 134,
+              "pixels": 30990,
+              "dice": 0.33404567917724054,
+              "iou": 0.20051310831395816,
+              "precision": 0.2026906556447038,
+              "recall": 0.949146110056926
+            },
+            "boundary": {
+              "tp": 0,
+              "fp": 1597,
+              "fn": 0,
+              "pixels": 4304,
+              "dice": 0.0,
+              "iou": 0.0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "interior": {
+              "tp": 2501,
+              "fp": 8241,
+              "fn": 134,
+              "pixels": 26686,
+              "dice": 0.3739253943335576,
+              "iou": 0.22995586612725266,
+              "precision": 0.23282442748091603,
+              "recall": 0.949146110056926
+            }
+          },
+          "strict_metrics": {
+            "all": {
+              "tp": 2469,
+              "fp": 9708,
+              "fn": 132,
+              "pixels": 30787,
+              "dice": 0.33414535119772637,
+              "iou": 0.2005849378503534,
+              "precision": 0.20275930032027592,
+              "recall": 0.9492502883506344
+            },
+            "boundary": {
+              "tp": 0,
+              "fp": 1597,
+              "fn": 0,
+              "pixels": 4304,
+              "dice": 0.0,
+              "iou": 0.0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "interior": {
+              "tp": 2469,
+              "fp": 8111,
+              "fn": 132,
+              "pixels": 26483,
+              "dice": 0.3746301494575525,
+              "iou": 0.2304891710231516,
+              "precision": 0.2333648393194707,
+              "recall": 0.9492502883506344
+            }
+          }
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-A2-A0CM-DX1_left-19624_top-56888_bottom-58124_right-20861-small_vit_refined.npz",
+          "probability_sha256": "ea218dcabe6b6ada5a092edddad3b283c9c15fc21095105666f3b13062909df8",
+          "old_metrics": {
+            "all": {
+              "tp": 2537,
+              "fp": 14652,
+              "fn": 98,
+              "pixels": 30990,
+              "dice": 0.25595238095238093,
+              "iou": 0.14675767918088736,
+              "precision": 0.14759439176217348,
+              "recall": 0.96280834914611
+            },
+            "boundary": {
+              "tp": 0,
+              "fp": 2153,
+              "fn": 0,
+              "pixels": 4304,
+              "dice": 0.0,
+              "iou": 0.0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "interior": {
+              "tp": 2537,
+              "fp": 12499,
+              "fn": 98,
+              "pixels": 26686,
+              "dice": 0.2871371173108483,
+              "iou": 0.16763578696973702,
+              "precision": 0.16872838520883213,
+              "recall": 0.96280834914611
+            }
+          },
+          "strict_metrics": {
+            "all": {
+              "tp": 2505,
+              "fp": 14512,
+              "fn": 96,
+              "pixels": 30787,
+              "dice": 0.25537771434396983,
+              "iou": 0.14637994507099866,
+              "precision": 0.14720573544102955,
+              "recall": 0.9630911188004614
+            },
+            "boundary": {
+              "tp": 0,
+              "fp": 2153,
+              "fn": 0,
+              "pixels": 4304,
+              "dice": 0.0,
+              "iou": 0.0,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "interior": {
+              "tp": 2505,
+              "fp": 12359,
+              "fn": 96,
+              "pixels": 26483,
+              "dice": 0.28685943315201834,
+              "iou": 0.16744652406417113,
+              "precision": 0.16852798708288483,
+              "recall": 0.9630911188004614
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "TCGA-A2-A0D0",
+      "id": "TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753",
+      "old_coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 45369,
+        "valid_pixels": 39357,
+        "valid_fraction": 0.03753376007080078,
+        "ignored_pixels": 1009219,
+        "foreground_valid_pixels": 2615,
+        "rectangle_annotations_excluded": 20,
+        "rectangle_pixels_inside_fov": 6012,
+        "ambiguous_pixels_inside_fov": 0
+      },
+      "strict_coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 45369,
+        "base_valid_pixels": 39357,
+        "valid_pixels": 39083,
+        "valid_fraction": 0.03727245330810547,
+        "foreground_valid_pixels": 2524,
+        "base_foreground_valid_pixels": 2615,
+        "unsupported_foreground_pixels": 91,
+        "contradictory_background_pixels": 183,
+        "polyline_records": 10,
+        "rectangle_records": 20
+      },
+      "models": {
+        "small_vit": {
+          "probability": "predictions/TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753-small_vit.npz",
+          "probability_sha256": "54909703e1b24969a87e2480f266583ee8ab241f9ffcadf98bc68d9ca9437beb",
+          "old_metrics": {
+            "all": {
+              "tp": 2323,
+              "fp": 7093,
+              "fn": 292,
+              "pixels": 39357,
+              "dice": 0.3861690632532624,
+              "iou": 0.2392871858261228,
+              "precision": 0.24670773152081563,
+              "recall": 0.8883365200764818
+            },
+            "boundary": {
+              "tp": 423,
+              "fp": 1217,
+              "fn": 14,
+              "pixels": 4879,
+              "dice": 0.4073182474723158,
+              "iou": 0.25574365175332525,
+              "precision": 0.2579268292682927,
+              "recall": 0.9679633867276888
+            },
+            "interior": {
+              "tp": 1900,
+              "fp": 5876,
+              "fn": 278,
+              "pixels": 34478,
+              "dice": 0.3817560779586096,
+              "iou": 0.2359076235410976,
+              "precision": 0.24434156378600824,
+              "recall": 0.8723599632690542
+            }
+          },
+          "strict_metrics": {
+            "all": {
+              "tp": 2284,
+              "fp": 6932,
+              "fn": 240,
+              "pixels": 39083,
+              "dice": 0.38909710391822827,
+              "iou": 0.24153976311336717,
+              "precision": 0.2478298611111111,
+              "recall": 0.9049128367670365
+            },
+            "boundary": {
+              "tp": 422,
+              "fp": 1172,
+              "fn": 0,
+              "pixels": 4817,
+              "dice": 0.41865079365079366,
+              "iou": 0.26474278544542035,
+              "precision": 0.26474278544542035,
+              "recall": 1.0
+            },
+            "interior": {
+              "tp": 1862,
+              "fp": 5760,
+              "fn": 240,
+              "pixels": 34266,
+              "dice": 0.3829699712052653,
+              "iou": 0.23683541083693715,
+              "precision": 0.24429283652584624,
+              "recall": 0.8858230256898192
+            }
+          }
+        },
+        "small_vit_refined": {
+          "probability": "predictions/TCGA-A2-A0D0-DX1_left-68517_top-42674_bottom-43911_right-69753-small_vit_refined.npz",
+          "probability_sha256": "519511e87e5d8da02ae90c44b00afb88d4ceaa0cd653e74639f97f9379702e2d",
+          "old_metrics": {
+            "all": {
+              "tp": 2370,
+              "fp": 8516,
+              "fn": 245,
+              "pixels": 39357,
+              "dice": 0.35108510480705135,
+              "iou": 0.21291887521336808,
+              "precision": 0.21771082123828772,
+              "recall": 0.9063097514340345
+            },
+            "boundary": {
+              "tp": 423,
+              "fp": 1313,
+              "fn": 14,
+              "pixels": 4879,
+              "dice": 0.3893235158766682,
+              "iou": 0.24171428571428571,
+              "precision": 0.2436635944700461,
+              "recall": 0.9679633867276888
+            },
+            "interior": {
+              "tp": 1947,
+              "fp": 7203,
+              "fn": 231,
+              "pixels": 34478,
+              "dice": 0.34375,
+              "iou": 0.20754716981132076,
+              "precision": 0.21278688524590164,
+              "recall": 0.8939393939393939
+            }
+          },
+          "strict_metrics": {
+            "all": {
+              "tp": 2331,
+              "fp": 8345,
+              "fn": 193,
+              "pixels": 39083,
+              "dice": 0.3531818181818182,
+              "iou": 0.21446315208390837,
+              "precision": 0.2183402023229674,
+              "recall": 0.9235340729001584
+            },
+            "boundary": {
+              "tp": 422,
+              "fp": 1266,
+              "fn": 0,
+              "pixels": 4817,
+              "dice": 0.4,
+              "iou": 0.25,
+              "precision": 0.25,
+              "recall": 1.0
+            },
+            "interior": {
+              "tp": 1909,
+              "fp": 7079,
+              "fn": 193,
+              "pixels": 34266,
+              "dice": 0.3442741208295762,
+              "iou": 0.2079294194532186,
+              "precision": 0.21239430351579885,
+              "recall": 0.9081826831588963
+            }
+          }
+        }
+      }
+    }
+  ],
+  "old_means": {
+    "small_vit": {
+      "all": 0.47907961934305404,
+      "boundary": 0.33544575140554816,
+      "interior": 0.4955736590388297
+    },
+    "small_vit_refined": {
+      "all": 0.43557608667488196,
+      "boundary": 0.3147254722063461,
+      "interior": 0.44944372410406547
+    }
+  },
+  "strict_means": {
+    "small_vit": {
+      "all": 0.48156868210357207,
+      "boundary": 0.3390089362138082,
+      "interior": 0.4978531720021744
+    },
+    "small_vit_refined": {
+      "all": 0.4376266275096088,
+      "boundary": 0.31802054154995335,
+      "interior": 0.451244808797209
+    }
+  },
+  "new_cohort_helper_checks": [
+    {
+      "case_id": "TCGA-A2-A0D2",
+      "coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 44732,
+        "base_valid_pixels": 35304,
+        "valid_pixels": 35205,
+        "valid_fraction": 0.03357410430908203,
+        "foreground_valid_pixels": 0,
+        "base_foreground_valid_pixels": 99,
+        "unsupported_foreground_pixels": 99,
+        "contradictory_background_pixels": 0,
+        "polyline_records": 0,
+        "rectangle_records": 14
+      },
+      "exact_mask_match": true
+    },
+    {
+      "case_id": "TCGA-A2-A0ST",
+      "coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 45156,
+        "base_valid_pixels": 40315,
+        "valid_pixels": 39328,
+        "valid_fraction": 0.037506103515625,
+        "foreground_valid_pixels": 13194,
+        "base_foreground_valid_pixels": 13454,
+        "unsupported_foreground_pixels": 260,
+        "contradictory_background_pixels": 727,
+        "polyline_records": 40,
+        "rectangle_records": 20
+      },
+      "exact_mask_match": true
+    },
+    {
+      "case_id": "TCGA-A2-A0SX",
+      "coverage": {
+        "image_pixels": 1048576,
+        "fov_pixels": 45156,
+        "base_valid_pixels": 34500,
+        "valid_pixels": 34081,
+        "valid_fraction": 0.032502174377441406,
+        "foreground_valid_pixels": 4788,
+        "base_foreground_valid_pixels": 4931,
+        "unsupported_foreground_pixels": 143,
+        "contradictory_background_pixels": 276,
+        "polyline_records": 20,
+        "rectangle_records": 32
+      },
+      "exact_mask_match": true
+    }
+  ],
+  "helper_sha256": "750828229838d0520652c1eaf1f178d6d44a7371a26faf5dcd89f6067a9ddd50",
+  "independent_mask_implementation": "Independent coordinate grids for half-open FOV/inclusive rectangle subtraction; separate per-record Pillow polygons ORed; explicit disagreement intersection; independent TP/FP/FN and seam bands without scoring helpers.",
+  "limitations": [
+    "This is a post-hoc annotation quality correction of already evaluated cases, not a new independent cohort.",
+    "Historical source RGB came from a rendered WSI server ROI; this recount does not upgrade its provenance to direct original bytes.",
+    "Pillow contour agreement is an explicit conservative audit convention, not a claim to reproduce exact historical exporter rasterization."
+  ]
+}

@@ -82,3 +82,24 @@ def test_runner_matches_fov_filename_including_png_extension(tmp_path):
     Image.fromarray(mask).save(tmp_path/'masks/example.png')
     _, valid, coverage = runner.masks(tmp_path, 'example')
     assert valid.sum() == coverage['valid_pixels'] == 4
+
+
+def test_mask_positive_outside_csv_contours_is_ignored_not_treated_as_contour_gt():
+    from pathology_edge.panoptils import contour_agreement_region
+    mask=np.zeros((16,16,3),np.uint8);mask[...,0]=1;mask[...,1]=9
+    mask[5:9,4:9,1]=1
+    records=[dict(type='rectangle',left=5,right=8,top=5,bottom=8)]
+    target,valid,stats=contour_agreement_region(mask,records,dict(left=0,right=16,top=0,bottom=16))
+    assert stats['unsupported_foreground_pixels']==4
+    assert not valid[5:9,4:9].any()
+    assert not (target&valid).any() and stats['polyline_records']==0
+
+
+def test_mask_csv_disagreements_are_ignored_in_both_directions():
+    from pathology_edge.panoptils import contour_agreement_region
+    mask=np.zeros((16,16,3),np.uint8);mask[...,0]=1;mask[...,1]=9;mask[5:8,5:8,1]=1
+    records=[dict(type='polyline',left=4,right=8,top=4,bottom=8,coords_x='4,8,8,4',coords_y='4,4,8,8')]
+    target,valid,stats=contour_agreement_region(mask,records,dict(left=0,right=16,top=0,bottom=16))
+    assert (target&valid).sum()==9
+    assert stats['contradictory_background_pixels']==16
+    assert not valid[4:5,4:9].any()

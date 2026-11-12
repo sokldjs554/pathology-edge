@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-12",
+  "synthetic_canonicalization_regression_tests": {
+    "passed": 4,
+    "test_file": "test_canonicalize.py",
+    "test_file_sha256": "5c614bd59ffdabd71a3142d6d601b66a76e8856b1a9d18aaebfd0534cc913614",
+    "cases": [
+      "Empty float64 shape(0,) contributes no coordinates",
+      "Exact same-label duplicates retain first ordering and cross-label conflicts exclude all records",
+      "Fractional/nonfinite/out-of-bounds coordinates excluded without rounding",
+      "Malformed nonempty shape rejected"
+    ]
+  },
+  "all402_canonical_records_and_audit_metadata_rechecked_with_tested_canonicalizer_before_inference": true,
+  "independent_verifier": "verification.json",
+  "independent_verifier_sha256": "328ece11aedf5c86a4834674cb194b91c40cd2063a60e46cc612e691af7e1cf6",
+  "documentation_relative_links_checked": 15,
+  "private_review_source_links_checked": 18,
+  "private_review_GT_and_prediction_marker_count": 2472,
+  "private_review_browser_render_tested": false,
+  "actual_original_images_visually_inspected": [
+    "BCData/images/test/367.png",
+    "BCData/images/test/109.png"
+  ],
+  "original_model_feature_module_and_inference_runner_hashes_unchanged": true,
+  "public_bundle_contains_original_pixels_HDF5_or_cell_coordinates": false,
+  "scope": "Specified source files and frozen research model only; no general clinical/environment assurance."
+}

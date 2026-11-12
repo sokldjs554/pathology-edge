@@ -1,0 +1,249 @@
+{
+  "all_sources_verified": true,
+  "meaning": "entire source streams and ROI block binding verified; independentGDCreference2of3",
+  "reference_md5_verified_cases": 2,
+  "cases": [
+    {
+      "case_id": "TCGA-A2-A0D2",
+      "roi": "TCGA-A2-A0D2-DX1_left-97174_top-23865_bottom-25104_right-98413",
+      "original_url": "https://demo.kitware.com/histomicstk/api/v1/file/5bbdee2ee629140048d01aa2/download",
+      "original_file": "TCGA-A2-A0D2-01Z-00-DX1.ECD890F5-BA01-4998-B472-7B683BD6D7B1.svs",
+      "original_stream": {
+        "bytes": 1782750153,
+        "md5": "28378cd99d33d49adf48a9faff7cc6e1",
+        "sha256": "b92f37e306875d1af36c857a8f772c65df5408d65f3df4780785cd506c5757cf",
+        "reference_md5_verified": false,
+        "verified_ranges": 12,
+        "verified_range_bytes": 12582912
+      },
+      "metadata": {
+        "size_wh": [
+          160887,
+          83484
+        ],
+        "native_mpp": 0.248,
+        "tile_wh": [
+          240,
+          240
+        ],
+        "compression": 7,
+        "description_sha256": "2d3826dde5f25d376c302c7d645d936bf6d0445ad95dec0157c0dee2418e54df",
+        "decoded_tiles": [
+          66833,
+          66834,
+          66835,
+          66836,
+          66837,
+          66838,
+          66839,
+          67504,
+          67505,
+          67506,
+          67507,
+          67508,
+          67509,
+          67510,
+          68175,
+          68176,
+          68177,
+          68178,
+          68179,
+          68180,
+          68181,
+          68846,
+          68847,
+          68848,
+          68849,
+          68850,
+          68851,
+          68852,
+          69517,
+          69518,
+          69519,
+          69520,
+          69521,
+          69522,
+          69523,
+          70188,
+          70189,
+          70190,
+          70191,
+          70192,
+          70193,
+          70194
+        ],
+        "bounds_level0": [
+          97174,
+          23865,
+          98413,
+          25104
+        ],
+        "output_mpp_xy": [
+          0.3000703125,
+          0.3000703125
+        ],
+        "color_profile_applied": false
+      },
+      "comparison": {
+        "rgb_correlation": 0.9643468474260065,
+        "rgb_mae": 9.718394915262857,
+        "phase_shift_xy": [
+          0.6806542080679492,
+          1.0170112474385746
+        ],
+        "phase_response": 0.973811574629508
+      },
+      "source_ranges": [
+        {
+          "offset": 0,
+          "bytes": 1048576,
+          "sha256": "e9e399281327f96f885b483c247ec66ec90393ca1f3b4d6706a45f7b19a028b3"
+        },
+        {
+          "offset": 868220928,
+          "bytes": 1048576,
+          "sha256": "5b1f034f97e57e057f04861fac744bf48bfe6d2dc991df98d232ad624261e0ed"
+        },
+        {
+          "offset": 870318080,
+          "bytes": 1048576,
+          "sha256": "650d2c240bfe2c8954187f08b49c956330b64e46d3ac69ec62bd2ec37143dc04"
+        },
+        {
+          "offset": 872415232,
+          "bytes": 1048576,
+          "sha256": "5b7e33f097a78fa88f3f26ecaa8e3822a83d80e21c081aa2846af2f7abb18ea2"
+        },
+        {
+          "offset": 873463808,
+          "bytes": 1048576,
+          "sha256": "a1385ef7c6f385102fd06e8be6e46c8cf67f7856ff452b80636d657bac1fff55"
+        },
+        {
+          "offset": 875560960,
+          "bytes": 1048576,
+          "sha256": "dc8dbf5617f0b3d29735b55ed8348975fe599bef6eabdca008092dfdedbc6ccf"
+        },
+        {
+          "offset": 877658112,
+          "bytes": 1048576,
+          "sha256": "ff44cf7ec1abb8af1e8708d1732d433214fc7d55835b91c31c57f000d23fa96c"
+        },
+        {
+          "offset": 879755264,
+          "bytes": 1048576,
+          "sha256": "7d452f16bce542114e7dcfcaadd090dca755167a80f41bd9ac4a452b335976d4"
+        },
+        {
+          "offset": 882900992,
+          "bytes": 1048576,
+          "sha256": "4660a891b2fe712f93301c17616182ffdb09fca0eed1a4f915df02d17e33e9ad"
+        },
+        {
+          "offset": 1504706560,
+          "bytes": 1048576,
+          "sha256": "922e5125ff40d1522820b4831804946297b0a18a5df9cfe015f00f9e34716b6c"
+        },
+        {
+          "offset": 1505755136,
+          "bytes": 1048576,
+          "sha256": "abb538463a1bd11c002612f6db27dc6f2cf6d48d26e0ef22ef147d61a5cbf494"
+        },
+        {
+          "offset": 1506803712,
+          "bytes": 1048576,
+          "sha256": "1e11b4dea1d0bc35c18dfcc9455117221f90e52a5e740b89edbb956432dac332"
+        }
+      ],
+      "files": {
+        "original-roi.png": "0098b25d9449901730805a6aa8d9660ccfec3e71e45db5cf2539fab7b1eee97c",
+        "masks.png": "77e23788d542216b84df60429940ca462e13ffbf24a5c95ab3e4494ae7278a74",
+        "rgbs.png": "2a66fa5552911a179580e5b880824e3eb4124b72fb28bf639d71f6db105f5fc3",
+        "csv.csv": "7f7bceaf0f73fa55fb8c0011c0dd61ff465822c922e950223f1c0888536a3072",
+        "native.png": "1eb64537c038b49aac7f2c87e0a191130e44364d825242ae4a9a6d18e0b794b3"
+      },
+      "entire_original_retained_on_disk": false,
+      "full_slide_inference": false
+    },
+    {
+      "original_stream": {
+        "bytes": 722419787,
+        "md5": "69ad852c4fde246c6e276195fc651904",
+        "sha256": "bf9d52ef9c30eb7cec93040b186b0769cd0d9a0bb93f0d05e2897be2b1baef75",
+        "reference_md5_verified": true,
+        "verified_ranges": 9,
+        "verified_range_bytes": 9437184
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/95ff8d8c-f9d3-40cd-8fd8-232b3163e680",
+      "metadata": {
+        "size_wh": [
+          151367,
+          59872
+        ],
+        "native_mpp": 0.248,
+        "metadata_source": "GDC original TIFF page0"
+      },
+      "mirror_native_pixels_equal": true,
+      "reference": "GDC exactDX1 fileMD5",
+      "mirror_reference_md5_mismatch": true,
+      "case_id": "TCGA-A2-A0ST",
+      "roi": "TCGA-A2-A0ST-DX1_left-109461_top-20850_bottom-22089_right-110700",
+      "comparison": {
+        "rgb_correlation": 0.9801924334997179,
+        "rgb_mae": 8.289204597473145,
+        "phase_shift_xy": [
+          0.5145947622647782,
+          0.4658277160546618
+        ],
+        "phase_response": 1.0046624398673885
+      },
+      "files": {
+        "original-roi.png": "0148844bba391437dfb579756d84cb8d6d07130ed0eb30430fa80cd4b072d1cf",
+        "masks.png": "64a50c7c41c147e130a1b2a24a3826434beeaf97aa631c7b1e7df36f815fb0e7",
+        "rgbs.png": "d02e8c9996761e5720e20365e96590b8c0422110e1071f79fd57910aae3adea7",
+        "csv.csv": "87b82284afbbe195db7b7d29c9bd48543abec91d426ba3207a18f38a8cb0f934",
+        "native.png": "b62bd162a1c0f0ef7f1bb2a9ad5dc376fac13704421d4ca6cee49095ee8daf2d"
+      }
+    },
+    {
+      "original_stream": {
+        "bytes": 1315819883,
+        "md5": "ba27c8f0c392bb069ef3ffe9b609fd39",
+        "sha256": "da632019745e80be822f217810ce0f4988cbc6c721510ce824760a69df7b9827",
+        "reference_md5_verified": true,
+        "verified_ranges": 10,
+        "verified_range_bytes": 10485760
+      },
+      "original_url": "https://api.gdc.cancer.gov/data/64093c9e-aebe-4367-adbb-3ea85e3234c9",
+      "metadata": {
+        "size_wh": [
+          182783,
+          77308
+        ],
+        "native_mpp": 0.248,
+        "metadata_source": "GDC original TIFF page0"
+      },
+      "mirror_native_pixels_equal": true,
+      "reference": "GDC exactDX1 fileMD5",
+      "mirror_reference_md5_mismatch": true,
+      "case_id": "TCGA-A2-A0SX",
+      "roi": "TCGA-A2-A0SX-DX1_left-53824_top-56708_bottom-57947_right-55063",
+      "comparison": {
+        "rgb_correlation": 0.9910015042072506,
+        "rgb_mae": 4.3708451588948565,
+        "phase_shift_xy": [
+          0.6678678064164387,
+          0.2694471958865279
+        ],
+        "phase_response": 0.9863201691769063
+      },
+      "files": {
+        "original-roi.png": "99f435d53904196fd291bfa9cc017e01b9fcf18e3f0fc0d54f484ccc0607c7cc",
+        "masks.png": "25cd92cf242113adb6c8815874dea72c7ea513af3f78e285a3af971bca286db3",
+        "rgbs.png": "35a525782b17cf5c26ed3dde2a54b358a8087a3d9635202f773505c757509e7b",
+        "csv.csv": "647d84943fed8fe07565b36d5339e07d0c2bf55294bfa72fc1b2bc7ceaabbb8e",
+        "native.png": "3c5be76beb184e6df5ad151868949164edf0dcfcca842d9d0478f9036d2b6a7e"
+      }
+    }
+  ]
+}

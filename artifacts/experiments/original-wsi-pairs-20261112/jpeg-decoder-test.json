@@ -1,0 +1,46 @@
+{
+  "compression": "JPEG",
+  "tile_size": 16,
+  "checks": [
+    {
+      "bounds": [
+        0,
+        0,
+        91,
+        77
+      ],
+      "tiles": 30,
+      "exact_equal": true
+    },
+    {
+      "bounds": [
+        13,
+        7,
+        82,
+        75
+      ],
+      "tiles": 30,
+      "exact_equal": true
+    },
+    {
+      "bounds": [
+        80,
+        69,
+        91,
+        77
+      ],
+      "tiles": 1,
+      "exact_equal": true
+    },
+    {
+      "bounds": [
+        16,
+        16,
+        32,
+        32
+      ],
+      "tiles": 1,
+      "exact_equal": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "files": 1206,
+  "range_bytes": 254420585,
+  "raw_bytes": 266720505,
+  "manifest_sha256": "fe4ae2ab24b1c15cead74859781bd366a158912aef42162de26f613c1bfd6f9c",
+  "completed_utc": "2026-11-12T04:18:59.212866+00:00",
+  "wall_seconds": 265.2155734410044,
+  "acquire_runner_sha256": "f272347d100bd361ee63ec08bc9b0b49f03826d982a1fd2aaa35a92ed35db5db",
+  "source_inputs_reused_from_prior_probe": 30,
+  "source_inputs_downloaded_http206": 1176,
+  "download_scope": "Official test PNG/HDF5 entries only; no train/validation/full ZIP downloaded."
+}

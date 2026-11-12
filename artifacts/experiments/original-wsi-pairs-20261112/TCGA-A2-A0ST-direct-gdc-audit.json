@@ -1,0 +1,16 @@
+{
+  "case_id": "TCGA-A2-A0ST",
+  "source_url": "https://api.gdc.cancer.gov/data/95ff8d8c-f9d3-40cd-8fd8-232b3163e680",
+  "reference_md5": "69ad852c4fde246c6e276195fc651904",
+  "status": "matched",
+  "observed": {
+    "bytes": 722419787,
+    "md5": "69ad852c4fde246c6e276195fc651904",
+    "sha256": "bf9d52ef9c30eb7cec93040b186b0769cd0d9a0bb93f0d05e2897be2b1baef75",
+    "reference_md5_verified": true,
+    "verified_ranges": 9,
+    "verified_range_bytes": 9437184
+  },
+  "native_gdc_dsa_pixels_equal": true,
+  "gdc_native_sha256": "b62bd162a1c0f0ef7f1bb2a9ad5dc376fac13704421d4ca6cee49095ee8daf2d"
+}

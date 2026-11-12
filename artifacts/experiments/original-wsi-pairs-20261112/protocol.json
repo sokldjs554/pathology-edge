@@ -1,0 +1,169 @@
+{
+  "cases": [
+    {
+      "case_id": "TCGA-A2-A0D2",
+      "dsa_item_id": "5bbdee2ee629140048d01aa1",
+      "dsa_files": [
+        {
+          "_id": "5bbdee2ee629140048d01aa2",
+          "_modelType": "file",
+          "created": "2018-10-10T12:18:54.958000+00:00",
+          "creatorId": "589e026192ca9a00110fc221",
+          "exts": [
+            "ecd890f5-ba01-4998-b472-7b683bd6d7b1",
+            "svs"
+          ],
+          "itemId": "5bbdee2ee629140048d01aa1",
+          "mimeType": null,
+          "name": "TCGA-A2-A0D2-01Z-00-DX1.ECD890F5-BA01-4998-B472-7B683BD6D7B1.svs",
+          "size": 1782750153
+        }
+      ],
+      "gdc_matching": [],
+      "roi": "TCGA-A2-A0D2-DX1_left-97174_top-23865_bottom-25104_right-98413",
+      "annotations": {
+        "rgbs": {
+          "id": "11b_KJeGHH9DWSjE3ruoKFz8Q-ZOeqm3J",
+          "name": "TCGA-A2-A0D2-DX1_left-97174_top-23865_bottom-25104_right-98413.png",
+          "mime": "image/png"
+        },
+        "masks": {
+          "id": "1A3QMt9SsacvSITZyB2PT7z-HpJ5Uz8rZ",
+          "name": "TCGA-A2-A0D2-DX1_left-97174_top-23865_bottom-25104_right-98413.png",
+          "mime": "image/png"
+        },
+        "csv": {
+          "id": "1cp98Z3RpfBrV01MSwZiE7NsejjMBYR7m",
+          "name": "TCGA-A2-A0D2-DX1_left-97174_top-23865_bottom-25104_right-98413.csv",
+          "mime": "text/csv"
+        }
+      }
+    },
+    {
+      "case_id": "TCGA-A2-A0ST",
+      "dsa_item_id": "5bbdee4ee629140048d01add",
+      "dsa_files": [
+        {
+          "_id": "5bbdee4ee629140048d01ade",
+          "_modelType": "file",
+          "created": "2018-10-10T12:19:26.006000+00:00",
+          "creatorId": "589e026192ca9a00110fc221",
+          "exts": [
+            "ae05a5db-4861-40de-b0f5-7955fc903a96",
+            "svs"
+          ],
+          "itemId": "5bbdee4ee629140048d01add",
+          "mimeType": null,
+          "name": "TCGA-A2-A0ST-01Z-00-DX1.AE05A5DB-4861-40DE-B0F5-7955FC903A96.svs",
+          "size": 722419787
+        }
+      ],
+      "gdc_matching": [
+        {
+          "id": "95ff8d8c-f9d3-40cd-8fd8-232b3163e680",
+          "cases": [
+            {
+              "submitter_id": "TCGA-A2-A0ST"
+            }
+          ],
+          "access": "open",
+          "file_name": "TCGA-A2-A0ST-01Z-00-DX1.AE05A5DB-4861-40DE-B0F5-7955FC903A96.svs",
+          "md5sum": "69ad852c4fde246c6e276195fc651904",
+          "file_id": "95ff8d8c-f9d3-40cd-8fd8-232b3163e680",
+          "file_size": 722419787
+        }
+      ],
+      "roi": "TCGA-A2-A0ST-DX1_left-109461_top-20850_bottom-22089_right-110700",
+      "annotations": {
+        "rgbs": {
+          "id": "1V_z4KTnwuuzXqCyIA3L6gTPaCDZn573T",
+          "name": "TCGA-A2-A0ST-DX1_left-109461_top-20850_bottom-22089_right-110700.png",
+          "mime": "image/png"
+        },
+        "masks": {
+          "id": "1nBaj5K3HApsn9p4NL404PhpXlIFoetig",
+          "name": "TCGA-A2-A0ST-DX1_left-109461_top-20850_bottom-22089_right-110700.png",
+          "mime": "image/png"
+        },
+        "csv": {
+          "id": "1LP12Ab7ue370TEMGu0U0tuTT2NdDU8fi",
+          "name": "TCGA-A2-A0ST-DX1_left-109461_top-20850_bottom-22089_right-110700.csv",
+          "mime": "text/csv"
+        }
+      }
+    },
+    {
+      "case_id": "TCGA-A2-A0SX",
+      "dsa_item_id": "5bbdee9fe629140048d01b75",
+      "dsa_files": [
+        {
+          "_id": "5bbdee9fe629140048d01b76",
+          "_modelType": "file",
+          "created": "2018-10-10T12:20:47.784000+00:00",
+          "creatorId": "589e026192ca9a00110fc221",
+          "exts": [
+            "219a994c-8974-4458-98fa-fb1f14868e04",
+            "svs"
+          ],
+          "itemId": "5bbdee9fe629140048d01b75",
+          "mimeType": null,
+          "name": "TCGA-A2-A0SX-01Z-00-DX1.219A994C-8974-4458-98FA-FB1F14868E04.svs",
+          "size": 1315819883
+        }
+      ],
+      "gdc_matching": [
+        {
+          "id": "64093c9e-aebe-4367-adbb-3ea85e3234c9",
+          "cases": [
+            {
+              "submitter_id": "TCGA-A2-A0SX"
+            }
+          ],
+          "access": "open",
+          "file_name": "TCGA-A2-A0SX-01Z-00-DX1.219A994C-8974-4458-98FA-FB1F14868E04.svs",
+          "md5sum": "ba27c8f0c392bb069ef3ffe9b609fd39",
+          "file_id": "64093c9e-aebe-4367-adbb-3ea85e3234c9",
+          "file_size": 1315819883
+        }
+      ],
+      "roi": "TCGA-A2-A0SX-DX1_left-53824_top-56708_bottom-57947_right-55063",
+      "annotations": {
+        "rgbs": {
+          "id": "1CaXDZ3Msi5LCzAGn_ctyGMb-2CzlQM0O",
+          "name": "TCGA-A2-A0SX-DX1_left-53824_top-56708_bottom-57947_right-55063.png",
+          "mime": "image/png"
+        },
+        "masks": {
+          "id": "1UgEHIPsKYX5EEOou7oqF0GPHIOQgxYIX",
+          "name": "TCGA-A2-A0SX-DX1_left-53824_top-56708_bottom-57947_right-55063.png",
+          "mime": "image/png"
+        },
+        "csv": {
+          "id": "1QllBJhQxw26bUmYX0g4WRDgI-Rt9qfgq",
+          "name": "TCGA-A2-A0SX-DX1_left-53824_top-56708_bottom-57947_right-55063.csv",
+          "mime": "text/csv"
+        }
+      }
+    }
+  ],
+  "selection": "First lexical manual ROI from each of3remaining cases in initial50entry publiclistings; none previously predicted",
+  "expected_model_sha256": {
+    "small_vit": "0bb2af67ca4d4e403e5789359feb6b284f9207e6c7eb9bf4e521b7d0972f5898",
+    "small_vit_refined": "b9d3892a257a06ed0b67bd4e8717a331d457272531b3501fadf1fbacd70f004f"
+  },
+  "threshold": 0.35,
+  "primary_input": "Direct original SVS native crop then Pillow BILINEAR1024square",
+  "secondary_input": "Exactly provided1024squareRGB, same labels; paired rendering sensitivity, not independent data",
+  "annotation_region": "Existing audited PanopTILs FOV/nonzero tissue/nuclear1to7or9 excluding nuclear0and8 and every inclusive rectangle",
+  "inference": "128px no_overlap, same frozen pipeline; no stain normalization or registration correction",
+  "full_stream": "Every original byte hashed; every fetched metadata/tile block compared to same whole stream; GDC MD5 if exact DX1 available",
+  "alignment_gate": "Inspect RGB and overlays before predictions; technical coordinate/shape failures recorded, not replaced; no performance-based exclusion",
+  "clinical_validation": false,
+  "full_wsi_ground_truth_validation": false,
+  "acquisition_script_sha256": "b3e86fce5c50ce1eb24afd29af96fd555b3ff4926f27bb1fbd3ea8d92abf4ba1",
+  "source_reader_sha256": "1661b7c845fca158ddc0254064322306f80aeb12bfb3d73c3875cf1d76075134",
+  "acquisition_amendment": "Before inference: mirror MD5 mismatch led to direct GDC source for ST/SX; native crops identical. D2 retains verified entire mirror stream without an independent reference MD5.",
+  "annotation_amendment": "Before inference: require originalmask and full-canvas Pillow integer CSV polyline agreement; ignore disagreements in either direction. D2 haszero polylines, report background-only false-positive control and exclude from contour-casemacro.",
+  "rasterization_claim": "Explicit conservative agreement convention, not reproduction of historical exporter; excludededgepixels can bias metrics.",
+  "original_selection_protocol_sha256": "7bbbfc40c719edc291810c3c043710ebac55383d05101144d4811946da63dbe6"
+}

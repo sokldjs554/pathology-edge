@@ -1,0 +1,42 @@
+TCGA-A2-A0ST: original stream 256 MiB
+TCGA-A2-A0SX: original stream 256 MiB
+TCGA-A2-A0ST: original stream 512 MiB
+TCGA-A2-A0D2: original stream 256 MiB
+TCGA-A2-A0SX: original stream 512 MiB
+TCGA-A2-A0SX: original stream 768 MiB
+TCGA-A2-A0D2: original stream 512 MiB
+TCGA-A2-A0SX: original stream 1024 MiB
+TCGA-A2-A0D2: original stream 768 MiB
+TCGA-A2-A0D2: original stream 1024 MiB
+TCGA-A2-A0D2: original stream 1280 MiB
+TCGA-A2-A0D2: original stream 1536 MiB
+TCGA-A2-A0D2: original verified, MD5 reference=False
+Traceback (most recent call last):
+  File "/workspace/pathology-edge/scripts/acquire_wsi_pairs.py", line 137, in <module>
+    main()
+  File "/workspace/pathology-edge/scripts/acquire_wsi_pairs.py", line 132, in main
+    results=list(executor.map(lambda item:acquire_case(item,args.output),sources))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/pathology-edge/scripts/acquire_wsi_pairs.py", line 132, in <lambda>
+    results=list(executor.map(lambda item:acquire_case(item,args.output),sources))
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/pathology-edge/scripts/acquire_wsi_pairs.py", line 84, in acquire_case
+    full = verify_stream(chunks(response),file['size'],reader.blocks,expected)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/pathology-edge/src/pathology_edge/wsi_source.py", line 84, in verify_stream
+    raise ValueError('Original MD5 differs from published reference')
+ValueError: Original MD5 differs from published reference
