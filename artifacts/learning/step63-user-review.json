@@ -1,0 +1,20 @@
+{
+  "step": 63,
+  "recorded_at_utc": "2026-11-12T08:45:03Z",
+  "user_submitted_execution_summary": "artifacts/learning/step63-user-summary.json",
+  "expected_provided_runner_commit": "2cc72869954068da3be96280ea795b7009d9d07f",
+  "status": "user_reported_successful_single_case_frozen_model_replay",
+  "expected_case": {"image_id": "109", "cells": 133, "correct_cells": 40},
+  "submitted_counts_match_published_case": true,
+  "reported_published_case_check_passed": true,
+  "user_executed_new_inference_images": 1,
+  "user_executed_training": false,
+  "user_executed_full_402_case_evaluation": false,
+  "user_authored_review_runner": false,
+  "user_comparison_display_confirmed": false,
+  "user_interpretation_received": false,
+  "user_full_summary_file_received": false,
+  "direct_access_to_user_files": false,
+  "paths_normalized_from_chat_escaped_punctuation": true,
+  "next_step": "사용자가 제출한 view 경로의 SVG를 Codespaces Image Preview로 열고 원영상·정답 중심·같은 중심의 예측 세 패널 표시를 확인."
+}
