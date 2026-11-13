@@ -42,7 +42,7 @@ prediction schema compatible with summarize/audit_auto_ki67.
 Files: report, STEP82 pending review, standalone HTML, evidence ZIP.
 - [x] Actual case visualization of missed/recovered points and positive/negative counts.
 - [x] Browser desktop/mobile, full suite and existing checks; final fresh code review.
-- [ ] Commit/push draft PR; check download hashes. Give one user review step.
+- [x] Commit/push draft PR; check download hashes. Give one user review step.
 
 ## Ledger
 
@@ -65,3 +65,8 @@ cost is a separate comparison rather than a universal replacement.
 Ruling: use GitHub clean runner for whole-suite evidence — local remaining free-space
 guard requires2GiB; no bypass or deletion of original datasets/artifacts. CI36b8640has571pass,
 Dice42/6 and static checks pass. Earlier local sparse/build failures retained in logs.
+
+Delivery: sourcefda5695 CI571pass; artifacts3729765 published97-fileZIP,5,593,732bytes.
+HTTP200download, ZIPCRC andallmemberhashes verified; SHA256
+08a3bd1197bce79dacb20f8d67e790de55400442ef9fe6d20d11d82aec47af00.
+DraftPR2updated; no merge or public-demo replacement. UserSTEP82review remains pending.
