@@ -37,18 +37,18 @@ tests/test_ki67_center_experiment.py. Interfaces prepare/fit/evaluate/external C
 select_configuration(validation candidates/GT)->bestconfig/trials; per-seed results use
 existing audit_auto_ki67 format so independent recount can operate unchanged.
 - [x] RED tests for train/test rejection, case-macro selection, ties, integrity and fresh outputs.
-- [ ] Implement fresh staging, data/model/source verification, frozen classifier loading,
+- [x] Implement fresh staging, data/model/source verification, frozen classifier loading,
   native-size inference and complete matched metrics; GREEN. Freeze/run3seeds, lock before
   407/133 re-evaluation. No score-guided changes after either evaluation.
-- [ ] Independent recount all new predictions, baseline identity, one image-only replay.
+- [x] Independent recount all new predictions, baseline identity, one image-only replay.
 
 ### Task3: Reviewable evidence and delivery
 Files: docs/KI67_LEARNED_CENTERS.md, scripts/export_ki67_centers_review.py,
 artifacts/experiments/ki67-learned-centers-20261113/, new handoffZIP.
-- [ ] Generate actual held-out-record before/after examples incl old107-candidate case,
+- [x] Generate actual held-out-record before/after examples incl old107-candidate case,
   fixedfirstseed best/worstF1 changes; all detector/classifier options. No reference centers
   passed to inference. Browsercheck desktop/mobile, display/model toggles, savednumbers.
-- [ ] Scopedlocal+fullCI, fresh final review, hash/ZIP/download check, push existingdraftPR.
+- [x] Scopedlocal+fullCI, fresh final review, hash/ZIP/download check, push existingdraftPR.
   One user review remains pending. No blanket completion/generalization claim.
 
 Preflight: Task1'sXYpoints -> Task2 classifier nativecropXY; Task2 standard prediction schema
@@ -61,3 +61,10 @@ diagnostic motivated one activation-only LeakyReLU0.1 trial, same3seeds/settings
 scoring before either decision. Current source557CItests passed at583be54. Final reviewer
 checkpoint found no actionable issues and33newtests passed; wholeincrement readiness awaits
 actual evaluation/artifact/browser evidence. No old test/external score-driven retuning.
+
+Final: complete implementation and evidence reviewed at0f518dc; no findings. Source-head
+CI557passed;6480recounts,576selectiontrials,12portableCLIcombinations,9heatmapreplays,
+36browsercombinations all pass. Published113-fileZIP at8ba7d50:5,474,802bytes,
+SHAa954552abde0d90ec761247b74971b0d5499119b723ac4948ce93a64f0e3b145.
+HTTP200download,ZIPCRC andallmemberhashes verified. DraftPR2updated; no merge/demo
+deployment. UserSTEP80/U94remains pending.

@@ -1,0 +1,15 @@
+{
+  "zip": "artifacts/handoff/PathologyEdge-LearnedCenters-20261113.zip",
+  "bytes": 5474802,
+  "sha256": "a954552abde0d90ec761247b74971b0d5499119b723ac4948ce93a64f0e3b145",
+  "members": 113,
+  "all_member_hashes_match": true,
+  "crc_passed": true,
+  "no_bcdata_raw_files_or_coordinate_arrays": true,
+  "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/8ba7d50e37579dd2e2782d8fd40549375d024896/artifacts/handoff/PathologyEdge-LearnedCenters-20261113.zip",
+  "commit": "8ba7d50e37579dd2e2782d8fd40549375d024896",
+  "http_status": 200,
+  "remote_sha256_matches": true,
+  "remote_all_members_match": true,
+  "checked_utc": "2026-11-13T08:35:36.710092+00:00"
+}

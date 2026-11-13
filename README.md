@@ -12,6 +12,8 @@
 
 [학습한 세포 중심 검출](docs/KI67_LEARNED_CENTERS.md): 정답 좌표 없이 새 중심을 예측하는 소형 검출기를3seed로 학습했습니다. 내부407장 검출 F1은0.0982→0.3172~0.3553, BCData133장 종양2-class F1도12개 조합 모두 상승했습니다. 다만 내부 재현율은 하락했고 양성률 오차는 일부 악화됐습니다. 기존 자료 재평가이며 새 미노출 외부·임상 검증이 아닙니다. 모델·한 장 추론 명령·실제 전후 화면을 별도 자료로 제공합니다.
 
+[모델·전후 화면 ZIP 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/8ba7d50e37579dd2e2782d8fd40549375d024896/artifacts/handoff/PathologyEdge-LearnedCenters-20261113.zip) · [첫 화면 확인 순서](docs/STEP_80.md).113파일·5.47MB, 공개 다운로드와 전체 파일 해시를 확인했습니다.
+
 [Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
 
 추가 보정 실험에서는 기존 TNBC validation10장의 3개 seed 평균 전체 Dice가 **0.555994→0.576699**였지만, 고정한 사용자 모델 쌍의 외부 MoNuSeg14ROI 평균은 **0.551974→0.534943**으로 하락했습니다. 두 실험은 모델·평가 범위가 달라 합산하지 않습니다. 공개 데모의 기존 결과는 유지합니다.
