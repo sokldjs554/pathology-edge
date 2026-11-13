@@ -1,0 +1,13 @@
+{
+  "source_commit": "0f518dcf535188e0a5c726a926ef67753de67995",
+  "training_source_commit": "583be54b40876dd1ed02e6c80102e03a878cdf58",
+  "initial_training_source_commit": "1465ec8e3a2d28d0d01e1557de5e29d68bdf8732",
+  "protocol_sha256": "2baa200a28c0bee3f7a5c6dfff32de566e349b380ff248c0ae3cf34cab748068",
+  "selection_lock_sha256": "7d470f4493dd3b2f26fbc36ec78caf6a466224ef9782325cb445ed02a7e283d9",
+  "bcdata_coordinates_redistributed": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "prior_user_reviews_through": "U93; new viewer review pending",
+  "initial_package_source_commit": "11dfddebcd90af381a350b199932b53e209c8925",
+  "viewer_export_sha256": "82c91e4c9418f259e69ded75b0a4ddfc0e2c72d8093bc05a20a59eb4da5ed63d"
+}

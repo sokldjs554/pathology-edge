@@ -1,0 +1,31 @@
+{
+  "step": 75,
+  "contribution_id": "U89",
+  "recorded_date": "2026-11-13",
+  "timezone": "Asia/Seoul",
+  "user_response": "- FP(정답과 대응하지 않는 후보): 107 − 3 = 104개\n- FN(놓친 정답): 7 − 3 = 4개\n\n즉, 정답과 일대일 대응한 후보는 3개이며, FP 104개와 FN 4개가 발생했습니다.",
+  "prompt_scope": "첫 사례의 정답 중심점7개·자동 후보107개·위치 기준 일대일 대응3개를 제공하고 FP와 FN 계산 요청",
+  "interpretation_correct": true,
+  "user_arithmetic_from_supplied_counts": true,
+  "scope": "FP=107-3=104, FN=7-3=4로 위치 검출 오류를 구분; 클래스별 FP/FN 계산이나 주석의 임상 정확도 검증은 아님",
+  "evidence_commit": "751f92e5c83069d1bdb651b4b7dce6e9b0d36726",
+  "evidence_path": "artifacts/experiments/auto-ki67-20261113/results.json",
+  "evidence_sha256": "6f585bd89564ce947f6275cbbdbbcf5c74d0897f10e077ca6fe1ca714ab57780",
+  "example_image": "case_0011_region_0_patch_1_O.png",
+  "reference_counts": {
+    "ground_truth_points": 7,
+    "predicted_points": 107,
+    "tp": 3,
+    "fp": 104,
+    "fn": 4
+  },
+  "new_user_code": false,
+  "new_user_tests": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "user_independent_point_matching": false,
+  "user_independent_annotation_review": false,
+  "all_images_or_seeds_individually_reviewed": false,
+  "help_provided": "제공 정답·자동 후보·일대일 대응 수와 FP/FN 뜻을 안내; 사용자가 두 뺄셈과 결과를 제출",
+  "archive_scope": "이전 발행 ZIP과 U87/U88 기록을 보존하고 후속 계산·해석 확인으로 추가"
+}

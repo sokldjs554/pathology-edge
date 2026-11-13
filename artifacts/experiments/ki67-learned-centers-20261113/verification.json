@@ -1,0 +1,25 @@
+{
+  "ci_commit": "0f518dcf535188e0a5c726a926ef67753de67995",
+  "ci_url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43393319250",
+  "tests_passed": 557,
+  "dice_values_matched": 42,
+  "dice_means_matched": 6,
+  "static_demo_check": true,
+  "independent_image_arm_recounts": 6480,
+  "selection_configuration_trials": 576,
+  "heatmap_replays_exact": 9,
+  "browser_combinations": 36,
+  "browser_widths": [
+    1440,
+    390
+  ],
+  "portable_image_only_cli_calls": 12,
+  "unique_portable_example_images": 1,
+  "final_detector_training_runs": 3,
+  "initial_validation_only_detector_runs": 3,
+  "user_new_review_completed": false,
+  "public_demo_deployed": false,
+  "fresh_external_validation": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false
+}

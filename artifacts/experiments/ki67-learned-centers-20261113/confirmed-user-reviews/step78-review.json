@@ -1,0 +1,23 @@
+{
+  "step": 78,
+  "contribution_id": "U92",
+  "recorded_date": "2026-11-13",
+  "timezone": "Asia/Seoul",
+  "user_response": "어 정상적으로 잘 작동해",
+  "prompt_scope": "전달 ZIP의 review.html 첫 사례에서 후보107→90개, FP104→87개, TP3개·FN4개 유지 표시와 제거 후보 회색 표시 토글을 확인하도록 요청",
+  "scope": "요청한 첫 사례의 전후 수치 표시와 제거 후보 표시 전환에 대한 정상 동작 확인 응답. 개별 수치를 다시 기재하거나 독립 검산한 응답은 아님.",
+  "evidence_commit": "c3b9dedaf3129fdc207ab1e444bc13f14584810b",
+  "evidence_path": "artifacts/experiments/ki67-candidate-filter-20261113/review.html",
+  "evidence_sha256": "2b1aa3d36e67c721db97235041629df53cd9cf1630de75d2743a8d5cbbb61540",
+  "archive_sha256": "4e4349863459bc0c4cbe61145fbcf2fd513cfb4fc1200b5327d47594ce68262a",
+  "user_requested_browser_review_confirmed": true,
+  "new_user_code": false,
+  "new_user_automated_tests": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "user_independent_point_matching_or_count_audit": false,
+  "all_images_or_classifiers_reviewed": false,
+  "user_external_performance_interpretation_confirmed": false,
+  "help_provided": "ZIP과 열 파일명, 첫 사례의 예상 후보·TP·FP·FN 수치 및 제거 표시 조작 순서를 제공",
+  "archive_scope": "발행 ZIP은 응답 이전 기록으로 보존하며 사용자 확인을 별도 후속 기록으로 추가"
+}

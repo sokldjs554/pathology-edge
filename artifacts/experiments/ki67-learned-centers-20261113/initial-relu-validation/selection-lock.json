@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-13T07:53:39.828484+00:00",
+  "protocol_sha256": "76d6b7ec65e0ea694fc61152ea42d87d0927800cb0c0ab672bc92efb8cfd7649",
+  "selection_sha256": "c0825ef7fec97fbe203ca290abc99d11e0ca6f8105fe2e7b7b696885bb4793bf",
+  "model_hashes": {
+    "detector-20261117.pt": "aad092dc6f32b4dadf9927ce526de7a8dffa8cdaa3adaef005507be058b9d5a1",
+    "detector-20261118.pt": "a09e4898f00cd9ce97ef37aabb4e53b7de6cb6388a4ff61da2205ad366d79bea",
+    "detector-20261119.pt": "7a3e6fcc4de73a05e1592c40fb27d77eb7632727f73f27677c39dd4caac14f7e"
+  },
+  "evaluation_started": false
+}
