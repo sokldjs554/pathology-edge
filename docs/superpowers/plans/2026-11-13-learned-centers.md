@@ -49,7 +49,7 @@ artifacts/experiments/ki67-learned-centers-20261113/, new handoffZIP.
   fixedfirstseed best/worstF1 changes; all detector/classifier options. No reference centers
   passed to inference. Browsercheck desktop/mobile, display/model toggles, savednumbers.
 - [x] Scopedlocal+fullCI, fresh final review, hash/ZIP/download check, push existingdraftPR.
-  One user review remains pending. No blanket completion/generalization claim.
+  User U94 first-example display/toggle response is recorded separately; no blanket completion/generalization claim.
 
 Preflight: Task1'sXYpoints -> Task2 classifier nativecropXY; Task2 standard prediction schema
 -> existing independent audit; Task3 only saved/equally replayed results, not invented overlays.
@@ -67,4 +67,4 @@ CI557passed;6480recounts,576selectiontrials,12portableCLIcombinations,9heatmapre
 36browsercombinations all pass. Published113-fileZIP at8ba7d50:5,474,802bytes,
 SHAa954552abde0d90ec761247b74971b0d5499119b723ac4948ce93a64f0e3b145.
 HTTP200download,ZIPCRC andallmemberhashes verified. DraftPR2updated; no merge/demo
-deployment. UserSTEP80/U94remains pending.
+deployment. UserSTEP80/U94first-example display/toggle normal response recorded in step80-review.json; no new user inference/training/tests claimed.
