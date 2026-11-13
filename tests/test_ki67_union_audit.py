@@ -30,3 +30,8 @@ def test_independent_selection_refuses_changed_eligibility(audit):
 def test_candidate_reference_must_match_exact_points(audit):
     with pytest.raises(ValueError):audit.exact_points([[1,2]],[[2,1]])
     audit.exact_points([],[])
+
+def test_saved_float32_score_is_compared_at_its_exact_value(audit):
+    # np.float32(.7) is 0.699999988..., strictly below the configured .7.
+    points,scores=audit.independent_decode([[0,0]],np.array([.7],dtype=np.float32),dict(threshold=.7,min_distance=4))
+    assert len(points)==0

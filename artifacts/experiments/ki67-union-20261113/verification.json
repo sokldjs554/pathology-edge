@@ -1,0 +1,14 @@
+{
+  "local_focused_tests": {"tests":94,"failures":0,"log":"regression.log"},
+  "additional_precision_regression": {"tests":4,"failures":0,"red_log":"audit-precision-red.log","green_log":"audit-precision-green.log"},
+  "ci": {"source_commit":"af883aa94615a51b441f905e3c6a54c4bc46f233","url":"https://github.com/sokldjs554/pathology-edge/actions/runs/43453052068","tests":605,"failures":0,"skips":0,"saved_dice_checks":42,"saved_mean_checks":6,"static_demo_passed":true},
+  "local_baseline_full_suite": {"passed":466,"failed":1,"errors":104,"limitation":"Local filesystem reached ENOSPC while pytest created temporary fixtures. This full-suite run did not pass; clean CI is the full-suite evidence."},
+  "training_source_commit":"47cc9f0fe33551714b29371fa8412b1b76464328",
+  "training_models":3,
+  "epochs_per_model":12,
+  "validation_trials_per_seed":504,
+  "selected_models":0,
+  "new_test_inference_images":0,
+  "new_external_inference_images":0,
+  "new_user_execution":false
+}

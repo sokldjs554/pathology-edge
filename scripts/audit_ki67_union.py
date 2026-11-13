@@ -19,7 +19,7 @@ def exact_points(actual,expected):
 
 
 def independent_decode(points,scores,config):
-    points=np.asarray(points,dtype=np.int64).reshape(-1,2);scores=np.asarray(scores)
+    points=np.asarray(points,dtype=np.int64).reshape(-1,2);scores=np.asarray(scores,dtype=np.float64)
     if scores.shape!=(len(points),) or not np.isfinite(scores).all() or np.any(scores<0) or np.any(scores>1):raise ValueError('Invalid saved gate scores')
     order=sorted(range(len(points)),key=lambda i:(-float(scores[i]),int(points[i,1]),int(points[i,0])))
     # Different implementation from production: boolean exclusion using squared
@@ -102,7 +102,7 @@ def audit(root,replay=True):
         compare_metrics(_summary(rows,[np.asarray(r['points']).reshape(-1,2) for r in rows]),model['union'])
         all_trials=[]
         for h in history:
-            epoch=h['epoch'];scores=scorefile[f'epoch_{epoch}']
+            epoch=h['epoch'];scores=scorefile[f'epoch_{epoch}'].astype(np.float64)
             if scores.shape!=(sum(lengths),):raise ValueError('Score array length mismatch')
             pieces=[scores[a:b] for a,b in zip(offsets[:-1],offsets[1:])]
             if len(h['trials'])!=42 or {(t['config']['threshold'],t['config']['min_distance']) for t in h['trials']}!={(t,d) for t in THRESHOLDS for d in DISTANCES}:raise ValueError('Trial grid mismatch')

@@ -1,0 +1,60 @@
+{
+  "url": "http://127.0.0.1:8879/",
+  "examples": 6,
+  "desktop": {
+    "width": 1440,
+    "height": 1000
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    {
+      "image": "case_0003_region_0_patch_4_O.png",
+      "panels": 4,
+      "metrics": true,
+      "state": "case_0003_region_0_patch_4_O.png · case_0003 · 같은 224×224px 위치 · epoch 1 · 임계값 0.7, 거리 8px · 진단용 · 선택 조건 미충족 · C−A 오류 합 -2",
+      "same_image_without_overlay": true
+    },
+    {
+      "image": "case_0019_region_0_patch_2_O.png",
+      "panels": 4,
+      "metrics": true,
+      "state": "case_0019_region_0_patch_2_O.png · case_0019 · 같은 224×224px 위치 · epoch 1 · 임계값 0.7, 거리 8px · 진단용 · 선택 조건 미충족 · C−A 오류 합 +49",
+      "same_image_without_overlay": true
+    },
+    {
+      "image": "case_0005_region_1_patch_22_O.png",
+      "panels": 4,
+      "metrics": true,
+      "state": "case_0005_region_1_patch_22_O.png · case_0005 · 같은 224×224px 위치 · epoch 1 · 임계값 0.6, 거리 8px · 진단용 · 선택 조건 미충족 · C−A 오류 합 -1",
+      "same_image_without_overlay": true
+    },
+    {
+      "image": "case_0005_region_0_patch_15_O.png",
+      "panels": 4,
+      "metrics": true,
+      "state": "case_0005_region_0_patch_15_O.png · case_0005 · 같은 224×224px 위치 · epoch 1 · 임계값 0.6, 거리 8px · 진단용 · 선택 조건 미충족 · C−A 오류 합 +35",
+      "same_image_without_overlay": true
+    },
+    {
+      "image": "case_0005_region_2_patch_18_O.png",
+      "panels": 4,
+      "metrics": true,
+      "state": "case_0005_region_2_patch_18_O.png · case_0005 · 같은 224×224px 위치 · epoch 4 · 임계값 0.7, 거리 8px · 진단용 · 선택 조건 미충족 · C−A 오류 합 -1",
+      "same_image_without_overlay": true
+    },
+    {
+      "image": "case_0005_region_0_patch_20_O.png",
+      "panels": 4,
+      "metrics": true,
+      "state": "case_0005_region_0_patch_20_O.png · case_0005 · 같은 224×224px 위치 · epoch 4 · 임계값 0.7, 거리 8px · 진단용 · 선택 조건 미충족 · C−A 오류 합 +43",
+      "same_image_without_overlay": true
+    }
+  ],
+  "errors": [],
+  "body_overflow_mobile": false,
+  "navigation_passed": true,
+  "all_passed": true
+}
