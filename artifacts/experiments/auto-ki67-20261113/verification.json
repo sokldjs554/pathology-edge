@@ -1,8 +1,8 @@
 {
   "core_source_commit": "2f90eff",
   "external_source_commit": "6c895ef9bd8f161eacc9de30c17343610bec8dc1",
-  "whole_ci": "https://github.com/sokldjs554/pathology-edge/actions/runs/43346102106",
-  "whole_tests_passed": 497,
+  "whole_ci": "https://github.com/sokldjs554/pathology-edge/actions/runs/43349444151",
+  "whole_tests_passed": 501,
   "existing_dice_values_match": 42,
   "existing_dice_means_match": 6,
   "new_scoped_tests_passed": 50,
@@ -35,5 +35,7 @@
     "fixed": "Reject nonfinite CNN parameters and invalid probability outputs before argmax; 4 regression failures reproduced before fix",
     "historical_checkpoints_finite": true,
     "historical_results_unchanged": true
-  }
+  },
+  "whole_ci_source_commit": "a12a15706a31e5057726a66a8721aee16bee61cd",
+  "whole_test_seconds": 31.15
 }
