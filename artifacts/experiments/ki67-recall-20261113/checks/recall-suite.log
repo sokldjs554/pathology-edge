@@ -1,0 +1,86 @@
+........................................................................ [ 12%]
+........................................................................ [ 25%]
+........................................................................ [ 38%]
+........................................................................ [ 51%]
+........................................................................ [ 63%]
+......s.......................................................FF........ [ 76%]
+...............................F........................................ [ 89%]
+..........s.................................................             [100%]
+=================================== FAILURES ===================================
+____________ test_failed_execution_keeps_user_edits_and_failure_log ____________
+
+repo = PosixPath('/tmp/pytest-of-agent/pytest-26/test_failed_execution_keeps_us0/repo')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f528b6f1e80>
+
+    def test_failed_execution_keeps_user_edits_and_failure_log(repo, monkeypatch):
+        module = runner()
+        before = module.original_state(repo)
+        def failure(source, output):
+            (output / 'build.log').write_text('compiler failure\n')
+            raise RuntimeError('fixture compiler failure')
+        monkeypatch.setattr(module, 'reproduce', failure)
+        output, report = module.execute(repo)
+        assert report['all_checks_passed'] is False
+        assert report['original_files_preserved'] is True
+>       assert 'fixture compiler failure' in report['error']
+E       AssertionError: assert 'fixture compiler failure' in 'ValueError: Less than 2 GiB free; preserve this report and free space before retrying'
+
+tests/test_reproduce_snapshot.py:47: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Run: /tmp/pytest-of-agent/pytest-26/test_failed_execution_keeps_us0/repo/work/my-ubuntu-repro.16qaqqt4
+_____________ test_changed_original_cannot_be_reported_as_success ______________
+
+repo = PosixPath('/tmp/pytest-of-agent/pytest-26/test_changed_original_cannot_b0/repo')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f528b6f0320>
+
+    def test_changed_original_cannot_be_reported_as_success(repo, monkeypatch):
+        module = runner()
+        def damage(source, output):
+            (source / 'src/pathology_edge/learner_wsi.py').write_text('changed\n')
+            return {'checks': 'fixture'}
+        monkeypatch.setattr(module, 'reproduce', damage)
+        _, report = module.execute(repo)
+        assert report['all_checks_passed'] is False
+>       assert report['original_files_preserved'] is False
+E       assert True is False
+
+tests/test_reproduce_snapshot.py:63: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Run: /tmp/pytest-of-agent/pytest-26/test_changed_original_cannot_b0/repo/work/my-ubuntu-repro.6rub536_
+_______ test_saved_case_evidence_reconstructs_actual_pixels_and_metrics ________
+
+    def test_saved_case_evidence_reconstructs_actual_pixels_and_metrics():
+>       data = export_cases(ROOT / 'dist')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_review_cases.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/pathology_edge/review_cases.py:39: in export_cases
+    source = json.loads((dist / 'results.json').read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/pathology-edge-auto-ki67/dist/results.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/pathology-edge-auto-ki67/dist/results.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_reproduce_snapshot.py::test_failed_execution_keeps_user_edits_and_failure_log
+FAILED tests/test_reproduce_snapshot.py::test_changed_original_cannot_be_reported_as_success
+FAILED tests/test_review_cases.py::test_saved_case_evidence_reconstructs_actual_pixels_and_metrics
+3 failed, 559 passed, 2 skipped in 38.86s

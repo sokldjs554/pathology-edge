@@ -1,0 +1,3 @@
+VALIDATION {'validation_trials': 81, 'reference_stage_checks': 8406}
+AUDITED internal
+{'all_checks_passed': True, 'validation_trials': 81, 'reference_stage_checks': 8406, 'image_classifier_recounts': 1628, 'new_inference_run': False, 'audit_scope': 'public', 'external_point_recount_run': False}

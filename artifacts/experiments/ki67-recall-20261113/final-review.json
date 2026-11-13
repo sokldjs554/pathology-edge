@@ -1,0 +1,8 @@
+{
+  "scope": "new diagnosis/selection/runner/audit/UI code and saved numerical evidence; final packaging/browser not in independent reviewer scope",
+  "major_findings": 0,
+  "focused_tests": 14,
+  "class_accounting_rows_checked": 2160,
+  "minor_finding": "External raw class accounting uses all classes while published scores match tumor predictions only",
+  "resolution": "Scope explicitly documented; external raw accounting/coordinates excluded from public package"
+}

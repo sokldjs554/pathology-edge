@@ -1,0 +1,9 @@
+{
+  "step": 82,
+  "status": "pending_user_review",
+  "user_code": false,
+  "user_training": false,
+  "user_inference": false,
+  "user_screen_review": false,
+  "implementation_and_verification": "provided development environment"
+}

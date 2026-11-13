@@ -27,21 +27,21 @@ Files: src/pathology_edge/ki67_center_diagnostics.py;
 tests/test_ki67_center_diagnostics.py.
 Interfaces: diagnose_candidates(points,scores,gt,classes,config)->stage counts and
 reference reasons; selection accepts validation-tagged trial summaries and floors.
-- [ ] RED tests for stage attribution, class counts, boundary/empty and infeasible selection.
-- [ ] Implement, GREEN, commit.
+- [x] RED tests for stage attribution, class counts, boundary/empty and infeasible selection.
+- [x] Implement, GREEN, commit.
 
 ### Task 2: Frozen validation replay and comparison
 Files: scripts/run_ki67_recall.py; new artifacts/experiments/ki67-recall-20261113/.
 Interfaces: prepare/validate/evaluate stages, fresh outputs, hash-locked inputs/source;
 prediction schema compatible with summarize/audit_auto_ki67.
-- [ ] Replay validation only; diagnose allseeds and select within fixed constraints.
-- [ ] Freeze selection; evaluate feasible arms on reused407/133; keep adverse outcomes.
-- [ ] Independently audit matching/metrics, locked sources and unchanged learner hashes.
+- [x] Replay validation only; diagnose allseeds and select within fixed constraints.
+- [x] Freeze selection; evaluate feasible arms on reused407/133; keep adverse outcomes.
+- [x] Independently audit matching/metrics, locked sources and unchanged learner hashes.
 
 ### Task 3: Review and delivery
 Files: report, STEP82 pending review, standalone HTML, evidence ZIP.
-- [ ] Actual case visualization of missed/recovered points and positive/negative counts.
-- [ ] Browser desktop/mobile, full suite and existing checks; final fresh code review.
+- [x] Actual case visualization of missed/recovered points and positive/negative counts.
+- [x] Browser desktop/mobile, full suite and existing checks; final fresh code review.
 - [ ] Commit/push draft PR; check download hashes. Give one user review step.
 
 ## Ledger
@@ -50,3 +50,18 @@ Base c72f6c4; existing linked worktree verified clean and fast-forwarded.
 User asked to proceed; routine implementation choices made here, no new approval needed.
 Preflight: diagnosis consumes raw sorted peaks; decoder selection outputs existing config
 schema; new predictions use existing evaluator and frozen classifiers.
+
+Task1 complete: 7ffd569,32focused tests pass; combined existing point tests42pass.
+Task2 complete: 81fixed configuration trials; only seed17feasible,18/19unrelaxed failures.
+Independent audit8406reference stages and2160image/classifier recounts pass.
+Public-package rerun independently checks81trials/8406stages/1628internalcombinations;
+external point records are omitted from public distribution and not audited there.
+Task3 browser: 20views at1440/390px, overlays/missed references/metrics/status checked.
+Final fresh review: no major/blocking findings;14focused tests and2160raw class-accounting
+rows checked. Minor external all-class-accounting scope clarified in report and excluded
+from public package. Final packaging/browser evidence verified separately by implementer.
+Ruling: retain existing default — recall-constrained arm increases FP and reduces F1 —
+cost is a separate comparison rather than a universal replacement.
+Ruling: use GitHub clean runner for whole-suite evidence — local remaining free-space
+guard requires2GiB; no bypass or deletion of original datasets/artifacts. CI36b8640has571pass,
+Dice42/6 and static checks pass. Earlier local sparse/build failures retained in logs.

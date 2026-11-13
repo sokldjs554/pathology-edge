@@ -135,7 +135,8 @@ python scripts/audit_ki67_recall.py --run work/recall-new-run
 배포 ZIP의 `review.html`은 설치나 새 추론 없이 저장 결과를 확인하는 파일이다.
 
 - 독립 감사: 81개 검증 설정, 정답8,406개 단계 판정, 2,160개 이미지·분류기 조합 일치.
-- GitHub CPU CI `36b8640`: 571 tests passed; 기존 Dice42개·평균6개 및 정적 데모 검사 통과.
+- GitHub CPU CI [fda5695](https://github.com/sokldjs554/pathology-edge/actions/runs/43405269169):
+  571 tests passed; 기존 Dice42개·평균6개 및 정적 데모 검사 통과.
 - 로컬 전체 검사 초기에는 공간 부족·sparse checkout 누락·C++ 빌드 누락이 있었다.
   불필요한 이번 실행의 pytest 임시 파일만 정리하고 빌드/자료를 복구했다.
   남은2GiB 사전조건은 우회하지 않았으며, 전체 통과 근거는 별도 GitHub CI다.
