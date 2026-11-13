@@ -1,0 +1,17 @@
+{
+  "step": 84,
+  "contribution_id": "U98",
+  "recorded_date": "2026-11-13",
+  "timezone": "UTC",
+  "status": "pending_user_visual_review",
+  "scope": "Display of the 09_1 same-ROI CNN/ViT error figure from the user's stored seed-20261113 run.",
+  "evidence_path": "artifacts/experiments/user-cnn-vit-errors-20261112/index.html",
+  "source_evidence_commit": "8b7f6a2d76d989a2c7311ab50a78cb4be8619f0d",
+  "user_response": null,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "user_visual_review_confirmed": false,
+  "user_independent_numeric_audit": false
+}

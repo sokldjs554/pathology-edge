@@ -16,7 +16,7 @@
 
 [검출 누락 원인·재현율 조건 비교](docs/KI67_RECALL_DIAGNOSIS.md): 검증227장의 누락을 피크 없음·점수 미달·거리 억제·대응 경쟁으로 분리했습니다. 고정3seed 중 하나만 재현율 조건을 만족했습니다. 같은 모델의 설정 비교에서 내부407장 재현율은0.3943→0.6060으로 올랐지만 F1은0.3553→0.1924로 낮아졌습니다. 내부·BCData의 네 분류기 양성률 MAE는 모두 줄었으나 세포 F1은 모두 하락했습니다. 기존 기본값을 유지하며 [비교 화면 ZIP](artifacts/handoff/PathologyEdge-RecallReview-20261113.zip)과 [첫 확인 순서](docs/STEP_82.md)를 별도로 제공합니다.
 
-[Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
+[최신 통합 상태·U97](docs/HANDOFF_U97.md) · [Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
 
 추가 보정 실험에서는 기존 TNBC validation10장의 3개 seed 평균 전체 Dice가 **0.555994→0.576699**였지만, 고정한 사용자 모델 쌍의 외부 MoNuSeg14ROI 평균은 **0.551974→0.534943**으로 하락했습니다. 두 실험은 모델·평가 범위가 달라 합산하지 않습니다. 공개 데모의 기존 결과는 유지합니다.
 
