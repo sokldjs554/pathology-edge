@@ -6,7 +6,9 @@
 [실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [Docker 재현·확인 완료](docs/STEP_50.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
-**WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
+**공개 데모는 WSI 탐색, 제한된 ROI의 예측 비교, IHC 정답 중심점 조건 분류를 구분합니다. 별도 연구 코드에서는 자동 IHC 패치 검출·분류를 실험했으며, 임상 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
+
+[자동 Ki-67 패치 실험](docs/AUTO_KI67_EXPERIMENT.md) · [후보 제거 전후·외부 실패 결과](docs/KI67_CANDIDATE_FILTER.md): 후보 필터로 내부 검출 F1은0.0982→0.1260으로 올랐지만 BCData133장에서는 네 방식의 F1이 모두 하락했습니다. 필터는 연구 비교 기능이며 공개 데모 기본 분석에 적용하지 않았습니다. 기존 평가 자료의 재평가로, 새 미노출 외부 검증이 아닙니다.
 
 [Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
 
@@ -149,7 +151,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 | Ubuntu | Ubuntu 24.04 Docker 안의 테스트·실제 이미지 추론 |
 | Docker | Ubuntu 기반 Dockerfile 실제 빌드·실행, CA proxy 대응은 secret 사용 |
 | Git / GitHub / CI | 실행 코드·실험 파일·테스트 게시, `.github/workflows/ci.yml` |
-| classification / detection / segmentation | TNBC segmentation 평가, WSI ROI 탐색적 추론, 별도 IHC GT-center 4class 분류. detection은 기존 CC centroid proxy이며 자동 IHC 검출 평가 없음 |
+| classification / detection / segmentation | TNBC segmentation 평가, WSI ROI 탐색적 추론, IHC GT-center 분류와 별도 자동 IHC 패치 검출·분류·후보 제거 실험. 외부 일반화·임상 성능 입증은 미완료 |
 
 회사 제품은 종양 세포 기반 Ki-67 정량화를 다룹니다. 이 프로젝트는 그 전제인 세포 수준 영상 처리와
 재현·오류 추적 역량을 보여줍니다. 제품과 같은 성능·임상 범위를 갖는다고 설명하지 않습니다.
@@ -195,7 +197,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 ## 남은 한계
 
-WSI 전체 모델 처리, 자동 IHC 검출·분할·Ki67 임상 지수, 사전학습 모델 비교, 공개 경계 비교의 다중 seed·신뢰구간,
+WSI 전체 모델 처리, 자동 IHC 핵 윤곽 분할·Ki67 임상 지수 검증, 사전학습 모델 비교, 공개 경계 비교의 다중 seed·신뢰구간,
 병리 전문가·임상 검증은 미수행입니다. 외부 ROI 평가는 후속 MoNuSeg·PanopTILs·BCData 보고서에서 범위를 한정해 수행했습니다. 별도 BCE-only/soft Dice 손실 비교는 3개 seed·6회 학습을 완료했으며, 같은 validation에서 선택한 점수의 반복 결과입니다. CMU WSI에는 핵 정답이 없고, 공개 IHC 데모는 단일 기관·제공 중심점 조건입니다. 전체 WSI JPEG 타일을 포함해 저장소 용량이 증가했습니다. 사용자 좌표·메타데이터 연결 함수는 실제 ROI 읽기·패치 영역 생성 경로에서 검증했습니다. 원래 공개 추론 exporter는 유지하며 일반 배율 모델 추론·중심점 보정은 별도 미수행입니다.
 단순 핵 foreground만으로 임상 세포 수를 정할 수 없고, 두 테스트 그룹의 성능 차이가 큽니다.
 현재 test를 보며 모델을 다시 선택하면 새 평가 설계가 필요합니다.
