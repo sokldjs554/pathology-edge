@@ -1,0 +1,113 @@
+{
+  "source_commit": "bf1233a609a4326502c5d396ccbeb2ce4ad15e6d",
+  "detector_seed": 20261117,
+  "scope": "Arithmetic analysis of saved results; no new training, inference, threshold tuning or causal ablation",
+  "internal": {
+    "images": 407,
+    "reference_centers": 6419,
+    "before": {
+      "tp": 3712,
+      "fp": 65440,
+      "fn": 2707,
+      "precision": 0.053678852383155944,
+      "recall": 0.5782832216856209,
+      "f1": 0.09823874237472047
+    },
+    "after": {
+      "tp": 2531,
+      "fp": 5297,
+      "fn": 3888,
+      "precision": 0.323326520183955,
+      "recall": 0.39429817728618166,
+      "f1": 0.3553028707798133
+    },
+    "net_tp_change": -1181,
+    "net_fp_change": -60143,
+    "net_fn_change": 1181,
+    "identity_of_individual_lost_detections_not_reconstructed": true
+  },
+  "ratio_case": {
+    "case_id": "case_0024",
+    "classifier": "cnn-20261114",
+    "selection_reason": "Second-largest positive-fraction error increase among10internalcases with detector20261117/CNN20261114; illustrates nearly cancelling count errors, not a representative mean",
+    "truth": {
+      "positive": 382,
+      "negative": 501,
+      "total": 883,
+      "rate_percent": 43.26160815402039
+    },
+    "before": {
+      "positive": 2640,
+      "negative": 3476,
+      "total": 6116,
+      "rate_percent": 43.16546762589928
+    },
+    "after": {
+      "positive": 359,
+      "negative": 358,
+      "total": 717,
+      "rate_percent": 50.0697350069735
+    },
+    "before_error_pp": 0.09614052812110807,
+    "after_error_pp": 6.808126852953117,
+    "before_four_class_f1": 0.08768705126055903,
+    "after_four_class_f1": 0.2898104287111451,
+    "before_class_counts": [
+      {
+        "tp": 216,
+        "fp": 2424,
+        "fn": 166,
+        "precision": 0.08181818181818182,
+        "recall": 0.5654450261780105,
+        "f1": 0.14295168762409
+      },
+      {
+        "tp": 260,
+        "fp": 3216,
+        "fn": 241,
+        "precision": 0.07479861910241657,
+        "recall": 0.5189620758483033,
+        "f1": 0.13075182298214735
+      }
+    ],
+    "after_class_counts": [
+      {
+        "tp": 140,
+        "fp": 219,
+        "fn": 242,
+        "precision": 0.38997214484679665,
+        "recall": 0.36649214659685864,
+        "f1": 0.37786774628879893
+      },
+      {
+        "tp": 171,
+        "fp": 187,
+        "fn": 330,
+        "precision": 0.4776536312849162,
+        "recall": 0.3413173652694611,
+        "f1": 0.3981373690337602
+      }
+    ]
+  },
+  "selection_policy": "validation case-macro localization F1; ties recall,earlier epoch,higher threshold,larger distance",
+  "selected_config": {
+    "threshold": 0.1,
+    "min_distance": 8
+  },
+  "no_recall_floor_or_positive_fraction_objective": true,
+  "supported_findings": [
+    "Far fewer unmatched predictions but also fewer matched reference centers: precision rises, recall falls, localization F1 rises.",
+    "Positive fraction depends on the balance of predicted positive/negative tumor counts, not just detection F1.",
+    "The example's old counts were both grossly inflated with nearly correct fraction; new counts are closer in total but their class balance is further from reference.",
+    "Fixed classifier weights are applied to newly detected positions, so classifier inputs and predictions can change."
+  ],
+  "not_established": [
+    "Relative contribution of below-threshold map scores, absent local peaks, distance suppression or offsets beyond6px to the extra FN.",
+    "Stain, morphology, small model capacity, short training or data support as the dominant causal explanation.",
+    "Whether changing a single threshold would restore recall while preserving other metrics."
+  ],
+  "user_code_training_or_inference": false,
+  "new_data": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false
+}

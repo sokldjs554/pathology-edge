@@ -1,0 +1,25 @@
+{
+  "step": 81,
+  "contribution_id": "U95",
+  "recorded_date": "2026-11-13",
+  "timezone": "Asia/Seoul",
+  "user_response": "아니요. 검출 F1은 0.0982 → 0.3553으로 상승했지만, 재현율은 0.5783 → 0.3943으로 하락했으므로, 정답 세포를 찾은 비율이 줄어 오히려 놓친 세포가 늘었다고 해석해야 합니다. 근데 왜 내부 재현율이 하락한고 일부 양성률도 악화가 된거야?",
+  "prompt_scope": "첫 검출 seed의 전체407장 F1 0.0982→0.3553, 재현율0.5783→0.3943을 제시하고 F1 상승으로 놓친 세포도 줄었다고 설명할 수 있는지 한 문장 해석을 요청",
+  "interpretation_correct": true,
+  "scope": "제공된 전체407장 수치에서 재현율 하락을 근거로 놓친 정답 세포 수가 늘었다고 해석한 범위",
+  "followup_question": "근데 왜 내부 재현율이 하락한고 일부 양성률도 악화가 된거야?",
+  "new_user_code": false,
+  "new_user_automated_tests": false,
+  "new_user_training": false,
+  "new_user_model_inference": false,
+  "user_independent_numeric_audit": false,
+  "user_causal_ablation": false,
+  "subsequent_causal_explanation_authored_by_user": false,
+  "help_provided": "F1·재현율 수치와 재현율이 정답 세포를 찾은 비율이라는 설명을 제공함",
+  "evidence_commit": "bf1233a609a4326502c5d396ccbeb2ce4ad15e6d",
+  "evidence_paths": [
+    "artifacts/experiments/ki67-learned-centers-20261113/baseline/internal-results.json",
+    "artifacts/experiments/ki67-learned-centers-20261113/seed-20261117/internal/results.json"
+  ],
+  "archive_scope": "기존 ZIP과 실험 원본을 보존하고 새 사용자 해석과 제공된 수치 분석을 서로 다른 후속 파일로 기록함"
+}
