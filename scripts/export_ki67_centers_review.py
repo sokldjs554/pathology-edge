@@ -37,7 +37,7 @@ def export(run,output):
                 raise ValueError('Heatmap replay differs from stored center predictions')
             heat=actual['probability_map'];rgba=np.zeros((*heat.shape,4),dtype=np.uint8)
             rgba[:,:,0]=255;rgba[:,:,1]=70;rgba[:,:,2]=20
-            rgba[:,:,3]=np.rint(np.where(heat>=.05,heat*.7,0)*255).astype(np.uint8)
+            rgba[:,:,3]=np.rint(.65*np.clip((heat-.05)/.15,0,1)*255).astype(np.uint8)
             buffer=io.BytesIO();Image.fromarray(rgba).save(buffer,format='PNG')
             models[str(seed)]=dict(points=saved['points'],classes=saved['classes'],config=config,
                 heatmap_url='data:image/png;base64,'+base64.b64encode(buffer.getvalue()).decode(),
@@ -58,7 +58,7 @@ def export(run,output):
 <div id="source"></div><main><article><h2>정답 주석</h2><canvas id="truth" width="672" height="672"></canvas><div id="truthMetric" class="metric"></div></article><article><h2>기존 색상 기반 검출</h2><canvas id="before" width="672" height="672"></canvas><div id="beforeMetric" class="metric"></div></article><article><h2>학습한 중심 검출</h2><canvas id="after" width="672" height="672"></canvas><div id="afterMetric" class="metric"></div></article></main>
 <div id="status" role="status">이미지 준비 중</div><footer><p><span style="color:#ffe600">● 양성 종양</span> · <span style="color:#00e5ff">● 음성 종양</span> · <span style="color:#ff43dd">● 양성 비종양</span> · <span style="color:#5dff54">● 음성 비종양</span></p>
 <p>seed는 학습의 무작위 초기값입니다. 검출 seed를 바꾸면 위치 예측이, 고정 분류기를 바꾸면 그 위치의 세포 종류가 달라집니다.</p>
-<p>위치 지도는 핵 윤곽이나 개수 지도가 아닙니다. 주황 표시의 불투명도는 실제 점수×0.7이며 0.05 미만은 숨깁니다. 점수는 보정된 임상 확률이 아니며, 합계가 핵 개수가 되지 않습니다. 분류기는 새로 검출한 위치에서 다시 예측했습니다.</p>
+<p>위치 지도는 핵 윤곽이나 개수 지도가 아닙니다. 주황 농도는 모든 사례에서 점수0.05→0.20의 고정 범위를 씁니다(0.05이하 투명, 0.20이상 최대 불투명도65%). 점수는 보정된 임상 확률이 아니며, 합계가 핵 개수가 되지 않습니다. 분류기는 새로 검출한 위치에서 다시 예측했습니다.</p>
 <details><summary>전체407장·10케이스 / 외부133장 결과 보기</summary><div id="totals" class="scroll"></div><p>위 영상은 Patherea의 한 사례입니다. 전체 집계와 구분하세요. BCData는 종양 중심만 주석되어 종양 예측만 평가합니다. 환자·슬라이드 독립성 및 MPP는 검증하지 않았습니다.</p><p>정답과 중심 거리 ≤6px로 일대일 대응합니다. FP는 대응하지 못한 후보, FN은 놓친 주석입니다. F1·재현율은 높을수록 좋습니다. 양성률=양성 종양/전체 종양이며 MAE는 낮을수록 좋고 분모0은 계산 불가로 표시합니다.</p></details>
 <p>사례 선택: 기존107개 사례 + 고정 첫 검출 seed20261117의 검출F1 최대 하락/상승. 모든 seed를 전환해 확인할 수 있습니다. 원래 주석 영역 마스크가 없어 주석 지원 범위의 한계가 남아 있습니다.</p>
 <small>Dejan Štepec et al., <a href="https://huggingface.co/datasets/ds2268/patherea">Patherea Breast-P1 v1.1</a>, <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC4.0</a>. 예측 위치·지도 표시를 추가했습니다.</small></footer>
