@@ -36,7 +36,7 @@ Files: src/pathology_edge/ki67_center_experiment.py; scripts/run_ki67_centers.py
 tests/test_ki67_center_experiment.py. Interfaces prepare/fit/evaluate/external CLI;
 select_configuration(validation candidates/GT)->bestconfig/trials; per-seed results use
 existing audit_auto_ki67 format so independent recount can operate unchanged.
-- [ ] RED tests for train/test rejection, case-macro selection, ties, integrity and fresh outputs.
+- [x] RED tests for train/test rejection, case-macro selection, ties, integrity and fresh outputs.
 - [ ] Implement fresh staging, data/model/source verification, frozen classifier loading,
   native-size inference and complete matched metrics; GREEN. Freeze/run3seeds, lock before
   407/133 re-evaluation. No score-guided changes after either evaluation.
@@ -55,3 +55,9 @@ Preflight: Task1'sXYpoints -> Task2 classifier nativecropXY; Task2 standard pred
 -> existing independent audit; Task3 only saved/equally replayed results, not invented overlays.
 
 Additional Task2 interface: ki67_center_inference.py::infer_rgb/load_bundle and scripts/infer_ki67_centers.py provide image-only inference from packaged models without prior private scoring folders. Tests cover new-center class assignment, empty denominator, invalid classifier, traversal/hash and unknown seed. Frozen training sources remain unchanged.
+
+Validation-only amendment recorded in spec: initial ReLU trial preserved (seed19zeroF1);
+diagnostic motivated one activation-only LeakyReLU0.1 trial, same3seeds/settings. No test/external
+scoring before either decision. Current source557CItests passed at583be54. Final reviewer
+checkpoint found no actionable issues and33newtests passed; wholeincrement readiness awaits
+actual evaluation/artifact/browser evidence. No old test/external score-driven retuning.

@@ -30,11 +30,12 @@ def package(run,initial,output):
     output.mkdir(parents=True,exist_ok=False)
     def copy(src,dest):
         dest=output/dest;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dest)
-    for name in ('protocol.json','selection.json','selection-lock.json','review.html','review-export.json'):
+    for name in ('protocol.json','selection.json','selection-lock.json','review.html','review-export.json',
+                 'fit-started.json','internal-started.json','external-started.json','selection-audit.json'):
         copy(run/name,name)
     for source in (run/'frozen_source/pathology_edge').glob('*.py'):copy(source,'frozen_source/pathology_edge/'+source.name)
     copy('src/pathology_edge/ki67_center_inference.py','frozen_source/pathology_edge/ki67_center_inference.py')
-    for name in ('infer_ki67_centers.py','audit_auto_ki67.py','run_ki67_centers.py','export_ki67_centers_review.py'):
+    for name in ('infer_ki67_centers.py','audit_auto_ki67.py','run_ki67_centers.py','export_ki67_centers_review.py','audit_ki67_center_selection.py'):
         copy('scripts/'+name,'scripts/'+name)
     parent=Path(p['parent']);previous=Path(p['external'])
     for scope,folder in [('internal',parent),('external',previous)]:copy(folder/'results.json','baseline/'+scope+'-results.json')
@@ -94,7 +95,7 @@ def package(run,initial,output):
         protocol_sha256=sha(run/'protocol.json'),selection_lock_sha256=sha(run/'selection-lock.json'),
         bcdata_coordinates_redistributed=False,clinical_validation=False,whole_wsi_validation=False,
         prior_user_reviews_through='U93; new viewer review pending'))
-    (output/'requirements-inference.txt').write_text('numpy==2.5.4\nscipy==1.18.1\nPillow==13.0.0\ntorch==2.15.0\n')
+    (output/'requirements-inference.txt').write_text('--extra-index-url https://download.pytorch.org/whl/cpu\nnumpy==2.5.4\nscipy==1.18.1\nPillow==13.0.0\ntorch==2.15.0+cpu\n')
     print(json.dumps(dict(output=str(output),detectors=len(models),classifiers=len(classifiers))))
 
 
