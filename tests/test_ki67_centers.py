@@ -79,3 +79,16 @@ def test_image_only_inference_rejects_nan_weights():
     with torch.no_grad():model.head.weight.fill_(float('nan'))
     with pytest.raises(ValueError):c.predict_centers(np.zeros((16,20,3),dtype=np.uint8),model,{'threshold':.2,'min_distance':6})
     assert list(inspect.signature(c.predict_centers).parameters)==['rgb','model','config']
+
+
+def test_detector_preserves_gradient_through_negative_block_activations():
+    model=c.CenterDetector()
+    for name in ('e1','e2','bottom','d2','d1'):
+        block=getattr(model,name)
+        with torch.no_grad():
+            for layer in (block[0],block[2]):
+                layer.weight.zero_();layer.bias.zero_();layer.weight[0,0,1,1]=1
+        x=-torch.ones(1,block[0].in_channels,5,5,requires_grad=True)
+        x.retain_grad();out=block(x);out[0,0,2,2].backward()
+        assert out[0,0,2,2].item()==pytest.approx(-.01)
+        assert x.grad[0,0,2,2].item()==pytest.approx(.01)

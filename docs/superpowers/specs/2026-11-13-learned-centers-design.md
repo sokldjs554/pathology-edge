@@ -59,3 +59,23 @@ screenshots and a compact ZIP. Raw BCData/individual coordinates not redistribut
 One user review step after delivery; record pending until response. User code7scopes unchanged.
 No guaranteed gain or automatic promotion. Full tests run in fresh CI; local scoped tests
 avoid old repository-copy tests on a nearly full volume. Source/data evidence is preserved.
+# Validation-only convergence amendment
+
+The first three-seed trial used the existing ReLU blocks. Seeds 20261117/18
+selected epoch16 with validation case-F1 .2787088603/.2759983045; seed20261119
+had zero validation F1 in all16epochs and selected epoch1 by the frozen tie rule.
+No test/external evaluation was run. Preserve that trial unchanged.
+
+A diagnostic using the first8 training and first8 validation images, no optimizer
+steps, found seed19's selected checkpoint maximum score .0943614 (<.1 grid floor)
+and deep-layer weight-gradient L1 of roughly 1e-7..1e-6. Replacing only ReLUs with
+LeakyReLU(.1) at identical weights restored those gradients to approximately .06–.78. This is
+evidence of a gradient-flow problem on the diagnostic batch, not proof of the
+entire optimization trajectory or a guaranteed performance fix.
+
+Run a new, separately frozen trial with LeakyReLU(.1), keeping all seeds, epochs,
+loss, optimizer, augmentation, selection grid and split unchanged. No additional
+iteration will be chosen from test/external outcomes. Publish all three final
+seeds, including failures, and retain the original validation trial and diagnostic.
+This is a development decision made from training/validation data, not a user
+authored change or a new independent validation set.

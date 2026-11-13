@@ -85,6 +85,7 @@ def prepare(data,parent,external,output):
     p=dict(schema='learned-centers.v1',created_utc=utc(),data_dir=str(data),parent=str(parent),external=str(external),
         input_hashes=inputs,source_hashes={n:sha(source/n) for n in SOURCE_NAMES},
         seeds=list(SEEDS),epochs=16,batch_size=8,learning_rate=.001,torch_threads=2,
+        architecture='TinyUNet width4, LeakyReLU slope0.1, head bias -2.19; 7537 parameters',
         target=dict(sigma_px=2,radius_px=6,aggregation='maximum; not nuclear mask or count density'),
         thresholds=list(THRESHOLDS),min_distances=list(DISTANCES),matching_radius_px=6,image_counts=counts,
         selection='validation case-macro localization F1; ties recall,earlier epoch,higher threshold,larger distance',

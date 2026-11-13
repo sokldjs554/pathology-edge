@@ -53,6 +53,12 @@ class CenterDetector(TinyUNet):
     """Small native-resolution encoder/decoder trained on point-derived maps."""
     def __init__(self):
         super().__init__(width=4)
+        # Preserve gradients for negative features in this narrow detector.
+        # Existing H&E TinyUNet and its checkpoints retain their original ReLUs.
+        for name in ('e1','e2','bottom','d2','d1'):
+            block=getattr(self,name)
+            block[1]=torch.nn.LeakyReLU(.1)
+            block[3]=torch.nn.LeakyReLU(.1)
         torch.nn.init.constant_(self.head.bias,-2.19)
 
     def forward(self,x):
