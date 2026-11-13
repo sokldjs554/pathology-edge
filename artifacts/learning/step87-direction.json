@@ -1,0 +1,16 @@
+{
+  "step": 87,
+  "contribution_id": "U101",
+  "recorded_date": "2026-11-13",
+  "timezone": "UTC",
+  "status": "direction_selected",
+  "user_response": "후보 통합 + 배경 제거 CNN 우선",
+  "scope": "Selected candidate union plus a CNN rejection stage as the next research direction, rather than first changing center-map training.",
+  "design_document_approved": false,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "user_independent_numeric_audit": false,
+  "implementation_details": "The binary rejection gate with fixed four-class classifiers and the detailed protocol are implementer proposals pending design approval."
+}
