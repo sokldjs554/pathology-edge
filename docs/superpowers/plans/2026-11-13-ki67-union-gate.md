@@ -1,6 +1,6 @@
 # Ki-67 Union Gate Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Compare frozen detector/LoG union plus a trained RGB rejection gate against the existing detector without trading hidden FP/FN regressions for a favorable ratio.
 
@@ -37,11 +37,11 @@
 
 **Interfaces:** `merge_proposals(learned_xy,log_xy,shape_hw)->dict(points_xy,sources)`; `CandidateRejector(nn.Module)`; `retention_scores(rgb,points,model)->np.ndarray`; `retain_candidates(points,scores,threshold,min_distance)->dict`; `negative_proxy_indices(points,gt,shape_hw)->np.ndarray`; `validation_summary(samples,config)->dict`; `choose_trial(trials,baseline,floors)->dict`.
 
-- [ ] Write contracts: exact duplicates combine source bits; input source scores never compared; identical-score order y/x; threshold0 supported;6px matches are one-to-one.
-- [ ] Write empty/nonfinite/crop-border/proxy-margin tests; require no expert-background claim and no truth in scoring signature.
-- [ ] Write selection tests: joint counts, strict improvement, exact LoG floors, per-case90%, all-infeasible returnsNone, nonvalidation rejected, deterministic tie order.
-- [ ] Run focused tests and confirm missing-module failures; implement helpers and gate.
-- [ ] Verify gradient/update behavior and threshold0 NMS-prefix reuse against independently decoded threshold cases. Run focused suite, commit.
+- [x] Write contracts: exact duplicates combine source bits; input source scores never compared; identical-score order y/x; threshold0 supported;6px matches are one-to-one.
+- [x] Write empty/nonfinite/crop-border/proxy-margin tests; require no expert-background claim and no truth in scoring signature.
+- [x] Write selection tests: joint counts, strict improvement, exact LoG floors, per-case90%, all-infeasible returnsNone, nonvalidation rejected, deterministic tie order.
+- [x] Run focused tests and confirm missing-module failures; implement helpers and gate.
+- [x] Verify gradient/update behavior and threshold0 NMS-prefix reuse against independently decoded threshold cases. Run focused suite, commit.
 
 ### Task2: Frozen experiment runner
 
@@ -49,12 +49,12 @@
 
 **Interfaces:** `prepare(prior,output)->protocol`, `fit(output)->selection`, `evaluate(output,external=False)->results`; stages reject reused output paths and changed hashes. Consume Task1 helpers and existing `load_sample`, classifiers, matching and dataset verification.
 
-- [ ] Test fail-closed stage ordering and hash locks, no-feasible skip, immutable original source/files, exclusion of test/external from training/selection.
-- [ ] Implement preparation with source/input SHA, control metrics, user-file hashes, existing split, bounded memory and free-space check; only compressed candidate/prediction persistence.
-- [ ] Implement train-only pool, case-balanced1:1 crop sampler, matched-candidate/GT jitter alternatives, deterministic augmentation and seed pairing.
-- [ ] Implement12epochs×3seeds selection. Record all42trials/epoch and failed seeds. Reuse descending-score NMS prefixes across thresholds only after Task1 equivalence test.
-- [ ] Lock all seeds before test/external. A/B/C/C0 and four fixed classifiers re-infer at their actual retained coordinates; external tumor-only evaluation. If none feasible, skip both later stages explicitly.
-- [ ] Run tiny synthetic pipeline tests without full-dataset training, commit.
+- [x] Test fail-closed stage ordering and hash locks, no-feasible skip, immutable original source/files, exclusion of test/external from training/selection.
+- [x] Implement preparation with source/input SHA, control metrics, user-file hashes, existing split, bounded memory and free-space check; only compressed candidate/prediction persistence.
+- [x] Implement train-only pool, case-balanced1:1 crop sampler, matched-candidate/GT jitter alternatives, deterministic augmentation and seed pairing.
+- [x] Implement12epochs×3seeds selection. Record all42trials/epoch and failed seeds. Reuse descending-score NMS prefixes across thresholds only after Task1 equivalence test.
+- [x] Lock all seeds before test/external. A/B/C/C0 and four fixed classifiers re-infer at their actual retained coordinates; external tumor-only evaluation. If none feasible, skip both later stages explicitly.
+- [x] Run tiny synthetic pipeline tests without full-dataset training, commit.
 
 ### Task3: Actual run, independent audit and review artifact
 
@@ -62,13 +62,13 @@
 
 **Interfaces:** audit consumes protocol/locks/compressed saved candidates/predictions and recomputes matches/counts/selection independently; exporter consumes immutable stored results and displays scope/limits.
 
-- [ ] Test auditor detects tampered retained points, changed eligibility, mismatched masks/counts and missing failed-seed reports.
-- [ ] Freeze source and run train/validation only. After all seeds lock, conditionally run existing internal/external evaluations; no model changes after viewing them.
-- [ ] Independently recompute trial eligibility, selection ordering, TP/FP/FN/class counts/ratios and model/file preservation.
-- [ ] Export actual examples. If no seed is eligible, show validation failure with a diagnostic checkpoint clearly labeled, and no test/external result claims.
-- [ ] Browser verify selected examples, same-coordinate overlays, current metrics and1440/390px layout. Retain screenshots and immutable archive hashes.
-- [ ] Run focused regressions and stored Dice42/6 checks. Push code for clean CI full suite when local2GiB prerequisite cannot be met; record source of each check.
-- [ ] Independent whole-branch reviewer examines source, protocol, data exposure and results. Fix material defects, rerun relevant checks, update draft PR and publish evidence with explicit user-vs-provided execution scope.
+- [x] Test auditor detects tampered retained points, changed eligibility, mismatched masks/counts and missing failed-seed reports.
+- [x] Freeze source and run train/validation only. After all seeds lock, conditionally run existing internal/external evaluations; no model changes after viewing them.
+- [x] Independently recompute trial eligibility, selection ordering, TP/FP/FN/class counts/ratios and model/file preservation.
+- [x] Export actual examples. If no seed is eligible, show validation failure with a diagnostic checkpoint clearly labeled, and no test/external result claims.
+- [x] Browser verify selected examples, same-coordinate overlays, current metrics and1440/390px layout. Retain screenshots and immutable archive hashes.
+- [x] Run focused regressions and stored Dice42/6 checks. Push code for clean CI full suite when local2GiB prerequisite cannot be met; record source of each check.
+- [x] Independent whole-branch reviewer examines source, protocol, data exposure and results. Fix material defects, rerun relevant checks, update draft PR and publish evidence with explicit user-vs-provided execution scope.
 
 ## Self-review
 

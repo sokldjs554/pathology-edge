@@ -1,0 +1,17 @@
+{
+  "reviewed_base": "ab0bb96937505ee6aefedb06f0e6f18dfe30395c",
+  "reviewed_head": "d3935577fd16c1ee7fdf4657d473ffdae44132ee",
+  "independent_review": true,
+  "critical": 0,
+  "important": 0,
+  "minor_deferred": [
+    {
+      "function": "retain_candidates",
+      "issue": "Unsigned integer scores wrap when negated for sorting. Actual float64 experiment path unaffected.",
+      "workaround": "Cast direct helper scores to np.float64 before calling."
+    }
+  ],
+  "scope": "Entire new union-gate change and dependencies; not all historical PR experiments. Eligible holdout path statically reviewed, no actual eligible run. No new clinical/whole-WSI evidence.",
+  "reviewer_reexecuted_full_suite": false,
+  "reviewer_reexecuted_browser": false
+}
