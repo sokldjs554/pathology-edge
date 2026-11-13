@@ -7,6 +7,7 @@ import io
 import json
 from pathlib import Path
 import platform
+import re
 import time
 import numpy as np
 from PIL import Image
@@ -30,6 +31,12 @@ SOURCES = ('ihc_baseline.py','ki67_detection.py','ki67_evaluation.py',
 
 def utc():
     return datetime.now(timezone.utc).isoformat()
+
+
+def external_image_name(name):
+    if not isinstance(name,str) or not re.fullmatch(r'BCData/images/validation/\d+\.png',name):
+        raise ValueError('Expected canonical BCData validation image archive path')
+    return name
 
 
 def subset_row(row, ids):
@@ -174,6 +181,9 @@ def evaluate(output, external=False):
     if external:
         entries={e['name']:e for e in read_json(parent/'entries.json')}
         inputs={e['name']:e for e in read_json(parent/'input-manifest.json')}
+        expected={n for n in entries if n.startswith('BCData/images/')}
+        if len(rows)!=133 or len(expected)!=133 or {external_image_name(r['image']) for r in rows}!=expected:
+            raise ValueError('External prediction/image set mismatch')
         url=download_url()
     else:
         manifest={r['image']:r for r in read_json(parent/'source-manifest.json') if r['split']=='test'}
@@ -183,7 +193,7 @@ def evaluate(output, external=False):
     masks,filtered=[],[]
     for i,r in enumerate(rows):
         if external:
-            name='BCData/images/validation/'+r['image']+'.png'
+            name=external_image_name(r['image'])
             raw,meta=fetch_entry(url,entries[name])
             if meta['sha256']!=inputs[name]['sha256']: raise ValueError('External raw image hash mismatch')
             rgb=np.asarray(Image.open(io.BytesIO(raw)).convert('RGB'))

@@ -33,3 +33,10 @@ def test_image_only_filter_on_white_image_has_no_candidates():
                coefficients=[0.]*41,intercept=0.)
     result=predict_gate(np.full((32,32,3),255,dtype=np.uint8),model,.5)
     assert result['points'].shape==(0,2) and result['keep_indices']==[]
+
+
+def test_external_records_use_full_archive_path_without_duplicating_prefix():
+    from pathology_edge.ki67_filter_experiment import external_image_name
+    assert external_image_name('BCData/images/validation/0.png')=='BCData/images/validation/0.png'
+    for name in ('0','../0.png','BCData/images/test/0.png'):
+        with pytest.raises(ValueError): external_image_name(name)
