@@ -5,7 +5,7 @@
   "whole_tests_passed": 497,
   "existing_dice_values_match": 42,
   "existing_dice_means_match": 6,
-  "new_scoped_tests_passed": 46,
+  "new_scoped_tests_passed": 50,
   "internal_recounts": 1628,
   "external_recounts": 532,
   "learner_files_unchanged": {
@@ -23,6 +23,17 @@
   "clinical_validation": false,
   "whole_wsi_ground_truth_validation": false,
   "external_improvement_proven": false,
-  "raw_datasets_and_cell_level_prediction_records_in_public_bundle": false,
-  "training_and_inference_executor": "provided implementation / development environment; not user execution"
+  "training_and_inference_executor": "provided implementation / development environment; not user execution",
+  "raw_dataset_archives_or_full_cell_level_prediction_records_in_public_bundle": false,
+  "licensed_patherea_illustration_images": 3,
+  "bcdata_raw_images_and_cell_coordinates_redistributed": false,
+  "new_module_tests_passed": 39,
+  "scoped_includes_existing_ihc_tests": 11,
+  "final_review": {
+    "critical": 0,
+    "important": 1,
+    "fixed": "Reject nonfinite CNN parameters and invalid probability outputs before argmax; 4 regression failures reproduced before fix",
+    "historical_checkpoints_finite": true,
+    "historical_results_unchanged": true
+  }
 }

@@ -41,6 +41,8 @@ class CellClassifier(nn.Module):
 
 def validate_classifier(model):
     if isinstance(model, CellClassifier):
+        if not all(torch.isfinite(value).all() for value in model.state_dict().values()):
+            raise ValueError('CNN parameters must contain only finite values')
         return
     if not isinstance(model, dict) or model.get('classes') != list(CLASSES):
         raise ValueError('Expected CellClassifier or four-class exported logistic model')
@@ -53,20 +55,28 @@ def validate_classifier(model):
         raise ValueError('Invalid classifier') from exc
 
 
+def _checked_probabilities(probabilities, count):
+    if probabilities.shape != (count, 4) or not np.isfinite(probabilities).all() or np.any(probabilities < 0) or np.any(probabilities > 1) or not np.allclose(probabilities.sum(axis=1), 1, rtol=1e-6, atol=1e-6):
+        raise ValueError('Invalid classifier probabilities; refusing class assignment')
+    return probabilities
+
+
 def classify_centers(rgb, points, model):
     validate_classifier(model)
     crops = cell_crops(rgb, points)
     if not len(crops):
         return np.empty((0, 4), dtype=np.float64)
     if isinstance(model, dict):
-        return predict_proba(extract_features(rgb, np.asarray(points, dtype=np.int64)), model)
+        with np.errstate(over='ignore', invalid='ignore'):
+            probabilities = predict_proba(extract_features(rgb, np.asarray(points, dtype=np.int64)), model)
+        return _checked_probabilities(probabilities, len(crops))
     model.eval()
     outputs = []
     with torch.inference_mode():
         for start in range(0, len(crops), 128):
             inputs = torch.from_numpy(crops[start:start+128].transpose(0, 3, 1, 2).copy()).float()/255
             outputs.append(torch.softmax(model(inputs), dim=1).cpu().numpy())
-    return np.concatenate(outputs)
+    return _checked_probabilities(np.concatenate(outputs), len(crops))
 
 
 def predict_image(rgb, detector, classifier):

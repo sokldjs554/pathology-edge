@@ -48,3 +48,30 @@ def test_inference_is_image_only_and_empty_is_valid():
 def test_wrong_model_rejected_even_with_no_centers():
     with pytest.raises(ValueError):
         classify_centers(np.zeros((32, 32, 3), np.uint8), np.empty((0, 2)), {})
+
+
+@pytest.mark.parametrize('points', [np.empty((0, 2)), [[1, 1]]])
+def test_nonfinite_checkpoint_rejected_including_empty_detections(points):
+    model = CellClassifier()
+    with torch.no_grad():
+        model.head.bias[0] = float('nan')
+    with pytest.raises(ValueError, match='finite'):
+        classify_centers(np.zeros((32, 32, 3), np.uint8), points, model)
+
+
+def test_finite_weights_with_overflowing_cnn_outputs_rejected():
+    model = CellClassifier()
+    with torch.no_grad():
+        for p in model.parameters():
+            p.fill_(torch.finfo(torch.float32).max)
+    with pytest.raises(ValueError, match='probabilit'):
+        classify_centers(np.full((48, 48, 3), 255, np.uint8), [[24, 24]], model)
+
+
+def test_overflowing_logistic_output_rejected():
+    from pathology_edge.ihc_baseline import CLASSES
+    model = {'classes':list(CLASSES), 'coefficients':np.full((4, 40), 1e308),
+             'intercepts':np.zeros(4), 'scaler':{'mean':np.zeros(40), 'scale':np.ones(40)}}
+    with np.errstate(over='ignore', invalid='ignore'):
+        with pytest.raises(ValueError, match='probabilit'):
+            classify_centers(np.zeros((48, 48, 3), np.uint8), [[24, 24]], model)
