@@ -9,4 +9,4 @@
 
 선정 근거: 사용자 seed20261113의 기존 validation10장 중 전체 Dice(ViT−CNN)가 가장 큰 이미지다. 영역은 정답에 맞게 바뀐 픽셀−틀리게 바뀐 픽셀이 큰 위치를 선택했다. 저장 결과를 읽는 화면이며 새 추론이나 독립 검증이 아니다. 개선 사례에도 악화 픽셀이 있으며 전체 이미지·모든 위치의 우수성을 뜻하지 않는다.
 
-자료는 기존 U97 ZIP의 `artifacts/experiments/user-cnn-vit-errors-20261112/index.html`에 이미 있다. ZIP은 발행 당시 기록을 유지한다. 다음은 [STEP86](STEP_86.md)의 두 사례 FP·FN 해석 한 단계이며, 응답 전에는 해석 완료로 기록하지 않는다.
+자료는 기존 U97 ZIP의 `artifacts/experiments/user-cnn-vit-errors-20261112/index.html`에 이미 있다. ZIP은 발행 당시 기록을 유지한다. 후속 [STEP86](STEP_86.md)의 두 사례 FP·FN 해석도 U100에서 확인했다. 제공 수치 해석과 독립 픽셀 재집계·새 실행은 구분한다.
