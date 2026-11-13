@@ -27,9 +27,9 @@ Interfaces: center_target(points_xy,shape_hw,sigma=2)->float32HW;
 center_focal_loss(logits,target)->scalar; CenterDetector()->B1HW logits;
 peak_candidates(map)->XY/scores; decode_centers(map,threshold,min_distance)->points/scores;
 predict_centers(rgb,model,config)->points_xy/scores/probability_map.
-- [ ] Write independent literal tests for target peak/neighbors/maxoverlap/border and invalids;
+- [x] Write independent literal tests for target peak/neighbors/maxoverlap/border and invalids;
   focal value/gradient/extremes/empty; plateau representation/NMS; odd-sized input/noGT API.
-- [ ] Observe RED, implement, GREEN with existing point/classifier tests; commit.
+- [x] Observe RED, implement, GREEN with existing point/classifier tests; commit.
 
 ### Task2: Locked training, internal/external evaluations
 Files: src/pathology_edge/ki67_center_experiment.py; scripts/run_ki67_centers.py;
@@ -53,3 +53,5 @@ artifacts/experiments/ki67-learned-centers-20261113/, new handoffZIP.
 
 Preflight: Task1'sXYpoints -> Task2 classifier nativecropXY; Task2 standard prediction schema
 -> existing independent audit; Task3 only saved/equally replayed results, not invented overlays.
+
+Additional Task2 interface: ki67_center_inference.py::infer_rgb/load_bundle and scripts/infer_ki67_centers.py provide image-only inference from packaged models without prior private scoring folders. Tests cover new-center class assignment, empty denominator, invalid classifier, traversal/hash and unknown seed. Frozen training sources remain unchanged.
