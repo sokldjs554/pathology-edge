@@ -1,0 +1,18 @@
+{
+  "step": 86,
+  "contribution_id": "U100",
+  "recorded_date": "2026-11-13",
+  "timezone": "UTC",
+  "status": "pending_user_interpretation",
+  "scope": "Interpret the opposite full-image Dice changes of 09_1 and 09_6 using supplied pixel-level FP/FN counts from the user's stored CNN/ViT comparison.",
+  "evidence_path": "artifacts/experiments/user-cnn-vit-errors-20261112/report.json",
+  "source_evidence_commit": "c04757f2db1c9f88a9aa042c84d97e6038206086",
+  "prompt": "두 사례에서 Dice가 반대로 변한 것을 FP·FN 변화와 연결해 한두 문장으로 설명해 주세요.",
+  "user_response": null,
+  "interpretation_confirmed": false,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "user_independent_numeric_audit": false
+}

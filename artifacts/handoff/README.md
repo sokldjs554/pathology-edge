@@ -1,6 +1,6 @@
 # Cowork 전달 파일
 
-**발행 이후 본인 확인:** U98에서 사용자가 CNN–ViT09_1 확대 그림의 정상 표시를 확인했습니다. [현재 기록](../../docs/CONTRIBUTIONS.md) · [다음09_6 확인](../../docs/STEP_85.md). 아래 U97 ZIP과 해시는 발행 당시 상태를 유지하므로 새로 받을 필요 없습니다.
+**발행 이후 본인 확인:** U98·U99에서 사용자가 CNN–ViT09_1·09_6 확대 그림의 정상 표시를 확인했습니다. [현재 기록](../../docs/CONTRIBUTIONS.md) · [다음 FP·FN 해석](../../docs/STEP_86.md). 아래 U97 ZIP과 해시는 발행 당시 상태를 유지하므로 새로 받을 필요 없습니다.
 
 **현재 통합 묶음: [PathologyEdge-Cowork-U97-20261113.zip](https://raw.githubusercontent.com/sokldjs554/pathology-edge/cede17581ae9bde9e33d458950bdedb0d984a5a7/artifacts/handoff/PathologyEdge-Cowork-U97-20261113.zip)** — 781파일, 24,135,855bytes(약24.1MB). 기존 U86 자료에 자동 Ki-67 패치 분석·후보 제거·학습 중심·재현율 진단과 U87–U97 응답을 통합했습니다. U98은 예정입니다. 압축을 풀어 `START_HERE.html`을 여세요.
 
