@@ -1,0 +1,53 @@
+{
+  "all_passed": true,
+  "engine": "Chromium",
+  "widths": [
+    1440,
+    390
+  ],
+  "rows": [
+    {
+      "width": 1440,
+      "task_page_reached": true,
+      "all_four_figures_loaded": true,
+      "expected_global_and_crop_scores": true,
+      "navigation_local_links": 12,
+      "navigation_overflow": false
+    },
+    {
+      "width": 390,
+      "task_page_reached": true,
+      "all_four_figures_loaded": true,
+      "expected_global_and_crop_scores": true,
+      "navigation_local_links": 12,
+      "navigation_overflow": false
+    },
+    {
+      "path": "evidence/automatic/viewer.html",
+      "status": 200,
+      "title": "PathologyEdge 자동 Ki-67 패치 검토",
+      "scope": "load smoke check, not full experiment/browser retest"
+    },
+    {
+      "path": "evidence/filter/review.html",
+      "status": 200,
+      "title": "PathologyEdge · 후보 제거 검토",
+      "scope": "load smoke check, not full experiment/browser retest"
+    },
+    {
+      "path": "evidence/centers/review.html",
+      "status": 200,
+      "title": "PathologyEdge · 학습한 세포 중심",
+      "scope": "load smoke check, not full experiment/browser retest"
+    },
+    {
+      "path": "evidence/recall/review.html",
+      "status": 200,
+      "title": "PathologyEdge · 누락과 오검출 비교",
+      "scope": "load smoke check, not full experiment/browser retest"
+    }
+  ],
+  "errors": [],
+  "new_inference_run": false,
+  "user_review_performed": false
+}

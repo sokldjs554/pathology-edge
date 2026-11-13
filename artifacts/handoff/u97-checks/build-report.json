@@ -1,0 +1,13 @@
+{
+  "file": "PathologyEdge-Cowork-U97-20261113.zip",
+  "bytes": 24135855,
+  "sha256": "fc4362f179c03c20e6dbf40f702f44e87b0b68d1a5f1d4cbf60651524acab9ee",
+  "members": 781,
+  "document_source_commit": "7a13d43993b179a359fbe8314392e0ae34276325",
+  "zip_crc": "passed",
+  "all_member_hashes": "passed",
+  "user_authored_files_unchanged": 7,
+  "pending_user_review": "U98",
+  "new_training_run": false,
+  "new_inference_run": false
+}
