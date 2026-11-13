@@ -1,13 +1,19 @@
 {
   "step": 82,
   "recorded_date": "2026-11-13",
-  "status": "pending_user_review",
+  "status": "user_confirmed_requested_display_and_toggle",
   "requested_scope": "review.html first example, CNN20261113: A TP7/FP9/FN23 and B TP21/FP49/FN9; missed-reference toggle",
-  "user_response": null,
-  "user_screen_review_completed": false,
+  "user_response": "흥 정상적으로 잘 작동해",
+  "user_screen_review_completed": true,
   "new_user_code": false,
   "new_user_training": false,
   "new_user_inference": false,
   "new_user_automated_tests": false,
-  "scope_note": "The instruction to proceed authorized work; it did not confirm viewing the new results."
+  "scope_note": "User confirmed normal operation of the requested first-example display/toggle. This does not establish independent recounts, all-example review, new code, training, inference or automated tests.",
+  "contribution_id": "U96",
+  "confirmation_scope": "First example display and missed-reference toggle only, as requested immediately before the response",
+  "user_independent_numeric_audit": false,
+  "user_all_examples_review": false,
+  "user_new_analysis": false,
+  "published_archive_preserved": true
 }

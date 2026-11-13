@@ -69,4 +69,5 @@ Dice42/6 and static checks pass. Earlier local sparse/build failures retained in
 Delivery: sourcefda5695 CI571pass; artifacts3729765 published97-fileZIP,5,593,732bytes.
 HTTP200download, ZIPCRC andallmemberhashes verified; SHA256
 08a3bd1197bce79dacb20f8d67e790de55400442ef9fe6d20d11d82aec47af00.
-DraftPR2updated; no merge or public-demo replacement. UserSTEP82review remains pending.
+DraftPR2updated; no merge or public-demo replacement. UserSTEP82 first-example display/toggle confirmation subsequently recorded as U96;
+no new user training/inference/tests or independent recount inferred. Published ZIP preserves its pre-response snapshot.
