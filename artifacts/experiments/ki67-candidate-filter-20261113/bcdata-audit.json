@@ -1,0 +1,12 @@
+{
+  "all_checks_passed": true,
+  "scope": "bcdata",
+  "images": 133,
+  "image_arm_recounts": 1064,
+  "baseline_matches_historical": true,
+  "retention_threshold_matches": true,
+  "independent_maximum_cardinality_solver": true,
+  "new_inference_run": false,
+  "original_candidates": 103005,
+  "kept_candidates": 30662
+}

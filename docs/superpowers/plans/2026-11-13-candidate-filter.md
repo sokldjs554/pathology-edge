@@ -30,15 +30,15 @@ as re-evaluations, not fresh holdouts. No promise of improvement.
 
 ## Tasks / interfaces
 
-- [ ] Task1 TDD: `ki67_candidate_filter.py` training proxy labels, 41-feature extraction,
+- [x] Task1 TDD: `ki67_candidate_filter.py` training proxy labels, 41-feature extraction,
   fit/export, finite validated scores, apply keep mask, validation-only selection. Test
   border/ignore/empty labels, finite/shape/class validation, maximum matching, fallback,
   each-case recall guard, tied threshold, train-only scaler, no-GT inference signature.
-- [ ] Task2 staged runner: fresh prepare/fit/evaluate; hash-lock inputs and models;
+- [x] Task2 staged runner: fresh prepare/fit/evaluate; hash-lock inputs and models;
   detailed metrics for fixed baseline vs filtered LR and all three CNNs. Independently
   recount point matches/counts/fractions; source/image-only replay. Re-evaluate external
   only using frozen filter and exact prior input identities; no parameter change afterward.
-- [ ] Task3 actual before/after figure for previously reviewed107-candidate case, report
+- [x] Task3 actual before/after figure for previously reviewed107-candidate case, report
   FP/FN/recall and ratio coverage, commands and one user review step. Scoped local tests,
   full CI on fresh runner, one fresh final reviewer, publish on existing draft PR.
 

@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-13T06:51:55.905683+00:00",
+  "hashes": {
+    "protocol.json": "768ef574079d2bc15d3b93d19c5caf53c76b5e1b44f808e5041dbce491a56f55",
+    "gate.json": "97f578eecd08583f065aee46cf0d279636f88d2b7053cd4f57eb076204f54069",
+    "threshold-selection.json": "d73b2afcbf7f7a1ae4795b37b5bc0da495552a56e857e57778beff35b6809f35",
+    "training.json": "c958232f015034a5a0e4d42cfda8e85a04f5c00230f2984132347663589a2d52"
+  },
+  "evaluation_started": false
+}
