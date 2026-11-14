@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 from pathology_edge.ki67_experiment import read_json,sha
 from pathology_edge.ki67_union_experiment import read_rows,SEEDS
-from pathology_edge.ki67_transfer_evaluation import classifier_for_seed
+from pathology_edge.ki67_transfer_evaluation import classifier_for_seed,validate_audited
 from pathology_edge.ki67_evaluation import match_points
 
 
@@ -18,7 +18,7 @@ def display_record(row,score,name):
 
 def build(root,output):
     root,output=Path(root),Path(output)
-    if not read_json(root/'audit.json')['all_checks_passed']:raise ValueError('Completed audit required')
+    validate_audited(root)
     summary=read_json(root/'evaluation/deepliif/summary.json')
     if summary['new_inference_images']!=597:raise ValueError('Complete fixed external evaluation required')
     refs=read_rows(root/'evaluation/deepliif/input-audit.json.gz');records={}

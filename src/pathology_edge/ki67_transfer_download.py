@@ -4,9 +4,13 @@ from email.utils import parsedate_to_datetime
 import hashlib
 import struct
 import time
+import threading
 import urllib.error
 import zlib
 from .ki67_deepliif import read_range
+
+_last_request_start=-float('inf')
+_request_lock=threading.Lock()
 
 
 def fetch_entry_once(url,entry,total):
@@ -31,8 +35,13 @@ def wait_seconds(seconds):
 
 
 def download(url,entry,total):
+    global _last_request_start
     for attempt in range(8):
-        try:return fetch_entry_once(url,entry,total)
+        try:
+            with _request_lock:
+                wait_seconds(max(0,2-(time.monotonic()-_last_request_start)))
+                _last_request_start=time.monotonic()
+            return fetch_entry_once(url,entry,total)
         except urllib.error.HTTPError as exc:
             if exc.code not in (429,500,502,503,504) or attempt==7:raise
             header=exc.headers.get('Retry-After','') if exc.headers else ''

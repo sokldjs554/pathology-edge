@@ -161,9 +161,11 @@ def audit_evaluations(root):
                 compare_metrics(dict(A=locations['A'],B=locations['B'],detection_criteria=dc,pipeline_criteria=pc,passed=all(dc.values()) and all(pc.values())),comparison);passed=comparison['passed']
             decisions.append(dict(seed=seed,eligible=m['selected'] is not None,passed=passed))
         compare_metrics(stability(decisions),summary)
+    ref=root/'external-input-review';verify_hashes(ref,read_json(ref/'summary.json')['evidence_hashes'])
     result=dict(all_checks_passed=True,trial_checks=sum(r['trials'] for r in workers),checkpoint_replay_images=sum(r['checkpoint_replay_images'] for r in workers),metric_summaries=checks,workers=workers,
         scope='Independent NMS/selection/metric accumulation; shared tested matching and peak primitives. Full selected validation checkpoint replay; heldout saved outputs recounted, not full heldout model replay.',
-        learner_files_preserved=True,evaluation_lock_sha256=sha(root/'evaluation-lock.json'))
+        learner_files_preserved=True,evaluation_lock_sha256=sha(root/'evaluation-lock.json'),
+        stage_summary_hashes={s:sha(root/'evaluation'/s/'summary.json') for s in ('validation','test','bcdata','deepliif')},reference_review_summary_sha256=sha(ref/'summary.json'))
     evaluation_lock(root);fresh_json(root/'audit.json',result);return result
 
 

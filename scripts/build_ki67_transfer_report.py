@@ -6,15 +6,17 @@ from pathlib import Path
 from pathology_edge.ki67_experiment import read_json,fresh_json,sha
 from pathology_edge.ki67_union_experiment import read_rows
 from pathology_edge.ki67_transfer_experiment import checked,primary_models
+from pathology_edge.ki67_transfer_evaluation import validate_audited
 
 
 def build(root):
-    root=Path(root);p=checked(root,selected=True);audit=read_json(root/'audit.json');selection=read_json(root/'selection.json');primary=primary_models(selection)
-    if not audit['all_checks_passed']:raise ValueError('Completed audit required')
-    if not read_json(root/'browser-review.json')['all_checks_passed']:raise ValueError('Actual browser review required before closeout')
+    root=Path(root);p=checked(root,selected=True);audit=validate_audited(root);selection=read_json(root/'selection.json');primary=primary_models(selection)
+    browser=read_json(root/'browser-review.json')
+    if not browser['all_checks_passed'] or browser['review_sha256']!=sha(root/'review.html'):raise ValueError('Actual browser review of the current artifact required before closeout')
     stages={s:read_json(root/'evaluation'/s/'summary.json') for s in ('validation','test','bcdata','deepliif')}
     if not all(v['all_checks_passed'] for v in stages.values()):raise ValueError('All evaluations required')
     adopted=sum(m['selected'] is not None for m in primary);external=stages['deepliif']['passes'];internal=stages['test']['passes']
+    palette=read_json(root/'external-input-review/palette-normalization-summary.json')
     f=lambda v:'—' if v is None else f'{v:.4f}'
     lines=['# 마지막 성능 보완: 실제 사전학습과 고정 외부 평가','',
            f'**내부 검출기 채택 {adopted}/3, 재사용 내부 test 종합 기준 {internal}/3, 새 DeepLIIF 외부 종합 기준 {external}/3.** 아래 숫자는 자동 검산을 완료한 실제 결과다. 평가 완료와 성능 목표 달성을 구분한다. 이번 고정 실험으로 성능 보완 반복을 종료하며, 기존 배포 모델은 교체하지 않았다.','',
@@ -69,6 +71,7 @@ def build(root):
               '- 512×3072 PNG의첫512px RGB와여섯번째512px 참조 마스크를 연결했다. 빨강/파랑 내부의8연결 성분 중면적>4px만 사용하고 색상 다수결과 무게중심으로 양음성/좌표를 유도했다. 경계 성분 수와 혼합색 성분도 기록했다. SciPy와별도 OpenCV 계산을 대조했다. 이것은 공식 DeepLIIF 평가 프로토콜의 재현이나 전문가 중심점의 직접 주석을 뜻하지 않는다.',
               '- 개별 ZIP항목 CRC·SHA·응답 범위를 확인하고 기존 자료/새 자료 안의 완전 동일 RGB 해시 중복을 검사했다. 원본1GB ZIP 전체 checksum은 확인한 것으로 기록하지 않는다. 환자·슬라이드·기관 독립성 및 MPP가 보장되지는 않는다.',
               '- 처음 받은 HTTP429는 원자료 오류가 아니라 요청 제한이었다. 실패한 시도를 보존하고 요청당 한 범위·분당최대30회·Retry-After 대기로 복구했다. 자료 집합이나 성능 기준은 바꾸지 않았다.',
+              f"- 원자료 점검409장 이후 참조 마스크의1픽셀 `(253,0,2)`를 발견해, 모델 외부 추론 전에 별도 형식 보완 규칙을 기록했다. 공식 코드의 양성 채널 해석과 대조하고 표준 색상과의 최대 채널 차이2까지만 정규화했다. 실제 적용은{palette['images_changed']}장·{palette['pixels_changed']}픽셀이다. 더 큰/모호한 차이는 거부하며 원본RGB와597장 구성은 유지했다. 원래 규칙부터 완전히 동일했다고 표현하지 않으며 `reference-amendment.json`에 근거·시점·원본 해시를 남겼다.",
               '- seed3개·작은 내부 케이스 수·재사용 validation 선택의 한계가 남는다. 외부 성공 여부도 이 전체 세포 과제의 결과이지 종양 Ki-67 임상 정확도나 전체WSI 성능의 근거가 아니다.','',
               '## 실행·검산·본인 작업 구분','',
               f"별도 검산에서 **{audit['trial_checks']}개 설정**, 선택 체크포인트 **{audit['checkpoint_replay_images']}건의 영상 재실행**, **{audit['metric_summaries']}개 지표 요약**을 대조했다. NMS·선택·집계는 별도 코드이며 일부 검증된 peak/matching 기본 함수는 공유한다. heldout 전체를 별도 모델로 다시 추론한 검증이라고 부르지 않는다.",

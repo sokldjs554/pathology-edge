@@ -44,3 +44,17 @@ def test_bad_crc_is_not_retried(monkeypatch):
     monkeypatch.setattr(m,'fetch_entry_once',fetch)
     with pytest.raises(ValueError):m.download('x',{},100)
     assert len(calls)==1
+
+
+def test_every_request_attempt_and_next_entry_keep_two_second_spacing(monkeypatch):
+    m=api();clock=[0.];starts=[]
+    monkeypatch.setattr(m.time,'monotonic',lambda:clock[0])
+    monkeypatch.setattr(m.time,'sleep',lambda seconds:clock.__setitem__(0,clock[0]+seconds))
+    monkeypatch.setattr(m,'_last_request_start',-float('inf'),raising=False)
+    def fetch(*args):
+        starts.append(clock[0])
+        if len(starts)==1:raise urllib.error.HTTPError('x',429,'limited',{'Retry-After':'1'},None)
+        return b'ok',{}
+    monkeypatch.setattr(m,'fetch_entry_once',fetch)
+    m.download('x',{},100);m.download('x',{},100)
+    assert len(starts)==3 and all(b-a>=2 for a,b in zip(starts,starts[1:]))
