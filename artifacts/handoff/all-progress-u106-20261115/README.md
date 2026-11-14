@@ -6,4 +6,4 @@
 - 브라우저 검사 초기에 정규화 검토기를 SVG3개로 가정한 검사 코드를 실제 구현인 Canvas2개로 수정한 뒤 다시 확인했습니다. 제품 소스·수치는 바꾸지 않았습니다.
 - 이 작업에서 학습·추론·임상 검증·사용자 수행을 추가하지 않았습니다. 소스 CI 결과와 패키지 검사를 구분합니다.
 - `build.py`/`verify.py`/`serve.py`/`browser.mjs`는 원래 `work/all-progress-handoff-20261115/`에서 실행한 포장 도구 사본입니다. `git-inventory.json`은 고정 소스의 `git ls-tree -rl`로 만든 경로·blob·크기 목록이며 전체 항목은 ZIP의 `FILE_INVENTORY.json`에 있습니다. 이 도구 사본이 독립 모델 실행 패키지라는 뜻은 아닙니다.
-- 실제 공개 URL 다운로드 검사는 게시 후 `publication.json`에 추가합니다. 해당 기록이 없다면 다운로드 성공을 추정하지 마세요.
+- 실제 공개 URL에서 로그인 없이 97,886,928 bytes를 내려받고 SHA256·ZIP CRC·파일별 해시1,753개를 대조했습니다. `publication.json`을 확인하세요.

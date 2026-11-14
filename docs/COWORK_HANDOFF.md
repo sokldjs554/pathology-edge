@@ -1,6 +1,6 @@
 # PathologyEdge — 자소서·포트폴리오 작성을 위한 Cowork 전달 자료
 
-**최신 전체 통합본(2026-11-15 KST):** [전체 진행·개인 수행 자료 ZIP](../artifacts/handoff/PathologyEdge-All-Progress-U106-20261115.zip). 초기 과정부터 마지막 외부 평가까지 포함하며, 개인 기록 U00–U106·후속 답변·본인 제출 원본 ZIP 2개를 함께 보존했습니다. ZIP의 `START_HERE.html` 및 `CURRENT_STATUS.md`를 우선 읽으세요. 아래 과거 전달본 링크는 당시 기록입니다.
+**최신 전체 통합본(2026-11-15 KST):** [전체 진행·개인 수행 자료 ZIP](https://raw.githubusercontent.com/sokldjs554/pathology-edge/b15ae2ae0bcc2934da2df30d544bae993cdae86d/artifacts/handoff/PathologyEdge-All-Progress-U106-20261115.zip). 초기 과정부터 마지막 외부 평가까지 포함하며, 개인 기록 U00–U106·후속 답변·본인 제출 원본 ZIP 2개를 함께 보존했습니다. ZIP의 `START_HERE.html` 및 `CURRENT_STATUS.md`를 우선 읽으세요. 아래 과거 전달본 링크는 당시 기록입니다.
 
 **마지막 고정 실험 완료(2026-11-15 KST):** 실제 ImageNet 사전학습 특징과 무작위 고정 특징을 세 seed로 비교하고, 학습 케이스 균등 추출·실제 검출 중심의 자동 분류·고정 외부 평가를 완료했다. 내부 채택 0/3, 재사용 내부 test 종합 기준 1/3, 재사용 BCData133 기준 3/3, 새 DeepLIIF597 기준 1/3이다. 실행 완료와 성능 기준 통과를 구분하며, 추가 튜닝 없이 이번 시도로 종료한다. [전체 결과·검토 ZIP](KI67_FINAL_TRANSFER.md). 이번 자동 실행을 사용자 직접 수행으로 추가하지 않았으며 최신 확인 기록은 U106이다. 임상·전체 WSI 검증은 미실시이고 H&E 외부 악화 결과도 유지한다.
 
