@@ -41,7 +41,7 @@ Interfaces:segmentation_centers(mask)->points,classes,audit;decode_paired_png(ra
 Files:scripts/export_ki67_normalized_review.py,docs/KI67_NORMALIZED.md,docs/STEP_92.md,artifacts/experiments/newdir,smallreviewZIP.
 - [x] Exportrealimproved/worsenedcases;browser1440/390,coordinates/counts/overlays,screen captures.
 - [x] FullcleanCI/focusedtests,sourcepreservation,independentfreshwhole-taskreview;fiximportantfindingswithRED→GREEN.
-- [ ] Publishnewimmutableevidence/ZIP,currentdraftPR;verifydownloadSHAandexactcommitCI;usernewreviewpending,U105unchanged.
+- [x] Publishnewimmutableevidence/ZIP,currentdraftPR;verifydownloadSHAandexactcommitCI;usernewreviewpending,U105unchanged.
 
 ## Actual result
-All six training jobs, 5184 configuration checks, and 2724 checkpoint-image replays completed. Primary eligible models:0/3. FP increased and positive-tumor recall floor was missed by all primary F1-best diagnostics. Goal1 unmet; goal2/3 conditional implementation tested but no new-model performance established. User STEP92 pending. Fresh final review: no Critical/Important/required Minor findings; publication checks remain.
+All six training jobs, 5184 configuration checks, and 2724 checkpoint-image replays completed. Primary eligible models:0/3. FP increased and positive-tumor recall floor was missed by all primary F1-best diagnostics. Goal1 unmet; goal2/3 conditional implementation tested but no new-model performance established. User STEP92 pending. Fresh final review: no Critical/Important/required Minor findings; Evidence commit0db31e1 published; both public downloads, CRC/all members/browser HTML equality verified. Exact evidence commit CI715/Dice42+6/static-demo checks passed. PR2 updated and remains draft; receipt-only head CI checked separately.
