@@ -7,7 +7,10 @@ import json
 from pathlib import Path
 import time
 import urllib.error
+import sys
 import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from audit_ki67_deepliif import verify_reference_mask
 from pathology_edge.ki67_deepliif import fetch_zip_entry,decode_paired_png,validate_membership,score_rows,paired_fraction
 from pathology_edge.ki67_normalized_pipeline import checked_pipeline,selected_networks,predict_pair,classified_row,ARMS
 from pathology_edge.ki67_center_experiment import loaded_detectors
@@ -30,7 +33,8 @@ def evaluate_new(root,index_path,protocol_path,output):
     extra=[man,external/'input-audit.json',external/'prior-test-pixel-hashes.json',index_path,protocol_path]
     lock=dict(created_utc=utc(),detector_lock_sha256=sha(root/'selection-lock.json'),classifier_lock_sha256=sha(root/'classifier-lock.json'),input_hashes={str(f.resolve()):sha(f) for f in extra},
         source_hashes={str(Path(__file__).resolve()):sha(__file__),str(Path(__import__('pathology_edge.ki67_deepliif',fromlist=['x']).__file__).resolve()):sha(__import__('pathology_edge.ki67_deepliif',fromlist=['x']).__file__)},
-        dataset_scope=ep['scope'],new_inference_started=False,full_archive_checksum_verified=False)
+        dataset_scope=ep['scope'],lock_phase='Before inference',full_archive_checksum_verified=False)
+    lock['source_hashes'][str(Path(__file__).with_name('audit_ki67_deepliif.py').resolve())]=sha(Path(__file__).with_name('audit_ki67_deepliif.py'))
     fresh_json(output/'evaluation-lock.json',lock)
     forbidden={r['pixel_sha256'] for r in read_json(man)}|set(read_json(external/'prior-test-pixel-hashes.json'))|{r['pixel_sha256'] for r in read_json(external/'input-audit.json')['images']}
     networks=selected_networks(root,models);original=loaded_detectors(p['prior']);classifiers=load_models(p['parent'],read_json(Path(p['parent'])/'selection-lock.json'))
@@ -49,8 +53,12 @@ def evaluate_new(root,index_path,protocol_path,output):
             raw,meta=pending.pop(i).result()
             if i+8<len(names):pending[i+8]=pool.submit(download,names[i+8])
             rgb,gt,gc,reference=decode_paired_png(raw);pixel=hashlib.sha256(rgb.tobytes()).hexdigest()
+            from PIL import Image
+            import io
+            mask=np.asarray(Image.open(io.BytesIO(raw)))[:,2560:3072];verify_reference_mask(mask,gt,gc)
             if pixel in forbidden or pixel in observed:raise ValueError('Exact decoded image overlap; stop without selective exclusion')
-            observed.add(pixel);audits.append(dict(image=name,pixel_sha256=pixel,gt_points=gt.tolist(),gt_classes=gc.tolist(),reference=reference,source=meta))
+            observed.add(pixel);audits.append(dict(image=name,pixel_sha256=pixel,gt_points=gt.tolist(),gt_classes=gc.tolist(),reference=reference,source=meta,independent_reference_checked=True))
+            with (output/'stream-progress.jsonl').open('a') as progress:progress.write(json.dumps(dict(image=name,verified_index=i+1,source_sha256=meta['sha256'],reference_cells=len(gt)))+'\n')
             for m in eligible:
                 for arm,xy in predict_pair(rgb,m['seed'],m['selected'],original,networks).items():
                     outputs[m['seed']][arm].append(classified_row(rgb,xy,gt,gc,classifiers,name))

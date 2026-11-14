@@ -100,3 +100,23 @@ def test_registry_refuses_duplicated_or_unplanned_external_names():
     with pytest.raises(ValueError):m.validate_membership(p,index)
     index['entries'].pop();p['included_names'][0]='unplanned.png'
     with pytest.raises(ValueError):m.validate_membership(p,index)
+
+
+def test_independent_reference_recount_detects_shifted_centroid():
+    import importlib.util
+    from pathlib import Path
+    path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_deepliif.py'
+    if not path.exists():pytest.fail('Independent DeepLIIF audit missing')
+    spec=importlib.util.spec_from_file_location('audit_deepliif',path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+    xy,c,a=module().segmentation_centers(mask());m.verify_reference_mask(mask(),xy,c)
+    with pytest.raises(ValueError):m.verify_reference_mask(mask(),xy+1,c)
+
+
+def test_no_eligible_new_external_never_opens_unavailable_dataset(tmp_path):
+    import importlib.util
+    from pathlib import Path
+    from test_ki67_normalized_pipeline import pipeline,noeligible
+    root=noeligible(tmp_path);pipeline().select_classifiers(root)
+    path=Path(__file__).resolve().parents[1]/'scripts/run_ki67_deepliif.py';spec=importlib.util.spec_from_file_location('run_deepliif',path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+    m.evaluate_new(root,tmp_path/'missing-index',tmp_path/'missing-protocol',tmp_path/'external')
+    assert (tmp_path/'external/not-run.json').exists() and not (tmp_path/'external/evaluation-lock.json').exists()

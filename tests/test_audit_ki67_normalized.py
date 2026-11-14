@@ -28,3 +28,9 @@ def test_grid_rejects_missing_epoch_and_nonfinite_training_loss():
     with pytest.raises(ValueError):m.validate_history([])
     h=[dict(epoch=e,train_loss=float('nan'),trials=[]) for e in range(1,25)]
     with pytest.raises(ValueError):m.validate_history(h)
+
+
+def test_cached_recount_preserves_original_case_and_class_counts():
+    import numpy as np
+    m=audit_module();rows=[dict(case_id='a',gt_points=[[1,2],[8,9]],gt_classes=[0,1]),dict(case_id='b',gt_points=[[1,1]],gt_classes=[2])];points=[np.array([[2,2],[40,40]]),np.empty((0,2))]
+    expected=m._summary(rows,points);cache={};assert m.cached_summary(rows,points,cache)==expected;assert m.cached_summary(rows,points,cache)==expected
