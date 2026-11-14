@@ -34,7 +34,7 @@ def build(root):
            '## 고정한 학습·선택 조건','',
            'seed20261117/18/19 × pretrained/random, 각24epochs. Adam0.001,batch8,작업당1thread. epoch마다696회 복원 추출하므로 새로운696장을 매번 추가한 것이 아니다. 기존 maxGaussian sigma2/radius6와 center focal loss, 회전/반전/RGB0.9~1.1 증강을 유지했다. ImageNet mean/std 정규화만 적용하고 원영상 좌표를 바꾸는 resize/crop은 하지 않았다.',
            '',
-           'validation227장·4케이스에서 epoch와12임계값×3거리를 비교했다. FP·FN 동시 비증가(하나 이상 감소), 케이스 평균 재현율≥0.479795, 양성 종양 위치 재현율≥270/483, 음성 종양 위치 재현율≥439/1292, 각 케이스 재현율≥기존A의90%를 유지했다. 적격 설정이 있으면 그중 최고 case-F1, 없으면 최고 case-F1 진단 설정을 선택했다. 여섯 모델을 모두 봉인한 뒤 heldout을 실행했고 결과를 보고 재학습/임계값 조정하지 않았다.','',
+           '검증 227장·4케이스에서 epoch와 12임계값×3거리를 비교했다. 기존 A보다 FP·FN 동시 비증가(하나 이상 감소), 기존 LoG의 재현율 하한(케이스 평균≥0.479795, 양성 종양 위치≥270/483, 음성 종양 위치≥439/1292), 각 케이스 재현율≥기존 A의 90%를 유지했다. LoG의 하한과 현재 A의 점수는 서로 다른 기준이다. 적격 설정이 있으면 그중 최고 case-F1, 없으면 최고 case-F1 진단 설정을 선택했다. 여섯 모델을 모두 봉인한 뒤 후속 평가를 실행했고 결과를 보고 재학습/임계값 조정하지 않았다.','',
            '## 검증 자료 — 케이스 평균 검출 F1','',
            '분할 Dice가 아니라 중심의6px 이내 일대일 위치 대응이다. FP/FN은227장 합계이며 F1과 전체 재현율은4케이스 평균이다. 종양 클래스별 재현율은 위치 검출 결과이고 세포 분류 정확도가 아니다.','',
            '|seed|방식|case-F1|FP|FN|case 재현율|양성 종양 위치 재현율|채택|','|---|---|---:|---:|---:|---:|---:|---|']
@@ -51,6 +51,13 @@ def build(root):
         scores=read_rows(root/'evaluation/test'/str(m['seed'])/'scores.json.gz')[0]
         for arm in ('A','B'):
             r=scores[arm];lines.append(f"|{m['seed']}|{arm}|{f(r['localization']['f1'])}|{f(r['macro_f1'])}|{f(r['case_ratio_mae_pp'])}|{r['case_ratio_valid']}/10|")
+    lines += ['', '### 종합 기준과 개별 지표를 함께 읽기', '',
+              '내부 test의 기준은 FP·FN 동시 비악화(하나 이상 감소), 각 케이스 재현율이 A의 90% 이상, 두 종양 클래스의 위치 재현율 비악화, 모든 케이스의 양성률 분모 유지, 세포 F1 상승, 케이스 양성률 MAE 비악화다. 기준 미달의 크기도 아래에 그대로 표시한다.']
+    for m in primary:
+        c=read_json(root/'evaluation/test'/str(m['seed'])/'comparison.json')
+        failures=[(k,a['recall'],c['B']['cases'][k]['recall']) for k,a in c['A']['cases'].items() if c['B']['cases'][k]['recall']<.9*a['recall']]
+        detail='; '.join(f"{k} 재현율 {a:.6f}→{b:.6f}, 고정 하한 {a*.9:.6f}" for k,a,b in failures) or '각 케이스 재현율 하한 통과'
+        lines.append(f"- seed {m['seed']}: {detail}. 양성률 MAE 조건 {'통과' if c['pipeline_criteria']['case_fraction_mae_nonincrease'] else '미달'}. 종합 {'통과' if c['passed'] else '미달'}.")
     for dataset,title in [('bcdata','재사용 BCData133장 — 종양 주석만 있는 과제'),('deepliif','새 DeepLIIF597장 — 전체 세포 양음성 과제')]:
         lines += ['', '## '+title,'',
                   'BCData에서는 종양 예측만 참조 종양 좌표와 대응한다. DeepLIIF에서는 종양·비종양 예측을 양음성으로 합치며 모든 예측 세포를 유지한다. 서로 다른 과제의 절대 F1을 직접 비교하지 않는다.','',
@@ -79,7 +86,7 @@ def build(root):
               '이번 학습·자동 평가·코드 검사·브라우저 확인은 자동 실행 작업이다. 사용자가 새 모델을 직접 학습/검토했다고 추가하지 않았다. 기존 사용자 작성7개 파일의 해시를 유지했으며 앞선 사용자 확인 기록도 소급 변경하지 않았다. 새 검토 화면의 사용자 확인은 아직 예정이다.',
               '',
               '## 직접 확인할 순서','',
-              '증거 ZIP의 review.html을 브라우저로 열고 예시0 → seed20261117을 선택한다. 세 패널이 같은 원영상을 보여주는지 본다. 중심 표시를 끄고 켜도 TP/FP/FN·F1·양성률은 유지되어야 한다. 참조 중심/대응선을 켜면 위치 대응을 볼 수 있다. 다른 seed와여섯 예시를 선택해 비교한다. 화면의 양성률은 전체 세포 비율이며 종양 임상 지수가 아니다. 선택한 여섯 예시를 전체597장 평균으로 해석하지 않는다.','',
+              '증거 ZIP을 압축 해제한 폴더에서 `python3 -m http.server 8000 --bind 127.0.0.1`을 실행하고 브라우저의 `http://127.0.0.1:8000/review.html`에서 예시0 → seed20261117을 선택한다. 이 환경의 file:// 제한 때문에 실제 브라우저 검증은 로컬 HTTP로 수행했으며 직접 파일 열기 성공으로 기록하지 않는다. 세 패널이 같은 원영상을 보여주는지 본다. 중심 표시를 끄고 켜도 TP/FP/FN·F1·양성률은 유지되어야 한다. 참조 중심/대응선을 켜면 위치 대응을 볼 수 있다. 다른 seed와여섯 예시를 선택해 비교한다. 화면의 양성률은 전체 세포 비율이며 종양 임상 지수가 아니다. 선택한 여섯 예시를 전체597장 평균으로 해석하지 않는다.','',
               '## 재현 및 출처','',
               f"학습 소스 커밋: `{p['source_commit']}`. 실행 설정·입력/가중치/소스 해시는 `protocol.json`, 여섯 모델 선택은 `selection-lock.json`, 평가 코드는 `evaluation-lock.json`에 고정했다. 실제 환경은 `resource-environment.json`에 있다. 학습 시간은 검증/설정 탐색과동시 실행을 포함하므로 통제된 속도 벤치마크가 아니다.",
               '',

@@ -29,16 +29,16 @@
 
 Files: src/pathology_edge/ki67_transfer.py,ki67_transfer_experiment.py; tests/test_ki67_transfer.py; scripts/run_ki67_transfer.py.
 
-- [ ] Write failing model/gradient/native-shape/sampler/selection tests and confirm failure.
-- [ ] Implement TransferCenterDetector(state), balanced_probabilities(records), diagnostic_choice(trials,baseline), prepare/fit_worker/seal.
-- [ ] Verify official source, license, download SHA and loaded tensor equality; freeze data audit/source protocol.
-- [ ] Run paired six jobs once and seal all selected/diagnostic results.
+- [x] Write failing model/gradient/native-shape/sampler/selection tests and confirm failure.
+- [x] Implement TransferCenterDetector(state), balanced_probabilities(records), diagnostic_choice(trials,baseline), prepare/fit_worker/seal.
+- [x] Verify official source, license, download SHA and loaded tensor equality; freeze data audit/source protocol.
+- [x] Run paired six jobs once and seal all selected/diagnostic results.
 
 ### Task2: Fixed automatic and external evaluation
 
 Files: src/pathology_edge/ki67_transfer_evaluation.py; scripts/run_ki67_transfer_evaluation.py; tests/test_ki67_transfer_evaluation.py.
 
-- [ ] Test seed coverage, immutable locks, diagnostic inclusion and undefined ratio coverage.
+- [x] Test seed coverage, immutable locks, diagnostic inclusion and undefined ratio coverage.
 - [ ] Implement fixed paired CNN classification at predicted centers; evaluate validation227, reusedtest407/BCData133, prospectiveDeepLIIF597.
 - [ ] Validate every external reference/CRC/hash/membership; record all seed outcomes, no selective exclusions.
 
