@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-14T11:09:12.647785+00:00",
+  "detector_lock_sha256": "7c2a1c9116f4a4664a4edab8a0f9c3297de1a3a83734948df2c6282255e221e4",
+  "classifier_selection_sha256": "6162c610bf342d35166e765dcbc6f9b1dd34b5925ce239e29fd4a768c82e5ce7",
+  "evidence_hashes": {},
+  "source_hashes": {
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_normalized_pipeline.py": "acc4f7d63c23599340b5fd421f04a76c03e25907eee22ddf1f10a705b0f6d6fd",
+    "/workspace/pathology-edge-auto-ki67/scripts/run_ki67_normalized_pipeline.py": "84613866e4635fa153d843a4751e2eff1f76db1a1ccf18f0b289f7b256c25a8f"
+  }
+}

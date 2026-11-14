@@ -1,0 +1,56 @@
+{
+  "all_checks_passed": true,
+  "examples": [
+    {
+      "example": 0,
+      "image": "case_0019_region_1_patch_4_O.png",
+      "counts": true,
+      "overlay_only": true
+    },
+    {
+      "example": 1,
+      "image": "case_0019_region_3_patch_3_O.png",
+      "counts": true,
+      "overlay_only": true
+    },
+    {
+      "example": 2,
+      "image": "case_0019_region_0_patch_4_O.png",
+      "counts": true,
+      "overlay_only": true
+    },
+    {
+      "example": 3,
+      "image": "case_0007_region_1_patch_6_O.png",
+      "counts": true,
+      "overlay_only": true
+    },
+    {
+      "example": 4,
+      "image": "case_0007_region_2_patch_2_O.png",
+      "counts": true,
+      "overlay_only": true
+    },
+    {
+      "example": 5,
+      "image": "case_0003_region_3_patch_9_O.png",
+      "counts": true,
+      "overlay_only": true
+    }
+  ],
+  "desktop": [
+    1440,
+    1050
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "console_errors": [],
+  "external_requests": [],
+  "same_raw_frames": true,
+  "mobile_table_scroll": true,
+  "static_saved_results": true,
+  "user_review_confirmed": false,
+  "html_sha256": "d87f717656f8a1f35c3445670288de7b0d5f23cfe2061ff9372ed72a408a4745"
+}

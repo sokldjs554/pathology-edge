@@ -1,0 +1,5 @@
+Data attribution and scope
+Patherea Breast-P1: Štepec et al., https://huggingface.co/datasets/ds2268/patherea , CC BY-NC4.0. Display examples add predicted center/GT correspondence overlays; research/noncommercial use.
+DeepLIIF: Ghahremani et al., https://zenodo.org/records/4751737 , DOI10.1038/s42256-022-00471-x, CC BY4.0. One excluded format probe and derived centroids/reference audits; any scored examples are explicitly recorded. Not tumor-specific clinical Ki67 or whole-slide validation.
+BCData raw images, HDF5 and individual external cell-coordinate prediction/reference rows are excluded from this public archive. Aggregated metrics and integrity hashes may refer to preserved private local evidence.
+Original model/data path and source hashes are intentional provenance; moving folders does not authorize rewriting the original locks. These archives do not install the underlying datasets or claim an independent clinical cohort.

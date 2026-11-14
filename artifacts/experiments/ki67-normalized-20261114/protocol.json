@@ -1,0 +1,183 @@
+{
+  "schema": "ki67-normalized.v1",
+  "seeds": [
+    20261117,
+    20261118,
+    20261119
+  ],
+  "widths": [
+    4,
+    16
+  ],
+  "primary_width": 16,
+  "epochs": 24,
+  "learning_rate": 0.001,
+  "batch_size": 8,
+  "torch_threads": 1,
+  "baseline_threads": 2,
+  "thresholds": [
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.075,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "distances": [
+    4,
+    6,
+    8
+  ],
+  "floors": {
+    "case_macro_recall": 0.4797951648158369,
+    "tumor_recalls": [
+      0.5590062111801242,
+      0.3397832817337461
+    ]
+  },
+  "created_utc": "2026-11-14T10:03:05.958902+00:00",
+  "prior": "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113",
+  "parent": "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113",
+  "external": "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113",
+  "data_dir": "/workspace/work/aivis-ihc/Patherea_Breast_P1_224_v1.1",
+  "input_hashes": {
+    "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113/protocol.json": "2baa200a28c0bee3f7a5c6dfff32de566e349b380ff248c0ae3cf34cab748068",
+    "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113/selection.json": "690bae452bb27ed2788edc31277e99dd071a4675ec61ff7beb415d7e8a724804",
+    "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113/selection-lock.json": "7d470f4493dd3b2f26fbc36ec78caf6a466224ef9782325cb445ed02a7e283d9",
+    "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113/detector-20261117.pt": "2983685d495d07a96fcc5edcabdb3baaba041803cc9287ab9bc7f96403934254",
+    "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113/detector-20261118.pt": "85cf76b09b12cd4fc9d860cb5fddb7fe3a4ecbbe29f43d4bfe8daa86d5bd5253",
+    "/workspace/pathology-edge-auto-ki67/work/learned-centers-leaky-run-20261113/detector-20261119.pt": "efb401c657787eb407227f488b78b795ee1d5bad9d9731b6cd178d739db463ad",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/protocol.json": "e0155dee2855b37a84589ee51d831e37ec8ed05180455b1cf4b4147b53d52b7e",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/selection-lock.json": "0dcb3262585ad338728380f957a7f02e76ac4d7420eb0f5a6d8b8b30b46a6e79",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/source-manifest.json": "fcef8402b336f73bb19890ee8057ae506101c14f35410fec721225a1d02bcd82",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/split.json": "f839f408750e0ea8ca39ba35ea71aeaca74fcf69dcb93bdcbaa17dbe94768293",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/model.json": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/predictions.json": "9c38381d5de3afa1e3ce4f372b82b2b8275030f97a54cb28345d7cbf8d6ddc93",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/results.json": "6f585bd89564ce947f6275cbbdbbcf5c74d0897f10e077ca6fe1ca714ab57780",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/cnn-20261113.pt": "f4084b82ef75ea0be9a002f2628153845ad29b79ac92da467d1c1b347f3c092e",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/cnn-20261114.pt": "cbaa25d792bbcdc2f44388209a3dfa9d53b9c4bbbf05c660f74a1ef8fedb1dd2",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/cnn-20261115.pt": "497ad1744eb07d3af7b91f3352163a60438ef5c2d7d1c3d9a8d98fa327589acc",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/private-predictions.json": "8783dd71b3e522f3ca8bac5b4fa1fc921f1a633df198bff02964595eae130513",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/results.json": "d349cd8e9f21814c1d495ebb0b83f033525bed58f4f35b6ac6c28ce3d38e419b",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/entries.json": "f5830b7125a0f395eaccacb8bb11bf73cd9d22cf327524fa51f7c01cfed0d632",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/input-manifest.json": "d26c63377d4467d4437709d1770a9484927ff8c2af5ec39eb79b2b6e87187bb2",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/input-audit.json": "b4685e41a34f6b8e2b6487a717228726bcefa782ec99789dfc6b2717dde24eb3"
+  },
+  "source_hashes": {
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/annotation_grid.py": "0d9034e15b5e8f245bd62b6c696b33061beeb986099e7c9851a7867e89bd1c64",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/cli.py": "6b351d4c28ca3bb82c9dfdb7f75fd65ba445f4cd397af26477bb27ad4e43e548",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/data.py": "e4f2156e9c12519efb94cf751c3b9e742601abd250d9b1ebd4d71f25442496dd",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/experiment.py": "d4deaca0f4eb1161a07ed24fb7419ba790b1483a3bf776d6c24611aa055d26eb",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/external_validation.py": "69e27d0a17bb56ee696c3620921ebc1e7f1265f03da2756894605bd1dcf575cf",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_candidate_filter.py": "bc01d867c6f0227ffbeb1b92ae42979f1a4fd63f2b16c4fe802b8289dba88981",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_center_diagnostics.py": "028b0bccfd62169d151b2240d62b378aaa85dbe8f3c8fdf4bc84b2bea03cba0b",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_center_experiment.py": "f768b8cd84c487a02c1ee89d9ad365314e52670f4dce2c63b4ef90662eb9ac1f",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_center_inference.py": "53cb16230a6e007334a3243ba7d425320fda107eb5f5f8a0543e8f7480e3e051",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_center_refit.py": "2562fd2705b38966f0d44c489dbfb4374dba7e83c7cd680bcd3fb944c1f2cd75",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_centers.py": "8edad0475f1b68bbedf3e7bc149710504b0404e6980b5367c4c13ad76b5aadaa",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_cnn.py": "2c17db919f7f6d2d19b28766959b3ac9ad90e827fe8536104f0e5ad90e262659",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_detection.py": "f80bf38721787cb5e6ced4dc05e2dea69207edced8841c099a507b619c02bd81",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_evaluation.py": "7a4d8e860813049ebe8a4c201518bf88ab4f6d5d6b0b7d1891bd78a70b8022d2",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_experiment.py": "e9db7316b2079e4d9d6db4305fa05b558cca0aab8763221ae016783b9e71b7c2",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_external.py": "b2aeb5644700f374a259b14f69dd754fbdad34ddcc71974b3479cea341b55974",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_filter_experiment.py": "04a72fcee5a733322aad704bdc1b2508b2529a2b47e9900d5dbdacb46d09b404",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_localization.py": "4ac8faeb06db3fc0557c025752be2d0c848863bdbf770dc3ca86c84b737d68fe",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_localization_experiment.py": "4b787cf8100cc27dc3203256aee02a2fa1ff3871af558ec5e2c75dee801c82d9",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_normalized_centers.py": "d7d782361b7c2fe2728e24babc763dfe05178ef266ca1261533a36a7aced470b",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_normalized_experiment.py": "6175df86194c86eee3c02ac0c4e8233d0a256332347042261accaf04cb914ae6",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py": "1dbe1259ebb95958fad44ef8f4cdf75c805ffbaf0799b9c2c54febc9433e2202",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union_experiment.py": "cf4d7da80c54a69c63325f090343542b16599df16f0e9714cb853b7b02251a99",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/learner_refinement.py": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/merge.py": "4e2c18ebd78e7749a1a373c9133bc7d8674ded82f57d85a8ace6576696f506c3",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/metrics.py": "95584cd131ab54f0bb24485f56bc6a85b68b775bb318fbf5dfa0b9e24c6b8a78",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/model_comparison.py": "2686a9ffabcbc587c2b4d0dc1b97dfeb913db1c2328c0c0b5edb2e08e8f6981d",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/panoptils.py": "750828229838d0520652c1eaf1f178d6d44a7371a26faf5dcd89f6067a9ddd50",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/patches.py": "cd40a62868adab9a6bc2f1145f6fe2a13465f17d21b57b3d8df2983d9427b5e5",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/refinement.py": "ef3f0f739f72214be97af3002e2089331dfc93fe561f05edf6799be2b74a7d22",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/review_cases.py": "2830c555dcfebd097ab2ef19eb2cbc6cc594a21c3faa735455dc8bd9e67c007e",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/vit.py": "41a00cb0278921c9e2271e5aa1714ebdc3e59bb435e569513bc67805dee41932",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/wsi_export.py": "86ef8f4d3e40b36b6e10be294cbb7c71017347705c93f100fbaec6083e9b9c9f",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/wsi_roi.py": "0e76ab597019e2f19b8d1a75781ef318eea4319c2445996290d3eaf3d881173e",
+    "/workspace/pathology-edge-auto-ki67/src/pathology_edge/wsi_source.py": "2f54fab54d4f8ff8c2babf82e953152eebd24642d994768c7e6a05d6212dd7df",
+    "/workspace/pathology-edge-auto-ki67/scripts/run_ki67_normalized.py": "254089f5694fec40b0a8a8c9364d00d2e69c70ec77c060f3210577a488a1a6b4"
+  },
+  "source_commit": "9ea482225bb232a0d2769720178c8acd74be5400",
+  "initial_models": [
+    {
+      "seed": 20261117,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "validation_case_macro_f1": 0.341818467050397,
+      "validation_case_macro_recall": 0.32780887470800407,
+      "checkpoint": "detector-20261117.pt",
+      "sha256": "2983685d495d07a96fcc5edcabdb3baaba041803cc9287ab9bc7f96403934254",
+      "parameter_count": 7537,
+      "training_selection_seconds": 351.4831026070169
+    },
+    {
+      "seed": 20261118,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 6
+      },
+      "validation_case_macro_f1": 0.3133084828571554,
+      "validation_case_macro_recall": 0.30576047959800196,
+      "checkpoint": "detector-20261118.pt",
+      "sha256": "85cf76b09b12cd4fc9d860cb5fddb7fe3a4ecbbe29f43d4bfe8daa86d5bd5253",
+      "parameter_count": 7537,
+      "training_selection_seconds": 350.66947412403533
+    },
+    {
+      "seed": 20261119,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 6
+      },
+      "validation_case_macro_f1": 0.31850299609720323,
+      "validation_case_macro_recall": 0.3085482001205776,
+      "checkpoint": "detector-20261119.pt",
+      "sha256": "efb401c657787eb407227f488b78b795ee1d5bad9d9731b6cd178d739db463ad",
+      "parameter_count": 7537,
+      "training_selection_seconds": 344.87128652399406
+    }
+  ],
+  "image_counts": {
+    "train": 696,
+    "validation": 227,
+    "test": 407
+  },
+  "architecture": "TinyUNet width4/16, GroupNorm groups=max(1,channels//4) before LeakyReLU.1; headbias−2.19",
+  "initialization": "From scratch same seed; primarywidth16 fixed before validation; width4 diagnostic ablation",
+  "loss": "existing maxGaussian sigma2radius6 and center focal loss",
+  "augmentation": "pairedrot90/flips and per-imageRGB[.9,1.1]",
+  "optimizer": "fresh Adam.001,24epochs,batch8; final optimizer and RNG retained",
+  "selection": "unchanged FP/FN and recall floors; all6lock before holdout",
+  "scope": "Repeatedly used Patherea validation; eligible primary only reused test407/BCData133, separate prospective DeepLIIF study",
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  }
+}
