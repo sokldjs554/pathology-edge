@@ -22,22 +22,24 @@ Preserve source/weights/run archives/learner files/demo; new run folder. Train69
 ### Task1: score fix and invariant evidence
 - [x] Add unsigned threshold/suppression and float32 cutoff regressions; observe7failed/26passed.
 - [x] Normalize validated scores before negation/comparison; combined42passed.
-- [ ] Compare old float64 saved retention with frozen implementation, preserve historical evidence hashes; commit and clean CI full suite.
+- [x] Compare old float64 saved retention with frozen implementation, preserve historical evidence hashes; commit and clean CI full suite.
 
 ### Task2: candidate localization module
 Files `src/pathology_edge/ki67_localization.py`, `tests/test_ki67_localization.py`.
 Interfaces reflected_crops(rgb,points,size=32), proxy_targets(points,gt,shape)->labels/offsets/nearest, transform_sample(crop,offset,k,flip_y,flip_x), LocalizationGate, predict_localized(rgb,points,metadata,model,normalizer)->scores/corrected_xy/offsets, decode_localized(points,scores,threshold,distance).
-- [ ] RED tests literal crop boundary pixels, positive<=12/negative>12 border/empty rules, geometric rotations/flips, norm bound and rounding, model updates and NaN/overflow.
-- [ ] Implement minimal helpers, native RGB/metadata scorer and safe integer-coordinate output. GREEN focused suite, commit.
+- [x] RED tests literal crop boundary pixels, positive<=12/negative>12 border/empty rules, geometric rotations/flips, norm bound and rounding, model updates and NaN/overflow.
+- [x] Implement minimal helpers, native RGB/metadata scorer and safe integer-coordinate output. GREEN focused suite, commit.
 
 ### Task3: protocol and actual three-seed run
 Files `src/pathology_edge/ki67_localization_experiment.py`, `scripts/run_ki67_localization.py`, `tests/test_ki67_localization_experiment.py`.
-- [ ] RED stage ordering/no eligible and case/GT-balanced sampling, hash tampering checks.
-- [ ] Implement frozen prepare/fit/evaluate; reused fixed helpers, compressed scores/corrected centers, separate diagnostics. Ensure training classes and evaluation GT never enter prediction.
-- [ ] Commit source before running, train3×12 and lock all seeds. Conditional reused holdout evaluation; no selection relaxation or search after failed result.
+- [x] RED stage ordering/no eligible and case/GT-balanced sampling, hash tampering checks.
+- [x] Implement frozen prepare/fit/evaluate; reused fixed helpers, compressed scores/corrected centers, separate diagnostics. Ensure training classes and evaluation GT never enter prediction.
+- [x] Commit source before running, train3×12 and lock all seeds. Conditional reused holdout evaluation; no selection relaxation or search after failed result.
 
 ### Task4: audit, review and delivery
 Files `scripts/audit_ki67_localization.py`, `scripts/export_ki67_localization_review.py`, focused audit tests; docs/results.
-- [ ] RED tampered-correction/config/eligibility tests; independent saved-output aggregation/selection and checkpoint replays.
-- [ ] Run audit and actual browser1440/390; preserve screenshots. Export explicit scope/offset-on/off and all seed outcomes.
+- [x] RED tampered-correction/config/eligibility tests; independent saved-output aggregation/selection and checkpoint replays.
+- [x] Run audit and actual browser1440/390; preserve screenshots. Export explicit scope/offset-on/off and all seed outcomes.
 - [ ] Focused tests, stored Dice audit, clean exact-commit full CI, independent final review and fixes if important. Push existing draft PR, archive/download checks, user review pending.
+
+Status: implementation, three-seed run,1512/681 audit,75 focused tests and1440/390 browser checks complete. Full eligibility0/3; original joint-only counts12/10/5. Final artifact review/CI/download confirmation tracked in experiment verification, not inferred from these checkboxes. User screen review remains pending.
