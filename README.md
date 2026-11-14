@@ -18,6 +18,8 @@
 
 [후보 위치 보정·정렬 오류 수정](docs/KI67_LOCALIZATION.md): unsigned 점수 정렬 오류를 수정하고 기존681건의 결과 불변을 확인했습니다. 새3seed 실험에서 FP·FN 동시 비악화 설정은12/10/5개 나왔지만 기존 재현율 하한까지 만족한 설정은0/3입니다. 기존 모델을 유지하며 테스트·BCData 새 추론은 실행하지 않았습니다. [새 화면 확인 순서](docs/STEP_90.md).
 
+[검출기 추가 학습 3seed](docs/KI67_CENTER_REFIT.md): 기존 가중치에서 새 Adam으로 24epoch씩 추가 학습했습니다. 검증 최고 F1은 세 seed 모두 상승했지만, 오검출·누락 및 재현율 조건을 함께 통과한 seed는 0/3입니다. 테스트·BCData 새 추론과 기본 모델 교체는 하지 않았습니다. [새 비교 화면 확인 순서](docs/STEP_91.md).
+
 [최신 통합 상태·U97](docs/HANDOFF_U97.md) · [Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
 
 추가 보정 실험에서는 기존 TNBC validation10장의 3개 seed 평균 전체 Dice가 **0.555994→0.576699**였지만, 고정한 사용자 모델 쌍의 외부 MoNuSeg14ROI 평균은 **0.551974→0.534943**으로 하락했습니다. 두 실험은 모델·평가 범위가 달라 합산하지 않습니다. 공개 데모의 기존 결과는 유지합니다.

@@ -1,0 +1,5 @@
+Patherea Breast-P1 v1.1: Patherea authors, Štepec et al.
+https://huggingface.co/datasets/ds2268/patherea
+https://doi.org/10.1016/j.media.2025.103868
+CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
+This research/education review adds predicted points and GT correspondence markers; no author endorsement.

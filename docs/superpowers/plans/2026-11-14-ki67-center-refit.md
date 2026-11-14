@@ -20,16 +20,19 @@ Same seed17/18/19;train696/val227;24additional epochs,Adam.001,batch8,2threads;G
 ### Task1: fixed runner and training
 Create src/pathology_edge/ki67_center_refit.py,scripts/run_ki67_center_refit.py,tests/test_ki67_center_refit.py.
 Interfaces prepare(prior,output),checked(output,selected=False),refit_optimizer(model),configuration_trials(samples,epoch),choose_refit(trials,baseline),fit(root),evaluate(root,external=False). Uses existing center target/loss/predictor,union retain/summarize/choose,JSON/hash/data helpers.
-- [ ] Tests first: optimizer retains literal pretrained weights, zero-epoch exclusion evenifbest, train/test rows rejected by validation grid, empty candidates, strict thresholds and source/protocol/selection hashes, noeligible without holdout loads, denominator includes3.
-- [ ] ObserveRED; implement; focusedGREEN. Save all peak arrays+offsets per epoch, final optimizer/RNG state, explicit skips and provenance. Commit before actual run.
-- [ ] Prepare/fit all3,lock,conditional internal/external stages. No result-based protocol changes.
+- [x] Tests first: optimizer retains literal pretrained weights, zero-epoch exclusion evenifbest, train/test rows rejected by validation grid, empty candidates, strict thresholds and source/protocol/selection hashes, noeligible without holdout loads, denominator includes3.
+- [x] ObserveRED; implement; focusedGREEN. Save all peak arrays+offsets per epoch, final optimizer/RNG state, explicit skips and provenance. Commit before actual run.
+- [x] Prepare/fit all3,lock,conditional internal/external stages. No result-based protocol changes.
 
 ### Task2: independent audit and review
 Create scripts/audit_ki67_center_refit.py,scripts/export_ki67_center_refit_review.py,tests/test_ki67_center_refit_audit.py.
 Interfaces audit(root)->report,export(root,review)->standaloneHTML; input saved refs/peaks, locked configs/checkpoints.
-- [ ] RED for mismatched epoch/offsets/native bounds and missing seed; implement independent selection/count replay and initial+chosen raw checkpoint verification. Eligible holdout gets GT/model/classifier replay.
-- [ ] Run actual audit2700trials and checkpoints; build same-coordinate A/B examples min/maxFP+FN perseed. Browser1440/390 counts, overlays,navigation,overflow; screenshots.
+- [x] RED for mismatched epoch/offsets/native bounds and missing seed; implement independent selection/count replay and initial+chosen raw checkpoint verification. Eligible holdout gets GT/model/classifier replay.
+- [x] Run actual audit2700trials and checkpoints; build same-coordinate A/B examples min/maxFP+FN perseed. Browser1440/390 counts, overlays,navigation,overflow; screenshots.
 
 ### Task3: delivery
-- [ ] Local relevant tests and stored Dice audit; clean full CI due local disk preconditions. Fresh final review of whole new range and any important fixes.
-- [ ] Preserve original/results,write truthful report/manifest; standaloneZIP and public downloadSHA; update existing draftPR. User new review pending,U104 unchanged. Record any unmet stability rather than claim completion.
+- [x] Local relevant tests and stored Dice audit; clean full CI due local disk preconditions. Fresh final review of whole new range and any important fixes.
+- [x] Preserve original/results and write truthful report, manifest and standalone ZIP. User new review pending; U104 unchanged. Selection0/3, performance stability unmet.
+- [ ] Publish evidence, verify public download SHA, and update existing draft PR. Publication verification is the final delivery step.
+
+Actual run: frozen source d28c812, code audit53a6c08,3×24epochs,2700 audited settings,1362 checkpoint-image replays,eligible0/3,holdout inference0. Highest-F1 B epochs19/23/24. Independent final code and artifact reviews: no Critical/Important findings. Browser6examples1440/390 passed; file:// blocked by managed browser, local HTTP with embedded assets passed. Source CI668 tests+Dice42/6+static checks.

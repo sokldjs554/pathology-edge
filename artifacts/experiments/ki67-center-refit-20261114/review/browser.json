@@ -1,0 +1,67 @@
+{
+  "all_passed": true,
+  "examples": 6,
+  "checks": [
+    {
+      "image": "case_0005_region_2_patch_8_O.png",
+      "epoch": 19,
+      "eligible": false,
+      "counts": true,
+      "same_image_without_overlay": true,
+      "toggle_counts_unchanged": true
+    },
+    {
+      "image": "case_0019_region_2_patch_4_O.png",
+      "epoch": 19,
+      "eligible": false,
+      "counts": true,
+      "same_image_without_overlay": true,
+      "toggle_counts_unchanged": true
+    },
+    {
+      "image": "case_0019_region_1_patch_4_O.png",
+      "epoch": 23,
+      "eligible": false,
+      "counts": true,
+      "same_image_without_overlay": true,
+      "toggle_counts_unchanged": true
+    },
+    {
+      "image": "case_0005_region_0_patch_20_O.png",
+      "epoch": 23,
+      "eligible": false,
+      "counts": true,
+      "same_image_without_overlay": true,
+      "toggle_counts_unchanged": true
+    },
+    {
+      "image": "case_0007_region_9_patch_14_O.png",
+      "epoch": 24,
+      "eligible": false,
+      "counts": true,
+      "same_image_without_overlay": true,
+      "toggle_counts_unchanged": true
+    },
+    {
+      "image": "case_0019_region_1_patch_0_O.png",
+      "epoch": 24,
+      "eligible": false,
+      "counts": true,
+      "same_image_without_overlay": true,
+      "toggle_counts_unchanged": true
+    }
+  ],
+  "summary_verified": true,
+  "epoch0_control_verified": true,
+  "navigation_passed": true,
+  "desktop": [
+    1440,
+    1000
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "body_overflow_mobile": false,
+  "errors": []
+}
