@@ -1,0 +1,30 @@
+{
+  "path": "artifacts/handoff/PathologyEdge-All-Progress-U106-20261115.zip",
+  "bytes": 97886928,
+  "sha256": "e8ab399d5920dcd717983c199226cd995db912f7d0393246ea69a6b1f7dfd009",
+  "members": 1754,
+  "source_commit": "fbc5f0d7e09f151c2790eca5e7463b41fdf279e7",
+  "tracked_files_included": 1724,
+  "tracked_files_linked_or_out_of_scope": 2295,
+  "user_code_files": 7,
+  "user_record_ids": 107,
+  "user_latest_confirmed_id": "U106",
+  "user_original_archives": [
+    {
+      "path": "artifacts/experiments/user-vit-refinement-20261112/evidence.zip",
+      "bytes": 20031212,
+      "sha256": "a9d7a597e21528cbb81e07e881ed9f55fd13e6ef5fdcb299991c265ee65d17d1",
+      "crc_ok": true,
+      "members": 77
+    },
+    {
+      "path": "artifacts/learning/step56-user-evidence/research-evidence.zip",
+      "bytes": 20070666,
+      "sha256": "136a3c0ebae3f32ee7970160700922179485b27fa40b6f07df791d4d965d3895",
+      "crc_ok": true,
+      "members": 113
+    }
+  ],
+  "new_training_or_inference_run": false,
+  "new_user_completion_claimed": false
+}

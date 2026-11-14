@@ -1,3 +1,18 @@
+# 최신 전체 진행 자료 — U106 / 2026-11-15 KST
+
+[PathologyEdge-All-Progress-U106-20261115.zip](PathologyEdge-All-Progress-U106-20261115.zip) — **1,754개 파일 · 97,886,928 bytes (약97.9MB)**. 초기 구현부터 마지막 사전학습·DeepLIIF 평가까지 23개 과정의 문서·소스·실험·감사를 통합했습니다. 압축을 푼 뒤 `START_HERE.html`을 여세요.
+
+- 본인 작성 7개 코드와 테스트 파일, U00–U106 원문 기록, 이후 수정 해석 답변·마지막 시도 요청을 포함합니다. 예정·보류는 완료로 변경하지 않았습니다.
+- 본인 C++·CNN/ViT 연구 원본 ZIP과 보정 head 원본 ZIP 두 개도 안에 포함했습니다.
+- 대용량 모델·예측·WSI 타일·추가 화면은 `FILE_INVENTORY.json`에 포함 여부·고정 URL·SHA256을 기록하고 원본 증거는 `DOWNLOADS.html`에서 연결합니다. BCData 원영상/HDF5/개별 세포 좌표·임상 자료는 포함하지 않습니다.
+- 모든 실험의 실행 완료와 성능 조건 통과를 구분합니다. 마지막 내부 채택0/3, 재사용 내부 test1/3, 재사용 BCData3/3, 새 DeepLIIF1/3이며 임상·전체 WSI 정답 검증은 미실시입니다.
+- 소스 기준 `fbc5f0d7e09f151c2790eca5e7463b41fdf279e7`. SHA256: `e8ab399d5920dcd717983c199226cd995db912f7d0393246ea69a6b1f7dfd009`.
+- [포장 검사](all-progress-u106-20261115/verification.json) · [브라우저 검사](all-progress-u106-20261115/browser.json). 이번 작업은 자료 통합이며 사용자 새 실행·새 학습·추론으로 기록하지 않았습니다.
+
+## 아래는 이전 발행 당시의 기록
+
+이하 ‘현재/최신’이라는 문구와 테스트 수는 당시 상태입니다. 최신 통합본은 맨 위 파일을 사용합니다.
+
 # Cowork 전달 파일
 
 **2026-11-15 KST 추가 자료:** [마지막 사전학습·외부 평가 검토 ZIP](PathologyEdge-FinalTransfer-20261115.zip), 4,610,073 bytes. [결과·실행 방법](../../docs/KI67_FINAL_TRANSFER.md) · [전체 증거·SHA256](../experiments/ki67-final-transfer-20261115/). 기존 Cowork 통합 ZIP은 발행 당시 보관본이며, 이번 추가 실험과 최신 U106 확인 범위는 연결된 보고서를 함께 읽습니다. 이번 자동 학습·검산·화면 검사를 사용자 직접 수행으로 추가하지 않았습니다.
