@@ -6,9 +6,27 @@
 [실제 WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html) · [정답 경계 실험](https://pathology-edge-lab.ykh13571.chatgpt.site/) · [IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html) · [Docker 재현·확인 완료](docs/STEP_50.md) · [실행 안내](docs/RUNBOOK.md) · [기여 기록](docs/CONTRIBUTIONS.md)
 
 연구·교육용입니다. 에이비스와 무관한 독립 프로젝트이며 실제 진단·치료 결정에 사용할 수 없습니다.
-**WSI 탐색, 제한된 ROI의 예측 비교, 별도 IHC의 정답 중심점 조건 분류를 구분합니다. 자동 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
+**공개 데모는 WSI 탐색, 제한된 ROI의 예측 비교, IHC 정답 중심점 조건 분류를 구분합니다. 별도 연구 코드에서는 자동 IHC 패치 검출·분류를 실험했으며, 임상 Ki-67 검사·WSI 전체 모델 처리·임상 검증은 수행하지 않았습니다.**
 
-[Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
+[마지막 사전학습·외부 평가](docs/KI67_FINAL_TRANSFER.md): 실제 ImageNet 가중치/무작위 특징 × 세 seed 비교와 자동 분석 평가를 완료했습니다. 내부 채택 0/3, 재사용 내부 test 종합 기준 1/3, BCData 재평가 3/3, 새 DeepLIIF 597장 기준 1/3입니다. [검토 ZIP](artifacts/handoff/PathologyEdge-FinalTransfer-20261115.zip)에서 실제 결과를 볼 수 있습니다. 기존 데모를 유지하며 이번 고정 시도로 성능 보완을 마무리합니다.
+
+[자동 Ki-67 패치 실험](docs/AUTO_KI67_EXPERIMENT.md) · [후보 제거 전후·외부 실패 결과](docs/KI67_CANDIDATE_FILTER.md): 후보 필터로 내부 검출 F1은0.0982→0.1260으로 올랐지만 BCData133장에서는 네 방식의 F1이 모두 하락했습니다. 필터는 연구 비교 기능이며 공개 데모 기본 분석에 적용하지 않았습니다. 기존 평가 자료의 재평가로, 새 미노출 외부 검증이 아닙니다.
+
+[학습한 세포 중심 검출](docs/KI67_LEARNED_CENTERS.md): 정답 좌표 없이 새 중심을 예측하는 소형 검출기를3seed로 학습했습니다. 내부407장 검출 F1은0.0982→0.3172~0.3553, BCData133장 종양2-class F1도12개 조합 모두 상승했습니다. 다만 내부 재현율은 하락했고 양성률 오차는 일부 악화됐습니다. 기존 자료 재평가이며 새 미노출 외부·임상 검증이 아닙니다. 모델·한 장 추론 명령·실제 전후 화면을 별도 자료로 제공합니다.
+
+[모델·전후 화면 ZIP 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/8ba7d50e37579dd2e2782d8fd40549375d024896/artifacts/handoff/PathologyEdge-LearnedCenters-20261113.zip) · [첫 화면 확인 순서](docs/STEP_80.md).113파일·5.47MB, 공개 다운로드와 전체 파일 해시를 확인했습니다.
+
+[검출 누락 원인·재현율 조건 비교](docs/KI67_RECALL_DIAGNOSIS.md): 검증227장의 누락을 피크 없음·점수 미달·거리 억제·대응 경쟁으로 분리했습니다. 고정3seed 중 하나만 재현율 조건을 만족했습니다. 같은 모델의 설정 비교에서 내부407장 재현율은0.3943→0.6060으로 올랐지만 F1은0.3553→0.1924로 낮아졌습니다. 내부·BCData의 네 분류기 양성률 MAE는 모두 줄었으나 세포 F1은 모두 하락했습니다. 기존 기본값을 유지하며 [비교 화면 ZIP](artifacts/handoff/PathologyEdge-RecallReview-20261113.zip)과 [첫 확인 순서](docs/STEP_82.md)를 별도로 제공합니다.
+
+[후보 위치 보정·정렬 오류 수정](docs/KI67_LOCALIZATION.md): unsigned 점수 정렬 오류를 수정하고 기존681건의 결과 불변을 확인했습니다. 새3seed 실험에서 FP·FN 동시 비악화 설정은12/10/5개 나왔지만 기존 재현율 하한까지 만족한 설정은0/3입니다. 기존 모델을 유지하며 테스트·BCData 새 추론은 실행하지 않았습니다. [새 화면 확인 순서](docs/STEP_90.md).
+
+[검출기 추가 학습 3seed](docs/KI67_CENTER_REFIT.md): 기존 가중치에서 새 Adam으로 24epoch씩 추가 학습했습니다. 검증 최고 F1은 세 seed 모두 상승했지만, 오검출·누락 및 재현율 조건을 함께 통과한 seed는 0/3입니다. 테스트·BCData 새 추론과 기본 모델 교체는 하지 않았습니다. [새 비교 화면 확인 순서](docs/STEP_91.md).
+
+[정규화 검출기 후속 비교](docs/KI67_NORMALIZED.md): 두 너비 × 세 seed를 처음부터 학습했습니다. 주 모델의 검증 F1·재현율은 상승했지만 FP가 늘고 양성 종양 위치 재현율 하한에 미달하여 채택은 0/3입니다. 후속 자동 Ki-67·외부 평가 코드는 준비했으며, 적격 모델이 없어 새 모델의 해당 추론은 실행하지 않았습니다. [실제 사례 확인](docs/STEP_92.md).
+
+[학습 표적·피크 정리 후속 진단](docs/KI67_SUPERVISION.md): 학습120장만으로 두 손실 대안과 지도 평활화를 비교했습니다. 미리 정한 진행 기준을 통과하지 못해 새3seed 본 학습·외부 추론과 모델 교체는 진행하지 않았습니다. 실패 근거와 검산 결과를 보존했습니다.
+
+[최신 통합 상태·U97](docs/HANDOFF_U97.md) · [Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
 
 추가 보정 실험에서는 기존 TNBC validation10장의 3개 seed 평균 전체 Dice가 **0.555994→0.576699**였지만, 고정한 사용자 모델 쌍의 외부 MoNuSeg14ROI 평균은 **0.551974→0.534943**으로 하락했습니다. 두 실험은 모델·평가 범위가 달라 합산하지 않습니다. 공개 데모의 기존 결과는 유지합니다.
 
@@ -149,7 +167,7 @@ std::thread로 분담합니다. Python 배열 복사 구현과 동일한 출력�
 | Ubuntu | Ubuntu 24.04 Docker 안의 테스트·실제 이미지 추론 |
 | Docker | Ubuntu 기반 Dockerfile 실제 빌드·실행, CA proxy 대응은 secret 사용 |
 | Git / GitHub / CI | 실행 코드·실험 파일·테스트 게시, `.github/workflows/ci.yml` |
-| classification / detection / segmentation | TNBC segmentation 평가, WSI ROI 탐색적 추론, 별도 IHC GT-center 4class 분류. detection은 기존 CC centroid proxy이며 자동 IHC 검출 평가 없음 |
+| classification / detection / segmentation | TNBC segmentation 평가, WSI ROI 탐색적 추론, IHC GT-center 분류와 별도 자동 IHC 패치 검출·분류·후보 제거 실험. 외부 일반화·임상 성능 입증은 미완료 |
 
 회사 제품은 종양 세포 기반 Ki-67 정량화를 다룹니다. 이 프로젝트는 그 전제인 세포 수준 영상 처리와
 재현·오류 추적 역량을 보여줍니다. 제품과 같은 성능·임상 범위를 갖는다고 설명하지 않습니다.
@@ -195,7 +213,7 @@ python -m http.server 8000 --directory dist --bind 127.0.0.1
 
 ## 남은 한계
 
-WSI 전체 모델 처리, 자동 IHC 검출·분할·Ki67 임상 지수, 사전학습 모델 비교, 공개 경계 비교의 다중 seed·신뢰구간,
+WSI 전체 모델 처리, 자동 IHC 핵 윤곽 분할·Ki67 임상 지수 검증, 사전학습 모델 비교, 공개 경계 비교의 다중 seed·신뢰구간,
 병리 전문가·임상 검증은 미수행입니다. 외부 ROI 평가는 후속 MoNuSeg·PanopTILs·BCData 보고서에서 범위를 한정해 수행했습니다. 별도 BCE-only/soft Dice 손실 비교는 3개 seed·6회 학습을 완료했으며, 같은 validation에서 선택한 점수의 반복 결과입니다. CMU WSI에는 핵 정답이 없고, 공개 IHC 데모는 단일 기관·제공 중심점 조건입니다. 전체 WSI JPEG 타일을 포함해 저장소 용량이 증가했습니다. 사용자 좌표·메타데이터 연결 함수는 실제 ROI 읽기·패치 영역 생성 경로에서 검증했습니다. 원래 공개 추론 exporter는 유지하며 일반 배율 모델 추론·중심점 보정은 별도 미수행입니다.
 단순 핵 foreground만으로 임상 세포 수를 정할 수 없고, 두 테스트 그룹의 성능 차이가 큽니다.
 현재 test를 보며 모델을 다시 선택하면 새 평가 설계가 필요합니다.

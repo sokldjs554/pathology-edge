@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-11-14T16:06:06.336032+00:00",
+  "source_commit": "83d24e9c992cbe7df1433d19a4baf5b11d3d0455",
+  "reason": "One reference pixel253,0,2 in Lung_28000_42000_1_3.png; canonical red differs by2 levels; official positive-channel rule agrees",
+  "original_external_protocol_sha256": "0af323c63bf782598e4f601a67150a8dedfda6792997bd1c17d552eacf6f50b0",
+  "max_channel_tolerance": 2,
+  "image_count": 597,
+  "model_inference_images_at_amendment": 0,
+  "strict_prefix_count": 409,
+  "strict_prefix_sha256": "d3d29b2990f09afaea44efb103959d5a6095d942bf2d49dcf097c0a21d41accf",
+  "affected_source_sha256": "9a59700b74584ddada9c403b796c7784249ab1c927c3413a237a114bb40623c6",
+  "official_source_url": "https://github.com/nadeemlab/DeepLIIF/blob/f68eb3dfab461f6bde0f269dc9824d54e7ec005f/deepliif/postprocessing.py",
+  "official_source_sha256": "a760a9bb63e40bab43a98a59113df7396fdfccf6312b9ff94f7a2329b64330ab",
+  "official_changed_pixel_labels_equal": true,
+  "rule": "Unique nearest of black/red/blue/green under max channel difference<=2; reject all larger deviations; log every changed color/pixel; no RGB modification, no member exclusion",
+  "normalization": {
+    "max_channel_tolerance": 2,
+    "changed_pixels": 1,
+    "colors": [
+      {
+        "from": [
+          253,
+          0,
+          2
+        ],
+        "to": [
+          255,
+          0,
+          0
+        ],
+        "pixels": 1
+      }
+    ]
+  },
+  "changed_yx": [
+    [
+      25,
+      296
+    ]
+  ],
+  "scope": "Data-format amendment before any external model inference; original protocol retained; seeds/models/thresholds/matching unchanged",
+  "source_hashes": {
+    "src/pathology_edge/ki67_transfer_reference.py": "8e9ac35f8f6d07060640592fe04c90c20299c761b5338c6f13c639563f7ab6f4",
+    "src/pathology_edge/ki67_transfer_evaluation.py": "778a44ab84b212ba1487fbd59be2fa8dffdb5439e79d7e881457081929ba230e",
+    "src/pathology_edge/ki67_transfer_download.py": "86159e404fe75e8d0814673f786a89035c42601a8e385afeb63d16a9e9af3618"
+  }
+}

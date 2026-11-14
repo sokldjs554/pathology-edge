@@ -1,0 +1,11 @@
+{
+  "step": 89,
+  "recorded_date": "2026-11-13",
+  "status": "pending_user_review",
+  "planned_scope": "First union-gate review example: four same-coordinate panels and overlay off/on",
+  "user_confirmation_received": false,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false
+}

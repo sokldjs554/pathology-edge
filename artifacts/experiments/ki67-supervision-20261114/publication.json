@@ -1,0 +1,23 @@
+{
+  "artifact_commit": "5a245b7b5cc362d71c94a74bea0a906e23db081e",
+  "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/5a245b7b5cc362d71c94a74bea0a906e23db081e/artifacts/experiments/ki67-supervision-20261114/evidence.zip",
+  "checked_utc": "2026-11-14T14:58:08.357701+00:00",
+  "bytes": 2063627,
+  "sha256": "ed038cef90a0349e735023725ee2674262a8308472718ac2107b09eb33b599d3",
+  "members": 87,
+  "crc_and_all_member_hashes_verified": true,
+  "implementation_ci": {
+    "head_sha": "94819f87811df7ad126ecbb1069b83111d11ddb7",
+    "run": 43607238036,
+    "job": 132484407135,
+    "conclusion": "success",
+    "tests": 750,
+    "test_seconds": 35.4,
+    "dice_values": 42,
+    "dice_means": 6,
+    "static_demo": true,
+    "javascript_checks": true
+  },
+  "source_unchanged_since_tested_commit": true,
+  "scope": "Evidence publication only; no new inference or user verification"
+}

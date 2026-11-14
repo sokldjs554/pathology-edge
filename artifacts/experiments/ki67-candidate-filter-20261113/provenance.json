@@ -1,0 +1,51 @@
+{
+  "source_commit": "a1ec2b9d2fe6c33781dcf3750dc61eb7f92eaff1",
+  "serialization": {
+    "patherea-results.json": {
+      "original_run_sha256": "ff824d3828b685834a6b76dcec43670fbd46ef34514811b66d358b81e5017ba8",
+      "published_sha256": "bff5e17c9501d668c49f8360d57746ec092f88221c6ac405440fefbdd996e814",
+      "json_values_unchanged": true
+    },
+    "bcdata-results.json": {
+      "original_run_sha256": "020a225b3aab824ae3cf3c2be6dbcc729175b0a6273d8fda146534be05c8bfbc",
+      "published_sha256": "2ba531a536c18d8ff35197872b54e31b77a4a15ddf60e62301996c52000fe4a0",
+      "json_values_unchanged": true
+    }
+  },
+  "user_sources": {
+    "src/pathology_edge/learner_coordinates.py": {
+      "unchanged": true,
+      "sha256": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149"
+    },
+    "src/pathology_edge/learner_metrics.py": {
+      "unchanged": true,
+      "sha256": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774"
+    },
+    "src/pathology_edge/learner_split.py": {
+      "unchanged": true,
+      "sha256": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f"
+    },
+    "src/pathology_edge/learner_losses.py": {
+      "unchanged": true,
+      "sha256": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271"
+    },
+    "src/pathology_edge/learner_wsi.py": {
+      "unchanged": true,
+      "sha256": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6"
+    },
+    "src/pathology_edge/learner_refinement.py": {
+      "unchanged": true,
+      "sha256": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa"
+    },
+    "tests/learner/test_merge_counterexample.py": {
+      "unchanged": true,
+      "sha256": "2d2003bd57c2b18fd5e511989ef6854ecb03353bf1e9ef43e5a102dc0609b34c"
+    }
+  },
+  "inference_scope": "New detector replay/gate inference on407+133images; historical classifiers reused; one image four-classifier replay.",
+  "user_review": "pending; U87-U91 previously completed only",
+  "raw_bcdata_images_hdf5_individual_coordinates_included": false,
+  "fresh_external_validation": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false
+}

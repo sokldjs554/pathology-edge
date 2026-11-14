@@ -1,0 +1,147 @@
+{
+  "training_source_commit": "9ea482225bb232a0d2769720178c8acd74be5400",
+  "implementation_commit": "e44fc02416a04c641fc153a927c1a9c2333d0064",
+  "ci_run": 43585321383,
+  "ci_job": 132418453248,
+  "ci_tests": 715,
+  "ci_dice_values": 42,
+  "ci_dice_means": 6,
+  "ci_static_demo": true,
+  "final_review": {
+    "reviewer": "normalized_final_review",
+    "source_head": "e44fc02416a04c641fc153a927c1a9c2333d0064",
+    "critical": [],
+    "important": [],
+    "minor_requiring_change": [],
+    "focused_tests": 47,
+    "evidence_checked": [
+      "six selection/audit records",
+      "input/source/checkpoint/selection hashes",
+      "5184 configuration checks",
+      "2724 checkpoint-image replays",
+      "zero-inference markers",
+      "browser HTML hash",
+      "desktop and mobile captures",
+      "report and pending user review"
+    ],
+    "verdict": "Ready for audited negative-result delivery after publication checks; no model adoption or completion of performance goals 1-3",
+    "declined_to_judge": [
+      "unexecuted classifier/internal/BCData/DeepLIIF performance",
+      "full DeepLIIF execution or second raw-model replay",
+      "publication ZIP/download and final CI pending at review",
+      "file URL operation",
+      "user acceptance"
+    ],
+    "post_review_clarification": "Report opening explicitly says downstream evaluations were not executed; all B models are unadopted diagnostic models."
+  },
+  "local_focused_tests": 47,
+  "independent_reviewer_focused_tests": 47,
+  "local_full_suite_run": false,
+  "local_full_suite_reason": "Disk below existing reproduction-test precondition",
+  "browser": {
+    "all_checks_passed": true,
+    "examples": [
+      {
+        "example": 0,
+        "image": "case_0019_region_1_patch_4_O.png",
+        "counts": true,
+        "overlay_only": true
+      },
+      {
+        "example": 1,
+        "image": "case_0019_region_3_patch_3_O.png",
+        "counts": true,
+        "overlay_only": true
+      },
+      {
+        "example": 2,
+        "image": "case_0019_region_0_patch_4_O.png",
+        "counts": true,
+        "overlay_only": true
+      },
+      {
+        "example": 3,
+        "image": "case_0007_region_1_patch_6_O.png",
+        "counts": true,
+        "overlay_only": true
+      },
+      {
+        "example": 4,
+        "image": "case_0007_region_2_patch_2_O.png",
+        "counts": true,
+        "overlay_only": true
+      },
+      {
+        "example": 5,
+        "image": "case_0003_region_3_patch_9_O.png",
+        "counts": true,
+        "overlay_only": true
+      }
+    ],
+    "desktop": [
+      1440,
+      1050
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "console_errors": [],
+    "external_requests": [],
+    "same_raw_frames": true,
+    "mobile_table_scroll": true,
+    "static_saved_results": true,
+    "user_review_confirmed": false,
+    "html_sha256": "d87f717656f8a1f35c3445670288de7b0d5f23cfe2061ff9372ed72a408a4745"
+  },
+  "source_preservation": {
+    "base_commit": "a0e1c5fc68b52076682fa56ba918355b168a55e8",
+    "all_unchanged": true,
+    "files": [
+      {
+        "path": "src/pathology_edge/learner_coordinates.py",
+        "sha256": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+        "unchanged": true
+      },
+      {
+        "path": "src/pathology_edge/learner_losses.py",
+        "sha256": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+        "unchanged": true
+      },
+      {
+        "path": "src/pathology_edge/learner_metrics.py",
+        "sha256": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+        "unchanged": true
+      },
+      {
+        "path": "src/pathology_edge/learner_refinement.py",
+        "sha256": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+        "unchanged": true
+      },
+      {
+        "path": "src/pathology_edge/learner_split.py",
+        "sha256": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+        "unchanged": true
+      },
+      {
+        "path": "src/pathology_edge/learner_wsi.py",
+        "sha256": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+        "unchanged": true
+      },
+      {
+        "path": "tests/learner/test_merge_counterexample.py",
+        "sha256": "2d2003bd57c2b18fd5e511989ef6854ecb03353bf1e9ef43e5a102dc0609b34c",
+        "unchanged": true
+      }
+    ]
+  },
+  "user_new_training_confirmed": false,
+  "user_new_tests_confirmed": false,
+  "user_new_view_confirmed": false,
+  "previous_user_receipt": "U105 remains previous STEP91 first-example overlay/count invariance only",
+  "main_merged": false,
+  "default_demo_changed": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "final_publication_checks": "Recorded separately after publishing this snapshot"
+}

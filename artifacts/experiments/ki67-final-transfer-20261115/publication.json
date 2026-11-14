@@ -1,0 +1,69 @@
+{
+  "artifact_commit": "6153ddb64b672f0842810ef4b66a3b232169db4d",
+  "checked_utc": "2026-11-14T17:33:01.032840+00:00",
+  "all_public_downloads_verified": true,
+  "archives": [
+    {
+      "file": "artifacts/experiments/ki67-final-transfer-20261115/evidence-primary.zip",
+      "bytes": 66975913,
+      "sha256": "21e976f5abce29263df4cda6a9bc7a748a350b9d14ab510d0819d2464573af82",
+      "members": 355,
+      "crc_and_members_verified": true,
+      "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/6153ddb64b672f0842810ef4b66a3b232169db4d/artifacts/experiments/ki67-final-transfer-20261115/evidence-primary.zip",
+      "http_status": 200,
+      "authorization_header_sent": false,
+      "all_public_member_hashes_verified": true
+    },
+    {
+      "file": "artifacts/experiments/ki67-final-transfer-20261115/evidence-controls.zip",
+      "bytes": 42524355,
+      "sha256": "bbe562d2f86fe46c8fcd451090ec7599cec627420945aab5674fb99874b663e2",
+      "members": 47,
+      "crc_and_members_verified": true,
+      "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/6153ddb64b672f0842810ef4b66a3b232169db4d/artifacts/experiments/ki67-final-transfer-20261115/evidence-controls.zip",
+      "http_status": 200,
+      "authorization_header_sent": false,
+      "all_public_member_hashes_verified": true
+    },
+    {
+      "file": "artifacts/handoff/PathologyEdge-FinalTransfer-20261115.zip",
+      "bytes": 4610073,
+      "sha256": "bf766beaf008baaca58e5292ab322263e7e9ace22a641aa99db0d10e60d81138",
+      "members": 12,
+      "crc_and_members_verified": true,
+      "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/6153ddb64b672f0842810ef4b66a3b232169db4d/artifacts/handoff/PathologyEdge-FinalTransfer-20261115.zip",
+      "http_status": 200,
+      "authorization_header_sent": false,
+      "all_public_member_hashes_verified": true
+    }
+  ],
+  "source_ci": {
+    "commit": "5b9d3b6cd1fdccb57c0c0752780f165fd5f59700",
+    "run_id": 43620948655,
+    "job_id": 132526274626,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43620948655",
+    "conclusion": "success",
+    "verification_lines": [
+      "2026-11-14T17:26:15.9507054Z 799 passed in 25.45s",
+      "2026-11-14T17:26:16.7043559Z 42/42 Dice values and 6/6 image means match."
+    ],
+    "local_new_tests": 49,
+    "local_seconds": 5.45,
+    "local_test_commit": "83d24e9c992cbe7df1433d19a4baf5b11d3d0455",
+    "scope": "Final implementation/report source CI; actual browser evidence is recorded separately."
+  },
+  "live_demo_changed": false,
+  "main_merged": false,
+  "user_new_execution_claimed": false,
+  "publication_ci": {
+    "commit": "6153ddb64b672f0842810ef4b66a3b232169db4d",
+    "run_id": 43621560876,
+    "job_id": 132528172594,
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43621560876",
+    "conclusion": "success",
+    "verification_lines": [
+      "2026-11-14T17:33:00.6495567Z 799 passed in 23.79s",
+      "2026-11-14T17:33:01.8797241Z 42/42 Dice values and 6/6 image means match."
+    ]
+  }
+}

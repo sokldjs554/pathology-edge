@@ -1,0 +1,5 @@
+Patherea Breast-P1 v1.1 images and point annotations: Patherea authors, Štepec et al.
+Dataset: https://huggingface.co/datasets/ds2268/patherea
+Paper: https://doi.org/10.1016/j.media.2025.103868
+Data license: CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
+Research/education, noncommercial use. This review adds predicted points, correspondence markers and displacement arrows; no endorsement by the dataset authors.

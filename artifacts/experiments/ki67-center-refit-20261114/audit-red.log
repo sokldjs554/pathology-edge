@@ -1,0 +1,152 @@
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+___ test_peak_offsets_accept_empty_image_but_reject_missing_or_nonmonotonic ____
+
+    def test_peak_offsets_accept_empty_image_but_reject_missing_or_nonmonotonic():
+>       a=auditor();p=np.array([[1,2],[3,4]]);s=np.array([.2,.1],dtype=np.float32)
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+_________ test_peak_coordinates_reject_outside_or_noninteger[points0] __________
+
+points = array([[8, 2]])
+
+    @pytest.mark.parametrize('points', [np.array([[8,2]]),np.array([[-1,2]]),np.array([[1.2,2]]),np.array([[np.nan,2]])])
+    def test_peak_coordinates_reject_outside_or_noninteger(points):
+>       a=auditor()
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+_________ test_peak_coordinates_reject_outside_or_noninteger[points1] __________
+
+points = array([[-1,  2]])
+
+    @pytest.mark.parametrize('points', [np.array([[8,2]]),np.array([[-1,2]]),np.array([[1.2,2]]),np.array([[np.nan,2]])])
+    def test_peak_coordinates_reject_outside_or_noninteger(points):
+>       a=auditor()
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+_________ test_peak_coordinates_reject_outside_or_noninteger[points2] __________
+
+points = array([[1.2, 2. ]])
+
+    @pytest.mark.parametrize('points', [np.array([[8,2]]),np.array([[-1,2]]),np.array([[1.2,2]]),np.array([[np.nan,2]])])
+    def test_peak_coordinates_reject_outside_or_noninteger(points):
+>       a=auditor()
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+_________ test_peak_coordinates_reject_outside_or_noninteger[points3] __________
+
+points = array([[nan,  2.]])
+
+    @pytest.mark.parametrize('points', [np.array([[8,2]]),np.array([[-1,2]]),np.array([[1.2,2]]),np.array([[np.nan,2]])])
+    def test_peak_coordinates_reject_outside_or_noninteger(points):
+>       a=auditor()
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+___________ test_peak_scores_and_duplicate_coordinates_are_rejected ____________
+
+    def test_peak_scores_and_duplicate_coordinates_are_rejected():
+>       a=auditor()
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+_______________ test_reference_row_binds_gt_classes_and_case_id ________________
+
+    def test_reference_row_binds_gt_classes_and_case_id():
+>       a=auditor();row=dict(image='a',case_id='case1',gt_points=[[2,3]],gt_classes=[0]);metadata=dict(image='a',case_id='case1')
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+_____________ test_audit_excludes_epoch_zero_from_eligible_choices _____________
+
+    def test_audit_excludes_epoch_zero_from_eligible_choices():
+>       a=auditor();base=dict(localization=dict(fp=10,fn=10),cases={'a':dict(recall=.5)})
+          ^^^^^^^^^
+
+tests/test_ki67_center_refit_audit.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def auditor():
+        path=Path(__file__).resolve().parents[1]/'scripts/audit_ki67_center_refit.py'
+>       if not path.exists():pytest.fail('refit auditor is missing')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: refit auditor is missing
+
+tests/test_ki67_center_refit_audit.py:9: Failed
+=========================== short test summary info ============================
+FAILED tests/test_ki67_center_refit_audit.py::test_peak_offsets_accept_empty_image_but_reject_missing_or_nonmonotonic
+FAILED tests/test_ki67_center_refit_audit.py::test_peak_coordinates_reject_outside_or_noninteger[points0]
+FAILED tests/test_ki67_center_refit_audit.py::test_peak_coordinates_reject_outside_or_noninteger[points1]
+FAILED tests/test_ki67_center_refit_audit.py::test_peak_coordinates_reject_outside_or_noninteger[points2]
+FAILED tests/test_ki67_center_refit_audit.py::test_peak_coordinates_reject_outside_or_noninteger[points3]
+FAILED tests/test_ki67_center_refit_audit.py::test_peak_scores_and_duplicate_coordinates_are_rejected
+FAILED tests/test_ki67_center_refit_audit.py::test_reference_row_binds_gt_classes_and_case_id
+FAILED tests/test_ki67_center_refit_audit.py::test_audit_excludes_epoch_zero_from_eligible_choices
+8 failed in 0.10s

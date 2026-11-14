@@ -1,0 +1,85 @@
+{
+  "html_sha256": "17db65dcbe71c9b2acb15c01a7076c7fd855b89306cbed90f4a2e2aff570da18",
+  "examples": [
+    {
+      "image": "case_0007_region_9_patch_1_O.png",
+      "case_id": "case_0007",
+      "delta_errors": -9,
+      "seed": 20261117,
+      "epoch": 4,
+      "config": {
+        "threshold": 0.8,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "selection_reason": "오류 합 최소 변화"
+    },
+    {
+      "image": "case_0019_region_0_patch_16_O.png",
+      "case_id": "case_0019",
+      "delta_errors": 12,
+      "seed": 20261117,
+      "epoch": 4,
+      "config": {
+        "threshold": 0.8,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "selection_reason": "오류 합 최대 변화"
+    },
+    {
+      "image": "case_0007_region_2_patch_4_O.png",
+      "case_id": "case_0007",
+      "delta_errors": -9,
+      "seed": 20261118,
+      "epoch": 9,
+      "config": {
+        "threshold": 0.7,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "selection_reason": "오류 합 최소 변화"
+    },
+    {
+      "image": "case_0005_region_0_patch_20_O.png",
+      "case_id": "case_0005",
+      "delta_errors": 27,
+      "seed": 20261118,
+      "epoch": 9,
+      "config": {
+        "threshold": 0.7,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "selection_reason": "오류 합 최대 변화"
+    },
+    {
+      "image": "case_0007_region_8_patch_1_O.png",
+      "case_id": "case_0007",
+      "delta_errors": -7,
+      "seed": 20261119,
+      "epoch": 9,
+      "config": {
+        "threshold": 0.7,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "selection_reason": "오류 합 최소 변화"
+    },
+    {
+      "image": "case_0005_region_1_patch_13_O.png",
+      "case_id": "case_0005",
+      "delta_errors": 24,
+      "seed": 20261119,
+      "epoch": 9,
+      "config": {
+        "threshold": 0.7,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "selection_reason": "오류 합 최대 변화"
+    }
+  ],
+  "selection_lock_sha256": "b29b3b6af1e07fa94611b7dd1b89390644900cea2da88bfafc448a5263546bd1",
+  "source_commit": "f16a726e59279c1ce1e19f764a52c2487087f6a6"
+}

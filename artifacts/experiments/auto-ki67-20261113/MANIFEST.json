@@ -1,0 +1,201 @@
+{
+  "files": [
+    {
+      "path": "COWORK_READ_FIRST.txt",
+      "bytes": 1417,
+      "sha256": "e4f9bc3e6f54729e8f6acc3dd39351e0e0335e626565c570dc013068004f9e03"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5305,
+      "sha256": "a88230ee2938ff21aed0d0a4676049e5b435a493ff3bd95c92dda72b6802e16d"
+    },
+    {
+      "path": "START_HERE.txt",
+      "bytes": 2289,
+      "sha256": "17ed1c8644ae75d8bd1101121806ada69be5998dcacf536023cdf4117f733d4d"
+    },
+    {
+      "path": "browser-check.json",
+      "bytes": 2330,
+      "sha256": "9a61b60b68b6c9cd801e57866df07878ac793e4ee1b43188b491669d45a45dc2"
+    },
+    {
+      "path": "browser-check.mjs",
+      "bytes": 4181,
+      "sha256": "1d0eb5275e795678c3f9f0e9bcd2d4d40157889a6405ccc0d32cd91bae1235b8"
+    },
+    {
+      "path": "ci-summary.txt",
+      "bytes": 237,
+      "sha256": "e0fc99a1c22390b598fe11d2f991b667204b92b69a91263e8faa95f9b3bd96a0"
+    },
+    {
+      "path": "cnn-20261113.pt",
+      "bytes": 294557,
+      "sha256": "f4084b82ef75ea0be9a002f2628153845ad29b79ac92da467d1c1b347f3c092e"
+    },
+    {
+      "path": "cnn-20261114.pt",
+      "bytes": 294557,
+      "sha256": "cbaa25d792bbcdc2f44388209a3dfa9d53b9c4bbbf05c660f74a1ef8fedb1dd2"
+    },
+    {
+      "path": "cnn-20261115.pt",
+      "bytes": 294557,
+      "sha256": "497ad1744eb07d3af7b91f3352163a60438ef5c2d7d1c3d9a8d98fa327589acc"
+    },
+    {
+      "path": "desktop.png",
+      "bytes": 635072,
+      "sha256": "5d2800b79be2d74311ae46c514cd43610a452d081bfaef2c48ce2de890ea329a"
+    },
+    {
+      "path": "detector-selection.json",
+      "bytes": 1334,
+      "sha256": "0f3f8f0de0212bc3a5ca4c407a4245b3030095b46d12f1d1c172e9afac17b05d"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 591,
+      "sha256": "f9ff61d0755c3033756ba912d49800b60baf7b295115055e0109ab8c60bd6bf7"
+    },
+    {
+      "path": "evaluation-started.json",
+      "bytes": 151,
+      "sha256": "ccb263430653791a4ccbd4fe5c58e7a48ca61094a857f57fc660561eac05c3ab"
+    },
+    {
+      "path": "external/entries.json",
+      "bytes": 76607,
+      "sha256": "f5830b7125a0f395eaccacb8bb11bf73cd9d22cf327524fa51f7c01cfed0d632"
+    },
+    {
+      "path": "external/external-protocol.json",
+      "bytes": 7406,
+      "sha256": "3a1259f3ea3d7b2000e48bf85b2f28066b0df2789a0eb017e60f844e2383f407"
+    },
+    {
+      "path": "external/independent-audit.json",
+      "bytes": 416,
+      "sha256": "e211c4d7ddfd10e1556baaaa5bf62ea48a62a4531a3a653fb9194026901fdece"
+    },
+    {
+      "path": "external/inference-lock.json",
+      "bytes": 249,
+      "sha256": "ad174c5840e399280ccca2adcebb85202be738091a84fb1070537c44080d847a"
+    },
+    {
+      "path": "external/input-audit.json",
+      "bytes": 28107,
+      "sha256": "b4685e41a34f6b8e2b6487a717228726bcefa782ec99789dfc6b2717dde24eb3"
+    },
+    {
+      "path": "external/input-manifest.json",
+      "bytes": 119566,
+      "sha256": "d26c63377d4467d4437709d1770a9484927ff8c2af5ec39eb79b2b6e87187bb2"
+    },
+    {
+      "path": "external/prior-test-pixel-hashes.json",
+      "bytes": 28143,
+      "sha256": "f3bd0257467a4245141da7ee51ad6b005357364726efcdb172007babe8b789df"
+    },
+    {
+      "path": "external/results.json",
+      "bytes": 658658,
+      "sha256": "d349cd8e9f21814c1d495ebb0b83f033525bed58f4f35b6ac6c28ce3d38e419b"
+    },
+    {
+      "path": "independent-audit.json",
+      "bytes": 417,
+      "sha256": "c3a98bd60c1df2ce5ae64b67dd62a1e500f78792313eccda860eaf2349c2695e"
+    },
+    {
+      "path": "mobile.png",
+      "bytes": 643016,
+      "sha256": "c389cff09e041ef1c339b04fb1dde8315adc3695c612c989d084bc6c8361e12f"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 3242,
+      "sha256": "e0155dee2855b37a84589ee51d831e37ec8ed05180455b1cf4b4147b53d52b7e"
+    },
+    {
+      "path": "results.json",
+      "bytes": 2695833,
+      "sha256": "6f585bd89564ce947f6275cbbdbbcf5c74d0897f10e077ca6fe1ca714ab57780"
+    },
+    {
+      "path": "selection-lock.json",
+      "bytes": 8945,
+      "sha256": "0dcb3262585ad338728380f957a7f02e76ac4d7420eb0f5a6d8b8b30b46a6e79"
+    },
+    {
+      "path": "source/audit_auto_ki67.py",
+      "bytes": 5819,
+      "sha256": "1ee511fbb6144694d45d4896f13c796466613f1ad7126f260c6ee6b19e612989"
+    },
+    {
+      "path": "source/export_auto_ki67_review.py",
+      "bytes": 8060,
+      "sha256": "32526590ef48e8e50f64972ad6fe58815b240bab38ec22144a46cbc168de57b5"
+    },
+    {
+      "path": "source/pathology_edge/__init__.py",
+      "bytes": 56,
+      "sha256": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21"
+    },
+    {
+      "path": "source/pathology_edge/ihc_baseline.py",
+      "bytes": 26133,
+      "sha256": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe"
+    },
+    {
+      "path": "source/pathology_edge/ki67_cnn.py",
+      "bytes": 3605,
+      "sha256": "b758201ee43f0b8e5bf3348c3a2d758df78a34d5e743b620ad4f54b28f6c0b9c"
+    },
+    {
+      "path": "source/pathology_edge/ki67_detection.py",
+      "bytes": 2226,
+      "sha256": "f80bf38721787cb5e6ced4dc05e2dea69207edced8841c099a507b619c02bd81"
+    },
+    {
+      "path": "source/pathology_edge/ki67_evaluation.py",
+      "bytes": 3169,
+      "sha256": "7a4d8e860813049ebe8a4c201518bf88ab4f6d5d6b0b7d1891bd78a70b8022d2"
+    },
+    {
+      "path": "source/pathology_edge/ki67_experiment.py",
+      "bytes": 17608,
+      "sha256": "e9db7316b2079e4d9d6db4305fa05b558cca0aab8763221ae016783b9e71b7c2"
+    },
+    {
+      "path": "source/pathology_edge/ki67_external.py",
+      "bytes": 13347,
+      "sha256": "b2aeb5644700f374a259b14f69dd754fbdad34ddcc71974b3479cea341b55974"
+    },
+    {
+      "path": "source/run_auto_ki67.py",
+      "bytes": 164,
+      "sha256": "9f58f4075aae6d07b51247c6b1a8e6ede918bb420a283dfdfd510655d5af156c"
+    },
+    {
+      "path": "training.log",
+      "bytes": 3955,
+      "sha256": "616d1122fab62f012e7e0baa3407c6fa91d048e56ccdc2d35dde25ab426d6920"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 1820,
+      "sha256": "37ffc527c606b689575cb2b9e120f202108d3fe3dee6b11db62eba5f6c552933"
+    },
+    {
+      "path": "viewer.html",
+      "bytes": 406619,
+      "sha256": "aff7fadc8d9916db95a76e18139f42fa21ee730516cf2cac4826efbf9950f66e"
+    }
+  ],
+  "raw_data_redistributed": false,
+  "licensed_patherea_illustration_images": 3
+}

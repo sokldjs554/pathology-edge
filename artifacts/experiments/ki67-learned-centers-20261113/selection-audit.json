@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "seed_count": 3,
+  "epochs_per_seed": 16,
+  "configuration_trials": 576,
+  "validation_cases": 4,
+  "validation_centers": 2802,
+  "selection_lock_created_utc": "2026-11-13T08:16:53.897568+00:00",
+  "evaluation_starts": {
+    "internal": "2026-11-13T08:16:56.697807+00:00",
+    "external": "2026-11-13T08:18:16.417435+00:00"
+  },
+  "new_training": false,
+  "new_inference": false,
+  "scope": "Stored history arithmetic, policy, hashes and stage timestamps; not a replay of every training epoch"
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Fresh read-only review of task diff from00d6d69, implementation/dependencies, actual locked run and final HTML/report artifacts.",
+  "critical": 0,
+  "important": 0,
+  "actual_run_validity": "No Critical/Important issue found for0eligible run",
+  "independent_checks": [
+    "1512 saved trial records, original validation case IDs, selected=None",
+    "joint-only counts12/10/5 and actual posthoc trial identity",
+    "HTML hash/selection lock, A/U/S/R summaries, six example settings and displacement correspondence",
+    "Report distinction between highest-F1 and joint-only diagnostic settings"
+  ],
+  "not_rerun": [
+    "full test suite",
+    "browser automation",
+    "three-seed training"
+  ],
+  "limitations": [
+    "Future eligible holdout audit lacks authoritative GT/image/model inference replay. Not exercised here.",
+    "Training normalizer audit binds saved report to buffers, not independent full train re-extraction."
+  ]
+}

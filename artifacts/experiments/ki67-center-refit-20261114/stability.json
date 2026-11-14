@@ -1,0 +1,23 @@
+{
+  "denominator": 3,
+  "test_passes": 0,
+  "all_three_test_passed": false,
+  "seeds": [
+    {
+      "seed": 20261117,
+      "eligible": false,
+      "test_passed": false
+    },
+    {
+      "seed": 20261118,
+      "eligible": false,
+      "test_passed": false
+    },
+    {
+      "seed": 20261119,
+      "eligible": false,
+      "test_passed": false
+    }
+  ],
+  "scope": "Reused test, not unseen/clinical/whole-WSI proof"
+}

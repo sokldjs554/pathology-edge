@@ -1,0 +1,36 @@
+{
+  "base_commit": "4246f020077fcaf707b0c76f55a07868714b4fe8",
+  "source_commit": "0f518dcf535188e0a5c726a926ef67753de67995",
+  "scope": "Whole increment, completed experiment and untracked evidence package",
+  "critical": [],
+  "important": [],
+  "minor": [],
+  "verdict": "Ready for research-addendum sealing and delivery",
+  "verified": [
+    "33 new scoped tests",
+    "seven user-authored files unchanged",
+    "source/model/protocol/selection hashes",
+    "576 history trials and stage order",
+    "six audits bound to6480recounts",
+    "fresh12portableinferencecombinations",
+    "32reportrows and comparison-summary",
+    "nine heatmap replays",
+    "36browsercombinations and screenshots",
+    "both source-head CIs successful"
+  ],
+  "limits": [
+    "Reviewer did not retrain all epochs",
+    "Reviewer did not reacquire external images",
+    "Reviewer did not rerun all6480recounts; checked source/evidence/hashbindings",
+    "No fresh user-environment package installation",
+    "ZIP sealing/download not yet assessed by reviewer",
+    "No clinical or fresh-external validity certification"
+  ],
+  "coordinator_rulings": [
+    "Accept: repeat training not necessary; original complete histories and frozen sources retained",
+    "Accept: primary run reacquired133PNGimages and checked byteSHA against prior records; canonical point labels reused hashlocked",
+    "Accept: primary six independent audits actually ran and matched all6480recounts",
+    "Accept: portable replay tested in existing recorded Ubuntu environment; fresh user setup not claimed",
+    "ZIP integrity and public download will be separately checked before delivery"
+  ]
+}

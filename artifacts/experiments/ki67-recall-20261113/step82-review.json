@@ -1,0 +1,13 @@
+{
+  "step": 82,
+  "recorded_date": "2026-11-13",
+  "status": "pending_user_review",
+  "requested_scope": "review.html first example, CNN20261113: A TP7/FP9/FN23 and B TP21/FP49/FN9; missed-reference toggle",
+  "user_response": null,
+  "user_screen_review_completed": false,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "scope_note": "The instruction to proceed authorized work; it did not confirm viewing the new results."
+}

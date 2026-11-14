@@ -1,0 +1,20 @@
+{
+  "step": 85,
+  "contribution_id": "U99",
+  "recorded_date": "2026-11-13",
+  "timezone": "UTC",
+  "status": "display_confirmed",
+  "scope": "Display of the 09_6 same-ROI CNN/ViT error figure from the user's stored seed-20261113 run.",
+  "evidence_path": "artifacts/experiments/user-cnn-vit-errors-20261112/index.html",
+  "source_evidence_commit": "ffe4daf5c149697ec533aeb06962f810f0b32b1e",
+  "user_response": "응 다섯 패널도 잘 보이는것으로 확인되었어",
+  "confirmation_recorded_utc": "2026-11-13T14:46:09Z",
+  "help_provided": "Provided the 09_6 section title, same-ROI crop location, expected crop Dice and five panel names. Asked only whether all five panels were visible.",
+  "scope_limit": "Confirmation of the requested five-panel 09_6 figure display only. Does not confirm independent metric recounting, interpretation of pixel errors, biological causes or new execution.",
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "user_visual_review_confirmed": true,
+  "user_independent_numeric_audit": false
+}

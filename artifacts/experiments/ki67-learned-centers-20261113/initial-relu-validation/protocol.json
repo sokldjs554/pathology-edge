@@ -1,0 +1,83 @@
+{
+  "schema": "learned-centers.v1",
+  "created_utc": "2026-11-13T07:35:48.850539+00:00",
+  "data_dir": "/workspace/work/aivis-ihc/Patherea_Breast_P1_224_v1.1",
+  "parent": "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113",
+  "external": "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113",
+  "input_hashes": {
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/protocol.json": "e0155dee2855b37a84589ee51d831e37ec8ed05180455b1cf4b4147b53d52b7e",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/selection-lock.json": "0dcb3262585ad338728380f957a7f02e76ac4d7420eb0f5a6d8b8b30b46a6e79",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/source-manifest.json": "fcef8402b336f73bb19890ee8057ae506101c14f35410fec721225a1d02bcd82",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/split.json": "f839f408750e0ea8ca39ba35ea71aeaca74fcf69dcb93bdcbaa17dbe94768293",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/model.json": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/predictions.json": "9c38381d5de3afa1e3ce4f372b82b2b8275030f97a54cb28345d7cbf8d6ddc93",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/results.json": "6f585bd89564ce947f6275cbbdbbcf5c74d0897f10e077ca6fe1ca714ab57780",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/cnn-20261113.pt": "f4084b82ef75ea0be9a002f2628153845ad29b79ac92da467d1c1b347f3c092e",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/cnn-20261114.pt": "cbaa25d792bbcdc2f44388209a3dfa9d53b9c4bbbf05c660f74a1ef8fedb1dd2",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-run-20261113/cnn-20261115.pt": "497ad1744eb07d3af7b91f3352163a60438ef5c2d7d1c3d9a8d98fa327589acc",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/private-predictions.json": "8783dd71b3e522f3ca8bac5b4fa1fc921f1a633df198bff02964595eae130513",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/results.json": "d349cd8e9f21814c1d495ebb0b83f033525bed58f4f35b6ac6c28ce3d38e419b",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/entries.json": "f5830b7125a0f395eaccacb8bb11bf73cd9d22cf327524fa51f7c01cfed0d632",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/input-manifest.json": "d26c63377d4467d4437709d1770a9484927ff8c2af5ec39eb79b2b6e87187bb2",
+    "/workspace/pathology-edge-auto-ki67/work/auto-ki67-bcdata-20261113/input-audit.json": "b4685e41a34f6b8e2b6487a717228726bcefa782ec99789dfc6b2717dde24eb3"
+  },
+  "source_hashes": {
+    "model.py": "210d300dd022542d41cdc79ce1d5174d7ad76d76b6c7077710fb279d37edb21a",
+    "ihc_baseline.py": "1fe59c945939bfbad54a7236cbad535d2f20dc792f29d9687239a4bc3b373dbe",
+    "ki67_detection.py": "f80bf38721787cb5e6ced4dc05e2dea69207edced8841c099a507b619c02bd81",
+    "ki67_evaluation.py": "7a4d8e860813049ebe8a4c201518bf88ab4f6d5d6b0b7d1891bd78a70b8022d2",
+    "ki67_cnn.py": "2c17db919f7f6d2d19b28766959b3ac9ad90e827fe8536104f0e5ad90e262659",
+    "ki67_experiment.py": "e9db7316b2079e4d9d6db4305fa05b558cca0aab8763221ae016783b9e71b7c2",
+    "ki67_external.py": "b2aeb5644700f374a259b14f69dd754fbdad34ddcc71974b3479cea341b55974",
+    "ki67_centers.py": "9e4bf5f7678ece3bea4c2459e68ebb474b4bc76962824a6a6592ef0496e11de3",
+    "ki67_center_experiment.py": "f209d24c79cc4fd9e53c216960a3fccfec3c6a0a4f340dec7d82316848cb84d7"
+  },
+  "seeds": [
+    20261117,
+    20261118,
+    20261119
+  ],
+  "epochs": 16,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "torch_threads": 2,
+  "target": {
+    "sigma_px": 2,
+    "radius_px": 6,
+    "aggregation": "maximum; not nuclear mask or count density"
+  },
+  "thresholds": [
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "min_distances": [
+    4,
+    6,
+    8
+  ],
+  "matching_radius_px": 6,
+  "image_counts": {
+    "train": 696,
+    "validation": 227,
+    "test": 407
+  },
+  "selection": "validation case-macro localization F1; ties recall,earlier epoch,higher threshold,larger distance",
+  "augmentation": "train only: pairedrot90/flips; per-imageRGBmultipliers uniform[.9,1.1]",
+  "classification": "four fixed classifiers re-inferred at NEW centers, no classifier fitting",
+  "exposure": "Patherea407 and BCData133 previously exposed: re-evaluations, not fresh holdouts",
+  "reference_limits": "point-derived supervision; original annotation polygon support unavailable; unannotated pixels are not expert-proven non-cells",
+  "external_scope": "native640 RGB, canonical tumor-only points from prior hash-locked acquisition, no MPP/patient independence claim",
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "logical_cpu_count": 5,
+    "cpu_affinity_count": 5,
+    "cuda": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "baseline": "ab0bb96937505ee6aefedb06f0e6f18dfe30395c",
+  "files": {
+    "src/pathology_edge/learner_coordinates.py": {
+      "sha256": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+      "matches_before": true
+    },
+    "src/pathology_edge/learner_losses.py": {
+      "sha256": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+      "matches_before": true
+    },
+    "src/pathology_edge/learner_metrics.py": {
+      "sha256": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+      "matches_before": true
+    },
+    "src/pathology_edge/learner_refinement.py": {
+      "sha256": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+      "matches_before": true
+    },
+    "src/pathology_edge/learner_split.py": {
+      "sha256": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+      "matches_before": true
+    },
+    "src/pathology_edge/learner_wsi.py": {
+      "sha256": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+      "matches_before": true
+    },
+    "tests/learner/test_merge_counterexample.py": {
+      "sha256": "2d2003bd57c2b18fd5e511989ef6854ecb03353bf1e9ef43e5a102dc0609b34c",
+      "matches_before": true
+    }
+  },
+  "all_preserved": true,
+  "dist_git_diff_empty": true
+}

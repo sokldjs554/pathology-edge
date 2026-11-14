@@ -1,0 +1,31 @@
+{
+  "examples": [
+    {
+      "image": "case_0008_region_11_patch_2_O.png",
+      "split": "test",
+      "label": "테스트 · 찾은 정답 증가가 가장 큰 영상"
+    },
+    {
+      "image": "case_0014_region_0_patch_16_O.png",
+      "split": "test",
+      "label": "테스트 · FP 증가가 가장 큰 영상"
+    },
+    {
+      "image": "case_0005_region_1_patch_5_O.png",
+      "split": "validation",
+      "label": "검증 · 낮은 점수 누락 최다"
+    },
+    {
+      "image": "case_0005_region_1_patch_13_O.png",
+      "split": "validation",
+      "label": "검증 · 근처 피크 없음 최다"
+    }
+  ],
+  "selection": {
+    "threshold": 0.03,
+    "min_distance": 4
+  },
+  "seed": 20261117,
+  "inference_run": false,
+  "sha256": "eb1e544332d05491a6f8ce8d7f15c2bb4b570209e655caa60cbc0cc0609a359c"
+}

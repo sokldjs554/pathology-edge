@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-13T09:45:08.059274+00:00",
+  "protocol_sha256": "6d3120ed9f0225e55af2158fa62926bb34b0cfe0836be9e842a66997938151f3",
+  "selection_sha256": "9e6a6fc65969d432434b5c2cb1fc45ab34805da0e0829b64b502b5c40e1bf48d",
+  "evidence_hashes": {
+    "validation-peaks-20261119.json.gz": "1007db4e9286c8bd0fea3d81beaa027a3d9b8f6e87b6f27b42cc6e9d6585f760",
+    "validation-peaks-20261118.json.gz": "fcf2f43627020fc887a294c00e5a2ce9e154a11bb8329b5a85c85b00bc145dea",
+    "validation-peaks-20261117.json.gz": "c8cc6c9b61f5f7f629a178d42518d85812f00f7f2af51cdc4a071f794876f81a",
+    "validation-log.json.gz": "0c3fa586b5e8306f4466fede272c9f09ec5f0f188f95f0196596e0f51220cdd5"
+  }
+}

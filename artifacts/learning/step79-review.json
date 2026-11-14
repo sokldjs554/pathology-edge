@@ -1,0 +1,31 @@
+{
+  "step": 79,
+  "contribution_id": "U93",
+  "recorded_date": "2026-11-13",
+  "timezone": "Asia/Seoul",
+  "user_response": "아니요. 검증 자료에서 정한 재현율 유지 조건은 해당 자료에만 적용되며, 실제 BCData에서 종양 검출 재현율이 0.2295 → 0.0629로 크게 하락했으므로, 외부 자료에서도 같은 조건이 보장된다고 말할 수 없습니다.",
+  "prompt_scope": "검증 자료의 각 케이스에서 기존 재현율90% 이상을 유지하도록 선택했지만 BCData 첫 CNN seed의 종양 검출 재현율은0.2295→0.0629로 하락한 상황에서 외부 자료에도 같은 조건이 보장되는지 이유를 질문",
+  "interpretation_correct": true,
+  "scope": "검증 자료에서 사용한 선택 조건은 외부 성능 보장이 아니며, 실제 외부 종양 검출 재현율 하락을 근거로 같은 유지 조건을 일반화할 수 없다는 해석",
+  "evidence_commit": "c3b9dedaf3129fdc207ab1e444bc13f14584810b",
+  "evidence_files": {
+    "artifacts/experiments/ki67-candidate-filter-20261113/threshold-selection.json": "d73b2afcbf7f7a1ae4795b37b5bc0da495552a56e857e57778beff35b6809f35",
+    "artifacts/experiments/ki67-candidate-filter-20261113/bcdata-results.json": "2ba531a536c18d8ff35197872b54e31b77a4a15ddf60e62301996c52000fe4a0"
+  },
+  "referenced_results": {
+    "classifier": "cnn-20261113",
+    "bcdata_tumor_recall_before": 0.22952853598014888,
+    "bcdata_tumor_recall_after": 0.06286186931348221
+  },
+  "provided_context_note": "90%는 절대 재현율0.9가 아니라 각 검증 케이스의 필터 전 재현율에 대한 유지 비율이다. BCData는 종양 중심만 주석되어 종양 검출 범위로 평가한다.",
+  "new_user_code": false,
+  "new_user_automated_tests": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "user_independent_point_matching_or_count_audit": false,
+  "new_external_data_acquired": false,
+  "user_retuned_filter": false,
+  "user_identified_causal_domain_shift_factor": false,
+  "help_provided": "검증 기준과 저장된 BCData 첫 CNN seed의 필터 전후 종양 검출 재현율을 제공하고 보장 여부를 질문",
+  "archive_scope": "기존 ZIP과 U92 기록은 당시 사실로 보존하고 해석 확인을 별도 후속 기록으로 추가"
+}

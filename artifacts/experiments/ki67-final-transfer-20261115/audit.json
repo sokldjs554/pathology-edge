@@ -1,0 +1,84 @@
+{
+  "all_checks_passed": true,
+  "trial_checks": 5184,
+  "checkpoint_replay_images": 1362,
+  "metric_summaries": 30,
+  "workers": [
+    {
+      "arm": "pretrained",
+      "seed": 20261117,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 227,
+      "official_feature_match": true,
+      "sampling_epochs_checked": 24,
+      "eligible": false,
+      "complete_sha256": "2bd6ebdfffc32f7d67321b796c06a9ff1ff2ca80fb4a327d57c1deaeff3d5590"
+    },
+    {
+      "arm": "pretrained",
+      "seed": 20261118,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 227,
+      "official_feature_match": true,
+      "sampling_epochs_checked": 24,
+      "eligible": false,
+      "complete_sha256": "a32032a14814c79e967fbdf68a313f4d8497b7787dca8d70e335681d6a143cf7"
+    },
+    {
+      "arm": "pretrained",
+      "seed": 20261119,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 227,
+      "official_feature_match": true,
+      "sampling_epochs_checked": 24,
+      "eligible": false,
+      "complete_sha256": "23ea4a24c446d4b5b188bb92f20c466d31ac9d93435e8e0e1f4c87c4f03c1fc8"
+    },
+    {
+      "arm": "random",
+      "seed": 20261117,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 227,
+      "official_feature_match": false,
+      "sampling_epochs_checked": 24,
+      "eligible": false,
+      "complete_sha256": "b9f68721255909fea1d320412dcd079a8480fbbfbb131f0f4a91e4a5d3a82bbc"
+    },
+    {
+      "arm": "random",
+      "seed": 20261118,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 227,
+      "official_feature_match": false,
+      "sampling_epochs_checked": 24,
+      "eligible": false,
+      "complete_sha256": "98f796c0908ddbcdfdebc3112ff8e024ef30d6fea99b11f6b6f49707fca503da"
+    },
+    {
+      "arm": "random",
+      "seed": 20261119,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 227,
+      "official_feature_match": false,
+      "sampling_epochs_checked": 24,
+      "eligible": false,
+      "complete_sha256": "7fe075148728ebd98451e2f8e779c9ae5be38ddd2e3099c1a6fc6de20ac9c9f9"
+    }
+  ],
+  "scope": "Independent NMS/selection/metric accumulation; shared tested matching and peak primitives. Full selected validation checkpoint replay; heldout saved outputs recounted, not full heldout model replay.",
+  "learner_files_preserved": true,
+  "evaluation_lock_sha256": "a63085625d14d0438ef23d6f8652559cdc34464ffb0412a1f6a4d5401a85653a",
+  "stage_summary_hashes": {
+    "validation": "f3dddc03cbf72d1e8b72206eeb7e9b06bedd07a0c22a1d161f55ef33294271d8",
+    "test": "2e0b0018d485fd9c91c3b78d1ce1006f1cb37b3185ee15854d39111bccb0b2c0",
+    "bcdata": "7108103dfd78954946816d6ce4b4d873ffc57576382dcca226e53e5fe6f9351a",
+    "deepliif": "5d38b27203fee5e7597f4b4c240c5da5c89d8b0039020a65fc764633b177bb76"
+  },
+  "reference_review_summary_sha256": "e754cd146b3b44ffc64eec686fece809c6275994624ccc05b804341c501481dd"
+}

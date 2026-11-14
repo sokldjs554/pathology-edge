@@ -1,0 +1,25 @@
+# SDD ledger — plan: docs/superpowers/plans/2026-11-13-ki67-union-gate.md
+
+Spec approved explicitly: user selected candidate union + rejection CNN, then answered “이 설계대로 구현·실험 진행” to the linked design.
+Existing isolated worktree: feat/auto-ki67, /workspace/pathology-edge-auto-ki67. Native implementation; final fresh reviewer required.
+Pre-flight: Task1 union/scoring/selection interfaces consumed by Task2; no conflict. Task2 compressed protocol/selection/candidates consumed by Task3; schema defined by writer and validated in independent audit.
+Ruling: cloud skill shell helpers are not installed in executor filesystem; keep the same task/BASE/test ledger under the existing git-ignored work/union-gate-plan rather than inventing a helper execution. Cost: bookkeeping is manual, covered by commits and explicit test logs.
+Ruling: existing user design-and-experiment approval covers the native implementation method and this plan inside the same scope; do not ask a third execution-method question. Cost: plan details are implementer decisions within the approved protocol.
+Ruling: retain all existing original files and Git blobs; only evict two verified published ZIP working copies via sparse skip-worktree to recover ~29.7 MB. Source/remote artifacts and original run directories intact; restoration instructions in work/performance-space-20261113.json.
+Task 1: started. BASE ab0bb96937505ee6aefedb06f0e6f18dfe30395c. Baseline suite running before product changes.
+
+Baseline: 466 passed, 1 failed, 104 errors; OSError ENOSPC in this run pytest-29 prevented fixtures. Preserved log; removed only this run temporary directory, recovered space. Full suite will be run in clean GitHub CI; no model/source change caused this baseline failure.
+
+Task1 complete: missing-module RED (26 expected fixture failures), implementation GREEN 26/26. Source units are never merged; exact-coordinate source bits retained; threshold0 NMS equivalence tested, including ties/zero/one. Gradient/update and overflow checks passed.
+Task2 complete: missing-runner RED (5 expected fixture failures), combined GREEN31/31. Balanced sampling, train-only pools, all-seed lock, no-feasible early skip and protocol tamper checks passed. Running protocol is frozen before actual learning. Test/external access is deferred until all three selections lock.
+Task3 in progress: independent audit RED3 missing-script failures -> GREEN3; combined34 and focused regressions94 passed. GitHub CI47cc9f0 passed602 tests, af883aa passed605 tests; stored Dice42/6, static-demo validation passed. No user-owned learner file or dist diff against ab0bb96.
+Ruling: this final review covers the entire new union-gate change set since the approved-design baseline ab0bb96 and its dependency integration. The long-lived draft PR includes older separately reviewed experiments; do not claim this is a fresh audit of all historical work. Cost: unrelated historical changes are not re-reviewed here.
+Task3: complete implementation/run/audit/browser evidence. Three gates trained at source47cc9f0, all1512 validation combinations infeasible; all3 jointFP/FN count non-regression counts0. Both evaluation stages correctly wrote zero-inference skips. Audit1512 metrics/eligibility and681 full raw/proposal/checkpoint replays passed. Browser6 examples1440/390 passed. 95 focused regression tests passed; fullCIaf883aa605 passed, final fresh CI pending exact final commit.
+Task3 fixes before review: saved float32 .7 compares below mathematical .7 after cast to float64; failing targeted test ->4 audit tests pass. No training or saved scores changed. Mobile long select caused body480>390; browser failing check ->max-width/min-width CSS fix -> all examples and mobile check pass. Both facts preserved.
+
+Final review: fresh read-only gpt-6-astra reviewed ab0bb96..d393557; no Critical/Important; hash/preservation rechecks passed.
+Final: minor (deferred): uint8 retention score negation wraps; actual runner/audit/export only supply float64. Workaround cast direct helper scores to float64; no actual result affected.
+Final: Ruling: clinical/full-WSI/generalization and alternate recipes remain outside this authorized comparison and unclaimed — no evidence licenses those conclusions. Cost if misunderstood: overclaiming validation; explicit in report.
+Final: Ruling: reviewer did not rerun full suite/browser due disk; rely on exact-source clean CI plus preserved independently executed browser evidence — no claim of two executions. Cost: review is source/evidence inspection for these checks.
+Final: Ruling: eligible-seed test/external path has static integration review only because0/3eligible; do not violate the fixed protocol merely to execute it. Cost: that real-data branch remains unexercised in this experiment.
+Final: Ruling: existing session already authorizes pushing the feature branch/updating its draft PR; keep worktree and main/public demo unchanged, no repeated integration menu. Cost: user reviews draft rather than a merged deployment.

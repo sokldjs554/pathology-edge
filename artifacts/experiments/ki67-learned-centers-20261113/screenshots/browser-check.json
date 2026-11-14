@@ -1,0 +1,339 @@
+{
+  "passed": true,
+  "combinations": 36,
+  "example_seed_classifier_combinations": [
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261117,
+      "arm": "lr",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.3600\n예측 양성률 1.79% (1/56)",
+      "after": "후보 13개 · TP 5 / FP 8 / FN 2\n검출F1 0.5000 · 재현율 0.7143\n4-class F1 0.1154\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261113",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.0109\n예측 양성률 1.67% (1/60)",
+      "after": "후보 13개 · TP 5 / FP 8 / FN 2\n검출F1 0.5000 · 재현율 0.7143\n4-class F1 0.1364\n예측 양성률 0.00% (0/3)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261114",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.1350\n예측 양성률 5.17% (3/58)",
+      "after": "후보 13개 · TP 5 / FP 8 / FN 2\n검출F1 0.5000 · 재현율 0.7143\n4-class F1 0.1250\n예측 양성률 0.00% (0/2)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261115",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.0455\n예측 양성률 0.00% (0/35)",
+      "after": "후보 13개 · TP 5 / FP 8 / FN 2\n검출F1 0.5000 · 재현율 0.7143\n4-class F1 0.2589\n예측 양성률 0.00% (0/6)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261118,
+      "arm": "lr",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.3600\n예측 양성률 1.79% (1/56)",
+      "after": "후보 14개 · TP 4 / FP 10 / FN 3\n검출F1 0.3810 · 재현율 0.5714\n4-class F1 0.1000\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261113",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.0109\n예측 양성률 1.67% (1/60)",
+      "after": "후보 14개 · TP 4 / FP 10 / FN 3\n검출F1 0.3810 · 재현율 0.5714\n4-class F1 0.1154\n예측 양성률 0.00% (0/3)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261114",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.1350\n예측 양성률 5.17% (3/58)",
+      "after": "후보 14개 · TP 4 / FP 10 / FN 3\n검출F1 0.3810 · 재현율 0.5714\n4-class F1 0.1000\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261115",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.0455\n예측 양성률 0.00% (0/35)",
+      "after": "후보 14개 · TP 4 / FP 10 / FN 3\n검출F1 0.3810 · 재현율 0.5714\n4-class F1 0.2361\n예측 양성률 0.00% (0/5)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261119,
+      "arm": "lr",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.3600\n예측 양성률 1.79% (1/56)",
+      "after": "후보 12개 · TP 5 / FP 7 / FN 2\n검출F1 0.5263 · 재현율 0.7143\n4-class F1 0.2821\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261113",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.0109\n예측 양성률 1.67% (1/60)",
+      "after": "후보 12개 · TP 5 / FP 7 / FN 2\n검출F1 0.5263 · 재현율 0.7143\n4-class F1 0.1364\n예측 양성률 0.00% (0/3)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261114",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.1350\n예측 양성률 5.17% (3/58)",
+      "after": "후보 12개 · TP 5 / FP 7 / FN 2\n검출F1 0.5263 · 재현율 0.7143\n4-class F1 0.1154\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261115",
+      "before": "후보 107개 · TP 3 / FP 104 / FN 4\n검출F1 0.0526 · 재현율 0.4286\n4-class F1 0.0455\n예측 양성률 0.00% (0/35)",
+      "after": "후보 12개 · TP 5 / FP 7 / FN 2\n검출F1 0.5263 · 재현율 0.7143\n4-class F1 0.2054\n예측 양성률 0.00% (0/5)",
+      "gt": "주석 세포 7개\n정답 양성률 33.33% (1/3)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261117,
+      "arm": "lr",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1253\n예측 양성률 56.25% (18/32)",
+      "after": "후보 5개 · TP 1 / FP 4 / FN 14\n검출F1 0.1000 · 재현율 0.0667\n4-class F1 0.0833\n예측 양성률 100.00% (3/3)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261113",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1156\n예측 양성률 50.00% (28/56)",
+      "after": "후보 5개 · TP 1 / FP 4 / FN 14\n검출F1 0.1000 · 재현율 0.0667\n4-class F1 0.0833\n예측 양성률 100.00% (3/3)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261114",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.0848\n예측 양성률 66.07% (37/56)",
+      "after": "후보 5개 · TP 1 / FP 4 / FN 14\n검출F1 0.1000 · 재현율 0.0667\n4-class F1 0.0714\n예측 양성률 100.00% (4/4)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261115",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1131\n예측 양성률 65.79% (25/38)",
+      "after": "후보 5개 · TP 1 / FP 4 / FN 14\n검출F1 0.1000 · 재현율 0.0667\n4-class F1 0.0714\n예측 양성률 100.00% (4/4)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261118,
+      "arm": "lr",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1253\n예측 양성률 56.25% (18/32)",
+      "after": "후보 6개 · TP 1 / FP 5 / FN 14\n검출F1 0.0952 · 재현율 0.0667\n4-class F1 0.0500\n예측 양성률 66.67% (4/6)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261113",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1156\n예측 양성률 50.00% (28/56)",
+      "after": "후보 6개 · TP 1 / FP 5 / FN 14\n검출F1 0.0952 · 재현율 0.0667\n4-class F1 0.0500\n예측 양성률 50.00% (2/4)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261114",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.0848\n예측 양성률 66.07% (37/56)",
+      "after": "후보 6개 · TP 1 / FP 5 / FN 14\n검출F1 0.0952 · 재현율 0.0667\n4-class F1 0.0500\n예측 양성률 66.67% (4/6)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261115",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1131\n예측 양성률 65.79% (25/38)",
+      "after": "후보 6개 · TP 1 / FP 5 / FN 14\n검출F1 0.0952 · 재현율 0.0667\n4-class F1 0.0556\n예측 양성률 66.67% (2/3)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261119,
+      "arm": "lr",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1253\n예측 양성률 56.25% (18/32)",
+      "after": "후보 6개 · TP 0 / FP 6 / FN 15\n검출F1 0.0000 · 재현율 0.0000\n4-class F1 0.0000\n예측 양성률 100.00% (5/5)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261113",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1156\n예측 양성률 50.00% (28/56)",
+      "after": "후보 6개 · TP 0 / FP 6 / FN 15\n검출F1 0.0000 · 재현율 0.0000\n4-class F1 0.0000\n예측 양성률 100.00% (4/4)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261114",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.0848\n예측 양성률 66.07% (37/56)",
+      "after": "후보 6개 · TP 0 / FP 6 / FN 15\n검출F1 0.0000 · 재현율 0.0000\n4-class F1 0.0000\n예측 양성률 100.00% (6/6)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261115",
+      "before": "후보 78개 · TP 9 / FP 69 / FN 6\n검출F1 0.1935 · 재현율 0.6000\n4-class F1 0.1131\n예측 양성률 65.79% (25/38)",
+      "after": "후보 6개 · TP 0 / FP 6 / FN 15\n검출F1 0.0000 · 재현율 0.0000\n4-class F1 0.0000\n예측 양성률 100.00% (5/5)",
+      "gt": "주석 세포 15개\n정답 양성률 27.27% (3/11)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261117,
+      "arm": "lr",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0210\n예측 양성률 0.00% (0/61)",
+      "after": "후보 15개 · TP 13 / FP 2 / FN 1\n검출F1 0.8966 · 재현율 0.9286\n4-class F1 0.1591\n예측 양성률 0.00% (0/7)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261113",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0227\n예측 양성률 0.00% (0/140)",
+      "after": "후보 15개 · TP 13 / FP 2 / FN 1\n검출F1 0.8966 · 재현율 0.9286\n4-class F1 0.1957\n예측 양성률 0.00% (0/6)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261114",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0193\n예측 양성률 0.00% (0/47)",
+      "after": "후보 15개 · TP 13 / FP 2 / FN 1\n검출F1 0.8966 · 재현율 0.9286\n4-class F1 0.2321\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261117,
+      "arm": "cnn-20261115",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0219\n예측 양성률 0.00% (0/68)",
+      "after": "후보 15개 · TP 13 / FP 2 / FN 1\n검출F1 0.8966 · 재현율 0.9286\n4-class F1 0.2115\n예측 양성률 0.00% (0/3)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261118,
+      "arm": "lr",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0210\n예측 양성률 0.00% (0/61)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.1667\n예측 양성률 0.00% (0/7)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261113",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0227\n예측 양성률 0.00% (0/140)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.1957\n예측 양성률 0.00% (0/5)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261114",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0193\n예측 양성률 0.00% (0/47)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.2407\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261118,
+      "arm": "cnn-20261115",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0219\n예측 양성률 0.00% (0/68)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.2222\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261119,
+      "arm": "lr",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0210\n예측 양성률 0.00% (0/61)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.1667\n예측 양성률 0.00% (0/7)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261113",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0227\n예측 양성률 0.00% (0/140)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.1957\n예측 양성률 0.00% (0/5)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261114",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0193\n예측 양성률 0.00% (0/47)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.2407\n예측 양성률 0.00% (0/1)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261119,
+      "arm": "cnn-20261115",
+      "before": "후보 214개 · TP 7 / FP 207 / FN 7\n검출F1 0.0614 · 재현율 0.5000\n4-class F1 0.0219\n예측 양성률 0.00% (0/68)",
+      "after": "후보 14개 · TP 13 / FP 1 / FN 1\n검출F1 0.9286 · 재현율 0.9286\n4-class F1 0.2200\n예측 양성률 0.00% (0/3)",
+      "gt": "주석 세포 14개\n정답 양성률 계산 불가 (종양 분모0)",
+      "numbers_match_saved_json": true
+    }
+  ],
+  "heatmap_changes_pixels": true,
+  "centers_change_pixels": true,
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "selectorsVisible": true
+  },
+  "expandedWidth": 390,
+  "errors": []
+}

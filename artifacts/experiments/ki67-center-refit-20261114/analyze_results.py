@@ -1,0 +1,10 @@
+import json,gzip
+from pathlib import Path
+root=Path('work/center-refit-20261114');p=json.loads((root/'protocol.json').read_text());models=json.loads((root/'selection.json').read_text())['models'];out=[]
+for m in models:
+ history=json.loads(gzip.decompress((root/f"trials-{m['seed']}.json.gz").read_bytes()));trials=[t for h in history if h['epoch']>0 for t in h['trials']];a=m['baseline'];ac=a['localization']
+ def flags(t):
+  c=t['localization'];return dict(joint_fp_fn=c['fp']<=ac['fp'] and c['fn']<=ac['fn'] and (c['fp']<ac['fp'] or c['fn']<ac['fn']),case_macro_floor=t['case_macro_recall']>=p['floors']['case_macro_recall'],tumor_positive_floor=t['tumor_recalls'][0]>=p['floors']['tumor_recalls'][0],tumor_negative_floor=t['tumor_recalls'][1]>=p['floors']['tumor_recalls'][1],every_case=all(t['cases'][k]['recall']>=.9*v['recall'] for k,v in a['cases'].items()))
+ joint=[t for t in trials if flags(t)['joint_fp_fn']];key=lambda t:(t['case_macro_f1'],t['case_macro_recall'],-t['epoch'],t['config']['threshold'],t['config']['min_distance']);bestjoint=max(joint,key=key) if joint else None;diagnostic=m['diagnostic'];r=dict(seed=m['seed'],additional_epoch_trials=len(trials),epoch0_control_trials=36,full_condition_count=sum(all(flags(t).values()) for t in trials),joint_count=len(joint),best_joint=bestjoint,best_joint_conditions=flags(bestjoint) if bestjoint else None,baseline=a,epoch0_grid=m['epoch0_diagnostic'],diagnostic=diagnostic,diagnostic_conditions=flags(diagnostic),loss_first=history[1]['train_loss'],loss_last=history[-1]['train_loss']);out.append(r)
+ print(json.dumps(dict(seed=m['seed'],eligible=m['selected'] is not None,joint_count=len(joint),A=a['localization'],B=(m['selected'] or diagnostic)['localization'],A_f1=a['case_macro_f1'],epoch0_f1=m['epoch0_diagnostic']['case_macro_f1'],B_f1=(m['selected'] or diagnostic)['case_macro_f1'],B_epoch=(m['selected'] or diagnostic)['epoch'],config=(m['selected'] or diagnostic)['config'])),flush=True)
+(root/'failure-analysis.json').write_text(json.dumps(dict(scope='Post hoc validation diagnosis; epoch0 excluded, original selection unchanged. Not held-out performance.',seeds=out),indent=2)+'\n')

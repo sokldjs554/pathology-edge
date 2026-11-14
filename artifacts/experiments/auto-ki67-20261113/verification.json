@@ -1,0 +1,41 @@
+{
+  "core_source_commit": "2f90eff",
+  "external_source_commit": "6c895ef9bd8f161eacc9de30c17343610bec8dc1",
+  "whole_ci": "https://github.com/sokldjs554/pathology-edge/actions/runs/43349444151",
+  "whole_tests_passed": 501,
+  "existing_dice_values_match": 42,
+  "existing_dice_means_match": 6,
+  "new_scoped_tests_passed": 50,
+  "internal_recounts": 1628,
+  "external_recounts": 532,
+  "learner_files_unchanged": {
+    "src/pathology_edge/learner_coordinates.py": true,
+    "src/pathology_edge/learner_metrics.py": true,
+    "src/pathology_edge/learner_split.py": true,
+    "src/pathology_edge/learner_losses.py": true,
+    "src/pathology_edge/learner_wsi.py": true,
+    "src/pathology_edge/learner_refinement.py": true,
+    "tests/learner/test_merge_counterexample.py": true
+  },
+  "image_only_cli_replay_matches": true,
+  "user_review_status": "pending; last confirmed user record U86",
+  "existing_demo_modified": false,
+  "clinical_validation": false,
+  "whole_wsi_ground_truth_validation": false,
+  "external_improvement_proven": false,
+  "training_and_inference_executor": "provided implementation / development environment; not user execution",
+  "raw_dataset_archives_or_full_cell_level_prediction_records_in_public_bundle": false,
+  "licensed_patherea_illustration_images": 3,
+  "bcdata_raw_images_and_cell_coordinates_redistributed": false,
+  "new_module_tests_passed": 39,
+  "scoped_includes_existing_ihc_tests": 11,
+  "final_review": {
+    "critical": 0,
+    "important": 1,
+    "fixed": "Reject nonfinite CNN parameters and invalid probability outputs before argmax; 4 regression failures reproduced before fix",
+    "historical_checkpoints_finite": true,
+    "historical_results_unchanged": true
+  },
+  "whole_ci_source_commit": "a12a15706a31e5057726a66a8721aee16bee61cd",
+  "whole_test_seconds": 31.15
+}

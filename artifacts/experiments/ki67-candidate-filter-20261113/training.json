@@ -1,0 +1,16 @@
+{
+  "image_counts": {
+    "train": 696,
+    "validation": 227
+  },
+  "proxy_counts": {
+    "-1": 56121,
+    "0": 52357,
+    "1": 6300
+  },
+  "seconds": 36.94795678596711,
+  "selected_threshold": 0.1,
+  "training_run": true,
+  "test_used_for_fit_or_selection": false,
+  "external_used_for_fit_or_selection": false
+}

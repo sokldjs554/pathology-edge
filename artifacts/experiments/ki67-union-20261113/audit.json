@@ -1,0 +1,31 @@
+{
+  "all_checks_passed": true,
+  "selection_lock_sha256": "ecd42d47b2d3414c692f23fb0aeeb07bb383ea8d524c62e79090817d2231ae27",
+  "trial_checks": 1512,
+  "checkpoint_and_proposal_replay_images": 681,
+  "evaluation_classifier_summaries": 0,
+  "seeds": [
+    {
+      "seed": 20261117,
+      "eligible": false,
+      "trials_checked": 504,
+      "diagnostic_epoch": 1
+    },
+    {
+      "seed": 20261118,
+      "eligible": false,
+      "trials_checked": 504,
+      "diagnostic_epoch": 1
+    },
+    {
+      "seed": 20261119,
+      "eligible": false,
+      "trials_checked": 504,
+      "diagnostic_epoch": 4
+    }
+  ],
+  "eligible_seeds": 0,
+  "test_external_evaluated": false,
+  "reference_masks_verified": 1135,
+  "scope": "Validation selection and reused evaluation evidence audit, not clinical or whole-WSI validation"
+}

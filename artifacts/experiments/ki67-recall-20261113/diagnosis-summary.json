@@ -1,0 +1,140 @@
+{
+  "20261117": {
+    "counts": {
+      "matched": 894,
+      "no_peak": 1158,
+      "below_threshold": 709,
+      "distance_suppressed": 41,
+      "assignment_competition": 0
+    },
+    "by_class": [
+      {
+        "matched": 196,
+        "no_peak": 203,
+        "below_threshold": 71,
+        "distance_suppressed": 13,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 248,
+        "no_peak": 639,
+        "below_threshold": 389,
+        "distance_suppressed": 16,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 53,
+        "no_peak": 35,
+        "below_threshold": 23,
+        "distance_suppressed": 1,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 397,
+        "no_peak": 281,
+        "below_threshold": 226,
+        "distance_suppressed": 11,
+        "assignment_competition": 0
+      }
+    ],
+    "feasible_trials": 3,
+    "selected": {
+      "threshold": 0.03,
+      "min_distance": 4
+    },
+    "maximum_grid_tumor_recalls": [
+      0.567287784679089,
+      0.5007739938080495
+    ]
+  },
+  "20261118": {
+    "counts": {
+      "matched": 832,
+      "no_peak": 1122,
+      "below_threshold": 842,
+      "distance_suppressed": 6,
+      "assignment_competition": 0
+    },
+    "by_class": [
+      {
+        "matched": 159,
+        "no_peak": 232,
+        "below_threshold": 90,
+        "distance_suppressed": 2,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 263,
+        "no_peak": 573,
+        "below_threshold": 452,
+        "distance_suppressed": 4,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 49,
+        "no_peak": 31,
+        "below_threshold": 32,
+        "distance_suppressed": 0,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 361,
+        "no_peak": 286,
+        "below_threshold": 268,
+        "distance_suppressed": 0,
+        "assignment_competition": 0
+      }
+    ],
+    "feasible_trials": 0,
+    "selected": null,
+    "maximum_grid_tumor_recalls": [
+      0.515527950310559,
+      0.5541795665634675
+    ]
+  },
+  "20261119": {
+    "counts": {
+      "matched": 838,
+      "no_peak": 1133,
+      "below_threshold": 826,
+      "distance_suppressed": 5,
+      "assignment_competition": 0
+    },
+    "by_class": [
+      {
+        "matched": 180,
+        "no_peak": 243,
+        "below_threshold": 59,
+        "distance_suppressed": 1,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 235,
+        "no_peak": 593,
+        "below_threshold": 462,
+        "distance_suppressed": 2,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 53,
+        "no_peak": 31,
+        "below_threshold": 28,
+        "distance_suppressed": 0,
+        "assignment_competition": 0
+      },
+      {
+        "matched": 370,
+        "no_peak": 266,
+        "below_threshold": 277,
+        "distance_suppressed": 2,
+        "assignment_competition": 0
+      }
+    ],
+    "feasible_trials": 0,
+    "selected": null,
+    "maximum_grid_tumor_recalls": [
+      0.494824016563147,
+      0.5386996904024768
+    ]
+  }
+}
