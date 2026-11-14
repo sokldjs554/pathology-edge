@@ -1,0 +1,1 @@
+Patherea Breast-P1: Štepec et al., https://huggingface.co/datasets/ds2268/patherea , CC BY-NC4.0. This archive includes model weights and derived aggregate metrics; no original tissue RGB or per-cell annotation files. Research/noncommercial scope. No clinical/whole-WSI/new-heldout performance claim. Fitting120 images are training data, not an independent validation set.

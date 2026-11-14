@@ -1,0 +1,31 @@
+{
+  "evidence_zip": {
+    "bytes": 2063627,
+    "sha256": "ed038cef90a0349e735023725ee2674262a8308472718ac2107b09eb33b599d3",
+    "members": 87,
+    "crc_and_member_hashes_verified": true
+  },
+  "files": {
+    "verification.json": "5d3cb06f3ffc345f3195245d4ee10f1284e90ca3f8029202c6277d95e2e8ff06",
+    "spike-audit.json": "dba8e7205516308e5560186664d3a3dda28e9acb9f888e6a0cc78fc458fec9cb",
+    "saved-error-diagnosis.json": "11a04b81e97753ec5d8c2c08dbf8791ca4f51f61696f0c4d67665b2ed6f4f535",
+    "space-recovery.json": "1ab926b112c66be497702621672dfc27066496cac5278b62e30f257cc9559099",
+    "evidence.zip": "ed038cef90a0349e735023725ee2674262a8308472718ac2107b09eb33b599d3",
+    "DATA-NOTICE.txt": "e3004c55e0dc9170db3a7d9f977954c40a8c3c5b27efa77fd72b7aebbfb57d38",
+    "loss-decision.json": "ca194e1186df7b45e76bc2ce864bb91bac4de208a0052b49baaec49459178524",
+    "smoothing/audit.json": "a266b911ae8799f493dbc6979c292b2ba27a9fefdc6e76ad5f60c9b3bc102da9",
+    "smoothing/result.json": "170a120a21bedf9efb1c63a18930c0fcc2c5b22e12630d7b99981f83a2a41e1c",
+    "smoothing/protocol.json": "1f17f76211696dc941819ed72e2bb6a734c0fbed4fb8653e875d8e2e69dc5f29",
+    "spike-soft_mse/initial-tensors.json": "526d7bdc2297eefb86688281bb403625d3225f41fb5c2e2b7b409e38931ce327",
+    "spike-soft_mse/result.json": "055279a4646cb19512e7704b1e0ae89325a564747ca9d31936b81deba914d1fb",
+    "spike-soft_mse/protocol.json": "be18fb1083c08dd6fda48e9c4cbe85ae5b8d4749f52fa312824404abcb69fb45",
+    "spike-focal/initial-tensors.json": "526d7bdc2297eefb86688281bb403625d3225f41fb5c2e2b7b409e38931ce327",
+    "spike-focal/result.json": "1d5f5bb5b6ed755533e4181cbbcec50d5cebde38048ece77096136496857d709",
+    "spike-focal/protocol.json": "956bf134e35cf708d8761d763d397bb5f8ecc64500bfe137a667d9052cb60c10",
+    "spike-soft_bce/initial-tensors.json": "526d7bdc2297eefb86688281bb403625d3225f41fb5c2e2b7b409e38931ce327",
+    "spike-soft_bce/result.json": "f8916ef3bf64f4045498568642c22f9fca815ecb023d57d474fed1d714fa3dc2",
+    "spike-soft_bce/protocol.json": "e179eb9db99e735e05929c51929a63d2e3dc2e33555d267968b842f6174781be",
+    "final-review.json": "15f57ae8854438a7b83872aae8b9c52c4d3bc7d884d4f3ade1025e9582094318",
+    "implementation-ci.json": "6e607bc9d0e62f0701772819a70171cb0928e508286a6d0c3a3710f758ec301e"
+  }
+}

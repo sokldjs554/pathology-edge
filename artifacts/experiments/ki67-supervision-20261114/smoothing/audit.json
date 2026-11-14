@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "checkpoint_image_replays": 120,
+  "derived_maps": 600,
+  "metric_checks": 180,
+  "selected_sigma": null,
+  "heldout_inference_images": 0,
+  "kernel_method": "Explicit normalized exp(-x^2/2sigma^2) convolve1d, reflect, two axes; independent NMS; common existing peak/matching primitive",
+  "input_hashes": {
+    "/workspace/pathology-edge-auto-ki67/work/ki67-supervision-20261114/smoothing-spike/protocol.json": "1f17f76211696dc941819ed72e2bb6a734c0fbed4fb8653e875d8e2e69dc5f29",
+    "/workspace/pathology-edge-auto-ki67/work/ki67-supervision-20261114/smoothing-spike/result.json": "170a120a21bedf9efb1c63a18930c0fcc2c5b22e12630d7b99981f83a2a41e1c",
+    "/workspace/pathology-edge-auto-ki67/work/ki67-supervision-20261114/smoothing_spike.py": "f9f35bb57d5b0034106672bce79d9aaad0633a6934de9d15fea37267ad30c059",
+    "/workspace/pathology-edge-auto-ki67/work/normalized-centers-20261114/width16-seed20261117/diagnostic.pt": "400505dbc7515a61b70b7922553e41b49446ec22313483d59dd106b426e5ba9e"
+  },
+  "audit_source_sha256": "9b9754de749d633b5616846ca9a74be12b813ed9f68dfc501d683ec9c7187a45"
+}
