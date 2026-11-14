@@ -28,5 +28,14 @@
   "audit_limitations": [
     "Training normalizer audit compares saved pool report with checkpoint, not an independent train-proposal recomputation.",
     "Eligible holdout branch recounts saved metrics/coordinates; not a full authoritative GT/image/model replay. This run has no eligible holdout branch."
-  ]
+  ],
+  "final_code_ci": {
+    "source_commit": "54091efd6956e465f3f9c192bfd0376b8e67d12b",
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43574653698",
+    "tests_passed": 646,
+    "dice_checks": 42,
+    "mean_checks": 6,
+    "static_demo_passed": true,
+    "conclusion": "success"
+  }
 }

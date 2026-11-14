@@ -2,7 +2,7 @@
 
 이번에는 첫 화면만 확인한다. 학습이나 코드를 다시 실행할 필요는 없다.
 
-1. `PathologyEdge-Localization-Review-20261114.zip`을 내려받아 압축을 푼다.
+1. [검토 ZIP](../artifacts/handoff/PathologyEdge-Localization-Review-20261114.zip)을 내려받아 압축을 푼다.
 2. `index.html`을 브라우저로 연다. A(기존), U(통합), S(원래 좌표), R(보정 좌표) 네 패널이 같은 원영상인지 확인한다.
 3. `R 위치 보정 화살표`를 껐다 켠다. R의 흰 화살표만 바뀌고 저장된 후보 수·TP·FP·FN은 그대로여야 한다.
 

@@ -14,7 +14,9 @@
   "dice-audit.log": "7fbf595af3757da7c4271573504587ad31b3c3762a2b6be9dc9c3f2322f328e4",
   "external-not-run.json": "ba26478cde074c78277aecde6a4e1c897208f9ffb9a439158939707f4c272a05",
   "failure-analysis.json": "dc12d816e9ac7230ed1a2fc11c067b0289f0dc77b72127180aedad9ca17fb2a1",
+  "final-ci.log": "759df6499f120b3cd72c4ecc04b3a81522fc2eed1577140e3fb2f0c13fcf5130",
   "final-focused.log": "01b775fba7c828fb700a762d3b03b491f7397ea2cf16247b2b053a4500c65e1d",
+  "final-review.json": "816400c0692eb7e07e6dd7b3cfacfcb4c69e9122928a344dce162e0d232861cf",
   "fit-started.json": "a2d37461ef1804e9004824d60fc695f043f51155e99b2f048ab4ad8425aa90e1",
   "fit.log": "b2604e63a37038cf179e6cec998ac868fd6d200f6b813be249cdb29610fdcba7",
   "frozen_source/pathology_edge/__init__.py": "3b4c0a8193702260ad16a234c8023c34659ffb1831aa6b598dc36ed68a182e21",
@@ -88,5 +90,5 @@
   "validation-output-20261117.npz": "35b6d3e792343866fe950013c4ee3a18ce0654af2cc7f7d2ca8807bbdec1a155",
   "validation-output-20261118.npz": "8e936ea0775cd799fc308cf88a70448517bec3de9d726a35200aa972e3cb38c7",
   "validation-output-20261119.npz": "66b5249f6e872ed6673526d7ebb5e29713247c1df9fd6542f00f318d36b8c259",
-  "verification.json": "3ef3c5c289b022b2ff3e28c451de7fb7ec9e7bd3f4cc2e51a4c65c76ea5faae5"
+  "verification.json": "9128d990e83306086a339ab1c0d440198e57eff4605637ffc2618469fffc6ec3"
 }

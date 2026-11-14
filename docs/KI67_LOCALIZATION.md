@@ -52,7 +52,7 @@ A는 기존 검출기, U는 후보 통합, S는 새 점수로 원래 좌표에�
 
 학습 소스: `f16a726e59279c1ce1e19f764a52c2487087f6a6`. 고정 프로토콜, 학습 손실, 모든 epoch 점수·정수 좌표, 진단용 체크포인트3개, 선택 잠금, 미실행 기록을 보존한다. 검증의 최종 수치는 원본 폴더의 `audit.json`, `verification.json`, `review/browser.json`을 기준으로 한다.
 
-검증 완료: 집중 회귀75개, 저장 Dice42개·평균6개 일치, 독립 감사1512조합·681건 재추론 대조. Chromium1440×1000/390×844에서6개 예제의 동일 영상·수치·원래→보정 좌표 대응, 화살표 전환, 후보 표시, 이전/다음과 가로 넘침을 확인했다. 콘솔 오류0. 학습 소스 f16a726의 깨끗한 CI는643개 검사를 통과했다. 최종 감사·화면 소스의 추가 CI는 `verification.json`에서 별도로 기록한다.
+검증 완료: 집중 회귀75개, 저장 Dice42개·평균6개 일치, 독립 감사1512조합·681건 재추론 대조. Chromium1440×1000/390×844에서6개 예제의 동일 영상·수치·원래→보정 좌표 대응, 화살표 전환, 후보 표시, 이전/다음과 가로 넘침을 확인했다. 콘솔 오류0. 학습 소스 f16a726의 깨끗한 CI는643개 검사를 통과했다. 최종 감사·화면 소스54091ef의 [CI](https://github.com/sokldjs554/pathology-edge/actions/runs/43574653698)에서646개 검사와 저장 Dice·기존 데모 검사가 모두 통과했다. 로컬 전체 검사는 디스크 제약 때문에 실행하지 않았다.
 
 [데스크톱](../artifacts/experiments/ki67-localization-20261114/review/desktop.png) · [작은 화면](../artifacts/experiments/ki67-localization-20261114/review/mobile.png) · [FP·FN 조건 세부 표](../artifacts/experiments/ki67-localization-20261114/review/joint-settings.png).
 

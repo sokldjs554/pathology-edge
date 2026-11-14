@@ -40,6 +40,8 @@ Files `src/pathology_edge/ki67_localization_experiment.py`, `scripts/run_ki67_lo
 Files `scripts/audit_ki67_localization.py`, `scripts/export_ki67_localization_review.py`, focused audit tests; docs/results.
 - [x] RED tampered-correction/config/eligibility tests; independent saved-output aggregation/selection and checkpoint replays.
 - [x] Run audit and actual browser1440/390; preserve screenshots. Export explicit scope/offset-on/off and all seed outcomes.
-- [ ] Focused tests, stored Dice audit, clean exact-commit full CI, independent final review and fixes if important. Push existing draft PR, archive/download checks, user review pending.
+- [x] Focused tests, stored Dice audit, clean exact-commit full CI, independent final review and fixes if important. Push existing draft PR, archive/download checks, user review pending.
 
 Status: implementation, three-seed run,1512/681 audit,75 focused tests and1440/390 browser checks complete. Full eligibility0/3; original joint-only counts12/10/5. Final artifact review/CI/download confirmation tracked in experiment verification, not inferred from these checkboxes. User screen review remains pending.
+
+Final code54091ef CI646passed, Dice42/6 and demo checks passed. Fresh final reviewer noCritical/Important for actual run; documented future eligible-audit limits. Final archive/public SHA check tracked by delivery receipt.
