@@ -1,6 +1,8 @@
 # PathologyEdge — 자소서·포트폴리오 작성을 위한 Cowork 전달 자료
 
-**최신 통합 상태(2026-11-13 UTC):** [U97까지의 현재 요약](HANDOFF_U97.md)과 [최종 진행](FINAL_PROGRESS.md)을 먼저 읽어 주세요. 자동 Ki-67 패치 검출·CNN 분류, 후보 제거, 학습 중심, 재현율 조건 비교와 U87–U97의 확인 기록을 통합했습니다. 구현 완료와 성능 개선 성공은 구분합니다. [전달 자료 목록](../artifacts/handoff/README.md)의 새 묶음을 사용하며 이전 ZIP은 발행 당시 보관본입니다.
+**마지막 고정 실험 완료(2026-11-15 KST):** 실제 ImageNet 사전학습 특징과 무작위 고정 특징을 세 seed로 비교하고, 학습 케이스 균등 추출·실제 검출 중심의 자동 분류·고정 외부 평가를 완료했다. 내부 채택 0/3, 재사용 내부 test 종합 기준 1/3, 재사용 BCData133 기준 3/3, 새 DeepLIIF597 기준 1/3이다. 실행 완료와 성능 기준 통과를 구분하며, 추가 튜닝 없이 이번 시도로 종료한다. [전체 결과·검토 ZIP](KI67_FINAL_TRANSFER.md). 이번 자동 실행을 사용자 직접 수행으로 추가하지 않았으며 최신 확인 기록은 U106이다. 임상·전체 WSI 검증은 미실시이고 H&E 외부 악화 결과도 유지한다.
+
+**이전 통합 상태(2026-11-13 UTC):** [U97까지의 보관 요약](HANDOFF_U97.md)과 [최종 진행](FINAL_PROGRESS.md)에서 당시 기록을 확인할 수 있습니다. 자동 Ki-67 패치 검출·CNN 분류, 후보 제거, 학습 중심, 재현율 조건 비교와 U87–U97의 확인 기록을 통합했습니다. 구현 완료와 성능 개선 성공은 구분합니다. [전달 자료 목록](../artifacts/handoff/README.md)의 새 묶음을 사용하며 이전 ZIP은 발행 당시 보관본입니다.
 
 [Cowork 전달 ZIP 직접 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Cowork.zip) · [파일 목록·SHA256](../artifacts/handoff/manifest.json). 문서와 실제 오류 그림 8개를 포함한 약2.1MB 묶음입니다. ZIP 안의 근거 링크는 커밋 `540b6e3`에 고정되어 있습니다.
 
