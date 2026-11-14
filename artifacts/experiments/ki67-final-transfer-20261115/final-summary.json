@@ -1,0 +1,270 @@
+{
+  "training_source_commit": "982bad0091a29b6754db12186b5fbaa801ce9be3",
+  "all_steps_executed": true,
+  "internal_adopted": 0,
+  "stages": {
+    "validation": {
+      "seeds": [
+        {
+          "seed": 20261117,
+          "eligible": false,
+          "passed": false
+        },
+        {
+          "seed": 20261118,
+          "eligible": false,
+          "passed": false
+        },
+        {
+          "seed": 20261119,
+          "eligible": false,
+          "passed": false
+        }
+      ],
+      "denominator": 3,
+      "passes": 0,
+      "all_three_passed": false,
+      "adopted_seeds": 0,
+      "new_inference_images": 227,
+      "model_image_predictions": 1362,
+      "scope": "Reused validation",
+      "all_checks_passed": true,
+      "evidence_hashes": {
+        "started.json": "b7e0cf5f116040524bdeef233f7aeac424cf2596db5129c268c7d9aca076b5e1",
+        "20261118/comparison.json": "29d238a5967c6fd6f9c2bd86f3326ecaca95d630ca96baa9b5e31da67f5bdd7f",
+        "20261118/A.json.gz": "43f511557ea758c5f9715af2c314eb0deb0b3cfe891c54877edb3baecd1ff2a9",
+        "20261118/B.json.gz": "7b8ce167892fa00f44aad02330c1b1b5acccc4b719aac8c589fc0fb97342afc3",
+        "20261118/scores.json.gz": "7c4cac17b317a17d21d822674c252f689befc5f85bb01a5e8145b63b66ae24a9",
+        "20261119/comparison.json": "9187a80b750eea82bbdfb44856d83cd21fa359941659949689b58c85b87d5b7b",
+        "20261119/A.json.gz": "4453e20def63fdab09a7cecdacd087b6c248c02dbbac5b3a79a2d322cc6fa84c",
+        "20261119/B.json.gz": "d70c2f43a0a06864cc9f98479d06c15b4f65295da430d9f0229aaa9c5554d8a8",
+        "20261119/scores.json.gz": "67cb83a5a7060b176a64c86b35d00cffcfbbec5a8a2c072d9f0b7bb6d46b8ee6",
+        "20261117/comparison.json": "a2e79037f032bcad4a0507db6a00121bbeed0d3c8e9324cdf02216afd915e239",
+        "20261117/A.json.gz": "c338e584fbf16603289b80537ae64ac0828de44b91eb66977fa9f73e808bb6be",
+        "20261117/B.json.gz": "1ceb71ac31c5fa9e031b0a82ee9e7151c9e798e156e5c440ffada174b54dee68",
+        "20261117/scores.json.gz": "f6b933712efa8dd59e3b18979cc7a4a37922052e04b19a9193e3232929b003f3"
+      }
+    },
+    "test": {
+      "seeds": [
+        {
+          "seed": 20261117,
+          "eligible": false,
+          "passed": false
+        },
+        {
+          "seed": 20261118,
+          "eligible": false,
+          "passed": false
+        },
+        {
+          "seed": 20261119,
+          "eligible": false,
+          "passed": true
+        }
+      ],
+      "denominator": 3,
+      "passes": 1,
+      "all_three_passed": false,
+      "adopted_seeds": 0,
+      "new_inference_images": 407,
+      "model_image_predictions": 2442,
+      "scope": "Reused test",
+      "all_checks_passed": true,
+      "evidence_hashes": {
+        "started.json": "f49f399a80ea92249994962894e41bdf1105c58fb1461ad8b32ea6a819b27d6a",
+        "20261118/comparison.json": "0d41b11445cca55252765b63ed61f7b7cc9bd11f60864463e0264c95f0c47f12",
+        "20261118/A.json.gz": "74b37d1a164a7fd5153b1128dfbe46823b6197a278aae96598e97ca4f59893e4",
+        "20261118/B.json.gz": "b973aeed0d465afbedf1848ec2447fb939b50fd49d2a876824f309a0e805572b",
+        "20261118/scores.json.gz": "b1bec707852c6cb4b064cc7e5bd8cd168ceb1b0e21f12ce0d89a2050609814a9",
+        "20261119/comparison.json": "8c9453b11e383844e7b3271da260acbcc9cd7d81acd747d40c333bffd5166ac5",
+        "20261119/A.json.gz": "4a2289b77c8d090c8351cdea0836d95a233122c95478bb58c475b6f1fbcae62e",
+        "20261119/B.json.gz": "1154da8152bba60727dccb0c3f54e737f3a2e4e6cc247227fd98cf2540f7d580",
+        "20261119/scores.json.gz": "d480f701497a4c71c8e2b0af46b84cd2abf5a5ede4b60168ee837bc463a02157",
+        "20261117/comparison.json": "b06a9f2381acbe617d84210dd2e1afe69fcf9e9d8a59f8d1c52e10c5ef6f1eef",
+        "20261117/A.json.gz": "fae8429652c68d66e787159a19b439c34c6244edf0b7b825d3a183d0ce4f1b69",
+        "20261117/B.json.gz": "97c0d0c051c5737ea750ff8c4dad69693df06459780a85626f8ff23d8c694dab",
+        "20261117/scores.json.gz": "faae62a0c5550aecfdcbb231321d8fe36966fb21793721efd413e5cb5d8809d3"
+      }
+    },
+    "bcdata": {
+      "seeds": [
+        {
+          "seed": 20261117,
+          "eligible": false,
+          "passed": true
+        },
+        {
+          "seed": 20261118,
+          "eligible": false,
+          "passed": true
+        },
+        {
+          "seed": 20261119,
+          "eligible": false,
+          "passed": true
+        }
+      ],
+      "denominator": 3,
+      "passes": 3,
+      "all_three_passed": true,
+      "adopted_seeds": 0,
+      "new_inference_images": 133,
+      "model_image_predictions": 798,
+      "scope": "Reused bcdata",
+      "all_checks_passed": true,
+      "evidence_hashes": {
+        "started.json": "7b9918713025aec9ffbc17ba73b394e7f4481d8f802624d857b379249f3a2cbe",
+        "20261118/comparison.json": "f1f71d98ace9b8a15cba5bf67a1499ecac7f280bc1d9bb2d3ac9ec3c63f5bcf0",
+        "20261118/A.json.gz": "b761726d45aaff70d0bce8a0488fa9394c7df5c5ef941b15e94f683e21a9c57a",
+        "20261118/B.json.gz": "af6f7eaaa67b98bafc4f421640c1a98c361f2a37c1f625e7e488e0301cc5eab7",
+        "20261118/scores.json.gz": "f5a5518dcfbb46ad0d88c24a1d08cb079c825af3c8549df18d67c0f0c19bd3fc",
+        "20261119/comparison.json": "eaab91fbbe564ff5ddf795867dfcdeea0bbac878ca038992ad637a157e51f5df",
+        "20261119/A.json.gz": "ed82ea5e771c19bb6c60fe7dd2e93b72a03c3b9cb4c55b5cdfe8358386c9afd3",
+        "20261119/B.json.gz": "1097bf0c84180a45ca121ed898a7c7598ee2408bf35c0295cafb6dfa357151d5",
+        "20261119/scores.json.gz": "1ae68d1d19b6f8823216351ae9d26aa410681f5441df11a2e8f03c2ab68747d1",
+        "20261117/comparison.json": "8398e5cf613b803ddd3f88a59712b762c47fa64598904330e71b758fa9e4d80c",
+        "20261117/A.json.gz": "54960d6c31bc78db6ddd0b27d8631ec8c38eadcc4f16ea159db45364358884b6",
+        "20261117/B.json.gz": "20d5e4956cacba309cf8d23406069fce2aaa38947629d742e5534d07870f5b73",
+        "20261117/scores.json.gz": "e2be97199b84bbcdc346e03344aface80d9b2d7be78b8a35cac414346b727213"
+      }
+    },
+    "deepliif": {
+      "seeds": [
+        {
+          "seed": 20261117,
+          "eligible": false,
+          "passed": false
+        },
+        {
+          "seed": 20261118,
+          "eligible": false,
+          "passed": false
+        },
+        {
+          "seed": 20261119,
+          "eligible": false,
+          "passed": true
+        }
+      ],
+      "denominator": 3,
+      "passes": 1,
+      "all_three_passed": false,
+      "adopted_seeds": 0,
+      "new_inference_images": 597,
+      "model_image_predictions": 3582,
+      "all_checks_passed": true,
+      "primary_radius": 6,
+      "secondary_radius": 12,
+      "scope": "New external lung/bladder all-cell Ki67 staining and center benchmark, not tumor LI or H&E refinement",
+      "clinical_validation": false,
+      "whole_wsi_validation": false,
+      "limitation": "Segmentation-derived centroids, native pixels; patient/slide independence and MPP unverified; all-cell staining, not tumor Ki67",
+      "evidence_hashes": {
+        "started.json": "37d7cc91f8d6ebb10730e9eb947d9d4925946d0fdb486a41c530220ccc61eccd",
+        "input-audit.json.gz": "19fe928870ab1731c964b51346905e44bfd74755e698b23dd5b3821faa6f1bda",
+        "20261118/comparison.json": "01106108e4ac44875b8ddac56be785b59dab2ee1d3267ffcb8c4011db5a89029",
+        "20261118/A.json.gz": "1ea904ea72318ea80768b8d1143f6f35813ad030e72be0c310240caff63231d6",
+        "20261118/B.json.gz": "ee7e123bf026a8023a29764b310b70c50476e6c71fdaef2e44fb6ac670a2b520",
+        "20261118/scores.json.gz": "02c791a4fac502f258395d06c70e14107986e35e08bfc9459a986daf3aff23c7",
+        "20261119/comparison.json": "ed825ba15055bfd0586750b4281e1fb6fcac849882f6d0d501df708e5aaacdb6",
+        "20261119/A.json.gz": "b6ea42d02032a4ec55e41994068c784759b953a0b24e2a580bbea17efdf91c4e",
+        "20261119/B.json.gz": "2a42da3a2718775af347b3b142f48af9507b3c096ffea39281c1f7d5f2ba4e26",
+        "20261119/scores.json.gz": "f23ffcc30afe83ea4f976144b0a72afeb5a5db718ff182557069bc92756a33ef",
+        "20261117/comparison.json": "fcdd951cdf5154dc3352906219422d05cb4936031ed793ff89e7dda9ec31ce62",
+        "20261117/A.json.gz": "65b2beab0a58b45354e1fd2dbe2ff3aeed153e7b162cd1ae6c5c8976027bd691",
+        "20261117/B.json.gz": "f31ec17754fbb69c3bd6ff3a28fd703128a528c32b1428485a516d29ba28218b",
+        "20261117/scores.json.gz": "45b15f385ebe7f7eb3380d1bdd2e63ce7bfb53cab5991beedd65303211861b5c"
+      }
+    }
+  },
+  "audit": {
+    "all_checks_passed": true,
+    "trial_checks": 5184,
+    "checkpoint_replay_images": 1362,
+    "metric_summaries": 30,
+    "workers": [
+      {
+        "arm": "pretrained",
+        "seed": 20261117,
+        "all_checks_passed": true,
+        "trials": 864,
+        "checkpoint_replay_images": 227,
+        "official_feature_match": true,
+        "sampling_epochs_checked": 24,
+        "eligible": false,
+        "complete_sha256": "2bd6ebdfffc32f7d67321b796c06a9ff1ff2ca80fb4a327d57c1deaeff3d5590"
+      },
+      {
+        "arm": "pretrained",
+        "seed": 20261118,
+        "all_checks_passed": true,
+        "trials": 864,
+        "checkpoint_replay_images": 227,
+        "official_feature_match": true,
+        "sampling_epochs_checked": 24,
+        "eligible": false,
+        "complete_sha256": "a32032a14814c79e967fbdf68a313f4d8497b7787dca8d70e335681d6a143cf7"
+      },
+      {
+        "arm": "pretrained",
+        "seed": 20261119,
+        "all_checks_passed": true,
+        "trials": 864,
+        "checkpoint_replay_images": 227,
+        "official_feature_match": true,
+        "sampling_epochs_checked": 24,
+        "eligible": false,
+        "complete_sha256": "23ea4a24c446d4b5b188bb92f20c466d31ac9d93435e8e0e1f4c87c4f03c1fc8"
+      },
+      {
+        "arm": "random",
+        "seed": 20261117,
+        "all_checks_passed": true,
+        "trials": 864,
+        "checkpoint_replay_images": 227,
+        "official_feature_match": false,
+        "sampling_epochs_checked": 24,
+        "eligible": false,
+        "complete_sha256": "b9f68721255909fea1d320412dcd079a8480fbbfbb131f0f4a91e4a5d3a82bbc"
+      },
+      {
+        "arm": "random",
+        "seed": 20261118,
+        "all_checks_passed": true,
+        "trials": 864,
+        "checkpoint_replay_images": 227,
+        "official_feature_match": false,
+        "sampling_epochs_checked": 24,
+        "eligible": false,
+        "complete_sha256": "98f796c0908ddbcdfdebc3112ff8e024ef30d6fea99b11f6b6f49707fca503da"
+      },
+      {
+        "arm": "random",
+        "seed": 20261119,
+        "all_checks_passed": true,
+        "trials": 864,
+        "checkpoint_replay_images": 227,
+        "official_feature_match": false,
+        "sampling_epochs_checked": 24,
+        "eligible": false,
+        "complete_sha256": "7fe075148728ebd98451e2f8e779c9ae5be38ddd2e3099c1a6fc6de20ac9c9f9"
+      }
+    ],
+    "scope": "Independent NMS/selection/metric accumulation; shared tested matching and peak primitives. Full selected validation checkpoint replay; heldout saved outputs recounted, not full heldout model replay.",
+    "learner_files_preserved": true,
+    "evaluation_lock_sha256": "a63085625d14d0438ef23d6f8652559cdc34464ffb0412a1f6a4d5401a85653a",
+    "stage_summary_hashes": {
+      "validation": "f3dddc03cbf72d1e8b72206eeb7e9b06bedd07a0c22a1d161f55ef33294271d8",
+      "test": "2e0b0018d485fd9c91c3b78d1ce1006f1cb37b3185ee15854d39111bccb0b2c0",
+      "bcdata": "7108103dfd78954946816d6ce4b4d873ffc57576382dcca226e53e5fe6f9351a",
+      "deepliif": "5d38b27203fee5e7597f4b4c240c5da5c89d8b0039020a65fc764633b177bb76"
+    },
+    "reference_review_summary_sha256": "e754cd146b3b44ffc64eec686fece809c6275994624ccc05b804341c501481dd"
+  },
+  "live_model_changed": false,
+  "user_new_execution_or_review_claimed": false,
+  "clinical_validation": false,
+  "whole_wsi_validation": false,
+  "stop_after_this_fixed_attempt": true
+}

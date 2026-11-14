@@ -1,0 +1,63 @@
+{
+  "archives": [
+    {
+      "file": "artifacts/experiments/ki67-final-transfer-20261115/evidence-primary.zip",
+      "bytes": 66975913,
+      "sha256": "21e976f5abce29263df4cda6a9bc7a748a350b9d14ab510d0819d2464573af82",
+      "members": 355,
+      "crc_and_members_verified": true
+    },
+    {
+      "file": "artifacts/experiments/ki67-final-transfer-20261115/evidence-controls.zip",
+      "bytes": 42524355,
+      "sha256": "bbe562d2f86fe46c8fcd451090ec7599cec627420945aab5674fb99874b663e2",
+      "members": 47,
+      "crc_and_members_verified": true
+    },
+    {
+      "file": "artifacts/handoff/PathologyEdge-FinalTransfer-20261115.zip",
+      "bytes": 4610073,
+      "sha256": "bf766beaf008baaca58e5292ab322263e7e9ace22a641aa99db0d10e60d81138",
+      "members": 12,
+      "crc_and_members_verified": true
+    }
+  ],
+  "excluded": [
+    {
+      "path": "evaluation/bcdata/20261117/A.json.gz",
+      "sha256": "54960d6c31bc78db6ddd0b27d8631ec8c38eadcc4f16ea159db45364358884b6",
+      "bytes": 141907,
+      "reason": "BCData individual cell coordinates withheld; aggregate scores and hashes retained"
+    },
+    {
+      "path": "evaluation/bcdata/20261117/B.json.gz",
+      "sha256": "20d5e4956cacba309cf8d23406069fce2aaa38947629d742e5534d07870f5b73",
+      "bytes": 186277,
+      "reason": "BCData individual cell coordinates withheld; aggregate scores and hashes retained"
+    },
+    {
+      "path": "evaluation/bcdata/20261118/A.json.gz",
+      "sha256": "b761726d45aaff70d0bce8a0488fa9394c7df5c5ef941b15e94f683e21a9c57a",
+      "bytes": 138987,
+      "reason": "BCData individual cell coordinates withheld; aggregate scores and hashes retained"
+    },
+    {
+      "path": "evaluation/bcdata/20261118/B.json.gz",
+      "sha256": "af6f7eaaa67b98bafc4f421640c1a98c361f2a37c1f625e7e488e0301cc5eab7",
+      "bytes": 187963,
+      "reason": "BCData individual cell coordinates withheld; aggregate scores and hashes retained"
+    },
+    {
+      "path": "evaluation/bcdata/20261119/A.json.gz",
+      "sha256": "ed82ea5e771c19bb6c60fe7dd2e93b72a03c3b9cb4c55b5cdfe8358386c9afd3",
+      "bytes": 149053,
+      "reason": "BCData individual cell coordinates withheld; aggregate scores and hashes retained"
+    },
+    {
+      "path": "evaluation/bcdata/20261119/B.json.gz",
+      "sha256": "1097bf0c84180a45ca121ed898a7c7598ee2408bf35c0295cafb6dfa357151d5",
+      "bytes": 185641,
+      "reason": "BCData individual cell coordinates withheld; aggregate scores and hashes retained"
+    }
+  ]
+}

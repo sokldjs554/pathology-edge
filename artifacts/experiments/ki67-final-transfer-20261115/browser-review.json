@@ -1,0 +1,152 @@
+{
+  "all_checks_passed": true,
+  "browser": "Chrome/156.0.8078.79",
+  "review_sha256": "ee205ab360827c6d12a7c9b4c0fe3c6cb3e192c04e9e1581e46ee963149ac2d9",
+  "script_sha256": "c392e79ccea235609c52c53d4d31dd5247b437814419df1ece8728c09fa08ec3",
+  "source": "Automated actual Chromium via CDP on localhost HTTP; managed browser file:// access unavailable; not user-performed",
+  "combinations": 18,
+  "checks": [
+    {
+      "example": 0,
+      "seed": 20261117,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 0,
+      "seed": 20261118,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 0,
+      "seed": 20261119,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 100,
+      "seed": 20261117,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 100,
+      "seed": 20261118,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 100,
+      "seed": 20261119,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 200,
+      "seed": 20261117,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 200,
+      "seed": 20261118,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 200,
+      "seed": 20261119,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 300,
+      "seed": 20261117,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 300,
+      "seed": 20261118,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 300,
+      "seed": 20261119,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 400,
+      "seed": 20261117,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 400,
+      "seed": 20261118,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 400,
+      "seed": 20261119,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 596,
+      "seed": 20261117,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 596,
+      "seed": 20261118,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    },
+    {
+      "example": 596,
+      "seed": 20261119,
+      "same_image": true,
+      "counts_match": true,
+      "overlay_metrics_invariant": true
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1033,
+      "horizontal_overflow": false,
+      "sha256": "8dba7cd24274fe86c36d824ada8ce0a83442c5ad5424d3366fd32b299e95d60f"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 2398,
+      "horizontal_overflow": false,
+      "sha256": "de8a95d52bd4dbb540024c2b5f5fa57759ee5c73310e438c40bb77e70473a491"
+    }
+  ]
+}
