@@ -48,4 +48,4 @@ Files: scripts/audit_ki67_transfer.py; docs/KI67_FINAL_TRANSFER.md; artifacts/ex
 
 - [x] Independently recompute selected NMS/metrics and selected checkpoint outputs; audit encoder/head initialization and unchanged learner files.
 - [x] Run appropriate tests and existing CI; obtain fresh full-change review and fix actual errors.
-- [ ] Publish report/evidence/receipt in existing draft PR; verify downloadable evidence hash. Record final success/miss without another tuning round.
+- [x] Publish report/evidence/receipt in existing draft PR; verify downloadable evidence hash. Record final success/miss without another tuning round.

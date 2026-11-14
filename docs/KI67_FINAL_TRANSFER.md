@@ -138,3 +138,5 @@ BCData에서는 종양 예측만 참조 종양 좌표와 대응한다. DeepLIIF�
 [작은 검토 ZIP](../artifacts/handoff/PathologyEdge-FinalTransfer-20261115.zip) · [전체 증거와 해시](../artifacts/experiments/ki67-final-transfer-20261115/) · [데스크톱 캡처](../artifacts/experiments/ki67-final-transfer-20261115/screenshots/desktop.png) · [작은 화면 캡처](../artifacts/experiments/ki67-final-transfer-20261115/screenshots/mobile.png).
 
 이 실험은 별도 IHC 중심 검출기 비교다. 이전 H&E 보정 모듈의 MoNuSeg·NuCLS 외부 악화 결과를 바꾸거나 대체하지 않는다. 코드·결과는 `feat/auto-ki67`의 초안 PR #2에 보존하며 기존 공개 데모는 유지한다.
+
+공개 증거 커밋은 `6153ddb64b672f0842810ef4b66a3b232169db4d`다. 세 ZIP을 로그인 없이 다시 다운로드해 SHA256·CRC·내부 파일 해시를 확인했으며 [게시 검증 기록](../artifacts/experiments/ki67-final-transfer-20261115/publication.json)에 남겼다. 해당 커밋의 [CI](https://github.com/sokldjs554/pathology-edge/actions/runs/43621560876)도 799개 검사(23.79초), 저장 Dice42/42개·평균6/6개, 기존 정적 데모 검사를 통과했다. ZIP은 발행 당시 고정본으로 유지한다.
