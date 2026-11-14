@@ -22,6 +22,8 @@
 
 [정규화 검출기 후속 비교](docs/KI67_NORMALIZED.md): 두 너비 × 세 seed를 처음부터 학습했습니다. 주 모델의 검증 F1·재현율은 상승했지만 FP가 늘고 양성 종양 위치 재현율 하한에 미달하여 채택은 0/3입니다. 후속 자동 Ki-67·외부 평가 코드는 준비했으며, 적격 모델이 없어 새 모델의 해당 추론은 실행하지 않았습니다. [실제 사례 확인](docs/STEP_92.md).
 
+[학습 표적·피크 정리 후속 진단](docs/KI67_SUPERVISION.md): 학습120장만으로 두 손실 대안과 지도 평활화를 비교했습니다. 미리 정한 진행 기준을 통과하지 못해 새3seed 본 학습·외부 추론과 모델 교체는 진행하지 않았습니다. 실패 근거와 검산 결과를 보존했습니다.
+
 [최신 통합 상태·U97](docs/HANDOFF_U97.md) · [Cowork 전달용 완료 작업·개인 구현 근거](docs/COWORK_HANDOFF.md) · [보정 head 3개 seed 실험](docs/REFINEMENT_REPEATS_RESULTS.md) · [MoNuSeg 외부 평가](docs/EXTERNAL_MONUSEG_VALIDATION.md) · [임상·전체 WSI 검증 상태](docs/CLINICAL_WSI_VALIDATION_STATUS.md)
 
 추가 보정 실험에서는 기존 TNBC validation10장의 3개 seed 평균 전체 Dice가 **0.555994→0.576699**였지만, 고정한 사용자 모델 쌍의 외부 MoNuSeg14ROI 평균은 **0.551974→0.534943**으로 하락했습니다. 두 실험은 모델·평가 범위가 달라 합산하지 않습니다. 공개 데모의 기존 결과는 유지합니다.
