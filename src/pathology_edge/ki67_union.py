@@ -86,6 +86,9 @@ def retain_candidates(points, scores, threshold, min_distance):
         raise ValueError('Invalid threshold/distance')
     if scores.shape != (len(points),) or scores.dtype.kind not in 'iuf' or not np.isfinite(scores).all() or np.any(scores < 0) or np.any(scores > 1):
         raise ValueError('Invalid retention scores')
+    # Normalize before negation and scalar comparisons. Unsigned negation wraps;
+    # float32 scalar comparison can round the configured cutoff down to a score.
+    scores = scores.astype(np.float64, copy=False)
     order = np.lexsort((points[:, 0], points[:, 1], -scores))
     kept, buckets = [], {}
     for i in order:

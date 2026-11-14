@@ -1,0 +1,32 @@
+# Candidate localization follow-up
+
+User request: fix the unsigned-score ordering bug and address three-seed FP/FN stability. Existing source/weights/evidence, seven learner files and public demo are preserved. Routine implementation choices below are the implementer's choices under that request, not claimed user-selected hyperparameters. No new dataset access, publication to the demo or clinical claim.
+
+## Evidence and alternatives
+
+Unsigned scores wrap under negation before sorting. Normalize validated scores to float64 before sorting/cutoff comparison. This also avoids float32 rounding of a Python cutoff; existing float64 inference is unchanged.
+
+The old RGB gate uses white-padded32px crops, GT/jitter/matched positive centers, and only interior24px negative proxies >12px from annotations. On the three diagnostic validation checkpoints, 2821/4542,2713/4166,3262/4665 FPs are in the24px edge band. Another1415/1322/1376 FPs are6–12px from annotations. These strata overlap; this is association, not causal proof. Training positives and actual candidate inputs differ, and rejecting a candidate cannot correct its location.
+
+Considered: (1) more threshold tuning—already1512 failed configurations; reject as primary strategy. (2) nonlinear tabular score fusion—CPU-friendly but does not recover misplaced centers and changes the model family. (3) candidate-native CNN with bounded center-offset prediction and reflected padding—chosen implementation because it directly tests input-distribution/padding/location weaknesses while keeping existing proposals/classifiers and the CPU PyTorch setup.
+
+## Fixed new protocol
+
+- Patherea train696/15cases, validation227/4cases; labels/manifest hashes unchanged. test407/10cases and BCData133 are previously exposed, only eligible models re-evaluated after all three selections lock.
+- Fixed learned proposal seeds20261117/18/19 and existing A configurations; union learned threshold.01/spacing4 plus LoG.1/8, exact-coordinate source bits. Never compare raw source scores as same units.
+- Three new CNNs paired to those seeds, not three new learned detectors. Same12epochs, Adam.001, batch64,CPU2threads; each epoch2×10751 sampled candidates.
+- Native reflected33×33 context centered at integer(16,16); train rotations/flips operate on that context and the offset vector, then[:32,:32] feeds the32px model. Inference takes the same[:32,:32] without augmentation. This avoids the1px anchor shift of rotating an even32 crop around(15.5,15.5); no resizing. Backbone two3×3 convolutions per block8/16/32, LeakyReLU.1,pool2; flatten512. Four image/proposal-only metadata values: learned heat at center, LoG response at center, learned source bit, LoG source bit. Train-only mean/std normalization. Metadata MLP4→16 LeakyReLU; concatenate528→two class logits plus528→two raw offset values. Offset head zero initialized.
+- Bounded offset: tanh raw values ×12px, then radial clip to norm≤12px. Loss: balanced binary CE + positive-only SmoothL1(beta.25) on offsets normalized by12. Inference uses np.rint nearest-even on center+offset and clips inside image; the12px bound is continuous, with at mostsqrt(.5)px additional integer norm from rounding, and actual integer coordinates/displacements are saved; deterministic score/y/x NMS handles coincident corrected points. No GT enters inference.
+- Positive proxy = actual union candidate within12px of its nearest annotation. Choose case uniformly, then represented GT uniformly, then candidate uniformly. Ties choose annotation input index consistently. No GT-centered or jittered synthetic positive crop. Negative proxy = candidate >12px from every GT, interior24px, max256 per image, no GT-empty-image negatives. This is neighborhood correspondence supervision, not expert cell/background truth. Candidate multiplicity and nearest-GT ambiguity are disclosed.
+- Equal positive/negative samples per batch, cases balanced within each label. Train-onlyrot90/flips transform both crop and XY offset target; RGB factors[.9,1.1]. Metadata scalar invariance under crop augmentation. No augmentation at validation/inference.
+- Same fourteen cutoffs0,.05,.1,.2,.3,.4,.5,.6,.7,.8,.9,.95,.99,1 and spacing4/6/8,12epochs. Primary selection uses corrected centers only. Same old joint FP/FN non-regression (one strictly lower), original LoG recall floors (.4797951648158369;270/483;439/1292), every valcase recall≥.9same-seedA. Tie order F1,recall,earlier epoch,higher cutoff,larger spacing. Do not weaken or expand after results.
+- Preserve all504 trials per seed. Failed seeds remain failed. Best-F1 diagnostic checkpoint is never an eligible model. All3 selections lock before any test/external access; no eligible models =>explicit zero-inference skips.
+- Compare A, union, candidate scorer without offsets and corrected centers. Offset-on/off use the same checkpoint/cutoff/spacing to measure the coordinate contribution; no independent post-test choice of the ablation.
+- Reused test criteria reported independently: joint FP/FN improvement/non-regression versus same-seedA and per-case recall≥.9A; positive/negative tumor location recall also compared. Three validation successes alone do not prove test stability or external generalization. BCData tumor-only class/ratio results do not become clinical or WSI evidence.
+- If new protocol fails, preserve failures and stop this round. No unbounded search until favorable results.
+
+## Engineering and evidence
+
+TDD for unsigned cutoff/NMS, crop borders, rotation/flip offset geometry, nearest-label/tie rules, bounded corrections, empty/nonfinite scores/offsets, train-only fit and no-eligible stage ordering. Freeze source/input/selection hashes; preserve old frozen source and artifacts even though current module hashes change. Audit old float64 retention against frozen implementation. Independently recompute new selection/counts from saved integer coordinates and float32 scores restored tofloat64; replay selected/diagnostic weights. Source code and learned predictions are separate evidence from user display confirmations.
+
+Publish report, failed/successful seed table and four-panel review at native coordinates, with pixel displacement arrows. Browser1440/390, exact-result metrics and no mobile overflow. Test via focused local suite plus clean CI full suite; local disk is bounded. Existing published Git ZIP working copies may be sparsely evicted only after blob/hash equality, with restoration record; no original dataset or run deletion.

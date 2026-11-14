@@ -109,3 +109,19 @@ def test_selection_tie_prefers_earlier_epoch_before_threshold(api):
     assert api.choose_trial([good,early],baseline,floors)['selected']==early
     good['split']='test'
     with pytest.raises(ValueError):api.choose_trial([good],baseline,floors)
+
+@pytest.mark.parametrize('dtype',[np.uint8,np.uint16,np.uint32,np.uint64])
+def test_unsigned_scores_keep_high_score_above_threshold(api,dtype):
+    result=api.retain_candidates(np.array([[0,0],[20,20]]),np.array([0,1],dtype=dtype),.5,4)
+    assert result['points_xy'].tolist()==[[20,20]]
+    assert result['indices'].tolist()==[1]
+
+@pytest.mark.parametrize('dtype',[np.uint8,np.uint64])
+def test_unsigned_scores_do_not_let_zero_suppress_one(api,dtype):
+    result=api.retain_candidates(np.array([[0,0],[2,0]]),np.array([0,1],dtype=dtype),0,4)
+    assert result['points_xy'].tolist()==[[2,0]]
+    assert result['indices'].tolist()==[1]
+
+def test_float32_cutoff_uses_score_value_not_rounded_threshold(api):
+    result=api.retain_candidates(np.array([[0,0]]),np.array([.7],dtype=np.float32),.7,4)
+    assert len(result['points_xy'])==0
