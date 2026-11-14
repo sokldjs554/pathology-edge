@@ -33,6 +33,6 @@ Interfaces audit(root)->report,export(root,review)->standaloneHTML; input saved 
 ### Task3: delivery
 - [x] Local relevant tests and stored Dice audit; clean full CI due local disk preconditions. Fresh final review of whole new range and any important fixes.
 - [x] Preserve original/results and write truthful report, manifest and standalone ZIP. User new review pending; U104 unchanged. Selection0/3, performance stability unmet.
-- [ ] Publish evidence, verify public download SHA, and update existing draft PR. Publication verification is the final delivery step.
+- [x] Publish evidence, verify public download SHA, and update existing draft PR. Evidence commit dbd95e2; ZIP 2,506,477 bytes, SHA256 ce3b326762cfb8db9834b4ef6ec6bc2a9323cf25308c5322fe20a3fd23402e90. PR2 remains draft. Current-head CI completion is checked separately in the PR before delivery.
 
 Actual run: frozen source d28c812, code audit53a6c08,3×24epochs,2700 audited settings,1362 checkpoint-image replays,eligible0/3,holdout inference0. Highest-F1 B epochs19/23/24. Independent final code and artifact reviews: no Critical/Important findings. Browser6examples1440/390 passed; file:// blocked by managed browser, local HTTP with embedded assets passed. Source CI668 tests+Dice42/6+static checks.
