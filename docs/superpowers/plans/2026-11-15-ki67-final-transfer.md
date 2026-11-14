@@ -39,13 +39,13 @@ Files: src/pathology_edge/ki67_transfer.py,ki67_transfer_experiment.py; tests/te
 Files: src/pathology_edge/ki67_transfer_evaluation.py; scripts/run_ki67_transfer_evaluation.py; tests/test_ki67_transfer_evaluation.py.
 
 - [x] Test seed coverage, immutable locks, diagnostic inclusion and undefined ratio coverage.
-- [ ] Implement fixed paired CNN classification at predicted centers; evaluate validation227, reusedtest407/BCData133, prospectiveDeepLIIF597.
-- [ ] Validate every external reference/CRC/hash/membership; record all seed outcomes, no selective exclusions.
+- [x] Implement fixed paired CNN classification at predicted centers; evaluate validation227, reusedtest407/BCData133, prospectiveDeepLIIF597.
+- [x] Validate every external reference/CRC/hash/membership; record all seed outcomes, no selective exclusions.
 
 ### Task3: Audit and close
 
 Files: scripts/audit_ki67_transfer.py; docs/KI67_FINAL_TRANSFER.md; artifacts/experiments/ki67-final-transfer-20261115/.
 
-- [ ] Independently recompute selected NMS/metrics and selected checkpoint outputs; audit encoder/head initialization and unchanged learner files.
-- [ ] Run appropriate tests and existing CI; obtain fresh full-change review and fix actual errors.
+- [x] Independently recompute selected NMS/metrics and selected checkpoint outputs; audit encoder/head initialization and unchanged learner files.
+- [x] Run appropriate tests and existing CI; obtain fresh full-change review and fix actual errors.
 - [ ] Publish report/evidence/receipt in existing draft PR; verify downloadable evidence hash. Record final success/miss without another tuning round.

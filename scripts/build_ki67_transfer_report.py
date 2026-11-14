@@ -13,6 +13,7 @@ def build(root):
     root=Path(root);p=checked(root,selected=True);audit=validate_audited(root);selection=read_json(root/'selection.json');primary=primary_models(selection)
     browser=read_json(root/'browser-review.json')
     if not browser['all_checks_passed'] or browser['review_sha256']!=sha(root/'review.html'):raise ValueError('Actual browser review of the current artifact required before closeout')
+    ci=read_json(root/'ci-source.json')
     stages={s:read_json(root/'evaluation'/s/'summary.json') for s in ('validation','test','bcdata','deepliif')}
     if not all(v['all_checks_passed'] for v in stages.values()):raise ValueError('All evaluations required')
     adopted=sum(m['selected'] is not None for m in primary);external=stages['deepliif']['passes'];internal=stages['test']['passes']
@@ -52,7 +53,7 @@ def build(root):
         for arm in ('A','B'):
             r=scores[arm];lines.append(f"|{m['seed']}|{arm}|{f(r['localization']['f1'])}|{f(r['macro_f1'])}|{f(r['case_ratio_mae_pp'])}|{r['case_ratio_valid']}/10|")
     lines += ['', '### 종합 기준과 개별 지표를 함께 읽기', '',
-              '내부 test의 기준은 FP·FN 동시 비악화(하나 이상 감소), 각 케이스 재현율이 A의 90% 이상, 두 종양 클래스의 위치 재현율 비악화, 모든 케이스의 양성률 분모 유지, 세포 F1 상승, 케이스 양성률 MAE 비악화다. 기준 미달의 크기도 아래에 그대로 표시한다.']
+              '내부 test의 기준은 FP·FN 동시 비악화(하나 이상 감소), 각 케이스 재현율이 A의 90% 이상, 두 종양 클래스의 위치 재현율 비악화, 모든 케이스의 양성률 분모 유지, 세포 F1 상승, 케이스 양성률 MAE 비악화다. 기준 미달의 크기도 아래에 그대로 표시한다.', '']
     for m in primary:
         c=read_json(root/'evaluation/test'/str(m['seed'])/'comparison.json')
         failures=[(k,a['recall'],c['B']['cases'][k]['recall']) for k,a in c['A']['cases'].items() if c['B']['cases'][k]['recall']<.9*a['recall']]
@@ -83,6 +84,10 @@ def build(root):
               '## 실행·검산·본인 작업 구분','',
               f"별도 검산에서 **{audit['trial_checks']}개 설정**, 선택 체크포인트 **{audit['checkpoint_replay_images']}건의 영상 재실행**, **{audit['metric_summaries']}개 지표 요약**을 대조했다. NMS·선택·집계는 별도 코드이며 일부 검증된 peak/matching 기본 함수는 공유한다. heldout 전체를 별도 모델로 다시 추론한 검증이라고 부르지 않는다.",
               '',
+              f"소스 `{ci['commit']}`의 [CI]({ci['url']})를 확인했다. 원본 검사 요약: `{' / '.join(ci['verification_lines'])}`. 별도 실제 Chromium 검사에서는 {browser['combinations']}개 예시·seed 조합, 같은 RGB/좌표·지표, 표시 전환 시 수치 유지, 1440px와 390px 화면을 확인했다. 가로 잘림은 없었으며 두 크기의 실제 캡처를 포함했다.",
+              '',
+              '환경 재연결 시 기존 후속 실행기의 종료 코드는 회수하지 못했다. 네 평가의 완료 파일과 해시가 모두 남아 있음을 확인한 뒤 검산·화면 생성부터 복구했고, 이 과정에서 학습이나 모델 추론은 다시 실행하지 않았다. `evaluation-launcher-recovery.json`과 종료 코드0의 `verification-recovery-steps.json`에 범위를 기록했다.',
+              '',
               '이번 학습·자동 평가·코드 검사·브라우저 확인은 자동 실행 작업이다. 사용자가 새 모델을 직접 학습/검토했다고 추가하지 않았다. 기존 사용자 작성7개 파일의 해시를 유지했으며 앞선 사용자 확인 기록도 소급 변경하지 않았다. 새 검토 화면의 사용자 확인은 아직 예정이다.',
               '',
               '## 직접 확인할 순서','',
@@ -92,7 +97,7 @@ def build(root):
               '',
               '- SqueezeNet1.1: https://github.com/pytorch/vision/blob/3ac97aa9120137381ed1060f37237e44485ac2aa/torchvision/models/squeezenet.py ; 소스 BSD3Clause 공지 포함. ImageNet 공개 가중치 사용이며 병리 사전학습 모델이 아니다.',
               '- Patherea Breast-P1: https://huggingface.co/datasets/ds2268/patherea ; CC BY-NC4.0.',
-              '- DeepLIIF: Ghahremani et al., DOI10.1038/s42256-022-00471-x ; https://zenodo.org/records/4751737 ; CC BY4.0.',
+              '- DeepLIIF: Ghahremani et al., DOI10.1038/s42256-022-00471-x ; https://zenodo.org/records/4751737 ; testing 자료는 CC BY4.0. 색상 확인에 참고한 공식 코드 스냅샷에는 Apache2.0 + Commons Clause 공지를 동봉했다. DeepLIIF 모델 자체를 실행하거나 재학습한 것은 아니다.',
               '- BCData: https://sites.google.com/view/bcdataset ; 비상업 연구용. 원영상과 개별 주석 좌표는 공개 증거 ZIP에 재배포하지 않는다.',
               '',
               '원자료와 이전 고정 실행 폴더가 있는 저장소 루트에서 `scripts/run_ki67_transfer.py`의prepare/fit/seal, `scripts/run_ki67_transfer_evaluation.py`의references/validation/test/bcdata/deepliif, `scripts/audit_ki67_transfer.py`를 순서대로 사용한다. 경로·원자료 해시가 다른 실행을 기존 결과 위에 덮어쓰지 않는다. 모델과결과는 연구·교육용이다.','']
