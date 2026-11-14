@@ -70,7 +70,7 @@ BCData133장은 이미 사용한 자료의 재평가이며 새 외부 검증이 
 - 구현 소스 e44fc024의 [깨끗한 CI](https://github.com/sokldjs554/pathology-edge/actions/runs/43585321383):715개 테스트, 저장 Dice42/42개·평균6/6개, 기존 정적 데모 검사를 통과했다. 최종 게시 커밋의 검사와 다운로드 검증은 publication.json에 별도로 기록한다. 로컬 전체 검사에는 디스크 사전조건이 맞지 않아 통과로 기록하지 않는다.
 - 새 화면의6개 실제 예제, 저장 좌표와 숫자, 이전/다음, 오버레이 전환,1440/390px를 Chromium에서 확인했다. 관리형 브라우저의 file:// 제한 때문에 로컬 HTTP로 확인했으며 직접 파일 열기는 검증하지 않았다.
 - 4CPU 할당·최대4학습 작업·작업당1thread로 실행했다. 원래 A 재현은2threads다. 학습·선택·저장 wall time은 동시 실행 조건의 기록이며 추론 속도 벤치마크가 아니다.
-- 사용자 작성7개 파일과 기존 dist는 변경하지 않았다. U105는 이전 추가학습 화면의 표시 전환 확인으로 유지한다. 이번 학습·새 검사·새 화면 검토를 사용자 직접 수행으로 기록하지 않았다.
+- 사용자 작성7개 파일과 기존 dist는 변경하지 않았다. U105는 이전 추가학습 화면의 표시 전환 확인으로 유지한다. 게시 후 사용자 응답으로 첫 정규화 예제의 화면과 FP14→6·FN10→4 표시 확인을 U106에 기록했다([별도 응답 기록](../artifacts/learning/step92-review.json)). 이번 학습·자동 검사·독립 검산을 사용자 수행으로 기록하지 않는다. 고정 ZIP과 실험 검증 기록의 확인 전 상태는 보존한다.
 
 [첫 확인 순서](STEP_92.md) · [검토 ZIP](../artifacts/handoff/PathologyEdge-Normalized-Review-20261114.zip) · [데스크톱 캡처](../artifacts/experiments/ki67-normalized-20261114/review/desktop.png) · [작은 화면 캡처](../artifacts/experiments/ki67-normalized-20261114/review/mobile.png)
 

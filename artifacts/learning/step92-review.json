@@ -1,0 +1,40 @@
+{
+  "step": 92,
+  "contribution_id": "U106",
+  "recorded_date": "2026-11-14",
+  "timezone": "Asia/Seoul",
+  "confirmation_recorded_at": "2026-11-14T23:16:54.540539+09:00",
+  "status": "first_example_and_requested_fp_fn_display_confirmed",
+  "user_response": "응 잘 보이는거 확인했어",
+  "scope": "User reports the first normalized-detector review example and requested FP14→6 / FN10→4 values are visible. This records display confirmation, not independent numeric or coordinate verification.",
+  "evidence_path": "artifacts/experiments/ki67-normalized-20261114/review/index.html",
+  "source_evidence_commit": "0db31e14108b533eb1adfe7b649faaed3e52a540",
+  "published_review_zip_sha256": "0f890889921ae10eeb87bf9d162c904ec20693bd51ad6d750a88489b1986ac89",
+  "requested_example": {
+    "image": "case_0019_region_1_patch_4_O.png",
+    "seed": 20261117,
+    "A": {
+      "fp": 14,
+      "fn": 10
+    },
+    "B": {
+      "fp": 6,
+      "fn": 4
+    }
+  },
+  "help_provided": "Provided standalone ZIP and asked the user only to open index.html and check that FP14→6 / FN10→4 are visible in the first example.",
+  "first_example_display_confirmed": true,
+  "requested_fp_fn_values_visible_confirmed": true,
+  "user_separately_transcribed_image_or_values": false,
+  "overlay_toggle_confirmed": false,
+  "same_image_across_two_panels_separately_confirmed": false,
+  "other_examples_or_viewports_confirmed": false,
+  "user_independent_coordinate_audit": false,
+  "user_independent_numeric_audit": false,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "performance_stability_proven_by_this_confirmation": false,
+  "historical_pending_snapshot": "Published ZIP, frozen experiment verification, browser checks and publication receipt retain their pre-confirmation state. This later receipt records the user response."
+}
