@@ -6,20 +6,20 @@
 
 | 구분 | 확인할 수 있는 범위 | 코드·상태 |
 |---|---|---|
-| 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | [`main`](https://github.com/sokldjs554/pathology-edge/tree/main)의 공개 화면·저장 결과 |
+| 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | 저장 결과: [`main`](https://github.com/sokldjs554/pathology-edge/tree/main) · 배포 UI: [`feat/linked-pathology-workbench`](https://github.com/sokldjs554/pathology-edge/tree/feat/linked-pathology-workbench), main 미병합 |
 | 후속 연구 | 자동 IHC 패치 검출·분류, 사전학습 대조, 추가 외부 평가 | [`feat/auto-ki67`](https://github.com/sokldjs554/pathology-edge/tree/feat/auto-ki67) · [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2), main 미병합·공개 데모 미적용 |
 
 연구·교육용 독립 프로젝트입니다. 공개 웹 화면은 **사전 계산된 실제 결과**를 표시합니다. 실제 모델 추론은 아래 CLI로 실행하며, 임상 진단·치료용 도구가 아닙니다.
 
 ## 화면에서 확인하기
 
-1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 예제 선택 → ‘좋아진 경계 보기’ 또는 ‘나빠진 경계 보기’ → 같은 위치의 A/B와 정답·오류 픽셀 비교. 확대·이동과 후보 억제 출처도 확인합니다.
+1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 예제 선택 → ‘좋아진 경계 보기’ 또는 ‘나빠진 경계 보기’ → 같은 위치의 A/B와 정답·오류 픽셀 비교. 확대·이동과 후보 억제 출처도 확인합니다. **후보 표**의 행을 누르면 양쪽 영상의 같은 위치와 상세 확대 조각이 연결됩니다.
 2. **[WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)**: 전체 슬라이드 확대 → R1–R3 선택 → 해당 ROI의 예측 차이 확인. 전체 슬라이드 탐색과 일부 ROI의 분석을 구분합니다.
 3. **[IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html)**: 예제와 세포 선택 → 정답·예측 클래스 비교. 이 공개 화면은 정답 중심 좌표가 주어진 분류 실험입니다.
 
-![같은 위치의 핵 분할·패치 경계와 정답 기반 차이를 비교하는 작업대](artifacts/ui/interview/after-improved.png)
+![슬라이드 탐색·동기화 영상·후보 데이터를 연결한 작업대](artifacts/ui-linked-workbench-20261116/after-desktop.png)
 
-[WSI 전체 탐색 화면](artifacts/ui/wsi/wsi-overview.png) · [악화 사례](artifacts/ui/interview/after-worsened.png) · [UI 조사·설계](docs/UI_REVIEW.md)
+[WSI 전체 탐색 화면](artifacts/ui/wsi/wsi-overview.png) · [악화 사례](artifacts/ui/interview/after-worsened.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md)
 
 ## 직접 담당한 범위
 
@@ -84,7 +84,7 @@ Dice는 높을수록 정답 영역과 잘 겹칩니다. 표의 Dice는 원본 �
 **화면만 보려면** 위 공개 데모를 여세요. 로컬 화면에는 Git과 Python 3만 필요합니다. 아래 명령은 상위 작업 폴더에서 시작합니다.
 
 ```bash
-git clone --depth 1 --filter=blob:none --sparse https://github.com/sokldjs554/pathology-edge.git pathology-edge
+git clone --depth 1 --filter=blob:none --sparse --branch feat/linked-pathology-workbench https://github.com/sokldjs554/pathology-edge.git pathology-edge
 cd pathology-edge
 git sparse-checkout set dist
 python3 -m http.server 8000 --directory dist --bind 127.0.0.1
