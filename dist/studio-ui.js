@@ -4,10 +4,10 @@ window.Studio = {
   layout: 'compare',
   comparison: 'two',
   updateViewState() {
-    $('viewState').textContent = this.layout === 'image' ? 'B 결과 탐색 중' : this.layout === 'data' ? '후보 데이터 · B 결과' : this.comparison === 'four' ? 'A/B · 원본 · 정답 비교' : 'A/B 경계 비교 중';
+    $('viewState').textContent = this.layout === 'image' ? 'B 결과 탐색 중' : this.layout === 'data' ? '후보 데이터 · B 결과' : innerWidth <= 760 ? 'A/B 버튼으로 같은 위치 전환' : this.comparison === 'four' ? 'A/B · 원본 · 정답 비교' : 'A/B 경계 비교 중';
   },
   updateFilmstrip() {
-    const four = this.layout === 'compare' && this.comparison === 'four' && innerWidth > 760;
+    const four = this.layout === 'compare' && this.comparison === 'four';
     if (four !== !!this.fourActive) {
       if (four) this.trayWasHidden = $('workbench').classList.contains('tray-hidden');
       const hidden = four || innerWidth <= 760 || this.trayWasHidden;
@@ -36,7 +36,7 @@ window.Studio = {
     for (const [id, value] of [['layoutImage','image'],['layoutCompare','compare'],['layoutData','data']]) {
       $(id).setAttribute('aria-pressed', String(value === layout));
     }
-    $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'패치 경계 비교',data:'영상과 후보 데이터 연결'}[layout];
+    $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'패치 경계의 핵 분할 결과 비교',data:'영상과 후보 데이터 연결'}[layout];
     this.updateViewState();
     this.updateFilmstrip();
     if (layout !== 'compare') setMobileSide('after');
@@ -88,6 +88,6 @@ for(const id of ['referenceSource','referenceTruth']) {
   c.addEventListener('keydown',e=>{if(state.phase!=='ready')return;const shifts={ArrowLeft:[-25,0],ArrowRight:[25,0],ArrowUp:[0,-25],ArrowDown:[0,25]};if(shifts[e.key]){e.preventDefault();state.cx+=shifts[e.key][0]/state.zoom;state.cy+=shifts[e.key][1]/state.zoom;state.fitMode=false;clampView();draw();}});
 }
 new ResizeObserver(()=>{if(state.phase==='ready')Studio.drawReferences();}).observe($('panes'));
-matchMedia('(max-width:760px)').addEventListener('change',()=>Studio.updateFilmstrip());
+matchMedia('(max-width:760px)').addEventListener('change',()=>{Studio.updateFilmstrip();Studio.updateViewState();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.expandedSide)WorkbenchUI.setExpanded(null);});
 Studio.setComparison('two');

@@ -297,3 +297,12 @@ body.studio{--ink:#282725;--muted:#7a7670;--line:#d4d0c9;--surface:#efede8;--acc
  .studio-tnbc .dock-note{font-size:12px}
  .studio-tnbc[data-layout=data] .candidate-dock{overflow:auto}
 }
+.studio .review-guide .workflow{display:block}
+@media(min-width:1000px) and (max-width:1199px){
+ .studio .guide-actions{position:absolute;margin-top:0}
+ .studio .review-guide{min-height:58px}
+}
+@media(max-width:760px){
+ .studio .review-guide .workflow,.studio-tnbc .context-bar{display:none}
+ .studio-tnbc[data-layout=compare] .workspace-title{display:none}
+}

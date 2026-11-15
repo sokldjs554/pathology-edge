@@ -66,6 +66,7 @@ test('review entry shows A/B, offers taller two/four views and readable controls
   await expect(page.locator('#'+canvas)).toHaveAttribute('data-center',currentCenter);
   await page.locator('#fit').click();await page.locator('#'+id).click();
  }
+ await page.setViewportSize({width:390,height:667});await page.setViewportSize({width:1366,height:768});
  await page.locator('#compareTwo').click();await expect(page.locator('#referenceTruth')).toBeHidden();await expect(page.locator('#tray')).toBeVisible();
  await page.locator('#layoutImage').click();await expect(page.locator('#viewState')).toContainText('B 결과 탐색');
  await page.locator('#layoutData').click();expect(await page.locator('.candidate-table td').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(13);
