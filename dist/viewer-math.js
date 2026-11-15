@@ -15,10 +15,13 @@
     return { width: Math.round(width * ratio) / ratio, height: Math.round(height * ratio) / ratio };
   }
   function transform(width, height, zoom, cx, cy) {
+    const ox = width / 2 - cx * zoom, oy = height / 2 - cy * zoom;
+    // Native-size images must start on a source-pixel edge, including odd viewports.
+    // Hit testing uses this same transform, so the selected source position agrees.
     return {
       scale: zoom,
-      ox: width / 2 - cx * zoom,
-      oy: height / 2 - cy * zoom,
+      ox: zoom === 1 ? Math.floor(ox) : ox,
+      oy: zoom === 1 ? Math.floor(oy) : oy,
     };
   }
   function toImage(x, y, t) {
