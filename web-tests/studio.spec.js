@@ -56,7 +56,7 @@ test('review entry shows A/B, offers taller two/four views and readable controls
  const two=await page.locator('#after').boundingBox();expect(two.height).toBeGreaterThan(260);
  const font=await page.locator('#showImproved').evaluate(el=>parseFloat(getComputedStyle(el).fontSize));expect(font).toBeGreaterThanOrEqual(13);
  await page.screenshot({path:'captures/readability-entry.png',fullPage:true});
- await page.locator('#showWorsened').click();const center=await page.locator('#after').getAttribute('data-center');
+ await page.locator('#showWorsened').click();await expect(page.locator('#after')).toHaveAttribute('data-case',/worsened$/);const center=await page.locator('#after').getAttribute('data-center');
  await tool(page,'compareFour','click');await expect(page.locator('#referenceSource')).toBeVisible();
  expect((await page.locator('#referenceSource').boundingBox()).height).toBeGreaterThan(170);
  await page.screenshot({path:'captures/readability-four.png',fullPage:true});
