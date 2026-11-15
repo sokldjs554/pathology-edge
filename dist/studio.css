@@ -195,3 +195,7 @@ body.studio{--ink:#282725;--muted:#7a7670;--line:#d4d0c9;--surface:#efede8;--acc
  .studio-tnbc .workbench.tray-hidden.inspector-hidden{grid-template-columns:minmax(0,1fr);grid-template-rows:49px minmax(0,1fr)}
  .studio-tnbc[data-layout=data] .workbench.tray-hidden.inspector-hidden{grid-template-columns:minmax(0,1fr);grid-template-rows:49px minmax(480px,1fr) 190px}
 }
+
+/* Keep pointer hover in the neutral palette as well as the resting controls. */
+.studio .toolbar button:hover{background:#e9e1ce;color:#3d3423}
+.studio .toolbar button[aria-pressed=true]:hover{background:#4b453a;color:#f5e8c4}
