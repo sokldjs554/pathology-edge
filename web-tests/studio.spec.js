@@ -44,3 +44,35 @@ test('studio mobile data view stays visible after selecting A; IHC case strip cl
  await page.locator('#toggleCases').click();await expect(page.locator('#examplePanel')).toBeVisible();
  await page.locator('#toggleCases').click();await expect(page.locator('#examplePanel')).toBeHidden();
 });
+
+test('review entry shows A/B, offers taller two/four views and readable controls',async({page})=>{
+ await page.setViewportSize({width:1366,height:768});await page.goto('/');
+ await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
+ await expect(page.locator('body')).toHaveAttribute('data-layout','compare');
+ await expect(page.locator('#compareTwo')).toHaveAttribute('aria-pressed','true');
+ await expect(page.locator('#before')).toBeVisible();await expect(page.locator('#referenceSource')).toBeHidden();
+ const two=await page.locator('#after').boundingBox();expect(two.height).toBeGreaterThan(260);
+ const font=await page.locator('#showImproved').evaluate(el=>parseFloat(getComputedStyle(el).fontSize));expect(font).toBeGreaterThanOrEqual(13);
+ await page.screenshot({path:'captures/readability-entry.png',fullPage:true});
+ await page.locator('#showWorsened').click();const center=await page.locator('#after').getAttribute('data-center');
+ await page.locator('#compareFour').click();await expect(page.locator('#referenceSource')).toBeVisible();
+ expect((await page.locator('#referenceSource').boundingBox()).height).toBeGreaterThan(170);
+ await page.screenshot({path:'captures/readability-four.png',fullPage:true});
+ for(const [id,canvas] of [['maximizeSource','referenceSource'],['maximizeTruth','referenceTruth'],['maximizeBefore','before'],['maximizeAfter','after']]){
+  await expect(page.locator('#'+id)).toHaveText('크게 보기');await page.locator('#'+id).click();
+  expect((await page.locator('#'+canvas).boundingBox()).height).toBeGreaterThan(350);
+  await expect(page.locator('#'+canvas)).toHaveAttribute('data-center',center);
+  await page.locator('#fit').click();await page.locator('#'+id).click();
+ }
+ await page.locator('#compareTwo').click();await expect(page.locator('#referenceTruth')).toBeHidden();await expect(page.locator('#tray')).toBeVisible();
+ await page.locator('#layoutImage').click();await expect(page.locator('#viewState')).toContainText('B 결과 탐색');
+ await page.locator('#layoutData').click();expect(await page.locator('.candidate-table td').first().evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(13);
+});
+test('shared navigation is consistent and WSI provenance opens only on request',async({page})=>{
+ for(const path of ['/','/wsi.html','/ihc.html']){
+  await page.goto(path);await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
+  await expect(page.locator('header nav a')).toHaveText(['WSI 탐색','경계 비교','IHC 세포 분류']);
+ }
+ await page.goto('/wsi.html');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
+ await expect(page.locator('#provenance')).toBeHidden();await page.getByText('슬라이드·모델·분석 범위',{exact:true}).click();await expect(page.locator('#provenance')).toBeVisible();
+});
