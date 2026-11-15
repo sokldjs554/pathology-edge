@@ -31,6 +31,7 @@ window.Studio = {
   },
   setLayout(layout) {
     if (!['image', 'compare', 'data'].includes(layout)) return;
+    if (layout !== 'compare') Review.intent++;
     this.layout = layout;
     document.body.dataset.layout = layout;
     $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'패치 경계의 핵 분할 결과 비교',data:'영상과 후보 데이터 연결'}[layout];
@@ -69,7 +70,7 @@ $('workbench').append($('candidateDock'));
 $('compareFour').addEventListener('click',()=>{if(state.mode!=='boundary')setMode('boundary');Studio.setComparison('four');});
 $('toggleDock').addEventListener('click',()=>Studio.setLayout(Studio.layout==='data'?'compare':'data'));
 $('closeDock').addEventListener('click',()=>Studio.setLayout('compare'));
-$('modeMerge').addEventListener('click',()=>Studio.setComparison('two'));
+$('modeMerge').addEventListener('click',()=>{Review.intent++;Studio.setComparison('two');});
 for(const id of ['showImproved','showWorsened','jumpBoundary']) $(id).addEventListener('click',()=>Studio.setComparison('two'));
 $('modeSingle').addEventListener('click',()=>Studio.setLayout('image'));
 // References use the same camera and inverse coordinate mapping as A/B.

@@ -91,3 +91,21 @@ test('tablet candidate details share a column without shrinking the image',async
  await page.screenshot({path:'captures/simple-tablet-candidates.png',fullPage:true});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
 });
+
+
+test('case loading preserves a later four-pane choice',async({page})=>{
+ let release;
+ const gate=new Promise(resolve=>{release=resolve;});
+ await page.route('**/assets/10_3.png',async route=>{await gate;await route.continue();});
+ await ready(page);
+ try {
+  await page.locator('#showWorsened').click();
+  await expect(page.locator('body')).toHaveAttribute('data-phase','loading');
+  await page.locator('#detailTools summary').click();await page.locator('#compareFour').click();
+  await expect(page.locator('body')).toHaveAttribute('data-comparison','four');
+ } finally {release();}
+ await expect(page.locator('#after')).toHaveAttribute('data-case','10_3-worsened');
+ await expect(page.locator('body')).toHaveAttribute('data-comparison','four');
+ await expect(page.locator('#referenceTruth')).toBeVisible();
+ await expect(page.locator('#referenceTruth')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
+});

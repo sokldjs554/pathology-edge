@@ -182,6 +182,9 @@ const Review = {
   async open(id) {
     const c = this.data?.cases.find((c) => c.id === id);
     if (!c) return;
+    // Restore paired review when requested, before loading. A later layout choice
+    // must survive the asynchronous image load and evidence validation.
+    if (window.Studio && (Studio.layout !== 'compare' || Studio.comparison !== 'two')) Studio.setComparison('two');
     const intent = ++this.intent;
     let request = state.request;
     if (state.sample?.id !== c.sample_id) {
@@ -200,8 +203,6 @@ const Review = {
       return;
     try {
       const layer = this.evidenceLayer(c);
-      // Every case route (including result-table rows) restores a paired view.
-      if (window.Studio && (Studio.layout !== 'compare' || Studio.comparison !== 'two')) Studio.setComparison('two');
       setMode('boundary');
       setScope('all');
       $('objects').checked = false;
