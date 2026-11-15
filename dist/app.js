@@ -135,7 +135,7 @@ function dimensions(canvas) {
   return M.rasterDimensions(r.width, r.height, Math.min(devicePixelRatio || 1, 2));
 }
 function visibleCanvases() {
-  return canvases.filter(
+  return [...canvases, $('referenceSource'), $('referenceTruth')].filter(Boolean).filter(
     (c) =>
       c.getBoundingClientRect().width > 0 &&
       c.getBoundingClientRect().height > 0,

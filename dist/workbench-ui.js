@@ -6,7 +6,7 @@ window.WorkbenchUI = {
   lastCrop: '',
   refresh() {
     const ready = state.phase === 'ready' && !!state.sample;
-    for (const id of ['candidateQuery', 'edgeOnly', 'objectSource', 'visibleOnly', 'toolPan', 'toolSelect', 'maximizeBefore', 'maximizeAfter']) $(id).disabled = !ready;
+    for (const id of ['candidateQuery', 'edgeOnly', 'objectSource', 'visibleOnly', 'toolPan', 'toolSelect', 'maximizeBefore', 'maximizeAfter', 'maximizeSource', 'maximizeTruth']) $(id).disabled = !ready;
     const sampleId = state.sample?.id || null;
     if (sampleId !== this.lastSample) {
       this.lastSample = sampleId;
@@ -90,12 +90,12 @@ window.WorkbenchUI = {
   setExpanded(side) {
     state.expandedSide = side;
     $('panes').dataset.expanded = side || '';
-    for (const [name, key] of [['Before','before'],['After','after']]) {
+    for (const [name, key] of [['Before','before'],['After','after'],['Source','referenceSource'],['Truth','referenceTruth']]) {
       const b = $(`maximize${name}`), expanded = side === key;
       b.setAttribute('aria-pressed', String(expanded));
-      b.setAttribute('aria-label', expanded ? '좌우 비교로 복원' : `${key === 'before' ? 'A' : 'B'} 영상 크게 보기`);
+      b.setAttribute('aria-label', expanded ? '비교로 돌아가기' : `${{before:'A',after:'B',referenceSource:'원본',referenceTruth:'정답'}[key]} 영상 크게 보기`);
       b.title = b.getAttribute('aria-label');
-      b.textContent = expanded ? '↔' : '⛶';
+      b.textContent = expanded ? '비교로 돌아가기' : '크게 보기';
     }
     requestAnimationFrame(() => {
       if (state.phase !== 'ready') return;
@@ -114,7 +114,7 @@ $('toolSelect').addEventListener('click', () => WorkbenchUI.setTool('select'));
 $('objects').addEventListener('change', () => WorkbenchUI.setTool($('objects').checked ? 'select' : 'pan'));
 $('toggleDock').addEventListener('click', () => WorkbenchUI.toggleDock($('candidateDock').hidden));
 $('closeDock').addEventListener('click', () => { WorkbenchUI.toggleDock(false); $('toggleDock').focus(); });
-for (const [name, side] of [['Before','before'],['After','after']]) $(`maximize${name}`).addEventListener('click', () => WorkbenchUI.setExpanded(state.expandedSide === side ? null : side));
+for (const [name, side] of [['Before','before'],['After','after'],['Source','referenceSource'],['Truth','referenceTruth']]) $(`maximize${name}`).addEventListener('click', () => WorkbenchUI.setExpanded(state.expandedSide === side ? null : side));
 $('focusMode').addEventListener('click', () => {
   if (state.focus) { WorkbenchUI.dockBeforeFocus = !$('candidateDock').hidden; WorkbenchUI.toggleDock(false); }
   else WorkbenchUI.toggleDock(WorkbenchUI.dockBeforeFocus ?? true);

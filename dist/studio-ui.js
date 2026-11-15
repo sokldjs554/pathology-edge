@@ -1,7 +1,28 @@
 'use strict';
 // Three review layouts, backed exclusively by the existing saved image/results.
 window.Studio = {
-  layout: 'image',
+  layout: 'compare',
+  comparison: 'two',
+  updateViewState() {
+    $('viewState').textContent = this.layout === 'image' ? 'B 결과 탐색 중' : this.layout === 'data' ? '후보 데이터 · B 결과' : this.comparison === 'four' ? 'A/B · 원본 · 정답 비교' : 'A/B 경계 비교 중';
+  },
+  updateFilmstrip() {
+    const four = this.layout === 'compare' && this.comparison === 'four' && innerWidth > 760;
+    if (four !== !!this.fourActive) {
+      if (four) this.trayWasHidden = $('workbench').classList.contains('tray-hidden');
+      const hidden = four || innerWidth <= 760 || this.trayWasHidden;
+      $('workbench').classList.toggle('tray-hidden', !!hidden);
+      $('toggleTray').setAttribute('aria-expanded', String(!hidden));
+      this.fourActive = four;
+    }
+  },
+  setComparison(comparison) {
+    if (!['two', 'four'].includes(comparison)) return;
+    this.comparison = comparison;
+    document.body.dataset.comparison = comparison;
+    for (const [id,value] of [['compareTwo','two'],['compareFour','four']]) $(id).setAttribute('aria-pressed',String(value===comparison));
+    this.setLayout('compare');
+  },
   startView() {
     // Start a desktop pathology view at native source resolution. Fit remains
     // an explicit control; switching layouts preserves the current camera.
@@ -15,8 +36,10 @@ window.Studio = {
     for (const [id, value] of [['layoutImage','image'],['layoutCompare','compare'],['layoutData','data']]) {
       $(id).setAttribute('aria-pressed', String(value === layout));
     }
-    $('workspaceName').textContent = {image:'병리 영상 작업대',compare:'의료 영상 다중 비교',data:'영상과 후보 데이터 연결'}[layout];
-    if (layout === 'data') setMobileSide('after');
+    $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'패치 경계 비교',data:'영상과 후보 데이터 연결'}[layout];
+    this.updateViewState();
+    this.updateFilmstrip();
+    if (layout !== 'compare') setMobileSide('after');
     WorkbenchUI.setExpanded(null);
     WorkbenchUI.toggleDock(layout === 'data');
     $('workbench').classList.add('inspector-hidden');
@@ -46,10 +69,11 @@ window.Studio = {
 // Data occupies a dedicated column, not a dock hidden by laptop-height heuristics.
 $('workbench').append($('candidateDock'));
 for(const [id,value] of [['layoutImage','image'],['layoutCompare','compare'],['layoutData','data']]) $(id).addEventListener('click',()=>Studio.setLayout(value));
+for(const [id,value] of [['compareTwo','two'],['compareFour','four']]) $(id).addEventListener('click',()=>Studio.setComparison(value));
 $('toggleDock').addEventListener('click',()=>Studio.setLayout(Studio.layout==='data'?'image':'data'));
 $('closeDock').addEventListener('click',()=>Studio.setLayout('image'));
 for(const id of ['modeBoundary','modeMerge']) $(id).addEventListener('click',()=>{if(Studio.layout==='image')Studio.setLayout('compare');});
-for(const id of ['showImproved','showWorsened','jumpBoundary']) $(id).addEventListener('click',()=>{if(Studio.layout==='image')Studio.setLayout('compare');});
+for(const id of ['showImproved','showWorsened','jumpBoundary']) $(id).addEventListener('click',()=>{if(Studio.layout!=='compare')Studio.setLayout('compare');});
 $('modeSingle').addEventListener('click',()=>Studio.setLayout('image'));
 // References use the same camera and inverse coordinate mapping as A/B.
 for(const id of ['referenceSource','referenceTruth']) {
@@ -64,4 +88,6 @@ for(const id of ['referenceSource','referenceTruth']) {
   c.addEventListener('keydown',e=>{if(state.phase!=='ready')return;const shifts={ArrowLeft:[-25,0],ArrowRight:[25,0],ArrowUp:[0,-25],ArrowDown:[0,25]};if(shifts[e.key]){e.preventDefault();state.cx+=shifts[e.key][0]/state.zoom;state.cy+=shifts[e.key][1]/state.zoom;state.fitMode=false;clampView();draw();}});
 }
 new ResizeObserver(()=>{if(state.phase==='ready')Studio.drawReferences();}).observe($('panes'));
-Studio.setLayout('image');
+matchMedia('(max-width:760px)').addEventListener('change',()=>Studio.updateFilmstrip());
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.expandedSide)WorkbenchUI.setExpanded(null);});
+Studio.setComparison('two');

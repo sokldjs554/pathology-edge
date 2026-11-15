@@ -199,3 +199,101 @@ body.studio{--ink:#282725;--muted:#7a7670;--line:#d4d0c9;--surface:#efede8;--acc
 /* Keep pointer hover in the neutral palette as well as the resting controls. */
 .studio .toolbar button:hover{background:#e9e1ce;color:#3d3423}
 .studio .toolbar button[aria-pressed=true]:hover{background:#4b453a;color:#f5e8c4}
+
+/* Review entry and screen-share readability. */
+.studio .app-header nav a{font-size:13px}
+.studio .study-bar button,.studio .study-bar select{font-size:13px;min-height:34px}
+.studio .study-bar .image-title{font-size:13px}
+.studio .toolbar{gap:7px;padding:6px 10px;min-height:46px}
+.studio .toolbar button{font-size:13px;min-height:34px;padding:5px 8px}
+.studio .toolbar .zoom-tools output{font-size:13px}
+.studio .toolbar .zoom-tools button{min-width:34px}
+.studio .workspace-title strong{font-size:17px}
+.studio .review-guide p{font-size:13px;line-height:1.5}
+.studio .guide-actions{top:11px;gap:6px}
+.studio .guide-actions button{font-size:13px;min-height:34px;padding:5px 8px}
+.studio .guide-actions #showImproved{background:#66512c;border-color:#66512c;color:#fff9e9;font-weight:600}
+.studio .layer-bar,.studio .layers{font-size:13px;min-height:34px}
+.studio .context-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:4px 10px;min-height:38px;font-size:12px}
+.studio .comparison-choice{display:flex;gap:4px;flex-shrink:0}
+.studio .comparison-choice button{font-size:13px;min-height:32px;padding:4px 10px}
+.studio #viewState{font-size:13px;font-weight:500;color:#e9dfca}
+.studio #modeDescription{flex:1;font-size:12px;line-height:1.4}
+.studio .sync-label{display:none}
+.studio-tnbc:not([data-layout=compare]) .comparison-choice{display:none}
+.studio .pane{grid-template-rows:36px minmax(0,1fr) 26px}
+.studio .pane-header,.studio .pane-heading,.studio .image-heading{font-size:13px;gap:6px}
+.studio .pane-count{font-size:12px}
+.studio .pane-expand{font-size:13px;line-height:1.2;min-height:30px;padding:4px 8px;border:1px solid #8a7d63;color:#f5e6c5;white-space:nowrap;background:#403c34}
+.studio .pane-expand:hover{background:#66512c;color:#fff9e9}
+.studio .pane-caption{font-size:12px}
+.studio .viewport-bar,.studio .position-bar,.studio .interaction-hint{font-size:12px}
+.studio .note,.studio .muted,.studio .small-note,.studio .side-note,.studio .source-links,.studio .reference-links,.studio .guide,.studio summary{font-size:13px;line-height:1.5}
+.studio .inspector p,.studio .inspector label,.studio .inspector select,.studio .inspector li,.studio .inspector dd,.studio .inspector dt{font-size:13px;line-height:1.5}
+.studio .inspector h2{font-size:15px}
+.studio .inspector-tabs button{font-size:13px;min-height:36px}
+.studio .inspector table{font-size:13px}
+.studio .inspector .hash{font-size:12px!important;overflow-wrap:anywhere}
+.studio .score-row,.studio .score-title,.studio .score-number{font-size:13px}
+.studio .score-tag{font-size:11px}
+.studio .status-bar,.studio>footer{font-size:11px}
+.studio-tnbc .sample-tray{gap:8px}
+.studio-tnbc .sample-list{height:82px}
+.studio-tnbc .sample-item{width:146px;flex-basis:146px;grid-template-columns:46px 80px;grid-template-rows:20px 18px 15px;padding:5px}
+.studio-tnbc .sample-item .sample-name{font-size:13px}
+.studio-tnbc .sample-kind{font-size:10px}
+.studio .dock-heading h2{font-size:16px}
+.studio #candidateCount,.studio .dock-filters,.studio .dock-filters select,.studio #candidateQuery{font-size:13px}
+.studio .dock-filters select,.studio #candidateQuery{min-height:34px}
+.studio .candidate-table{font-size:14px}
+.studio .candidate-table th{font-size:13px;padding:9px 8px}
+.studio .candidate-table td{font-size:14px;padding:8px}
+.studio .candidate-link{font-size:14px;min-height:32px}
+.studio .dock-note{font-size:13px;line-height:1.5}
+.studio #cropCaption{font-size:12px;line-height:1.5}
+.studio-tnbc[data-layout=data] #selectedInfo{font-size:13px;row-gap:6px}
+.studio-tnbc[data-layout=data] #panelObject>.panel-section:first-child>p,.studio-tnbc[data-layout=data] #selectionText{font-size:13px}
+.studio-tnbc[data-layout=data] #cropCaption{font-size:12px}
+.studio-ihc .selection-text,.studio-ihc .selected-heading,.studio-ihc .example-item span,.studio-wsi .roi-item span{font-size:13px;line-height:1.5}
+@media(min-width:761px){
+ .studio-tnbc .workbench:not(.tray-hidden){grid-template-rows:minmax(0,1fr) 88px}
+ .studio-tnbc[data-layout=compare][data-comparison=two] .panes{grid-template-columns:1fr 1fr;grid-template-rows:1fr}
+ .studio-tnbc[data-layout=compare][data-comparison=two] .reference-pane{display:none}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .panes{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .reference-pane{display:grid}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .review-guide{min-height:48px}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .review-guide p{display:none}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .guide-actions{top:7px}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .panes[data-expanded=""] .pane{grid-template-rows:34px minmax(0,1fr)}
+ .studio-tnbc[data-layout=compare][data-comparison=four] .panes[data-expanded=""] .pane-caption{display:none}
+}
+.studio-tnbc .panes[data-expanded]:not([data-expanded=""]){grid-template-columns:1fr;grid-template-rows:1fr}
+.studio-tnbc .panes[data-expanded]:not([data-expanded=""]) .pane{display:none}
+.studio-tnbc .panes[data-expanded=before] #beforePane,.studio-tnbc .panes[data-expanded=after] #afterPane,.studio-tnbc .panes[data-expanded=referenceSource] #sourcePane,.studio-tnbc .panes[data-expanded=referenceTruth] #truthPane{display:grid}
+@media(max-width:1199px) and (min-width:761px){
+ .studio .guide-actions{position:static;margin-top:6px}
+ .studio .review-guide{min-height:0}
+ .studio #modeDescription{display:none}
+}
+@media(max-width:760px){
+ .studio .app-header nav{gap:14px}
+ .studio .app-header nav a{font-size:12px}
+ .studio .toolbar{padding:4px 7px;gap:5px}
+ .studio .toolbar button{font-size:12px;min-height:34px;padding:5px}
+ .studio .toolbar .interaction-tools{gap:3px}
+ .studio .layer-bar{font-size:12px;gap:8px}
+ .studio .guide-actions{position:static;gap:5px}
+ .studio .guide-actions button{font-size:12px;min-height:34px;padding:4px 6px}
+ .studio .workspace-title strong{font-size:15px}
+ .studio .context-bar{padding:4px 8px;min-height:28px}
+ .studio .comparison-choice,.studio #modeDescription{display:none}
+ .studio #viewState{font-size:12px}
+ .studio .mobile-pane-switch button{font-size:13px;min-height:30px}
+ .studio .pane-header{font-size:12px}
+ .studio #beforeMeta,.studio #afterMeta{display:none}
+ .studio .pane-expand{font-size:12px}
+ .studio-tnbc .stage{min-height:260px;flex-shrink:0}
+ .studio-tnbc .sample-list{height:76px}
+ .studio-tnbc .dock-note{font-size:12px}
+ .studio-tnbc[data-layout=data] .candidate-dock{overflow:auto}
+}

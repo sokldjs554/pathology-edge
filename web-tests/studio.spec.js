@@ -6,6 +6,7 @@ test('studio has three distinct working layouts at laptop size with linked real 
  await page.goto('/');
  await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
  await expect(page.locator('#layoutImage')).toBeVisible();
+ await page.locator('#layoutImage').click();await page.locator('#nativeZoom').click();
  await expect(page.locator('body')).toHaveAttribute('data-layout','image');
  await expect(page.locator('#beforePane')).toBeHidden();
  const stage=await page.locator('#after').boundingBox();
@@ -15,7 +16,7 @@ test('studio has three distinct working layouts at laptop size with linked real 
  await expect(page.locator('#after')).toHaveAttribute('data-zoom','1.00000');
  expect(stage.width).toBeGreaterThan(1000);
  await page.screenshot({path:'captures/studio-image-laptop.png',fullPage:true});
- await page.locator('#layoutCompare').click();
+ await page.locator('#layoutCompare').click();await page.locator('#compareFour').click();
  for(const id of ['before','after','referenceSource','referenceTruth'])await expect(page.locator('#'+id)).toBeVisible();
  await page.locator('#zoomin').click();
  const center=await page.locator('#after').getAttribute('data-center');
@@ -59,9 +60,10 @@ test('review entry shows A/B, offers taller two/four views and readable controls
  expect((await page.locator('#referenceSource').boundingBox()).height).toBeGreaterThan(170);
  await page.screenshot({path:'captures/readability-four.png',fullPage:true});
  for(const [id,canvas] of [['maximizeSource','referenceSource'],['maximizeTruth','referenceTruth'],['maximizeBefore','before'],['maximizeAfter','after']]){
+  const currentCenter=await page.locator('#after').getAttribute('data-center');
   await expect(page.locator('#'+id)).toHaveText('크게 보기');await page.locator('#'+id).click();
   expect((await page.locator('#'+canvas).boundingBox()).height).toBeGreaterThan(350);
-  await expect(page.locator('#'+canvas)).toHaveAttribute('data-center',center);
+  await expect(page.locator('#'+canvas)).toHaveAttribute('data-center',currentCenter);
   await page.locator('#fit').click();await page.locator('#'+id).click();
  }
  await page.locator('#compareTwo').click();await expect(page.locator('#referenceTruth')).toBeHidden();await expect(page.locator('#tray')).toBeVisible();
