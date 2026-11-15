@@ -2,6 +2,12 @@
 // Three review layouts, backed exclusively by the existing saved image/results.
 window.Studio = {
   layout: 'image',
+  startView() {
+    // Start a desktop pathology view at native source resolution. Fit remains
+    // an explicit control; switching layouts preserves the current camera.
+    if (this.layout !== 'image' || innerWidth <= 760 || state.phase !== 'ready') return;
+    state.zoom = Math.max(state.zoom, 1); state.fitMode = false; clampView(); draw(); renderObjectOptions();
+  },
   setLayout(layout) {
     if (!['image', 'compare', 'data'].includes(layout)) return;
     this.layout = layout;
@@ -10,6 +16,7 @@ window.Studio = {
       $(id).setAttribute('aria-pressed', String(value === layout));
     }
     $('workspaceName').textContent = {image:'병리 영상 작업대',compare:'의료 영상 다중 비교',data:'영상과 후보 데이터 연결'}[layout];
+    if (layout === 'data') setMobileSide('after');
     WorkbenchUI.setExpanded(null);
     WorkbenchUI.toggleDock(layout === 'data');
     $('workbench').classList.add('inspector-hidden');

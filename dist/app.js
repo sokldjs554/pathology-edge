@@ -870,7 +870,7 @@ async function loadSample(id) {
       '',
       `${location.pathname}?sample=${encodeURIComponent(id)}`,
     );
-    requestAnimationFrame(fit);
+    requestAnimationFrame(() => { fit(); window.Studio?.startView(); });
   } catch (error) {
     if (ticket !== state.request) return;
     state.sample = null;

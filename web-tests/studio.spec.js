@@ -11,6 +11,8 @@ test('studio has three distinct working layouts at laptop size with linked real 
  const stage=await page.locator('#after').boundingBox();
  const strip=await page.locator('#tray').boundingBox();
  expect(strip.y).toBeGreaterThan(stage.y+stage.height);
+ expect(await page.locator('.sample-item').first().evaluate(el=>el.getBoundingClientRect().width)).toBeLessThan(160);
+ await expect(page.locator('#after')).toHaveAttribute('data-zoom','1.00000');
  expect(stage.width).toBeGreaterThan(1000);
  await page.screenshot({path:'captures/studio-image-laptop.png',fullPage:true});
  await page.locator('#layoutCompare').click();
@@ -27,4 +29,16 @@ test('studio has three distinct working layouts at laptop size with linked real 
  await expect(page.locator('#selectionPreview')).toBeVisible();
  await page.screenshot({path:'captures/studio-data-laptop.png',fullPage:true});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+});
+test('studio mobile data view stays visible after selecting A; IHC case strip closes',async({page})=>{
+ await page.setViewportSize({width:390,height:667});
+ await page.goto('/');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
+ await page.locator('#mobileBefore').click();await expect(page.locator('#before')).toBeVisible();
+ await page.locator('#layoutData').click();await expect(page.locator('#after')).toBeVisible();
+ await expect(page.locator('#candidateDock')).toBeVisible();
+ await page.screenshot({path:'captures/studio-mobile.png',fullPage:true});
+ await page.goto('/ihc.html');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
+ await expect(page.locator('#examplePanel')).toBeHidden();
+ await page.locator('#toggleCases').click();await expect(page.locator('#examplePanel')).toBeVisible();
+ await page.locator('#toggleCases').click();await expect(page.locator('#examplePanel')).toBeHidden();
 });
