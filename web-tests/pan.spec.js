@@ -11,6 +11,7 @@ async function open(page) {
   await page.goto('/');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready');
   await expect(page.locator('#after')).toHaveAttribute('data-zoom', /\d/);
+  await page.locator('#layoutCompare').click();
 }
 async function drag(page, dx, dy) {
   const b = await page.locator('#after').boundingBox();

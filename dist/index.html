@@ -10,13 +10,14 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="workbench.css" />
+    <link rel="stylesheet" href="studio.css" />
   </head>
-  <body class="linked-workbench" data-tool="pan">
+  <body class="linked-workbench studio studio-tnbc" data-tool="pan" data-layout="image">
     <header class="app-header">
       <a class="brand" href="./" aria-label="PathologyEdge 처음으로"
         ><svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z" /></svg
-        >Pathology<span>Edge</span><small class="brand-edition">WORKBENCH</small></a
+        >Pathology<span>Edge</span><small class="brand-edition">RESEARCH STUDIO</small></a
       >
       <nav class="experiment-nav" aria-label="작업 화면">
         <a href="wsi.html">실제 WSI 탐색</a
@@ -56,7 +57,14 @@
         </button>
       </div>
     </nav>
-    <main class="workbench" id="workbench">
+    <main class="workbench inspector-hidden" id="workbench">
+      <nav class="studio-rail" aria-label="작업 화면 배치">
+        <span class="rail-title">WORKSPACE</span>
+        <button id="layoutImage" aria-pressed="true" title="병리 영상 작업대"><svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="24" height="16"/><path d="M2 22h24M7 22v-3m7 3v-3m7 3v-3"/></svg><span>병리<br>작업대</span></button>
+        <button id="layoutCompare" aria-pressed="false" title="원본·정답·A·B 다중 비교"><svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="24" height="20"/><path d="M14 2v20M2 12h24"/></svg><span>4분할<br>비교</span></button>
+        <button id="layoutData" aria-pressed="false" title="영상과 후보 데이터 연결"><svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="24" height="20"/><path d="M15 2v20m0-15h11M15 12h11m-11 5h11"/></svg><span>후보<br>데이터</span></button>
+        <div class="rail-foot">H&amp;E<br><span>TNBC</span></div>
+      </nav>
       <aside class="sample-tray" id="tray" aria-label="예제 이미지 목록">
         <div class="tray-heading"><span class="eyebrow">SLIDE EXPLORER</span><h2>슬라이드 목록</h2><p>TNBC · 정답이 있는 테스트 이미지</p></div>
         <div id="sampleList" class="sample-list"></div>
@@ -77,7 +85,7 @@
         </div>
       </aside>
       <section class="viewer-workspace" aria-label="영상 비교 작업대">
-        <div class="review-guide"><div class="workspace-title"><span class="eyebrow">PATCH BOUNDARY REVIEW</span><strong>같은 조직, 다른 경계 처리</strong></div>
+        <div class="review-guide"><div class="workspace-title"><span class="eyebrow">PATCH BOUNDARY REVIEW</span><strong id="workspaceName">병리 영상 작업대</strong></div>
           <p>
             병리 이미지를 작은 조각으로 나눌 때,
             <strong>경계의 핵 분할 결과</strong>는 어떻게 달라질까요?
@@ -209,6 +217,8 @@
                 ><span id="scopeAfter">전체 이미지</span>
               </div>
             </article>
+            <article class="pane reference-pane" id="sourcePane"><div class="pane-header"><span class="pane-key">C</span><strong>원본 조직</strong><span class="pane-count">예측 표시 없음</span></div><div class="canvas-frame"><canvas id="referenceSource" tabindex="0" aria-label="원본 조직: 같은 시야로 이동·확대"></canvas></div><div class="pane-caption"><span>H&amp;E · 저장 원영상</span><span>같은 위치 · 같은 확대</span></div></article>
+            <article class="pane reference-pane" id="truthPane"><div class="pane-header"><span class="pane-key">D</span><strong>정답 주석</strong><span class="pane-count">보라: 실제 정답 마스크</span></div><div class="canvas-frame"><canvas id="referenceTruth" tabindex="0" aria-label="정답 주석: 같은 시야로 이동·확대"></canvas></div><div class="pane-caption"><span>원본 + 정답 마스크</span><span>모델 예측 아님</span></div></article>
           </div>
           <div class="stage-message" id="stageMessage">
             <div class="state-symbol" id="stateSymbol" aria-hidden="true">
@@ -646,5 +656,6 @@
     <script src="review-ui.js"></script>
     <script src="app.js" defer></script>
     <script src="workbench-ui.js" defer></script>
+    <script src="studio-ui.js" defer></script>
   </body>
 </html>

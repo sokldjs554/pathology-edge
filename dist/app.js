@@ -194,9 +194,9 @@ function layerFrom(image, kind) {
   const d = ctx.getImageData(0, 0, c.width, c.height);
   for (let i = 0; i < d.data.length; i += 4) {
     const on = kind === 'truth' ? d.data[i] > 127 : d.data[i + 3] > 0;
-    d.data[i] = kind === 'truth' ? 170 : 48;
-    d.data[i + 1] = kind === 'truth' ? 109 : 188;
-    d.data[i + 2] = kind === 'truth' ? 224 : 154;
+    d.data[i] = kind === 'truth' ? 170 : 235;
+    d.data[i + 1] = kind === 'truth' ? 109 : 178;
+    d.data[i + 2] = kind === 'truth' ? 224 : 77;
     d.data[i + 3] = on ? 255 : 0;
   }
   ctx.putImageData(d, 0, 0);
@@ -248,6 +248,8 @@ function draw() {
     const side = i ? 'after' : 'before',
       p = paneData(side),
       { width, height } = dimensions(canvas);
+    canvas.dataset.zoom = state.zoom.toFixed(5);
+    canvas.dataset.center = `${state.cx.toFixed(3)},${state.cy.toFixed(3)}`;
     if (!width || !height) continue;
     const ratio = Math.min(devicePixelRatio || 1, 2);
     if (
@@ -407,6 +409,7 @@ function draw() {
   $('viewportBounds').textContent =
     `현재 시야 x ${Math.floor(b.x0)}–${Math.ceil(b.x1)} · y ${Math.floor(b.y0)}–${Math.ceil(b.y1)}`;
   $('zoomvalue').textContent = `${Math.round(state.zoom * 100)}%`;
+  window.Studio?.drawReferences();
   const n = $('navigator'),
     ctx = n.getContext('2d');
   ctx.clearRect(0, 0, n.width, n.height);

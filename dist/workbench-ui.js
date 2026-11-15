@@ -120,7 +120,7 @@ $('focusMode').addEventListener('click', () => {
   else WorkbenchUI.toggleDock(WorkbenchUI.dockBeforeFocus ?? true);
 });
 const compactWorkbench = matchMedia('(max-width:760px)');
-compactWorkbench.addEventListener('change', () => { WorkbenchUI.setExpanded(null); WorkbenchUI.toggleDock(!compactWorkbench.matches && innerHeight >= 820); });
+compactWorkbench.addEventListener('change', () => { WorkbenchUI.setExpanded(null); if(window.Studio) WorkbenchUI.toggleDock(Studio.layout === 'data'); else WorkbenchUI.toggleDock(!compactWorkbench.matches && innerHeight >= 820); });
 WorkbenchUI.toggleDock(!compactWorkbench.matches && innerHeight >= 820);
 WorkbenchUI.setTool('pan');
 WorkbenchUI.refresh();

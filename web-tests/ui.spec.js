@@ -13,6 +13,8 @@ const ready = async (page, id = '10_1') => {
 const open = async (page) => {
   await page.goto('/');
   await ready(page);
+  await page.locator('#layoutCompare').click();
+  if(page.viewportSize().width >= 1200) await page.locator('#toggleInspector').click();
 };
 const shot = async (page, name) =>
   page.screenshot({ path: `captures/${name}.png`, fullPage: true });
@@ -207,6 +209,8 @@ test('NMS raw-to-kept pair and image click resolve actual exported objects', asy
   );
   await expect(page.locator('#selectionText')).toHaveText('B · 병합 후 #1');
   await expect(page.locator('#selectedInfo')).toContainText(o.bbox.join(', '));
+  await page.locator('#layoutData').click();
+  await page.locator('#toggleInspector').click();
   await page.locator('#visibleOnly').check();
   expect(await page.locator('#componentSelect option').count()).toBeLessThan(
     m.objects.length + 1,
