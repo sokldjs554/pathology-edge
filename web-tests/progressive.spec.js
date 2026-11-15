@@ -86,5 +86,8 @@ test('tablet candidate details share a column without shrinking the image',async
  await page.locator('#candidateRows button').first().click();
  expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(500);
  await expect(page.locator('#selectedInfo')).toBeVisible();
+ await page.locator('#detailTools summary').click();await expect(page.locator('#grid')).toBeVisible();
+ await page.keyboard.press('Escape');
+ await page.screenshot({path:'captures/simple-tablet-candidates.png',fullPage:true});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
 });

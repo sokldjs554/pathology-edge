@@ -11,7 +11,7 @@ body.studio-tnbc.progressive .review-guide,body.studio-tnbc.progressive[data-com
 body.studio-tnbc.progressive .review-guide .workspace-title{display:flex!important;justify-content:flex-start;gap:18px;margin:0 0 12px!important}
 body.studio-tnbc.progressive .review-guide .workspace-title strong{font-size:17px}
 body.studio-tnbc.progressive .review-guide .workflow{display:inline!important;font-size:13px;color:#766c5d}
-body.studio-tnbc.progressive .review-command{display:flex;align-items:center;gap:16px;min-width:0}
+body.studio-tnbc.progressive .review-command{display:flex;flex-wrap:wrap;align-items:center;gap:16px;min-width:0}
 body.studio-tnbc.progressive .sample-control{display:flex;align-items:center;gap:8px;font-size:13px;color:#756c60}
 body.studio-tnbc.progressive #sample{width:148px;min-height:36px;background:#faf8f3;border-color:#d2c9b9;font-size:14px}
 body.studio-tnbc.progressive .guide-actions,body.studio-tnbc.progressive[data-comparison=four] .guide-actions{position:static;margin:0;display:flex;flex-wrap:nowrap;gap:8px}
@@ -31,7 +31,7 @@ body.studio-tnbc.progressive .menu-section h2{font-size:13px;font-weight:600;mar
 body.studio-tnbc.progressive .menu-buttons{display:flex;flex-wrap:wrap;gap:6px}
 body.studio-tnbc.progressive .menu-buttons button,body.studio-tnbc.progressive .interaction-tools button{font-size:13px;min-height:34px;padding:6px 9px}
 body.studio-tnbc.progressive .layer-bar{display:flex;flex-wrap:wrap;padding:0;border:0;background:transparent;gap:10px 16px}
-body.studio-tnbc.progressive .layer-bar .opacity-control{display:flex;align-items:center;gap:8px;margin:4px 0 10px;width:100%;font-size:13px}
+body.studio-tnbc.progressive .layer-bar .opacity-control{display:flex!important;align-items:center;gap:8px;margin:4px 0 10px;width:100%;font-size:13px}
 body.studio-tnbc.progressive .layer-bar input[type=range]{flex:1;min-width:90px}
 body.studio-tnbc.progressive .viewport-bar{display:flex;flex-direction:column;align-items:flex-start;gap:5px;white-space:normal;background:transparent;color:#776c59;border:0;margin-top:14px;padding:0;font-size:12px}
 body.studio-tnbc.progressive .viewport-bar .interaction-hint{margin:0}
