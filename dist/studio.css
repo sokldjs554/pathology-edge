@@ -156,7 +156,7 @@ body.studio{--ink:#282725;--muted:#7a7670;--line:#d4d0c9;--surface:#efede8;--acc
  .studio-tnbc[data-layout=compare] .panes{grid-template-columns:1fr;grid-template-rows:1fr}.studio-tnbc[data-layout=compare] .reference-pane{display:none}
  .studio-tnbc .sample-tray{grid-column:1;grid-row:3;padding:3px 7px;gap:7px;position:static;width:auto;min-height:0}.studio-tnbc .tray-heading{display:none}.studio-tnbc .sample-list{height:76px}.studio-tnbc .sample-tray .navigator{width:66px}.studio-tnbc #navigator{width:54px;height:54px}.studio-tnbc .sample-item{min-width:116px;min-height:60px}
  .studio-tnbc .inspector,.studio-tnbc[data-layout=data] .workbench:not(.inspector-hidden) .inspector{position:absolute;grid-column:auto;grid-row:auto;right:0;top:49px;bottom:0;width:min(330px,calc(100vw - 18px));height:auto;box-shadow:-5px 0 20px #0005}
- .studio-tnbc[data-layout=data] .workbench,.studio-tnbc[data-layout=data] .workbench.tray-hidden{grid-template-rows:49px minmax(190px,1fr) 190px;overflow-y:auto}
+ .studio-tnbc[data-layout=data] .workbench,.studio-tnbc[data-layout=data] .workbench.tray-hidden{grid-template-rows:49px minmax(480px,1fr) 190px;overflow-y:auto}
  .studio-tnbc[data-layout=data] .sample-tray{display:none}.studio-tnbc[data-layout=data] .candidate-dock,.studio-tnbc[data-layout=data] .workbench:not(.inspector-hidden) .candidate-dock{grid-column:1;grid-row:3;height:190px;border-left:0}
  .studio .dock-heading{padding:6px 9px}.studio .dock-heading h2{font-size:12px}.studio .dock-heading .eyebrow{display:none}.studio .dock-filters{padding:4px 8px;flex-wrap:nowrap;overflow:auto;white-space:nowrap}.studio .dock-note{padding:4px 8px}
  .studio-tnbc .workbench.tray-hidden .inspector{bottom:0}
@@ -193,5 +193,5 @@ body.studio{--ink:#282725;--muted:#7a7670;--line:#d4d0c9;--surface:#efede8;--acc
 }
 @media(max-width:760px){
  .studio-tnbc .workbench.tray-hidden.inspector-hidden{grid-template-columns:minmax(0,1fr);grid-template-rows:49px minmax(0,1fr)}
- .studio-tnbc[data-layout=data] .workbench.tray-hidden.inspector-hidden{grid-template-columns:minmax(0,1fr);grid-template-rows:49px minmax(190px,1fr) 190px}
+ .studio-tnbc[data-layout=data] .workbench.tray-hidden.inspector-hidden{grid-template-columns:minmax(0,1fr);grid-template-rows:49px minmax(480px,1fr) 190px}
 }
