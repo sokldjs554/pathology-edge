@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 const data=JSON.parse(fs.readFileSync(new URL('../dist/results.json',import.meta.url)));
+const cases=JSON.parse(fs.readFileSync(new URL('../dist/cases.json',import.meta.url)));
 const open=async(page)=>{await page.goto('/');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');};
 test('candidate table navigates to original exported candidate and links its detail',async({page})=>{
  await open(page);
@@ -25,7 +26,10 @@ test('image changes clear the object crop and restore the full candidate list',a
 });
 test('pane maximize restores synchronized comparison without changing selected case',async({page})=>{
  await open(page);await page.locator('#showWorsened').click();
- const center=await page.locator('#after').getAttribute('data-center');
+ const selected=cases.cases.find(c=>c.id===cases.recommended.worsened);
+ const center=selected.center.map(v=>v.toFixed(3)).join(',');
+ await expect(page.locator('#after')).toHaveAttribute('data-case',selected.id);
+ await expect(page.locator('#after')).toHaveAttribute('data-center',center);
  await page.locator('#maximizeBefore').click();
  await expect(page.locator('#afterPane')).toBeHidden();
  await expect(page.locator('#before')).toHaveAttribute('data-center',center);
