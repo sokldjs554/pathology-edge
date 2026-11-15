@@ -1,0 +1,37 @@
+{
+  "scope": "Verbatim historical documentation snapshots; source/evidence/user completion states unchanged.",
+  "files": [
+    {
+      "branch": "main",
+      "source_commit": "ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e",
+      "source_path": "README.md",
+      "archive_path": "docs/history/main-README-20261115.txt",
+      "sha256": "4a80ec47053923326a3a7fd8dd7b923462d05169cd0337fdd8f939b8d73957be",
+      "bytes": 27250
+    },
+    {
+      "branch": "main",
+      "source_commit": "ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e",
+      "source_path": "docs/RUNBOOK.md",
+      "archive_path": "docs/history/main-RUNBOOK-20261115.txt",
+      "sha256": "b7f0186077149eaa580da47d9dc2cd28edd52ba4a9aa2333fa2d5101227c2c7e",
+      "bytes": 13434
+    },
+    {
+      "branch": "research",
+      "source_commit": "095b0196585c05b256942bfe6bf889c3668a136c",
+      "source_path": "README.md",
+      "archive_path": "docs/history/research-README-20261115.txt",
+      "sha256": "51a10d6c4defe52259c12552ec8b748c5ff21e089dfc49550cdefa5c346a824c",
+      "bytes": 31626
+    },
+    {
+      "branch": "research",
+      "source_commit": "095b0196585c05b256942bfe6bf889c3668a136c",
+      "source_path": "docs/RUNBOOK.md",
+      "archive_path": "docs/history/research-RUNBOOK-20261115.txt",
+      "sha256": "b7f0186077149eaa580da47d9dc2cd28edd52ba4a9aa2333fa2d5101227c2c7e",
+      "bytes": 13434
+    }
+  ]
+}
