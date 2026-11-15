@@ -9,13 +9,14 @@
       content="실제 TNBC 핵 분할 결과를 같은 시야에서 비교하는 연구용 병리 이미지 작업대"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="workbench.css" />
   </head>
-  <body>
+  <body class="linked-workbench" data-tool="pan">
     <header class="app-header">
       <a class="brand" href="./" aria-label="PathologyEdge 처음으로"
         ><svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z" /></svg
-        >Pathology<span>Edge</span></a
+        >Pathology<span>Edge</span><small class="brand-edition">WORKBENCH</small></a
       >
       <nav class="experiment-nav" aria-label="작업 화면">
         <a href="wsi.html">실제 WSI 탐색</a
@@ -44,29 +45,39 @@
         <option>예제 불러오는 중…</option>
       </select>
       <span id="imageTitle" class="image-title">TNBC · H&E · 512 × 512 px</span>
-      <div class="study-actions">
+      <div class="study-actions"><button id="toggleDock" aria-expanded="true" aria-controls="candidateDock">후보 표</button>
         <button id="focusMode" aria-pressed="false">영상 넓게</button
         ><button
           id="toggleInspector"
           aria-expanded="true"
           aria-controls="inspector"
         >
-          결과 패널
+          검토 패널
         </button>
       </div>
     </nav>
     <main class="workbench" id="workbench">
       <aside class="sample-tray" id="tray" aria-label="예제 이미지 목록">
-        <div class="tray-label">TEST IMAGES</div>
+        <div class="tray-heading"><span class="eyebrow">SLIDE EXPLORER</span><h2>슬라이드 목록</h2><p>TNBC · 정답이 있는 테스트 이미지</p></div>
         <div id="sampleList" class="sample-list"></div>
-        <div class="tray-footer">
+                  <div class="navigator" id="navigatorBox">
+            <div>전체 위치 <span>PNG · 클릭하여 이동</span></div>
+            <canvas
+              id="navigator"
+              width="120"
+              height="120"
+              tabindex="0"
+              aria-label="전체 위치 개요도. 클릭 또는 방향키로 이동"
+            ></canvas>
+          </div>
+<div class="tray-footer">
           <span id="traySampleCount">—</span>개 예제<br />512px PNG<br /><span
             >WSI 전체 아님</span
           >
         </div>
       </aside>
       <section class="viewer-workspace" aria-label="영상 비교 작업대">
-        <div class="review-guide">
+        <div class="review-guide"><div class="workspace-title"><span class="eyebrow">PATCH BOUNDARY REVIEW</span><strong>같은 조직, 다른 경계 처리</strong></div>
           <p>
             병리 이미지를 작은 조각으로 나눌 때,
             <strong>경계의 핵 분할 결과</strong>는 어떻게 달라질까요?
@@ -90,7 +101,7 @@
             ><button id="modeMerge" aria-pressed="false">중복 병합</button
             ><button id="modeSingle" aria-pressed="false">단일 영상</button>
           </div>
-          <div class="toolbar-divider"></div>
+          <div class="toolbar-divider"></div><div class="interaction-tools"><button id="toolPan" aria-pressed="true" title="영상을 드래그하여 이동">↔ 이동</button><button id="toolSelect" aria-pressed="false" title="후보를 눌러 원본 위치와 상세 정보 확인">⌖ 후보 선택</button></div>
           <div class="zoom-tools">
             <button id="zoomout" aria-label="축소">−</button
             ><output id="zoomvalue" aria-label="화면 배율">—</output
@@ -162,7 +173,7 @@
                   id="beforeMeta"
                   title="stride: 다음 128px 조각까지 이동하는 간격"
                   >stride 128</span
-                ><span id="countBefore" class="pane-count"></span>
+                ><span id="countBefore" class="pane-count"></span><button id="maximizeBefore" class="pane-expand" aria-pressed="false" aria-label="A 영상 크게 보기" title="A 영상 크게 보기">⛶</button>
               </div>
               <div class="canvas-frame">
                 <canvas
@@ -184,7 +195,7 @@
                   id="afterMeta"
                   title="stride: 다음 128px 조각까지 이동하는 간격"
                   >stride 64</span
-                ><span id="countAfter" class="pane-count"></span>
+                ><span id="countAfter" class="pane-count"></span><button id="maximizeAfter" class="pane-expand" aria-pressed="false" aria-label="B 영상 크게 보기" title="B 영상 크게 보기">⛶</button>
               </div>
               <div class="canvas-frame">
                 <canvas
@@ -198,16 +209,6 @@
                 ><span id="scopeAfter">전체 이미지</span>
               </div>
             </article>
-          </div>
-          <div class="navigator" id="navigatorBox">
-            <div>전체 위치 <span>PNG</span></div>
-            <canvas
-              id="navigator"
-              width="120"
-              height="120"
-              tabindex="0"
-              aria-label="전체 위치 개요도. 클릭 또는 방향키로 이동"
-            ></canvas>
           </div>
           <div class="stage-message" id="stageMessage">
             <div class="state-symbol" id="stateSymbol" aria-hidden="true">
@@ -225,10 +226,23 @@
             >드래그·스크롤 이동 · Ctrl/⌘+스크롤 확대</span
           >
         </div>
+<section id="candidateDock" class="candidate-dock" aria-label="영상과 연결된 후보 데이터">
+  <div class="dock-heading"><div><span class="eyebrow">LINKED OBJECT DATA</span><h2>후보 데이터 <span id="candidateCount" role="status">불러오는 중</span></h2></div><button id="closeDock" class="quiet" aria-label="후보 표 접기">⌄ 접기</button></div>
+  <div class="dock-filters">              <label class="field-label" for="objectSource">후보 출처</label
+              ><select id="objectSource">
+                <option value="after">B · 병합 후</option>
+                <option value="before">A · 무겹침</option></select
+              ><label for="candidateQuery" class="sr-only">후보 번호 검색</label><input id="candidateQuery" type="search" placeholder="후보 번호 · #12" autocomplete="off"><label class="check-row"
+                ><input type="checkbox" id="visibleOnly" />현재 시야의
+                후보만</label
+              ><label class="check-row"><input id="edgeOnly" type="checkbox">경계 접촉만</label></div>
+  <div class="candidate-table-scroll" tabindex="0" aria-label="후보 표 스크롤"><table class="candidate-table"><thead><tr><th scope="col">후보 · 선택하여 이동</th><th scope="col">중심 x, y (px)</th><th scope="col">면적 (px²)</th><th scope="col">평균 점수</th><th scope="col">패치</th><th scope="col">경계 접촉</th></tr></thead><tbody id="candidateRows"></tbody></table><p id="candidateEmpty" class="note">저장된 후보를 불러오는 중입니다.</p></div>
+  <p class="dock-note">표의 행 ↔ 영상의 후보 ↔ 오른쪽 상세 정보 · 점수는 보정된 신뢰도가 아닙니다.</p>
+</section>
       </section>
       <aside class="inspector" id="inspector" aria-label="결과와 선택한 후보">
         <div class="inspector-heading">
-          <strong>검토 결과</strong
+          <strong>검토 인스펙터</strong
           ><button
             id="closeInspector"
             class="quiet"
@@ -244,7 +258,7 @@
             aria-selected="true"
             aria-controls="panelImage"
           >
-            이미지</button
+            이미지 결과</button
           ><button
             id="tabObject"
             role="tab"
@@ -258,7 +272,7 @@
             aria-selected="false"
             aria-controls="panelExperiment"
           >
-            실험
+            전체 실험
           </button>
         </div>
         <div class="inspector-scroll">
@@ -385,21 +399,14 @@
               <p id="selectionText" class="note">
                 후보 표시를 켜고 원을 누르거나 아래 목록에서 선택하세요.
               </p>
-              <label class="field-label" for="objectSource">후보 출처</label
-              ><select id="objectSource">
-                <option value="after">B · 병합 후</option>
-                <option value="before">A · 무겹침</option></select
-              ><label class="field-label" for="componentSelect">후보 목록</label
+<label class="field-label" for="componentSelect">후보 목록</label
               ><select id="componentSelect" disabled>
                 <option>선택할 후보 없음</option></select
-              ><label class="check-row"
-                ><input type="checkbox" id="visibleOnly" />현재 시야의
-                후보만</label
               >
               <div id="selectionEmpty" class="empty-selection">
                 아직 선택한 후보가 없습니다.
               </div>
-              <dl id="selectedInfo" class="compact-dl"></dl>
+              <figure id="selectionPreview" hidden><canvas id="selectedCrop" width="224" height="160" aria-label="선택 후보의 원본 조직 영상"></canvas><figcaption id="cropCaption"></figcaption></figure><dl id="selectedInfo" class="compact-dl"></dl>
               <p class="note">
                 확률 평균은 보정된 신뢰도가 아닙니다. 선택 상자는 원본 PNG 픽셀
                 좌표입니다.
@@ -634,8 +641,10 @@
         </dd>
       </dl>
     </dialog>
+    <script src="workbench-data.js"></script>
     <script src="viewer-math.js"></script>
     <script src="review-ui.js"></script>
     <script src="app.js" defer></script>
+    <script src="workbench-ui.js" defer></script>
   </body>
 </html>

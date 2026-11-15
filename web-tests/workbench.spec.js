@@ -1,0 +1,42 @@
+import { test, expect } from '@playwright/test';
+import fs from 'node:fs';
+const data=JSON.parse(fs.readFileSync(new URL('../dist/results.json',import.meta.url)));
+const open=async(page)=>{await page.goto('/');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');};
+test('candidate table navigates to original exported candidate and links its detail',async({page})=>{
+ await open(page);
+ await page.screenshot({path:'captures/linked-workbench-desktop.png',fullPage:true});
+ await page.locator('#candidateQuery').fill('#12');
+ await expect(page.locator('#candidateRows tr')).toHaveCount(1);
+ await page.locator('#candidateRows button').click();
+ const o=data.samples[0].methods.overlap.objects[11];
+ await expect(page.locator('#selectionText')).toContainText('#12');
+ await expect(page.locator('#selectedInfo')).toContainText(`${o.x.toFixed(1)}, ${o.y.toFixed(1)} px`);
+ await expect(page.locator('#selectionPreview')).toBeVisible();
+ await page.screenshot({path:'captures/linked-workbench-selection.png',fullPage:true});
+ await expect(page.locator('#before')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
+});
+test('image changes clear the object crop and restore the full candidate list',async({page})=>{
+ await open(page);await page.locator('#candidateQuery').fill('#12');await page.locator('#candidateRows button').click();
+ await page.locator('#sample').selectOption('10_2');
+ await expect(page.locator('#activeImage')).toHaveText('TNBC 10_2');
+ await expect(page.locator('#candidateQuery')).toHaveValue('');
+ await expect(page.locator('#selectionPreview')).toBeHidden();
+ await expect(page.locator('#candidateRows tr')).toHaveCount(data.samples[1].methods.overlap.objects.length);
+});
+test('pane maximize restores synchronized comparison without changing selected case',async({page})=>{
+ await open(page);await page.locator('#showWorsened').click();
+ const center=await page.locator('#after').getAttribute('data-center');
+ await page.locator('#maximizeBefore').click();
+ await expect(page.locator('#afterPane')).toBeHidden();
+ await expect(page.locator('#before')).toHaveAttribute('data-center',center);
+ await page.locator('#maximizeBefore').click();
+ await expect(page.locator('#afterPane')).toBeVisible();
+ await expect(page.locator('#before')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
+});
+test('small screen keeps candidate and result controls available without page overflow',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await open(page);
+ await expect(page.locator('#toggleDock')).toBeVisible();
+ await page.locator('#toggleDock').click();await expect(page.locator('#candidateDock')).toBeVisible();
+ await page.locator('#candidateRows button').first().click();await expect(page.locator('#selectedInfo')).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+});

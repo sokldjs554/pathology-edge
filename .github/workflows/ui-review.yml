@@ -33,7 +33,7 @@ jobs:
         working-directory: web-tests
       - run: npx playwright install --with-deps ${{ matrix.browser }}
         working-directory: web-tests
-      - run: node --test web-tests/viewer-math.test.cjs
+      - run: node --test web-tests/*test.cjs
       - run: npx playwright test --grep "$UI_TEST_GREP"
         env:
           UI_BROWSER: ${{ matrix.browser }}

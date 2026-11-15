@@ -114,12 +114,14 @@ function setPhase(phase, title = '', detail = '') {
   );
   interactionIds.forEach((id) => ($(id).disabled = phase !== 'ready'));
   Review.refresh();
+  window.WorkbenchUI?.refresh();
   if (phase !== 'ready') {
     $('componentSelect').disabled = true;
     $('suppressionSelect').disabled = true;
   }
 }
 function activeCanvas() {
+  if (state.expandedSide) return $(state.expandedSide);
   return innerWidth <= 760
     ? $(
         state.mobileSide === 'before' && state.mode !== 'single'
@@ -516,6 +518,7 @@ function updatePanels() {
 function clearSelection() {
   state.selected = null;
   state.pair = null;
+  window.WorkbenchUI?.refresh();
   $('pairInfo').textContent =
     '분홍 상자는 억제 후보, 파란 상자는 유지 후보입니다. 두 후보가 같은 실제 핵인지는 별도 검토가 필요합니다.';
   $('selectedInfo').replaceChildren();
@@ -525,6 +528,7 @@ function clearSelection() {
 }
 function setMode(mode) {
   if (state.phase !== 'ready') return;
+  window.WorkbenchUI?.setExpanded(null);
   state.mode = mode;
   if (mode === 'merge') $('objects').checked = true;
   clearSelection();
@@ -595,6 +599,7 @@ function renderObjectOptions() {
     ? selected
     : '';
   $('componentSelect').disabled = !list.length;
+  window.WorkbenchUI?.refresh();
 }
 function selectObject(side, index, move = false) {
   if (!state.sample) return;
@@ -719,6 +724,7 @@ function populateData() {
         `sample-delta ${d < 0 ? 'negative' : ''}`,
       ),
     );
+    button.append(node('span', 'H&E · 512 × 512 px', 'sample-kind'));
     button.addEventListener('click', () => loadSample(s.id));
     $('sampleList').append(button);
   }
@@ -1038,7 +1044,7 @@ for (const [i, canvas] of canvases.entries()) {
       drag = null;
       return;
     }
-    if (drag && !drag.moved && state.sample && $('objects').checked) {
+    if (drag && !drag.moved && state.sample && $('objects').checked && state.tool !== 'pan') {
       const p = eventPoint(e, canvas),
         d = dimensions(canvas),
         q = M.toImage(
