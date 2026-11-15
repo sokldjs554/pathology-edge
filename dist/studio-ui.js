@@ -20,7 +20,7 @@ window.Studio = {
     if (!['two', 'four'].includes(comparison)) return;
     this.comparison = comparison;
     document.body.dataset.comparison = comparison;
-    for (const [id,value] of [['modeBoundary','two'],['compareFour','four']]) $(id).setAttribute('aria-pressed',String(value===comparison));
+    for (const [id,value] of [['modeBoundary','two'],['compareFour','four']]) $(id).setAttribute('aria-pressed',String(value===comparison && state.mode==='boundary'));
     this.setLayout('compare');
   },
   startView() {
@@ -66,7 +66,7 @@ window.Studio = {
 };
 // Data occupies a dedicated column, not a dock hidden by laptop-height heuristics.
 $('workbench').append($('candidateDock'));
-$('compareFour').addEventListener('click',()=>Studio.setComparison('four'));
+$('compareFour').addEventListener('click',()=>{if(state.mode!=='boundary')setMode('boundary');Studio.setComparison('four');});
 $('toggleDock').addEventListener('click',()=>Studio.setLayout(Studio.layout==='data'?'compare':'data'));
 $('closeDock').addEventListener('click',()=>Studio.setLayout('compare'));
 $('modeMerge').addEventListener('click',()=>Studio.setComparison('two'));

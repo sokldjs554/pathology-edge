@@ -31,3 +31,9 @@
 - [ ] Adapt existing browser paths to open the real advanced controls; add first-entry, scoped result, menu focus and responsive regression coverage.
 - [ ] Run Node/static checks and full Chromium/WebKit + CPU CI. Inspect screenshots and fix observed failures.
 - [ ] Publish the same source, compare deployed files and run production browser checks; save screenshots and reports, update PR #3 and user instructions.
+
+## Execution notes
+
+- Baseline `bf972c2`: new browser requirements failed (missing advanced entry and compact outcome); existing 55 passed. Node/static checks passed after initial implementation.
+- Retained the existing isolated UI branch and public Site audience. Sites helper is absent; existing hidden-stdin source helper verified source commit `d908780f0a4ee7a9e75b1eb60c438b3a78c2dcc5` before editing.
+- Review identified conflicting combined-state CSS selectors from the earlier workbench; new entry stylesheet uses an explicit page scope so candidate and mobile grids retain the intended columns/rows.

@@ -4,14 +4,16 @@ window.ReviewEntry = {
   lastKey: '',
   refresh() {
     const ready = state.phase === 'ready' && state.sample;
-    const c = ready && state.mode === 'boundary' ? Review.selected : null;
     const layout = Studio.layout;
+    const c = ready && layout === 'compare' && state.mode === 'boundary' ? Review.selected : null;
     const key = [state.phase, state.sample?.id, state.mode, layout, Studio.comparison, c?.id].join('/');
     if (key === this.lastKey) return;
     this.lastKey = key;
     $('caseEvidence').hidden = !c;
     $('returnComparison').hidden = layout === 'compare' && Studio.comparison === 'two' && state.mode === 'boundary';
     $('outcomeScore').textContent = '';
+    $('outcomeScore').title = '';
+    $('outcomePixels').title = '';
     if (!ready) {
       $('outcomeLabel').textContent = state.phase === 'error' ? '결과를 불러오지 못했습니다' : state.phase === 'empty' ? '표시할 예제가 없습니다' : '저장된 결과 불러오는 중';
       $('outcomePixels').textContent = '';
@@ -52,7 +54,11 @@ $('caseEvidence').addEventListener('click',()=>{
 });
 $('detailTools').addEventListener('click',e=>{
   // Layer/selection controls stay open while adjusting; navigation actions close.
-  if(e.target.closest('.menu-buttons button'))ReviewEntry.closeTools(true);
+  const button=e.target.closest('.menu-buttons button');
+  if(!button)return;
+  ReviewEntry.closeTools();
+  if(['toggleInspector','showResults'].includes(button.id)&&!$('workbench').classList.contains('inspector-hidden'))$('closeInspector').focus();
+  else $('detailTools').querySelector('summary').focus();
 });
 document.addEventListener('pointerdown',e=>{
   if($('detailTools').open&&!$('detailTools').contains(e.target))ReviewEntry.closeTools();

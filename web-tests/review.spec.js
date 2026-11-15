@@ -251,5 +251,6 @@ test('missing, mismatched or corrupt case evidence never fabricates a highlight'
     '실제 저장 마스크와 일치하지 않습니다',
   );
   await expect(page.locator('#caseDetail')).toBeHidden();
+  await expect(page.locator('#outcomeScore')).toHaveText('');
   await expect(page.locator('#after')).not.toHaveAttribute('data-case', /./);
 });

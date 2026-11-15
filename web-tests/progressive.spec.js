@@ -45,7 +45,10 @@ test('advanced controls open on request and keyboard can return to comparison',a
  await expect(page.locator('#outcomeLabel')).toContainText('중복 후보');
  await page.locator('#showImproved').click();await expect(page.locator('#outcomeLabel')).toContainText('선택 상자 경계 Dice');
  await page.locator('#detailTools summary').click();await page.locator('#toggleDock').click();
- await expect(page.locator('#candidateDock')).toBeVisible();await page.locator('#showWorsened').click();
+ await expect(page.locator('#candidateDock')).toBeVisible();
+ expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(500);
+ await expect(page.locator('#outcomeScore')).toHaveText('');
+ await page.locator('#showWorsened').click();
  await expect(page.locator('#candidateDock')).toBeHidden();await expect(page.locator('#before')).toBeVisible();
 });
 
@@ -59,4 +62,29 @@ for(const width of [375,1024])test(`progressive menu and scoped outcome remain u
  await page.keyboard.press('Escape');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
  await page.screenshot({path:`captures/simple-${width}.png`,fullPage:true});
+});
+
+
+test('result-table case restores both images from B-only and candidate views',async({page})=>{
+ await ready(page);
+ for(const mode of ['modeSingle','toggleDock']){
+  await page.locator('#detailTools summary').click();await page.locator('#'+mode).click();
+  await page.locator('#detailTools summary').click();await page.locator('#showResults').click();
+  await expect(page.locator('#closeInspector')).toBeFocused();
+  await page.locator('#perImageRows button').first().click();
+  await expect(page.locator('#before')).toBeVisible();await expect(page.locator('#after')).toBeVisible();
+  await expect(page.locator('#after')).toHaveAttribute('data-case','10_1-worsened');
+  await expect(page.locator('#outcomeScore')).toHaveText('0.546 → 0.433');
+ }
+});
+
+
+test('tablet candidate details share a column without shrinking the image',async({page})=>{
+ await page.setViewportSize({width:1024,height:768});await ready(page);
+ await page.locator('#detailTools summary').click();await page.locator('#toggleDock').click();
+ expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(500);
+ await page.locator('#candidateRows button').first().click();
+ expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(500);
+ await expect(page.locator('#selectedInfo')).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
 });

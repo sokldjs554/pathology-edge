@@ -200,6 +200,8 @@ const Review = {
       return;
     try {
       const layer = this.evidenceLayer(c);
+      // Every case route (including result-table rows) restores a paired view.
+      if (window.Studio && (Studio.layout !== 'compare' || Studio.comparison !== 'two')) Studio.setComparison('two');
       setMode('boundary');
       setScope('all');
       $('objects').checked = false;
@@ -227,8 +229,6 @@ const Review = {
         `${c.sample_id} · 국소 ${c.direction === 'improved' ? '개선' : '악화'} · 흰 상자 = 동일 영역 · 청록 개선 / 분홍 악화`;
       // Keep both images visible; the compact result offers explicit evidence access.
       setTab('image', false);
-      $('workbench').classList.add('inspector-hidden');
-      $('toggleInspector').setAttribute('aria-expanded', 'false');
       state.fitMode = false;
       state.cx = c.center[0];
       state.cy = c.center[1];
