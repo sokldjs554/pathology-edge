@@ -11,6 +11,9 @@
       ),
     );
   }
+  function rasterDimensions(width, height, ratio = 1) {
+    return { width: Math.round(width * ratio) / ratio, height: Math.round(height * ratio) / ratio };
+  }
   function transform(width, height, zoom, cx, cy) {
     return {
       scale: zoom,
@@ -72,6 +75,7 @@
   const api = {
     clamp,
     fitZoom,
+    rasterDimensions,
     transform,
     toImage,
     bounds,

@@ -133,11 +133,11 @@ test('canvas geometry matches the visible pane rather than overflowing below it'
   for (const id of ['before', 'after']) {
     const geometry = await page.locator('#' + id).evaluate((c) => {
       const pane = c.closest('.pane'),
-        r = pane.getBoundingClientRect();
+        r = pane.getBoundingClientRect(), style = getComputedStyle(pane);
       return {
         actual: c.getBoundingClientRect().height,
         available:
-          r.height -
+          r.height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth) -
           pane.querySelector('.pane-header').getBoundingClientRect().height -
           pane.querySelector('.pane-caption').getBoundingClientRect().height,
       };

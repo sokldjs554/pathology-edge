@@ -40,3 +40,18 @@ test('small screen keeps candidate and result controls available without page ov
  await page.locator('#candidateRows button').first().click();await expect(page.locator('#selectedInfo')).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
 });
+
+test('short mobile workbench scrolls to the candidate dock without clipping controls',async({page})=>{
+ await page.setViewportSize({width:390,height:667});await open(page);
+ await page.locator('#toggleDock').click();
+ await page.locator('#candidateQuery').scrollIntoViewIfNeeded();
+ const box=await page.locator('#candidateQuery').boundingBox();
+ expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y+box.height).toBeLessThan(667);
+ await page.locator('#candidateQuery').fill('#12');
+ await page.locator('#candidateRows button').click();
+ await expect(page.locator('#selectedInfo')).toContainText('중심 x, y');
+ await page.locator('#closeInspector').click();
+ await page.locator('#closeDock').scrollIntoViewIfNeeded();
+ await page.locator('#closeDock').click();await expect(page.locator('#candidateDock')).toBeHidden();
+ await page.screenshot({path:'captures/linked-workbench-short-mobile.png',fullPage:true});
+});

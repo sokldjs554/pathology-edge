@@ -132,7 +132,7 @@ function activeCanvas() {
 }
 function dimensions(canvas) {
   const r = canvas.getBoundingClientRect();
-  return { width: r.width, height: r.height };
+  return M.rasterDimensions(r.width, r.height, Math.min(devicePixelRatio || 1, 2));
 }
 function visibleCanvases() {
   return canvases.filter(
@@ -268,6 +268,8 @@ function draw() {
     ctx.save();
     ctx.translate(t.ox, t.oy);
     ctx.scale(t.scale, t.scale);
+    // At native size and above, preserve source pixels rather than blend neighbors.
+    ctx.imageSmoothingEnabled = state.zoom < 1;
     ctx.drawImage(state.images.base, 0, 0);
     if ($('segmentation').checked) {
       ctx.globalAlpha = Number($('opacity').value) / 100;

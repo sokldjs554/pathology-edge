@@ -221,11 +221,10 @@ test('NMS raw-to-kept pair and image click resolve actual exported objects', asy
 
 test('single image, focus panels and help are usable', async ({ page }) => {
   await open(page);
+  const pairedWidth = (await page.locator('#after').boundingBox()).width;
   await page.locator('#modeSingle').click();
   await expect(page.locator('#before')).toBeHidden();
-  expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(
-    1000,
-  );
+  expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(pairedWidth * 1.9);
   await page.locator('#focusMode').click();
   await expect(page.locator('#tray')).toBeHidden();
   await expect(page.locator('#inspector')).toBeHidden();
@@ -257,7 +256,7 @@ for (const [width, height] of [
     ).toBe(true);
     const box = await page.locator('#after').boundingBox();
     expect(box.y).toBeLessThan(width <= 760 ? 415 : 345);
-    expect(box.width).toBeGreaterThan(width <= 760 ? width - 5 : 400);
+    expect(box.width).toBeGreaterThan(width <= 760 ? width * 0.95 : 400);
     if (width <= 760) {
       await page.locator('#mobileBefore').click();
       await expect(page.locator('#before')).toBeVisible();

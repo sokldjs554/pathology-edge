@@ -192,3 +192,8 @@ body.linked-workbench {
 
 /* Hidden panel state outranks the new flex layout. */
 .linked-workbench .workbench.tray-hidden .sample-tray {display:none}
+
+/* A short viewport can scroll the working column instead of clipping its dock. */
+@media(max-width:760px),(max-height:640px) {
+ .linked-workbench .viewer-workspace {overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain}
+}
