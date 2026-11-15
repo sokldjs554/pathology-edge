@@ -1,0 +1,114 @@
+{
+  "github_ui_commit": "27eb62a619271c42ee4ffbbe45d388864906f930",
+  "checkout_browser_run": 43747305455,
+  "cpu_run": 43747305456,
+  "expected_browser_tests": 62,
+  "python_tests_passed": 462,
+  "node_tests_passed": 14,
+  "experiment_assets_unchanged": true,
+  "user_verified_revision": false,
+  "site_source_commit": "01be56294db63114ba1944259e8b09ffb9384155",
+  "version_number": 14,
+  "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_97d03d85d8388191bc4413a18b32b609",
+  "deployment_id": "appgdep_6af9fb1d10d08191ac5e4053ce7c0c46",
+  "deployment_status": "succeeded",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "deployed_utc": "2026-11-15T18:34:19.758318+00:00",
+  "dice_checks": 42,
+  "image_means": 6,
+  "production_browser_run": 43747526658,
+  "ui_implementation_commit": "3c893c51fc3efe9006216c13b9614fb3105e9005",
+  "browser_reports": {
+    "checkout-chromium": {
+      "file": "checkout-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-15T18:33:27.909Z",
+        "duration": 92662.642,
+        "expected": 62,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "checkout-webkit": {
+      "file": "checkout-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-15T18:33:20.005Z",
+        "duration": 124616.298,
+        "expected": 62,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-chromium": {
+      "file": "production-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-15T18:35:31.804Z",
+        "duration": 137262.267,
+        "expected": 62,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-webkit": {
+      "file": "production-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-15T18:35:27.871Z",
+        "duration": 183311.021,
+        "expected": 62,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  },
+  "matched_deployment_files": 2195,
+  "screenshots": {
+    "candidate-data.png": {
+      "sha256": "3cae5d5f333a653bd0ad18d5625efe5423d8a7b8ccc01feb1ec674d5e1626357",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    },
+    "entry.png": {
+      "sha256": "36c2c9ca8551832140a257a0da2a94660d8a54edae9136a2748bc0f1ce4abf56",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    },
+    "four.png": {
+      "sha256": "50becb7d0052aca56871575b1229bb435e1854ce40231b41cd3f5f5fefbb0cc0",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    },
+    "improved.png": {
+      "sha256": "9dd2c1ae967de72440738a48ba52d98facc3bfda561fac2d76d26a201f69164a",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    },
+    "mobile.png": {
+      "sha256": "85526f25bdb0308a642997f9fcf18abc8952b37b7a8c7d151e8532454e9f99fb",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    },
+    "tablet.png": {
+      "sha256": "4544dd551cb57fb229b246350b4d1bdb65f7dd075e8be50e236b810ed1826f7e",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    },
+    "worsened.png": {
+      "sha256": "5d0bc41906eb3a8c9a8dc18e7d026de96cfaf0163c3755acabd7e7b26e91a956",
+      "production_browser_run": 43747526658,
+      "browser": "chromium"
+    }
+  },
+  "changed_dist_files_since_v12": [
+    "dist/app.js",
+    "dist/index.html",
+    "dist/review-entry.css",
+    "dist/review-entry.js",
+    "dist/review-ui.js",
+    "dist/studio-ui.js",
+    "dist/workbench-ui.js"
+  ]
+}
