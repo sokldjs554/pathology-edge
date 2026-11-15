@@ -1,0 +1,95 @@
+{
+  "github_ui_commit": "d7228793bbf83c7cc7939fc5038d2e388b6ce293",
+  "site_source_commit": "e66e740672c7ece934ca1c29dd86d78f20acf2a1",
+  "version_number": 11,
+  "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_c0d827034c88819192c73ae75d131ee3",
+  "deployment_id": "appgdep_6af9e323f91081919345268bad4224c9",
+  "deployment_status": "succeeded",
+  "public_url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "deployed_utc": "2026-11-15T16:52:01.593841+00:00",
+  "checkout_browser_run": 43737632265,
+  "production_browser_run": 43737884212,
+  "cpu_run": 43737636357,
+  "python_tests_passed": 462,
+  "node_tests_passed": 14,
+  "dice_values_matched": 42,
+  "image_means_matched": 6,
+  "unchanged_experiment_assets": true,
+  "user_verified_new_design": false,
+  "browser_results": {
+    "checkout_chromium": {
+      "startTime": "2026-11-15T16:50:07.437Z",
+      "duration": 90116.542,
+      "expected": 53,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "checkout_webkit": {
+      "startTime": "2026-11-15T16:50:18.242Z",
+      "duration": 104739.316,
+      "expected": 53,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "production_chromium": {
+      "startTime": "2026-11-15T16:52:56.033Z",
+      "duration": 138196.224,
+      "expected": 53,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "production_webkit": {
+      "startTime": "2026-11-15T16:53:17.172Z",
+      "duration": 169243.588,
+      "expected": 53,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "matched_deployed_files": 2193,
+  "screenshots": [
+    {
+      "file": "ihc-desktop.png",
+      "sha256": "5e870b800fa6f062bd9857a50f0abf4ab9d51cf49091aa7ebbff292062732e54",
+      "source": "production Chromium run 43737884212"
+    },
+    {
+      "file": "studio-compare-laptop.png",
+      "sha256": "8b16a6b6f5994a55009243de126cce5971b2d3eed98122f88d7a03ec258e0c23",
+      "source": "production Chromium run 43737884212"
+    },
+    {
+      "file": "studio-data-laptop.png",
+      "sha256": "6f2f46ed2086203c05d08b64de37fac423ededf3c897e29b9a63806d16bc72ab",
+      "source": "production Chromium run 43737884212"
+    },
+    {
+      "file": "studio-image-laptop.png",
+      "sha256": "256a47af3bfe1438bfaac1cace1c0b81fb1cf556adda7ae9d7eb52aa2e354350",
+      "source": "production Chromium run 43737884212"
+    },
+    {
+      "file": "studio-mobile.png",
+      "sha256": "6e2928b58c36635591f0b1e11ce9458dc5c3001224e3f215105dab4e2545c25e",
+      "source": "production Chromium run 43737884212"
+    },
+    {
+      "file": "wsi-overview.png",
+      "sha256": "7802030711b2ab9094ee66e0f443d728ddce788dd4e117597a69e9f2b02cefd2",
+      "source": "production Chromium run 43737884212"
+    }
+  ],
+  "changed_dist_files_since_v8": [
+    "dist/app.js",
+    "dist/ihc.html",
+    "dist/index.html",
+    "dist/studio-ui.js",
+    "dist/studio.css",
+    "dist/workbench-ui.js",
+    "dist/wsi.html"
+  ]
+}

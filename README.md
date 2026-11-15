@@ -13,11 +13,13 @@
 
 ## 화면에서 확인하기
 
-1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 예제 선택 → ‘좋아진 경계 보기’ 또는 ‘나빠진 경계 보기’ → 같은 위치의 A/B와 정답·오류 픽셀 비교. 확대·이동과 후보 억제 출처도 확인합니다. **후보 표**의 행을 누르면 양쪽 영상의 같은 위치와 상세 확대 조각이 연결됩니다.
+1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 예제 선택 → ‘좋아진 경계 보기’ 또는 ‘나빠진 경계 보기’ → 같은 위치의 A/B와 정답·오류 픽셀 비교. 확대·이동과 후보 억제 출처도 확인합니다. **병리 작업대 / 다중 비교 / 후보 데이터**로 화면을 전환합니다. 넓은 화면에서는 A/B·원본·정답을 네 영상으로 비교하고, 후보 데이터 행을 선택하면 해당 위치와 실제 확대 조각이 연결됩니다.
 2. **[WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)**: 전체 슬라이드 확대 → R1–R3 선택 → 해당 ROI의 예측 차이 확인. 전체 슬라이드 탐색과 일부 ROI의 분석을 구분합니다.
 3. **[IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html)**: 예제와 세포 선택 → 정답·예측 클래스 비교. 이 공개 화면은 정답 중심 좌표가 주어진 분류 실험입니다.
 
-![슬라이드 탐색·동기화 영상·후보 데이터를 연결한 작업대](artifacts/ui-linked-workbench-20261116/after-desktop.png)
+![A/B 예측·원본·정답을 같은 위치에서 비교하는 다중 영상 작업대](artifacts/ui-studio-20261116/studio-compare-laptop.png)
+
+[병리 영상 작업대](artifacts/ui-studio-20261116/studio-image-laptop.png) · [영상과 후보 데이터 연결](artifacts/ui-studio-20261116/studio-data-laptop.png)
 
 [WSI 전체 탐색 화면](artifacts/ui/wsi/wsi-overview.png) · [악화 사례](artifacts/ui/interview/after-worsened.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md)
 

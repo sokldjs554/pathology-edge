@@ -1,65 +1,49 @@
-# Linked pathology workbench · 2026-11-16
+# PathologyEdge · 세 가지 작업 화면
 
-## What changed
+버전 8은 기존 좌·중·우 배치를 거의 유지해 요청한 디자인 변화가 부족했습니다. 이번 변경은 영상 중심, 다중 영상 비교, 영상·후보 데이터 연결을 **서로 전환하는 세 작업 화면**으로 구현합니다. 청록·민트를 제거하고 회백색·흑연색 UI, 황색 선택 표시를 사용합니다.
 
-The boundary-review page now combines a slide browser, synchronized medical-style panes, and linked candidate inspection. The earlier narrow thumbnail strip is replaced by readable slide rows and a persistent overview. A candidate table beneath the viewer links saved source indexes to both image location and a source-image crop in the inspector. Each pane can be enlarged and restored. Pan and candidate selection are explicit tools.
-
-On smaller or shorter screens the table starts collapsed. Its toggle remains available, and the work column can scroll when the open table cannot fit vertically. The existing mobile A/B switch remains available. WSI and IHC routes retain their prior UI and functions.
-
-The change uses the existing HTML/JavaScript canvas viewer and adds no production dependencies. It does not run inference, modify experimental results, or alter user-authored Python algorithms.
-
-## References and design decisions
-
-- [QuPath viewer](https://qupath.readthedocs.io/en/stable/docs/starting/viewing.html): large image, slide navigation and location overview.
-- [OHIF viewer](https://docs.ohif.org/user-guide/viewer/): separate image panes and inspectable results, with explicit active view controls.
-- [HALO object data](https://indicalab.com/news/halo-halo-ai-and-halo-link-4-1-features-and-functionalities/): selection links between object data and spatial context.
-- [napari viewer](https://napari.org/stable/getting_started/viewer.html): consistent overlay visibility controls.
-
-The design combines these interaction patterns; it does not reproduce a vendor screen or claim its clinical functionality.
-
-## Inspect the new version
-
-1. Select a TNBC example in the left slide list. Its saved image and metrics update together.
-2. Open a better or worse boundary. A and B show the same selected region; the inspector gives the stored local evidence.
-3. Use the corner button on A or B to enlarge that pane, then restore comparison.
-4. Open **후보 표**, enter `#12`, and select its row. Both views move to that candidate's saved coordinates; the right inspector shows its source crop and fields.
-5. Switch the table source between A and B, or filter to the current view / patch-edge contact. Candidate numbering always refers to the selected source list.
-6. Open **중복 병합** and a stored suppression pair. Raw/retained identities remain available. A suppression link does not establish that the two predictions are the same real nucleus.
-7. On a small screen, use the A/B switch and the example/results/table buttons. Close the inspector to return to the image.
-
-## Verification scope
-
-The local managed browser control is unavailable in this session. Browser verification therefore uses the repository's existing GitHub Actions Playwright workflow in Chromium and WebKit, not a claim of local hands-on browser testing.
-
-Initial browser checks identified obsolete fixed-width/border assumptions and native-pixel interpolation with fractional canvas sizes. Geometry checks now account for pane borders and compare single-view size to the available paired view. Logical rendering dimensions match backing pixel dimensions; native and enlarged images use nearest-pixel sampling. An independent static review identified short-screen clipping, covered by a new small-height dock test.
-
-The first local Python run was affected by sparse-checkout fixture omissions and exhausted temporary disk space. After restoring immutable fixtures and cleaning only task-generated temporary files, 460 tests passed; two disk-guard tests could not reach their intended scenario because the local filesystem had less than 2 GiB free. The GitHub runner passed all 462 Python tests and the 42 individual / 6 mean saved-Dice checks on the final code/test commit `f823bac1c747406c7999ccf6390a6fdf7ac86197`.
-
-## Screenshots
-
-| Previous workbench | New slide/compare workbench |
+| 작업 화면 | 배치와 실제 기능 |
 | --- | --- |
-| ![Previous deployed version 7](../artifacts/ui-linked-workbench-20261116/before-v7-desktop.png) | ![New desktop workbench](../artifacts/ui-linked-workbench-20261116/after-desktop.png) |
+| 병리 영상 작업대 | 큰 B 예측 영상, 원본 픽셀 기준 초기 확대, 하단 슬라이드 필름스트립·전체 위치 지도. 맞춤 버튼으로 전체 이미지를 볼 수 있습니다. |
+| 의료 영상 다중 비교 | 넓은 화면에서 A 무겹침·B 겹침·원본·정답을 4분할로 표시. 확대·이동은 같은 원본 좌표에 연결됩니다. 태블릿은 A/B, 휴대폰은 A/B 전환으로 영상 크기를 확보합니다. |
+| 영상과 후보 데이터 연결 | 영상 옆 실제 후보 표에서 번호 검색·시야/경계 필터·행 선택. 선택한 후보의 원영상 확대 조각과 좌표·범위를 함께 확인합니다. |
 
-[Linked candidate selection](../artifacts/ui-linked-workbench-20261116/after-selection.png) · [Small screen](../artifacts/ui-linked-workbench-20261116/after-mobile.png)
+WSI도 ROI 목록을 하단에 배치했습니다. IHC는 원영상·세포 확대 조각·판정 정보를 연결하고, 사례 목록을 하단으로 옮겼습니다. 두 화면의 원본 데이터와 분석 범위는 그대로입니다.
 
-The before image is the previously captured production-v7 Chromium image, not a new capture of the old deployment. The after images are actual Chromium captures of deployed production version 8 from [workflow 43731956593](https://github.com/sokldjs554/pathology-edge/actions/runs/43731956593), including native source images and saved outputs.
+## 직접 확인할 순서
 
-User verification of this new interface is pending; previous-version user checks are not transferred to this version.
+1. [데모](https://pathology-edge-lab.ykh13571.chatgpt.site/)에서 왼쪽 **병리 작업대**를 확인합니다. 하단 예제를 바꾸면 영상·지표가 함께 바뀝니다.
+2. **다중 비교**를 누릅니다. 1200px 이상 화면에서는 실제 원본·정답·A/B 네 영상이 보입니다. 확대하거나 이동하면 같은 위치를 따라갑니다.
+3. **좋아진 경계 보기 / 나빠진 경계 보기**를 눌러 실제 저장된 차이를 확인합니다. 지표는 선택 이미지·선택 경계·전체 실험을 구분합니다.
+4. **후보 데이터 → #12 검색 → 행 선택**: 위치가 이동하고 실제 확대 조각이 표시됩니다. 후보 수는 정답 핵 수가 아니며 점수는 보정된 임상 신뢰도가 아닙니다.
+5. **실제 WSI 탐색**, **IHC 분류**에서도 하단 목록과 변경된 화면을 확인합니다.
 
+## 데이터와 검증 범위
 
-## Code verification and publication
+새 추론이나 임상 검증을 수행하는 UI가 아닙니다. 기존 저장 이미지·마스크·결과 JSON을 사용합니다. 분할 표시 색상은 황색 계열로 바뀌지만 예측 픽셀·지표는 바꾸지 않습니다. 원본 참고 영상에는 예측을 합성하지 않으며 정답 참고 영상은 원본과 기존 정답 마스크만 표시합니다.
 
-| Check | Result | Evidence |
-| --- | --- | --- |
-| Python suite on GitHub Ubuntu | 462 passed | [CPU checks](https://github.com/sokldjs554/pathology-edge/actions/runs/43731542536) |
-| Saved Dice audit | 42 individual values and 6 means matched | Same CPU run |
-| Node data / viewer geometry | 14 passed | Browser workflow |
-| Chromium, checkout | 51 passed, no skips or retries | [UI workflow](https://github.com/sokldjs554/pathology-edge/actions/runs/43731542454) |
-| WebKit, checkout | 51 passed, no skips or retries | Same UI workflow |
-| Chromium + WebKit, deployed version 8 | 51 passed each, no skips or retries | [Production UI workflow](https://github.com/sokldjs554/pathology-edge/actions/runs/43731956593) |
-| Existing experiment / image / unchanged route files | 2,185 files unchanged from main | Byte comparison against `ced2a3b` |
+로컬 관리 브라우저 도구가 없어 기존 GitHub Actions의 Chromium·WebKit을 사용합니다. 실제 브라우저 캡처와 검사 결과를 보존하며, 사용자의 새 디자인 확인은 아직 완료로 기록하지 않습니다.
 
-The public [demo](https://pathology-edge-lab.ykh13571.chatgpt.site/) is published as Sites version **8**. The GitHub code/test commit is `f823bac1c747406c7999ccf6390a6fdf7ac86197`; the Sites source mirror commit is `659fb0eb24f244f298380f5fe6428dd1a8cb4a39`. They use different repository histories. All **2,191** deployed `dist/` files match that code commit; the [complete deployed-byte report](../artifacts/ui-linked-workbench-20261116/deployment-parity.json) records the comparison. Only the explicitly fingerprinted hosting challenge script is normalized from HTML. Subsequent documentation-only commits do not change the deployed assets.
+[이전 버전 8의 구현·검증 기록](UI_LINKED_WORKBENCH_V8.md)
 
-[Verification metadata](../artifacts/ui-linked-workbench-20261116/verification.json) · [Unchanged image/result asset hashes](../artifacts/ui-linked-workbench-20261116/unchanged-assets.json)
+## 변경 전후
+
+- [변경 전: 기존 3열 작업대](../artifacts/ui-linked-workbench-20261116/after-desktop.png)
+- [변경 후: 병리 영상 작업대](../artifacts/ui-studio-20261116/studio-image-laptop.png)
+- [변경 후: A/B·원본·정답 다중 비교](../artifacts/ui-studio-20261116/studio-compare-laptop.png)
+- [변경 후: 영상·후보 표·확대 조각 연결](../artifacts/ui-studio-20261116/studio-data-laptop.png)
+
+모바일 데이터 화면은 영상 높이를 먼저 확보하고 표까지 세로로 스크롤합니다. 작은 화면에서 네 영상을 동시에 압축해 표시하지 않습니다.
+
+## 검증
+
+개발 중 실제 캡처와 브라우저 검사로 발견한 모바일 A→후보 데이터 전환의 숨김 상태, IHC 목록 닫기, 패널을 닫은 뒤 빈 공간, 좁은 화면의 영상 높이 문제를 수정했습니다. 서로 다른 두 브라우저에서 후보 선택·확대 조각·이동·확대·레이어·오류·로딩·반응형 흐름을 확인합니다.
+
+- 코드: [`d722879`](https://github.com/sokldjs554/pathology-edge/commit/d7228793bbf83c7cc7939fc5038d2e388b6ce293), UI 브랜치의 main 미병합 변경.
+- [최종 checkout 브라우저 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/43737632265): Chromium 53/53, WebKit 53/53. 이동·확대·실제 후보 연결·4분할·작은 화면·빈 결과·로딩·오류 경로 포함.
+- [공개 데모 브라우저 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/43737884212): Chromium 53/53, WebKit 53/53. 캡처는 이 공개 주소 검사에서 수집했습니다.
+- [CPU 검사](https://github.com/sokldjs554/pathology-edge/actions/runs/43737636357): Python 462개 통과, 저장 Dice 42/42·이미지 평균 6/6 일치. Node 순수 로직 테스트 14개도 통과.
+- [배포 파일 대조](../artifacts/ui-studio-20261116/deployment-parity.json): 2,193개 정적 파일 일치. HTML의 호스팅 삽입 코드는 기존 고정 템플릿 해시로 별도 확인하며 임의 정규화하지 않습니다.
+- Sites 공개 버전 11, 소스 `e66e740672c7ece934ca1c29dd86d78f20acf2a1`. GitHub UI 커밋과 별도의 Sites 소스 커밋이며 `dist` 2,193개 파일이 동일합니다.
+
+최종 공개 화면 검사의 상세 결과는 [검증 기록](../artifacts/ui-studio-20261116/verification.json)에 보존합니다. 기존 실험 결과·사용자 작성 Python 코드·기여 완료 기록은 변경하지 않았습니다.
