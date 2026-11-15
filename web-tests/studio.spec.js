@@ -36,6 +36,8 @@ test('studio mobile data view stays visible after selecting A; IHC case strip cl
  await page.locator('#mobileBefore').click();await expect(page.locator('#before')).toBeVisible();
  await page.locator('#layoutData').click();await expect(page.locator('#after')).toBeVisible();
  await expect(page.locator('#candidateDock')).toBeVisible();
+ await expect.poll(async()=> (await page.locator('#after').boundingBox()).height).toBeGreaterThan(170);
+ await expect.poll(async()=> Number(await page.locator('#after').getAttribute('data-zoom'))).toBeGreaterThan(.25);
  await page.screenshot({path:'captures/studio-mobile.png',fullPage:true});
  await page.goto('/ihc.html');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
  await expect(page.locator('#examplePanel')).toBeHidden();
