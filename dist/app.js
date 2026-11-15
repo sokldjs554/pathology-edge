@@ -115,6 +115,7 @@ function setPhase(phase, title = '', detail = '') {
   interactionIds.forEach((id) => ($(id).disabled = phase !== 'ready'));
   Review.refresh();
   window.WorkbenchUI?.refresh();
+  window.ReviewEntry?.refresh();
   if (phase !== 'ready') {
     $('componentSelect').disabled = true;
     $('suppressionSelect').disabled = true;
@@ -410,6 +411,7 @@ function draw() {
     `현재 시야 x ${Math.floor(b.x0)}–${Math.ceil(b.x1)} · y ${Math.floor(b.y0)}–${Math.ceil(b.y1)}`;
   $('zoomvalue').textContent = `${Math.round(state.zoom * 100)}%`;
   window.Studio?.drawReferences();
+  window.ReviewEntry?.refresh();
   const n = $('navigator'),
     ctx = n.getContext('2d');
   ctx.clearRect(0, 0, n.width, n.height);
@@ -1137,7 +1139,10 @@ $('sample').addEventListener('change', () => loadSample($('sample').value));
 $('retry').addEventListener('click', () =>
   state.data?.samples.length ? loadSample($('sample').value) : init(),
 );
-$('modeBoundary').addEventListener('click', () => setMode('boundary'));
+$('modeBoundary').addEventListener('click', () => {
+  if (state.mode !== 'boundary') setMode('boundary');
+  window.Studio?.setComparison('two');
+});
 $('modeMerge').addEventListener('click', () => setMode('merge'));
 $('modeSingle').addEventListener('click', () => setMode('single'));
 $('scopeAll').addEventListener('click', () => setScope('all'));
@@ -1209,7 +1214,7 @@ $('toggleInspector').addEventListener('click', () => togglePanel('inspector'));
 $('closeInspector').addEventListener('click', () => {
   $('workbench').classList.add('inspector-hidden');
   $('toggleInspector').setAttribute('aria-expanded', 'false');
-  $('toggleInspector').focus();
+  $('detailTools').querySelector('summary').focus();
 });
 $('focusMode').addEventListener('click', () => {
   state.focus = !state.focus;

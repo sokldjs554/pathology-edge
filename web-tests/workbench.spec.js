@@ -1,8 +1,9 @@
+import { tool, openTools, closeTools } from './controls.js';
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 const data=JSON.parse(fs.readFileSync(new URL('../dist/results.json',import.meta.url)));
 const cases=JSON.parse(fs.readFileSync(new URL('../dist/cases.json',import.meta.url)));
-const open=async(page)=>{await page.goto('/');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');if(page.viewportSize().width>760)await page.locator('#layoutData').click();};
+const open=async(page)=>{await page.goto('/');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');if(page.viewportSize().width>760)await tool(page,'toggleDock','click');};
 test('candidate table navigates to original exported candidate and links its detail',async({page})=>{
  await open(page);
  await page.screenshot({path:'captures/linked-workbench-desktop.png',fullPage:true});
@@ -25,7 +26,7 @@ test('image changes clear the object crop and restore the full candidate list',a
  await expect(page.locator('#candidateRows tr')).toHaveCount(data.samples[1].methods.overlap.objects.length);
 });
 test('pane maximize restores synchronized comparison without changing selected case',async({page})=>{
- await open(page);await page.locator('#layoutCompare').click();await page.locator('#showWorsened').click();
+ await open(page);await tool(page,'modeBoundary','click');await page.locator('#showWorsened').click();
  const selected=cases.cases.find(c=>c.id===cases.recommended.worsened);
  const center=selected.center.map(v=>v.toFixed(3)).join(',');
  await expect(page.locator('#after')).toHaveAttribute('data-case',selected.id);
@@ -39,15 +40,15 @@ test('pane maximize restores synchronized comparison without changing selected c
 });
 test('small screen keeps candidate and result controls available without page overflow',async({page})=>{
  await page.setViewportSize({width:390,height:844});await open(page);
- await expect(page.locator('#toggleDock')).toBeVisible();
- await page.locator('#toggleDock').click();await expect(page.locator('#candidateDock')).toBeVisible();
+ await expect(page.locator('#toggleDock')).toBeHidden();
+ await tool(page,'toggleDock','click');await expect(page.locator('#candidateDock')).toBeVisible();
  await page.locator('#candidateRows button').first().click();await expect(page.locator('#selectedInfo')).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
 });
 
 test('short mobile workbench scrolls to the candidate dock without clipping controls',async({page})=>{
  await page.setViewportSize({width:390,height:667});await open(page);
- await page.locator('#toggleDock').click();
+ await tool(page,'toggleDock','click');
  await page.locator('#candidateQuery').scrollIntoViewIfNeeded();
  const box=await page.locator('#candidateQuery').boundingBox();
  expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y+box.height).toBeLessThan(667);

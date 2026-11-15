@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="workbench.css" />
     <link rel="stylesheet" href="studio.css" />
+    <link rel="stylesheet" href="review-entry.css" />
   </head>
-  <body class="linked-workbench studio studio-tnbc" data-tool="pan" data-layout="compare" data-comparison="two">
+  <body class="linked-workbench studio studio-tnbc progressive" data-tool="pan" data-layout="compare" data-comparison="two">
     <header class="app-header">
       <a class="brand" href="./" aria-label="PathologyEdge 처음으로"
         ><svg viewBox="0 0 24 24" aria-hidden="true">
@@ -37,47 +38,13 @@
         >
       </div>
     </header>
-    <nav class="study-bar" aria-label="작업 설정">
-      <button id="toggleTray" aria-expanded="true" aria-controls="tray">
-        예제 <span id="sampleCount">0</span>
-      </button>
-      <label class="sr-only" for="sample">예제 이미지</label
-      ><select id="sample" disabled>
-        <option>예제 불러오는 중…</option>
-      </select>
-      <span id="imageTitle" class="image-title">TNBC · H&E · 512 × 512 px</span>
-      <div class="study-actions"><button id="toggleDock" aria-expanded="true" aria-controls="candidateDock">후보 표</button>
-        <button id="focusMode" aria-pressed="false">영상 넓게</button
-        ><button
-          id="toggleInspector"
-          aria-expanded="true"
-          aria-controls="inspector"
-        >
-          검토 패널
-        </button>
-      </div>
-    </nav>
-    <main class="workbench inspector-hidden" id="workbench">
-      <nav class="studio-rail" aria-label="작업 화면 배치">
-        <span class="rail-title">WORKSPACE</span>
-        <button id="layoutImage" aria-pressed="true" title="병리 영상 작업대"><svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="24" height="16"/><path d="M2 22h24M7 22v-3m7 3v-3m7 3v-3"/></svg><span>병리<br>작업대</span></button>
-        <button id="layoutCompare" aria-pressed="false" title="큰 화면: 원본·정답·A·B 4분할 · 작은 화면: A/B 비교"><svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="24" height="20"/><path d="M14 2v20M2 12h24"/></svg><span>다중<br>비교</span></button>
-        <button id="layoutData" aria-pressed="false" title="영상과 후보 데이터 연결"><svg viewBox="0 0 28 24" aria-hidden="true"><rect x="2" y="2" width="24" height="20"/><path d="M15 2v20m0-15h11M15 12h11m-11 5h11"/></svg><span>후보<br>데이터</span></button>
-        <div class="rail-foot">H&amp;E<br><span>TNBC</span></div>
-      </nav>
+
+    <main class="workbench inspector-hidden tray-hidden" id="workbench">
+
       <aside class="sample-tray" id="tray" aria-label="예제 이미지 목록">
         <div class="tray-heading"><span class="eyebrow">SLIDE EXPLORER</span><h2>슬라이드 목록</h2><p>TNBC · 정답이 있는 테스트 이미지</p></div>
         <div id="sampleList" class="sample-list"></div>
-                  <div class="navigator" id="navigatorBox">
-            <div>전체 위치 <span>PNG · 클릭하여 이동</span></div>
-            <canvas
-              id="navigator"
-              width="120"
-              height="120"
-              tabindex="0"
-              aria-label="전체 위치 개요도. 클릭 또는 방향키로 이동"
-            ></canvas>
-          </div>
+
 <div class="tray-footer">
           <span id="traySampleCount">—</span>개 예제<br />512px PNG<br /><span
             >WSI 전체 아님</span
@@ -85,44 +52,39 @@
         </div>
       </aside>
       <section class="viewer-workspace" aria-label="영상 비교 작업대">
-        <div class="review-guide"><div class="workspace-title"><span class="eyebrow">PATCH BOUNDARY REVIEW</span><strong id="workspaceName">패치 경계의 핵 분할 결과 비교</strong></div>
-          <p class="workflow">
-            ① 예제 선택 → 경계 사례 보기 → ② A/B 영상 비교 → ③ 결과 확인
-          </p>
-          <div class="guide-actions">
-            <button id="showImproved" class="case-good" disabled>좋아진 경계 보기</button>
-            <button id="showWorsened" class="case-bad" disabled>나빠진 경계 보기</button>
-            <button id="showResults" class="quiet">결과 확인</button>
-          </div>
-          <span id="caseLoadNotice" class="sr-only" role="status"
-            >저장된 경계 사례를 읽는 중</span
-          >
-        </div>
-        <div class="toolbar">
-          <div class="segmented" aria-label="비교 방식">
-            <button id="modeBoundary" aria-pressed="true">경계 전후</button
-            ><button id="modeMerge" aria-pressed="false">중복 병합</button
-            ><button id="modeSingle" aria-pressed="false">단일 영상</button>
-          </div>
-          <div class="toolbar-divider"></div><div class="interaction-tools"><button id="toolPan" aria-pressed="true" title="영상을 드래그하여 이동">↔ 이동</button><button id="toolSelect" aria-pressed="false" title="후보를 눌러 원본 위치와 상세 정보 확인">⌖ 후보 선택</button></div>
-          <div class="zoom-tools">
+        <div class="review-guide">
+ <div class="workspace-title"><strong id="workspaceName">패치 경계의 핵 분할 결과 비교</strong><span class="workflow">작은 조각으로 나눈 영상, 경계에서 무엇이 달라질까요?</span></div>
+ <div class="review-command">
+  <label class="sample-control"><span>예제</span><select id="sample" disabled>
+        <option>예제 불러오는 중…</option>
+      </select></label>
+  <div class="guide-actions"><button id="showImproved" class="case-good" disabled>좋아진 경계 보기</button><button id="showWorsened" class="case-bad" disabled>나빠진 경계 보기</button></div>
+  <div class="zoom-tools">
             <button id="zoomout" aria-label="축소">−</button
             ><output id="zoomvalue" aria-label="화면 배율">—</output
             ><button id="zoomin" aria-label="확대">+</button
             ><button id="fit" title="전체 이미지 맞춤 (F)">맞춤</button
-            ><button id="nativeZoom" title="이미지 1px = 화면 1 CSS px">
-              1:1
-            </button>
-          </div>
-          <button
-            id="jumpBoundary"
-            class="accent-button"
-            title="현재 예제에서 실제 차이가 큰 경계 영역으로 이동"
-          >
-            현재 예제 경계
-          </button>
-        </div>
-        <div class="layer-bar" aria-label="결과 표시">
+            >
+          </div><details id="detailTools" class="detail-tools">
+ <summary>상세 도구</summary>
+ <div class="detail-menu">
+  <div class="menu-section"><h2>영상 보기</h2><div class="menu-buttons">
+   <button id="modeBoundary" aria-pressed="true">A/B 2분할</button
+            >
+   <button id="compareFour" aria-pressed="false" title="슬라이드 목록을 접고 원본·정답을 함께 비교">원본·정답 4분할</button>
+   <button id="modeSingle" aria-pressed="false">B 영상만</button>
+  </div></div>
+  <div class="menu-section"><h2>후보·결과 검토</h2><div class="menu-buttons">
+   <button id="modeMerge" aria-pressed="false">중복 병합</button
+            ><button id="toggleDock" aria-expanded="false" aria-controls="candidateDock">후보 표</button><button
+          id="toggleInspector"
+          aria-expanded="true"
+          aria-controls="inspector"
+        >
+          검토 패널
+        </button><button id="showResults" class="quiet">전체 실험·출처</button>
+  </div></div>
+  <div class="menu-section"><h2>표시 설정</h2><div class="layer-bar" aria-label="결과 표시">
           <label
             ><input type="checkbox" id="segmentation" checked /><i
               class="swatch mask"
@@ -153,14 +115,42 @@
               value="25"
             /><output id="opacityValue">25%</output></label
           >
+        </div><div class="interaction-tools"><button id="toolPan" aria-pressed="true" title="영상을 드래그하여 이동">↔ 이동</button><button id="toolSelect" aria-pressed="false" title="후보를 눌러 원본 위치와 상세 정보 확인">⌖ 후보 선택</button></div></div>
+  <div class="menu-section"><h2>이동·예제</h2><div class="menu-buttons"><button id="nativeZoom" title="이미지 1px = 화면 1 CSS px">
+              1:1
+            </button><button
+            id="jumpBoundary"
+            class="accent-button"
+            title="현재 예제에서 실제 차이가 큰 경계 영역으로 이동"
+          >
+            현재 예제 경계
+          </button><button id="toggleTray" aria-expanded="false" aria-controls="tray">
+        예제 <span id="sampleCount">0</span>
+      </button><button id="focusMode" aria-pressed="false">영상 넓게</button
+        ></div>
+   <div class="viewport-bar">
+          <span id="viewportBounds">현재 시야 —</span
+          ><span id="cursorPosition">x — · y — px</span
+          ><span class="interaction-hint"
+            >드래그·스크롤 이동 · Ctrl/⌘+스크롤 확대</span
+          >
         </div>
-        <div class="context-bar">
-          <div class="comparison-choice" role="group" aria-label="영상 배치"><button id="compareTwo" aria-pressed="true">A/B 2분할</button><button id="compareFour" aria-pressed="false" title="슬라이드 목록을 접고 원본·정답을 함께 비교">원본·정답 4분할</button></div>
-          <strong id="viewState" role="status">A/B 경계 비교 중</strong>
-          <span id="modeDescription"
-            >같은 모델 · 무겹침과 64px 겹침을 같은 시야에서 비교</span
-          ><span class="sync-label">↔ 시야 동기화</span>
-        </div>
+   <p id="imageTitle" class="note">TNBC · H&amp;E · 512 × 512 px</p>
+   <p id="modeDescription" class="note">같은 모델 · 무겹침과 64px 겹침을 같은 시야에서 비교</p>
+  </div>
+ </div>
+</details>
+ </div>
+ <span id="caseLoadNotice" class="sr-only" role="status"
+            >저장된 경계 사례를 읽는 중</span
+          >
+</div>
+<div class="review-outcome" role="status" aria-live="polite">
+ <span id="outcomeLabel">A 겹침 없음 → B 겹침·결합</span><strong id="outcomeScore"></strong><span id="outcomePixels">개선·악화 사례를 선택해 같은 경계를 확인하세요.</span>
+ <button id="caseEvidence" class="quiet" hidden>근거 보기 ↗</button>
+ <button id="returnComparison" class="quiet" hidden>A/B 비교로 돌아가기</button>
+ <span id="viewState" class="sr-only">A/B 경계 비교 중</span>
+</div>
         <div
           class="mobile-pane-switch segmented"
           aria-label="작은 화면에서 전후 전환"
@@ -217,7 +207,16 @@
             <article class="pane reference-pane" id="sourcePane"><div class="pane-header"><span class="pane-key">C</span><strong>원본 조직</strong><span class="pane-count">예측 없음</span><button id="maximizeSource" class="pane-expand" aria-pressed="false" aria-label="원본 영상 크게 보기">크게 보기</button></div><div class="canvas-frame"><canvas id="referenceSource" tabindex="0" aria-label="원본 조직: 같은 시야로 이동·확대"></canvas></div><div class="pane-caption"><span>H&amp;E · 저장 원영상</span><span>같은 위치 · 같은 확대</span></div></article>
             <article class="pane reference-pane" id="truthPane"><div class="pane-header"><span class="pane-key">D</span><strong>정답 주석</strong><span class="pane-count">정답 마스크</span><button id="maximizeTruth" class="pane-expand" aria-pressed="false" aria-label="정답 영상 크게 보기">크게 보기</button></div><div class="canvas-frame"><canvas id="referenceTruth" tabindex="0" aria-label="정답 주석: 같은 시야로 이동·확대"></canvas></div><div class="pane-caption"><span>원본 + 정답 마스크</span><span>모델 예측 아님</span></div></article>
           </div>
-          <div class="stage-message" id="stageMessage">
+<div class="navigator" id="navigatorBox">
+            <div>전체 위치 <span>PNG · 클릭하여 이동</span></div>
+            <canvas
+              id="navigator"
+              width="120"
+              height="120"
+              tabindex="0"
+              aria-label="전체 위치 개요도. 클릭 또는 방향키로 이동"
+            ></canvas>
+          </div>          <div class="stage-message" id="stageMessage">
             <div class="state-symbol" id="stateSymbol" aria-hidden="true">
               ◌
             </div>
@@ -226,13 +225,7 @@
             <button id="retry" hidden>다시 불러오기</button>
           </div>
         </div>
-        <div class="viewport-bar">
-          <span id="viewportBounds">현재 시야 —</span
-          ><span id="cursorPosition">x — · y — px</span
-          ><span class="interaction-hint"
-            >드래그·스크롤 이동 · Ctrl/⌘+스크롤 확대</span
-          >
-        </div>
+
 <section id="candidateDock" class="candidate-dock" aria-label="영상과 연결된 후보 데이터">
   <div class="dock-heading"><div><span class="eyebrow">LINKED OBJECT DATA</span><h2>후보 데이터 <span id="candidateCount" role="status">불러오는 중</span></h2></div><button id="closeDock" class="quiet" aria-label="후보 표 접기">⌄ 접기</button></div>
   <div class="dock-filters">              <label class="field-label" for="objectSource">후보 출처</label
@@ -284,23 +277,15 @@
         </div>
         <div class="inspector-scroll">
           <section id="panelImage" role="tabpanel" aria-labelledby="tabImage">
-            <div class="panel-section">
-              <span class="eyebrow">ACTIVE IMAGE</span>
-              <h1 id="activeImage">예제 선택</h1>
-              <p class="muted">
-                선택한 이미지의 저장 결과입니다. 전체 테스트 평균은 ‘실험’에서
-                확인하세요.
-              </p>
-            </div>
-            <div id="caseDetail" class="panel-section case-detail" hidden>
-              <h2>선택 경계 · 64 × 64 px</h2>
-              <label class="field-label" for="caseSelect"
+<div id="caseDetail" class="panel-section case-detail" hidden>
+              <h2>선택 상자의 경계 결과</h2><p id="caseScores" class="case-scores"></p><div id="caseCounts" class="case-counts"></div>
+<details id="caseMore"><summary>다른 경계·좌표 확인</summary>              <label class="field-label" for="caseSelect"
                 >실제 차이가 있는 영역</label
               ><select id="caseSelect"></select>
               <p id="caseCoordinates" class="note"></p>
-              <p id="caseScores" class="case-scores"></p>
-              <div id="caseCounts" class="case-counts"></div>
-              <label class="check-row"
+
+
+</details>              <label class="check-row"
                 ><input id="caseHighlight" type="checkbox" checked />달라진 픽셀
                 강조</label
               >
@@ -324,6 +309,15 @@
                 <a href="cases.json" download>좌표·픽셀 근거 JSON ↓</a>
               </details>
             </div>
+            <div class="panel-section">
+              <span class="eyebrow">ACTIVE IMAGE</span>
+              <h1 id="activeImage">예제 선택</h1>
+              <p class="muted">
+                선택한 이미지의 저장 결과입니다. 전체 테스트 평균은 ‘실험’에서
+                확인하세요.
+              </p>
+            </div>
+
             <div class="panel-section">
               <div class="section-heading">
                 <h2>평가 영역</h2>
@@ -654,5 +648,6 @@
     <script src="app.js" defer></script>
     <script src="workbench-ui.js" defer></script>
     <script src="studio-ui.js" defer></script>
+    <script src="review-entry.js" defer></script>
   </body>
 </html>

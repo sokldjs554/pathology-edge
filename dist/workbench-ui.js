@@ -112,8 +112,7 @@ $('toolPan').addEventListener('click', () => WorkbenchUI.setTool('pan'));
 $('toolSelect').addEventListener('click', () => WorkbenchUI.setTool('select'));
 // Checking the existing candidate overlay remains a direct route to selection.
 $('objects').addEventListener('change', () => WorkbenchUI.setTool($('objects').checked ? 'select' : 'pan'));
-$('toggleDock').addEventListener('click', () => WorkbenchUI.toggleDock($('candidateDock').hidden));
-$('closeDock').addEventListener('click', () => { WorkbenchUI.toggleDock(false); $('toggleDock').focus(); });
+$('closeDock').addEventListener('click', () => { WorkbenchUI.toggleDock(false); $('detailTools').querySelector('summary').focus(); });
 for (const [name, side] of [['Before','before'],['After','after'],['Source','referenceSource'],['Truth','referenceTruth']]) $(`maximize${name}`).addEventListener('click', () => WorkbenchUI.setExpanded(state.expandedSide === side ? null : side));
 $('focusMode').addEventListener('click', () => {
   if (state.focus) { WorkbenchUI.dockBeforeFocus = !$('candidateDock').hidden; WorkbenchUI.toggleDock(false); }

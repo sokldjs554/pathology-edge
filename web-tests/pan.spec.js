@@ -1,3 +1,4 @@
+import { tool, openTools, closeTools } from './controls.js';
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 
@@ -11,7 +12,7 @@ async function open(page) {
   await page.goto('/');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready');
   await expect(page.locator('#after')).toHaveAttribute('data-zoom', /\d/);
-  await page.locator('#layoutCompare').click();
+  await tool(page,'modeBoundary','click');
 }
 async function drag(page, dx, dy) {
   const b = await page.locator('#after').boundingBox();
@@ -34,7 +35,7 @@ for (const view of [
   }, testInfo) => {
     await page.setViewportSize({ width: view.width, height: view.height });
     await open(page);
-    if (view.mode === 'single') await page.locator('#modeSingle').click();
+    if (view.mode === 'single') await tool(page,'modeSingle','click');
     await page.locator('#zoomin').click();
     const before = await center(page),
       zoom = await scale(page);

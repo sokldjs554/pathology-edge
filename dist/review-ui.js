@@ -93,6 +93,7 @@ const Review = {
     this.selected = this.layer = null;
     $('caseDetail').hidden = true;
     for (const canvas of canvases) delete canvas.dataset.case;
+    window.ReviewEntry?.refresh();
   },
   current() {
     const candidates =
@@ -224,9 +225,10 @@ const Review = {
         `이 상자 안 경계 띠만의 점수입니다. ${c.sample_id} 이미지 전체 Dice 차이는 ${this.signed(imageDelta)}로, 국소 사례와 방향이 다를 수 있습니다. 아래 이미지 지표는 확대해도 바뀌지 않습니다.`;
       $('modeDescription').textContent =
         `${c.sample_id} · 국소 ${c.direction === 'improved' ? '개선' : '악화'} · 흰 상자 = 동일 영역 · 청록 개선 / 분홍 악화`;
-      // Do not cover the only canvas with the floating inspector on small screens.
-      if (innerWidth >= 1200) setTab('image');
-      else setTab('image', false);
+      // Keep both images visible; the compact result offers explicit evidence access.
+      setTab('image', false);
+      $('workbench').classList.add('inspector-hidden');
+      $('toggleInspector').setAttribute('aria-expanded', 'false');
       state.fitMode = false;
       state.cx = c.center[0];
       state.cy = c.center[1];

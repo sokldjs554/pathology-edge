@@ -20,7 +20,7 @@ window.Studio = {
     if (!['two', 'four'].includes(comparison)) return;
     this.comparison = comparison;
     document.body.dataset.comparison = comparison;
-    for (const [id,value] of [['compareTwo','two'],['compareFour','four']]) $(id).setAttribute('aria-pressed',String(value===comparison));
+    for (const [id,value] of [['modeBoundary','two'],['compareFour','four']]) $(id).setAttribute('aria-pressed',String(value===comparison));
     this.setLayout('compare');
   },
   startView() {
@@ -33,11 +33,9 @@ window.Studio = {
     if (!['image', 'compare', 'data'].includes(layout)) return;
     this.layout = layout;
     document.body.dataset.layout = layout;
-    for (const [id, value] of [['layoutImage','image'],['layoutCompare','compare'],['layoutData','data']]) {
-      $(id).setAttribute('aria-pressed', String(value === layout));
-    }
     $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'패치 경계의 핵 분할 결과 비교',data:'영상과 후보 데이터 연결'}[layout];
     this.updateViewState();
+    window.ReviewEntry?.refresh();
     this.updateFilmstrip();
     if (layout !== 'compare') setMobileSide('after');
     WorkbenchUI.setExpanded(null);
@@ -68,12 +66,11 @@ window.Studio = {
 };
 // Data occupies a dedicated column, not a dock hidden by laptop-height heuristics.
 $('workbench').append($('candidateDock'));
-for(const [id,value] of [['layoutImage','image'],['layoutCompare','compare'],['layoutData','data']]) $(id).addEventListener('click',()=>Studio.setLayout(value));
-for(const [id,value] of [['compareTwo','two'],['compareFour','four']]) $(id).addEventListener('click',()=>Studio.setComparison(value));
-$('toggleDock').addEventListener('click',()=>Studio.setLayout(Studio.layout==='data'?'image':'data'));
-$('closeDock').addEventListener('click',()=>Studio.setLayout('image'));
-for(const id of ['modeBoundary','modeMerge']) $(id).addEventListener('click',()=>{if(Studio.layout==='image')Studio.setLayout('compare');});
-for(const id of ['showImproved','showWorsened','jumpBoundary']) $(id).addEventListener('click',()=>{if(Studio.layout!=='compare')Studio.setLayout('compare');});
+$('compareFour').addEventListener('click',()=>Studio.setComparison('four'));
+$('toggleDock').addEventListener('click',()=>Studio.setLayout(Studio.layout==='data'?'compare':'data'));
+$('closeDock').addEventListener('click',()=>Studio.setLayout('compare'));
+$('modeMerge').addEventListener('click',()=>Studio.setComparison('two'));
+for(const id of ['showImproved','showWorsened','jumpBoundary']) $(id).addEventListener('click',()=>Studio.setComparison('two'));
 $('modeSingle').addEventListener('click',()=>Studio.setLayout('image'));
 // References use the same camera and inverse coordinate mapping as A/B.
 for(const id of ['referenceSource','referenceTruth']) {

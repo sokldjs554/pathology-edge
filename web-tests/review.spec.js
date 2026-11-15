@@ -1,3 +1,4 @@
+import { tool, openTools, closeTools } from './controls.js';
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 const data = JSON.parse(
@@ -42,7 +43,7 @@ test('purpose, one-click improvement and regression, all real local cases and ex
   await expect(page.locator('.review-guide')).toContainText(
     '경계의 핵 분할 결과',
   );
-  await expect(page.locator('.workflow')).toContainText('예제 선택');
+  await expect(page.locator('.workflow')).toContainText('작은 조각');
   await shot(page, 'first');
   for (const [button, direction] of [
     ['showImproved', 'improved'],
@@ -57,6 +58,8 @@ test('purpose, one-click improvement and regression, all real local cases and ex
     );
     await shot(page, direction);
   }
+  await page.locator('#caseEvidence').click();
+  await page.locator('#caseMore summary').click();
   for (const c of evidence.cases) {
     await page.locator('#caseSelect').selectOption(c.id);
     await readyCase(page, c.id);
@@ -115,6 +118,7 @@ test('canvas highlight colors occur at the exported corrected and regressed pixe
           ).data,
       ]);
     }, points);
+  await page.locator('#caseEvidence').click();
   await page.locator('#caseHighlight').uncheck();
   const plain = await pixels();
   await page.locator('#caseHighlight').check();
@@ -132,7 +136,7 @@ test('aggregate cost, per-image changes and accessible glossary use original pre
   page,
 }) => {
   await open(page);
-  await page.locator('#showResults').click();
+  await tool(page,'showResults','click');
   await expect(page.locator('#costSummary')).toContainText('+0.035468');
   await expect(page.locator('#costSummary')).toContainText('+0.002789');
   await expect(page.locator('#costSummary')).toContainText('5.41배');
@@ -153,6 +157,7 @@ test('aggregate cost, per-image changes and accessible glossary use original pre
   await page.locator('#perImageRows button').first().click();
   await readyCase(page, '10_1-worsened');
   await expect(page.locator('#delta')).toHaveText('-0.014');
+  await page.locator('#caseEvidence').click();
   await page.locator('#panelImage [data-terms]').click();
   await expect(page.locator('#termsDialog')).toBeVisible();
   for (const term of [
@@ -195,7 +200,7 @@ for (const [width, height] of [
       await page.locator('#mobileAfter').click();
     }
     await shot(page, String(width));
-    await page.locator('#toggleInspector').click();
+    await tool(page,'toggleInspector','click');
     await expect(page.locator('#caseScores')).toBeVisible();
     await page.locator('#closeInspector').click();
     await page.locator('#showWorsened').click();
