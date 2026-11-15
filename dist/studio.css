@@ -306,3 +306,6 @@ body.studio{--ink:#282725;--muted:#7a7670;--line:#d4d0c9;--surface:#efede8;--acc
  .studio .review-guide .workflow,.studio-tnbc .context-bar{display:none}
  .studio-tnbc[data-layout=compare] .workspace-title{display:none}
 }
+@media(max-width:760px){
+ .studio-wsi .guide p{display:none}
+}
