@@ -71,9 +71,11 @@ test('all miniature mask pixels and displayed contours come from the saved masks
 });
 
 test('explicit sample and case links are preserved and selecting another image clears the story',async({page})=>{
+ await entry(page);await page.reload();await expect(page.locator('#after')).toHaveAttribute('data-case',selected.id);
  await page.goto('/?sample=10_1');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
  await expect(page.locator('#sample')).toHaveValue('10_1');await expect(page.locator('#maskReading')).toBeHidden();
  await page.goto('/?case=10_1-worsened');await expect(page.locator('#after')).toHaveAttribute('data-case','10_1-worsened');
+ await page.reload();await expect(page.locator('#after')).toHaveAttribute('data-case','10_1-worsened');
  await page.locator('#sample').selectOption('10_2');await expect(page.locator('#activeImage')).toHaveText('TNBC 10_2');
  await expect(page.locator('#maskReading')).toBeHidden();await expect(page.locator('#outcomeScore')).toHaveText('');
  await expect(page.locator('#predictionLegend')).not.toContainText('흰 상자');

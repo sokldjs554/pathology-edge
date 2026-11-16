@@ -247,6 +247,7 @@ const Review = {
       renderObjectOptions();
       $('status').textContent =
         `${c.sample_id} · 선택 경계 ${c.center.join(', ')}px · 사후 선택 사례 · 상세는 결과 패널`;
+      history.replaceState(null, '', `${location.pathname}?sample=${encodeURIComponent(c.sample_id)}&case=${encodeURIComponent(c.id)}`);
     } catch (error) {
       this.clear();
       this.notice(
