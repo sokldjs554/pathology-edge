@@ -12,6 +12,8 @@
 
 영상에 필터를 씌우지 않습니다. 원본 조직·분할 마스크·정답·클래스 색상·청록 개선/분홍 악화 강조는 기존 데이터와 같습니다. 배치와 글자 크기, 사례 선택, 확대·이동, 표시 전환, 실험 수치도 이번 변경 대상이 아닙니다. 공통 스타일은 [`dist/stain-theme.css`](../dist/stain-theme.css)에 분리했습니다.
 
+현재 첫 화면 구조는 [실제 사례로 시작하는 비교 화면](UI_FIRST_VISIT.md)에 있습니다. 아래는 색상 개편 당시 버전 16의 기록입니다.
+
 ## 화면
 
 - 경계 비교: [변경 전](../artifacts/ui-case-context/simple-improved.png) → [변경 후](../artifacts/ui-stain-theme/simple-improved.png)
