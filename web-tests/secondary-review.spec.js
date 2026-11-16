@@ -3,6 +3,9 @@ import fs from 'node:fs';
 const ihc = JSON.parse(
   fs.readFileSync(new URL('../dist/ihc/results.json', import.meta.url)),
 );
+const wsi = JSON.parse(
+  fs.readFileSync(new URL('../dist/wsi.json', import.meta.url)),
+);
 fs.mkdirSync('captures', { recursive: true });
 const shot = (page, name) =>
   page.screenshot({ path: `captures/secondary-${name}.png`, fullPage: true });
@@ -66,10 +69,12 @@ for (const [width, height] of [
     await page.locator('#displayTools summary').click();
     await sameCamera(page, before);
     await page.locator('#jumpDifference').click();
-    await expect(page.locator('#viewerA')).toHaveAttribute(
-      'data-center',
-      await page.locator('#viewerB').getAttribute('data-center'),
-    );
+    const target = wsi.rois.find(roi => roi.id === 'R1').difference.cases[0];
+    for (const pane of ['A', 'B']) {
+      await expect(page.locator('#viewer' + pane)).toHaveAttribute(
+        'data-center', target.center_level0.map(value => value.toFixed(4)).join(','),
+      );
+    }
     if (await page.locator('#inspector').isHidden())
       await page.locator('#toggleResults').click();
     await expect(page.locator('#differenceCounts')).toContainText('B 추가');
