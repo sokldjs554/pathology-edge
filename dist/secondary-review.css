@@ -140,6 +140,8 @@ body.studio-ihc .inspector {
   min-width: 0;
 }
 body.studio-ihc .inspector-scroll {
+  /* Contain absolute screen-reader captions inside this scrolling panel. */
+  position: relative;
   overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);

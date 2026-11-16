@@ -766,6 +766,8 @@ async function init() {
   $('roiList').replaceChildren();
   $('jumpDifference').disabled = true;
   text('activeRegion', '스캔 전체 탐색');
+  text('selectedRegion', '전체 슬라이드');
+  text('centerCoverage', '분석 범위 확인 중');
   WSI.tiles = { loaded: 0, failed: 0, levels: new Set() };
   WSI.failedOverlays.clear();
   document.body.dataset.phase = 'loading';

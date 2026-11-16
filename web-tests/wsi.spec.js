@@ -387,11 +387,15 @@ test('invalid and empty manifests disable actions; missing overlay is disclosed 
   await expect(page.locator('#overlayB [data-mask="R1-overlap"]')).toHaveCount(
     0,
   );
+  await roi(page, 'R2');
+  await expect(page.locator('#selectedRegion')).toContainText('R2');
   await page.unroute(`**/${path}`);
   await page.locator('#retryTiles').click();
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready', {
     timeout: 25000,
   });
+  await expect(page.locator('#selectedRegion')).toHaveText('전체 슬라이드');
+  await expect(page.locator('#centerCoverage')).toContainText('미분석');
   await expect(page.locator('#overlayB [data-mask="R1-overlap"]')).toHaveCount(
     1,
   );
