@@ -41,6 +41,9 @@ body.studio-wsi #displayTools {
   font-size: 13px;
 }
 body.studio-wsi #displayTools > summary {
+  /* Avoid placing the native image surface between device pixels at DPR 1.
+     The shared 13px / 1.5 typography otherwise gives this row a half pixel. */
+  line-height: 20px;
   cursor: pointer;
   padding: 8px 10px;
   border: 1px solid var(--line);
