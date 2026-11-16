@@ -362,7 +362,7 @@ body.studio-ihc .position-bar > span:last-child {
   }
   body.studio-ihc .toolbar .select-label {
     flex: 1;
-    min-width: 0;
+    min-width: 120px;
   }
   body.studio-ihc .toolbar select {
     font-size: 12px;
