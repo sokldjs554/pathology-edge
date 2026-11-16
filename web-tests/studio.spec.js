@@ -82,9 +82,12 @@ test('shared navigation is consistent and WSI provenance opens only on request',
   await expect(page.locator('#after')).toHaveAttribute('data-case','11_1-improved');
   await expect(page.locator('header nav [aria-current="page"]')).toHaveText('경계 비교');
  }
- for(const [name,path,bodyClass] of [['WSI 탐색','/wsi.html','studio-wsi'],['IHC 세포 분류','/ihc.html','studio-ihc'],['경계 비교','/index.html','studio-tnbc']]){
-  await page.getByRole('navigation',{name:'작업 화면'}).getByRole('link',{name,exact:true}).click();
-  await expect.poll(()=>new URL(page.url()).pathname).toBe(path);
+ // Public hosting redirects .html documents to /wsi, /ihc and /.
+ // Accept only these observed aliases and still verify the destination content.
+ for(const [name,href,route,bodyClass] of [['WSI 탐색','wsi.html',/^\/wsi(?:\.html)?$/,'studio-wsi'],['IHC 세포 분류','ihc.html',/^\/ihc(?:\.html)?$/,'studio-ihc'],['경계 비교','index.html',/^\/(?:index\.html)?$/,'studio-tnbc']]){
+  const link=page.getByRole('navigation',{name:'작업 화면'}).getByRole('link',{name,exact:true});
+  await expect(link).toHaveAttribute('href',href);await link.click();
+  await expect.poll(()=>new URL(page.url()).pathname).toMatch(route);
   await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
   await expect(page.locator('body')).toHaveClass(new RegExp(bodyClass));
   await expect(page.locator('header nav [aria-current="page"]')).toHaveText(name);
