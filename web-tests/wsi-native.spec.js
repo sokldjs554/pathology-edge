@@ -88,8 +88,10 @@ for(const [width,height] of [[1440,1000],[375,667]]) test(`WSI native automatic 
   await expect(page.locator('#position')).toContainText('확대 표시');
   const enlarged=await page.locator('#overlayB [data-boundary]').boundingBox();
   expect(enlarged.width).toBeGreaterThan(90);
-  expect(enlarged.width).toBeLessThanOrEqual(193);
-  if(width===1440) expect(enlarged.width).toBeCloseTo(192,0);
+  // Playwright's visible bounds include the existing 1.5px non-scaling stroke.
+  expect(enlarged.width).toBeLessThanOrEqual(194);
+  const geometryWidth=await page.locator('#overlayB [data-boundary]').evaluate(el=>el.getBBox().width*el.getScreenCTM().a);
+  if(width===1440) expect(geometryWidth).toBeCloseTo(192,0);
   await paintReady(page);
   await page.screenshot({path:`captures/wsi-native-boundary-enlarged-${width}.png`,fullPage:true});
   await expect(page.locator('#native')).toBeVisible();
