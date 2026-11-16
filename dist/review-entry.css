@@ -122,7 +122,7 @@ body.studio-tnbc.progressive #caseMore select{margin-top:8px}
 
 /* Reading-first workspace: explanation beside, actual comparison in the center. */
 body.studio-tnbc.progressive.stain-theme .viewer-workspace{display:grid;grid-template-columns:238px minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
-body.studio-tnbc.progressive.stain-theme .review-guide{grid-column:1;grid-row:1/4;padding:14px 18px;overflow-y:auto;position:relative;z-index:2;border-right:1px solid var(--line)}
+body.studio-tnbc.progressive.stain-theme .review-guide{grid-column:1;grid-row:1/4;padding:12px 18px;overflow-y:auto;position:relative;z-index:2;border-right:1px solid var(--line)}
 body.studio-tnbc.progressive.stain-theme .review-guide .workspace-title{display:block!important;margin:0 0 14px!important}
 body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:21px;line-height:1.4;letter-spacing:-.6px;margin:7px 0;white-space:pre-line;color:var(--ink)}
 body.studio-tnbc.progressive.stain-theme .review-guide .workflow{display:block!important;font-size:13px;line-height:1.65;margin:0;color:var(--muted)}
@@ -137,7 +137,7 @@ body.studio-tnbc.progressive.stain-theme .guide-actions #showWorsened{border:1px
 body.studio-tnbc.progressive.stain-theme .guide-actions button[aria-pressed=true]{box-shadow:inset 3px 0 currentColor}
 body.studio-tnbc.progressive.stain-theme .sample-control{display:flex;flex-direction:column;align-items:stretch;gap:7px;margin-top:4px}
 body.studio-tnbc.progressive.stain-theme #sample{width:100%;min-height:36px}
-.mask-reading{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.mask-reading{margin-top:8px;border-top:1px solid var(--line);padding-top:12px}
 .mask-reading[hidden]{display:none}
 .mask-reading>summary{cursor:pointer;line-height:1.5}
 .mask-triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:12px}
@@ -227,7 +227,7 @@ body.studio-tnbc.progressive.stain-theme[data-comparison=four] .method-header st
  body.studio-tnbc.progressive.stain-theme .zoom-tools{margin-left:0}
  body.studio-tnbc.progressive.stain-theme .detail-tools{margin-left:auto}
  body.studio-tnbc.progressive.stain-theme .detail-menu{top:80px;max-height:calc(100dvh - 100px)}
- body.studio-tnbc.progressive.stain-theme .mask-reading{margin-top:12px;padding-top:10px}
+ body.studio-tnbc.progressive.stain-theme .mask-reading{margin-top:8px;padding-top:10px}
  body.studio-tnbc.progressive.stain-theme .mask-triptych{max-width:260px}
  body.studio-tnbc.progressive.stain-theme .stage{order:3;flex:1 0 320px;min-height:320px}
  body.studio-tnbc.progressive.stain-theme .mobile-pane-switch{order:2}

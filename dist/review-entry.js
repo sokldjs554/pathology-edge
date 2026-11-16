@@ -6,6 +6,11 @@ window.ReviewEntry = {
     const ready = state.phase === 'ready' && state.sample;
     const layout = Studio.layout;
     const c = ready && layout === 'compare' && state.mode === 'boundary' ? Review.selected : null;
+    const merge = state.mode === 'merge';
+    $('workspaceName').textContent = layout === 'data' ? '영상과 후보 데이터 연결' : layout === 'image' ? '병리 영상 작업대 · B 결과 탐색' : merge ? '같은 추론 결과,\n중복 후보는 무엇일까요?' : '나눠 본 영상,\n핵 예측도 같을까요?';
+    document.querySelector('.workflow').textContent = merge ? '겹쳐 분석한 한 번의 결과에서, 중복 후보를 정리하기 전과 후를 비교합니다. 억제가 올바른지는 정답과 별도로 검토해야 합니다.' : '영상을 작은 조각(패치)으로 나누면, 경계에 걸린 핵의 예측이 달라질 수 있습니다.';
+    document.querySelector('.method-explainer').hidden = merge || layout !== 'compare';
+    document.querySelector('.guide-step').textContent = merge ? '패치 경계 비교로 돌아가기' : '1. 정답과 대조한 실제 사례';
     $('caseDisplay').classList.toggle('highlight-on', $('caseHighlight').checked);
     $('predictionLegend').textContent = state.mode === 'merge' ? '분홍: 억제 후보 · 파랑: 유지 후보 · 동일한 겹침 추론' : !$('segmentation').checked || Number($('opacity').value) === 0 ? '핵 예측 표시 꺼짐 · 상세 도구에서 분할 표시' : `노랑: 각 방식의 핵 예측${c ? ' · 흰 상자: 같은 위치' : ''}`;
     const key = [state.phase, state.sample?.id, state.mode, layout, Studio.comparison, c?.id].join('/');

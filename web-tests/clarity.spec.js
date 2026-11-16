@@ -78,7 +78,7 @@ test('explicit sample and case links are preserved and selecting another image c
  await expect(page.locator('#predictionLegend')).not.toContainText('흰 상자');
  await page.locator('#showImproved').click();await expect(page.locator('#after')).toHaveAttribute('data-case',selected.id);
  await tool(page,'modeMerge','click');await expect(page.locator('#maskReading')).toBeHidden();
- await expect(page.locator('#beforeTitle')).toHaveText('중복 후보 억제 전');await expect(page.locator('#predictionLegend')).toContainText('동일한 겹침 추론');
+ await expect(page.locator('#beforeTitle')).toHaveText('중복 후보 억제 전');await expect(page.locator('.method-explainer')).toBeHidden();await expect(page.locator('.workflow')).toContainText('한 번의 결과');await expect(page.locator('#predictionLegend')).toContainText('동일한 겹침 추론');
  await page.screenshot({path:'captures/clarity-merge.png',fullPage:true});
 });
 

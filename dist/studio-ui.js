@@ -36,7 +36,6 @@ window.Studio = {
     this.viewRevision++;
     this.layout = layout;
     document.body.dataset.layout = layout;
-    $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'나눠 본 영상,\n핵 예측도 같을까요?',data:'영상과 후보 데이터 연결'}[layout];
     this.updateViewState();
     window.ReviewEntry?.refresh();
     this.updateFilmstrip();
