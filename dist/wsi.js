@@ -971,7 +971,7 @@ $('zoomOut').onclick = () => {
 };
 $('native').onclick = () => {
   const v = WSI.viewers.B?.viewport;
-  if (v) v.zoomTo(v.imageToViewportZoom(maxScale), null, true);
+  if (v) v.zoomTo(v.imageToViewportZoom(1), null, true);
   updateView();
 };
 $('home').onclick = home;
