@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-16",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site/",
+  "github_ui_commit": "fa68c5bcb8a2ff40924bfaae9b4430f3cc337871",
+  "before_ui_commit": "3b07619ddae169d478960edca1bdeb1acc7b4a7e",
+  "deployment": {
+    "version": 19,
+    "source_commit": "bbcb139d28fdd3a8c110c9b0b23cecde1e59fca8",
+    "id": "appgdep_6afaa2ed7d4481918cdc0846a3e5ecf6",
+    "status": "succeeded",
+    "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_e87df2e8d49c8191ad5f2ba70c45145c"
+  },
+  "root_cause": "Both direction buttons used global recommended case IDs, switching between 11_1 and 10_3 instead of preserving the selected image.",
+  "behavior": "Both buttons resolve saved cases only within the current sample. Missing directions are disabled and disclosed. Explicit all-image case selection remains available.",
+  "regression_test_before_fix": {
+    "node_tests_failed": 2,
+    "reasons": [
+      "Wrong destination: global 11_1/10_3 recommendations instead of the current image.",
+      "Missing direction was enabled."
+    ]
+  },
+  "node_tests_passed": 16,
+  "static_demo_check": "passed",
+  "browser_runs": {
+    "checkout": 43816636119,
+    "production": 43817294229
+  },
+  "browser_reports": {
+    "checkout": {
+      "chromium": {
+        "report": "checkout-chromium-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:26:06.960Z",
+          "duration": 144640.56,
+          "expected": 75,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      "webkit": {
+        "report": "checkout-webkit-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:26:45.109Z",
+          "duration": 153528.58000000002,
+          "expected": 75,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    "production": {
+      "chromium": {
+        "report": "production-chromium-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:31:49.290Z",
+          "duration": 180868.733,
+          "expected": 75,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      "webkit": {
+        "report": "production-webkit-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:32:47.333Z",
+          "duration": 193340.285,
+          "expected": 75,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    }
+  },
+  "artifact_ids": {
+    "checkout_chromium": 14203011357,
+    "checkout_webkit": 14202971056,
+    "production_chromium": 14203391494,
+    "production_webkit": 14203186737
+  },
+  "cpu": {
+    "run_id": 43816641367,
+    "tests_passed": 462,
+    "stored_dice_matches": 42,
+    "image_mean_matches": 6
+  },
+  "source_parity": "deployment-parity.json",
+  "changed_dist_files": [
+    "dist/index.html",
+    "dist/review-entry.js",
+    "dist/review-ui.js"
+  ],
+  "stored_images_masks_results_cases_unchanged": true,
+  "learner_code_unchanged": true,
+  "new_inference_run": false,
+  "screenshots": {
+    "run_id": 43817294229,
+    "artifact_id": 14203391494,
+    "browser": "chromium",
+    "target": "production",
+    "sha256": {
+      "clarity-first.png": "ed0ab0a8ab7e2afd54035a01def9b6fa30ddb6b83a75629bc38515910cf16a52",
+      "ihc-375.png": "7c7ae2c89e8bc8f3dabf75b1dd73d1be187ca7ca09ccdbea06fc0d781466e25d",
+      "ihc-desktop.png": "d19b136424f8dc330b22cb7ea649bab3c7e536efc8d6acbf634e7dda30b8ef1c",
+      "same-image-absent-1440.png": "765aad0de7b007af80d28a06c6110e5ed9300425d2830f3e2ecdf93689ede79a",
+      "same-image-absent-375.png": "39be452c81d9f9fe5bf78f6dd5f543829cb5f6b843e4a369cfcf5228b5fdbf0e",
+      "same-image-improved-1440.png": "799ed0027aa45b4c291ac94886a86f44a8fc0a5b0dc4fbf280021558b18de048",
+      "same-image-improved-375.png": "eb93fbf928042b01701515c14f3d9066dd04641c72637bde56a1e823ef903c9b",
+      "same-image-worsened-1440.png": "4d1942695433d54d55161df41db0ba6164a3c2795f8123caea9a2483184890dd",
+      "same-image-worsened-375.png": "3c1cd1a76cef3676c2b7f4b126e52a35336fe0d4788737390332776c92df1688",
+      "simple-four.png": "72cfe69d10da18cb1c695df9f000e177cbd9839f25fa7d1ebd0603f98f1f3f28",
+      "studio-data-laptop.png": "baa1634ba1b958ee3756a0b42eadbbdaf367b095c8be69dd895d4fd944b9c82a",
+      "wsi-roi-native.png": "fc491444daf24c4aea80705fa822ad5353b5c8c64cea04dbd9b8459ab82655fd"
+    }
+  },
+  "user_verified_revision": false,
+  "main_merged": false,
+  "limitations": [
+    "Improvement and regression are different ROIs in the same image; each ROI compares A/B at identical coordinates.",
+    "Missing saved case does not imply zero improved or regressed pixels.",
+    "Post-hoc ground-truth-selected examples, not representative performance estimates."
+  ]
+}

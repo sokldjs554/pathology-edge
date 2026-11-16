@@ -13,15 +13,15 @@
 
 ## 화면에서 확인하기
 
-1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 실제 개선 사례가 먼저 열립니다. 같은 위치의 A/B 예측 윤곽과 정답 마스크를 비교하고, ‘나빠진 경계 보기’로 악화 사례도 확인합니다. **근거 보기**에서 상세 결과를, **상세 도구**에서 원본·정답 4분할·후보 표·중복 병합·표시 설정·전체 실험을 엽니다. 후보 표의 행을 선택하면 해당 위치와 실제 확대 조각이 연결됩니다.
+1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 실제 개선 사례가 먼저 열립니다. 같은 위치의 A/B 예측 윤곽과 정답 마스크를 비교하고, ‘나빠진 경계 보기’로 **현재 이미지 안의** 악화 사례도 확인합니다. 해당 방향의 저장 사례가 없으면 버튼에 표시합니다. **근거 보기**에서 상세 결과를, **상세 도구**에서 원본·정답 4분할·후보 표·중복 병합·표시 설정·전체 실험을 엽니다. 후보 표의 행을 선택하면 해당 위치와 실제 확대 조각이 연결됩니다.
 2. **[WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)**: 전체 슬라이드 확대 → R1–R3 선택 → 해당 ROI의 예측 차이 확인. 전체 슬라이드 탐색과 일부 ROI의 분석을 구분합니다.
 3. **[IHC 세포 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html)**: 예제와 세포 선택 → 정답·예측 클래스 비교. 이 공개 화면은 정답 중심 좌표가 주어진 분류 실험입니다.
 
-![실제 개선 사례와 A·B·정답 마스크를 바로 비교하는 첫 화면](artifacts/ui-clarity/clarity-first.png)
+![현재 이미지의 실제 개선·악화 경계를 A·B·정답 마스크로 비교하는 첫 화면](artifacts/ui-case-scope/clarity-first.png)
 
 [원본·정답 포함 4분할](artifacts/ui-clarity/readability-four.png) · [영상과 후보 데이터 연결](artifacts/ui-clarity/studio-data-laptop.png)
 
-[WSI 전체 탐색 화면](artifacts/ui-stain-theme/wsi-overview.png) · [악화 사례](artifacts/ui-clarity/clarity-worsened.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md) · [H&E 색상 체계](docs/UI_COLOR_SYSTEM.md) · [첫 화면 개편·검증](docs/UI_FIRST_VISIT.md)
+[WSI 전체 탐색 화면](artifacts/ui-stain-theme/wsi-overview.png) · [같은 이미지의 악화 사례](artifacts/ui-case-scope/same-image-worsened-1440.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md) · [H&E 색상 체계](docs/UI_COLOR_SYSTEM.md) · [첫 화면 개편·검증](docs/UI_FIRST_VISIT.md) · [현재 이미지의 경계 이동](docs/UI_BOUNDARY_CASE_SCOPE.md)
 
 ## 직접 담당한 범위
 
