@@ -47,6 +47,9 @@ body.studio.stain-theme .app-header .repo-link,
 body.studio.stain-theme .research,
 body.studio.stain-theme .research-label {background:transparent;color:#e4d8eb}
 body.studio.stain-theme .data-label {color:#c7b7cd}
+body.studio.stain-theme .app-header :focus-visible,
+body.studio.stain-theme canvas:focus-visible,
+body.studio.stain-theme .viewer:focus-visible {outline-color:var(--eosin)!important}
 body.studio.stain-theme .study-bar,
 body.studio.stain-theme .toolbar,
 body.studio.stain-theme .guide,
