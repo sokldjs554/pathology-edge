@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-16",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site/",
+  "github_ui_commit": "445ebe61dbb83c7de1ce3b2c570fbc4e9ed96e9f",
+  "browser_test_commit": "b418a194c26e774b1e21db510e3a760b511ee759",
+  "before_commit": "d25fe752b397642c0fb39dbf0ee633dd0fe37beb",
+  "deployment": {
+    "version": 20,
+    "source_commit": "bf5fac1c135d378dfaaa6fa85e3803736ebfea38",
+    "id": "appgdep_6afaaf6c1edc8191a6a6742d67fad2af",
+    "status": "succeeded",
+    "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_f7c534045b948191a713fbd1423b317c"
+  },
+  "root_cause": "Decorative RESEARCH STUDIO text was inside the logo link, which incorrectly targeted wsi.html on both WSI and IHC pages.",
+  "fix": "Remove the decorative edition text; all logos return home. Keep the three functional navigation links and verify actual destinations.",
+  "browser_runs": {
+    "checkout": 43823879734,
+    "production": 43823894909
+  },
+  "browser_reports": {
+    "checkout": {
+      "chromium": {
+        "report": "checkout-chromium-report.json",
+        "stats": {
+          "startTime": "2026-11-16T07:27:51.711Z",
+          "duration": 117010.024,
+          "expected": 75,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      "webkit": {
+        "report": "checkout-webkit-report.json",
+        "stats": {
+          "startTime": "2026-11-16T07:27:42.909Z",
+          "duration": 160933.803,
+          "expected": 75,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    "production": {
+      "chromium": {
+        "report": "production-chromium-report.json",
+        "stats": {
+          "startTime": "2026-11-16T07:27:21.179Z",
+          "duration": 27774.276,
+          "expected": 5,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      "webkit": {
+        "report": "production-webkit-report.json",
+        "stats": {
+          "startTime": "2026-11-16T07:27:52.094Z",
+          "duration": 37939.043,
+          "expected": 5,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    }
+  },
+  "production_test_scope": [
+    "Shared header links and actual destination views",
+    "First-visit comparison",
+    "Same-image direction buttons at 1440 and 375px",
+    "Synchronized zoom, drag, navigator, keyboard and fit"
+  ],
+  "artifact_ids": {
+    "checkout_chromium": 14204759870,
+    "checkout_webkit": 14206200859,
+    "production_chromium": 14205293742,
+    "production_webkit": 14205682230
+  },
+  "earlier_production_test_failure": {
+    "run_id": 43823550696,
+    "failed_test": "shared navigation is consistent and WSI provenance opens only on request",
+    "cause": "Assertion expected /wsi.html; public hosting uses HTTP 307 to /wsi. Logo home navigation already passed.",
+    "verified_redirects": {
+      "/wsi.html": "/wsi",
+      "/ihc.html": "/ihc",
+      "/index.html": "/"
+    },
+    "resolution": "Allow only observed exact aliases, retain href, destination-view and selected-navigation assertions. No application change."
+  },
+  "node_tests_passed": 16,
+  "static_demo_check": "passed",
+  "cpu": {
+    "run_id": 43823005340,
+    "tests_passed": 462,
+    "stored_dice_matches": 42,
+    "image_mean_matches": 6
+  },
+  "source_parity": "deployment-parity.json",
+  "changed_dist_files": [
+    "dist/ihc.html",
+    "dist/index.html",
+    "dist/wsi.html"
+  ],
+  "analysis_code_data_results_unchanged": true,
+  "learner_code_unchanged": true,
+  "new_inference_run": false,
+  "screenshots": {
+    "run_id": 43823894909,
+    "artifact_id": 14205293742,
+    "browser": "chromium",
+    "target": "production",
+    "sha256": {
+      "clarity-first.png": "c047d42a4f6d7dd2c42c7e59fbcb71fb2a3ccbc623b37bb557a702e6d46bce4d",
+      "navigation-studio-ihc.png": "52c6bba33947cd3421a14631bd75284967627a8a3ae287dce08ed4c44d179128",
+      "navigation-studio-tnbc.png": "082e7bbe7d2c3fda721fc8d15b55d217e440de6a5c57824c23178c3e67e1a5e0",
+      "navigation-studio-wsi.png": "aa9081825f35b75de4b6090866aa5296c737675bb0ee86c4d6e636dc0700bba0",
+      "same-image-absent-375.png": "d77a8d6aae66271f72702da0a7fe84da42960efae8f5cb135d3ac17ec4fafd74",
+      "same-image-improved-1440.png": "9037bd9b8ab12ae5426fe08563a334db27663f31fb204b80a0d4bbd6b26ad467",
+      "same-image-worsened-1440.png": "c788d88cb2b09b521bf945d1182ae4c88383099875007d1b73a43c284e7c541f"
+    }
+  },
+  "user_verified_revision": false,
+  "main_merged": false
+}
