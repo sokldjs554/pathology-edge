@@ -94,14 +94,16 @@ test('tablet candidate details share a column without shrinking the image',async
 
 
 test('case loading preserves a later four-pane choice',async({page})=>{
- // The same PNG is a startup thumbnail. Let initial page load finish before
- // gating the later case request, or WebKit's load event can wait on our gate.
+ // Gate an overlay used only by this case, not the base PNG also used by
+ // startup thumbnails (which WebKit may already have decoded in memory).
  await ready(page);
  let release;
  const gate=new Promise(resolve=>{release=resolve;});
- await page.route('**/assets/10_3.png',async route=>{await gate;await route.continue();});
+ let paused=false;
+ await page.route('**/assets/10_3_overlap.png',async route=>{paused=true;await gate;await route.continue();});
  try {
   await page.locator('#showWorsened').click();
+  await expect.poll(()=>paused).toBe(true);
   await expect(page.locator('body')).toHaveAttribute('data-phase','loading');
   await page.locator('#detailTools summary').click();await page.locator('#compareFour').click();
   await expect(page.locator('body')).toHaveAttribute('data-comparison','four');
