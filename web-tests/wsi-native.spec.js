@@ -83,8 +83,15 @@ for(const [width,height] of [[1440,1000],[375,667]]) test(`WSI native automatic 
   const target=data.rois[0].difference.cases[0].center_level0.map(x=>x.toFixed(4)).join(',');
   for(const pane of ['A','B']) {
     await expect(page.locator('#viewer'+pane)).toHaveAttribute('data-center',target);
-    expect(Number(await page.locator('#viewer'+pane).getAttribute('data-zoom'))).toBeLessThanOrEqual(1.00001);
+    expect(Number(await page.locator('#viewer'+pane).getAttribute('data-zoom'))).toBeLessThanOrEqual(3.00001);
   }
+  await expect(page.locator('#position')).toContainText('확대 표시');
+  const enlarged=await page.locator('#overlayB [data-boundary]').boundingBox();
+  expect(enlarged.width).toBeGreaterThan(90);
+  expect(enlarged.width).toBeLessThanOrEqual(193);
+  if(width===1440) expect(enlarged.width).toBeCloseTo(192,0);
+  await paintReady(page);
+  await page.screenshot({path:`captures/wsi-native-boundary-enlarged-${width}.png`,fullPage:true});
   await expect(page.locator('#native')).toBeVisible();
   await page.locator('#native').click();await expect(page.locator('#zoomReadout')).toHaveText('100%');
   await expect(page.locator('#position')).toContainText('원본 PNG');

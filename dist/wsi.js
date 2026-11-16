@@ -315,7 +315,7 @@ function setMode(mode) {
     updateView();
   });
 }
-function fit(box, margin = 0) {
+function fit(box, margin = 0, maxScale = 1) {
   requestAnimationFrame(() => {
     resizeViewers();
     const v = WSI.viewers.B.viewport;
@@ -328,11 +328,11 @@ function fit(box, margin = 0) {
       ),
       true,
     );
-    // Automatic framing should not stretch source pixels. Keep the requested
-    // target in the center; users can still enlarge it explicitly with +.
-    if (v.viewportToImageZoom(v.getZoom(true)) > 1) {
+    // Routine framing stays native. Explicit boundary inspection may enlarge
+    // up to its supplied cap; the existing source/zoom label discloses this.
+    if (v.viewportToImageZoom(v.getZoom(true)) > maxScale) {
       const center = v.getCenter(true);
-      v.zoomTo(v.imageToViewportZoom(1), null, true);
+      v.zoomTo(v.imageToViewportZoom(maxScale), null, true);
       v.panTo(center, true);
     }
     synchronize(WSI.viewers.B);
@@ -436,7 +436,7 @@ function jumpDifference() {
   $('differenceDetail').hidden = false;
   $('traceDetail').hidden = true;
   if (innerWidth > 1199) showResults();
-  fit(c.bbox_level0, 96);
+  fit(c.bbox_level0, 48, 3);
 }
 function pairInfo(pair) {
   const m = WSI.roi.methods.overlap;
@@ -971,7 +971,7 @@ $('zoomOut').onclick = () => {
 };
 $('native').onclick = () => {
   const v = WSI.viewers.B?.viewport;
-  if (v) v.zoomTo(v.imageToViewportZoom(1), null, true);
+  if (v) v.zoomTo(v.imageToViewportZoom(maxScale), null, true);
   updateView();
 };
 $('home').onclick = home;

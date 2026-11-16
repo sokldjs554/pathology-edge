@@ -15,7 +15,7 @@ function camera(width,height) {
   };
   const context={WSI:{viewers:{B:{viewport}}},requestAnimationFrame:fn=>fn(),resizeViewers:()=>{},synchronize:()=>{},updateView:()=>{}};
   vm.createContext(context);vm.runInContext(fitSource,context);
-  return {fit:(box,margin)=>context.fit(box,margin),zoom:()=>scale,center:()=>center};
+  return {fit:(box,margin,maxScale)=>context.fit(box,margin,maxScale),zoom:()=>scale,center:()=>center};
 }
 test('WSI automatic boundary fit does not enlarge source pixels and retains its target',()=>{
  const v=camera(600,700);v.fit([6496,21232,6560,21296],96);
@@ -28,4 +28,13 @@ test('WSI small viewport fit preserves context without forcing enlargement',()=>
 test('WSI large display ROI fit stays at native scale',()=>{
  const v=camera(2000,1800);v.fit([5888,20608,6912,21632],70);
  assert.equal(v.zoom(),1);assert.deepEqual(v.center(),{x:6400,y:21120});
+});
+
+test('WSI explicit boundary inspection enlarges to 3x with context and keeps its center',()=>{
+ const v=camera(536,573);v.fit([6496,21232,6560,21296],48,3);
+ assert.equal(v.zoom(),3);assert.deepEqual(v.center(),{x:6528,y:21264});
+});
+test('WSI narrow boundary inspection fits context instead of forcing 3x',()=>{
+ const v=camera(375,244);v.fit([6496,21232,6560,21296],48,3);
+ assert.equal(v.zoom(),244/160);assert.deepEqual(v.center(),{x:6528,y:21264});
 });
