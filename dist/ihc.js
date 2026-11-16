@@ -664,9 +664,9 @@
       if (matchMedia('(max-width: 760px)').matches) setCases(false);
     }
   });
-  matchMedia('(max-width: 760px)').addEventListener('change', (event) =>
-    { if (event.matches) setCases(false); },
-  );
+  matchMedia('(max-width: 760px)').addEventListener('change', (event) => {
+    if (event.matches) setCases(false);
+  });
   setResults(true);
   setCases(false);
   loadResults();

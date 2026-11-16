@@ -54,14 +54,15 @@ function preserveCamera() {
   const viewport = WSI.viewers.B?.viewport;
   const center = viewport?.getCenter(true);
   const scale = viewport?.viewportToImageZoom(viewport.getZoom(true));
-  return () => requestAnimationFrame(() => {
-    resizeViewers();
-    if (center && Number.isFinite(scale)) {
-      viewport.zoomTo(viewport.imageToViewportZoom(scale), null, true);
-      viewport.panTo(center, true);
-    }
-    updateView();
-  });
+  return () =>
+    requestAnimationFrame(() => {
+      resizeViewers();
+      if (center && Number.isFinite(scale)) {
+        viewport.zoomTo(viewport.imageToViewportZoom(scale), null, true);
+        viewport.panTo(center, true);
+      }
+      updateView();
+    });
 }
 function ready() {
   document.body.dataset.phase = 'ready';
@@ -374,8 +375,8 @@ function jumpDifference() {
   );
   $('differenceDetail').hidden = false;
   $('traceDetail').hidden = true;
-  fit(c.bbox_level0, 96);
   if (innerWidth > 1199) showResults();
+  fit(c.bbox_level0, 96);
 }
 function pairInfo(pair) {
   const m = WSI.roi.methods.overlap;
@@ -900,7 +901,10 @@ $('native').onclick = () => {
 };
 $('home').onclick = home;
 $('slideOverview').onclick = () => {
-  text('selectedRegion', WSI.roi ? `${WSI.roi.id} 선택 유지 · 전체 보기` : '전체 슬라이드');
+  text(
+    'selectedRegion',
+    WSI.roi ? `${WSI.roi.id} 선택 유지 · 전체 보기` : '전체 슬라이드',
+  );
   setMode('explore');
   requestAnimationFrame(home);
 };

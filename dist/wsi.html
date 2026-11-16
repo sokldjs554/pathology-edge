@@ -15,11 +15,16 @@
   </head>
   <body data-phase="loading" class="studio stain-theme studio-wsi">
     <header class="app-header">
-      <a class="brand" href="./" aria-label="PathologyEdge 첫 화면 · 경계 비교" title="첫 화면 · 경계 비교">Pathology<span>Edge</span></a>
+      <a
+        class="brand"
+        href="./"
+        aria-label="PathologyEdge 첫 화면 · 경계 비교"
+        title="첫 화면 · 경계 비교"
+        >Pathology<span>Edge</span></a
+      >
       <nav aria-label="작업 화면">
         <a href="wsi.html" aria-current="page">WSI 탐색</a
-        ><a href="index.html">경계 비교</a
-        ><a href="ihc.html">IHC 세포 분류</a>
+        ><a href="index.html">경계 비교</a><a href="ihc.html">IHC 세포 분류</a>
       </nav>
       <span class="research">연구·교육용</span><button id="help">안내</button>
     </header>
@@ -48,43 +53,61 @@
         <a class="side-link" href="index.html">정답이 있는 TNBC 실험 ↗</a>
       </aside>
       <section class="workspace" aria-label="WSI 영상 작업대">
-
         <div class="toolbar">
           <div class="segments">
-            <button id="modeExplore" aria-pressed="true">슬라이드 탐색</button><button id="modeCompare" aria-pressed="false">A/B 경계 비교</button>
+            <button id="modeExplore" aria-pressed="true">슬라이드 탐색</button
+            ><button id="modeCompare" aria-pressed="false">
+              A/B 경계 비교
+            </button>
           </div>
           <div class="zoom-tools">
-            <button id="zoomOut" aria-label="축소">−</button><output id="zoomReadout">—</output
-            ><button id="zoomIn" aria-label="확대">+</button><button id="home">전체 맞춤</button>
+            <button id="zoomOut" aria-label="축소">−</button
+            ><output id="zoomReadout">—</output
+            ><button id="zoomIn" aria-label="확대">+</button
+            ><button id="home">전체 맞춤</button>
           </div>
           <button id="jumpDifference" disabled>차이가 큰 경계</button>
-          <details id="displayTools"><summary>표시 설정</summary><div class="display-menu">        <div class="layers">
-          <label
-            ><input id="showBounds" type="checkbox" checked />분석 영역</label
-          ><label
-            ><input id="showMask" type="checkbox" checked /><i class="mask"></i
-            >핵 예측</label
-          ><label
-            ><input id="showGrid" type="checkbox" checked />선택 ROI 경계</label
-          ><label><input id="showCandidates" type="checkbox" />후보</label
-          ><label><input id="showDifference" type="checkbox" />예측 차이</label
-          ><label class="opacity"
-            >불투명도
-            <input
-              id="overlayOpacity"
-              type="range"
-              min="0"
-              max="80"
-              value="60"
-              aria-label="예측 불투명도"
-          /></label>
-        </div><button id="native">1:1</button></div></details>
+          <details id="displayTools">
+            <summary>표시 설정</summary>
+            <div class="display-menu">
+              <div class="layers">
+                <label
+                  ><input id="showBounds" type="checkbox" checked />분석
+                  영역</label
+                ><label
+                  ><input id="showMask" type="checkbox" checked /><i
+                    class="mask"
+                  ></i
+                  >핵 예측</label
+                ><label
+                  ><input id="showGrid" type="checkbox" checked />선택 ROI
+                  경계</label
+                ><label><input id="showCandidates" type="checkbox" />후보</label
+                ><label
+                  ><input id="showDifference" type="checkbox" />예측 차이</label
+                ><label class="opacity"
+                  >불투명도
+                  <input
+                    id="overlayOpacity"
+                    type="range"
+                    min="0"
+                    max="80"
+                    value="60"
+                    aria-label="예측 불투명도"
+                /></label>
+              </div>
+              <button id="native">1:1</button>
+            </div>
+          </details>
         </div>
 
         <div class="context">
-          <span id="scopeNote">저장 결과 · 핵 정답 없음 · 차이 ≠ 정확도 개선</span>
+          <span id="scopeNote"
+            >저장 결과 · 핵 정답 없음 · 차이 ≠ 정확도 개선</span
+          >
           <span id="viewContext">실제 원본의 확대 타일을 불러오는 중</span
-          ><span id="selectedRegion">전체 슬라이드</span><span id="centerCoverage">분석 범위 확인 중</span>
+          ><span id="selectedRegion">전체 슬라이드</span
+          ><span id="centerCoverage">분석 범위 확인 중</span>
         </div>
         <div class="mobile-switch segments">
           <button id="mobileA" aria-pressed="false">A 무겹침</button
@@ -162,28 +185,29 @@
             <p id="regionDescription">
               하단 ROI 목록에서 선택하면 실제 분석한 영역으로 이동합니다.
             </p>
-
           </section>
           <section id="regionResult" hidden>
-            <details id="processingDetails"><summary>처리 시간·메모리·패치 기록</summary>
-            <p id="regionCoordinates" class="small-note"></p>
-            <table>
-              <thead>
-                <tr>
-                  <th>1024² ROI</th>
-                  <th>A 무겹침</th>
-                  <th>B 겹침</th>
-                </tr>
-              </thead>
-              <tbody id="roiMetrics"></tbody>
-            </table>
-            <p id="regionDifference" class="small-note"></p>
-            <details>
-              <summary>시간·메모리 측정 범위</summary>
-              <p id="timingScope"></p>
-              <p>전체 슬라이드 추론 시간이나 브라우저 로딩 시간이 아닙니다.</p>
-            </details>
-
+            <details id="processingDetails">
+              <summary>처리 시간·메모리·패치 기록</summary>
+              <p id="regionCoordinates" class="small-note"></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>1024² ROI</th>
+                    <th>A 무겹침</th>
+                    <th>B 겹침</th>
+                  </tr>
+                </thead>
+                <tbody id="roiMetrics"></tbody>
+              </table>
+              <p id="regionDifference" class="small-note"></p>
+              <details>
+                <summary>시간·메모리 측정 범위</summary>
+                <p id="timingScope"></p>
+                <p>
+                  전체 슬라이드 추론 시간이나 브라우저 로딩 시간이 아닙니다.
+                </p>
+              </details>
             </details>
           </section>
           <section id="differenceDetail" hidden>
@@ -199,33 +223,43 @@
             </p>
           </section>
 
-<section><details id="traceTools"><summary>중복 후보·출처 추적</summary><div class="trace-actions"><button id="modeTrace" aria-pressed="false">중복 출처</button>            <button id="traceFirst" class="wide">
-              실제 중복 후보 한 쌍 추적 →
-            </button></div>          <section id="traceDetail" hidden>
-            <h2>후보 → 패치 → 병합</h2>
-            <label for="pairSelect">저장된 억제·유지 대응</label
-            ><select id="pairSelect">
-              <option value="">후보 쌍 선택</option>
-            </select>
-            <div id="candidateInfo"></div>
-            <p class="small-note">
-              박스는 연결 성분 후보입니다. 서로 다른 실제 핵이 잘못 병합됐을
-              가능성은 정답 없이 판정할 수 없습니다.
-            </p>
-          </section></details></section>
           <section>
-            <details><summary>정답이 있는 별도 TNBC 사례</summary>
-            <p class="small-note">
-              아래는 별도 TNBC PNG 데이터입니다. 이 슬라이드 위에 덧씌우지
-              않습니다.
-            </p>
-            <div class="reference-links">
-              <a href="index.html?sample=11_1&case=11_1-improved"
-                >개선 사례 11_1 ↗</a
-              ><a href="index.html?sample=10_3&case=10_3-worsened"
-                >악화 사례 10_3 ↗</a
-              >
-            </div>
+            <details id="traceTools">
+              <summary>중복 후보·출처 추적</summary>
+              <div class="trace-actions">
+                <button id="modeTrace" aria-pressed="false">중복 출처</button>
+                <button id="traceFirst" class="wide">
+                  실제 중복 후보 한 쌍 추적 →
+                </button>
+              </div>
+              <section id="traceDetail" hidden>
+                <h2>후보 → 패치 → 병합</h2>
+                <label for="pairSelect">저장된 억제·유지 대응</label
+                ><select id="pairSelect">
+                  <option value="">후보 쌍 선택</option>
+                </select>
+                <div id="candidateInfo"></div>
+                <p class="small-note">
+                  박스는 연결 성분 후보입니다. 서로 다른 실제 핵이 잘못 병합됐을
+                  가능성은 정답 없이 판정할 수 없습니다.
+                </p>
+              </section>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>정답이 있는 별도 TNBC 사례</summary>
+              <p class="small-note">
+                아래는 별도 TNBC PNG 데이터입니다. 이 슬라이드 위에 덧씌우지
+                않습니다.
+              </p>
+              <div class="reference-links">
+                <a href="index.html?sample=11_1&case=11_1-improved"
+                  >개선 사례 11_1 ↗</a
+                ><a href="index.html?sample=10_3&case=10_3-worsened"
+                  >악화 사례 10_3 ↗</a
+                >
+              </div>
             </details>
           </section>
           <section>
@@ -298,8 +332,8 @@
           해석하지 않습니다.
         </li>
         <li>
-          ‘상세 근거 → 중복 후보·출처 추적’ 또는 ‘표시 설정 → 후보’를 선택해 원시 후보와 유지 후보, 원래
-          패치·상자·억제 조건을 추적합니다.
+          ‘상세 근거 → 중복 후보·출처 추적’ 또는 ‘표시 설정 → 후보’를 선택해
+          원시 후보와 유지 후보, 원래 패치·상자·억제 조건을 추적합니다.
         </li>
       </ol>
       <p>
