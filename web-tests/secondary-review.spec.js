@@ -7,8 +7,13 @@ const wsi = JSON.parse(
   fs.readFileSync(new URL('../dist/wsi.json', import.meta.url)),
 );
 fs.mkdirSync('captures', { recursive: true });
-const shot = (page, name) =>
-  page.screenshot({ path: `captures/secondary-${name}.png`, fullPage: true });
+const shot = async (page, name) => {
+  await expect.poll(() => page.evaluate(() => ({
+    width: document.documentElement.scrollWidth - innerWidth,
+    height: document.documentElement.scrollHeight - innerHeight,
+  }))).toEqual({width:0,height:0});
+  return page.screenshot({ path: `captures/secondary-${name}.png`, fullPage: true });
+};
 const ready = (page) =>
   expect(page.locator('body')).toHaveAttribute('data-phase', 'ready');
 const camera = (page) =>
