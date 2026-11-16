@@ -43,9 +43,25 @@ function layoutPanels() {
   );
 }
 function showResults() {
+  const restore = preserveCamera();
   $('workbench').classList.remove('results-hidden');
   if (innerWidth <= 760) $('workbench').classList.add('regions-hidden');
   layoutPanels();
+  restore();
+}
+// Keep native image scale and position when available canvas space changes.
+function preserveCamera() {
+  const viewport = WSI.viewers.B?.viewport;
+  const center = viewport?.getCenter(true);
+  const scale = viewport?.viewportToImageZoom(viewport.getZoom(true));
+  return () => requestAnimationFrame(() => {
+    resizeViewers();
+    if (center && Number.isFinite(scale)) {
+      viewport.zoomTo(viewport.imageToViewportZoom(scale), null, true);
+      viewport.panTo(center, true);
+    }
+    updateView();
+  });
 }
 function ready() {
   document.body.dataset.phase = 'ready';
@@ -266,6 +282,7 @@ function selectROI(id, mode = 'compare') {
   const roi = WSI.data.rois.find((r) => r.id === id);
   if (!roi) return;
   WSI.roi = roi;
+  text('selectedRegion', `${id} · 저장된 분석 ROI`);
   WSI.pair = null;
   WSI.selected = null;
   WSI.boundary = null;
@@ -405,6 +422,8 @@ function selectPair(index) {
   if (!WSI.roi) selectROI(WSI.data.rois[0].id, 'trace');
   const p = WSI.roi.methods.overlap.suppressed[index];
   if (!p) return;
+  $('traceTools').open = true;
+  showResults();
   setMode('trace');
   WSI.pair = p;
   WSI.selected = null;
@@ -454,6 +473,7 @@ function selectCandidate(method, rawIndex) {
     row('평균 확률', o.score.toFixed(3)) +
     '<p>이 후보와 연결된 억제·유지 쌍은 저장 결과에 없습니다.</p>';
   $('traceDetail').hidden = false;
+  $('traceTools').open = true;
   $('differenceDetail').hidden = true;
   renderOverlays();
   showResults();
@@ -839,7 +859,7 @@ async function init() {
     );
   }
 }
-if (innerWidth <= 1199) $('workbench').classList.add('results-hidden');
+$('workbench').classList.add('results-hidden');
 if (innerWidth <= 760) $('workbench').classList.add('regions-hidden');
 layoutPanels();
 for (const [id, mode] of [
@@ -880,6 +900,7 @@ $('native').onclick = () => {
 };
 $('home').onclick = home;
 $('slideOverview').onclick = () => {
+  text('selectedRegion', WSI.roi ? `${WSI.roi.id} 선택 유지 · 전체 보기` : '전체 슬라이드');
   setMode('explore');
   requestAnimationFrame(home);
 };
@@ -888,21 +909,26 @@ for (const [id, cls] of [
   ['toggleResults', 'results-hidden'],
 ])
   $(id).onclick = () => {
+    const restore = preserveCamera();
     $('workbench').classList.toggle(cls);
     layoutPanels();
-    requestAnimationFrame(() => {
-      resizeViewers();
-      updateView();
-    });
+    restore();
   };
 $('closeResults').onclick = () => {
+  const restore = preserveCamera();
   $('workbench').classList.add('results-hidden');
   layoutPanels();
-  requestAnimationFrame(() => {
-    resizeViewers();
-    updateView();
-  });
+  restore();
 };
+document.addEventListener('click', (event) => {
+  if (!$('displayTools').contains(event.target)) $('displayTools').open = false;
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && $('displayTools').open) {
+    $('displayTools').open = false;
+    $('displayTools').querySelector('summary').focus();
+  }
+});
 for (const id of ['A', 'B'])
   $('mobile' + id).onclick = () => {
     $('panes').classList.toggle('show-a', id === 'A');

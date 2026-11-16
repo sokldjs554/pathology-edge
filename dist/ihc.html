@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="ihc.css" />
     <link rel="stylesheet" href="studio.css" />
     <link rel="stylesheet" href="stain-theme.css" />
+    <link rel="stylesheet" href="secondary-review.css" />
   </head>
-  <body data-phase="loading" class="results-hidden cases-hidden studio stain-theme studio-ihc">
+  <body data-phase="loading" class="cases-hidden studio stain-theme studio-ihc">
     <header class="app-header">
       <a class="brand" href="./" aria-label="PathologyEdge 첫 화면 · 경계 비교" title="첫 화면 · 경계 비교">Pathology<span>Edge</span></a>
       <nav aria-label="작업 화면">
@@ -24,7 +25,7 @@
     </header>
     <div class="study-bar">
       <strong>Patherea · 유방암 Ki67 IHC</strong
-      ><span>정답 중심점 조건의 분류</span>
+      ><span id="scopeNote">정답 중심점 입력 · 자동 세포 검출 아님 · 저장 결과</span>
       <div class="bar-actions">
         <button
           id="toggleCases"
@@ -34,10 +35,10 @@
           사례 목록</button
         ><button
           id="toggleResults"
-          aria-expanded="false"
+          aria-expanded="true"
           aria-controls="inspector"
         >
-          결과·출처
+          선택 세포
         </button>
       </div>
     </div>
@@ -62,15 +63,7 @@
         </p>
       </aside>
       <section class="workspace" aria-label="IHC 영상과 선택 세포">
-        <div class="guide">
-          <p>
-            <strong>세포의 실제 염색과 정답·예측을 함께 확인합니다.</strong>
-          </p>
-          <span id="scopeNote"
-            >정답 중심점이 입력됩니다. 자동 세포 검출·임상 Ki67 분석이
-            아닙니다.</span
-          >
-        </div>
+
         <div class="toolbar">
           <div class="segments" aria-label="사례 종류">
             <button id="filterWrong" aria-pressed="true" disabled>
@@ -138,6 +131,14 @@
             ><span>파랑: 입력 중심 · 노란 상자: 48px crop, 세포 경계 아님</span>
           </div>
         </div>
+
+      </section>
+      <aside id="inspector" class="inspector" aria-label="선택 세포 결과와 실험 근거">
+        <div class="side-title">
+          선택 세포
+          <button id="closeResults" aria-label="결과 패널 닫기">×</button>
+        </div>
+        <div class="inspector-scroll">
         <section class="selection-strip" aria-label="선택 세포의 정답과 예측">
           <div class="crop-frame">
             <img
@@ -167,18 +168,21 @@
             </div>
             <div class="model-line">
               <span>예측 점수 <strong id="selectedScore">—</strong></span
-              ><span>정답 중심점을 입력한 분류</span>
+              >
             </div>
           </div>
-        </section>
-      </section>
-      <aside id="inspector" class="inspector" aria-label="IHC 실험 결과와 출처">
-        <div class="side-title">
-          결과·출처
-          <button id="closeResults" aria-label="결과 패널 닫기">×</button>
-        </div>
-        <div class="inspector-scroll">
-          <section>
+                    <p id="caseExplanation" class="small-note">
+              실제 사례를 선택하면 정답과 예측의 차이를 표시합니다.
+            </p>
+        </section>          <section>
+            <h2>네 클래스 점수 <small>Ki67 + 양성 / − 음성</small></h2>
+
+            <div id="classScores"></div>
+            <p id="scoreDisclaimer" class="small-note">
+              보정하지 않은 모델 점수이며 정답 확률·전체 테스트 정확도가 아닙니다.
+            </p>
+          </section>
+<details id="overallResults" class="evidence-group"><summary>전체 실험 결과</summary>          <section>
             <h1>전체 테스트의 분류 성능</h1>
             <div class="metric-pair">
               <div>
@@ -193,19 +197,7 @@
               중심 위치는 정답으로 주어졌습니다. 누락·가짜 검출과 핵 경계 분할은
               평가하지 않았습니다.
             </p>
-          </section>
-          <section>
-            <h2>선택 세포의 네 클래스 점수</h2>
-            <p id="caseExplanation" class="small-note">
-              실제 사례를 선택하면 정답과 예측의 차이를 표시합니다.
-            </p>
-            <div id="classScores"></div>
-            <p id="scoreDisclaimer" class="small-note">
-              확률 보정을 하지 않은 모델 점수입니다. 임상 확신도나 검사 정확도가
-              아닙니다.
-            </p>
-          </section>
-          <section>
+          </section>          <section>
             <h2>클래스별 테스트 성능</h2>
             <table class="metrics-table">
               <caption class="sr-only">
@@ -245,8 +237,8 @@
                 + / −는 Ki67 양성 / 음성, 기타는 비종양 세포입니다.
               </p>
             </details>
-          </section>
-          <section>
+          </section></details>
+<details id="methodSources" class="evidence-group"><summary>방법·출처</summary>          <section>
             <h2>분리·모델 선택</h2>
             <table>
               <thead>
@@ -273,8 +265,7 @@
                 시간은 WSI 처리 시간이 아닙니다.
               </p>
             </details>
-          </section>
-          <section>
+          </section>          <section>
             <h2>정답의 범위와 데이터 차이</h2>
             <p id="statisticsDiscrepancy" class="notice"></p>
             <p class="small-note">
@@ -289,8 +280,7 @@
                 슬라이드·임상 Ki67 지수의 평가가 아닙니다.
               </p>
             </details>
-          </section>
-          <section>
+          </section>          <section>
             <h2>원자료·모델 출처</h2>
             <p>
               <a
@@ -336,14 +326,14 @@
               AIVIS와 무관한 독립 연구·교육 프로젝트입니다. 임상 진단·치료
               판단용이 아닙니다.
             </p>
-          </section>
+          </section></details>
         </div>
       </aside>
     </main>
     <footer>
       <span id="status" role="status" aria-live="polite"
         >저장된 IHC 결과를 불러오는 중</span
-      ><span>GT 중심 분류 · 임상 분석 아님</span>
+      ><span>정답 중심 입력 · 자동 검출 아님</span>
     </footer>
     <script src="ihc.js" defer></script>
   </body>

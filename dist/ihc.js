@@ -428,7 +428,9 @@
         `score-row${index === example.pred_class ? ' predicted' : ''}`,
       );
       const title = element('div', undefined, 'score-title');
-      title.append(element('span', data.classes[index].label_ko));
+      const label = element('span', shortNames[index]);
+      label.title = data.classes[index].label_ko;
+      title.append(label);
       if (index === example.gt_class)
         title.append(element('span', '정답', 'score-tag'));
       if (index === example.pred_class)
@@ -448,7 +450,7 @@
     if (example.kind === 'correct')
       text(
         'caseExplanation',
-        '이 정답 중심에서는 세포 유형이 일치합니다. 주변 세포의 검출 성공 여부를 뜻하지 않습니다.',
+        '종양 여부와 Ki67 양성·음성이 모두 정답과 일치합니다.',
       );
     else {
       const sameStain =
@@ -615,7 +617,6 @@
   function setCases(open) {
     document.body.classList.toggle('cases-hidden', !open);
     $('toggleCases').setAttribute('aria-expanded', String(open));
-    if (open && matchMedia('(max-width: 760px)').matches) setResults(false);
   }
   function chooseKind(value) {
     kind = value;
@@ -663,13 +664,10 @@
       if (matchMedia('(max-width: 760px)').matches) setCases(false);
     }
   });
-  matchMedia('(max-width: 1100px)').addEventListener('change', (event) =>
-    setResults(!event.matches),
-  );
   matchMedia('(max-width: 760px)').addEventListener('change', (event) =>
-    setCases(!event.matches),
+    { if (event.matches) setCases(false); },
   );
-  setResults(!matchMedia('(max-width: 1100px)').matches);
-  setCases(!matchMedia('(max-width: 760px)').matches);
+  setResults(true);
+  setCases(false);
   loadResults();
 })();

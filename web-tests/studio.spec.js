@@ -94,5 +94,5 @@ test('shared navigation is consistent and WSI provenance opens only on request',
   await page.screenshot({path:`captures/navigation-${bodyClass}.png`,fullPage:true});
  }
  await page.goto('/wsi.html');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
- await expect(page.locator('#provenance')).toBeHidden();await page.getByText('슬라이드·모델·분석 범위',{exact:true}).click();await expect(page.locator('#provenance')).toBeVisible();
+ await expect(page.locator('#provenance')).toBeHidden();await page.locator('#toggleResults').click();await page.getByText('슬라이드·모델·분석 범위',{exact:true}).click();await expect(page.locator('#provenance')).toBeVisible();
 });

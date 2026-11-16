@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="wsi.css" />
     <link rel="stylesheet" href="studio.css" />
     <link rel="stylesheet" href="stain-theme.css" />
+    <link rel="stylesheet" href="secondary-review.css" />
   </head>
   <body data-phase="loading" class="studio stain-theme studio-wsi">
     <header class="app-header">
@@ -27,10 +28,10 @@
       ><span id="slideMeta"></span>
       <div class="bar-actions">
         <button id="toggleRegions" aria-expanded="true">영역 목록</button
-        ><button id="toggleResults" aria-expanded="true">결과·출처</button>
+        ><button id="toggleResults" aria-expanded="false">상세 근거</button>
       </div>
     </div>
-    <main id="workbench" class="workbench">
+    <main id="workbench" class="workbench results-hidden">
       <aside id="regions" class="regions" aria-label="슬라이드와 분석 영역">
         <div class="side-title">실제 스캔 전체</div>
         <button id="slideOverview" class="slide-card">
@@ -47,32 +48,17 @@
         <a class="side-link" href="index.html">정답이 있는 TNBC 실험 ↗</a>
       </aside>
       <section class="workspace" aria-label="WSI 영상 작업대">
-        <div class="guide">
-          <p>
-            <strong
-              >조직 전체에서 세부 영역까지 확대하고, 패치 결과의 출처를
-              추적합니다.</strong
-            >
-          </p>
-          <span>① 슬라이드 탐색 → ② 분석 ROI 선택 → ③ 경계·병합 근거 확인</span
-          ><span class="stored-label">저장 결과 열람 · 새 추론 아님</span>
-        </div>
+
         <div class="toolbar">
           <div class="segments">
-            <button id="modeExplore" aria-pressed="true">슬라이드 탐색</button
-            ><button id="modeCompare" aria-pressed="false">A/B 경계 비교</button
-            ><button id="modeTrace" aria-pressed="false">중복 출처</button>
+            <button id="modeExplore" aria-pressed="true">슬라이드 탐색</button><button id="modeCompare" aria-pressed="false">A/B 경계 비교</button>
           </div>
           <div class="zoom-tools">
-            <button id="zoomOut" aria-label="축소">−</button
-            ><output id="zoomReadout">—</output
-            ><button id="zoomIn" aria-label="확대">+</button
-            ><button id="home">전체 맞춤</button
-            ><button id="native">1:1</button>
+            <button id="zoomOut" aria-label="축소">−</button><output id="zoomReadout">—</output
+            ><button id="zoomIn" aria-label="확대">+</button><button id="home">전체 맞춤</button>
           </div>
           <button id="jumpDifference" disabled>차이가 큰 경계</button>
-        </div>
-        <div class="layers">
+          <details id="displayTools"><summary>표시 설정</summary><div class="display-menu">        <div class="layers">
           <label
             ><input id="showBounds" type="checkbox" checked />분석 영역</label
           ><label
@@ -92,10 +78,13 @@
               value="60"
               aria-label="예측 불투명도"
           /></label>
+        </div><button id="native">1:1</button></div></details>
         </div>
+
         <div class="context">
+          <span id="scopeNote">저장 결과 · 핵 정답 없음 · 차이 ≠ 정확도 개선</span>
           <span id="viewContext">실제 원본의 확대 타일을 불러오는 중</span
-          ><span id="centerCoverage">분석 범위 확인 중</span>
+          ><span id="selectedRegion">전체 슬라이드</span><span id="centerCoverage">분석 범위 확인 중</span>
         </div>
         <div class="mobile-switch segments">
           <button id="mobileA" aria-pressed="false">A 무겹침</button
@@ -164,7 +153,7 @@
       </section>
       <aside id="inspector" class="inspector" aria-label="분석 결과와 출처">
         <div class="side-title">
-          결과·출처
+          상세 근거
           <button id="closeResults" aria-label="결과 패널 닫기">×</button>
         </div>
         <div class="inspector-scroll">
@@ -173,13 +162,10 @@
             <p id="regionDescription">
               하단 ROI 목록에서 선택하면 실제 분석한 영역으로 이동합니다.
             </p>
-            <p class="notice">
-              이 WSI에는 핵 정답이 없습니다. 예측 차이는 정확도 개선을 뜻하지
-              않습니다.
-            </p>
+
           </section>
           <section id="regionResult" hidden>
-            <h2>선택 ROI 처리 기록</h2>
+            <details id="processingDetails"><summary>처리 시간·메모리·패치 기록</summary>
             <p id="regionCoordinates" class="small-note"></p>
             <table>
               <thead>
@@ -197,9 +183,8 @@
               <p id="timingScope"></p>
               <p>전체 슬라이드 추론 시간이나 브라우저 로딩 시간이 아닙니다.</p>
             </details>
-            <button id="traceFirst" class="wide">
-              실제 중복 후보 한 쌍 추적 →
-            </button>
+
+            </details>
           </section>
           <section id="differenceDetail" hidden>
             <h2>선택한 경계의 예측 차이</h2>
@@ -213,7 +198,10 @@
               64px 영역입니다.
             </p>
           </section>
-          <section id="traceDetail" hidden>
+
+<section><details id="traceTools"><summary>중복 후보·출처 추적</summary><div class="trace-actions"><button id="modeTrace" aria-pressed="false">중복 출처</button>            <button id="traceFirst" class="wide">
+              실제 중복 후보 한 쌍 추적 →
+            </button></div>          <section id="traceDetail" hidden>
             <h2>후보 → 패치 → 병합</h2>
             <label for="pairSelect">저장된 억제·유지 대응</label
             ><select id="pairSelect">
@@ -224,9 +212,9 @@
               박스는 연결 성분 후보입니다. 서로 다른 실제 핵이 잘못 병합됐을
               가능성은 정답 없이 판정할 수 없습니다.
             </p>
-          </section>
+          </section></details></section>
           <section>
-            <h2>정답으로 확인한 개선·악화</h2>
+            <details><summary>정답이 있는 별도 TNBC 사례</summary>
             <p class="small-note">
               아래는 별도 TNBC PNG 데이터입니다. 이 슬라이드 위에 덧씌우지
               않습니다.
@@ -238,6 +226,7 @@
                 >악화 사례 10_3 ↗</a
               >
             </div>
+            </details>
           </section>
           <section>
             <details>
@@ -309,12 +298,12 @@
           해석하지 않습니다.
         </li>
         <li>
-          ‘중복 출처’ 또는 ‘후보’를 선택해 원시 후보와 유지 후보, 원래
+          ‘상세 근거 → 중복 후보·출처 추적’ 또는 ‘표시 설정 → 후보’를 선택해 원시 후보와 유지 후보, 원래
           패치·상자·억제 조건을 추적합니다.
         </li>
       </ol>
       <p>
-        작은 화면에서는 A/B 버튼으로 같은 위치를 바꿔 봅니다. ‘결과·출처’ 패널을
+        작은 화면에서는 A/B 버튼으로 같은 위치를 바꿔 봅니다. ‘상세 근거’ 패널을
         열면 수치와 조건을 확인할 수 있습니다.
       </p>
       <p>

@@ -112,6 +112,7 @@ test('experiment metrics, confusion, split, limits and NC attribution retain rea
     await expect(row.locator('td').nth(2)).toHaveText(entry.recall.toFixed(3));
     await expect(row.locator('td').nth(3)).toHaveText(entry.f1.toFixed(3));
   }
+  await page.locator('#overallResults > summary').click();
   await page.locator('#confusionDetails summary').click();
   for (const [rowIndex, row] of data.metrics.test.confusion_matrix.entries()) {
     for (const [column, value] of row.entries()) {
@@ -124,6 +125,7 @@ test('experiment metrics, confusion, split, limits and NC attribution retain rea
       ).toHaveText(value.toLocaleString('en-US'));
     }
   }
+  await page.locator('#methodSources > summary').click();
   await expect(page.locator('#splitRows tr')).toHaveCount(3);
   await expect(page.locator('#splitRows')).toContainText('15');
   await expect(page.locator('#splitRows')).toContainText('4');
@@ -155,7 +157,7 @@ for (const [width, height] of [
     await page.setViewportSize({ width, height });
     await page.goto('/ihc.html');
     await ready(page);
-    await expect(page.locator('#inspector')).toBeHidden();
+    await expect(page.locator('#inspector')).toBeVisible();
     const viewport = await page.locator('#imageStage').boundingBox();
     expect(viewport.height).toBeGreaterThan(160);
     const correct = data.examples
@@ -165,8 +167,7 @@ for (const [width, height] of [
     await page.locator('#exampleSelect').selectOption(correct.id);
     await ready(page, correct);
     await expect(page.locator('#cropImage')).toBeVisible();
-    await page.locator('#toggleResults').click();
-    await expect(page.locator('#inspector')).toBeVisible();
+    await page.locator('#overallResults > summary').click();
     await expect(page.locator('#testMacroF1')).toBeVisible();
     await page.locator('#closeResults').click();
     await expect(page.locator('#inspector')).toBeHidden();
