@@ -1,0 +1,146 @@
+{
+  "github_ui_commit": "71ba59faabef9c633cc117f30463449dd4c5a607",
+  "site_source_commit": "51a503b1ae4e3474cdd5305d95b5f52797b406ea",
+  "version_number": 15,
+  "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_eae0b2f1e96881918a89d092692f29c0",
+  "deployment_id": "appgdep_6afa54e8a77481919580f3b8a99c6401",
+  "deployment_status": "succeeded",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "deployed_utc": "2026-11-16T00:57:28.138622+00:00",
+  "checkout_browser_run": 43784606054,
+  "production_browser_run": 43784103545,
+  "cpu_run": 43784606034,
+  "python_tests_passed": 462,
+  "node_tests_passed": 14,
+  "dice_checks": 42,
+  "image_mean_checks": 6,
+  "experiment_assets_unchanged": true,
+  "user_verified_revision": false,
+  "ui_implementation_commit": "71ba59faabef9c633cc117f30463449dd4c5a607",
+  "initial_checkout_browser_run": 43782917225,
+  "initial_production_browser_run": 43783440729,
+  "initial_production_webkit": {
+    "passed": 65,
+    "failed": 1,
+    "reason": "The delayed-case test gated a PNG used by startup thumbnails before page.goto finished; the WebKit load event could wait on the test gate. The test now installs the gate after startup, with the original delayed-response assertions retained.",
+    "fix_commit": "9e31b06e4a0412542dc251623d77c5ac993d5a14",
+    "application_change": false,
+    "followup": "Moving the gate after startup exposed WebKit's reuse of the base image. The final test gates 10_3_overlap.png, which is not a thumbnail, and checks that interception really occurred."
+  },
+  "test_commit": "9e31b06e4a0412542dc251623d77c5ac993d5a14",
+  "production_suite_test_commit": "99e0eeb6a3ea2c588b05c58b3088ec031d124d0e",
+  "production_targeted_run": 43784621191,
+  "browser_reports": {
+    "checkout-chromium": {
+      "file": "checkout-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-16T01:10:52.796Z",
+        "duration": 98653.22799999999,
+        "expected": 66,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "checkout-webkit": {
+      "file": "checkout-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-16T01:11:06.914Z",
+        "duration": 149196.69499999998,
+        "expected": 66,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-chromium": {
+      "file": "production-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-16T01:05:32.540Z",
+        "duration": 180284.725,
+        "expected": 66,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-webkit": {
+      "file": "production-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-16T01:05:39.461Z",
+        "duration": 216518.261,
+        "expected": 66,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-targeted-chromium": {
+      "file": "production-targeted-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-16T01:10:37.969Z",
+        "duration": 2709.919,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-targeted-webkit": {
+      "file": "production-targeted-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-16T01:11:27.277Z",
+        "duration": 7505.056,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  },
+  "screenshots": {
+    "simple-improved.png": {
+      "sha256": "56a9dbc8fde00a5ad59faacdd6172084448808ab423f7f987b26fdb1643ca846",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    },
+    "simple-375.png": {
+      "sha256": "589a64e065f34f4dd0d3ce6c646b20a22259b8f488e72fb4c59a20d5730cfd1b",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    },
+    "context-menu-1440.png": {
+      "sha256": "b33aa00f67b2722a4a394028d8d6b9936bb991d7bde9eab2755c9dbc629ae52c",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    },
+    "context-highlight-off.png": {
+      "sha256": "dd8d37308f2de1ff84df984b1176f240b005696ed6308ea5532b88851927115b",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    },
+    "simple-worsened.png": {
+      "sha256": "4d3ef1115afd40812c842b6dd8f1320e49081bb1bd84a81204d6fa49fdbfbad2",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    },
+    "context-menu-375.png": {
+      "sha256": "83989ed3db30068ae292da5235a99bf6f3865f4e1584cd9315471491feeadcd5",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    },
+    "context-highlight-on.png": {
+      "sha256": "4961893db04d32ba7dec981c821302943ff76a9c9afd03d5e34b30bedd7e7dcf",
+      "production_browser_run": 43784103545,
+      "browser": "chromium"
+    }
+  },
+  "changed_dist_files": [
+    "dist/index.html",
+    "dist/review-entry.css",
+    "dist/review-entry.js",
+    "dist/review-ui.js"
+  ],
+  "source_files_matched": 2195,
+  "live_files_matched": 6
+}
