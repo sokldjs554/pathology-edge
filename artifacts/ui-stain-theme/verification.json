@@ -1,0 +1,68 @@
+{
+  "verified_utc": "2026-11-16T01:43:51.043396+00:00",
+  "ui_source_commit": "9e075e39d08378b3d68cd78303ec8dbe46777761",
+  "site_source_commit": "5f822909e07d0982069857b1a692496a964c2581",
+  "site_version": 16,
+  "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_f24539ee43688191936eb506a762ad35",
+  "deployment_id": "appgdep_6afa5e9a409881918f0e08cc9399a276",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site/",
+  "browser_runs": {
+    "checkout": {
+      "run_id": 43786871708,
+      "browsers": {
+        "chromium": {
+          "startTime": "2026-11-16T01:33:41.763Z",
+          "duration": 100560.873,
+          "expected": 66,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "webkit": {
+          "startTime": "2026-11-16T01:33:54.221Z",
+          "duration": 181707.934,
+          "expected": 66,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    "production": {
+      "run_id": 43787486212,
+      "browsers": {
+        "chromium": {
+          "startTime": "2026-11-16T01:39:41.466Z",
+          "duration": 179124.40500000003,
+          "expected": 66,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "webkit": {
+          "startTime": "2026-11-16T01:39:47.597Z",
+          "duration": 178858.747,
+          "expected": 66,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    }
+  },
+  "cpu_run_id": 43786871797,
+  "python_tests_passed": 462,
+  "node_tests_passed": 14,
+  "dice_values_matched": 42,
+  "image_means_matched": 6,
+  "deployment_parity": "deployment-parity.json",
+  "selected_color_contrast": "contrast.json",
+  "screenshot_provenance": {
+    "run_id": 43787486212,
+    "artifact_id": 14191415832,
+    "browser": "chromium",
+    "target": "production"
+  },
+  "user_verified_revision": false,
+  "scope": "Application shell colors on TNBC, WSI and IHC only. No source image, mask, result, algorithm, layout or interaction changes."
+}

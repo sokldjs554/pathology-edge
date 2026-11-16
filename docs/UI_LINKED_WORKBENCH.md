@@ -1,6 +1,6 @@
 # PathologyEdge · 첫 방문 비교 흐름
 
-[공개 데모](https://pathology-edge-lab.ykh13571.chatgpt.site/)는 같은 위치의 **A(겹침 없음) / B(겹침·결합)** 영상으로 시작합니다. 색상과 영상 중심 작업대는 유지하고, 처음 보는 사람에게 필요한 조작을 앞에 배치했습니다.
+[공개 데모](https://pathology-edge-lab.ykh13571.chatgpt.site/)는 같은 위치의 **A(겹침 없음) / B(겹침·결합)** 영상으로 시작합니다. 영상 중심 작업대를 유지하고, 처음 보는 사람에게 필요한 조작을 앞에 배치했습니다. 현재 버전 16에는 [H&E 기반 색상 체계](UI_COLOR_SYSTEM.md)를 경계 비교·WSI·IHC에 공통 적용했습니다.
 
 ## 먼저 눌러 볼 순서
 
@@ -27,9 +27,9 @@
 
 상세 도구의 표시 설정은 메뉴 폭에 맞춰 줄바꿈합니다. `Esc`, 바깥 클릭 또는 기능 선택으로 메뉴를 닫습니다. 결과 패널은 사용자가 열며 사례 버튼을 처음 눌렀을 때 자동으로 영상을 좁히지 않습니다. WSI와 IHC의 별도 분석 흐름은 그대로 유지합니다.
 
-## 변경 전후와 검증
+## 화면 흐름 변경·검증 기록 (버전 15)
 
-- [이전 사례 화면(버전 14)](../artifacts/ui-progressive/improved.png) → [현재 사례 화면](../artifacts/ui-case-context/simple-improved.png)
+- [이전 사례 화면(버전 14)](../artifacts/ui-progressive/improved.png) → [버전 15 사례 화면](../artifacts/ui-case-context/simple-improved.png)
 - [변경 강조 켬](../artifacts/ui-case-context/context-highlight-on.png) / [끔](../artifacts/ui-case-context/context-highlight-off.png) · [악화 사례](../artifacts/ui-case-context/simple-worsened.png)
 - [상세 도구: 데스크톱](../artifacts/ui-case-context/context-menu-1440.png) / [작은 화면](../artifacts/ui-case-context/context-menu-375.png) · [작은 화면의 사례](../artifacts/ui-case-context/simple-375.png)
 - UI 코드 [`71ba59f`](https://github.com/sokldjs554/pathology-edge/commit/71ba59faabef9c633cc117f30463449dd4c5a607), Sites 버전 15 / 소스 `51a503b1ae4e3474cdd5305d95b5f52797b406ea`.

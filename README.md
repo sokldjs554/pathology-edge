@@ -17,11 +17,11 @@
 2. **[WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)**: 전체 슬라이드 확대 → R1–R3 선택 → 해당 ROI의 예측 차이 확인. 전체 슬라이드 탐색과 일부 ROI의 분석을 구분합니다.
 3. **[IHC 세포 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html)**: 예제와 세포 선택 → 정답·예측 클래스 비교. 이 공개 화면은 정답 중심 좌표가 주어진 분류 실험입니다.
 
-![A/B 2분할로 시작하고 실제 경계 사례를 바로 선택하는 작업대](artifacts/ui-progressive/entry.png)
+![A/B 2분할로 시작하고 실제 경계 사례를 바로 선택하는 작업대](artifacts/ui-stain-theme/simple-entry.png)
 
-[원본·정답 포함 4분할](artifacts/ui-progressive/four.png) · [영상과 후보 데이터 연결](artifacts/ui-progressive/candidate-data.png)
+[원본·정답 포함 4분할](artifacts/ui-stain-theme/readability-four.png) · [영상과 후보 데이터 연결](artifacts/ui-stain-theme/studio-data-laptop.png)
 
-[WSI 전체 탐색 화면](artifacts/ui/wsi/wsi-overview.png) · [악화 사례](artifacts/ui/interview/after-worsened.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md)
+[WSI 전체 탐색 화면](artifacts/ui-stain-theme/wsi-overview.png) · [악화 사례](artifacts/ui-stain-theme/simple-worsened.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md) · [H&E 색상 체계](docs/UI_COLOR_SYSTEM.md)
 
 ## 직접 담당한 범위
 
