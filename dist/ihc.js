@@ -517,7 +517,7 @@
       setPhase('ready');
       text(
         'status',
-        `${example.case_id} · ${kind === 'incorrect' ? '실패' : '정답'} 사례 ${filteredExamples().findIndex((entry) => entry.id === example.id) + 1}/${filteredExamples().length} · 저장 결과 열람`,
+        `${example.case_id} · ${kind === 'incorrect' ? '실패' : '맞게 분류한'} 사례 ${filteredExamples().findIndex((entry) => entry.id === example.id) + 1}/${filteredExamples().length} · 저장 결과 열람`,
       );
       const url = new URL(location.href);
       url.searchParams.set('example', example.id);
