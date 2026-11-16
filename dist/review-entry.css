@@ -122,14 +122,14 @@ body.studio-tnbc.progressive #caseMore select{margin-top:8px}
 
 /* Reading-first workspace: explanation beside, actual comparison in the center. */
 body.studio-tnbc.progressive.stain-theme .viewer-workspace{display:grid;grid-template-columns:238px minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
-body.studio-tnbc.progressive.stain-theme .review-guide{grid-column:1;grid-row:1/4;padding:22px 18px;overflow-y:auto;z-index:2;border-right:1px solid var(--line)}
+body.studio-tnbc.progressive.stain-theme .review-guide{grid-column:1;grid-row:1/4;padding:14px 18px;overflow-y:auto;position:relative;z-index:2;border-right:1px solid var(--line)}
 body.studio-tnbc.progressive.stain-theme .review-guide .workspace-title{display:block!important;margin:0 0 14px!important}
-body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:23px;line-height:1.45;letter-spacing:-.6px;margin:12px 0;color:var(--ink)}
-body.studio-tnbc.progressive.stain-theme .review-guide .workflow{display:block!important;font-size:14px;line-height:1.7;margin:0;color:var(--muted)}
-body.studio-tnbc.progressive.stain-theme .method-explainer{padding:10px 0 16px;border-bottom:1px solid var(--line);color:var(--accent)}
-.method-explainer svg{display:block;width:100%;max-height:82px}
+body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:21px;line-height:1.4;letter-spacing:-.6px;margin:7px 0;white-space:pre-line;color:var(--ink)}
+body.studio-tnbc.progressive.stain-theme .review-guide .workflow{display:block!important;font-size:13px;line-height:1.65;margin:0;color:var(--muted)}
+body.studio-tnbc.progressive.stain-theme .method-explainer{padding:4px 0 10px;border-bottom:1px solid var(--line);color:var(--accent)}
+.method-explainer svg{display:block;width:100%;max-height:66px}
 .method-explainer p{font-size:12px;line-height:1.7;margin:7px 0 0;color:var(--muted)}
-body.studio-tnbc.progressive.stain-theme .review-command{display:flex;flex-direction:column;align-items:stretch;gap:12px;margin-top:18px}
+body.studio-tnbc.progressive.stain-theme .review-command{display:flex;flex-direction:column;align-items:stretch;gap:9px;margin-top:12px}
 .guide-step,.mask-reading>summary{font-size:13px;font-weight:600;color:var(--ink)}
 body.studio-tnbc.progressive.stain-theme .guide-actions{display:flex;flex-direction:column;gap:7px}
 body.studio-tnbc.progressive.stain-theme .guide-actions button{min-height:40px;text-align:left;padding:9px 12px}
@@ -137,7 +137,7 @@ body.studio-tnbc.progressive.stain-theme .guide-actions #showWorsened{border:1px
 body.studio-tnbc.progressive.stain-theme .guide-actions button[aria-pressed=true]{box-shadow:inset 3px 0 currentColor}
 body.studio-tnbc.progressive.stain-theme .sample-control{display:flex;flex-direction:column;align-items:stretch;gap:7px;margin-top:4px}
 body.studio-tnbc.progressive.stain-theme #sample{width:100%;min-height:36px}
-.mask-reading{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+.mask-reading{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
 .mask-reading[hidden]{display:none}
 .mask-reading>summary{cursor:pointer;line-height:1.5}
 .mask-triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:12px}
@@ -151,7 +151,7 @@ body.studio-tnbc.progressive.stain-theme .viewer-controls{grid-column:2;grid-row
 .prediction-legend i{display:inline-block;width:15px;height:4px;background:#ffe066;box-shadow:0 0 0 1px #a98532;margin-right:7px;vertical-align:middle}
 body.studio-tnbc.progressive.stain-theme .zoom-tools{margin-left:auto}
 body.studio-tnbc.progressive.stain-theme .stage{grid-column:2;grid-row:2;min-height:0;min-width:0;border:0}
-body.studio-tnbc.progressive.stain-theme .review-outcome{grid-column:2;grid-row:3;padding:12px 16px;gap:6px 12px;align-content:center;min-height:96px}
+body.studio-tnbc.progressive.stain-theme .review-outcome{grid-column:2;grid-row:3;position:relative;padding:12px 16px;gap:6px 12px;align-content:center;min-height:96px}
 body.studio-tnbc.progressive.stain-theme .review-outcome #outcomeLabel{font-size:14px}
 body.studio-tnbc.progressive.stain-theme .review-outcome #outcomePixels{font-size:13px}
 body.studio-tnbc.progressive.stain-theme .case-display{gap:4px 12px}
@@ -201,9 +201,9 @@ body.studio-tnbc.progressive.stain-theme[data-comparison=four] .pane{grid-templa
 body.studio-tnbc.progressive.stain-theme[data-comparison=four] .method-header{padding:3px 10px}
 body.studio-tnbc.progressive.stain-theme[data-comparison=four] .method-header strong{font-size:13px}
 @media(max-width:1199px) and (min-width:761px){
- body.studio-tnbc.progressive.stain-theme .viewer-workspace{grid-template-columns:208px minmax(0,1fr)}
+ body.studio-tnbc.progressive.stain-theme .viewer-workspace{grid-template-columns:180px minmax(0,1fr)}
  body.studio-tnbc.progressive.stain-theme .review-guide{padding:16px 12px}
- body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:21px}
+ body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:19px}
  body.studio-tnbc.progressive.stain-theme .prediction-legend{flex-basis:100%}
  body.studio-tnbc.progressive.stain-theme .viewer-controls{gap:4px 10px}
  body.studio-tnbc.progressive.stain-theme .pane-expand{font-size:11px}
@@ -212,11 +212,11 @@ body.studio-tnbc.progressive.stain-theme[data-comparison=four] .method-header st
 @media(max-width:760px){
  body.studio-tnbc.progressive.stain-theme .viewer-workspace,
  body.studio-tnbc.progressive.stain-theme #workbench:not(.inspector-hidden) .viewer-workspace{display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden}
- body.studio-tnbc.progressive.stain-theme .review-guide{padding:12px;overflow:visible;border:0;flex-shrink:0}
+ body.studio-tnbc.progressive.stain-theme .review-guide{padding:8px 12px;overflow:visible;border:0;flex-shrink:0}
  body.studio-tnbc.progressive.stain-theme .review-guide .workspace-title{margin-bottom:8px!important}
  body.studio-tnbc.progressive.stain-theme .workspace-title .eyebrow,body.studio-tnbc.progressive.stain-theme .method-explainer,body.studio-tnbc.progressive.stain-theme .guide-limit,body.studio-tnbc.progressive.stain-theme .guide-step{display:none}
- body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:18px;margin:0 0 6px}
- body.studio-tnbc.progressive.stain-theme .review-guide .workflow{font-size:13px;line-height:1.5}
+ body.studio-tnbc.progressive.stain-theme .workspace-title h1{font-size:17px;margin:0 0 4px;white-space:normal}
+ body.studio-tnbc.progressive.stain-theme .review-guide .workflow{font-size:12px;line-height:1.5}
  body.studio-tnbc.progressive.stain-theme .review-command{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:10px 0 0}
  body.studio-tnbc.progressive.stain-theme .guide-actions{flex-direction:row;gap:8px;flex:1 1 100%}
  body.studio-tnbc.progressive.stain-theme .guide-actions button{min-height:36px;font-size:13px;padding:7px 10px}
@@ -238,3 +238,8 @@ body.studio-tnbc.progressive.stain-theme[data-comparison=four] .method-header st
  body.studio-tnbc.progressive.stain-theme .method-header .pane-expand{font-size:12px}
  body.studio-tnbc.progressive.stain-theme .case-display-note{display:none}
 }
+
+body.studio-tnbc.progressive.stain-theme .mask-reading p{display:block}
+
+body.studio-tnbc.progressive.stain-theme .review-guide>.sr-only,body.studio-tnbc.progressive.stain-theme .review-outcome>.sr-only{top:0;left:0}
+body.studio-tnbc.progressive.stain-theme .method-header #beforeMeta,body.studio-tnbc.progressive.stain-theme .method-header #afterMeta{display:block}

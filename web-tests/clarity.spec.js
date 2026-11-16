@@ -23,6 +23,7 @@ test('entry immediately explains the method and shows a labeled actual differenc
  await expect(page.locator('#before')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
  const sidebar=await page.locator('.review-guide').boundingBox(), image=await page.locator('#before').boundingBox();
  expect(sidebar.x+sidebar.width).toBeLessThanOrEqual(image.x);expect(image.height).toBeGreaterThan(440);
+ expect((await page.locator('#maskReading p').boundingBox()).y+(await page.locator('#maskReading p').boundingBox()).height).toBeLessThan(744);
  expect(await page.locator('#maskBefore').evaluate(c=>c.toDataURL())).not.toEqual(await page.locator('#maskAfter').evaluate(c=>c.toDataURL()));
  await page.screenshot({path:'captures/clarity-first.png',fullPage:true});
  await page.locator('#showWorsened').click();
@@ -84,7 +85,22 @@ test('explicit sample and case links are preserved and selecting another image c
 for(const width of [375,1024])test(`first comparison and masks remain available at ${width}`,async({page})=>{
  await page.setViewportSize({width,height:844});await entry(page);
  await expect(page.locator('#showWorsened')).toBeVisible();await expect(page.locator('#after')).toBeVisible();
- const masks=page.locator('#maskReading');if(width<760){await expect(masks).not.toHaveAttribute('open','');await masks.locator('summary').click();await expect(page.locator('#maskTruth')).toBeVisible();await masks.locator('summary').click();}
+ const masks=page.locator('#maskReading');if(width<760){await expect(masks).not.toHaveAttribute('open','');await masks.locator('summary').click();await expect(page.locator('#maskTruth')).toBeVisible();await expect(masks.locator('p')).toBeVisible();await expect(masks.locator('p')).toContainText('경계 띠');await masks.locator('summary').click();}
  await page.locator('#after').scrollIntoViewIfNeeded();await page.screenshot({path:`captures/clarity-${width}.png`,fullPage:true});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+});
+
+for(const choice of ['compareFour','toggleDock'])test(`later ${choice} wins over automatic entry while images load`,async({page})=>{
+ const sample=results.samples.find(s=>s.id===selected.sample_id);
+ let release,paused=false;const gate=new Promise(r=>release=r);
+ await page.route('**/'+sample.methods.overlap.overlay,async route=>{paused=true;await gate;await route.continue();});
+ try{
+  await page.goto('/',{waitUntil:'domcontentloaded'});await expect.poll(()=>paused).toBe(true);
+  await page.locator('#detailTools summary').click();await page.locator('#'+choice).click();
+  await expect(page.locator('body')).toHaveAttribute(choice==='compareFour'?'data-comparison':'data-layout',choice==='compareFour'?'four':'data');
+ }finally{release();}
+ await expect(page.locator('body')).toHaveAttribute('data-phase','ready');
+ await expect(page.locator('body')).toHaveAttribute(choice==='compareFour'?'data-comparison':'data-layout',choice==='compareFour'?'four':'data');
+ await expect(page.locator(choice==='compareFour'?'#referenceTruth':'#candidateDock')).toBeVisible();
+ await expect(page.locator('#after')).not.toHaveAttribute('data-case',/./);
 });

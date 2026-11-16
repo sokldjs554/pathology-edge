@@ -2,6 +2,7 @@
 // Three review layouts, backed exclusively by the existing saved image/results.
 window.Studio = {
   layout: 'compare',
+  viewRevision: 0,
   comparison: 'two',
   updateViewState() {
     $('viewState').textContent = this.layout === 'image' ? 'B 결과 탐색 중' : this.layout === 'data' ? '후보 데이터 · B 결과' : innerWidth <= 760 ? 'A/B 버튼으로 같은 위치 전환' : this.comparison === 'four' ? 'A/B · 원본 · 정답 비교' : 'A/B 경계 비교 중';
@@ -32,9 +33,10 @@ window.Studio = {
   setLayout(layout) {
     if (!['image', 'compare', 'data'].includes(layout)) return;
     if (layout !== 'compare') Review.intent++;
+    this.viewRevision++;
     this.layout = layout;
     document.body.dataset.layout = layout;
-    $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'나눠 본 영상, 핵 예측도 같을까요?',data:'영상과 후보 데이터 연결'}[layout];
+    $('workspaceName').textContent = {image:'병리 영상 작업대 · B 결과 탐색',compare:'나눠 본 영상,\n핵 예측도 같을까요?',data:'영상과 후보 데이터 연결'}[layout];
     this.updateViewState();
     window.ReviewEntry?.refresh();
     this.updateFilmstrip();

@@ -528,9 +528,9 @@ function updatePanels() {
       ? '동일 겹침 추론 · 성분 경로'
       : scopeNames[state.scope];
   $('mobileBefore').textContent =
-    state.mode === 'merge' ? 'A 병합 전' : 'A 무겹침';
+    state.mode === 'merge' ? 'A 병합 전' : 'A 겹치지 않게';
   $('mobileAfter').textContent =
-    state.mode === 'merge' ? 'B 병합 후' : 'B 겹침 처리';
+    state.mode === 'merge' ? 'B 병합 후' : 'B 겹쳐서';
   $('objectSource').options[1].text =
     state.mode === 'merge' ? 'A · 병합 전 raw' : 'A · 무겹침';
   $('jumpDuplicate').disabled = !b.suppressed.length;
@@ -804,6 +804,7 @@ function resetNumbers() {
 }
 async function loadSample(id, initialCase = null) {
   if (!state.data) return;
+  const initialViewRevision = window.Studio?.viewRevision;
   const candidate = state.data.samples.find((s) => s.id === id);
   if (!candidate) return;
   state.controller?.abort();
@@ -887,7 +888,7 @@ async function loadSample(id, initialCase = null) {
       '',
       `${location.pathname}?sample=${encodeURIComponent(id)}`,
     );
-    if (initialCase) await Review.open(initialCase, { immediate: true });
+    if (initialCase && initialViewRevision === window.Studio?.viewRevision) await Review.open(initialCase, { immediate: true });
     else requestAnimationFrame(() => { fit(); window.Studio?.startView(); });
   } catch (error) {
     if (ticket !== state.request) return;
