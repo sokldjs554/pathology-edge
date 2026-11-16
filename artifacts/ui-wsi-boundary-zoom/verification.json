@@ -1,0 +1,44 @@
+{
+  "site_version": 27,
+  "ui_commit": "81bf9e3c65b9fe89fdae296225b96c9cd3428e8e",
+  "site_commit": "d27412a8fe2f4f7df3ea6d36ef79e2c9d1600b86",
+  "source_run": 43889874919,
+  "public_run": 43891195353,
+  "node_passed": 21,
+  "new_inference": false,
+  "user_checked_this_revision": false,
+  "reports": {
+    "source-chromium": {
+      "startTime": "2026-11-16T14:51:14.885Z",
+      "duration": 160153.114,
+      "expected": 88,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "source-webkit": {
+      "startTime": "2026-11-16T14:50:45.764Z",
+      "duration": 272722.245,
+      "expected": 88,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "public-chromium": {
+      "startTime": "2026-11-16T14:58:25.704Z",
+      "duration": 37968.265999999996,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "public-webkit": {
+      "startTime": "2026-11-16T14:58:11.582Z",
+      "duration": 52739.359,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  }
+}

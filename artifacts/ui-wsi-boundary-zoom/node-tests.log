@@ -1,0 +1,29 @@
+✔ both case buttons navigate within the selected image instead of global recommendations (11.351117ms)
+✔ a missing saved direction disables its button and never navigates to another image (9.92986ms)
+✔ cursor anchor remains the same source pixel through zoom (1.689627ms)
+✔ slightly zoomed views can move along an axis that still fits the image (0.377349ms)
+✔ panning stays recoverable at image edges and bounds remain valid (0.353383ms)
+✔ fit shows the complete source with padding and round-trips image coordinates (0.359933ms)
+✔ selection radius stays fixed in screen pixels; visible filtering keeps original indexes (3.072132ms)
+✔ fractional CSS canvas sizes use the same logical size as the backing pixels (1.389775ms)
+✔ native-size rendering aligns image edges to pixels in an odd-sized canvas (0.269446ms)
+✔ candidate rows preserve indexes and references in the saved export (1.44624ms)
+✔ exact candidate ID query cannot silently select another row (1.845031ms)
+✔ viewport and boundary filters retain the source index together (0.880177ms)
+✔ empty inputs and blank search are valid without modifying source (0.710831ms)
+✔ source-image crop includes the selected box and clips at image edges (0.289246ms)
+✔ large candidate and small image crops remain inside original image (0.798604ms)
+✔ viewport upper bounds match the existing viewer half-open filter (0.403307ms)
+✔ WSI automatic boundary fit does not enlarge source pixels and retains its target (3.949865ms)
+✔ WSI small viewport fit preserves context without forcing enlargement (3.489841ms)
+✔ WSI large display ROI fit stays at native scale (1.610988ms)
+✔ WSI explicit boundary inspection enlarges to 3x with context and keeps its center (1.308963ms)
+✔ WSI narrow boundary inspection fits context instead of forcing 3x (1.269194ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 222.079701
