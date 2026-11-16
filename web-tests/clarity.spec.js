@@ -9,6 +9,7 @@ async function entry(page){await page.goto('/');await expect(page.locator('#afte
 test('entry immediately explains the method and shows a labeled actual difference',async({page})=>{
  await page.setViewportSize({width:1366,height:768});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await entry(page);
+ for(const selector of ['.app-header','.brand','.experiment-nav']){const b=await page.locator(selector).boundingBox();expect(b.y,selector).toBeGreaterThanOrEqual(0);expect(b.y+b.height,selector).toBeLessThanOrEqual(54);}
  await expect(page.locator('#workspaceName')).toHaveText('나눠 본 영상, 핵 예측도 같을까요?');
  await expect(page.locator('.workflow')).toContainText('경계에 걸린 핵');
  await expect(page.locator('#beforeTitle')).toHaveText('겹치지 않게 잘라 분석');

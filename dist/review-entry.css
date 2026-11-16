@@ -222,7 +222,7 @@ body.studio-tnbc.progressive.stain-theme[data-comparison=four] .method-header st
  body.studio-tnbc.progressive.stain-theme .guide-actions button{min-height:36px;font-size:13px;padding:7px 10px}
  body.studio-tnbc.progressive.stain-theme .sample-control{flex-direction:row;align-items:center;margin:0;gap:8px;font-size:12px}
  body.studio-tnbc.progressive.stain-theme #sample{width:138px;min-height:32px}
- body.studio-tnbc.progressive.stain-theme .viewer-controls{padding:8px 12px;gap:5px 8px;flex-shrink:0}
+ body.studio-tnbc.progressive.stain-theme .viewer-controls{padding:5px 12px;gap:5px 8px;flex-shrink:0}
  body.studio-tnbc.progressive.stain-theme .prediction-legend{flex-basis:100%;font-size:12px}
  body.studio-tnbc.progressive.stain-theme .zoom-tools{margin-left:0}
  body.studio-tnbc.progressive.stain-theme .detail-tools{margin-left:auto}
