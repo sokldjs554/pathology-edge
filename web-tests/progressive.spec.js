@@ -94,10 +94,12 @@ test('tablet candidate details share a column without shrinking the image',async
 
 
 test('case loading preserves a later four-pane choice',async({page})=>{
+ // The same PNG is a startup thumbnail. Let initial page load finish before
+ // gating the later case request, or WebKit's load event can wait on our gate.
+ await ready(page);
  let release;
  const gate=new Promise(resolve=>{release=resolve;});
  await page.route('**/assets/10_3.png',async route=>{await gate;await route.continue();});
- await ready(page);
  try {
   await page.locator('#showWorsened').click();
   await expect(page.locator('body')).toHaveAttribute('data-phase','loading');
