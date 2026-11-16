@@ -1,0 +1,319 @@
+{
+  "verified_utc": "2026-11-16T08:48:40.772004+00:00",
+  "repo": "https://github.com/sokldjs554/pathology-edge",
+  "branch": "feat/linked-pathology-workbench",
+  "baseline_commit": "136ebefe6c9ec89aa3131eacb2124eb3626445ab",
+  "github_ui_commit": "d8d42635345876bf870959515e5d9f989ddd4450",
+  "publication": {
+    "url": "https://pathology-edge-lab.ykh13571.chatgpt.site/",
+    "version": 22,
+    "site_source_commit": "c92fd2c3769aee268c0f7a257a5e8bfacfcfcca9",
+    "deployment_id": "appgdep_6afac0c7ee8c81919bfc6981ce3bdaeb",
+    "status": "succeeded",
+    "public_browser_access_verified": true
+  },
+  "browser_reports": {
+    "checkout-chromium": {
+      "run_id": 43831993467,
+      "artifact_id": 14208464998,
+      "report": "checkout-chromium-report.json",
+      "report_sha256": "3a01e9ec30ead94e741c31b29c8de2f4f832220cc535145387aa797f13cc6933",
+      "stats": {
+        "startTime": "2026-11-16T08:33:19.684Z",
+        "duration": 131655.764,
+        "expected": 81,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "checkout-webkit": {
+      "run_id": 43831993467,
+      "artifact_id": 14209455939,
+      "report": "checkout-webkit-report.json",
+      "report_sha256": "6091454a63b013af1cd8d4116594a9ff6b371d6f519a49651073d6b1f1c88de5",
+      "stats": {
+        "startTime": "2026-11-16T08:33:32.235Z",
+        "duration": 191681.00400000002,
+        "expected": 81,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-chromium": {
+      "run_id": 43832804523,
+      "artifact_id": 14208859967,
+      "report": "production-chromium-report.json",
+      "report_sha256": "11f882caa92d54317bf0a9eac1cd9d34160bf2277ae513deae5ad2724ea7669d",
+      "stats": {
+        "startTime": "2026-11-16T08:38:57.575Z",
+        "duration": 207223.37,
+        "expected": 81,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-webkit": {
+      "run_id": 43832804523,
+      "artifact_id": 14209377713,
+      "report": "production-webkit-report.json",
+      "report_sha256": "f5a422c2f28b7c57080f35ebe47d58d3f6fdeb369e0fac60c39b43c1f3899db0",
+      "stats": {
+        "startTime": "2026-11-16T08:40:01.809Z",
+        "duration": 232723.065,
+        "expected": 81,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  },
+  "other_checks": {
+    "cpu_workflow_run_id": 43832001679,
+    "pytest_passed": 462,
+    "node_passed": 16,
+    "saved_dice_values_matched": 42,
+    "saved_dice_means_matched": 6,
+    "static_demo_check": true
+  },
+  "source_parity": {
+    "report": "deployment-parity.json",
+    "site_source_dist_files_matched": 2197,
+    "public_http_files_matched": 18,
+    "changed_dist_files": [
+      "dist/ihc.html",
+      "dist/ihc.js",
+      "dist/secondary-review.css",
+      "dist/wsi.html",
+      "dist/wsi.js"
+    ],
+    "tnbc_files_shared_styles_images_masks_models_json_unchanged": true
+  },
+  "coverage": [
+    "TNBC same-image improvement/regression, A/B predictions, GT masks and selected-region scores",
+    "WSI whole slide, R1-R3, A/B same saved coordinate, real candidate and source patch correspondence",
+    "WSI panel changes preserve level-0 center and native zoom; retry resets stale ROI labels",
+    "IHC 16 saved cases: source/crop/GT coordinates, four class scores, class and aggregate metrics, confusion matrix and splits",
+    "Desktop 1440x1000, notebook 1024x768, mobile 375x667, existing 390px flow",
+    "Document bounds with expanded details; loading, empty, error, missing image and retry states"
+  ],
+  "independent_review": {
+    "reviewer": "secondary_ui_review",
+    "confirmed_finding": "WSI saved-boundary jump camera restoration ordering",
+    "finding_fixed": true,
+    "regression_check": "both panes reach actual stored boundary coordinate",
+    "deferred_confirmed_findings": []
+  },
+  "captures": [
+    {
+      "file": "before-secondary-ihc-first-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "6c9a28a89e8296a56c642f5ffeef8015f527f89cccc77562e4948c14ae0c050b",
+      "origin": "baseline source checkout CI 43827884617"
+    },
+    {
+      "file": "before-secondary-ihc-first-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "5ffeb2580551186d7683f659a11dc36c0497ab8c9af1fa4e675d93ba51afcd13",
+      "origin": "baseline source checkout CI 43827884617"
+    },
+    {
+      "file": "before-secondary-ihc-first-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "8f435ca8dc3e3ab05a8f8f6d3a0537a71efeeb46a8a357f90b15a4ee592e7e6c",
+      "origin": "baseline source checkout CI 43827884617"
+    },
+    {
+      "file": "before-secondary-wsi-first-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "3e1c9603e69e9d5b896d2c58c1b02ec1a6dafa4d3fe12aa70bbec48151529de2",
+      "origin": "baseline source checkout CI 43827884617"
+    },
+    {
+      "file": "before-secondary-wsi-first-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "aef1bcb334b42aa2d505c6fdbdee9523d284834d5d114ea22520f6275f825162",
+      "origin": "baseline source checkout CI 43827884617"
+    },
+    {
+      "file": "before-secondary-wsi-first-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "2f352fce697ee5f08f128164a5d28ef67888ccb00172ee0d30045c4b5013644d",
+      "origin": "baseline source checkout CI 43827884617"
+    },
+    {
+      "file": "clarity-first.png",
+      "width": 1366,
+      "height": 768,
+      "sha256": "c047d42a4f6d7dd2c42c7e59fbcb71fb2a3ccbc623b37bb557a702e6d46bce4d",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "same-image-improved-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "b5b312e4fe690e125ae007526eb187247a0da4f5a167ec647f4b7302f9427b3a",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "same-image-worsened-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "c788d88cb2b09b521bf945d1182ae4c88383099875007d1b73a43c284e7c541f",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-correct-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "91d6ed1843e4b8a69dfaa9fe4001995c677c32e704eb2abeedb8bc4a164052d1",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-correct-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "990264a5a257578f1e6f7609878d6b920d93ece3492b386fb48cc60985816a20",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-correct-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "e56a866a5d2f61fb8affb0825d0dc7ce1742b05eaf1f7ac4bf2bc783a7f71e0d",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-first-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "6d0343dd0b7b9c328a782cfc7bdf289f15b522b70e4f38f444f3750da555b160",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-first-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "02ee334315d56f1856ff87c2565c9ea4054b2e89eb42a6e48b4c0c7baebb95e8",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-first-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "8b2237e4cad5cef72cc04017510e453bb9d8052d57f934d28b95dc7755c7015c",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-results-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "e435d358a91981604a15b4aaf86e3b702b68ecbdb2f65311ed17b7f98ba6b572",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-results-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "207b633f00c5aee6d195571380d298c3ebdbec7d3853a4558fe0e243229d56f5",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-ihc-results-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "a9a6ea0baa515e6e487ce5d2bb1cff58c2cfa02fd0ceaccbd95841edba201ea2",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-compare-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "b07fa31f96977722309294f390935d5992c7e8ba0fddab197749b9a4adeaf316",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-compare-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "7184699c7bcd5be0970c682963da3f050c67c2bd9d8d17f1096e5bce73352297",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-compare-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "3ccf91ebc2e694c9c587e9650bac632ee1bd820f5cc7f9c2898238c0e7b1c2c3",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-first-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "6fc96ebaf7aa66457cb4fc657937ce311ef880d3814b05f9143a35009066a552",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-first-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "7e0cf7fcfe38061e7779a3ab2f2dc4aa97c02b368740a8e4613b1f879cd5b222",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-first-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "74d0e33f595535c062e23cd405ec3753cb43c3588a642ebc5d2043f06cf9e83b",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-review-1024.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "7a24c5c01f16452151b63a41e99b5b32a38cc1fbb99743d341ae86f93bc0ddba",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-review-1440.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "9f19114f61b98fe21a5675b91f7289d8d62f1974a7d770d7eef1ec57180de1b2",
+      "origin": "public version 22 Chromium CI 43832804523"
+    },
+    {
+      "file": "secondary-wsi-review-375.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "be62d0cd1ce95e5b5442587c83f50ee78d417afcfd321b819049b4864eb1c70b",
+      "origin": "public version 22 Chromium CI 43832804523"
+    }
+  ],
+  "before_public_captures": {
+    "version": 20,
+    "directory": "../ui-navigation",
+    "files": [
+      "navigation-studio-wsi.png",
+      "navigation-studio-ihc.png",
+      "clarity-first.png"
+    ]
+  },
+  "intermediate_reports": "baseline-, first-, second-, and bounds-checkout reports retain earlier failures; final status is in checkout- and production- reports above.",
+  "user_verified_this_revision": false,
+  "new_dataset_training_run": false,
+  "new_dataset_inference_experiment_run": false,
+  "unit_tests_may_run_synthetic_model_operations": true,
+  "scope_limits": [
+    "WSI has no nuclear ground truth; displayed changes are not evidence of improved accuracy.",
+    "IHC uses supplied ground-truth centers; this is not automatic cell detection.",
+    "Existing stored results and experimental conditions preserved."
+  ]
+}
