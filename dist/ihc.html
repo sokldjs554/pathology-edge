@@ -75,7 +75,7 @@
             <button id="filterWrong" aria-pressed="true" disabled>
               실패 사례</button
             ><button id="filterCorrect" aria-pressed="false" disabled>
-              정답 사례
+              맞게 분류한 사례
             </button>
           </div>
           <label class="select-label"
@@ -88,9 +88,11 @@
             <button id="prevExample" aria-label="이전 사례" disabled>‹</button
             ><button id="nextExample" aria-label="다음 사례" disabled>›</button>
           </div>
-          <label class="marker-toggle"
-            ><input id="showPoint" type="checkbox" checked disabled />정답
-            중심·crop</label
+          <label
+            class="marker-toggle"
+            title="주석된 정답 중심점과 표시용 48×48px crop 범위를 표시합니다. 세포 경계나 자동 검출 결과가 아닙니다."
+            ><input id="showPoint" type="checkbox" checked disabled
+              aria-describedby="markerHelp" />세포 위치·확대 영역</label
           >
         </div>
         <div id="imageStage" class="image-stage">
@@ -322,9 +324,10 @@
                 >
                 · 비상업 연구·교육
               </p>
-              <p class="small-note">
-                원영상의 실제 픽셀과 48px crop입니다. 화면에 정답 중심·crop
-                범위만 덧씌웁니다. 전체 원영상 ZIP은 배포하지 않습니다.
+              <p id="markerHelp" class="small-note">
+                ‘세포 위치’는 주석된 정답 중심점이며, ‘확대 영역’은 원영상에서
+                잘라 보여주는 48×48px crop 범위입니다. 세포 경계나 자동 검출
+                결과가 아닙니다. 전체 원영상 ZIP은 배포하지 않습니다.
               </p>
               <div class="source-links">
                 <a href="ihc/results.json" download
