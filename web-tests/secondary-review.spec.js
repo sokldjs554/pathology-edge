@@ -48,6 +48,7 @@ for (const [width, height] of [
     await page.waitForFunction(() => WSI.viewers.B.getFullyLoaded());
     await shot(page, `wsi-first-${width}`);
     await expect(page.locator('#inspector')).toBeHidden();
+    await expect(page.locator('.mobile-switch')).toBeHidden();
     await expect(page.locator('#showMask')).toBeHidden();
     await expect(page.locator('#scopeNote')).toBeVisible();
     await expect(page.locator('#scopeNote')).toContainText('핵 정답 없음');

@@ -2,6 +2,9 @@
 body.studio-wsi .workspace {
   grid-template-rows: auto auto minmax(0, 1fr) 26px;
 }
+body.studio-wsi .workspace:has(.panes.explore) .mobile-switch {
+  display: none;
+}
 body.studio-wsi .toolbar {
   flex-wrap: wrap;
   overflow: visible;
@@ -280,6 +283,9 @@ body.studio-ihc .position-bar > span:last-child {
 @media (max-width: 760px) {
   body.studio-wsi .workspace {
     grid-template-rows: auto auto auto minmax(0, 1fr) 26px;
+  }
+  body.studio-wsi .workspace:has(.panes.explore) {
+    grid-template-rows: auto auto minmax(0, 1fr) 26px;
   }
   body.studio-wsi .toolbar {
     gap: 6px;
