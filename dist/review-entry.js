@@ -12,7 +12,7 @@ window.ReviewEntry = {
     document.querySelector('.method-explainer').hidden = merge || layout !== 'compare';
     document.querySelector('.guide-step').textContent = merge ? '패치 경계 비교로 돌아가기' : '1. 정답과 대조한 실제 사례';
     $('caseDisplay').classList.toggle('highlight-on', $('caseHighlight').checked);
-    $('predictionLegend').textContent = state.mode === 'merge' ? '분홍: 억제 후보 · 파랑: 유지 후보 · 동일한 겹침 추론' : !$('segmentation').checked || Number($('opacity').value) === 0 ? '핵 예측 표시 꺼짐 · 상세 도구에서 분할 표시' : `노랑: 각 방식의 핵 예측${c ? ' · 흰 상자: 같은 위치' : ''}`;
+    $('predictionLegend').textContent = state.mode === 'merge' ? '분홍: 억제 후보 · 파랑: 유지 후보 · 동일한 겹침 추론' : !$('segmentation').checked || Number($('opacity').value) === 0 ? '핵 예측 표시 꺼짐 · 상세 도구에서 분할 표시' : `${state.mode === 'boundary' ? '노란 윤곽' : '노랑'} = 핵 예측${$('grid').checked ? ' · 점선 = 비교 기준 경계' : ''}`;
     const key = [state.phase, state.sample?.id, state.mode, layout, Studio.comparison, c?.id].join('/');
     if (key === this.lastKey) return;
     this.lastKey = key;
