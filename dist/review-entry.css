@@ -30,9 +30,12 @@ body.studio-tnbc.progressive .menu-section:last-child{border:0}
 body.studio-tnbc.progressive .menu-section h2{font-size:13px;font-weight:600;margin:0 0 10px;color:#77684f}
 body.studio-tnbc.progressive .menu-buttons{display:flex;flex-wrap:wrap;gap:6px}
 body.studio-tnbc.progressive .menu-buttons button,body.studio-tnbc.progressive .interaction-tools button{font-size:13px;min-height:34px;padding:6px 9px}
-body.studio-tnbc.progressive .layer-bar{display:flex;flex-wrap:wrap;padding:0;border:0;background:transparent;gap:10px 16px}
-body.studio-tnbc.progressive .layer-bar .opacity-control{display:flex!important;align-items:center;gap:8px;margin:4px 0 10px;width:100%;font-size:13px}
-body.studio-tnbc.progressive .layer-bar input[type=range]{flex:1;min-width:90px}
+body.studio-tnbc.progressive .layer-bar{display:flex;flex-wrap:wrap;min-width:0;padding:0;border:0;background:transparent;gap:10px 16px;overflow:visible;white-space:normal}
+body.studio-tnbc.progressive .layer-bar>label{flex:0 0 auto;max-width:100%}
+body.studio-tnbc.progressive .layer-bar .opacity-control{display:flex!important;align-items:center;flex:1 1 100%;min-width:0;gap:8px;margin:4px 0 10px;width:100%;font-size:13px}
+body.studio-tnbc.progressive .layer-bar input[type=range]{flex:1 1 0;min-width:0;width:0}
+body.studio-tnbc.progressive .layer-bar .opacity-control output{flex:0 0 4ch;width:auto}
+body.studio-tnbc.progressive .detail-menu .note{white-space:normal;overflow-wrap:anywhere}
 body.studio-tnbc.progressive .viewport-bar{display:flex;flex-direction:column;align-items:flex-start;gap:5px;white-space:normal;background:transparent;color:#776c59;border:0;margin-top:14px;padding:0;font-size:12px}
 body.studio-tnbc.progressive .viewport-bar .interaction-hint{margin:0}
 body.studio-tnbc.progressive .review-outcome{flex-shrink:0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:11px 20px;background:#e6e0d4;color:#615640;min-height:45px;font-size:13px}
@@ -41,6 +44,16 @@ body.studio-tnbc.progressive #outcomeScore.positive{color:#426754}body.studio-tn
 body.studio-tnbc.progressive #outcomePixels{color:#756b59;font-size:13px}
 body.studio-tnbc.progressive #caseEvidence,body.studio-tnbc.progressive #returnComparison{border:0;background:transparent;text-decoration:underline;text-underline-offset:3px;font-size:13px;min-height:28px;padding:0 2px;color:#69502a}
 body.studio-tnbc.progressive #returnComparison{margin-left:auto}
+body.studio-tnbc.progressive .case-display{display:flex;align-items:center;flex-wrap:wrap;gap:6px 18px;flex-basis:100%;font-size:13px;line-height:1.5}
+body.studio-tnbc.progressive .case-display[hidden]{display:none}
+body.studio-tnbc.progressive .case-display label{display:flex;align-items:center;gap:6px;min-height:30px;cursor:pointer;color:#514638}
+body.studio-tnbc.progressive .case-display input{margin:0;accent-color:#66512c;width:16px;height:16px}
+body.studio-tnbc.progressive .case-legend{display:flex;flex-wrap:wrap;gap:6px 14px}
+body.studio-tnbc.progressive .case-legend>span{display:inline-flex;align-items:center;gap:5px}
+body.studio-tnbc.progressive .change-swatch{display:inline-block;width:11px;height:11px;border:1px solid #635b5260;border-radius:2px}
+body.studio-tnbc.progressive .change-swatch.corrected{background:rgb(34,211,172)}
+body.studio-tnbc.progressive .change-swatch.regressed{background:rgb(255,69,131)}
+body.studio-tnbc.progressive .case-display-note{color:#756b59}
 body.studio-tnbc.progressive .panes{padding:12px;gap:12px}
 body.studio-tnbc.progressive .pane{border:0;grid-template-rows:38px minmax(0,1fr)}
 body.studio-tnbc.progressive .pane-caption,body.studio-tnbc.progressive .pane-count{display:none}
@@ -91,6 +104,8 @@ body.studio-tnbc.progressive #caseMore select{margin-top:8px}
  body.studio-tnbc.progressive #outcomeScore{font-size:17px}
  body.studio-tnbc.progressive #outcomePixels{font-size:11px;line-height:1.5}
  body.studio-tnbc.progressive #caseEvidence,body.studio-tnbc.progressive #returnComparison{font-size:12px;min-height:25px}
+ body.studio-tnbc.progressive .case-display{font-size:12px;gap:3px 12px}
+ body.studio-tnbc.progressive .case-display-note{flex-basis:100%}
  body.studio-tnbc.progressive .panes{padding:4px;gap:4px}
  body.studio-tnbc.progressive .pane{grid-template-rows:34px minmax(0,1fr)}
  body.studio-tnbc.progressive .stage{min-height:280px}

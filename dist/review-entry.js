@@ -10,6 +10,7 @@ window.ReviewEntry = {
     if (key === this.lastKey) return;
     this.lastKey = key;
     $('caseEvidence').hidden = !c;
+    $('caseDisplay').hidden = !c;
     $('returnComparison').hidden = layout === 'compare' && Studio.comparison === 'two' && state.mode === 'boundary';
     $('outcomeScore').textContent = '';
     $('outcomeScore').title = '';

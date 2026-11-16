@@ -109,3 +109,45 @@ test('case loading preserves a later four-pane choice',async({page})=>{
  await expect(page.locator('#referenceTruth')).toBeVisible();
  await expect(page.locator('#referenceTruth')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
 });
+
+for(const width of [375,1024,1440])test(`case overview keeps tissue context and inline controls at ${width}`,async({page})=>{
+ await page.setViewportSize({width,height:900});await ready(page);
+ await expect(page.locator('#caseDisplay')).toBeHidden();
+ for(const button of ['showImproved','showWorsened']){
+  await page.locator('#'+button).click();
+  await expect(page.locator('#after')).toHaveAttribute('data-case',button==='showImproved'?evidence.recommended.improved:evidence.recommended.worsened);
+  await expect(page.locator('#caseHighlight')).toBeVisible();
+  const zoom=Number(await page.locator('#after').getAttribute('data-zoom'));
+  expect(zoom).toBeGreaterThan(0);expect(zoom).toBeLessThanOrEqual(3);
+  const box=await page.locator('#after').boundingBox();
+  expect(Math.min(box.width,box.height)/zoom).toBeGreaterThanOrEqual(191);
+  const c=evidence.cases.find(c=>c.id===(button==='showImproved'?evidence.recommended.improved:evidence.recommended.worsened));
+  await expect(page.locator('#after')).toHaveAttribute('data-center',c.center.map(v=>v.toFixed(3)).join(','));
+  await expect(page.locator('#before')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
+  await page.locator('#zoomin').click();
+  expect(Number(await page.locator('#after').getAttribute('data-zoom'))).toBeGreaterThan(zoom);
+ }
+ await page.screenshot({path:`captures/context-case-${width}.png`,fullPage:true});
+ await page.locator('#sample').selectOption('10_2');
+ await expect(page.locator('#caseDisplay')).toBeHidden();
+});
+
+test('detail menu wraps its controls without horizontal scroll',async({page})=>{
+ for(const width of [320,375,1024,1440]){
+  await page.setViewportSize({width,height:768});await ready(page);
+  await page.locator('#detailTools summary').click();
+  await page.locator('#opacity').scrollIntoViewIfNeeded();
+  const overflow=await page.locator('.detail-menu').evaluate(menu=>{
+   const layers=menu.querySelector('.layer-bar'),slider=menu.querySelector('#opacity');
+   const inside=(outer,inner)=>{const a=outer.getBoundingClientRect(),b=inner.getBoundingClientRect();return b.left>=a.left&&b.right<=a.right;};
+   return {menu:menu.scrollWidth-menu.clientWidth,layers:layers.scrollWidth-layers.clientWidth,slider:inside(layers,slider),labels:[...layers.querySelectorAll('label')].every(el=>inside(layers,el))};
+  });
+  expect(overflow.menu).toBeLessThanOrEqual(1);expect(overflow.layers).toBeLessThanOrEqual(1);
+  expect(overflow.slider).toBe(true);expect(overflow.labels).toBe(true);
+  await expect(page.locator('#opacity')).toBeVisible();
+  await page.locator('#opacity').focus();await page.keyboard.press('ArrowRight');
+  await expect(page.locator('#opacityValue')).toHaveText('26%');
+  await page.screenshot({path:`captures/context-menu-${width}.png`,fullPage:true});
+  await page.keyboard.press('Escape');
+ }
+});

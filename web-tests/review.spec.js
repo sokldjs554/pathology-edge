@@ -101,8 +101,8 @@ test('canvas highlight colors occur at the exported corrected and regressed pixe
     );
   }
   expect(points.length).toBeGreaterThan(5);
-  const pixels = () =>
-    page.locator('#after').evaluate((canvas, points) => {
+  const pixels = (side) =>
+    page.locator('#' + side).evaluate((canvas, points) => {
       const r = canvas.getBoundingClientRect(),
         ratio = canvas.width / r.width;
       const zoom = Number(canvas.dataset.zoom),
@@ -118,18 +118,30 @@ test('canvas highlight colors occur at the exported corrected and regressed pixe
           ).data,
       ]);
     }, points);
-  await page.locator('#caseEvidence').click();
+  await expect(page.locator('#inspector')).toBeHidden();
+  await expect(page.locator('#caseDisplay')).toContainText('청록 = 개선');
+  await expect(page.locator('#caseDisplay')).toContainText('분홍 = 악화');
+  await expect(page.locator('#caseDisplay')).toContainText('양쪽에 같은 강조');
+  const score = await page.locator('#outcomeScore').textContent();
+  const counts = await page.locator('#outcomePixels').textContent();
   await page.locator('#caseHighlight').uncheck();
-  const plain = await pixels();
+  const plain = { before: await pixels('before'), after: await pixels('after') };
+  await page.screenshot({path:'captures/context-highlight-off.png',fullPage:true});
   await page.locator('#caseHighlight').check();
-  const marked = await pixels();
-  for (let i = 0; i < points.length; i++)
-    for (let rgb = 0; rgb < 3; rgb++) {
-      const expected = Math.round(
-        plain[i][rgb] * (1 - 185 / 255) + (points[i].color[rgb] * 185) / 255,
-      );
-      expect(Math.abs(marked[i][rgb] - expected)).toBeLessThanOrEqual(2);
-    }
+  for (const side of ['before', 'after']) {
+    const marked = await pixels(side);
+    for (let i = 0; i < points.length; i++)
+      for (let rgb = 0; rgb < 3; rgb++) {
+        const expected = Math.round(
+          plain[side][i][rgb] * (1 - 185 / 255) + (points[i].color[rgb] * 185) / 255,
+        );
+        expect(Math.abs(marked[i][rgb] - expected)).toBeLessThanOrEqual(2);
+      }
+  }
+  await expect(page.locator('#outcomeScore')).toHaveText(score);
+  await expect(page.locator('#outcomePixels')).toHaveText(counts);
+  await expect(page.locator('#inspector')).toBeHidden();
+  await page.screenshot({path:'captures/context-highlight-on.png',fullPage:true});
 });
 
 test('aggregate cost, per-image changes and accessible glossary use original precision', async ({

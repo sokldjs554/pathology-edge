@@ -150,6 +150,11 @@
  <button id="caseEvidence" class="quiet" hidden>근거 보기 ↗</button>
  <button id="returnComparison" class="quiet" hidden>A/B 비교로 돌아가기</button>
  <span id="viewState" class="sr-only">A/B 경계 비교 중</span>
+ <div id="caseDisplay" class="case-display" hidden>
+  <label><input id="caseHighlight" type="checkbox" checked aria-label="변경 강조 켜기/끄기" />변경 강조</label>
+  <span class="case-legend"><span><i class="change-swatch corrected" aria-hidden="true"></i>청록 = 개선</span><span><i class="change-swatch regressed" aria-hidden="true"></i>분홍 = 악화</span></span>
+  <span class="case-display-note">정답 기준 A→B 변경 · 양쪽에 같은 강조 표시</span>
+ </div>
 </div>
         <div
           class="mobile-pane-switch segmented"
@@ -285,10 +290,7 @@
               <p id="caseCoordinates" class="note"></p>
 
 
-</details>              <label class="check-row"
-                ><input id="caseHighlight" type="checkbox" checked />달라진 픽셀
-                강조</label
-              >
+</details>
               <p class="note">
                 청록: 정답과 일치하게 바뀜 · 분홍: 불일치하게 바뀜. 양쪽 영상의
                 흰 상자는 동일 영역입니다.

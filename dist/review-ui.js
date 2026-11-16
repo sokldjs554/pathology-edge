@@ -230,13 +230,16 @@ const Review = {
         `${c.sample_id} · 국소 ${c.direction === 'improved' ? '개선' : '악화'} · 흰 상자 = 동일 영역 · 청록 개선 / 분홍 악화`;
       // Keep both images visible; the compact result offers explicit evidence access.
       setTab('image', false);
+      window.ReviewEntry?.refresh();
       state.fitMode = false;
       state.cx = c.center[0];
       state.cy = c.center[1];
       const views = visibleCanvases().map(dimensions);
+      // Show tissue around the 64px ROI (at least 192px on the short axis).
+      // This is display scaling, not optical magnification; + remains available.
       state.zoom = Math.min(
-        6,
-        ...views.map((v) => Math.min(v.width, v.height) / 108),
+        3,
+        ...views.map((v) => Math.min(v.width, v.height) / 192),
       );
       clampView();
       draw();
