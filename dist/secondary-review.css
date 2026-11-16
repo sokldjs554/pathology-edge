@@ -76,9 +76,6 @@ body.studio-wsi .display-menu .opacity {
   margin: 0;
   gap: 12px;
 }
-body.studio-wsi .display-menu #native {
-  margin-top: 12px;
-}
 body.studio-wsi .inspector details > summary {
   font-size: 14px;
   line-height: 1.5;

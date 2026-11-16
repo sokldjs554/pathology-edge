@@ -39,7 +39,8 @@ const roi = async (page, id = 'R1') => {
 const display = async (page, id, action = 'click') => {
   if (!(await page.locator('#' + id).isVisible())) await page.locator('#displayTools > summary').click();
   await page.locator('#' + id)[action]();
-  await page.locator('#displayTools > summary').click();
+  if (await page.locator('#displayTools').getAttribute('open') !== null)
+    await page.locator('#displayTools > summary').click();
 };
 const center = (page, id = 'B') =>
   page.locator('#viewer' + id).getAttribute('data-center');

@@ -32,10 +32,15 @@ test('WSI native RGB uses original level-0 pixels in both panes and survives dis
   await page.locator('#displayTools summary').click();
   await expect(sourceLayer(page,'B','R1')).toBeVisible();
   await paintReady(page);
-  const screenshot=await page.screenshot();
+  const screenshot=await page.screenshot({path:'captures/wsi-native-original-1440.png'});
+  await page.locator('#displayTools summary').click();await page.locator('#showNativeRGB').uncheck();await page.locator('#displayTools summary').click();
+  await expect(sourceLayer(page,'B','R1')).toHaveCount(0);await expect(page.locator('#position')).toContainText('JPEG 타일');
+  const jpegScreenshot=await page.screenshot({path:'captures/wsi-native-jpeg-1440.png'});
+  await page.locator('#displayTools summary').click();await page.locator('#showNativeRGB').check();await page.locator('#displayTools summary').click();
+  await expect(sourceLayer(page,'B','R1')).toBeVisible();
   // Compare the actually composited screen to a browser render of the same
   // source PNG at the layer's screen transform, away from labels/scale bars.
-  const result=await page.evaluate(async ({screen,roi})=>{
+  const result=await page.evaluate(async ({screen,jpegScreen,roi})=>{
     const load=async src=>{const i=new Image();i.src=src;await i.decode();return i;};
     const original=await load(roi.image), actual=await load('data:image/png;base64,'+screen);
     const box=document.querySelector('#overlayB [data-native-rgb="R1"]').getBoundingClientRect();
@@ -48,13 +53,16 @@ test('WSI native RGB uses original level-0 pixels in both panes and survives dis
     const x=Math.round((viewer.x+viewer.width/2-32)*dpr),y=Math.round((viewer.y+viewer.height/2-32)*dpr),n=Math.round(64*dpr);
     const a=ctx.getImageData(x,y,n,n).data,b=rc.getImageData(x,y,n,n).data;
     let error=0;for(let i=0;i<a.length;i++)if(i%4!==3)error+=Math.abs(a[i]-b[i]);
-    return {meanAbsoluteError:error/(n*n*3),source:[original.naturalWidth,original.naturalHeight]};
-  },{screen:screenshot.toString('base64'),roi:data.rois[0]});
+    const jpeg=await load('data:image/png;base64,'+jpegScreen);rc.clearRect(0,0,rendered.width,rendered.height);rc.drawImage(jpeg,0,0);
+    const j=rc.getImageData(x,y,n,n).data;let jpegError=0;for(let i=0;i<a.length;i++)if(i%4!==3)jpegError+=Math.abs(a[i]-j[i]);
+    return {meanAbsoluteError:error/(n*n*3),jpegMeanAbsoluteError:jpegError/(n*n*3),source:[original.naturalWidth,original.naturalHeight]};
+  },{screen:screenshot.toString('base64'),jpegScreen:jpegScreenshot.toString('base64'),roi:data.rois[0]});
   expect(result.source).toEqual([1024,1024]);
   expect(result.meanAbsoluteError).toBeLessThan(1);
+  expect(result.meanAbsoluteError).toBeLessThan(result.jpegMeanAbsoluteError);
   fs.writeFileSync('captures/wsi-native-pixel-check.json',JSON.stringify(result,null,2));
   await page.locator('#displayTools summary').click();
-  await page.locator('#showMask').check();await page.locator('#overlayOpacity').fill('20');await page.locator('#overlayOpacity').dispatchEvent('input');
+  await page.locator('#showMask').check();await page.locator('#overlayOpacity').evaluate(el=>{el.value='20';el.dispatchEvent(new Event('input',{bubbles:true}));});
   await page.locator('#displayTools summary').click();
   await expect(sourceLayer(page,'B','R1')).not.toHaveAttribute('opacity');
 });
@@ -83,16 +91,34 @@ for(const [width,height] of [[1440,1000],[375,667]]) test(`WSI native automatic 
   await page.screenshot({path:`captures/wsi-native-boundary-${width}.png`,fullPage:true});
 });
 
-test('WSI native PNG failures retain JPEG and predictions; retry restores the original image',async({page})=>{
-  const r=data.rois[0];await page.route('**/'+r.image,route=>route.fulfill({status:404,body:'missing'}));
+for(const failure of ['missing','wrong dimensions','stalled']) test(`WSI native PNG ${failure} retains JPEG and predictions; retry restores the original image`,async({page})=>{
+  const r=data.rois[0], pending=[];
+  await page.route('**/'+r.image,route=> {
+    if(failure==='stalled') {pending.push(route);return;}
+    return failure==='missing' ? route.fulfill({status:404,body:'missing'}) : route.fulfill({contentType:'image/png',body:fs.readFileSync(new URL('../dist/ihc/examples/correct-01-crop.png',import.meta.url))});
+  });
   await page.goto('/wsi.html');await ready(page);await select(page);
-  await expect(page.locator('#tileWarning')).toContainText('원본 PNG');
+  await expect(page.locator('#tileWarning')).toContainText('원본 PNG',{timeout:20000});
   await expect(sourceLayer(page,'B',r.id)).toHaveCount(0);
   await expect(page.locator('#position')).toContainText('JPEG 타일');
   await expect(page.locator('#overlayB [data-mask="R1-overlap"]')).toHaveAttribute('href',r.methods.overlap.overlay);
   await paintReady(page);
+  for(const route of pending) await route.abort();
   await page.unroute('**/'+r.image);await page.locator('#retryTiles').click();await ready(page);await select(page);
   await expect(sourceLayer(page,'B',r.id)).toBeVisible();
   await expect(page.locator('#tileWarning')).toBeHidden();
   await expect(page.locator('#position')).toContainText('원본 PNG');
+});
+
+
+test('WSI native 1:1 remains CSS-pixel calibrated on high-DPI displays',async({browser})=>{
+ const context=await browser.newContext({viewport:{width:1024,height:768},deviceScaleFactor:2});
+ try {
+  const page=await context.newPage();await page.goto(new URL('/wsi.html',process.env.UI_BASE_URL||'http://localhost:8765').href);await ready(page);await select(page);
+  await expect(sourceLayer(page,'B','R1')).toBeVisible();await page.locator('#native').click();
+  await expect(page.locator('#zoomReadout')).toHaveText('100%');
+  await expect(page.locator('#viewerB')).toHaveAttribute('data-zoom','1.000000');
+  const box=await sourceLayer(page,'B','R1').boundingBox();expect(box.width).toBeCloseTo(1024,1);
+  await paintReady(page);await page.screenshot({path:'captures/wsi-native-retina.png',fullPage:true});
+ } finally {await context.close();}
 });
