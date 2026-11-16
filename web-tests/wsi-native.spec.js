@@ -8,6 +8,8 @@ const ready = async page => {
 const select = async (page, id='R1') => {
   if (!(await page.locator(`.roi-item[data-roi="${id}"]`).isVisible())) await page.locator('#toggleRegions').click();
   await page.locator(`.roi-item[data-roi="${id}"]`).click();
+  const r=data.rois.find(roi=>roi.id===id);
+  await expect(page.locator('#viewerB')).toHaveAttribute('data-center',r.origin.map((v,i)=>(v+[r.width,r.height][i]/2).toFixed(4)).join(','));
 };
 const paintReady = page => page.waitForFunction(() => WSI.viewers.B.getFullyLoaded());
 const sourceLayer = (page, pane, id) => page.locator(`#overlay${pane} [data-native-rgb="${id}"]`);
@@ -55,8 +57,15 @@ test('WSI native RGB uses original level-0 pixels in both panes and survives dis
     let error=0;for(let i=0;i<a.length;i++)if(i%4!==3)error+=Math.abs(a[i]-b[i]);
     const jpeg=await load('data:image/png;base64,'+jpegScreen);rc.clearRect(0,0,rendered.width,rendered.height);rc.drawImage(jpeg,0,0);
     const j=rc.getImageData(x,y,n,n).data;let jpegError=0;for(let i=0;i<a.length;i++)if(i%4!==3)jpegError+=Math.abs(a[i]-j[i]);
-    return {meanAbsoluteError:error/(n*n*3),jpegMeanAbsoluteError:jpegError/(n*n*3),source:[original.naturalWidth,original.naturalHeight]};
+    let best={error:Infinity};
+    for(let dx=-1;dx<=1;dx+=0.25)for(let dy=-1;dy<=1;dy+=0.25){
+      ctx.clearRect(0,0,expected.width,expected.height);ctx.drawImage(original,(box.x+dx)*dpr,(box.y+dy)*dpr,box.width*dpr,box.height*dpr);
+      const shifted=ctx.getImageData(x,y,n,n).data;let difference=0;for(let i=0;i<a.length;i++)if(i%4!==3)difference+=Math.abs(shifted[i]-b[i]);
+      difference/=n*n*3;if(difference<best.error)best={error:difference,dx,dy};
+    }
+    return {meanAbsoluteError:error/(n*n*3),jpegMeanAbsoluteError:jpegError/(n*n*3),bestShift:best,layerBox:box.toJSON(),viewerBox:viewer.toJSON(),source:[original.naturalWidth,original.naturalHeight],zoom:document.querySelector('#viewerB').dataset.zoom};
   },{screen:screenshot.toString('base64'),jpegScreen:jpegScreenshot.toString('base64'),roi:data.rois[0]});
+  fs.writeFileSync('captures/wsi-native-pixel-check.json',JSON.stringify(result,null,2));
   expect(result.source).toEqual([1024,1024]);
   expect(result.meanAbsoluteError).toBeLessThan(1);
   expect(result.meanAbsoluteError).toBeLessThan(result.jpegMeanAbsoluteError);
@@ -82,6 +91,9 @@ for(const [width,height] of [[1440,1000],[375,667]]) test(`WSI native automatic 
   await page.locator('#zoomIn').click();await expect(page.locator('#position')).toContainText('확대 표시');
   await expect(page.locator('#viewerB')).toHaveAttribute('data-center',target);
   await page.locator('#native').click();await expect(page.locator('#zoomReadout')).toHaveText('100%');
+  await page.setViewportSize({width:width+20,height});
+  await expect(page.locator('#zoomReadout')).toHaveText('100%');
+  await page.setViewportSize({width,height});
   const center=await page.locator('#viewerB').getAttribute('data-center');
   await page.locator('#toggleResults').click();await page.locator('#toggleResults').click();
   await expect(page.locator('#viewerB')).toHaveAttribute('data-center',center);

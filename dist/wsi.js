@@ -146,15 +146,25 @@ async function loadNativeImages(data, signal) {
   }));
 }
 function resizeViewers() {
-  for (const [id, viewer] of Object.entries(WSI.viewers)) {
-    const box = $('viewer' + id).getBoundingClientRect();
-    if (box.width > 0 && box.height > 0 && viewer.viewport) {
-      viewer.viewport.resize(
-        new OpenSeadragon.Point(box.width, box.height),
-        true,
-      );
+  // This is the only resize owner. OpenSeadragon's automatic resize would
+  // otherwise apply its old-container zoom ratio after our manual fit.
+  WSI.resizing = true;
+  try {
+    for (const [id, viewer] of Object.entries(WSI.viewers)) {
+      const box = $('viewer' + id).getBoundingClientRect();
+      const v = viewer.viewport;
+      if (!v || box.width <= 0 || box.height <= 0) continue;
+      const size = v.getContainerSize();
+      if (Math.abs(size.x - box.width) < 0.01 && Math.abs(size.y - box.height) < 0.01) continue;
+      const center = v.getCenter(true);
+      const scale = v.viewportToImageZoom(v.getZoom(true));
+      v.resize(new OpenSeadragon.Point(box.width, box.height), true);
+      v.zoomTo(v.imageToViewportZoom(scale), null, true);
+      v.panTo(center, true);
       viewer.forceRedraw();
     }
+  } finally {
+    WSI.resizing = false;
   }
 }
 function synchronize(source) {
@@ -175,7 +185,7 @@ function synchronize(source) {
   WSI.syncing = false;
 }
 function updateView(source = WSI.viewers.B) {
-  if (!source?.world.getItemCount()) return;
+  if (WSI.resizing || !source?.world.getItemCount()) return;
   synchronize(source);
   if (WSI.frames) return;
   WSI.frames = requestAnimationFrame(() => {
@@ -651,6 +661,7 @@ function setupViewer(id) {
     id: 'viewer' + id,
     tileSources: WSI.data.slide.tile_source,
     drawer: 'canvas',
+    autoResize: false,
     showNavigationControl: false,
     showNavigator: id === 'B',
     navigatorPosition: 'BOTTOM_RIGHT',
@@ -800,6 +811,7 @@ function home() {
 }
 async function init() {
   WSI.events?.abort();
+  WSI.resizeObserver?.disconnect();
   WSI.events = new AbortController();
   const signal = WSI.events.signal;
   if (WSI.frames) cancelAnimationFrame(WSI.frames);
@@ -903,6 +915,12 @@ async function init() {
     if (signal.aborted) return;
     setupViewer('A');
     setupViewer('B');
+    WSI.resizeObserver = new ResizeObserver(() => {
+      if (signal.aborted) return;
+      resizeViewers();
+      updateView();
+    });
+    for (const id of ['A', 'B']) WSI.resizeObserver.observe($('viewer' + id));
     renderOverlays();
     assetWarnings();
     void loadNativeImages(WSI.data, signal);
