@@ -12,7 +12,7 @@ const ready = async (page, id = '10_1') => {
   await expect(page.locator('#after')).toHaveAttribute('data-zoom', /\d/);
 };
 const open = async (page) => {
-  await page.goto('/');
+  await page.goto('/?sample=10_1');
   await ready(page);
   await tool(page,'modeBoundary','click');
   if(page.viewportSize().width >= 1200) await tool(page,'toggleInspector','click');
@@ -297,7 +297,7 @@ test('loading, HTTP error, retry and empty states never imply a new analysis', a
     if (failed) await route.fulfill({ status: 503, body: 'unavailable' });
     else await route.fulfill({ json: data });
   });
-  await page.goto('/');
+  await page.goto('/?sample=10_1');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'loading');
   await expect(page.locator('#stateDetail')).toContainText(
     '실시간 추론이 아니라',

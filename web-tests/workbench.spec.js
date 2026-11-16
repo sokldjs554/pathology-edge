@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 const data=JSON.parse(fs.readFileSync(new URL('../dist/results.json',import.meta.url)));
 const cases=JSON.parse(fs.readFileSync(new URL('../dist/cases.json',import.meta.url)));
-const open=async(page)=>{await page.goto('/');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');if(page.viewportSize().width>760)await tool(page,'toggleDock','click');};
+const open=async(page)=>{await page.goto('/?sample=10_1');await expect(page.locator('body')).toHaveAttribute('data-phase','ready');if(page.viewportSize().width>760)await tool(page,'toggleDock','click');};
 test('candidate table navigates to original exported candidate and links its detail',async({page})=>{
  await open(page);
  await page.screenshot({path:'captures/linked-workbench-desktop.png',fullPage:true});

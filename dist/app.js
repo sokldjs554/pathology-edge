@@ -203,6 +203,19 @@ function layerFrom(image, kind) {
   ctx.putImageData(d, 0, 0);
   return c;
 }
+// Display-only outline of the saved foreground; masks used for scoring stay intact.
+function maskOutline(mask) {
+  const c = document.createElement('canvas'); c.width = mask.width; c.height = mask.height;
+  const ctx = c.getContext('2d'), source = mask.getContext('2d').getImageData(0,0,c.width,c.height).data;
+  const out = ctx.createImageData(c.width,c.height);
+  for(let y=0;y<c.height;y++) for(let x=0;x<c.width;x++) {
+    const i=(y*c.width+x)*4;
+    if(source[i+3] && (x===0 || y===0 || x===c.width-1 || y===c.height-1 ||
+      !source[i-4+3] || !source[i+4+3] || !source[i-c.width*4+3] || !source[i+c.width*4+3]))
+      out.data.set([255,224,102,255],i);
+  }
+  ctx.putImageData(out,0,0); return c;
+}
 function scopeShade(width, height, scope) {
   const c = document.createElement('canvas');
   c.width = width;
@@ -278,6 +291,7 @@ function draw() {
       ctx.globalAlpha = Number($('opacity').value) / 100;
       ctx.drawImage(state.images[p.mask], 0, 0);
       ctx.globalAlpha = 1;
+      if (state.mode === 'boundary' && Number($('opacity').value) > 0) ctx.drawImage(state.images[p.mask + '_outline'], 0, 0);
     }
     if ($('truth').checked) {
       ctx.globalAlpha = Number($('opacity').value) / 100;
@@ -492,12 +506,12 @@ function updatePanels() {
   $('timing').textContent = `${ms(a.median_seconds)} / ${ms(b.median_seconds)}`;
   $('modelShort').textContent = `TinyUNet / ${state.data.threshold}`;
   $('beforeTitle').textContent =
-    state.mode === 'merge' ? '겹침 · 병합 전' : '무겹침';
+    state.mode === 'merge' ? '중복 후보 억제 전' : '겹치지 않게 잘라 분석';
   $('afterTitle').textContent =
-    state.mode === 'merge' ? '겹침 · 병합 후' : '겹침 + 병합';
+    state.mode === 'merge' ? '중복 후보 억제 후' : '겹쳐 분석한 뒤 결과 결합';
   $('beforeMeta').textContent =
-    state.mode === 'merge' ? 'raw 후보' : 'stride 128';
-  $('afterMeta').textContent = state.mode === 'merge' ? 'NMS 후' : 'stride 64';
+    state.mode === 'merge' ? '같은 겹침 추론 · raw 후보' : '128px 패치 · 128px 이동';
+  $('afterMeta').textContent = state.mode === 'merge' ? '같은 겹침 추론 · NMS 후' : '128px 패치 · 64px 이동';
   $('countBefore').textContent =
     `${state.mode === 'merge' ? b.raw_count : a.merged_count} 후보`;
   $('countAfter').textContent = `${b.merged_count} 후보`;
@@ -788,7 +802,7 @@ function resetNumbers() {
   clearSelection();
   Review.clear();
 }
-async function loadSample(id) {
+async function loadSample(id, initialCase = null) {
   if (!state.data) return;
   const candidate = state.data.samples.find((s) => s.id === id);
   if (!candidate) return;
@@ -833,6 +847,7 @@ async function loadSample(id) {
       boundary: scopeShade(512, 512, 'boundary'),
       interior: scopeShade(512, 512, 'interior'),
     };
+    for (const key of ['no_overlap','overlap']) state.images[key + '_outline'] = maskOutline(state.images[key]);
     state.cx = 256;
     state.cy = 256;
     state.fitMode = true;
@@ -872,7 +887,8 @@ async function loadSample(id) {
       '',
       `${location.pathname}?sample=${encodeURIComponent(id)}`,
     );
-    requestAnimationFrame(() => { fit(); window.Studio?.startView(); });
+    if (initialCase) await Review.open(initialCase, { immediate: true });
+    else requestAnimationFrame(() => { fit(); window.Studio?.startView(); });
   } catch (error) {
     if (ticket !== state.request) return;
     state.sample = null;
@@ -922,15 +938,16 @@ async function init() {
       $('status').textContent = '예제 0개';
       return;
     }
-    const requested = new URLSearchParams(location.search).get('sample');
-    const requestedCase = new URLSearchParams(location.search).get('case');
-    await loadSample(
-      data.samples.some((s) => s.id === requested)
-        ? requested
-        : data.samples[0].id,
-    );
+    const params = new URLSearchParams(location.search);
+    const requested = params.get('sample'), requestedCase = params.get('case');
     await caseTask;
-    if (requestedCase) await Review.open(requestedCase);
+    if (ticket !== state.request) return;
+    // Only a bare entry gets the selected example. Explicit links stay explicit.
+    const initialCase = Review.data?.cases.find(c => c.id ===
+      (requestedCase || (!requested && !params.has('case') ? Review.data.recommended.improved : null)));
+    await loadSample(initialCase?.sample_id ||
+      (data.samples.some(s => s.id === requested) ? requested : data.samples[0].id), initialCase?.id);
+
   } catch (error) {
     if (ticket !== state.request) return;
     setPhase(

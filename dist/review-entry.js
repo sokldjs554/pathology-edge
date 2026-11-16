@@ -6,11 +6,17 @@ window.ReviewEntry = {
     const ready = state.phase === 'ready' && state.sample;
     const layout = Studio.layout;
     const c = ready && layout === 'compare' && state.mode === 'boundary' ? Review.selected : null;
+    $('caseDisplay').classList.toggle('highlight-on', $('caseHighlight').checked);
+    $('predictionLegend').textContent = state.mode === 'merge' ? '분홍: 억제 후보 · 파랑: 유지 후보 · 동일한 겹침 추론' : !$('segmentation').checked || Number($('opacity').value) === 0 ? '핵 예측 표시 꺼짐 · 상세 도구에서 분할 표시' : `노랑: 각 방식의 핵 예측${c ? ' · 흰 상자: 같은 위치' : ''}`;
     const key = [state.phase, state.sample?.id, state.mode, layout, Studio.comparison, c?.id].join('/');
     if (key === this.lastKey) return;
     this.lastKey = key;
     $('caseEvidence').hidden = !c;
+    $('outcomeMeaning').hidden = !c;
     $('caseDisplay').hidden = !c;
+    $('maskReading').hidden = !c;
+    for (const [id, direction] of [['showImproved','improved'],['showWorsened','worsened']]) $(id).setAttribute('aria-pressed', String(c?.id === Review.data?.recommended[direction]));
+    if (c) this.drawMasks(c);
     $('returnComparison').hidden = layout === 'compare' && Studio.comparison === 'two' && state.mode === 'boundary';
     $('outcomeScore').textContent = '';
     $('outcomeScore').title = '';
@@ -21,10 +27,10 @@ window.ReviewEntry = {
       return;
     }
     if (c) {
-      $('outcomeLabel').textContent = `${c.sample_id} · 선택 상자 경계 Dice`;
+      $('outcomeLabel').textContent = `${c.direction === 'improved' ? '개선' : '악화'} 사례 ${c.sample_id} · 선택 상자 경계 Dice`;
       $('outcomeScore').textContent = `${fmt(c.before.dice)} → ${fmt(c.after.dice)}`;
       $('outcomeScore').className = c.after.dice >= c.before.dice ? 'positive' : 'negative';
-      $('outcomeScore').title = '0–1, 높을수록 정답과 유사 · A(무겹침) → B(겹침·결합)';
+      $('outcomeScore').title = '0–1, 높을수록 정답과 유사 · A(겹치지 않게) → B(겹쳐 분석·결합). 전체 이미지 평균이 아닙니다.';
       $('outcomePixels').textContent = `정답 일치로 변경 ${c.corrected}px · 불일치로 변경 ${c.regressed}px`;
       $('outcomePixels').title = '흰 64px 상자 안의 경계 띠만 평가한 사후 선택 사례. 이미지 전체 점수나 핵 개수가 아닙니다. 청록: 일치로 변경 / 분홍: 불일치로 변경.';
     } else if (state.mode === 'merge') {
@@ -36,6 +42,15 @@ window.ReviewEntry = {
     } else {
       $('outcomeLabel').textContent = layout === 'compare' ? 'A 겹침 없음 → B 겹침·결합' : layout === 'data' ? '후보 표의 행을 선택하면 영상 위치로 이동합니다' : 'B 결과 탐색 중';
       $('outcomePixels').textContent = layout === 'compare' ? '개선·악화 사례를 선택해 같은 경계를 확인하세요.' : '경계 사례 버튼으로 A/B 비교에 돌아갈 수 있습니다.';
+    }
+  },
+  drawMasks(c) {
+    const [x,y] = c.bbox;
+    for (const [id,key] of [['maskBefore','no_overlap'],['maskAfter','overlap'],['maskTruth','truth']]) {
+      const canvas=$(id), ctx=canvas.getContext('2d');
+      ctx.clearRect(0,0,64,64); ctx.fillStyle='#252a2e'; ctx.fillRect(0,0,64,64);
+      ctx.drawImage(state.images[key],x,y,64,64,0,0,64,64);
+      canvas.dataset.case=c.id; canvas.dataset.mask=key; canvas.dataset.box=c.bbox.join(',');
     }
   },
   closeTools(focus = false) {
@@ -72,4 +87,6 @@ $('detailTools').addEventListener('focusout',()=>{
     if($('detailTools').open&&!$('detailTools').contains(document.activeElement))ReviewEntry.closeTools();
   });
 });
+$('maskReading').open = innerWidth > 760;
+matchMedia('(max-width:760px)').addEventListener('change',e=>{$('maskReading').open=!e.matches;});
 ReviewEntry.refresh();

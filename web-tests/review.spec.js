@@ -41,7 +41,7 @@ test('purpose, one-click improvement and regression, all real local cases and ex
   page.on('pageerror', (e) => errors.push(e.message));
   await open(page);
   await expect(page.locator('.review-guide')).toContainText(
-    '경계의 핵 분할 결과',
+    '핵 예측도 같을까요?',
   );
   await expect(page.locator('.workflow')).toContainText('작은 조각');
   await shot(page, 'first');

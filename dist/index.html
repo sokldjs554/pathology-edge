@@ -54,12 +54,26 @@
       </aside>
       <section class="viewer-workspace" aria-label="영상 비교 작업대">
         <div class="review-guide">
- <div class="workspace-title"><strong id="workspaceName">패치 경계의 핵 분할 결과 비교</strong><span class="workflow">작은 조각으로 나눈 영상, 경계에서 무엇이 달라질까요?</span></div>
+ <div class="workspace-title"><span class="eyebrow">패치 경계 실험</span><h1 id="workspaceName">나눠 본 영상,<br />핵 예측도 같을까요?</h1><p class="workflow">영상을 작은 조각(패치)으로 나누면, 경계에 걸린 핵의 예측이 달라질 수 있습니다.</p></div>
+ <div class="method-explainer" aria-label="패치를 나누는 두 방식의 개념도">
+  <svg viewBox="0 0 200 82" role="img" aria-label="A는 패치가 맞닿고 B는 패치가 절반 겹칩니다. 설명용 도식이며 실제 예측이 아닙니다."><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="37" y="7" width="48" height="28"/><rect x="85" y="7" width="48" height="28"/><rect x="37" y="46" width="48" height="28"/><rect x="61" y="46" width="48" height="28"/><rect x="85" y="46" width="48" height="28"/></g><g fill="currentColor" font-size="13"><text x="10" y="26">A</text><text x="10" y="65">B</text><text x="142" y="26">겹침 없음</text><text x="142" y="65">절반 겹침</text></g><rect x="61" y="46" width="48" height="28" fill="currentColor" opacity=".12"/></svg>
+  <p>같은 모델·같은 영상<br /><strong>나누는 방식을 바꿔 비교합니다.</strong></p>
+ </div>
  <div class="review-command">
-  <label class="sample-control"><span>예제</span><select id="sample" disabled>
-        <option>예제 불러오는 중…</option>
-      </select></label>
+  <span class="guide-step">1. 정답과 대조한 실제 사례</span>
   <div class="guide-actions"><button id="showImproved" class="case-good" disabled>좋아진 경계 보기</button><button id="showWorsened" class="case-bad" disabled>나빠진 경계 보기</button></div>
+  <label class="sample-control"><span>전체 이미지 선택</span><select id="sample" disabled><option>예제 불러오는 중…</option></select></label>
+ </div>
+ <details id="maskReading" class="mask-reading" open hidden>
+  <summary>2. 흰 상자 안의 실제 마스크</summary>
+  <div class="mask-triptych"><figure><canvas id="maskBefore" width="64" height="64" aria-label="선택 상자의 실제 A 예측 마스크"></canvas><figcaption>A 예측</figcaption></figure><figure><canvas id="maskAfter" width="64" height="64" aria-label="선택 상자의 실제 B 예측 마스크"></canvas><figcaption>B 예측</figcaption></figure><figure><canvas id="maskTruth" width="64" height="64" aria-label="선택 상자의 실제 정답 마스크"></canvas><figcaption>정답</figcaption></figure></div>
+  <p>색이 채워진 곳이 핵 영역입니다.<br />마스크는 상자 전체, 점수는 그 안의 <strong>경계 띠</strong>만 비교합니다.</p>
+ </details>
+ <p class="guide-limit">TNBC H&amp;E 핵 분할 · 저장 결과<br />선택 사례는 전체 성능을 대표하지 않습니다.</p>
+ <span id="caseLoadNotice" class="sr-only" role="status">저장된 경계 사례를 읽는 중</span>
+</div>
+<div class="viewer-controls">
+ <span id="predictionLegend" class="prediction-legend"><i aria-hidden="true"></i>노랑: 각 방식의 핵 예측 <span>· 흰 상자: 같은 위치</span></span>
   <div class="zoom-tools">
             <button id="zoomout" aria-label="축소">−</button
             ><output id="zoomvalue" aria-label="화면 배율">—</output
@@ -141,20 +155,16 @@
   </div>
  </div>
 </details>
- </div>
- <span id="caseLoadNotice" class="sr-only" role="status"
-            >저장된 경계 사례를 읽는 중</span
-          >
 </div>
 <div class="review-outcome" role="status" aria-live="polite">
- <span id="outcomeLabel">A 겹침 없음 → B 겹침·결합</span><strong id="outcomeScore"></strong><span id="outcomePixels">개선·악화 사례를 선택해 같은 경계를 확인하세요.</span>
+ <span id="outcomeLabel">A 겹침 없음 → B 겹침·결합</span><strong id="outcomeScore"></strong><small id="outcomeMeaning" hidden>A → B · 높을수록 정답과 유사</small><span id="outcomePixels">개선·악화 사례를 선택해 같은 경계를 확인하세요.</span>
  <button id="caseEvidence" class="quiet" hidden>근거 보기 ↗</button>
  <button id="returnComparison" class="quiet" hidden>A/B 비교로 돌아가기</button>
  <span id="viewState" class="sr-only">A/B 경계 비교 중</span>
  <div id="caseDisplay" class="case-display" hidden>
-  <label><input id="caseHighlight" type="checkbox" checked aria-label="변경 강조 켜기/끄기" />변경 강조</label>
+  <label><input id="caseHighlight" type="checkbox" aria-label="변경 강조 켜기/끄기" />변경 강조 (양쪽 공통)</label>
   <span class="case-legend"><span><i class="change-swatch corrected" aria-hidden="true"></i>청록 = 개선</span><span><i class="change-swatch regressed" aria-hidden="true"></i>분홍 = 악화</span></span>
-  <span class="case-display-note">정답 기준 A→B 변경 · 양쪽에 같은 강조 표시</span>
+  <span class="case-display-note">기본은 각각의 예측 · 켜면 정답 기준 변경을 양쪽에 같은 강조 표시</span>
  </div>
 </div>
         <div
@@ -167,13 +177,13 @@
         <div class="stage" id="stage" aria-busy="true">
           <div class="panes" id="panes">
             <article class="pane" id="beforePane">
-              <div class="pane-header">
+              <div class="pane-header method-header">
                 <span class="pane-key">A</span
-                ><strong id="beforeTitle">무겹침</strong
+                ><strong id="beforeTitle">겹치지 않게 잘라 분석</strong
                 ><span
                   id="beforeMeta"
                   title="stride: 다음 128px 조각까지 이동하는 간격"
-                  >stride 128</span
+                  >128px 패치 · 128px 이동</span
                 ><span id="countBefore" class="pane-count"></span><button id="maximizeBefore" class="pane-expand" aria-pressed="false" aria-label="A 영상 크게 보기" title="A 영상 크게 보기">크게 보기</button>
               </div>
               <div class="canvas-frame">
@@ -189,13 +199,13 @@
               </div>
             </article>
             <article class="pane" id="afterPane">
-              <div class="pane-header">
+              <div class="pane-header method-header">
                 <span class="pane-key after">B</span
-                ><strong id="afterTitle">겹침 + 병합</strong
+                ><strong id="afterTitle">겹쳐 분석한 뒤 결과 결합</strong
                 ><span
                   id="afterMeta"
                   title="stride: 다음 128px 조각까지 이동하는 간격"
-                  >stride 64</span
+                  >128px 패치 · 64px 이동</span
                 ><span id="countAfter" class="pane-count"></span><button id="maximizeAfter" class="pane-expand" aria-pressed="false" aria-label="B 영상 크게 보기" title="B 영상 크게 보기">크게 보기</button>
               </div>
               <div class="canvas-frame">

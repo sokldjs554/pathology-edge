@@ -116,7 +116,7 @@ test('case loading preserves a later four-pane choice',async({page})=>{
 
 for(const width of [375,1024,1440])test(`case overview keeps tissue context and inline controls at ${width}`,async({page})=>{
  await page.setViewportSize({width,height:900});await ready(page);
- await expect(page.locator('#caseDisplay')).toBeHidden();
+ await expect(page.locator('#caseDisplay')).toBeVisible();
  for(const button of ['showImproved','showWorsened']){
   await page.locator('#'+button).click();
   await expect(page.locator('#after')).toHaveAttribute('data-case',button==='showImproved'?evidence.recommended.improved:evidence.recommended.worsened);

@@ -179,7 +179,7 @@ const Review = {
     ctx.putImageData(pixels, 0, 0);
     return layer;
   },
-  async open(id) {
+  async open(id, { immediate = false } = {}) {
     const c = this.data?.cases.find((c) => c.id === id);
     if (!c) return;
     // Restore paired review when requested, before loading. A later layout choice
@@ -193,7 +193,7 @@ const Review = {
       await loading;
     }
     // Let loadSample's fit render first, then apply the requested review viewport.
-    await new Promise(requestAnimationFrame);
+    if (!immediate) await new Promise(requestAnimationFrame);
     if (
       intent !== this.intent ||
       request !== state.request ||
@@ -207,7 +207,8 @@ const Review = {
       setScope('all');
       $('objects').checked = false;
       $('grid').checked = true;
-      $('caseHighlight').checked = true;
+      $('caseHighlight').checked = false;
+      $('segmentation').checked = true;
       this.selected = c;
       this.layer = layer;
       $('caseDetail').hidden = false;
