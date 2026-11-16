@@ -28,7 +28,7 @@ test('entry immediately explains the method and shows a labeled actual differenc
  expect(await page.locator('#maskBefore').evaluate(c=>c.toDataURL())).not.toEqual(await page.locator('#maskAfter').evaluate(c=>c.toDataURL()));
  await page.screenshot({path:'captures/clarity-first.png',fullPage:true});
  await page.locator('#showWorsened').click();
- await expect(page.locator('#after')).toHaveAttribute('data-case',cases.recommended.worsened);
+ await expect(page.locator('#after')).toHaveAttribute('data-case','11_1-worsened');
  await expect(page.locator('#outcomeLabel')).toContainText('악화 사례');
  await expect(page.locator('#caseHighlight')).not.toBeChecked();
  await page.screenshot({path:'captures/clarity-worsened.png',fullPage:true});
@@ -39,7 +39,7 @@ test('all miniature mask pixels and displayed contours come from the saved masks
  await entry(page);
  for(const direction of ['improved','worsened']){
   await page.locator(direction==='improved'?'#showImproved':'#showWorsened').click();
-  const c=cases.cases.find(c=>c.id===cases.recommended[direction]);
+  const c=cases.cases.find(c=>c.id===`11_1-${direction}`);
   await expect(page.locator('#maskBefore')).toHaveAttribute('data-case',c.id);
   const sample=results.samples.find(s=>s.id===c.sample_id);
   const actual=await page.evaluate(async({c,sample})=>{
@@ -79,6 +79,8 @@ test('explicit sample and case links are preserved and selecting another image c
  await page.locator('#sample').selectOption('10_2');await expect(page.locator('#activeImage')).toHaveText('TNBC 10_2');
  await expect(page.locator('#maskReading')).toBeHidden();await expect(page.locator('#outcomeScore')).toHaveText('');
  await expect(page.locator('#predictionLegend')).not.toContainText('흰 상자');
+ await expect(page.locator('#showImproved')).toBeDisabled();
+ await page.locator('#sample').selectOption('11_1');await expect(page.locator('#showImproved')).toBeEnabled();
  await page.locator('#showImproved').click();await expect(page.locator('#after')).toHaveAttribute('data-case',selected.id);
  await tool(page,'modeMerge','click');await expect(page.locator('#maskReading')).toBeHidden();
  await expect(page.locator('#beforeTitle')).toHaveText('중복 후보 억제 전');await expect(page.locator('.method-explainer')).toBeHidden();await expect(page.locator('.workflow')).toContainText('한 번의 결과');await expect(page.locator('#predictionLegend')).toContainText('동일한 겹침 추론');

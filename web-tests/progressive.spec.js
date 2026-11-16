@@ -15,7 +15,7 @@ test('first visit prioritizes comparison and defers advanced choices',async({pag
  await page.screenshot({path:'captures/simple-entry.png',fullPage:true});
  for(const direction of ['improved','worsened']){
   await page.locator(direction==='improved'?'#showImproved':'#showWorsened').click();
-  const c=evidence.cases.find(c=>c.id===evidence.recommended[direction]);
+  const c=evidence.cases.find(c=>c.id===`11_1-${direction}`);
   await expect(page.locator('#after')).toHaveAttribute('data-case',c.id);
   await expect(page.locator('#outcomeScore')).toHaveText(`${c.before.dice.toFixed(3)} → ${c.after.dice.toFixed(3)}`);
   await expect(page.locator('#outcomePixels')).toContainText(`정답 일치로 변경 ${c.corrected}px`);
@@ -102,7 +102,9 @@ test('case loading preserves a later four-pane choice',async({page})=>{
  let paused=false;
  await page.route('**/assets/10_3_overlap.png',async route=>{paused=true;await gate;await route.continue();});
  try {
-  await page.locator('#showWorsened').click();
+  // An explicit all-image case selector still intentionally supports cross-image navigation.
+  await page.locator('#caseEvidence').click();await page.locator('#caseMore summary').click();
+  await page.locator('#caseSelect').selectOption('10_3-worsened');
   await expect.poll(()=>paused).toBe(true);
   await expect(page.locator('body')).toHaveAttribute('data-phase','loading');
   await page.locator('#detailTools summary').click();await page.locator('#compareFour').click();
@@ -119,13 +121,13 @@ for(const width of [375,1024,1440])test(`case overview keeps tissue context and 
  await expect(page.locator('#caseDisplay')).toBeVisible();
  for(const button of ['showImproved','showWorsened']){
   await page.locator('#'+button).click();
-  await expect(page.locator('#after')).toHaveAttribute('data-case',button==='showImproved'?evidence.recommended.improved:evidence.recommended.worsened);
+  await expect(page.locator('#after')).toHaveAttribute('data-case',button==='showImproved'?evidence.recommended.improved:'11_1-worsened');
   await expect(page.locator('#caseHighlight')).toBeVisible();
   const zoom=Number(await page.locator('#after').getAttribute('data-zoom'));
   expect(zoom).toBeGreaterThan(0);expect(zoom).toBeLessThanOrEqual(3);
   const box=await page.locator('#after').boundingBox();
   expect(Math.min(box.width,box.height)/zoom).toBeGreaterThanOrEqual(191);
-  const c=evidence.cases.find(c=>c.id===(button==='showImproved'?evidence.recommended.improved:evidence.recommended.worsened));
+  const c=evidence.cases.find(c=>c.id===(button==='showImproved'?evidence.recommended.improved:'11_1-worsened'));
   await expect(page.locator('#after')).toHaveAttribute('data-center',c.center.map(v=>v.toFixed(3)).join(','));
   await expect(page.locator('#before')).toHaveAttribute('data-center',await page.locator('#after').getAttribute('data-center'));
   await page.locator('#zoomin').click();

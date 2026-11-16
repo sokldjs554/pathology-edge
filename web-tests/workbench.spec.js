@@ -27,7 +27,7 @@ test('image changes clear the object crop and restore the full candidate list',a
 });
 test('pane maximize restores synchronized comparison without changing selected case',async({page})=>{
  await open(page);await tool(page,'modeBoundary','click');await page.locator('#showWorsened').click();
- const selected=cases.cases.find(c=>c.id===cases.recommended.worsened);
+ const selected=cases.cases.find(c=>c.id==='10_1-worsened');
  const center=selected.center.map(v=>v.toFixed(3)).join(',');
  await expect(page.locator('#after')).toHaveAttribute('data-case',selected.id);
  await expect(page.locator('#after')).toHaveAttribute('data-center',center);

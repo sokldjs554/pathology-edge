@@ -50,7 +50,7 @@ test('purpose, one-click improvement and regression, all real local cases and ex
     ['showWorsened', 'worsened'],
   ]) {
     await page.locator('#' + button).click();
-    const c = await readyCase(page, evidence.recommended[direction]);
+    const c = await readyCase(page, `11_1-${direction}`);
     await expect(page.locator('#before')).toHaveAttribute('data-case', c.id);
     await expect(page.locator('#before')).toHaveAttribute(
       'data-center',
@@ -216,7 +216,7 @@ for (const [width, height] of [
     await expect(page.locator('#caseScores')).toBeVisible();
     await page.locator('#closeInspector').click();
     await page.locator('#showWorsened').click();
-    await readyCase(page, evidence.recommended.worsened);
+    await readyCase(page, '11_1-worsened');
     expect(
       await page.evaluate(
         () =>

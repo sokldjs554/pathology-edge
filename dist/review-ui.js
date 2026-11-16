@@ -75,13 +75,26 @@ const Review = {
     $('caseLoadNotice').textContent = text;
     $('caseLoadNotice').className = '';
   },
+  caseFor(direction) {
+    return this.data?.cases.find(
+      (c) => c.sample_id === state.sample?.id && c.direction === direction,
+    );
+  },
   refresh() {
     const ready = state.phase === 'ready';
     for (const [id, direction] of [
       ['showImproved', 'improved'],
       ['showWorsened', 'worsened'],
-    ])
-      $(id).disabled = !ready || !this.data?.recommended[direction];
+    ]) {
+      const target = this.caseFor(direction);
+      const name = direction === 'improved' ? '좋아진 경계' : '나빠진 경계';
+      const missing = ready && this.data && !target;
+      $(id).disabled = !ready || !target;
+      $(id).textContent = missing ? `${name}: 저장 사례 없음` : `${name} 보기`;
+      $(id).title = missing
+        ? `${state.sample.id}에는 이 방향의 검토 기준을 충족한 저장 사례가 없습니다. 다른 이미지로 이동하지 않습니다.`
+        : `현재 이미지 ${state.sample?.id || ''} 안의 ${name}로 이동합니다.`;
+    }
     $('jumpBoundary').disabled =
       !ready || !this.data?.cases.some((c) => c.sample_id === state.sample?.id);
     $('caseSelect').disabled = !ready;
@@ -362,12 +375,12 @@ const Review = {
       `전체 Dice 증가 ${improved}개 / 감소 ${worsened}개. 10_1도 전체·경계 모두 감소합니다. 예제 번호로 실제 영역을 여세요.`;
   },
   bind() {
-    $('showImproved').addEventListener('click', () =>
-      this.open(this.data?.recommended.improved),
-    );
-    $('showWorsened').addEventListener('click', () =>
-      this.open(this.data?.recommended.worsened),
-    );
+    for (const [id, direction] of [['showImproved', 'improved'], ['showWorsened', 'worsened']]) {
+      $(id).addEventListener('click', () => {
+        const target = this.caseFor(direction);
+        if (state.phase === 'ready' && target) this.open(target.id);
+      });
+    }
     $('caseSelect').addEventListener('change', (e) =>
       this.open(e.target.value),
     );
