@@ -1,5 +1,7 @@
 # WSI·IHC 선택 결과 중심 화면
 
+2026-11-16 표현 정리: 공개 **버전 24**, UI [`4ba0a12`](https://github.com/sokldjs554/pathology-edge/commit/4ba0a122b1372dfd5688b2652a743b5a42be7667). ‘정답 사례’를 **맞게 분류한 사례**, ‘정답 중심·crop’을 **세포 위치·확대 영역**으로 바꿨습니다. 용어 설명은 조작 이름의 도움말과 ‘방법·출처’에 남겼습니다. 모바일에서 긴 문구가 사례 선택 메뉴를 밀어내지 않도록 최소 너비를 확보했습니다. [현재 데스크톱](../artifacts/ui-ihc-wording/secondary-ihc-first-1440.png) · [현재 모바일](../artifacts/ui-ihc-wording/secondary-ihc-first-375.png) · [표현 정리본 검증](../artifacts/ui-ihc-wording/verification.json). 아래 전후 표와 개편 검증은 버전 22 기록입니다. 최종 코드의 Chromium·WebKit 검사는 각각 81개 통과했고, 공개 HTML·CSS와 저장소의 일치를 확인했습니다. [공개 주소 재검사](https://github.com/sokldjs554/pathology-edge/actions/runs/43837712207)는 기록 시점에 GitHub 실행 대기 중입니다.
+
 이번 변경은 WSI·IHC 화면에 한정됩니다. 보라색·흰색 스타일, 저장 영상·예측·모델·실험 조건·데이터 출처를 유지했습니다. TNBC 경계 비교 HTML/JS/CSS와 모든 JSON·영상 자산은 변경하지 않았습니다.
 
 | 화면 | 기본으로 보이는 내용 | 필요할 때 펼치는 내용 |
