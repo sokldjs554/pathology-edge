@@ -1,0 +1,159 @@
+{
+  "ui_commit": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+  "site_commit": "bc27b78372b6589e4e944f61a00fe424c097c869",
+  "site_version": 26,
+  "deployment_id": "appgdep_6afb03920b8481918d87e789ab29818f",
+  "deployment_status": "succeeded",
+  "source_browser_run": 43874026047,
+  "production_browser_run": 43875223710,
+  "production_browser_status": "success",
+  "cpu_ci_run": 43874042267,
+  "python_passed": 462,
+  "node_passed": 19,
+  "dice_values_matched": 42,
+  "dice_means_matched": 6,
+  "new_inference_run": false,
+  "new_training_run": false,
+  "user_checked_this_revision": false,
+  "source_browser_stats": {
+    "chromium": {
+      "startTime": "2026-11-16T13:16:06.258Z",
+      "duration": 198061.996,
+      "expected": 88,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webkit": {
+      "startTime": "2026-11-16T13:16:29.472Z",
+      "duration": 227280.796,
+      "expected": 88,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "production_browser_stats": {
+    "chromium": {
+      "startTime": "2026-11-16T13:24:22.634Z",
+      "duration": 226404.61099999998,
+      "expected": 88,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webkit": {
+      "startTime": "2026-11-16T13:25:01.589Z",
+      "duration": 273900.872,
+      "expected": 88,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "capture_source": "production Chromium; run43875223710, Siteversion26",
+  "capture_sha256": {
+    "wsi-native-boundary-375.png": "37bb44295cc7af273c449014e156f57ce153f86a4702294020dc12361e5ba45d",
+    "wsi-native-jpeg-1440.png": "5b16cbc291e73b13e538edee23e4457bdff01f3667605a3545885337a276581c",
+    "wsi-native-boundary-1440.png": "f7f5264cef86c320cdd7496f4ad4625713b0acbddc1731c143a18917fb1e3930",
+    "wsi-native-original-1440.png": "95d3e9c24a1e2ea5a7e669b8b1867db14af2ccac0ada21459efb149f5d3fb90f",
+    "wsi-native-retina.png": "1ef0f26d3ba7a55b6ea934ca9ccca7bf680ad219047c77fc6ee62792ac5ba3d6"
+  },
+  "display_pixel_sample": {
+    "meanAbsoluteError": 0,
+    "jpegMeanAbsoluteError": 3.361328125,
+    "bestShift": {
+      "error": 0,
+      "dx": 0,
+      "dy": 0
+    },
+    "layerBox": {
+      "x": 566,
+      "y": 4.5,
+      "width": 1024,
+      "height": 1024,
+      "top": 4.5,
+      "right": 1590,
+      "bottom": 1028.5,
+      "left": 566
+    },
+    "viewerBox": {
+      "x": 725,
+      "y": 230,
+      "width": 706,
+      "height": 573,
+      "top": 230,
+      "right": 1431,
+      "bottom": 803,
+      "left": 725
+    },
+    "source": [
+      1024,
+      1024
+    ],
+    "zoom": "1.000000"
+  },
+  "public_parity": {
+    "ui_commit": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+    "site_commit": "bc27b78372b6589e4e944f61a00fe424c097c869",
+    "site_version": 26,
+    "identical_site_dist_files": 2197,
+    "public_fetched_files": [
+      {
+        "path": "wsi.js",
+        "sha256": "6edef959a1660e7350f87ced2f418bea448fec63dc62f8b20a6c1683326622bc",
+        "matches": true
+      },
+      {
+        "path": "wsi.html",
+        "sha256": "44533a2d40328ce1eced392b6b0b6add28dc757de38c8e33644745ea4e164bb5",
+        "matches": true
+      },
+      {
+        "path": "secondary-review.css",
+        "sha256": "1aa5217a45487e975cdbd2351aca1f1c28b1d8b7db5fec8027c38826d7fc762b",
+        "matches": true
+      },
+      {
+        "path": "wsi.json",
+        "sha256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+        "matches": true
+      },
+      {
+        "path": "index.html",
+        "sha256": "40a8550b9a14567c09520a355616f6da92503f39a31c4e568e7164de41877405",
+        "matches": true
+      },
+      {
+        "path": "app.js",
+        "sha256": "91160e7ec869ab2a536dca6a8573cb4807dc184d6512c991d7098a0d483444a0",
+        "matches": true
+      },
+      {
+        "path": "ihc.html",
+        "sha256": "09715111184a1bdcb4e04040795b37ea0827e7d45998592e23358922721ec41c",
+        "matches": true
+      },
+      {
+        "path": "ihc.js",
+        "sha256": "c9187c17b93bbe29e8221b2603b43a834f61c75c78fd2490e96b8e88b6fdd7a2",
+        "matches": true
+      },
+      {
+        "path": "wsi/R1.png",
+        "sha256": "fe9aae2ba037beb47d7aa74e058b0660ab86ad434d7f6676f7fe258fe9f8a7f3",
+        "matches": true
+      },
+      {
+        "path": "wsi/R2.png",
+        "sha256": "404f05f24fb421ce328141bc9c141df7fa53b24cff8413e73ea90ca3d0ca6441",
+        "matches": true
+      },
+      {
+        "path": "wsi/R3.png",
+        "sha256": "b526e9c9a33a3a0e0ed29f8c9d47981ee320fc380ea54c7f49f5bd04ec74c08c",
+        "matches": true
+      }
+    ]
+  }
+}

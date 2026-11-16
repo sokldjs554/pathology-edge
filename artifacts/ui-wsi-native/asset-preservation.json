@@ -1,0 +1,11 @@
+{
+  "baseline_commit": "7caca0309652133bd38fd4192ea3966fff112d3f",
+  "implementation_commit": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+  "changed_runtime_files": [
+    "dist/secondary-review.css",
+    "dist/wsi.html",
+    "dist/wsi.js"
+  ],
+  "all_image_mask_result_and_model_assets_unchanged": true,
+  "ihc_and_tnbc_logic_unchanged": true
+}

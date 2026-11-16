@@ -1,6 +1,6 @@
 # WSI native ROI display implementation plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Display original RGB for the three analyzed WSI regions without re-encoded JPEG loss, and avoid excessive automatic enlargement.
 
@@ -26,21 +26,21 @@
 
 ## Task 1: Native image and source state
 Files: dist/wsi.js, dist/wsi.html; tests: web-tests/wsi-native.spec.js.
-- [ ] Add browser regression checks for native source href/level-0 boxes, actual rendered PNG pixels, ROI switches, failed PNG and retry.
-- [ ] Run the new checks on the baseline; confirm missing native display failure.
-- [ ] Decode existing PNGs with dimension validation and the existing finite load timeout. Track readiness/failure separately from prediction overlays.
-- [ ] Add decoded ROI images before predictions in the existing SVG layer; expose the actual center image source in the existing position bar.
-- [ ] Retain base tiles on failure and route retry through image loading. Update source details with the exact mixed display scope.
+- [x] Add browser regression checks for native source href/level-0 boxes, actual rendered PNG pixels, ROI switches, failed PNG and retry.
+- [x] Run the new checks on the baseline; confirm missing native display failure.
+- [x] Decode existing PNGs with dimension validation and the existing finite load timeout. Track readiness/failure separately from prediction overlays.
+- [x] Add decoded ROI images before predictions in the existing SVG layer; expose the actual center image source in the existing position bar.
+- [x] Retain base tiles on failure and route retry through image loading. Update source details with the exact mixed display scope.
 
 ## Task 2: Readable native zoom
 Files: dist/wsi.js, dist/wsi.html, dist/secondary-review.css; tests: web-tests/wsi-native.spec.js, web-tests/wsi.spec.js.
-- [ ] Add checks that jumps reach the stored target at at most 100%, manual zoom remains available, and original 1:1 restores exactly 100% at the same center.
-- [ ] Cap fit-derived image zoom at 1 and retain the fit center; move the existing native button to the main zoom group.
-- [ ] Label manual enlargement using the existing position line, with the CSS pixel definition in help.
-- [ ] Adapt existing test navigation to the moved button, preserving its assertions.
+- [x] Add checks that jumps reach the stored target at at most 100%, manual zoom remains available, and original 1:1 restores exactly 100% at the same center.
+- [x] Cap fit-derived image zoom at 1 and retain the fit center; move the existing native button to the main zoom group.
+- [x] Label manual enlargement using the existing position line, with the CSS pixel definition in help.
+- [x] Adapt existing test navigation to the moved button, preserving its assertions.
 
 ## Task 3: Verify and publish
-- [ ] Verify ROI RGB against the retained SVS source and saved pixel hashes; do not regenerate assets.
-- [ ] Run source browser checks, inspect desktop/notebook/mobile captures, then deploy the existing public Site.
-- [ ] Confirm public source parity, focused public browser flows and pixel checks; retain captures and evidence.
-- [ ] Record source/deployment commit, true image-resolution limits and user confirmation pending.
+- [x] Verify ROI RGB against the retained SVS source and saved pixel hashes; do not regenerate assets.
+- [x] Run source browser checks, inspect desktop/notebook/mobile captures, then deploy the existing public Site.
+- [x] Confirm public source parity, focused public browser flows and pixel checks; retain captures and evidence.
+- [x] Record source/deployment commit, true image-resolution limits and user confirmation pending.

@@ -1,0 +1,32 @@
+[
+  {
+    "roi": "R1",
+    "shape": [
+      1024,
+      1024,
+      3
+    ],
+    "pixel_sha256": "10f9d7a4d8dce0f29881887196e181ae26f7058761de210320d4b63335f035be",
+    "original_svs_pixels_equal": true
+  },
+  {
+    "roi": "R2",
+    "shape": [
+      1024,
+      1024,
+      3
+    ],
+    "pixel_sha256": "052e52d0f9853eb42b5e0576efebbcb0e9b30b894279b1412e1fe6eca7d3a459",
+    "original_svs_pixels_equal": true
+  },
+  {
+    "roi": "R3",
+    "shape": [
+      1024,
+      1024,
+      3
+    ],
+    "pixel_sha256": "a3024ea8a5e0a03ca5a932271364c17c890a7dae4e782ddd02154633d91e0ea7",
+    "original_svs_pixels_equal": true
+  }
+]
