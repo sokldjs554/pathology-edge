@@ -90,7 +90,7 @@ TinyUNet은 width8·29,761파라미터입니다. ViT는8×8 RGB를32차원 토�
 - [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929): 이미지 패치를 토큰으로 바꿔 Transformer로 처리하는 구조를 참고했습니다. 원논문은 대규모 사전학습 분류 연구이며 여기의 작은 핵 분할 실험은 공식 재현이 아닙니다.
 - [PyTorch TransformerEncoder](https://docs.pytorch.org/docs/2.15/generated/torch.nn.TransformerEncoder.html): encoder layer 복제 시 같은 초기 파라미터가 생길 수 있어, 이번 모델은 층을 각각 생성합니다.
 
-에이비스 공고의 ViT 연구·구현 우대사항과 병리 패치 처리 업무에 연결되는 비교입니다. 제공된 모델·실행 도구를 활용하는 사용자 학습 경험과 모델 전체 직접 구현 경험은 구분합니다.
+사용자가 요청한 조건부 모델 비교이자 공고 주요업무의 최신 연구 동향 조사·모델 적용, 병리 패치 처리와 연결되는 비교입니다. ViT 자체가 이 공고의 명시적 우대사항이라는 과거 설명은 정정합니다. [캡처 기준 대조](JOB_POSTING_ALIGNMENT.md). 제공된 모델·실행 도구를 활용하는 사용자 학습 경험과 모델 전체 직접 구현 경험은 구분합니다.
 
 ## 후속 사용자 Codespaces 실행 보고
 

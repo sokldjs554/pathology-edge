@@ -1,8 +1,9 @@
 """User-submitted STEP 1 implementation. See docs/STEP_01.md.
 
 Codex reviewed and tested the submitted function without changing its algorithm.
-The stored PNG/WSI experiments still use their existing native-coordinate path;
-integration with a general pyramid/model-scale adapter remains separate work.
+The stored PNG/WSI experiments retain their existing native-coordinate path.
+STEP 40 connects this transform through learner_wsi.roi_points_to_level0 to
+wsi_roi.roi_patch_manifest using actual read and model dimensions.
 """
 import numpy as np
 
