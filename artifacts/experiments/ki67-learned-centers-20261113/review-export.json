@@ -1,0 +1,67 @@
+{
+  "examples": [
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "criterion": "앞서 확인한107개 후보 사례",
+      "delta_detection_f1": 0.4473684210526316
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "criterion": "첫 검출 seed의 검출F1 최대 하락",
+      "delta_detection_f1": -0.09354838709677418
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "criterion": "첫 검출 seed의 검출F1 최대 상승",
+      "delta_detection_f1": 0.8351482153660013
+    }
+  ],
+  "heatmap_replays": [
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261117,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261118,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "seed": 20261119,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261117,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261118,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0004_region_0_patch_11_O.png",
+      "seed": 20261119,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261117,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261118,
+      "coordinates_and_scores_exact": true
+    },
+    {
+      "image": "case_0015_region_1_patch_14_O.png",
+      "seed": 20261119,
+      "coordinates_and_scores_exact": true
+    }
+  ],
+  "all_replays_exact": true
+}

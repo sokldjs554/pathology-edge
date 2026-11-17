@@ -1,0 +1,31 @@
+PathologyEdge 자동 Ki-67 추가 연구 자료 — 2026-11-13 (Asia/Seoul)
+
+1. viewer.html을 열어 원영상 / 정답 중심점 / 자동 예측을 비교합니다.
+   사전 계산 결과를 보여 주는 검토 화면이며 웹브라우저에서 모델 추론하는 기능은 아닙니다.
+2. docs/AUTO_KI67_EXPERIMENT.md에 전체 결과·실패 원인·검증 범위가 있습니다.
+3. docs/AUTO_KI67_REVIEW.md에 본인이 확인할 다음 한 단계가 있습니다. 현재 미완료입니다.
+
+실제로 끝난 작업:
+- 영상만 입력하는 자동 위치 검출 → 4개 세포 클래스 분류 → 종양 양성률 계산
+- 기존 분류기와 CNN 세 seed 학습·비교
+- 기존 내부 테스트407장 및 외부 BCData validation133장 평가
+- 독립 재집계2,160건 일치, 전체 테스트501개 통과, 브라우저12조합·작은화면 확인
+
+결론:
+자동 실행 기준선은 구현했으나 과다 검출이 매우 큽니다.
+내부 양성률 오차 감소와 세포 검출·분류 성능 개선은 같지 않습니다.
+외부 CNN 양성률 오차는 세 seed 모두 악화되어 외부 성능 개선을 입증하지 못했습니다.
+임상 검증, WSI 전체 자동 Ki-67/핵 정답 검증을 완료한 자료가 아닙니다.
+
+이 추가 자료를 사용자가 직접 작성·실행·검토했다고 기록하지 않았습니다.
+기존 사용자 기록은 U86까지이며, 새 화면 검토는 사용자 응답 전까지 대기 상태입니다.
+기존 학습자 파일7개와 실험·데모는 보존했습니다.
+
+기존 전체 과정·사용자 직접 기여·최신 NuCLS·U86 통합 묶음(별도, 이전 내용 그대로):
+https://raw.githubusercontent.com/sokldjs554/pathology-edge/ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e/artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip
+SHA256 a74b32bcfacf0f347600b2f6efd627d1b808cca338d0c975227a801def50b073
+
+저장소: https://github.com/sokldjs554/pathology-edge
+기존 데모: https://pathology-edge-lab.ykh13571.chatgpt.site/
+기존 배포 데모에 새 자동 분석이 연결되었다고 표현하지 마세요.
+원자료와 전체 개별 좌표는 포함하지 않습니다. Patherea 예시3장은 CC BY-NC4.0 표시와 함께 제공하며 BCData 원영상·좌표는 재배포하지 않습니다.

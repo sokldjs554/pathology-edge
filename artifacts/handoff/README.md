@@ -1,4 +1,33 @@
+# 최신 전체 진행 자료 — U106 / 2026-11-15 KST
+
+[PathologyEdge-All-Progress-U106-20261115.zip](https://raw.githubusercontent.com/sokldjs554/pathology-edge/b15ae2ae0bcc2934da2df30d544bae993cdae86d/artifacts/handoff/PathologyEdge-All-Progress-U106-20261115.zip) — **1,754개 파일 · 97,886,928 bytes (약97.9MB)**. 초기 구현부터 마지막 사전학습·DeepLIIF 평가까지 23개 과정의 문서·소스·실험·감사를 통합했습니다. 압축을 푼 뒤 `START_HERE.html`을 여세요.
+
+- 본인 작성 7개 코드와 테스트 파일, U00–U106 원문 기록, 이후 수정 해석 답변·마지막 시도 요청을 포함합니다. 예정·보류는 완료로 변경하지 않았습니다.
+- 본인 C++·CNN/ViT 연구 원본 ZIP과 보정 head 원본 ZIP 두 개도 안에 포함했습니다.
+- 대용량 모델·예측·WSI 타일·추가 화면은 `FILE_INVENTORY.json`에 포함 여부·고정 URL·SHA256을 기록하고 원본 증거는 `DOWNLOADS.html`에서 연결합니다. BCData 원영상/HDF5/개별 세포 좌표·임상 자료는 포함하지 않습니다.
+- 모든 실험의 실행 완료와 성능 조건 통과를 구분합니다. 마지막 내부 채택0/3, 재사용 내부 test1/3, 재사용 BCData3/3, 새 DeepLIIF1/3이며 임상·전체 WSI 정답 검증은 미실시입니다.
+- 소스 기준 `fbc5f0d7e09f151c2790eca5e7463b41fdf279e7`. SHA256: `e8ab399d5920dcd717983c199226cd995db912f7d0393246ea69a6b1f7dfd009`.
+- [실제 익명 다운로드 대조](all-progress-u106-20261115/publication.json) · [포장 검사](all-progress-u106-20261115/verification.json) · [브라우저 검사](all-progress-u106-20261115/browser.json). 이번 작업은 자료 통합이며 사용자 새 실행·새 학습·추론으로 기록하지 않았습니다.
+
+## 아래는 이전 발행 당시의 기록
+
+이하 ‘현재/최신’이라는 문구와 테스트 수는 당시 상태입니다. 최신 통합본은 맨 위 파일을 사용합니다.
+
 # Cowork 전달 파일
+
+**2026-11-15 KST 추가 자료:** [마지막 사전학습·외부 평가 검토 ZIP](PathologyEdge-FinalTransfer-20261115.zip), 4,610,073 bytes. [결과·실행 방법](../../docs/KI67_FINAL_TRANSFER.md) · [전체 증거·SHA256](../experiments/ki67-final-transfer-20261115/). 기존 Cowork 통합 ZIP은 발행 당시 보관본이며, 이번 추가 실험과 최신 U106 확인 범위는 연결된 보고서를 함께 읽습니다. 이번 자동 학습·검산·화면 검사를 사용자 직접 수행으로 추가하지 않았습니다.
+
+
+**발행 이후 본인 확인:** U98·U99에서 CNN–ViT09_1·09_6 확대 그림의 정상 표시를, U100에서 제공 FP·FN 수치와 Dice 방향의 해석을 확인했습니다. [현재 기록](../../docs/CONTRIBUTIONS.md) · [완료한 해석 범위](../../docs/STEP_86.md). 아래 U97 ZIP과 해시는 발행 당시 상태를 유지하므로 새로 받을 필요 없습니다.
+
+**현재 통합 묶음: [PathologyEdge-Cowork-U97-20261113.zip](https://raw.githubusercontent.com/sokldjs554/pathology-edge/cede17581ae9bde9e33d458950bdedb0d984a5a7/artifacts/handoff/PathologyEdge-Cowork-U97-20261113.zip)** — 781파일, 24,135,855bytes(약24.1MB). 기존 U86 자료에 자동 Ki-67 패치 분석·후보 제거·학습 중심·재현율 진단과 U87–U97 응답을 통합했습니다. ZIP에는 발행 당시 예정 상태가 남아 있으며 후속 U98–U100의 완료 범위는 위 현재 기록을 따릅니다. 압축을 풀어 `START_HERE.html`을 여세요.
+
+SHA256: `fc4362f179c03c20e6dbf40f702f44e87b0b68d1a5f1d4cbf60651524acab9ee`. 문서 기준 소스 `7a13d43993b179a359fbe8314392e0ae34276325`. [실제 다운로드 대조](u97-checks/download-check.json) · [패키지 검사](u97-checks/build-report.json) · [브라우저 확인](u97-checks/browser-check.json) · [현재 요약](../../docs/HANDOFF_U97.md). 큰 원본 모델·예측·모바일 캡처는 ZIP 안 `EVIDENCE_DOWNLOADS.md`의 고정 링크·SHA로 보존했습니다. 완전한 설치 패키지는 아닙니다.
+
+현재 후속 소스는 draft PR #2이며 main 병합·공개 데모 배포를 하지 않았습니다. 최신 실제 코드 CI는 `fda5695`의571passed/skip0이며 이번 통합은 문서·포장·브라우저 연결 검사만 수행했습니다. 사용자 새 실행으로 기록하지 않습니다.
+
+## 이전 발행 기록 — 당시 상태 그대로
+
 
 **최신 통합 묶음(2026-11-13 KST):** [PathologyEdge-Final-Handoff-20261113.zip 다운로드](https://raw.githubusercontent.com/sokldjs554/pathology-edge/main/artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip). **415개 파일 · 16,397,030bytes(약16.4MB)**. 이전365개 파일의 범위를 유지하면서 최신 문서, NuCLS51시야·5케이스 결과/정렬 그림, U84–U86 확인을 통합했다. 압축을 풀어 `START_HERE.html`부터 읽는다. 큰 원본 증거ZIP7개는 고정 링크·SHA로 연결한다.
 

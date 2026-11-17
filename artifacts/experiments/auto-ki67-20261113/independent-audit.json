@@ -1,0 +1,15 @@
+{
+  "all_checks_passed": true,
+  "image_count": 407,
+  "arms": [
+    "lr",
+    "cnn-20261113",
+    "cnn-20261114",
+    "cnn-20261115"
+  ],
+  "image_arm_recounts": 1628,
+  "maximum_cardinality_independent_solver": "scipy.sparse.csgraph.maximum_bipartite_matching",
+  "prediction_sha256": "9c38381d5de3afa1e3ce4f372b82b2b8275030f97a54cb28345d7cbf8d6ddc93",
+  "new_inference_run": false,
+  "clinical_validation": false
+}

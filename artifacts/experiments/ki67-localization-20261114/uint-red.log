@@ -1,0 +1,112 @@
+..........................FFFFFFF                                        [100%]
+=================================== FAILURES ===================================
+_________ test_unsigned_scores_keep_high_score_above_threshold[uint8] __________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+dtype = <class 'numpy.uint8'>
+
+    @pytest.mark.parametrize('dtype',[np.uint8,np.uint16,np.uint32,np.uint64])
+    def test_unsigned_scores_keep_high_score_above_threshold(api,dtype):
+        result=api.retain_candidates(np.array([[0,0],[20,20]]),np.array([0,1],dtype=dtype),.5,4)
+>       assert result['points_xy'].tolist()==[[20,20]]
+E       assert [] == [[20, 20]]
+E         
+E         Right contains one more item: [20, 20]
+E         Use -v to get more diff
+
+tests/test_ki67_union.py:116: AssertionError
+_________ test_unsigned_scores_keep_high_score_above_threshold[uint16] _________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+dtype = <class 'numpy.uint16'>
+
+    @pytest.mark.parametrize('dtype',[np.uint8,np.uint16,np.uint32,np.uint64])
+    def test_unsigned_scores_keep_high_score_above_threshold(api,dtype):
+        result=api.retain_candidates(np.array([[0,0],[20,20]]),np.array([0,1],dtype=dtype),.5,4)
+>       assert result['points_xy'].tolist()==[[20,20]]
+E       assert [] == [[20, 20]]
+E         
+E         Right contains one more item: [20, 20]
+E         Use -v to get more diff
+
+tests/test_ki67_union.py:116: AssertionError
+_________ test_unsigned_scores_keep_high_score_above_threshold[uint32] _________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+dtype = <class 'numpy.uint32'>
+
+    @pytest.mark.parametrize('dtype',[np.uint8,np.uint16,np.uint32,np.uint64])
+    def test_unsigned_scores_keep_high_score_above_threshold(api,dtype):
+        result=api.retain_candidates(np.array([[0,0],[20,20]]),np.array([0,1],dtype=dtype),.5,4)
+>       assert result['points_xy'].tolist()==[[20,20]]
+E       assert [] == [[20, 20]]
+E         
+E         Right contains one more item: [20, 20]
+E         Use -v to get more diff
+
+tests/test_ki67_union.py:116: AssertionError
+_________ test_unsigned_scores_keep_high_score_above_threshold[uint64] _________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+dtype = <class 'numpy.uint64'>
+
+    @pytest.mark.parametrize('dtype',[np.uint8,np.uint16,np.uint32,np.uint64])
+    def test_unsigned_scores_keep_high_score_above_threshold(api,dtype):
+        result=api.retain_candidates(np.array([[0,0],[20,20]]),np.array([0,1],dtype=dtype),.5,4)
+>       assert result['points_xy'].tolist()==[[20,20]]
+E       assert [] == [[20, 20]]
+E         
+E         Right contains one more item: [20, 20]
+E         Use -v to get more diff
+
+tests/test_ki67_union.py:116: AssertionError
+___________ test_unsigned_scores_do_not_let_zero_suppress_one[uint8] ___________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+dtype = <class 'numpy.uint8'>
+
+    @pytest.mark.parametrize('dtype',[np.uint8,np.uint64])
+    def test_unsigned_scores_do_not_let_zero_suppress_one(api,dtype):
+        result=api.retain_candidates(np.array([[0,0],[2,0]]),np.array([0,1],dtype=dtype),0,4)
+>       assert result['points_xy'].tolist()==[[2,0]]
+E       assert [[0, 0]] == [[2, 0]]
+E         
+E         At index 0 diff: [0, 0] != [2, 0]
+E         Use -v to get more diff
+
+tests/test_ki67_union.py:122: AssertionError
+__________ test_unsigned_scores_do_not_let_zero_suppress_one[uint64] ___________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+dtype = <class 'numpy.uint64'>
+
+    @pytest.mark.parametrize('dtype',[np.uint8,np.uint64])
+    def test_unsigned_scores_do_not_let_zero_suppress_one(api,dtype):
+        result=api.retain_candidates(np.array([[0,0],[2,0]]),np.array([0,1],dtype=dtype),0,4)
+>       assert result['points_xy'].tolist()==[[2,0]]
+E       assert [[0, 0]] == [[2, 0]]
+E         
+E         At index 0 diff: [0, 0] != [2, 0]
+E         Use -v to get more diff
+
+tests/test_ki67_union.py:122: AssertionError
+__________ test_float32_cutoff_uses_score_value_not_rounded_threshold __________
+
+api = <module 'pathology_edge.ki67_union' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_union.py'>
+
+    def test_float32_cutoff_uses_score_value_not_rounded_threshold(api):
+        result=api.retain_candidates(np.array([[0,0]]),np.array([.7],dtype=np.float32),.7,4)
+>       assert len(result['points_xy'])==0
+E       assert 1 == 0
+E        +  where 1 = len(array([[0, 0]]))
+
+tests/test_ki67_union.py:127: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_ki67_union.py::test_unsigned_scores_keep_high_score_above_threshold[uint8]
+FAILED tests/test_ki67_union.py::test_unsigned_scores_keep_high_score_above_threshold[uint16]
+FAILED tests/test_ki67_union.py::test_unsigned_scores_keep_high_score_above_threshold[uint32]
+FAILED tests/test_ki67_union.py::test_unsigned_scores_keep_high_score_above_threshold[uint64]
+FAILED tests/test_ki67_union.py::test_unsigned_scores_do_not_let_zero_suppress_one[uint8]
+FAILED tests/test_ki67_union.py::test_unsigned_scores_do_not_let_zero_suppress_one[uint64]
+FAILED tests/test_ki67_union.py::test_float32_cutoff_uses_score_value_not_rounded_threshold
+7 failed, 26 passed in 3.81s

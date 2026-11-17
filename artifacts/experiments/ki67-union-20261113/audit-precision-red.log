@@ -1,0 +1,17 @@
+...F                                                                     [100%]
+=================================== FAILURES ===================================
+___________ test_saved_float32_score_is_compared_at_its_exact_value ____________
+
+audit = <module 'union_audit' from '/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py'>
+
+    def test_saved_float32_score_is_compared_at_its_exact_value(audit):
+        # np.float32(.7) is 0.699999988..., strictly below the configured .7.
+        points,scores=audit.independent_decode([[0,0]],np.array([.7],dtype=np.float32),dict(threshold=.7,min_distance=4))
+>       assert len(points)==0
+E       assert 1 == 0
+E        +  where 1 = len(array([[0, 0]]))
+
+tests/test_ki67_union_audit.py:37: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_ki67_union_audit.py::test_saved_float32_score_is_compared_at_its_exact_value
+1 failed, 3 passed in 1.65s

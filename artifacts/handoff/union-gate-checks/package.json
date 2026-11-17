@@ -1,0 +1,9 @@
+{
+  "zip": "artifacts/handoff/PathologyEdge-UnionGate-Review-20261113.zip",
+  "sha256": "16485c66fd57cb741414874583177214b0502a0274d3094ad27b17b3d30b6f05",
+  "bytes": 1769895,
+  "members": 15,
+  "crc_passed": true,
+  "member_hashes_passed": true,
+  "review_user_confirmed": false
+}

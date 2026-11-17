@@ -1,0 +1,461 @@
+﻿2026-11-13T09:56:32.0809194Z Current runner version: '2.338.2'
+2026-11-13T09:56:32.0834921Z ##[group]Runner Image Provisioner
+2026-11-13T09:56:32.0835890Z Hosted Compute Agent
+2026-11-13T09:56:32.0836540Z Version: 20261028.624
+2026-11-13T09:56:32.0837235Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-13T09:56:32.0837997Z Build Date: 2026-10-28T21:51:42Z
+2026-11-13T09:56:32.0838702Z Worker ID: {e9ea1d21-d607-4ea1-b5bd-7ff20acc5990}
+2026-11-13T09:56:32.0839539Z Region: westcentralus
+2026-11-13T09:56:32.0840171Z Cloud: Azure
+2026-11-13T09:56:32.0840786Z ##[endgroup]
+2026-11-13T09:56:32.0843043Z ##[group]Operating System
+2026-11-13T09:56:32.0843702Z Ubuntu
+2026-11-13T09:56:32.0844329Z 24.04.5
+2026-11-13T09:56:32.0844902Z LTS
+2026-11-13T09:56:32.0845474Z ##[endgroup]
+2026-11-13T09:56:32.0846124Z ##[group]Runner Image
+2026-11-13T09:56:32.0846746Z Image: ubuntu-24.04
+2026-11-13T09:56:32.0847376Z Version: 20261101.360.1
+2026-11-13T09:56:32.0848709Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T09:56:32.0850340Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-13T09:56:32.0851431Z ##[endgroup]
+2026-11-13T09:56:32.0853821Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T09:56:32.0856094Z Contents: read
+2026-11-13T09:56:32.0856850Z Metadata: read
+2026-11-13T09:56:32.0857601Z Packages: read
+2026-11-13T09:56:32.0858170Z ##[endgroup]
+2026-11-13T09:56:32.0860428Z Secret source: Actions
+2026-11-13T09:56:32.0861412Z Cache mode: write
+2026-11-13T09:56:32.0863273Z Prepare workflow directory
+2026-11-13T09:56:32.1206061Z Prepare all required actions
+2026-11-13T09:56:32.1254249Z Getting action download info
+2026-11-13T09:56:32.4415639Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-13T09:56:32.6004309Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T09:56:32.8463665Z Complete job name: test
+2026-11-13T09:56:32.9354455Z ##[group]Run actions/checkout@v4
+2026-11-13T09:56:32.9355364Z with:
+2026-11-13T09:56:32.9355845Z   repository: sokldjs554/pathology-edge
+2026-11-13T09:56:32.9359464Z   token: ***
+2026-11-13T09:56:32.9359907Z   ssh-strict: true
+2026-11-13T09:56:32.9360362Z   ssh-user: git
+2026-11-13T09:56:32.9360818Z   persist-credentials: true
+2026-11-13T09:56:32.9361318Z   clean: true
+2026-11-13T09:56:32.9361988Z   sparse-checkout-cone-mode: true
+2026-11-13T09:56:32.9362521Z   fetch-depth: 1
+2026-11-13T09:56:32.9362979Z   fetch-tags: false
+2026-11-13T09:56:32.9363429Z   show-progress: true
+2026-11-13T09:56:32.9363887Z   lfs: false
+2026-11-13T09:56:32.9364319Z   submodules: false
+2026-11-13T09:56:32.9364784Z   set-safe-directory: true
+2026-11-13T09:56:32.9365304Z   allow-unsafe-pr-checkout: false
+2026-11-13T09:56:32.9366090Z ##[endgroup]
+2026-11-13T09:56:33.4582208Z Syncing repository: sokldjs554/pathology-edge
+2026-11-13T09:56:33.4584263Z ##[group]Getting Git version info
+2026-11-13T09:56:33.4585342Z Working directory is '/home/runner/work/pathology-edge/pathology-edge'
+2026-11-13T09:56:33.4587063Z [command]/usr/bin/git version
+2026-11-13T09:56:33.4849305Z git version 2.56.0
+2026-11-13T09:56:33.4873987Z ##[endgroup]
+2026-11-13T09:56:33.4892777Z Temporarily overriding HOME='/home/runner/work/_temp/dee9a1b5-7102-4fa7-8a58-e9d621c419fa' before making global git config changes
+2026-11-13T09:56:33.4895266Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:56:33.4898988Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pathology-edge/pathology-edge
+2026-11-13T09:56:33.4964287Z Deleting the contents of '/home/runner/work/pathology-edge/pathology-edge'
+2026-11-13T09:56:33.4975112Z ##[group]Initializing the repository
+2026-11-13T09:56:33.4983150Z [command]/usr/bin/git init /home/runner/work/pathology-edge/pathology-edge
+2026-11-13T09:56:33.5108216Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T09:56:33.5110192Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T09:56:33.5111295Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T09:56:33.5112729Z hint: call:
+2026-11-13T09:56:33.5113235Z hint:
+2026-11-13T09:56:33.5113852Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T09:56:33.5114586Z hint:
+2026-11-13T09:56:33.5115283Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T09:56:33.5116485Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T09:56:33.5117369Z hint:
+2026-11-13T09:56:33.5117860Z hint: 	git branch -m <name>
+2026-11-13T09:56:33.5118425Z hint:
+2026-11-13T09:56:33.5119119Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T09:56:33.5123154Z Initialized empty Git repository in /home/runner/work/pathology-edge/pathology-edge/.git/
+2026-11-13T09:56:33.5137250Z [command]/usr/bin/git remote add origin https://github.com/sokldjs554/pathology-edge
+2026-11-13T09:56:33.5351750Z ##[endgroup]
+2026-11-13T09:56:33.5353221Z ##[group]Disabling automatic garbage collection
+2026-11-13T09:56:33.5354764Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T09:56:33.5390153Z ##[endgroup]
+2026-11-13T09:56:33.5391970Z ##[group]Setting up auth
+2026-11-13T09:56:33.5400728Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:56:33.5450677Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:56:33.5910058Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:56:33.5954324Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:56:33.6197292Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:56:33.6239961Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:56:33.6480631Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T09:56:33.6529569Z ##[endgroup]
+2026-11-13T09:56:33.6530563Z ##[group]Fetching the repository
+2026-11-13T09:56:33.6546467Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0067836921f4b84b30b1e96b07fdabc22000e545:refs/remotes/pull/2/merge
+2026-11-13T09:56:47.2433836Z From https://github.com/sokldjs554/pathology-edge
+2026-11-13T09:56:47.2435120Z  * [new ref]         0067836921f4b84b30b1e96b07fdabc22000e545 -> pull/2/merge
+2026-11-13T09:56:47.2439396Z ##[endgroup]
+2026-11-13T09:56:47.2440407Z ##[group]Determining the checkout info
+2026-11-13T09:56:47.2442498Z ##[endgroup]
+2026-11-13T09:56:47.2457433Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T09:56:47.2518014Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T09:56:47.2557433Z ##[group]Checking out the ref
+2026-11-13T09:56:47.2562003Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2026-11-13T09:56:48.2973616Z Updating files:  23% (810/3462)
+2026-11-13T09:56:48.3010134Z Updating files:  24% (831/3462)
+2026-11-13T09:56:48.3032826Z Updating files:  25% (866/3462)
+2026-11-13T09:56:48.3439961Z Updating files:  26% (901/3462)
+2026-11-13T09:56:48.3664492Z Updating files:  27% (935/3462)
+2026-11-13T09:56:48.4264651Z Updating files:  28% (970/3462)
+2026-11-13T09:56:48.4334250Z Updating files:  29% (1004/3462)
+2026-11-13T09:56:48.4398443Z Updating files:  30% (1039/3462)
+2026-11-13T09:56:48.4573082Z Updating files:  31% (1074/3462)
+2026-11-13T09:56:48.4906590Z Updating files:  32% (1108/3462)
+2026-11-13T09:56:48.5016634Z Updating files:  33% (1143/3462)
+2026-11-13T09:56:48.5089805Z Updating files:  34% (1178/3462)
+2026-11-13T09:56:48.5206348Z Updating files:  35% (1212/3462)
+2026-11-13T09:56:48.5299675Z Updating files:  36% (1247/3462)
+2026-11-13T09:56:48.5358197Z Updating files:  37% (1281/3462)
+2026-11-13T09:56:48.5408333Z Updating files:  38% (1316/3462)
+2026-11-13T09:56:48.5514342Z Updating files:  39% (1351/3462)
+2026-11-13T09:56:48.5610597Z Updating files:  40% (1385/3462)
+2026-11-13T09:56:48.5703552Z Updating files:  41% (1420/3462)
+2026-11-13T09:56:48.5795269Z Updating files:  42% (1455/3462)
+2026-11-13T09:56:48.5874982Z Updating files:  43% (1489/3462)
+2026-11-13T09:56:48.5952918Z Updating files:  44% (1524/3462)
+2026-11-13T09:56:48.6027024Z Updating files:  45% (1558/3462)
+2026-11-13T09:56:48.6132658Z Updating files:  46% (1593/3462)
+2026-11-13T09:56:48.6221044Z Updating files:  47% (1628/3462)
+2026-11-13T09:56:48.6278868Z Updating files:  48% (1662/3462)
+2026-11-13T09:56:48.6341915Z Updating files:  49% (1697/3462)
+2026-11-13T09:56:48.6396364Z Updating files:  50% (1731/3462)
+2026-11-13T09:56:48.6467497Z Updating files:  51% (1766/3462)
+2026-11-13T09:56:48.6543884Z Updating files:  52% (1801/3462)
+2026-11-13T09:56:48.6620422Z Updating files:  53% (1835/3462)
+2026-11-13T09:56:48.6692359Z Updating files:  54% (1870/3462)
+2026-11-13T09:56:48.6756793Z Updating files:  55% (1905/3462)
+2026-11-13T09:56:48.6826639Z Updating files:  56% (1939/3462)
+2026-11-13T09:56:48.6887394Z Updating files:  57% (1974/3462)
+2026-11-13T09:56:48.6958761Z Updating files:  58% (2008/3462)
+2026-11-13T09:56:48.7012894Z Updating files:  59% (2043/3462)
+2026-11-13T09:56:48.7064605Z Updating files:  60% (2078/3462)
+2026-11-13T09:56:48.7106707Z Updating files:  61% (2112/3462)
+2026-11-13T09:56:48.7153803Z Updating files:  62% (2147/3462)
+2026-11-13T09:56:48.7192180Z Updating files:  63% (2182/3462)
+2026-11-13T09:56:48.7234225Z Updating files:  64% (2216/3462)
+2026-11-13T09:56:48.7284587Z Updating files:  65% (2251/3462)
+2026-11-13T09:56:48.7372609Z Updating files:  66% (2285/3462)
+2026-11-13T09:56:48.7455183Z Updating files:  67% (2320/3462)
+2026-11-13T09:56:48.7538671Z Updating files:  68% (2355/3462)
+2026-11-13T09:56:48.7653585Z Updating files:  69% (2389/3462)
+2026-11-13T09:56:48.7735863Z Updating files:  70% (2424/3462)
+2026-11-13T09:56:48.7820444Z Updating files:  71% (2459/3462)
+2026-11-13T09:56:48.7897195Z Updating files:  72% (2493/3462)
+2026-11-13T09:56:48.7966634Z Updating files:  73% (2528/3462)
+2026-11-13T09:56:48.8034782Z Updating files:  74% (2562/3462)
+2026-11-13T09:56:48.8108322Z Updating files:  75% (2597/3462)
+2026-11-13T09:56:48.8180770Z Updating files:  76% (2632/3462)
+2026-11-13T09:56:48.8247112Z Updating files:  77% (2666/3462)
+2026-11-13T09:56:48.8306365Z Updating files:  78% (2701/3462)
+2026-11-13T09:56:48.8366357Z Updating files:  79% (2735/3462)
+2026-11-13T09:56:48.8434533Z Updating files:  80% (2770/3462)
+2026-11-13T09:56:48.8491899Z Updating files:  81% (2805/3462)
+2026-11-13T09:56:48.8549378Z Updating files:  82% (2839/3462)
+2026-11-13T09:56:48.8607320Z Updating files:  83% (2874/3462)
+2026-11-13T09:56:48.8659013Z Updating files:  84% (2909/3462)
+2026-11-13T09:56:48.8698861Z Updating files:  85% (2943/3462)
+2026-11-13T09:56:48.8763380Z Updating files:  86% (2978/3462)
+2026-11-13T09:56:48.8829721Z Updating files:  87% (3012/3462)
+2026-11-13T09:56:48.8901331Z Updating files:  88% (3047/3462)
+2026-11-13T09:56:48.8980615Z Updating files:  89% (3082/3462)
+2026-11-13T09:56:48.9048269Z Updating files:  90% (3116/3462)
+2026-11-13T09:56:48.9111172Z Updating files:  91% (3151/3462)
+2026-11-13T09:56:48.9139147Z Updating files:  92% (3186/3462)
+2026-11-13T09:56:48.9159955Z Updating files:  93% (3220/3462)
+2026-11-13T09:56:48.9180801Z Updating files:  94% (3255/3462)
+2026-11-13T09:56:48.9205907Z Updating files:  95% (3289/3462)
+2026-11-13T09:56:48.9230660Z Updating files:  96% (3324/3462)
+2026-11-13T09:56:48.9252493Z Updating files:  97% (3359/3462)
+2026-11-13T09:56:48.9274079Z Updating files:  98% (3393/3462)
+2026-11-13T09:56:48.9294296Z Updating files:  99% (3428/3462)
+2026-11-13T09:56:48.9374638Z Updating files: 100% (3462/3462)
+2026-11-13T09:56:48.9375208Z Updating files: 100% (3462/3462), done.
+2026-11-13T09:56:48.9382632Z Note: switching to 'refs/remotes/pull/2/merge'.
+2026-11-13T09:56:48.9383045Z 
+2026-11-13T09:56:48.9383538Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T09:56:48.9384428Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T09:56:48.9385287Z state without impacting any branches by switching back to a branch.
+2026-11-13T09:56:48.9385825Z 
+2026-11-13T09:56:48.9386334Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T09:56:48.9387155Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T09:56:48.9387696Z 
+2026-11-13T09:56:48.9388047Z   git switch -c <new-branch-name>
+2026-11-13T09:56:48.9388381Z 
+2026-11-13T09:56:48.9388625Z Or undo this operation with:
+2026-11-13T09:56:48.9388994Z 
+2026-11-13T09:56:48.9389271Z   git switch -
+2026-11-13T09:56:48.9389472Z 
+2026-11-13T09:56:48.9389823Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T09:56:48.9390341Z 
+2026-11-13T09:56:48.9390928Z HEAD is now at 0067836 Merge fda5695cac0312889e1355539c475d9d6fcad70d into ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e
+2026-11-13T09:56:48.9504883Z ##[endgroup]
+2026-11-13T09:56:48.9565629Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T09:56:48.9604399Z 0067836921f4b84b30b1e96b07fdabc22000e545
+2026-11-13T09:56:48.9901295Z ##[group]Run actions/setup-python@v5
+2026-11-13T09:56:48.9901867Z with:
+2026-11-13T09:56:48.9902079Z   python-version: 3.12
+2026-11-13T09:56:48.9902312Z   cache: pip
+2026-11-13T09:56:48.9902507Z   check-latest: false
+2026-11-13T09:56:48.9904846Z   token: ***
+2026-11-13T09:56:48.9905066Z   update-environment: true
+2026-11-13T09:56:48.9905312Z   allow-prereleases: false
+2026-11-13T09:56:48.9905545Z   freethreaded: false
+2026-11-13T09:56:48.9905758Z ##[endgroup]
+2026-11-13T09:56:49.1310111Z ##[group]Installed versions
+2026-11-13T09:56:49.1455721Z (node:2412) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:56:49.1456644Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:56:49.1457190Z Successfully set up CPython (3.12.16)
+2026-11-13T09:56:49.1457877Z ##[endgroup]
+2026-11-13T09:56:49.4542644Z [command]/opt/hostedtoolcache/Python/3.12.16/x64/bin/pip cache dir
+2026-11-13T09:56:49.7440090Z /home/runner/.cache/pip
+2026-11-13T09:56:49.9582111Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-d302e4946aa3b31ce209b1f7b742613ee437523770b61c03b2935eed13d443c6
+2026-11-13T09:56:49.9688381Z (node:2412) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-13T09:56:51.1753676Z Received 58720256 of 353211647 (16.6%), 55.9 MBs/sec
+2026-11-13T09:56:52.1803081Z Received 222298112 of 353211647 (62.9%), 105.8 MBs/sec
+2026-11-13T09:56:52.9297771Z Received 353211647 of 353211647 (100.0%), 122.1 MBs/sec
+2026-11-13T09:56:52.9299025Z Cache Size: ~337 MB (353211647 B)
+2026-11-13T09:56:52.9391927Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7db5230b-3c82-49e4-be92-35ecc3e8b1d6/cache.tzst -P -C /home/runner/work/pathology-edge/pathology-edge --use-compress-program unzstd
+2026-11-13T09:56:53.4467904Z Cache restored successfully
+2026-11-13T09:56:53.4620462Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-d302e4946aa3b31ce209b1f7b742613ee437523770b61c03b2935eed13d443c6
+2026-11-13T09:56:53.4911130Z ##[group]Run python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt
+2026-11-13T09:56:53.4912421Z [36;1mpython -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-lock.txt[0m
+2026-11-13T09:56:53.4940073Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:56:53.4940354Z env:
+2026-11-13T09:56:53.4940651Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:56:53.4941131Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:56:53.4941918Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:56:53.4942338Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:56:53.4942743Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:56:53.4943135Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:56:53.4943465Z ##[endgroup]
+2026-11-13T09:56:54.4085164Z Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cpu
+2026-11-13T09:56:54.9079982Z Collecting certifi==2026.10.23 (from -r requirements-lock.txt (line 1))
+2026-11-13T09:56:54.9093020Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-13T09:56:55.0746685Z Collecting charset-normalizer==3.5.2 (from -r requirements-lock.txt (line 2))
+2026-11-13T09:56:55.0759239Z   Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-11-13T09:56:55.2235543Z Collecting cloudpickle==3.1.2 (from -r requirements-lock.txt (line 3))
+2026-11-13T09:56:55.2248350Z   Using cached cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+2026-11-13T09:56:55.2946593Z Collecting filelock==4.2.9 (from -r requirements-lock.txt (line 4))
+2026-11-13T09:56:55.2958779Z   Using cached filelock-4.2.9-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T09:56:55.3578022Z Collecting fsspec==2026.9.0 (from -r requirements-lock.txt (line 5))
+2026-11-13T09:56:55.3590540Z   Using cached fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+2026-11-13T09:56:55.4225923Z Collecting idna==3.20 (from -r requirements-lock.txt (line 6))
+2026-11-13T09:56:55.4237899Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-13T09:56:55.5807302Z Collecting iniconfig==2.3.1 (from -r requirements-lock.txt (line 7))
+2026-11-13T09:56:55.5819706Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-13T09:56:55.6304676Z Collecting Jinja2==3.1.6 (from -r requirements-lock.txt (line 8))
+2026-11-13T09:56:55.6511706Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-11-13T09:56:55.7406790Z Collecting joblib==1.6.0 (from -r requirements-lock.txt (line 9))
+2026-11-13T09:56:55.7419248Z   Using cached joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+2026-11-13T09:56:55.8592806Z Collecting MarkupSafe==3.0.4 (from -r requirements-lock.txt (line 10))
+2026-11-13T09:56:55.8605277Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-11-13T09:56:55.9127293Z Collecting mpmath==1.3.0 (from -r requirements-lock.txt (line 11))
+2026-11-13T09:56:55.9138845Z   Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-11-13T09:56:55.9805770Z Collecting networkx==3.7 (from -r requirements-lock.txt (line 12))
+2026-11-13T09:56:55.9818218Z   Using cached networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+2026-11-13T09:56:56.4909503Z Collecting numpy==2.5.4 (from -r requirements-lock.txt (line 13))
+2026-11-13T09:56:56.4923084Z   Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-11-13T09:56:56.6171539Z Collecting opencv-python-headless==5.0.0.93 (from -r requirements-lock.txt (line 14))
+2026-11-13T09:56:56.6184388Z   Using cached opencv_python_headless-5.0.0.93-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (19 kB)
+2026-11-13T09:56:56.7030930Z Collecting openslide-bin==4.0.1.2 (from -r requirements-lock.txt (line 15))
+2026-11-13T09:56:56.7043889Z   Using cached openslide_bin-4.0.1.2-py3-none-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2026-11-13T09:56:56.7973615Z Collecting openslide-python==1.4.7 (from -r requirements-lock.txt (line 16))
+2026-11-13T09:56:56.7986134Z   Using cached openslide_python-1.4.7-cp311-abi3-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (5.2 kB)
+2026-11-13T09:56:56.8475808Z Collecting packaging==26.3 (from -r requirements-lock.txt (line 17))
+2026-11-13T09:56:56.8488187Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T09:56:57.3249441Z Collecting pillow==13.0.0 (from -r requirements-lock.txt (line 18))
+2026-11-13T09:56:57.3263931Z   Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-11-13T09:56:57.4735546Z Collecting pluggy==1.7.0 (from -r requirements-lock.txt (line 19))
+2026-11-13T09:56:57.4748273Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-13T09:56:57.6094828Z Collecting psutil==7.2.2 (from -r requirements-lock.txt (line 20))
+2026-11-13T09:56:57.6107610Z   Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-11-13T09:56:57.7136089Z Collecting pybind11==3.1.0 (from -r requirements-lock.txt (line 21))
+2026-11-13T09:56:57.7152141Z   Using cached pybind11-3.1.0-py3-none-any.whl.metadata (10 kB)
+2026-11-13T09:56:57.8036262Z Collecting Pygments==2.21.0 (from -r requirements-lock.txt (line 22))
+2026-11-13T09:56:57.8048565Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-13T09:56:57.9014020Z Collecting pytest==9.2.0 (from -r requirements-lock.txt (line 23))
+2026-11-13T09:56:57.9027699Z   Using cached pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-13T09:56:57.9583185Z Collecting requests==2.34.2 (from -r requirements-lock.txt (line 24))
+2026-11-13T09:56:57.9595568Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-11-13T09:56:58.2179122Z Collecting scipy==1.18.1 (from -r requirements-lock.txt (line 25))
+2026-11-13T09:56:58.2192302Z   Using cached scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-11-13T09:56:58.3806664Z Collecting scikit-learn==1.8.0 (from -r requirements-lock.txt (line 26))
+2026-11-13T09:56:58.3819166Z   Using cached scikit_learn-1.8.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+2026-11-13T09:56:58.4895915Z Collecting setuptools==84.2.1 (from -r requirements-lock.txt (line 27))
+2026-11-13T09:56:58.4907819Z   Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+2026-11-13T09:56:58.5526283Z Collecting sympy==1.14.0 (from -r requirements-lock.txt (line 28))
+2026-11-13T09:56:58.5538172Z   Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+2026-11-13T09:56:59.1652063Z Collecting torch==2.15.0+cpu (from -r requirements-lock.txt (line 29))
+2026-11-13T09:56:59.3766777Z   Using cached torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (35 kB)
+2026-11-13T09:56:59.5047849Z Collecting threadpoolctl==3.8.0 (from -r requirements-lock.txt (line 30))
+2026-11-13T09:56:59.5060833Z   Using cached threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+2026-11-13T09:56:59.5895189Z Collecting typing_extensions==4.16.0 (from -r requirements-lock.txt (line 31))
+2026-11-13T09:56:59.5908120Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-13T09:56:59.6934511Z Collecting urllib3==2.8.0 (from -r requirements-lock.txt (line 32))
+2026-11-13T09:56:59.6951084Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-13T09:56:59.7421106Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-13T09:56:59.7434250Z Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+2026-11-13T09:56:59.7446369Z Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+2026-11-13T09:56:59.7458111Z Using cached filelock-4.2.9-py3-none-any.whl (164 kB)
+2026-11-13T09:56:59.7470548Z Using cached fsspec-2026.9.0-py3-none-any.whl (221 kB)
+2026-11-13T09:56:59.7482953Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+2026-11-13T09:56:59.7494725Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-13T09:57:00.0328773Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-11-13T09:57:00.0342128Z Using cached joblib-1.6.0-py3-none-any.whl (306 kB)
+2026-11-13T09:57:00.0355824Z Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-11-13T09:57:00.0367319Z Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-11-13T09:57:00.0381819Z Using cached networkx-3.7-py3-none-any.whl (2.1 MB)
+2026-11-13T09:57:00.0402624Z Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-11-13T09:57:00.0478936Z Using cached opencv_python_headless-5.0.0.93-cp37-abi3-manylinux_2_28_x86_64.whl (61.2 MB)
+2026-11-13T09:57:00.0713436Z Using cached openslide_bin-4.0.1.2-py3-none-manylinux_2_28_x86_64.whl (2.8 MB)
+2026-11-13T09:57:00.0734985Z Using cached openslide_python-1.4.7-cp311-abi3-manylinux1_x86_64.manylinux_2_5_x86_64.whl (36 kB)
+2026-11-13T09:57:00.0746248Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T09:57:00.0758749Z Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-11-13T09:57:00.0797004Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-13T09:57:00.0809329Z Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-11-13T09:57:00.0821673Z Using cached pybind11-3.1.0-py3-none-any.whl (319 kB)
+2026-11-13T09:57:00.0834579Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-13T09:57:00.0850894Z Using cached pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-11-13T09:57:00.0864212Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+2026-11-13T09:57:00.0876499Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-11-13T09:57:00.0889059Z Using cached scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-11-13T09:57:00.1031772Z Using cached scikit_learn-1.8.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (8.9 MB)
+2026-11-13T09:57:00.1078952Z Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+2026-11-13T09:57:00.1094377Z Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+2026-11-13T09:57:00.1374556Z Using cached torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl (209.5 MB)
+2026-11-13T09:57:00.2152879Z Using cached threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+2026-11-13T09:57:00.2164345Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-13T09:57:00.8891398Z Installing collected packages: mpmath, urllib3, typing_extensions, threadpoolctl, sympy, setuptools, Pygments, pybind11, psutil, pluggy, pillow, packaging, openslide-bin, numpy, networkx, MarkupSafe, iniconfig, idna, fsspec, filelock, cloudpickle, charset-normalizer, certifi, scipy, requests, pytest, openslide-python, opencv-python-headless, joblib, Jinja2, torch, scikit-learn
+2026-11-13T09:57:33.1506906Z 
+2026-11-13T09:57:33.1541178Z Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 Pygments-2.21.0 certifi-2026.10.23 charset-normalizer-3.5.2 cloudpickle-3.1.2 filelock-4.2.9 fsspec-2026.9.0 idna-3.20 iniconfig-2.3.1 joblib-1.6.0 mpmath-1.3.0 networkx-3.7 numpy-2.5.4 opencv-python-headless-5.0.0.93 openslide-bin-4.0.1.2 openslide-python-1.4.7 packaging-26.3 pillow-13.0.0 pluggy-1.7.0 psutil-7.2.2 pybind11-3.1.0 pytest-9.2.0 requests-2.34.2 scikit-learn-1.8.0 scipy-1.18.1 setuptools-84.2.1 sympy-1.14.0 threadpoolctl-3.8.0 torch-2.15.0+cpu typing_extensions-4.16.0 urllib3-2.8.0
+2026-11-13T09:57:33.1549257Z 
+2026-11-13T09:57:33.1549517Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-13T09:57:33.1550117Z [notice] To update, run: pip install --upgrade pip
+2026-11-13T09:57:33.3188830Z ##[group]Run CC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .
+2026-11-13T09:57:33.3189478Z [36;1mCC=gcc CXX=g++ python -m pip install --no-deps --no-build-isolation -e .[0m
+2026-11-13T09:57:33.3211319Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:57:33.3211802Z env:
+2026-11-13T09:57:33.3212091Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:33.3212569Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:57:33.3213297Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:33.3213711Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:33.3214118Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:33.3214559Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:57:33.3214896Z ##[endgroup]
+2026-11-13T09:57:34.1348424Z Obtaining file:///home/runner/work/pathology-edge/pathology-edge
+2026-11-13T09:57:34.1359798Z   Checking if build backend supports build_editable: started
+2026-11-13T09:57:34.3529853Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-13T09:57:34.3538012Z   Preparing editable metadata (pyproject.toml): started
+2026-11-13T09:57:34.5883128Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-13T09:57:34.5928083Z Building wheels for collected packages: pathology-edge
+2026-11-13T09:57:34.5935649Z   Building editable for pathology-edge (pyproject.toml): started
+2026-11-13T09:57:42.9585552Z   Building editable for pathology-edge (pyproject.toml): finished with status 'done'
+2026-11-13T09:57:42.9591735Z   Created wheel for pathology-edge: filename=pathology_edge-0.1.0-0.editable-cp312-cp312-linux_x86_64.whl size=1493 sha256=24900843086c9a4ea11941c58254c32bcaa342f8e0189831efa08432caeb4e1c
+2026-11-13T09:57:42.9593253Z   Stored in directory: /tmp/pip-ephem-wheel-cache-lrzkmtpn/wheels/54/73/82/01f380890ed2c70352dadedc6c20e4d3c04e1d94adebc2b3e3
+2026-11-13T09:57:42.9615033Z Successfully built pathology-edge
+2026-11-13T09:57:42.9728755Z Installing collected packages: pathology-edge
+2026-11-13T09:57:42.9813353Z Successfully installed pathology-edge-0.1.0
+2026-11-13T09:57:42.9822926Z 
+2026-11-13T09:57:42.9823251Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-13T09:57:42.9823922Z [notice] To update, run: pip install --upgrade pip
+2026-11-13T09:57:43.0249526Z ##[group]Run python -m pytest -q
+2026-11-13T09:57:43.0249910Z [36;1mpython -m pytest -q[0m
+2026-11-13T09:57:43.0271009Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:57:43.0271267Z env:
+2026-11-13T09:57:43.0271806Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:43.0272364Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:57:43.0272826Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:43.0273245Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:43.0273650Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:57:43.0274043Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:57:43.0274376Z ##[endgroup]
+2026-11-13T09:57:47.7298272Z ........................................................................ [ 12%]
+2026-11-13T09:57:51.4819405Z ........................................................................ [ 25%]
+2026-11-13T09:57:51.7001347Z ........................................................................ [ 37%]
+2026-11-13T09:57:54.1324220Z ........................................................................ [ 50%]
+2026-11-13T09:57:59.5319696Z ........................................................................ [ 63%]
+2026-11-13T09:58:05.6466794Z ........................................................................ [ 75%]
+2026-11-13T09:58:13.9172369Z ........................................................................ [ 88%]
+2026-11-13T09:58:18.2051054Z ...................................................................      [100%]
+2026-11-13T09:58:18.2052097Z 571 passed in 34.51s
+2026-11-13T09:58:18.8525886Z ##[group]Run python scripts/audit_dice.py --output work/dice-audit.json
+2026-11-13T09:58:18.8526450Z [36;1mpython scripts/audit_dice.py --output work/dice-audit.json[0m
+2026-11-13T09:58:18.8546985Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:58:18.8547240Z env:
+2026-11-13T09:58:18.8547511Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:18.8548153Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:58:18.8548591Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:18.8548976Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:18.8549360Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:18.8549753Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:58:18.8550084Z ##[endgroup]
+2026-11-13T09:58:19.1603404Z 42/42 Dice values and 6/6 image means match.
+2026-11-13T09:58:19.1604345Z 7 test images / 2 case groups; no inference run.
+2026-11-13T09:58:19.1605066Z method           all       boundary  interior
+2026-11-13T09:58:19.1605710Z no_overlap       0.558001  0.491793  0.572866
+2026-11-13T09:58:19.1606319Z overlap          0.560790  0.527261  0.569630
+2026-11-13T09:58:19.1606709Z Report: work/dice-audit.json
+2026-11-13T09:58:19.1817069Z ##[group]Run node --check dist/app.js
+2026-11-13T09:58:19.1817445Z [36;1mnode --check dist/app.js[0m
+2026-11-13T09:58:19.1837955Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:58:19.1838221Z env:
+2026-11-13T09:58:19.1838512Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:19.1838964Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:58:19.1839419Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:19.1839820Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:19.1840223Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:19.1840616Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:58:19.1840957Z ##[endgroup]
+2026-11-13T09:58:21.1684496Z ##[group]Run node --check dist/wsi.js && node --check dist/ihc.js
+2026-11-13T09:58:21.1684997Z [36;1mnode --check dist/wsi.js && node --check dist/ihc.js[0m
+2026-11-13T09:58:21.1705419Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:58:21.1705675Z env:
+2026-11-13T09:58:21.1705973Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.1706437Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:58:21.1706904Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.1707298Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.1707698Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.1708095Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:58:21.1708434Z ##[endgroup]
+2026-11-13T09:58:21.2324776Z ##[group]Run python scripts/validate_demo.py
+2026-11-13T09:58:21.2325151Z [36;1mpython scripts/validate_demo.py[0m
+2026-11-13T09:58:21.2344936Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:58:21.2345194Z env:
+2026-11-13T09:58:21.2345470Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.2345929Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:58:21.2346390Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.2346773Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.2347157Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:58:21.2347566Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:58:21.2347912Z ##[endgroup]
+2026-11-13T09:58:21.3326805Z PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.
+2026-11-13T09:58:21.3531010Z Post job cleanup.
+2026-11-13T09:58:21.4788562Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-d302e4946aa3b31ce209b1f7b742613ee437523770b61c03b2935eed13d443c6, not saving cache.
+2026-11-13T09:58:21.4790514Z (node:2847) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:58:21.4792132Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:58:21.4953573Z Post job cleanup.
+2026-11-13T09:58:21.5860996Z [command]/usr/bin/git version
+2026-11-13T09:58:21.5908735Z git version 2.56.0
+2026-11-13T09:58:21.5955328Z Temporarily overriding HOME='/home/runner/work/_temp/0d4312c2-5695-4db8-98cd-612bb661e4fb' before making global git config changes
+2026-11-13T09:58:21.5956337Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:58:21.5961472Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pathology-edge/pathology-edge
+2026-11-13T09:58:21.6009302Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:58:21.6054952Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:58:21.6360877Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:58:21.6390762Z http.https://github.com/.extraheader
+2026-11-13T09:58:21.6407435Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-13T09:58:21.6449982Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:58:21.6769067Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:58:21.6827885Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:58:21.7327743Z Cleaning up orphan processes
+2026-11-13T09:58:21.7797110Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

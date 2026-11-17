@@ -1,0 +1,23 @@
+{
+  "step": 89,
+  "contribution_id": "U103",
+  "recorded_date": "2026-11-13",
+  "timezone": "UTC",
+  "confirmation_recorded_utc": "2026-11-13T19:07:19.340076+00:00",
+  "status": "first_example_display_confirmed",
+  "user_response": "응 잘 보이는거 확인했어",
+  "scope": "Visual display of the requested first union-gate review example and its A/B/C0/C panels.",
+  "evidence_path": "artifacts/experiments/ki67-union-20261113/review/index.html",
+  "source_evidence_commit": "fa732d7a23240e8c4f20dcd0d37ca35fc296af24",
+  "published_review_zip_sha256": "16485c66fd57cb741414874583177214b0502a0274d3094ad27b17b3d30b6f05",
+  "help_provided": "Provided the review ZIP and instructed opening index.html, reviewing the first four panels, and toggling the overlay.",
+  "scope_limit": "The reply confirms visible display. Overlay off/on operation, independent coordinate/metric audits, other cases/seeds/browser sizes and new execution are not separately confirmed.",
+  "user_visual_review_confirmed": true,
+  "overlay_toggle_confirmed": false,
+  "user_independent_numeric_audit": false,
+  "new_user_code": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "new_user_automated_tests": false,
+  "historical_pending_record": "artifacts/learning/step89-pending.json"
+}

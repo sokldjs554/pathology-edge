@@ -1,0 +1,9 @@
+{
+  "source_commit": "fbc5f0d7e09f151c2790eca5e7463b41fdf279e7",
+  "workflow_run": 43621940392,
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43621940392",
+  "updated_at": "2026-11-14T17:37:08Z",
+  "scope": "Existing source CI, not a new user test; packaging verified separately."
+}

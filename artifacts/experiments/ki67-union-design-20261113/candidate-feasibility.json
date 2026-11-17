@@ -1,0 +1,145 @@
+{
+  "scope": "Validation-only candidate feasibility exploration; no learned rejection gate or new training, no test/external image inference.",
+  "fixed_log_config": {
+    "min_response": 0.1,
+    "min_distance": 8
+  },
+  "fixed_learned_proposal_config": {
+    "threshold": 0.01,
+    "min_distance": 4
+  },
+  "log_image_processing_runs": 227,
+  "new_neural_inference_run": false,
+  "results": {
+    "20261117": {
+      "raw_peak_any_nearby_upper_bound": [
+        280,
+        653,
+        77,
+        634
+      ],
+      "raw_peak_any_nearby_recall_upper_bound": [
+        0.5797101449275363,
+        0.5054179566563467,
+        0.6875,
+        0.692896174863388
+      ],
+      "union_candidates": {
+        "learned": 23352,
+        "log": 18796,
+        "union": 41874
+      },
+      "union_any_nearby": [
+        386,
+        823,
+        97,
+        751
+      ],
+      "union_one_to_one_matched": [
+        386,
+        823,
+        97,
+        751
+      ],
+      "union_one_to_one_recall_by_class": [
+        0.7991718426501035,
+        0.6369969040247678,
+        0.8660714285714286,
+        0.8207650273224044
+      ],
+      "reference_counts": [
+        483,
+        1292,
+        112,
+        915
+      ]
+    },
+    "20261118": {
+      "raw_peak_any_nearby_upper_bound": [
+        251,
+        719,
+        81,
+        629
+      ],
+      "raw_peak_any_nearby_recall_upper_bound": [
+        0.5196687370600414,
+        0.5565015479876161,
+        0.7232142857142857,
+        0.687431693989071
+      ],
+      "union_candidates": {
+        "learned": 53812,
+        "log": 18796,
+        "union": 71757
+      },
+      "union_any_nearby": [
+        373,
+        867,
+        98,
+        770
+      ],
+      "union_one_to_one_matched": [
+        373,
+        867,
+        98,
+        770
+      ],
+      "union_one_to_one_recall_by_class": [
+        0.772256728778468,
+        0.6710526315789473,
+        0.875,
+        0.8415300546448088
+      ],
+      "reference_counts": [
+        483,
+        1292,
+        112,
+        915
+      ]
+    },
+    "20261119": {
+      "raw_peak_any_nearby_upper_bound": [
+        240,
+        699,
+        81,
+        649
+      ],
+      "raw_peak_any_nearby_recall_upper_bound": [
+        0.4968944099378882,
+        0.5410216718266254,
+        0.7232142857142857,
+        0.7092896174863388
+      ],
+      "union_candidates": {
+        "learned": 61137,
+        "log": 18796,
+        "union": 78425
+      },
+      "union_any_nearby": [
+        363,
+        842,
+        99,
+        774
+      ],
+      "union_one_to_one_matched": [
+        363,
+        842,
+        99,
+        774
+      ],
+      "union_one_to_one_recall_by_class": [
+        0.7515527950310559,
+        0.651702786377709,
+        0.8839285714285714,
+        0.8459016393442623
+      ],
+      "reference_counts": [
+        483,
+        1292,
+        112,
+        915
+      ]
+    }
+  },
+  "limitation": "Candidate coverage is an upper limit before rejection/suppression, not final precision, F1 or a performance improvement result."
+}

@@ -1,0 +1,85 @@
+{
+  "html_sha256": "f73cc589438693e58ef686ce437e6a14e029c9efd541604bcaa20a40f91a4881",
+  "source_commit": "d28c8127675cf92e08aa46698eb3e4908518a2f1",
+  "selection_lock_sha256": "9a913150e20dd4fe45c7381b876e220c781f40a114ea75c3a4946212f98b0115",
+  "examples": [
+    {
+      "seed": 20261117,
+      "image": "case_0005_region_2_patch_8_O.png",
+      "case_id": "case_0005",
+      "epoch": 19,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "delta_errors": -10,
+      "selection_reason": "오류 합 최소 변화"
+    },
+    {
+      "seed": 20261117,
+      "image": "case_0019_region_2_patch_4_O.png",
+      "case_id": "case_0019",
+      "epoch": 19,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "delta_errors": 10,
+      "selection_reason": "오류 합 최대 변화"
+    },
+    {
+      "seed": 20261118,
+      "image": "case_0019_region_1_patch_4_O.png",
+      "case_id": "case_0019",
+      "epoch": 23,
+      "config": {
+        "threshold": 0.075,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "delta_errors": -11,
+      "selection_reason": "오류 합 최소 변화"
+    },
+    {
+      "seed": 20261118,
+      "image": "case_0005_region_0_patch_20_O.png",
+      "case_id": "case_0005",
+      "epoch": 23,
+      "config": {
+        "threshold": 0.075,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "delta_errors": 13,
+      "selection_reason": "오류 합 최대 변화"
+    },
+    {
+      "seed": 20261119,
+      "image": "case_0007_region_9_patch_14_O.png",
+      "case_id": "case_0007",
+      "epoch": 24,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "delta_errors": -11,
+      "selection_reason": "오류 합 최소 변화"
+    },
+    {
+      "seed": 20261119,
+      "image": "case_0019_region_1_patch_0_O.png",
+      "case_id": "case_0019",
+      "epoch": 24,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "eligible": false,
+      "delta_errors": 10,
+      "selection_reason": "오류 합 최대 변화"
+    }
+  ]
+}

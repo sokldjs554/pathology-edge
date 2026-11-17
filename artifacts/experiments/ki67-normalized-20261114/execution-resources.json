@@ -1,0 +1,13 @@
+{
+  "cpu_count": 5,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "cpu_max": "400000 100000",
+  "memory_max": "17179869184",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

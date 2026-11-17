@@ -1,0 +1,15 @@
+{
+  "commit": "5b9d3b6cd1fdccb57c0c0752780f165fd5f59700",
+  "run_id": 43620948655,
+  "job_id": 132526274626,
+  "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43620948655",
+  "conclusion": "success",
+  "verification_lines": [
+    "2026-11-14T17:26:15.9507054Z 799 passed in 25.45s",
+    "2026-11-14T17:26:16.7043559Z 42/42 Dice values and 6/6 image means match."
+  ],
+  "local_new_tests": 49,
+  "local_seconds": 5.45,
+  "local_test_commit": "83d24e9c992cbe7df1433d19a4baf5b11d3d0455",
+  "scope": "Final implementation/report source CI; actual browser evidence is recorded separately."
+}

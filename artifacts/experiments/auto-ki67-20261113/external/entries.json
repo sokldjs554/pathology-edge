@@ -1,0 +1,3194 @@
+[
+  {
+    "name": "BCData/annotations/validation/negative/0.h5",
+    "compressed_bytes": 296,
+    "uncompressed_bytes": 2320,
+    "method": 8,
+    "crc32": 3330782331,
+    "offset": 1362702
+  },
+  {
+    "name": "BCData/annotations/validation/negative/1.h5",
+    "compressed_bytes": 356,
+    "uncompressed_bytes": 2560,
+    "method": 8,
+    "crc32": 2885082123,
+    "offset": 1363071
+  },
+  {
+    "name": "BCData/annotations/validation/negative/10.h5",
+    "compressed_bytes": 452,
+    "uncompressed_bytes": 2928,
+    "method": 8,
+    "crc32": 4049097364,
+    "offset": 1363500
+  },
+  {
+    "name": "BCData/annotations/validation/negative/100.h5",
+    "compressed_bytes": 599,
+    "uncompressed_bytes": 3472,
+    "method": 8,
+    "crc32": 2499061586,
+    "offset": 1364026
+  },
+  {
+    "name": "BCData/annotations/validation/negative/101.h5",
+    "compressed_bytes": 799,
+    "uncompressed_bytes": 4304,
+    "method": 8,
+    "crc32": 470733443,
+    "offset": 1364700
+  },
+  {
+    "name": "BCData/annotations/validation/negative/102.h5",
+    "compressed_bytes": 902,
+    "uncompressed_bytes": 4736,
+    "method": 8,
+    "crc32": 2263251763,
+    "offset": 1365574
+  },
+  {
+    "name": "BCData/annotations/validation/negative/103.h5",
+    "compressed_bytes": 959,
+    "uncompressed_bytes": 5040,
+    "method": 8,
+    "crc32": 3069132179,
+    "offset": 1366551
+  },
+  {
+    "name": "BCData/annotations/validation/negative/104.h5",
+    "compressed_bytes": 652,
+    "uncompressed_bytes": 3712,
+    "method": 8,
+    "crc32": 1384666436,
+    "offset": 1367585
+  },
+  {
+    "name": "BCData/annotations/validation/negative/105.h5",
+    "compressed_bytes": 648,
+    "uncompressed_bytes": 3632,
+    "method": 8,
+    "crc32": 1254230145,
+    "offset": 1368312
+  },
+  {
+    "name": "BCData/annotations/validation/negative/106.h5",
+    "compressed_bytes": 715,
+    "uncompressed_bytes": 3920,
+    "method": 8,
+    "crc32": 459272545,
+    "offset": 1369035
+  },
+  {
+    "name": "BCData/annotations/validation/negative/107.h5",
+    "compressed_bytes": 636,
+    "uncompressed_bytes": 3616,
+    "method": 8,
+    "crc32": 3891693910,
+    "offset": 1369825
+  },
+  {
+    "name": "BCData/annotations/validation/negative/108.h5",
+    "compressed_bytes": 713,
+    "uncompressed_bytes": 3952,
+    "method": 8,
+    "crc32": 3774279543,
+    "offset": 1370536
+  },
+  {
+    "name": "BCData/annotations/validation/negative/109.h5",
+    "compressed_bytes": 779,
+    "uncompressed_bytes": 4320,
+    "method": 8,
+    "crc32": 2033884740,
+    "offset": 1371324
+  },
+  {
+    "name": "BCData/annotations/validation/negative/11.h5",
+    "compressed_bytes": 531,
+    "uncompressed_bytes": 3184,
+    "method": 8,
+    "crc32": 2631999365,
+    "offset": 1372178
+  },
+  {
+    "name": "BCData/annotations/validation/negative/110.h5",
+    "compressed_bytes": 827,
+    "uncompressed_bytes": 4448,
+    "method": 8,
+    "crc32": 2328184253,
+    "offset": 1372783
+  },
+  {
+    "name": "BCData/annotations/validation/negative/111.h5",
+    "compressed_bytes": 1069,
+    "uncompressed_bytes": 5552,
+    "method": 8,
+    "crc32": 3142950861,
+    "offset": 1373685
+  },
+  {
+    "name": "BCData/annotations/validation/negative/112.h5",
+    "compressed_bytes": 1059,
+    "uncompressed_bytes": 5472,
+    "method": 8,
+    "crc32": 296513274,
+    "offset": 1374829
+  },
+  {
+    "name": "BCData/annotations/validation/negative/113.h5",
+    "compressed_bytes": 1097,
+    "uncompressed_bytes": 5760,
+    "method": 8,
+    "crc32": 1975751755,
+    "offset": 1375963
+  },
+  {
+    "name": "BCData/annotations/validation/negative/114.h5",
+    "compressed_bytes": 946,
+    "uncompressed_bytes": 4928,
+    "method": 8,
+    "crc32": 747596998,
+    "offset": 1377135
+  },
+  {
+    "name": "BCData/annotations/validation/negative/115.h5",
+    "compressed_bytes": 1197,
+    "uncompressed_bytes": 6128,
+    "method": 8,
+    "crc32": 3728860975,
+    "offset": 1378156
+  },
+  {
+    "name": "BCData/annotations/validation/negative/116.h5",
+    "compressed_bytes": 765,
+    "uncompressed_bytes": 4160,
+    "method": 8,
+    "crc32": 924872019,
+    "offset": 1379428
+  },
+  {
+    "name": "BCData/annotations/validation/negative/117.h5",
+    "compressed_bytes": 1018,
+    "uncompressed_bytes": 5280,
+    "method": 8,
+    "crc32": 312558164,
+    "offset": 1380268
+  },
+  {
+    "name": "BCData/annotations/validation/negative/118.h5",
+    "compressed_bytes": 979,
+    "uncompressed_bytes": 5040,
+    "method": 8,
+    "crc32": 1537029167,
+    "offset": 1381361
+  },
+  {
+    "name": "BCData/annotations/validation/negative/119.h5",
+    "compressed_bytes": 1183,
+    "uncompressed_bytes": 6032,
+    "method": 8,
+    "crc32": 1735852671,
+    "offset": 1382415
+  },
+  {
+    "name": "BCData/annotations/validation/negative/12.h5",
+    "compressed_bytes": 470,
+    "uncompressed_bytes": 2976,
+    "method": 8,
+    "crc32": 1689075530,
+    "offset": 1383673
+  },
+  {
+    "name": "BCData/annotations/validation/negative/120.h5",
+    "compressed_bytes": 1117,
+    "uncompressed_bytes": 5728,
+    "method": 8,
+    "crc32": 1873609719,
+    "offset": 1384217
+  },
+  {
+    "name": "BCData/annotations/validation/negative/121.h5",
+    "compressed_bytes": 1063,
+    "uncompressed_bytes": 5472,
+    "method": 8,
+    "crc32": 2210444065,
+    "offset": 1385409
+  },
+  {
+    "name": "BCData/annotations/validation/negative/122.h5",
+    "compressed_bytes": 1016,
+    "uncompressed_bytes": 5328,
+    "method": 8,
+    "crc32": 2645115434,
+    "offset": 1386547
+  },
+  {
+    "name": "BCData/annotations/validation/negative/123.h5",
+    "compressed_bytes": 1233,
+    "uncompressed_bytes": 6272,
+    "method": 8,
+    "crc32": 2982939295,
+    "offset": 1387638
+  },
+  {
+    "name": "BCData/annotations/validation/negative/124.h5",
+    "compressed_bytes": 1108,
+    "uncompressed_bytes": 5696,
+    "method": 8,
+    "crc32": 3930565079,
+    "offset": 1388946
+  },
+  {
+    "name": "BCData/annotations/validation/negative/125.h5",
+    "compressed_bytes": 1077,
+    "uncompressed_bytes": 5568,
+    "method": 8,
+    "crc32": 2971183436,
+    "offset": 1390129
+  },
+  {
+    "name": "BCData/annotations/validation/negative/126.h5",
+    "compressed_bytes": 1058,
+    "uncompressed_bytes": 5456,
+    "method": 8,
+    "crc32": 3281833461,
+    "offset": 1391281
+  },
+  {
+    "name": "BCData/annotations/validation/negative/127.h5",
+    "compressed_bytes": 1167,
+    "uncompressed_bytes": 5968,
+    "method": 8,
+    "crc32": 2017272692,
+    "offset": 1392414
+  },
+  {
+    "name": "BCData/annotations/validation/negative/128.h5",
+    "compressed_bytes": 1132,
+    "uncompressed_bytes": 5808,
+    "method": 8,
+    "crc32": 2061309068,
+    "offset": 1393656
+  },
+  {
+    "name": "BCData/annotations/validation/negative/129.h5",
+    "compressed_bytes": 1040,
+    "uncompressed_bytes": 5312,
+    "method": 8,
+    "crc32": 2898943634,
+    "offset": 1394863
+  },
+  {
+    "name": "BCData/annotations/validation/negative/13.h5",
+    "compressed_bytes": 627,
+    "uncompressed_bytes": 3568,
+    "method": 8,
+    "crc32": 2071719609,
+    "offset": 1395978
+  },
+  {
+    "name": "BCData/annotations/validation/negative/130.h5",
+    "compressed_bytes": 1097,
+    "uncompressed_bytes": 5664,
+    "method": 8,
+    "crc32": 3566841225,
+    "offset": 1396679
+  },
+  {
+    "name": "BCData/annotations/validation/negative/131.h5",
+    "compressed_bytes": 1259,
+    "uncompressed_bytes": 6352,
+    "method": 8,
+    "crc32": 3609157566,
+    "offset": 1397851
+  },
+  {
+    "name": "BCData/annotations/validation/negative/132.h5",
+    "compressed_bytes": 584,
+    "uncompressed_bytes": 3360,
+    "method": 8,
+    "crc32": 876284805,
+    "offset": 1399185
+  },
+  {
+    "name": "BCData/annotations/validation/negative/14.h5",
+    "compressed_bytes": 558,
+    "uncompressed_bytes": 3328,
+    "method": 8,
+    "crc32": 852333400,
+    "offset": 1399844
+  },
+  {
+    "name": "BCData/annotations/validation/negative/15.h5",
+    "compressed_bytes": 644,
+    "uncompressed_bytes": 3648,
+    "method": 8,
+    "crc32": 2262277753,
+    "offset": 1400476
+  },
+  {
+    "name": "BCData/annotations/validation/negative/16.h5",
+    "compressed_bytes": 404,
+    "uncompressed_bytes": 2736,
+    "method": 8,
+    "crc32": 3715507168,
+    "offset": 1401194
+  },
+  {
+    "name": "BCData/annotations/validation/negative/17.h5",
+    "compressed_bytes": 316,
+    "uncompressed_bytes": 2384,
+    "method": 8,
+    "crc32": 852842310,
+    "offset": 1401672
+  },
+  {
+    "name": "BCData/annotations/validation/negative/18.h5",
+    "compressed_bytes": 840,
+    "uncompressed_bytes": 4464,
+    "method": 8,
+    "crc32": 3592581957,
+    "offset": 1402062
+  },
+  {
+    "name": "BCData/annotations/validation/negative/19.h5",
+    "compressed_bytes": 865,
+    "uncompressed_bytes": 4592,
+    "method": 8,
+    "crc32": 2269157572,
+    "offset": 1402976
+  },
+  {
+    "name": "BCData/annotations/validation/negative/2.h5",
+    "compressed_bytes": 316,
+    "uncompressed_bytes": 2400,
+    "method": 8,
+    "crc32": 1696380979,
+    "offset": 1403915
+  },
+  {
+    "name": "BCData/annotations/validation/negative/20.h5",
+    "compressed_bytes": 619,
+    "uncompressed_bytes": 3536,
+    "method": 8,
+    "crc32": 761105271,
+    "offset": 1404304
+  },
+  {
+    "name": "BCData/annotations/validation/negative/21.h5",
+    "compressed_bytes": 1121,
+    "uncompressed_bytes": 5728,
+    "method": 8,
+    "crc32": 1110628352,
+    "offset": 1404997
+  },
+  {
+    "name": "BCData/annotations/validation/negative/22.h5",
+    "compressed_bytes": 1279,
+    "uncompressed_bytes": 6352,
+    "method": 8,
+    "crc32": 483560409,
+    "offset": 1406192
+  },
+  {
+    "name": "BCData/annotations/validation/negative/23.h5",
+    "compressed_bytes": 1120,
+    "uncompressed_bytes": 5712,
+    "method": 8,
+    "crc32": 2586741995,
+    "offset": 1407545
+  },
+  {
+    "name": "BCData/annotations/validation/negative/24.h5",
+    "compressed_bytes": 556,
+    "uncompressed_bytes": 3296,
+    "method": 8,
+    "crc32": 2126607260,
+    "offset": 1408739
+  },
+  {
+    "name": "BCData/annotations/validation/negative/25.h5",
+    "compressed_bytes": 515,
+    "uncompressed_bytes": 3136,
+    "method": 8,
+    "crc32": 2469724226,
+    "offset": 1409369
+  },
+  {
+    "name": "BCData/annotations/validation/negative/26.h5",
+    "compressed_bytes": 401,
+    "uncompressed_bytes": 2704,
+    "method": 8,
+    "crc32": 3676350842,
+    "offset": 1409958
+  },
+  {
+    "name": "BCData/annotations/validation/negative/27.h5",
+    "compressed_bytes": 609,
+    "uncompressed_bytes": 3504,
+    "method": 8,
+    "crc32": 1120346250,
+    "offset": 1410433
+  },
+  {
+    "name": "BCData/annotations/validation/negative/28.h5",
+    "compressed_bytes": 417,
+    "uncompressed_bytes": 2784,
+    "method": 8,
+    "crc32": 1957570526,
+    "offset": 1411116
+  },
+  {
+    "name": "BCData/annotations/validation/negative/29.h5",
+    "compressed_bytes": 486,
+    "uncompressed_bytes": 3040,
+    "method": 8,
+    "crc32": 2563843555,
+    "offset": 1411607
+  },
+  {
+    "name": "BCData/annotations/validation/negative/3.h5",
+    "compressed_bytes": 366,
+    "uncompressed_bytes": 2592,
+    "method": 8,
+    "crc32": 3874373056,
+    "offset": 1412167
+  },
+  {
+    "name": "BCData/annotations/validation/negative/30.h5",
+    "compressed_bytes": 471,
+    "uncompressed_bytes": 2992,
+    "method": 8,
+    "crc32": 356242139,
+    "offset": 1412606
+  },
+  {
+    "name": "BCData/annotations/validation/negative/31.h5",
+    "compressed_bytes": 515,
+    "uncompressed_bytes": 3104,
+    "method": 8,
+    "crc32": 1389421938,
+    "offset": 1413151
+  },
+  {
+    "name": "BCData/annotations/validation/negative/32.h5",
+    "compressed_bytes": 402,
+    "uncompressed_bytes": 2720,
+    "method": 8,
+    "crc32": 4116381604,
+    "offset": 1413740
+  },
+  {
+    "name": "BCData/annotations/validation/negative/33.h5",
+    "compressed_bytes": 412,
+    "uncompressed_bytes": 2752,
+    "method": 8,
+    "crc32": 818486464,
+    "offset": 1414216
+  },
+  {
+    "name": "BCData/annotations/validation/negative/34.h5",
+    "compressed_bytes": 495,
+    "uncompressed_bytes": 3024,
+    "method": 8,
+    "crc32": 3522039191,
+    "offset": 1414702
+  },
+  {
+    "name": "BCData/annotations/validation/negative/35.h5",
+    "compressed_bytes": 487,
+    "uncompressed_bytes": 3072,
+    "method": 8,
+    "crc32": 2888175630,
+    "offset": 1415271
+  },
+  {
+    "name": "BCData/annotations/validation/negative/36.h5",
+    "compressed_bytes": 606,
+    "uncompressed_bytes": 3504,
+    "method": 8,
+    "crc32": 293289320,
+    "offset": 1415832
+  },
+  {
+    "name": "BCData/annotations/validation/negative/37.h5",
+    "compressed_bytes": 354,
+    "uncompressed_bytes": 2528,
+    "method": 8,
+    "crc32": 1972553130,
+    "offset": 1416512
+  },
+  {
+    "name": "BCData/annotations/validation/negative/38.h5",
+    "compressed_bytes": 420,
+    "uncompressed_bytes": 2816,
+    "method": 8,
+    "crc32": 2316243785,
+    "offset": 1416940
+  },
+  {
+    "name": "BCData/annotations/validation/negative/39.h5",
+    "compressed_bytes": 651,
+    "uncompressed_bytes": 3696,
+    "method": 8,
+    "crc32": 722583898,
+    "offset": 1417434
+  },
+  {
+    "name": "BCData/annotations/validation/negative/4.h5",
+    "compressed_bytes": 305,
+    "uncompressed_bytes": 2352,
+    "method": 8,
+    "crc32": 1063444789,
+    "offset": 1418159
+  },
+  {
+    "name": "BCData/annotations/validation/negative/40.h5",
+    "compressed_bytes": 686,
+    "uncompressed_bytes": 3824,
+    "method": 8,
+    "crc32": 1707798809,
+    "offset": 1418537
+  },
+  {
+    "name": "BCData/annotations/validation/negative/41.h5",
+    "compressed_bytes": 760,
+    "uncompressed_bytes": 4144,
+    "method": 8,
+    "crc32": 704521681,
+    "offset": 1419297
+  },
+  {
+    "name": "BCData/annotations/validation/negative/42.h5",
+    "compressed_bytes": 448,
+    "uncompressed_bytes": 2896,
+    "method": 8,
+    "crc32": 2331664429,
+    "offset": 1420131
+  },
+  {
+    "name": "BCData/annotations/validation/negative/43.h5",
+    "compressed_bytes": 505,
+    "uncompressed_bytes": 3088,
+    "method": 8,
+    "crc32": 1520248682,
+    "offset": 1420653
+  },
+  {
+    "name": "BCData/annotations/validation/negative/44.h5",
+    "compressed_bytes": 580,
+    "uncompressed_bytes": 3376,
+    "method": 8,
+    "crc32": 238844833,
+    "offset": 1421232
+  },
+  {
+    "name": "BCData/annotations/validation/negative/45.h5",
+    "compressed_bytes": 654,
+    "uncompressed_bytes": 3696,
+    "method": 8,
+    "crc32": 3253528112,
+    "offset": 1421886
+  },
+  {
+    "name": "BCData/annotations/validation/negative/46.h5",
+    "compressed_bytes": 299,
+    "uncompressed_bytes": 2336,
+    "method": 8,
+    "crc32": 4112879722,
+    "offset": 1422614
+  },
+  {
+    "name": "BCData/annotations/validation/negative/47.h5",
+    "compressed_bytes": 825,
+    "uncompressed_bytes": 4480,
+    "method": 8,
+    "crc32": 2797843195,
+    "offset": 1422987
+  },
+  {
+    "name": "BCData/annotations/validation/negative/48.h5",
+    "compressed_bytes": 267,
+    "uncompressed_bytes": 2224,
+    "method": 8,
+    "crc32": 3023141477,
+    "offset": 1423886
+  },
+  {
+    "name": "BCData/annotations/validation/negative/49.h5",
+    "compressed_bytes": 589,
+    "uncompressed_bytes": 3424,
+    "method": 8,
+    "crc32": 3790451498,
+    "offset": 1424227
+  },
+  {
+    "name": "BCData/annotations/validation/negative/5.h5",
+    "compressed_bytes": 328,
+    "uncompressed_bytes": 2448,
+    "method": 8,
+    "crc32": 324375663,
+    "offset": 1424890
+  },
+  {
+    "name": "BCData/annotations/validation/negative/50.h5",
+    "compressed_bytes": 559,
+    "uncompressed_bytes": 3280,
+    "method": 8,
+    "crc32": 1699204436,
+    "offset": 1425291
+  },
+  {
+    "name": "BCData/annotations/validation/negative/51.h5",
+    "compressed_bytes": 477,
+    "uncompressed_bytes": 3040,
+    "method": 8,
+    "crc32": 4069702978,
+    "offset": 1425924
+  },
+  {
+    "name": "BCData/annotations/validation/negative/52.h5",
+    "compressed_bytes": 493,
+    "uncompressed_bytes": 3040,
+    "method": 8,
+    "crc32": 255122335,
+    "offset": 1426475
+  },
+  {
+    "name": "BCData/annotations/validation/negative/53.h5",
+    "compressed_bytes": 485,
+    "uncompressed_bytes": 3008,
+    "method": 8,
+    "crc32": 842211729,
+    "offset": 1427042
+  },
+  {
+    "name": "BCData/annotations/validation/negative/54.h5",
+    "compressed_bytes": 544,
+    "uncompressed_bytes": 3248,
+    "method": 8,
+    "crc32": 422854637,
+    "offset": 1427601
+  },
+  {
+    "name": "BCData/annotations/validation/negative/55.h5",
+    "compressed_bytes": 483,
+    "uncompressed_bytes": 3056,
+    "method": 8,
+    "crc32": 267822793,
+    "offset": 1428219
+  },
+  {
+    "name": "BCData/annotations/validation/negative/56.h5",
+    "compressed_bytes": 574,
+    "uncompressed_bytes": 3376,
+    "method": 8,
+    "crc32": 2420872062,
+    "offset": 1428776
+  },
+  {
+    "name": "BCData/annotations/validation/negative/57.h5",
+    "compressed_bytes": 506,
+    "uncompressed_bytes": 3104,
+    "method": 8,
+    "crc32": 1726384705,
+    "offset": 1429424
+  },
+  {
+    "name": "BCData/annotations/validation/negative/58.h5",
+    "compressed_bytes": 355,
+    "uncompressed_bytes": 2544,
+    "method": 8,
+    "crc32": 1711649592,
+    "offset": 1430004
+  },
+  {
+    "name": "BCData/annotations/validation/negative/59.h5",
+    "compressed_bytes": 434,
+    "uncompressed_bytes": 2848,
+    "method": 8,
+    "crc32": 2055350845,
+    "offset": 1430433
+  },
+  {
+    "name": "BCData/annotations/validation/negative/6.h5",
+    "compressed_bytes": 589,
+    "uncompressed_bytes": 3408,
+    "method": 8,
+    "crc32": 2835673618,
+    "offset": 1430941
+  },
+  {
+    "name": "BCData/annotations/validation/negative/60.h5",
+    "compressed_bytes": 798,
+    "uncompressed_bytes": 4320,
+    "method": 8,
+    "crc32": 4066964162,
+    "offset": 1431603
+  },
+  {
+    "name": "BCData/annotations/validation/negative/61.h5",
+    "compressed_bytes": 883,
+    "uncompressed_bytes": 4624,
+    "method": 8,
+    "crc32": 3555915963,
+    "offset": 1432475
+  },
+  {
+    "name": "BCData/annotations/validation/negative/62.h5",
+    "compressed_bytes": 886,
+    "uncompressed_bytes": 4704,
+    "method": 8,
+    "crc32": 2929998771,
+    "offset": 1433432
+  },
+  {
+    "name": "BCData/annotations/validation/negative/63.h5",
+    "compressed_bytes": 744,
+    "uncompressed_bytes": 4080,
+    "method": 8,
+    "crc32": 1289287550,
+    "offset": 1434392
+  },
+  {
+    "name": "BCData/annotations/validation/negative/64.h5",
+    "compressed_bytes": 776,
+    "uncompressed_bytes": 4240,
+    "method": 8,
+    "crc32": 3509722677,
+    "offset": 1435210
+  },
+  {
+    "name": "BCData/annotations/validation/negative/65.h5",
+    "compressed_bytes": 755,
+    "uncompressed_bytes": 4096,
+    "method": 8,
+    "crc32": 908321661,
+    "offset": 1436060
+  },
+  {
+    "name": "BCData/annotations/validation/negative/66.h5",
+    "compressed_bytes": 428,
+    "uncompressed_bytes": 2816,
+    "method": 8,
+    "crc32": 1791519721,
+    "offset": 1436889
+  },
+  {
+    "name": "BCData/annotations/validation/negative/67.h5",
+    "compressed_bytes": 438,
+    "uncompressed_bytes": 2880,
+    "method": 8,
+    "crc32": 1760072289,
+    "offset": 1437391
+  },
+  {
+    "name": "BCData/annotations/validation/negative/68.h5",
+    "compressed_bytes": 395,
+    "uncompressed_bytes": 2704,
+    "method": 8,
+    "crc32": 664444245,
+    "offset": 1437903
+  },
+  {
+    "name": "BCData/annotations/validation/negative/69.h5",
+    "compressed_bytes": 472,
+    "uncompressed_bytes": 2992,
+    "method": 8,
+    "crc32": 408311336,
+    "offset": 1438372
+  },
+  {
+    "name": "BCData/annotations/validation/negative/7.h5",
+    "compressed_bytes": 549,
+    "uncompressed_bytes": 3264,
+    "method": 8,
+    "crc32": 4181333861,
+    "offset": 1438918
+  },
+  {
+    "name": "BCData/annotations/validation/negative/70.h5",
+    "compressed_bytes": 635,
+    "uncompressed_bytes": 3632,
+    "method": 8,
+    "crc32": 1591796547,
+    "offset": 1439540
+  },
+  {
+    "name": "BCData/annotations/validation/negative/71.h5",
+    "compressed_bytes": 551,
+    "uncompressed_bytes": 3312,
+    "method": 8,
+    "crc32": 1914734572,
+    "offset": 1440249
+  },
+  {
+    "name": "BCData/annotations/validation/negative/72.h5",
+    "compressed_bytes": 354,
+    "uncompressed_bytes": 2560,
+    "method": 8,
+    "crc32": 1389629074,
+    "offset": 1440874
+  },
+  {
+    "name": "BCData/annotations/validation/negative/73.h5",
+    "compressed_bytes": 469,
+    "uncompressed_bytes": 2960,
+    "method": 8,
+    "crc32": 2854150960,
+    "offset": 1441302
+  },
+  {
+    "name": "BCData/annotations/validation/negative/74.h5",
+    "compressed_bytes": 700,
+    "uncompressed_bytes": 3872,
+    "method": 8,
+    "crc32": 3802247100,
+    "offset": 1441845
+  },
+  {
+    "name": "BCData/annotations/validation/negative/75.h5",
+    "compressed_bytes": 622,
+    "uncompressed_bytes": 3568,
+    "method": 8,
+    "crc32": 241237754,
+    "offset": 1442619
+  },
+  {
+    "name": "BCData/annotations/validation/negative/76.h5",
+    "compressed_bytes": 474,
+    "uncompressed_bytes": 3008,
+    "method": 8,
+    "crc32": 2328902637,
+    "offset": 1443315
+  },
+  {
+    "name": "BCData/annotations/validation/negative/77.h5",
+    "compressed_bytes": 373,
+    "uncompressed_bytes": 2624,
+    "method": 8,
+    "crc32": 2626283585,
+    "offset": 1443863
+  },
+  {
+    "name": "BCData/annotations/validation/negative/78.h5",
+    "compressed_bytes": 487,
+    "uncompressed_bytes": 3024,
+    "method": 8,
+    "crc32": 3653629618,
+    "offset": 1444310
+  },
+  {
+    "name": "BCData/annotations/validation/negative/79.h5",
+    "compressed_bytes": 333,
+    "uncompressed_bytes": 2448,
+    "method": 8,
+    "crc32": 3145578078,
+    "offset": 1444871
+  },
+  {
+    "name": "BCData/annotations/validation/negative/8.h5",
+    "compressed_bytes": 548,
+    "uncompressed_bytes": 3264,
+    "method": 8,
+    "crc32": 842495399,
+    "offset": 1445278
+  },
+  {
+    "name": "BCData/annotations/validation/negative/80.h5",
+    "compressed_bytes": 353,
+    "uncompressed_bytes": 2544,
+    "method": 8,
+    "crc32": 1576753175,
+    "offset": 1445899
+  },
+  {
+    "name": "BCData/annotations/validation/negative/81.h5",
+    "compressed_bytes": 371,
+    "uncompressed_bytes": 2624,
+    "method": 8,
+    "crc32": 770279801,
+    "offset": 1446326
+  },
+  {
+    "name": "BCData/annotations/validation/negative/82.h5",
+    "compressed_bytes": 393,
+    "uncompressed_bytes": 2688,
+    "method": 8,
+    "crc32": 3772449149,
+    "offset": 1446771
+  },
+  {
+    "name": "BCData/annotations/validation/negative/83.h5",
+    "compressed_bytes": 557,
+    "uncompressed_bytes": 3296,
+    "method": 8,
+    "crc32": 3679697290,
+    "offset": 1447238
+  },
+  {
+    "name": "BCData/annotations/validation/negative/84.h5",
+    "compressed_bytes": 561,
+    "uncompressed_bytes": 3344,
+    "method": 8,
+    "crc32": 3900188165,
+    "offset": 1447869
+  },
+  {
+    "name": "BCData/annotations/validation/negative/85.h5",
+    "compressed_bytes": 736,
+    "uncompressed_bytes": 4064,
+    "method": 8,
+    "crc32": 2970885355,
+    "offset": 1448504
+  },
+  {
+    "name": "BCData/annotations/validation/negative/86.h5",
+    "compressed_bytes": 836,
+    "uncompressed_bytes": 4592,
+    "method": 8,
+    "crc32": 3223690551,
+    "offset": 1449314
+  },
+  {
+    "name": "BCData/annotations/validation/negative/87.h5",
+    "compressed_bytes": 1026,
+    "uncompressed_bytes": 5344,
+    "method": 8,
+    "crc32": 2955622071,
+    "offset": 1450224
+  },
+  {
+    "name": "BCData/annotations/validation/negative/88.h5",
+    "compressed_bytes": 426,
+    "uncompressed_bytes": 2832,
+    "method": 8,
+    "crc32": 1583226630,
+    "offset": 1451324
+  },
+  {
+    "name": "BCData/annotations/validation/negative/89.h5",
+    "compressed_bytes": 280,
+    "uncompressed_bytes": 2256,
+    "method": 8,
+    "crc32": 2393630296,
+    "offset": 1451824
+  },
+  {
+    "name": "BCData/annotations/validation/negative/9.h5",
+    "compressed_bytes": 418,
+    "uncompressed_bytes": 2816,
+    "method": 8,
+    "crc32": 411777642,
+    "offset": 1452178
+  },
+  {
+    "name": "BCData/annotations/validation/negative/90.h5",
+    "compressed_bytes": 271,
+    "uncompressed_bytes": 2240,
+    "method": 8,
+    "crc32": 881171938,
+    "offset": 1452669
+  },
+  {
+    "name": "BCData/annotations/validation/negative/91.h5",
+    "compressed_bytes": 764,
+    "uncompressed_bytes": 4144,
+    "method": 8,
+    "crc32": 3363684364,
+    "offset": 1453014
+  },
+  {
+    "name": "BCData/annotations/validation/negative/92.h5",
+    "compressed_bytes": 706,
+    "uncompressed_bytes": 3872,
+    "method": 8,
+    "crc32": 2275740164,
+    "offset": 1453852
+  },
+  {
+    "name": "BCData/annotations/validation/negative/93.h5",
+    "compressed_bytes": 600,
+    "uncompressed_bytes": 3472,
+    "method": 8,
+    "crc32": 1109940254,
+    "offset": 1454632
+  },
+  {
+    "name": "BCData/annotations/validation/negative/94.h5",
+    "compressed_bytes": 657,
+    "uncompressed_bytes": 3744,
+    "method": 8,
+    "crc32": 1335320564,
+    "offset": 1455306
+  },
+  {
+    "name": "BCData/annotations/validation/negative/95.h5",
+    "compressed_bytes": 582,
+    "uncompressed_bytes": 3376,
+    "method": 8,
+    "crc32": 248099770,
+    "offset": 1456037
+  },
+  {
+    "name": "BCData/annotations/validation/negative/96.h5",
+    "compressed_bytes": 599,
+    "uncompressed_bytes": 3456,
+    "method": 8,
+    "crc32": 1497419314,
+    "offset": 1456693
+  },
+  {
+    "name": "BCData/annotations/validation/negative/97.h5",
+    "compressed_bytes": 945,
+    "uncompressed_bytes": 4960,
+    "method": 8,
+    "crc32": 1914914299,
+    "offset": 1457366
+  },
+  {
+    "name": "BCData/annotations/validation/negative/98.h5",
+    "compressed_bytes": 369,
+    "uncompressed_bytes": 2592,
+    "method": 8,
+    "crc32": 1630939075,
+    "offset": 1458385
+  },
+  {
+    "name": "BCData/annotations/validation/negative/99.h5",
+    "compressed_bytes": 581,
+    "uncompressed_bytes": 3376,
+    "method": 8,
+    "crc32": 3294015366,
+    "offset": 1458828
+  },
+  {
+    "name": "BCData/annotations/validation/positive/0.h5",
+    "compressed_bytes": 470,
+    "uncompressed_bytes": 2960,
+    "method": 8,
+    "crc32": 2814785090,
+    "offset": 1459552
+  },
+  {
+    "name": "BCData/annotations/validation/positive/1.h5",
+    "compressed_bytes": 417,
+    "uncompressed_bytes": 2752,
+    "method": 8,
+    "crc32": 1950011761,
+    "offset": 1460095
+  },
+  {
+    "name": "BCData/annotations/validation/positive/10.h5",
+    "compressed_bytes": 527,
+    "uncompressed_bytes": 3184,
+    "method": 8,
+    "crc32": 3244525284,
+    "offset": 1460585
+  },
+  {
+    "name": "BCData/annotations/validation/positive/100.h5",
+    "compressed_bytes": 258,
+    "uncompressed_bytes": 2192,
+    "method": 8,
+    "crc32": 1113623721,
+    "offset": 1461186
+  },
+  {
+    "name": "BCData/annotations/validation/positive/101.h5",
+    "compressed_bytes": 481,
+    "uncompressed_bytes": 2992,
+    "method": 8,
+    "crc32": 1791264578,
+    "offset": 1461519
+  },
+  {
+    "name": "BCData/annotations/validation/positive/102.h5",
+    "compressed_bytes": 495,
+    "uncompressed_bytes": 3056,
+    "method": 8,
+    "crc32": 2645489632,
+    "offset": 1462075
+  },
+  {
+    "name": "BCData/annotations/validation/positive/103.h5",
+    "compressed_bytes": 511,
+    "uncompressed_bytes": 3088,
+    "method": 8,
+    "crc32": 265523342,
+    "offset": 1462645
+  },
+  {
+    "name": "BCData/annotations/validation/positive/104.h5",
+    "compressed_bytes": 447,
+    "uncompressed_bytes": 2912,
+    "method": 8,
+    "crc32": 4195368114,
+    "offset": 1463231
+  },
+  {
+    "name": "BCData/annotations/validation/positive/105.h5",
+    "compressed_bytes": 438,
+    "uncompressed_bytes": 2880,
+    "method": 8,
+    "crc32": 2669368870,
+    "offset": 1463753
+  },
+  {
+    "name": "BCData/annotations/validation/positive/106.h5",
+    "compressed_bytes": 414,
+    "uncompressed_bytes": 2768,
+    "method": 8,
+    "crc32": 4112136282,
+    "offset": 1464266
+  },
+  {
+    "name": "BCData/annotations/validation/positive/107.h5",
+    "compressed_bytes": 426,
+    "uncompressed_bytes": 2816,
+    "method": 8,
+    "crc32": 2470182627,
+    "offset": 1464755
+  },
+  {
+    "name": "BCData/annotations/validation/positive/108.h5",
+    "compressed_bytes": 364,
+    "uncompressed_bytes": 2592,
+    "method": 8,
+    "crc32": 575163174,
+    "offset": 1465256
+  },
+  {
+    "name": "BCData/annotations/validation/positive/109.h5",
+    "compressed_bytes": 427,
+    "uncompressed_bytes": 2800,
+    "method": 8,
+    "crc32": 3385786978,
+    "offset": 1465695
+  },
+  {
+    "name": "BCData/annotations/validation/positive/11.h5",
+    "compressed_bytes": 477,
+    "uncompressed_bytes": 2992,
+    "method": 8,
+    "crc32": 1586121567,
+    "offset": 1466197
+  },
+  {
+    "name": "BCData/annotations/validation/positive/110.h5",
+    "compressed_bytes": 346,
+    "uncompressed_bytes": 2512,
+    "method": 8,
+    "crc32": 760798836,
+    "offset": 1466748
+  },
+  {
+    "name": "BCData/annotations/validation/positive/111.h5",
+    "compressed_bytes": 279,
+    "uncompressed_bytes": 2256,
+    "method": 8,
+    "crc32": 121152657,
+    "offset": 1467169
+  },
+  {
+    "name": "BCData/annotations/validation/positive/112.h5",
+    "compressed_bytes": 253,
+    "uncompressed_bytes": 2176,
+    "method": 8,
+    "crc32": 110117315,
+    "offset": 1467523
+  },
+  {
+    "name": "BCData/annotations/validation/positive/113.h5",
+    "compressed_bytes": 341,
+    "uncompressed_bytes": 2496,
+    "method": 8,
+    "crc32": 1720543488,
+    "offset": 1467851
+  },
+  {
+    "name": "BCData/annotations/validation/positive/114.h5",
+    "compressed_bytes": 281,
+    "uncompressed_bytes": 2304,
+    "method": 8,
+    "crc32": 3067216326,
+    "offset": 1468267
+  },
+  {
+    "name": "BCData/annotations/validation/positive/115.h5",
+    "compressed_bytes": 241,
+    "uncompressed_bytes": 2176,
+    "method": 8,
+    "crc32": 2907383188,
+    "offset": 1468623
+  },
+  {
+    "name": "BCData/annotations/validation/positive/116.h5",
+    "compressed_bytes": 222,
+    "uncompressed_bytes": 2096,
+    "method": 8,
+    "crc32": 130664496,
+    "offset": 1468939
+  },
+  {
+    "name": "BCData/annotations/validation/positive/117.h5",
+    "compressed_bytes": 317,
+    "uncompressed_bytes": 2400,
+    "method": 8,
+    "crc32": 4023795230,
+    "offset": 1469236
+  },
+  {
+    "name": "BCData/annotations/validation/positive/118.h5",
+    "compressed_bytes": 405,
+    "uncompressed_bytes": 2736,
+    "method": 8,
+    "crc32": 3728808722,
+    "offset": 1469628
+  },
+  {
+    "name": "BCData/annotations/validation/positive/119.h5",
+    "compressed_bytes": 320,
+    "uncompressed_bytes": 2416,
+    "method": 8,
+    "crc32": 1237964490,
+    "offset": 1470108
+  },
+  {
+    "name": "BCData/annotations/validation/positive/12.h5",
+    "compressed_bytes": 546,
+    "uncompressed_bytes": 3248,
+    "method": 8,
+    "crc32": 4262427667,
+    "offset": 1470503
+  },
+  {
+    "name": "BCData/annotations/validation/positive/120.h5",
+    "compressed_bytes": 423,
+    "uncompressed_bytes": 2784,
+    "method": 8,
+    "crc32": 1865593774,
+    "offset": 1471123
+  },
+  {
+    "name": "BCData/annotations/validation/positive/121.h5",
+    "compressed_bytes": 334,
+    "uncompressed_bytes": 2448,
+    "method": 8,
+    "crc32": 1763403442,
+    "offset": 1471621
+  },
+  {
+    "name": "BCData/annotations/validation/positive/122.h5",
+    "compressed_bytes": 356,
+    "uncompressed_bytes": 2560,
+    "method": 8,
+    "crc32": 853162067,
+    "offset": 1472030
+  },
+  {
+    "name": "BCData/annotations/validation/positive/123.h5",
+    "compressed_bytes": 309,
+    "uncompressed_bytes": 2384,
+    "method": 8,
+    "crc32": 3919138990,
+    "offset": 1472461
+  },
+  {
+    "name": "BCData/annotations/validation/positive/124.h5",
+    "compressed_bytes": 307,
+    "uncompressed_bytes": 2368,
+    "method": 8,
+    "crc32": 483770476,
+    "offset": 1472845
+  },
+  {
+    "name": "BCData/annotations/validation/positive/125.h5",
+    "compressed_bytes": 393,
+    "uncompressed_bytes": 2672,
+    "method": 8,
+    "crc32": 2887957543,
+    "offset": 1473227
+  },
+  {
+    "name": "BCData/annotations/validation/positive/126.h5",
+    "compressed_bytes": 286,
+    "uncompressed_bytes": 2288,
+    "method": 8,
+    "crc32": 2357965375,
+    "offset": 1473695
+  },
+  {
+    "name": "BCData/annotations/validation/positive/127.h5",
+    "compressed_bytes": 261,
+    "uncompressed_bytes": 2208,
+    "method": 8,
+    "crc32": 925846436,
+    "offset": 1474056
+  },
+  {
+    "name": "BCData/annotations/validation/positive/128.h5",
+    "compressed_bytes": 340,
+    "uncompressed_bytes": 2480,
+    "method": 8,
+    "crc32": 1003891073,
+    "offset": 1474392
+  },
+  {
+    "name": "BCData/annotations/validation/positive/129.h5",
+    "compressed_bytes": 325,
+    "uncompressed_bytes": 2432,
+    "method": 8,
+    "crc32": 1081154315,
+    "offset": 1474807
+  },
+  {
+    "name": "BCData/annotations/validation/positive/13.h5",
+    "compressed_bytes": 406,
+    "uncompressed_bytes": 2752,
+    "method": 8,
+    "crc32": 1932865148,
+    "offset": 1475207
+  },
+  {
+    "name": "BCData/annotations/validation/positive/130.h5",
+    "compressed_bytes": 250,
+    "uncompressed_bytes": 2192,
+    "method": 8,
+    "crc32": 3957950899,
+    "offset": 1475687
+  },
+  {
+    "name": "BCData/annotations/validation/positive/131.h5",
+    "compressed_bytes": 247,
+    "uncompressed_bytes": 2176,
+    "method": 8,
+    "crc32": 2532247045,
+    "offset": 1476012
+  },
+  {
+    "name": "BCData/annotations/validation/positive/132.h5",
+    "compressed_bytes": 271,
+    "uncompressed_bytes": 2224,
+    "method": 8,
+    "crc32": 2172341667,
+    "offset": 1476334
+  },
+  {
+    "name": "BCData/annotations/validation/positive/14.h5",
+    "compressed_bytes": 418,
+    "uncompressed_bytes": 2768,
+    "method": 8,
+    "crc32": 3870303804,
+    "offset": 1476680
+  },
+  {
+    "name": "BCData/annotations/validation/positive/15.h5",
+    "compressed_bytes": 542,
+    "uncompressed_bytes": 3232,
+    "method": 8,
+    "crc32": 520439026,
+    "offset": 1477172
+  },
+  {
+    "name": "BCData/annotations/validation/positive/16.h5",
+    "compressed_bytes": 536,
+    "uncompressed_bytes": 3216,
+    "method": 8,
+    "crc32": 1058305967,
+    "offset": 1477788
+  },
+  {
+    "name": "BCData/annotations/validation/positive/17.h5",
+    "compressed_bytes": 634,
+    "uncompressed_bytes": 3648,
+    "method": 8,
+    "crc32": 4155843211,
+    "offset": 1478398
+  },
+  {
+    "name": "BCData/annotations/validation/positive/18.h5",
+    "compressed_bytes": 330,
+    "uncompressed_bytes": 2448,
+    "method": 8,
+    "crc32": 430217181,
+    "offset": 1479106
+  },
+  {
+    "name": "BCData/annotations/validation/positive/19.h5",
+    "compressed_bytes": 520,
+    "uncompressed_bytes": 3152,
+    "method": 8,
+    "crc32": 1894651272,
+    "offset": 1479510
+  },
+  {
+    "name": "BCData/annotations/validation/positive/2.h5",
+    "compressed_bytes": 323,
+    "uncompressed_bytes": 2432,
+    "method": 8,
+    "crc32": 3980993801,
+    "offset": 1480104
+  },
+  {
+    "name": "BCData/annotations/validation/positive/20.h5",
+    "compressed_bytes": 424,
+    "uncompressed_bytes": 2816,
+    "method": 8,
+    "crc32": 416525955,
+    "offset": 1480500
+  },
+  {
+    "name": "BCData/annotations/validation/positive/21.h5",
+    "compressed_bytes": 590,
+    "uncompressed_bytes": 3424,
+    "method": 8,
+    "crc32": 920501776,
+    "offset": 1480998
+  },
+  {
+    "name": "BCData/annotations/validation/positive/22.h5",
+    "compressed_bytes": 661,
+    "uncompressed_bytes": 3728,
+    "method": 8,
+    "crc32": 1070523126,
+    "offset": 1481662
+  },
+  {
+    "name": "BCData/annotations/validation/positive/23.h5",
+    "compressed_bytes": 661,
+    "uncompressed_bytes": 3728,
+    "method": 8,
+    "crc32": 712665072,
+    "offset": 1482397
+  },
+  {
+    "name": "BCData/annotations/validation/positive/24.h5",
+    "compressed_bytes": 310,
+    "uncompressed_bytes": 2384,
+    "method": 8,
+    "crc32": 1249285478,
+    "offset": 1483132
+  },
+  {
+    "name": "BCData/annotations/validation/positive/25.h5",
+    "compressed_bytes": 348,
+    "uncompressed_bytes": 2528,
+    "method": 8,
+    "crc32": 943737687,
+    "offset": 1483516
+  },
+  {
+    "name": "BCData/annotations/validation/positive/26.h5",
+    "compressed_bytes": 331,
+    "uncompressed_bytes": 2448,
+    "method": 8,
+    "crc32": 3138419895,
+    "offset": 1483938
+  },
+  {
+    "name": "BCData/annotations/validation/positive/27.h5",
+    "compressed_bytes": 310,
+    "uncompressed_bytes": 2368,
+    "method": 8,
+    "crc32": 2510639983,
+    "offset": 1484343
+  },
+  {
+    "name": "BCData/annotations/validation/positive/28.h5",
+    "compressed_bytes": 594,
+    "uncompressed_bytes": 3440,
+    "method": 8,
+    "crc32": 1029708809,
+    "offset": 1484727
+  },
+  {
+    "name": "BCData/annotations/validation/positive/29.h5",
+    "compressed_bytes": 636,
+    "uncompressed_bytes": 3600,
+    "method": 8,
+    "crc32": 2924299388,
+    "offset": 1485395
+  },
+  {
+    "name": "BCData/annotations/validation/positive/3.h5",
+    "compressed_bytes": 307,
+    "uncompressed_bytes": 2384,
+    "method": 8,
+    "crc32": 861174878,
+    "offset": 1486105
+  },
+  {
+    "name": "BCData/annotations/validation/positive/30.h5",
+    "compressed_bytes": 604,
+    "uncompressed_bytes": 3520,
+    "method": 8,
+    "crc32": 3812526170,
+    "offset": 1486485
+  },
+  {
+    "name": "BCData/annotations/validation/positive/31.h5",
+    "compressed_bytes": 505,
+    "uncompressed_bytes": 3088,
+    "method": 8,
+    "crc32": 3812132749,
+    "offset": 1487163
+  },
+  {
+    "name": "BCData/annotations/validation/positive/32.h5",
+    "compressed_bytes": 322,
+    "uncompressed_bytes": 2416,
+    "method": 8,
+    "crc32": 2292194118,
+    "offset": 1487742
+  },
+  {
+    "name": "BCData/annotations/validation/positive/33.h5",
+    "compressed_bytes": 306,
+    "uncompressed_bytes": 2368,
+    "method": 8,
+    "crc32": 524292448,
+    "offset": 1488138
+  },
+  {
+    "name": "BCData/annotations/validation/positive/34.h5",
+    "compressed_bytes": 421,
+    "uncompressed_bytes": 2768,
+    "method": 8,
+    "crc32": 4166393075,
+    "offset": 1488518
+  },
+  {
+    "name": "BCData/annotations/validation/positive/35.h5",
+    "compressed_bytes": 331,
+    "uncompressed_bytes": 2480,
+    "method": 8,
+    "crc32": 1327749843,
+    "offset": 1489013
+  },
+  {
+    "name": "BCData/annotations/validation/positive/36.h5",
+    "compressed_bytes": 450,
+    "uncompressed_bytes": 2912,
+    "method": 8,
+    "crc32": 3978021174,
+    "offset": 1489418
+  },
+  {
+    "name": "BCData/annotations/validation/positive/37.h5",
+    "compressed_bytes": 482,
+    "uncompressed_bytes": 3024,
+    "method": 8,
+    "crc32": 532585404,
+    "offset": 1489942
+  },
+  {
+    "name": "BCData/annotations/validation/positive/38.h5",
+    "compressed_bytes": 452,
+    "uncompressed_bytes": 2928,
+    "method": 8,
+    "crc32": 1338071460,
+    "offset": 1490498
+  },
+  {
+    "name": "BCData/annotations/validation/positive/39.h5",
+    "compressed_bytes": 538,
+    "uncompressed_bytes": 3232,
+    "method": 8,
+    "crc32": 1513510401,
+    "offset": 1491024
+  },
+  {
+    "name": "BCData/annotations/validation/positive/4.h5",
+    "compressed_bytes": 301,
+    "uncompressed_bytes": 2336,
+    "method": 8,
+    "crc32": 1052833915,
+    "offset": 1491636
+  },
+  {
+    "name": "BCData/annotations/validation/positive/40.h5",
+    "compressed_bytes": 367,
+    "uncompressed_bytes": 2592,
+    "method": 8,
+    "crc32": 1302155309,
+    "offset": 1492010
+  },
+  {
+    "name": "BCData/annotations/validation/positive/41.h5",
+    "compressed_bytes": 380,
+    "uncompressed_bytes": 2656,
+    "method": 8,
+    "crc32": 2562219721,
+    "offset": 1492451
+  },
+  {
+    "name": "BCData/annotations/validation/positive/42.h5",
+    "compressed_bytes": 399,
+    "uncompressed_bytes": 2704,
+    "method": 8,
+    "crc32": 2596347824,
+    "offset": 1492905
+  },
+  {
+    "name": "BCData/annotations/validation/positive/43.h5",
+    "compressed_bytes": 460,
+    "uncompressed_bytes": 2944,
+    "method": 8,
+    "crc32": 2430252384,
+    "offset": 1493378
+  },
+  {
+    "name": "BCData/annotations/validation/positive/44.h5",
+    "compressed_bytes": 588,
+    "uncompressed_bytes": 3440,
+    "method": 8,
+    "crc32": 2550976956,
+    "offset": 1493912
+  },
+  {
+    "name": "BCData/annotations/validation/positive/45.h5",
+    "compressed_bytes": 649,
+    "uncompressed_bytes": 3680,
+    "method": 8,
+    "crc32": 1310155011,
+    "offset": 1494574
+  },
+  {
+    "name": "BCData/annotations/validation/positive/46.h5",
+    "compressed_bytes": 773,
+    "uncompressed_bytes": 4224,
+    "method": 8,
+    "crc32": 877705475,
+    "offset": 1495297
+  },
+  {
+    "name": "BCData/annotations/validation/positive/47.h5",
+    "compressed_bytes": 214,
+    "uncompressed_bytes": 2080,
+    "method": 8,
+    "crc32": 1597672921,
+    "offset": 1496144
+  },
+  {
+    "name": "BCData/annotations/validation/positive/48.h5",
+    "compressed_bytes": 959,
+    "uncompressed_bytes": 4976,
+    "method": 8,
+    "crc32": 714724942,
+    "offset": 1496432
+  },
+  {
+    "name": "BCData/annotations/validation/positive/49.h5",
+    "compressed_bytes": 579,
+    "uncompressed_bytes": 3360,
+    "method": 8,
+    "crc32": 396402833,
+    "offset": 1497465
+  },
+  {
+    "name": "BCData/annotations/validation/positive/5.h5",
+    "compressed_bytes": 324,
+    "uncompressed_bytes": 2400,
+    "method": 8,
+    "crc32": 1497401988,
+    "offset": 1498118
+  },
+  {
+    "name": "BCData/annotations/validation/positive/50.h5",
+    "compressed_bytes": 490,
+    "uncompressed_bytes": 3040,
+    "method": 8,
+    "crc32": 4231962030,
+    "offset": 1498515
+  },
+  {
+    "name": "BCData/annotations/validation/positive/51.h5",
+    "compressed_bytes": 413,
+    "uncompressed_bytes": 2752,
+    "method": 8,
+    "crc32": 410859479,
+    "offset": 1499079
+  },
+  {
+    "name": "BCData/annotations/validation/positive/52.h5",
+    "compressed_bytes": 376,
+    "uncompressed_bytes": 2608,
+    "method": 8,
+    "crc32": 275193970,
+    "offset": 1499566
+  },
+  {
+    "name": "BCData/annotations/validation/positive/53.h5",
+    "compressed_bytes": 378,
+    "uncompressed_bytes": 2640,
+    "method": 8,
+    "crc32": 2763365272,
+    "offset": 1500016
+  },
+  {
+    "name": "BCData/annotations/validation/positive/54.h5",
+    "compressed_bytes": 421,
+    "uncompressed_bytes": 2800,
+    "method": 8,
+    "crc32": 3958447759,
+    "offset": 1500468
+  },
+  {
+    "name": "BCData/annotations/validation/positive/55.h5",
+    "compressed_bytes": 515,
+    "uncompressed_bytes": 3168,
+    "method": 8,
+    "crc32": 1290065180,
+    "offset": 1500963
+  },
+  {
+    "name": "BCData/annotations/validation/positive/56.h5",
+    "compressed_bytes": 460,
+    "uncompressed_bytes": 2960,
+    "method": 8,
+    "crc32": 1233143451,
+    "offset": 1501552
+  },
+  {
+    "name": "BCData/annotations/validation/positive/57.h5",
+    "compressed_bytes": 444,
+    "uncompressed_bytes": 2896,
+    "method": 8,
+    "crc32": 1671255830,
+    "offset": 1502086
+  },
+  {
+    "name": "BCData/annotations/validation/positive/58.h5",
+    "compressed_bytes": 553,
+    "uncompressed_bytes": 3248,
+    "method": 8,
+    "crc32": 2943193316,
+    "offset": 1502604
+  },
+  {
+    "name": "BCData/annotations/validation/positive/59.h5",
+    "compressed_bytes": 366,
+    "uncompressed_bytes": 2576,
+    "method": 8,
+    "crc32": 3061419014,
+    "offset": 1503231
+  },
+  {
+    "name": "BCData/annotations/validation/positive/6.h5",
+    "compressed_bytes": 317,
+    "uncompressed_bytes": 2416,
+    "method": 8,
+    "crc32": 2020985409,
+    "offset": 1503671
+  },
+  {
+    "name": "BCData/annotations/validation/positive/60.h5",
+    "compressed_bytes": 492,
+    "uncompressed_bytes": 3072,
+    "method": 8,
+    "crc32": 1151917652,
+    "offset": 1504061
+  },
+  {
+    "name": "BCData/annotations/validation/positive/61.h5",
+    "compressed_bytes": 488,
+    "uncompressed_bytes": 3056,
+    "method": 8,
+    "crc32": 1658952760,
+    "offset": 1504627
+  },
+  {
+    "name": "BCData/annotations/validation/positive/62.h5",
+    "compressed_bytes": 540,
+    "uncompressed_bytes": 3248,
+    "method": 8,
+    "crc32": 1696723603,
+    "offset": 1505189
+  },
+  {
+    "name": "BCData/annotations/validation/positive/63.h5",
+    "compressed_bytes": 704,
+    "uncompressed_bytes": 3920,
+    "method": 8,
+    "crc32": 1453258477,
+    "offset": 1505803
+  },
+  {
+    "name": "BCData/annotations/validation/positive/64.h5",
+    "compressed_bytes": 510,
+    "uncompressed_bytes": 3104,
+    "method": 8,
+    "crc32": 3904538227,
+    "offset": 1506581
+  },
+  {
+    "name": "BCData/annotations/validation/positive/65.h5",
+    "compressed_bytes": 449,
+    "uncompressed_bytes": 2912,
+    "method": 8,
+    "crc32": 2480164612,
+    "offset": 1507165
+  },
+  {
+    "name": "BCData/annotations/validation/positive/66.h5",
+    "compressed_bytes": 1289,
+    "uncompressed_bytes": 6448,
+    "method": 8,
+    "crc32": 152488082,
+    "offset": 1507688
+  },
+  {
+    "name": "BCData/annotations/validation/positive/67.h5",
+    "compressed_bytes": 1214,
+    "uncompressed_bytes": 6144,
+    "method": 8,
+    "crc32": 424937038,
+    "offset": 1509051
+  },
+  {
+    "name": "BCData/annotations/validation/positive/68.h5",
+    "compressed_bytes": 407,
+    "uncompressed_bytes": 2752,
+    "method": 8,
+    "crc32": 1801745502,
+    "offset": 1510339
+  },
+  {
+    "name": "BCData/annotations/validation/positive/69.h5",
+    "compressed_bytes": 1099,
+    "uncompressed_bytes": 5664,
+    "method": 8,
+    "crc32": 1742359847,
+    "offset": 1510820
+  },
+  {
+    "name": "BCData/annotations/validation/positive/7.h5",
+    "compressed_bytes": 459,
+    "uncompressed_bytes": 2928,
+    "method": 8,
+    "crc32": 358682027,
+    "offset": 1511993
+  },
+  {
+    "name": "BCData/annotations/validation/positive/70.h5",
+    "compressed_bytes": 530,
+    "uncompressed_bytes": 3168,
+    "method": 8,
+    "crc32": 1810514244,
+    "offset": 1512525
+  },
+  {
+    "name": "BCData/annotations/validation/positive/71.h5",
+    "compressed_bytes": 544,
+    "uncompressed_bytes": 3232,
+    "method": 8,
+    "crc32": 2167152795,
+    "offset": 1513129
+  },
+  {
+    "name": "BCData/annotations/validation/positive/72.h5",
+    "compressed_bytes": 605,
+    "uncompressed_bytes": 3488,
+    "method": 8,
+    "crc32": 4226934927,
+    "offset": 1513747
+  },
+  {
+    "name": "BCData/annotations/validation/positive/73.h5",
+    "compressed_bytes": 734,
+    "uncompressed_bytes": 4048,
+    "method": 8,
+    "crc32": 679753614,
+    "offset": 1514426
+  },
+  {
+    "name": "BCData/annotations/validation/positive/74.h5",
+    "compressed_bytes": 616,
+    "uncompressed_bytes": 3536,
+    "method": 8,
+    "crc32": 2971500540,
+    "offset": 1515234
+  },
+  {
+    "name": "BCData/annotations/validation/positive/75.h5",
+    "compressed_bytes": 542,
+    "uncompressed_bytes": 3216,
+    "method": 8,
+    "crc32": 1631119885,
+    "offset": 1515924
+  },
+  {
+    "name": "BCData/annotations/validation/positive/76.h5",
+    "compressed_bytes": 581,
+    "uncompressed_bytes": 3360,
+    "method": 8,
+    "crc32": 3809167861,
+    "offset": 1516540
+  },
+  {
+    "name": "BCData/annotations/validation/positive/77.h5",
+    "compressed_bytes": 671,
+    "uncompressed_bytes": 3776,
+    "method": 8,
+    "crc32": 148814539,
+    "offset": 1517195
+  },
+  {
+    "name": "BCData/annotations/validation/positive/78.h5",
+    "compressed_bytes": 619,
+    "uncompressed_bytes": 3584,
+    "method": 8,
+    "crc32": 2566219598,
+    "offset": 1517940
+  },
+  {
+    "name": "BCData/annotations/validation/positive/79.h5",
+    "compressed_bytes": 840,
+    "uncompressed_bytes": 4496,
+    "method": 8,
+    "crc32": 1076787604,
+    "offset": 1518633
+  },
+  {
+    "name": "BCData/annotations/validation/positive/8.h5",
+    "compressed_bytes": 583,
+    "uncompressed_bytes": 3408,
+    "method": 8,
+    "crc32": 2754257967,
+    "offset": 1519547
+  },
+  {
+    "name": "BCData/annotations/validation/positive/80.h5",
+    "compressed_bytes": 650,
+    "uncompressed_bytes": 3664,
+    "method": 8,
+    "crc32": 516944244,
+    "offset": 1520203
+  },
+  {
+    "name": "BCData/annotations/validation/positive/81.h5",
+    "compressed_bytes": 639,
+    "uncompressed_bytes": 3632,
+    "method": 8,
+    "crc32": 1266427912,
+    "offset": 1520927
+  },
+  {
+    "name": "BCData/annotations/validation/positive/82.h5",
+    "compressed_bytes": 658,
+    "uncompressed_bytes": 3728,
+    "method": 8,
+    "crc32": 3390949682,
+    "offset": 1521640
+  },
+  {
+    "name": "BCData/annotations/validation/positive/83.h5",
+    "compressed_bytes": 490,
+    "uncompressed_bytes": 3056,
+    "method": 8,
+    "crc32": 545499726,
+    "offset": 1522372
+  },
+  {
+    "name": "BCData/annotations/validation/positive/84.h5",
+    "compressed_bytes": 330,
+    "uncompressed_bytes": 2448,
+    "method": 8,
+    "crc32": 604751127,
+    "offset": 1522936
+  },
+  {
+    "name": "BCData/annotations/validation/positive/85.h5",
+    "compressed_bytes": 255,
+    "uncompressed_bytes": 2192,
+    "method": 8,
+    "crc32": 2706833159,
+    "offset": 1523340
+  },
+  {
+    "name": "BCData/annotations/validation/positive/86.h5",
+    "compressed_bytes": 238,
+    "uncompressed_bytes": 2160,
+    "method": 8,
+    "crc32": 1636100997,
+    "offset": 1523669
+  },
+  {
+    "name": "BCData/annotations/validation/positive/87.h5",
+    "compressed_bytes": 219,
+    "uncompressed_bytes": 2096,
+    "method": 8,
+    "crc32": 2043572383,
+    "offset": 1523981
+  },
+  {
+    "name": "BCData/annotations/validation/positive/88.h5",
+    "compressed_bytes": 678,
+    "uncompressed_bytes": 3808,
+    "method": 8,
+    "crc32": 2630766599,
+    "offset": 1524274
+  },
+  {
+    "name": "BCData/annotations/validation/positive/89.h5",
+    "compressed_bytes": 835,
+    "uncompressed_bytes": 4416,
+    "method": 8,
+    "crc32": 2400297095,
+    "offset": 1525026
+  },
+  {
+    "name": "BCData/annotations/validation/positive/9.h5",
+    "compressed_bytes": 648,
+    "uncompressed_bytes": 3696,
+    "method": 8,
+    "crc32": 3890508770,
+    "offset": 1525935
+  },
+  {
+    "name": "BCData/annotations/validation/positive/90.h5",
+    "compressed_bytes": 760,
+    "uncompressed_bytes": 4192,
+    "method": 8,
+    "crc32": 1533830236,
+    "offset": 1526656
+  },
+  {
+    "name": "BCData/annotations/validation/positive/91.h5",
+    "compressed_bytes": 424,
+    "uncompressed_bytes": 2800,
+    "method": 8,
+    "crc32": 423443422,
+    "offset": 1527490
+  },
+  {
+    "name": "BCData/annotations/validation/positive/92.h5",
+    "compressed_bytes": 420,
+    "uncompressed_bytes": 2816,
+    "method": 8,
+    "crc32": 3045388852,
+    "offset": 1527988
+  },
+  {
+    "name": "BCData/annotations/validation/positive/93.h5",
+    "compressed_bytes": 278,
+    "uncompressed_bytes": 2240,
+    "method": 8,
+    "crc32": 1670086555,
+    "offset": 1528482
+  },
+  {
+    "name": "BCData/annotations/validation/positive/94.h5",
+    "compressed_bytes": 281,
+    "uncompressed_bytes": 2304,
+    "method": 8,
+    "crc32": 2105059101,
+    "offset": 1528834
+  },
+  {
+    "name": "BCData/annotations/validation/positive/95.h5",
+    "compressed_bytes": 298,
+    "uncompressed_bytes": 2336,
+    "method": 8,
+    "crc32": 3243393008,
+    "offset": 1529189
+  },
+  {
+    "name": "BCData/annotations/validation/positive/96.h5",
+    "compressed_bytes": 306,
+    "uncompressed_bytes": 2368,
+    "method": 8,
+    "crc32": 2842416316,
+    "offset": 1529561
+  },
+  {
+    "name": "BCData/annotations/validation/positive/97.h5",
+    "compressed_bytes": 422,
+    "uncompressed_bytes": 2768,
+    "method": 8,
+    "crc32": 3898333714,
+    "offset": 1529941
+  },
+  {
+    "name": "BCData/annotations/validation/positive/98.h5",
+    "compressed_bytes": 295,
+    "uncompressed_bytes": 2336,
+    "method": 8,
+    "crc32": 1838736881,
+    "offset": 1530437
+  },
+  {
+    "name": "BCData/annotations/validation/positive/99.h5",
+    "compressed_bytes": 270,
+    "uncompressed_bytes": 2240,
+    "method": 8,
+    "crc32": 2077138216,
+    "offset": 1530806
+  },
+  {
+    "name": "BCData/images/validation/0.png",
+    "compressed_bytes": 601635,
+    "uncompressed_bytes": 624869,
+    "method": 8,
+    "crc32": 114674025,
+    "offset": 765902542
+  },
+  {
+    "name": "BCData/images/validation/1.png",
+    "compressed_bytes": 572815,
+    "uncompressed_bytes": 601391,
+    "method": 8,
+    "crc32": 416551708,
+    "offset": 766504237
+  },
+  {
+    "name": "BCData/images/validation/10.png",
+    "compressed_bytes": 698569,
+    "uncompressed_bytes": 710082,
+    "method": 8,
+    "crc32": 1623319313,
+    "offset": 767077112
+  },
+  {
+    "name": "BCData/images/validation/100.png",
+    "compressed_bytes": 571080,
+    "uncompressed_bytes": 583889,
+    "method": 8,
+    "crc32": 1214753204,
+    "offset": 767775742
+  },
+  {
+    "name": "BCData/images/validation/101.png",
+    "compressed_bytes": 617603,
+    "uncompressed_bytes": 628137,
+    "method": 8,
+    "crc32": 1226120794,
+    "offset": 768346884
+  },
+  {
+    "name": "BCData/images/validation/102.png",
+    "compressed_bytes": 632643,
+    "uncompressed_bytes": 641287,
+    "method": 8,
+    "crc32": 2198633536,
+    "offset": 768964549
+  },
+  {
+    "name": "BCData/images/validation/103.png",
+    "compressed_bytes": 646142,
+    "uncompressed_bytes": 655810,
+    "method": 8,
+    "crc32": 3542276594,
+    "offset": 769597254
+  },
+  {
+    "name": "BCData/images/validation/104.png",
+    "compressed_bytes": 643806,
+    "uncompressed_bytes": 653278,
+    "method": 8,
+    "crc32": 1527193528,
+    "offset": 770243458
+  },
+  {
+    "name": "BCData/images/validation/105.png",
+    "compressed_bytes": 619306,
+    "uncompressed_bytes": 628730,
+    "method": 8,
+    "crc32": 2150865069,
+    "offset": 770887326
+  },
+  {
+    "name": "BCData/images/validation/106.png",
+    "compressed_bytes": 619594,
+    "uncompressed_bytes": 629802,
+    "method": 8,
+    "crc32": 315341926,
+    "offset": 771506694
+  },
+  {
+    "name": "BCData/images/validation/107.png",
+    "compressed_bytes": 638258,
+    "uncompressed_bytes": 647191,
+    "method": 8,
+    "crc32": 152202331,
+    "offset": 772126350
+  },
+  {
+    "name": "BCData/images/validation/108.png",
+    "compressed_bytes": 619622,
+    "uncompressed_bytes": 629688,
+    "method": 8,
+    "crc32": 2487246011,
+    "offset": 772764670
+  },
+  {
+    "name": "BCData/images/validation/109.png",
+    "compressed_bytes": 649036,
+    "uncompressed_bytes": 657884,
+    "method": 8,
+    "crc32": 794567697,
+    "offset": 773384354
+  },
+  {
+    "name": "BCData/images/validation/11.png",
+    "compressed_bytes": 654743,
+    "uncompressed_bytes": 668342,
+    "method": 8,
+    "crc32": 501834093,
+    "offset": 774033452
+  },
+  {
+    "name": "BCData/images/validation/110.png",
+    "compressed_bytes": 622685,
+    "uncompressed_bytes": 635647,
+    "method": 8,
+    "crc32": 3788259880,
+    "offset": 774688256
+  },
+  {
+    "name": "BCData/images/validation/111.png",
+    "compressed_bytes": 650298,
+    "uncompressed_bytes": 656279,
+    "method": 8,
+    "crc32": 869083346,
+    "offset": 775311003
+  },
+  {
+    "name": "BCData/images/validation/112.png",
+    "compressed_bytes": 655974,
+    "uncompressed_bytes": 660775,
+    "method": 8,
+    "crc32": 2847776990,
+    "offset": 775961363
+  },
+  {
+    "name": "BCData/images/validation/113.png",
+    "compressed_bytes": 642596,
+    "uncompressed_bytes": 648691,
+    "method": 8,
+    "crc32": 1675221245,
+    "offset": 776617399
+  },
+  {
+    "name": "BCData/images/validation/114.png",
+    "compressed_bytes": 605625,
+    "uncompressed_bytes": 617030,
+    "method": 8,
+    "crc32": 2299722494,
+    "offset": 777260057
+  },
+  {
+    "name": "BCData/images/validation/115.png",
+    "compressed_bytes": 638748,
+    "uncompressed_bytes": 650681,
+    "method": 8,
+    "crc32": 2928303050,
+    "offset": 777865744
+  },
+  {
+    "name": "BCData/images/validation/116.png",
+    "compressed_bytes": 606346,
+    "uncompressed_bytes": 618738,
+    "method": 8,
+    "crc32": 1797070429,
+    "offset": 778504554
+  },
+  {
+    "name": "BCData/images/validation/117.png",
+    "compressed_bytes": 640623,
+    "uncompressed_bytes": 651347,
+    "method": 8,
+    "crc32": 3817879978,
+    "offset": 779110962
+  },
+  {
+    "name": "BCData/images/validation/118.png",
+    "compressed_bytes": 649188,
+    "uncompressed_bytes": 660050,
+    "method": 8,
+    "crc32": 971702222,
+    "offset": 779751647
+  },
+  {
+    "name": "BCData/images/validation/119.png",
+    "compressed_bytes": 639192,
+    "uncompressed_bytes": 650814,
+    "method": 8,
+    "crc32": 508657091,
+    "offset": 780400897
+  },
+  {
+    "name": "BCData/images/validation/12.png",
+    "compressed_bytes": 732838,
+    "uncompressed_bytes": 741061,
+    "method": 8,
+    "crc32": 2236074632,
+    "offset": 781040151
+  },
+  {
+    "name": "BCData/images/validation/120.png",
+    "compressed_bytes": 679927,
+    "uncompressed_bytes": 690273,
+    "method": 8,
+    "crc32": 3888985666,
+    "offset": 781773050
+  },
+  {
+    "name": "BCData/images/validation/121.png",
+    "compressed_bytes": 634763,
+    "uncompressed_bytes": 644816,
+    "method": 8,
+    "crc32": 209977642,
+    "offset": 782453039
+  },
+  {
+    "name": "BCData/images/validation/122.png",
+    "compressed_bytes": 636907,
+    "uncompressed_bytes": 647428,
+    "method": 8,
+    "crc32": 3224731353,
+    "offset": 783087864
+  },
+  {
+    "name": "BCData/images/validation/123.png",
+    "compressed_bytes": 637222,
+    "uncompressed_bytes": 647556,
+    "method": 8,
+    "crc32": 4294892429,
+    "offset": 783724833
+  },
+  {
+    "name": "BCData/images/validation/124.png",
+    "compressed_bytes": 644365,
+    "uncompressed_bytes": 655878,
+    "method": 8,
+    "crc32": 3274729395,
+    "offset": 784362117
+  },
+  {
+    "name": "BCData/images/validation/125.png",
+    "compressed_bytes": 663186,
+    "uncompressed_bytes": 674308,
+    "method": 8,
+    "crc32": 2781161465,
+    "offset": 785006544
+  },
+  {
+    "name": "BCData/images/validation/126.png",
+    "compressed_bytes": 620526,
+    "uncompressed_bytes": 630796,
+    "method": 8,
+    "crc32": 2053063142,
+    "offset": 785669792
+  },
+  {
+    "name": "BCData/images/validation/127.png",
+    "compressed_bytes": 640960,
+    "uncompressed_bytes": 650375,
+    "method": 8,
+    "crc32": 1669250601,
+    "offset": 786290380
+  },
+  {
+    "name": "BCData/images/validation/128.png",
+    "compressed_bytes": 642129,
+    "uncompressed_bytes": 651943,
+    "method": 8,
+    "crc32": 301806669,
+    "offset": 786931402
+  },
+  {
+    "name": "BCData/images/validation/129.png",
+    "compressed_bytes": 635113,
+    "uncompressed_bytes": 646929,
+    "method": 8,
+    "crc32": 1789496597,
+    "offset": 787573593
+  },
+  {
+    "name": "BCData/images/validation/13.png",
+    "compressed_bytes": 659012,
+    "uncompressed_bytes": 673227,
+    "method": 8,
+    "crc32": 2004709872,
+    "offset": 788208768
+  },
+  {
+    "name": "BCData/images/validation/130.png",
+    "compressed_bytes": 627855,
+    "uncompressed_bytes": 638150,
+    "method": 8,
+    "crc32": 3842260720,
+    "offset": 788867841
+  },
+  {
+    "name": "BCData/images/validation/131.png",
+    "compressed_bytes": 644810,
+    "uncompressed_bytes": 655596,
+    "method": 8,
+    "crc32": 947239614,
+    "offset": 789495758
+  },
+  {
+    "name": "BCData/images/validation/132.png",
+    "compressed_bytes": 539251,
+    "uncompressed_bytes": 558852,
+    "method": 8,
+    "crc32": 794164449,
+    "offset": 790140630
+  },
+  {
+    "name": "BCData/images/validation/14.png",
+    "compressed_bytes": 613689,
+    "uncompressed_bytes": 634537,
+    "method": 8,
+    "crc32": 449083567,
+    "offset": 790679943
+  },
+  {
+    "name": "BCData/images/validation/15.png",
+    "compressed_bytes": 736170,
+    "uncompressed_bytes": 748976,
+    "method": 8,
+    "crc32": 2913526289,
+    "offset": 791293693
+  },
+  {
+    "name": "BCData/images/validation/16.png",
+    "compressed_bytes": 723159,
+    "uncompressed_bytes": 730630,
+    "method": 8,
+    "crc32": 4012664509,
+    "offset": 792029924
+  },
+  {
+    "name": "BCData/images/validation/17.png",
+    "compressed_bytes": 733897,
+    "uncompressed_bytes": 738245,
+    "method": 8,
+    "crc32": 3610014266,
+    "offset": 792753144
+  },
+  {
+    "name": "BCData/images/validation/18.png",
+    "compressed_bytes": 608478,
+    "uncompressed_bytes": 618705,
+    "method": 8,
+    "crc32": 3691342480,
+    "offset": 793487102
+  },
+  {
+    "name": "BCData/images/validation/19.png",
+    "compressed_bytes": 712170,
+    "uncompressed_bytes": 720344,
+    "method": 8,
+    "crc32": 3085033470,
+    "offset": 794095641
+  },
+  {
+    "name": "BCData/images/validation/2.png",
+    "compressed_bytes": 566470,
+    "uncompressed_bytes": 587917,
+    "method": 8,
+    "crc32": 786844370,
+    "offset": 794807872
+  },
+  {
+    "name": "BCData/images/validation/20.png",
+    "compressed_bytes": 689514,
+    "uncompressed_bytes": 700625,
+    "method": 8,
+    "crc32": 874986467,
+    "offset": 795374402
+  },
+  {
+    "name": "BCData/images/validation/21.png",
+    "compressed_bytes": 762431,
+    "uncompressed_bytes": 767836,
+    "method": 8,
+    "crc32": 3697363199,
+    "offset": 796063977
+  },
+  {
+    "name": "BCData/images/validation/22.png",
+    "compressed_bytes": 797493,
+    "uncompressed_bytes": 801551,
+    "method": 8,
+    "crc32": 3491071885,
+    "offset": 796826469
+  },
+  {
+    "name": "BCData/images/validation/23.png",
+    "compressed_bytes": 770121,
+    "uncompressed_bytes": 775264,
+    "method": 8,
+    "crc32": 2708936306,
+    "offset": 797624023
+  },
+  {
+    "name": "BCData/images/validation/24.png",
+    "compressed_bytes": 549573,
+    "uncompressed_bytes": 567646,
+    "method": 8,
+    "crc32": 3298309999,
+    "offset": 798394205
+  },
+  {
+    "name": "BCData/images/validation/25.png",
+    "compressed_bytes": 627210,
+    "uncompressed_bytes": 639453,
+    "method": 8,
+    "crc32": 1008932147,
+    "offset": 798943839
+  },
+  {
+    "name": "BCData/images/validation/26.png",
+    "compressed_bytes": 641453,
+    "uncompressed_bytes": 651314,
+    "method": 8,
+    "crc32": 1919672605,
+    "offset": 799571110
+  },
+  {
+    "name": "BCData/images/validation/27.png",
+    "compressed_bytes": 569935,
+    "uncompressed_bytes": 583747,
+    "method": 8,
+    "crc32": 2529417966,
+    "offset": 800212624
+  },
+  {
+    "name": "BCData/images/validation/28.png",
+    "compressed_bytes": 707326,
+    "uncompressed_bytes": 713474,
+    "method": 8,
+    "crc32": 3102634693,
+    "offset": 800782620
+  },
+  {
+    "name": "BCData/images/validation/29.png",
+    "compressed_bytes": 705506,
+    "uncompressed_bytes": 709699,
+    "method": 8,
+    "crc32": 2325654126,
+    "offset": 801490007
+  },
+  {
+    "name": "BCData/images/validation/3.png",
+    "compressed_bytes": 546521,
+    "uncompressed_bytes": 571796,
+    "method": 8,
+    "crc32": 4099771535,
+    "offset": 802195574
+  },
+  {
+    "name": "BCData/images/validation/30.png",
+    "compressed_bytes": 712140,
+    "uncompressed_bytes": 720608,
+    "method": 8,
+    "crc32": 3528435417,
+    "offset": 802742155
+  },
+  {
+    "name": "BCData/images/validation/31.png",
+    "compressed_bytes": 693221,
+    "uncompressed_bytes": 701243,
+    "method": 8,
+    "crc32": 3400459650,
+    "offset": 803454356
+  },
+  {
+    "name": "BCData/images/validation/32.png",
+    "compressed_bytes": 628738,
+    "uncompressed_bytes": 644519,
+    "method": 8,
+    "crc32": 3341768807,
+    "offset": 804147638
+  },
+  {
+    "name": "BCData/images/validation/33.png",
+    "compressed_bytes": 645544,
+    "uncompressed_bytes": 659167,
+    "method": 8,
+    "crc32": 358397924,
+    "offset": 804776437
+  },
+  {
+    "name": "BCData/images/validation/34.png",
+    "compressed_bytes": 698562,
+    "uncompressed_bytes": 709532,
+    "method": 8,
+    "crc32": 2705664996,
+    "offset": 805422042
+  },
+  {
+    "name": "BCData/images/validation/35.png",
+    "compressed_bytes": 646524,
+    "uncompressed_bytes": 661721,
+    "method": 8,
+    "crc32": 1831246838,
+    "offset": 806120665
+  },
+  {
+    "name": "BCData/images/validation/36.png",
+    "compressed_bytes": 575989,
+    "uncompressed_bytes": 594294,
+    "method": 8,
+    "crc32": 3432403819,
+    "offset": 806767250
+  },
+  {
+    "name": "BCData/images/validation/37.png",
+    "compressed_bytes": 579211,
+    "uncompressed_bytes": 594907,
+    "method": 8,
+    "crc32": 3999915577,
+    "offset": 807343300
+  },
+  {
+    "name": "BCData/images/validation/38.png",
+    "compressed_bytes": 597775,
+    "uncompressed_bytes": 613182,
+    "method": 8,
+    "crc32": 710294597,
+    "offset": 807922572
+  },
+  {
+    "name": "BCData/images/validation/39.png",
+    "compressed_bytes": 666851,
+    "uncompressed_bytes": 674042,
+    "method": 8,
+    "crc32": 2559668519,
+    "offset": 808520408
+  },
+  {
+    "name": "BCData/images/validation/4.png",
+    "compressed_bytes": 529004,
+    "uncompressed_bytes": 557522,
+    "method": 8,
+    "crc32": 4202990434,
+    "offset": 809187320
+  },
+  {
+    "name": "BCData/images/validation/40.png",
+    "compressed_bytes": 585464,
+    "uncompressed_bytes": 598451,
+    "method": 8,
+    "crc32": 580956194,
+    "offset": 809716384
+  },
+  {
+    "name": "BCData/images/validation/41.png",
+    "compressed_bytes": 577415,
+    "uncompressed_bytes": 595826,
+    "method": 8,
+    "crc32": 3485646991,
+    "offset": 810301909
+  },
+  {
+    "name": "BCData/images/validation/42.png",
+    "compressed_bytes": 589417,
+    "uncompressed_bytes": 602261,
+    "method": 8,
+    "crc32": 2269089939,
+    "offset": 810879385
+  },
+  {
+    "name": "BCData/images/validation/43.png",
+    "compressed_bytes": 587368,
+    "uncompressed_bytes": 600006,
+    "method": 8,
+    "crc32": 1962072515,
+    "offset": 811468863
+  },
+  {
+    "name": "BCData/images/validation/44.png",
+    "compressed_bytes": 630093,
+    "uncompressed_bytes": 640789,
+    "method": 8,
+    "crc32": 2173689154,
+    "offset": 812056292
+  },
+  {
+    "name": "BCData/images/validation/45.png",
+    "compressed_bytes": 658142,
+    "uncompressed_bytes": 665579,
+    "method": 8,
+    "crc32": 3165602441,
+    "offset": 812686446
+  },
+  {
+    "name": "BCData/images/validation/46.png",
+    "compressed_bytes": 755526,
+    "uncompressed_bytes": 757502,
+    "method": 8,
+    "crc32": 3917045094,
+    "offset": 813344649
+  },
+  {
+    "name": "BCData/images/validation/47.png",
+    "compressed_bytes": 563713,
+    "uncompressed_bytes": 578613,
+    "method": 8,
+    "crc32": 2474207324,
+    "offset": 814100236
+  },
+  {
+    "name": "BCData/images/validation/48.png",
+    "compressed_bytes": 785437,
+    "uncompressed_bytes": 787449,
+    "method": 8,
+    "crc32": 76688654,
+    "offset": 814664010
+  },
+  {
+    "name": "BCData/images/validation/49.png",
+    "compressed_bytes": 667316,
+    "uncompressed_bytes": 673233,
+    "method": 8,
+    "crc32": 4144847399,
+    "offset": 815449508
+  },
+  {
+    "name": "BCData/images/validation/5.png",
+    "compressed_bytes": 531797,
+    "uncompressed_bytes": 556325,
+    "method": 8,
+    "crc32": 3254123295,
+    "offset": 816116885
+  },
+  {
+    "name": "BCData/images/validation/50.png",
+    "compressed_bytes": 721292,
+    "uncompressed_bytes": 727224,
+    "method": 8,
+    "crc32": 3724196865,
+    "offset": 816648742
+  },
+  {
+    "name": "BCData/images/validation/51.png",
+    "compressed_bytes": 649904,
+    "uncompressed_bytes": 661600,
+    "method": 8,
+    "crc32": 1837319406,
+    "offset": 817370095
+  },
+  {
+    "name": "BCData/images/validation/52.png",
+    "compressed_bytes": 640005,
+    "uncompressed_bytes": 653970,
+    "method": 8,
+    "crc32": 2260114589,
+    "offset": 818020060
+  },
+  {
+    "name": "BCData/images/validation/53.png",
+    "compressed_bytes": 634274,
+    "uncompressed_bytes": 648047,
+    "method": 8,
+    "crc32": 1365645617,
+    "offset": 818660126
+  },
+  {
+    "name": "BCData/images/validation/54.png",
+    "compressed_bytes": 710275,
+    "uncompressed_bytes": 717784,
+    "method": 8,
+    "crc32": 93868096,
+    "offset": 819294461
+  },
+  {
+    "name": "BCData/images/validation/55.png",
+    "compressed_bytes": 733109,
+    "uncompressed_bytes": 744123,
+    "method": 8,
+    "crc32": 2021027289,
+    "offset": 820004797
+  },
+  {
+    "name": "BCData/images/validation/56.png",
+    "compressed_bytes": 728256,
+    "uncompressed_bytes": 736376,
+    "method": 8,
+    "crc32": 1339607210,
+    "offset": 820737967
+  },
+  {
+    "name": "BCData/images/validation/57.png",
+    "compressed_bytes": 727153,
+    "uncompressed_bytes": 736017,
+    "method": 8,
+    "crc32": 179661206,
+    "offset": 821466284
+  },
+  {
+    "name": "BCData/images/validation/58.png",
+    "compressed_bytes": 779800,
+    "uncompressed_bytes": 789074,
+    "method": 8,
+    "crc32": 3317756200,
+    "offset": 822193498
+  },
+  {
+    "name": "BCData/images/validation/59.png",
+    "compressed_bytes": 632223,
+    "uncompressed_bytes": 647630,
+    "method": 8,
+    "crc32": 3916931687,
+    "offset": 822973359
+  },
+  {
+    "name": "BCData/images/validation/6.png",
+    "compressed_bytes": 584577,
+    "uncompressed_bytes": 596346,
+    "method": 8,
+    "crc32": 3232980181,
+    "offset": 823605643
+  },
+  {
+    "name": "BCData/images/validation/60.png",
+    "compressed_bytes": 655492,
+    "uncompressed_bytes": 668006,
+    "method": 8,
+    "crc32": 4152653899,
+    "offset": 824190280
+  },
+  {
+    "name": "BCData/images/validation/61.png",
+    "compressed_bytes": 683211,
+    "uncompressed_bytes": 693222,
+    "method": 8,
+    "crc32": 2598417077,
+    "offset": 824845833
+  },
+  {
+    "name": "BCData/images/validation/62.png",
+    "compressed_bytes": 666687,
+    "uncompressed_bytes": 677255,
+    "method": 8,
+    "crc32": 897345398,
+    "offset": 825529105
+  },
+  {
+    "name": "BCData/images/validation/63.png",
+    "compressed_bytes": 688562,
+    "uncompressed_bytes": 695680,
+    "method": 8,
+    "crc32": 66280880,
+    "offset": 826195853
+  },
+  {
+    "name": "BCData/images/validation/64.png",
+    "compressed_bytes": 715479,
+    "uncompressed_bytes": 723576,
+    "method": 8,
+    "crc32": 847973686,
+    "offset": 826884476
+  },
+  {
+    "name": "BCData/images/validation/65.png",
+    "compressed_bytes": 693709,
+    "uncompressed_bytes": 705508,
+    "method": 8,
+    "crc32": 3287038709,
+    "offset": 827600016
+  },
+  {
+    "name": "BCData/images/validation/66.png",
+    "compressed_bytes": 787108,
+    "uncompressed_bytes": 788008,
+    "method": 8,
+    "crc32": 2905134673,
+    "offset": 828293786
+  },
+  {
+    "name": "BCData/images/validation/67.png",
+    "compressed_bytes": 764876,
+    "uncompressed_bytes": 767054,
+    "method": 8,
+    "crc32": 817569026,
+    "offset": 829080955
+  },
+  {
+    "name": "BCData/images/validation/68.png",
+    "compressed_bytes": 613924,
+    "uncompressed_bytes": 629285,
+    "method": 8,
+    "crc32": 3830313216,
+    "offset": 829845892
+  },
+  {
+    "name": "BCData/images/validation/69.png",
+    "compressed_bytes": 790193,
+    "uncompressed_bytes": 791568,
+    "method": 8,
+    "crc32": 2289210016,
+    "offset": 830459877
+  },
+  {
+    "name": "BCData/images/validation/7.png",
+    "compressed_bytes": 726457,
+    "uncompressed_bytes": 731947,
+    "method": 8,
+    "crc32": 3180446294,
+    "offset": 831250131
+  },
+  {
+    "name": "BCData/images/validation/70.png",
+    "compressed_bytes": 666079,
+    "uncompressed_bytes": 673256,
+    "method": 8,
+    "crc32": 3276961746,
+    "offset": 831976648
+  },
+  {
+    "name": "BCData/images/validation/71.png",
+    "compressed_bytes": 705326,
+    "uncompressed_bytes": 713398,
+    "method": 8,
+    "crc32": 1229217872,
+    "offset": 832642788
+  },
+  {
+    "name": "BCData/images/validation/72.png",
+    "compressed_bytes": 687984,
+    "uncompressed_bytes": 696211,
+    "method": 8,
+    "crc32": 2685175540,
+    "offset": 833348175
+  },
+  {
+    "name": "BCData/images/validation/73.png",
+    "compressed_bytes": 755962,
+    "uncompressed_bytes": 760567,
+    "method": 8,
+    "crc32": 1808149029,
+    "offset": 834036220
+  },
+  {
+    "name": "BCData/images/validation/74.png",
+    "compressed_bytes": 747595,
+    "uncompressed_bytes": 752200,
+    "method": 8,
+    "crc32": 3231958521,
+    "offset": 834792243
+  },
+  {
+    "name": "BCData/images/validation/75.png",
+    "compressed_bytes": 735742,
+    "uncompressed_bytes": 743315,
+    "method": 8,
+    "crc32": 1985464198,
+    "offset": 835539899
+  },
+  {
+    "name": "BCData/images/validation/76.png",
+    "compressed_bytes": 707575,
+    "uncompressed_bytes": 714589,
+    "method": 8,
+    "crc32": 3424225544,
+    "offset": 836275702
+  },
+  {
+    "name": "BCData/images/validation/77.png",
+    "compressed_bytes": 702356,
+    "uncompressed_bytes": 709338,
+    "method": 8,
+    "crc32": 73794624,
+    "offset": 836983338
+  },
+  {
+    "name": "BCData/images/validation/78.png",
+    "compressed_bytes": 724876,
+    "uncompressed_bytes": 730609,
+    "method": 8,
+    "crc32": 1064489341,
+    "offset": 837685755
+  },
+  {
+    "name": "BCData/images/validation/79.png",
+    "compressed_bytes": 756447,
+    "uncompressed_bytes": 759776,
+    "method": 8,
+    "crc32": 2075375931,
+    "offset": 838410692
+  },
+  {
+    "name": "BCData/images/validation/8.png",
+    "compressed_bytes": 689851,
+    "uncompressed_bytes": 700284,
+    "method": 8,
+    "crc32": 2002109524,
+    "offset": 839167200
+  },
+  {
+    "name": "BCData/images/validation/80.png",
+    "compressed_bytes": 709392,
+    "uncompressed_bytes": 715272,
+    "method": 8,
+    "crc32": 811707999,
+    "offset": 839857111
+  },
+  {
+    "name": "BCData/images/validation/81.png",
+    "compressed_bytes": 701493,
+    "uncompressed_bytes": 708792,
+    "method": 8,
+    "crc32": 2812912768,
+    "offset": 840566564
+  },
+  {
+    "name": "BCData/images/validation/82.png",
+    "compressed_bytes": 727753,
+    "uncompressed_bytes": 733303,
+    "method": 8,
+    "crc32": 3111610262,
+    "offset": 841268118
+  },
+  {
+    "name": "BCData/images/validation/83.png",
+    "compressed_bytes": 695580,
+    "uncompressed_bytes": 704294,
+    "method": 8,
+    "crc32": 3312811761,
+    "offset": 841995932
+  },
+  {
+    "name": "BCData/images/validation/84.png",
+    "compressed_bytes": 578070,
+    "uncompressed_bytes": 592695,
+    "method": 8,
+    "crc32": 3409624760,
+    "offset": 842691573
+  },
+  {
+    "name": "BCData/images/validation/85.png",
+    "compressed_bytes": 608558,
+    "uncompressed_bytes": 620882,
+    "method": 8,
+    "crc32": 3527945923,
+    "offset": 843269704
+  },
+  {
+    "name": "BCData/images/validation/86.png",
+    "compressed_bytes": 602005,
+    "uncompressed_bytes": 618251,
+    "method": 8,
+    "crc32": 2838048281,
+    "offset": 843878323
+  },
+  {
+    "name": "BCData/images/validation/87.png",
+    "compressed_bytes": 668642,
+    "uncompressed_bytes": 677653,
+    "method": 8,
+    "crc32": 4134218535,
+    "offset": 844480389
+  },
+  {
+    "name": "BCData/images/validation/88.png",
+    "compressed_bytes": 697242,
+    "uncompressed_bytes": 703346,
+    "method": 8,
+    "crc32": 472134145,
+    "offset": 845149092
+  },
+  {
+    "name": "BCData/images/validation/89.png",
+    "compressed_bytes": 761130,
+    "uncompressed_bytes": 764014,
+    "method": 8,
+    "crc32": 156311229,
+    "offset": 845846395
+  },
+  {
+    "name": "BCData/images/validation/9.png",
+    "compressed_bytes": 690695,
+    "uncompressed_bytes": 701152,
+    "method": 8,
+    "crc32": 1599663847,
+    "offset": 846607586
+  },
+  {
+    "name": "BCData/images/validation/90.png",
+    "compressed_bytes": 765789,
+    "uncompressed_bytes": 768187,
+    "method": 8,
+    "crc32": 265320429,
+    "offset": 847298341
+  },
+  {
+    "name": "BCData/images/validation/91.png",
+    "compressed_bytes": 698232,
+    "uncompressed_bytes": 710061,
+    "method": 8,
+    "crc32": 2140980095,
+    "offset": 848064191
+  },
+  {
+    "name": "BCData/images/validation/92.png",
+    "compressed_bytes": 674409,
+    "uncompressed_bytes": 683583,
+    "method": 8,
+    "crc32": 1626326769,
+    "offset": 848762484
+  },
+  {
+    "name": "BCData/images/validation/93.png",
+    "compressed_bytes": 536932,
+    "uncompressed_bytes": 556422,
+    "method": 8,
+    "crc32": 2656052867,
+    "offset": 849436954
+  },
+  {
+    "name": "BCData/images/validation/94.png",
+    "compressed_bytes": 556433,
+    "uncompressed_bytes": 576033,
+    "method": 8,
+    "crc32": 2176313989,
+    "offset": 849973947
+  },
+  {
+    "name": "BCData/images/validation/95.png",
+    "compressed_bytes": 573046,
+    "uncompressed_bytes": 585798,
+    "method": 8,
+    "crc32": 2701806713,
+    "offset": 850530441
+  },
+  {
+    "name": "BCData/images/validation/96.png",
+    "compressed_bytes": 537974,
+    "uncompressed_bytes": 555889,
+    "method": 8,
+    "crc32": 1087449941,
+    "offset": 851103548
+  },
+  {
+    "name": "BCData/images/validation/97.png",
+    "compressed_bytes": 603670,
+    "uncompressed_bytes": 611878,
+    "method": 8,
+    "crc32": 2841080363,
+    "offset": 851641583
+  },
+  {
+    "name": "BCData/images/validation/98.png",
+    "compressed_bytes": 574483,
+    "uncompressed_bytes": 589190,
+    "method": 8,
+    "crc32": 3057617601,
+    "offset": 852245314
+  },
+  {
+    "name": "BCData/images/validation/99.png",
+    "compressed_bytes": 585569,
+    "uncompressed_bytes": 600189,
+    "method": 8,
+    "crc32": 3569530609,
+    "offset": 852819858
+  }
+]

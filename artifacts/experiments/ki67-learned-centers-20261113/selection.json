@@ -1,0 +1,48 @@
+{
+  "models": [
+    {
+      "seed": 20261117,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "validation_case_macro_f1": 0.341818467050397,
+      "validation_case_macro_recall": 0.32780887470800407,
+      "checkpoint": "detector-20261117.pt",
+      "sha256": "2983685d495d07a96fcc5edcabdb3baaba041803cc9287ab9bc7f96403934254",
+      "parameter_count": 7537,
+      "training_selection_seconds": 351.4831026070169
+    },
+    {
+      "seed": 20261118,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 6
+      },
+      "validation_case_macro_f1": 0.3133084828571554,
+      "validation_case_macro_recall": 0.30576047959800196,
+      "checkpoint": "detector-20261118.pt",
+      "sha256": "85cf76b09b12cd4fc9d860cb5fddb7fe3a4ecbbe29f43d4bfe8daa86d5bd5253",
+      "parameter_count": 7537,
+      "training_selection_seconds": 350.66947412403533
+    },
+    {
+      "seed": 20261119,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 6
+      },
+      "validation_case_macro_f1": 0.31850299609720323,
+      "validation_case_macro_recall": 0.3085482001205776,
+      "checkpoint": "detector-20261119.pt",
+      "sha256": "efb401c657787eb407227f488b78b795ee1d5bad9d9731b6cd178d739db463ad",
+      "parameter_count": 7537,
+      "training_selection_seconds": 344.87128652399406
+    }
+  ],
+  "test_used_for_selection": false,
+  "external_used_for_selection": false
+}

@@ -1,0 +1,48 @@
+{
+  "models": [
+    {
+      "seed": 20261117,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "validation_case_macro_f1": 0.2787088603211967,
+      "validation_case_macro_recall": 0.2611979200500527,
+      "checkpoint": "detector-20261117.pt",
+      "sha256": "aad092dc6f32b4dadf9927ce526de7a8dffa8cdaa3adaef005507be058b9d5a1",
+      "parameter_count": 7537,
+      "training_selection_seconds": 358.57135692297015
+    },
+    {
+      "seed": 20261118,
+      "best_epoch": 16,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 4
+      },
+      "validation_case_macro_f1": 0.27599830449971213,
+      "validation_case_macro_recall": 0.3180270309614048,
+      "checkpoint": "detector-20261118.pt",
+      "sha256": "a09e4898f00cd9ce97ef37aabb4e53b7de6cb6388a4ff61da2205ad366d79bea",
+      "parameter_count": 7537,
+      "training_selection_seconds": 350.9909294290119
+    },
+    {
+      "seed": 20261119,
+      "best_epoch": 1,
+      "config": {
+        "threshold": 0.5,
+        "min_distance": 8
+      },
+      "validation_case_macro_f1": 0.0,
+      "validation_case_macro_recall": 0.0,
+      "checkpoint": "detector-20261119.pt",
+      "sha256": "7a3e6fcc4de73a05e1592c40fb27d77eb7632727f73f27677c39dd4caac14f7e",
+      "parameter_count": 7537,
+      "training_selection_seconds": 352.03165306703886
+    }
+  ],
+  "test_used_for_selection": false,
+  "external_used_for_selection": false
+}

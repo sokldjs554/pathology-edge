@@ -1,0 +1,95 @@
+{
+  "scope": "Reused validation diagnostic, candidate proximity labels not expert cell/noncell truth. No new training/test/external inference.",
+  "seeds": [
+    {
+      "seed": 20261117,
+      "diagnostic_epoch": 1,
+      "candidate_proximity_auroc": 0.8123421622084603,
+      "candidate_proximity_average_precision": 0.22554837101171746,
+      "score_quantiles": {
+        "near_6": [
+          0.33427384197711946,
+          0.7517398297786713,
+          0.9762376606464386
+        ],
+        "ambiguous_6_12": [
+          0.25246230959892274,
+          0.6262062788009644,
+          0.9386407136917114
+        ],
+        "far_12": [
+          0.10636024028062821,
+          0.2451186180114746,
+          0.7614471793174745
+        ]
+      },
+      "kept": {
+        "fp_6_to_12": 1415,
+        "fp_farther_12": 3062,
+        "fp_duplicate_within_6": 65,
+        "fp_border24": 2821,
+        "tp": 1097
+      }
+    },
+    {
+      "seed": 20261118,
+      "diagnostic_epoch": 1,
+      "candidate_proximity_auroc": 0.8869354227972958,
+      "candidate_proximity_average_precision": 0.2273127775449491,
+      "score_quantiles": {
+        "near_6": [
+          0.24653295278549195,
+          0.614724338054657,
+          0.8975253224372864
+        ],
+        "ambiguous_6_12": [
+          0.16511575281620025,
+          0.47752732038497925,
+          0.8301218271255495
+        ],
+        "far_12": [
+          0.02643747702240944,
+          0.06549994647502899,
+          0.472873038053513
+        ]
+      },
+      "kept": {
+        "fp_6_to_12": 1322,
+        "fp_farther_12": 2798,
+        "fp_duplicate_within_6": 46,
+        "fp_border24": 2713,
+        "tp": 1075
+      }
+    },
+    {
+      "seed": 20261119,
+      "diagnostic_epoch": 4,
+      "candidate_proximity_auroc": 0.8974466820486182,
+      "candidate_proximity_average_precision": 0.23946851393260543,
+      "score_quantiles": {
+        "near_6": [
+          0.3230036824941635,
+          0.751545250415802,
+          0.973620879650116
+        ],
+        "ambiguous_6_12": [
+          0.223268324136734,
+          0.6120458245277405,
+          0.9296152114868165
+        ],
+        "far_12": [
+          0.014502107631415129,
+          0.05334998853504658,
+          0.5862337350845337
+        ]
+      },
+      "kept": {
+        "fp_6_to_12": 1376,
+        "fp_farther_12": 3236,
+        "fp_duplicate_within_6": 53,
+        "fp_border24": 3262,
+        "tp": 1148
+      }
+    }
+  ]
+}

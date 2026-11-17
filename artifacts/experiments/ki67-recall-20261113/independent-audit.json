@@ -1,0 +1,7 @@
+{
+  "all_checks_passed": true,
+  "validation_trials": 81,
+  "reference_stage_checks": 8406,
+  "image_classifier_recounts": 2160,
+  "new_inference_run": false
+}

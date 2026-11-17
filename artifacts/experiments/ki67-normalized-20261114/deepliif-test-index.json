@@ -1,0 +1,4800 @@
+{
+  "url": "https://zenodo.org/api/records/4751737/files/DeepLIIF_Testing_Set.zip/content",
+  "bytes": 1011233522,
+  "zenodo_checksum": "md5:665899936c8012754524258ed16667ea",
+  "range_bytes": 74070,
+  "entries": [
+    {
+      "name": "DeepLIIF_Testing_Set/",
+      "offset": 0,
+      "compressed_bytes": 0,
+      "uncompressed_bytes": 0,
+      "method": 0,
+      "crc32": 0
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_0_2.png",
+      "offset": 83,
+      "compressed_bytes": 1679778,
+      "uncompressed_bytes": 1758813,
+      "method": 8,
+      "crc32": 2899429507
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_0_3.png",
+      "offset": 1679987,
+      "compressed_bytes": 1726550,
+      "uncompressed_bytes": 1805763,
+      "method": 8,
+      "crc32": 2479935865
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_1_0.png",
+      "offset": 3406663,
+      "compressed_bytes": 1740070,
+      "uncompressed_bytes": 1821166,
+      "method": 8,
+      "crc32": 3756908616
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_1_2.png",
+      "offset": 5146859,
+      "compressed_bytes": 1703876,
+      "uncompressed_bytes": 1783133,
+      "method": 8,
+      "crc32": 292458306
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_2_2.png",
+      "offset": 6850861,
+      "compressed_bytes": 1737096,
+      "uncompressed_bytes": 1817230,
+      "method": 8,
+      "crc32": 1618758587
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_2_3.png",
+      "offset": 8588083,
+      "compressed_bytes": 1788046,
+      "uncompressed_bytes": 1867251,
+      "method": 8,
+      "crc32": 3421305737
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_3_0.png",
+      "offset": 10376255,
+      "compressed_bytes": 1723165,
+      "uncompressed_bytes": 1804754,
+      "method": 8,
+      "crc32": 123728491
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_3_1.png",
+      "offset": 12099546,
+      "compressed_bytes": 1729601,
+      "uncompressed_bytes": 1809860,
+      "method": 8,
+      "crc32": 90945833
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_38000_3_2.png",
+      "offset": 13829273,
+      "compressed_bytes": 1804467,
+      "uncompressed_bytes": 1882813,
+      "method": 8,
+      "crc32": 382605936
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_0_0.png",
+      "offset": 15633866,
+      "compressed_bytes": 1743540,
+      "uncompressed_bytes": 1825570,
+      "method": 8,
+      "crc32": 604209456
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_0_1.png",
+      "offset": 17377532,
+      "compressed_bytes": 1749672,
+      "uncompressed_bytes": 1830813,
+      "method": 8,
+      "crc32": 1062536337
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_0_2.png",
+      "offset": 19127330,
+      "compressed_bytes": 1819460,
+      "uncompressed_bytes": 1894522,
+      "method": 8,
+      "crc32": 2617238556
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_0_3.png",
+      "offset": 20946916,
+      "compressed_bytes": 1845108,
+      "uncompressed_bytes": 1918924,
+      "method": 8,
+      "crc32": 655247044
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_1_1.png",
+      "offset": 22792150,
+      "compressed_bytes": 1681485,
+      "uncompressed_bytes": 1767294,
+      "method": 8,
+      "crc32": 2730584839
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_1_2.png",
+      "offset": 24473761,
+      "compressed_bytes": 1873401,
+      "uncompressed_bytes": 1949873,
+      "method": 8,
+      "crc32": 1975315024
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_1_3.png",
+      "offset": 26347288,
+      "compressed_bytes": 1919244,
+      "uncompressed_bytes": 1993485,
+      "method": 8,
+      "crc32": 2907676890
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_2_0.png",
+      "offset": 28266658,
+      "compressed_bytes": 1717581,
+      "uncompressed_bytes": 1798844,
+      "method": 8,
+      "crc32": 208869365
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_2_1.png",
+      "offset": 29984365,
+      "compressed_bytes": 1701490,
+      "uncompressed_bytes": 1782180,
+      "method": 8,
+      "crc32": 841303291
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_2_2.png",
+      "offset": 31685981,
+      "compressed_bytes": 1765374,
+      "uncompressed_bytes": 1845856,
+      "method": 8,
+      "crc32": 3913913320
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_2_3.png",
+      "offset": 33451481,
+      "compressed_bytes": 1908714,
+      "uncompressed_bytes": 1984020,
+      "method": 8,
+      "crc32": 3533889643
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_3_0.png",
+      "offset": 35360321,
+      "compressed_bytes": 1701545,
+      "uncompressed_bytes": 1783831,
+      "method": 8,
+      "crc32": 1769522473
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_3_1.png",
+      "offset": 37061992,
+      "compressed_bytes": 1806380,
+      "uncompressed_bytes": 1883501,
+      "method": 8,
+      "crc32": 4277502038
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_40000_3_3.png",
+      "offset": 38868498,
+      "compressed_bytes": 1917822,
+      "uncompressed_bytes": 1989652,
+      "method": 8,
+      "crc32": 2234522461
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_0_0.png",
+      "offset": 40786446,
+      "compressed_bytes": 1719308,
+      "uncompressed_bytes": 1800451,
+      "method": 8,
+      "crc32": 634646258
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_0_1.png",
+      "offset": 42505880,
+      "compressed_bytes": 1719359,
+      "uncompressed_bytes": 1801475,
+      "method": 8,
+      "crc32": 3513884087
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_0_2.png",
+      "offset": 44225365,
+      "compressed_bytes": 1799687,
+      "uncompressed_bytes": 1878782,
+      "method": 8,
+      "crc32": 1761779274
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_0_3.png",
+      "offset": 46025178,
+      "compressed_bytes": 1881793,
+      "uncompressed_bytes": 1956446,
+      "method": 8,
+      "crc32": 4223708163
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_1_1.png",
+      "offset": 47907097,
+      "compressed_bytes": 1810430,
+      "uncompressed_bytes": 1888728,
+      "method": 8,
+      "crc32": 1677458963
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_1_2.png",
+      "offset": 49717653,
+      "compressed_bytes": 1964873,
+      "uncompressed_bytes": 2038493,
+      "method": 8,
+      "crc32": 1182583728
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_1_3.png",
+      "offset": 51682652,
+      "compressed_bytes": 1910136,
+      "uncompressed_bytes": 1984535,
+      "method": 8,
+      "crc32": 3489827270
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_2_0.png",
+      "offset": 53592914,
+      "compressed_bytes": 1825987,
+      "uncompressed_bytes": 1905564,
+      "method": 8,
+      "crc32": 3391055843
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_2_3.png",
+      "offset": 55419027,
+      "compressed_bytes": 1698381,
+      "uncompressed_bytes": 1783912,
+      "method": 8,
+      "crc32": 1489014692
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_3_0.png",
+      "offset": 57117534,
+      "compressed_bytes": 1683046,
+      "uncompressed_bytes": 1769459,
+      "method": 8,
+      "crc32": 1820887096
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_3_1.png",
+      "offset": 58800706,
+      "compressed_bytes": 1878804,
+      "uncompressed_bytes": 1954771,
+      "method": 8,
+      "crc32": 1978599570
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_42000_3_3.png",
+      "offset": 60679636,
+      "compressed_bytes": 1609272,
+      "uncompressed_bytes": 1697281,
+      "method": 8,
+      "crc32": 283620068
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_0_0.png",
+      "offset": 62289034,
+      "compressed_bytes": 1935819,
+      "uncompressed_bytes": 2007050,
+      "method": 8,
+      "crc32": 3744253575
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_0_1.png",
+      "offset": 64224979,
+      "compressed_bytes": 1887441,
+      "uncompressed_bytes": 1961966,
+      "method": 8,
+      "crc32": 1511439727
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_0_2.png",
+      "offset": 66112546,
+      "compressed_bytes": 1909249,
+      "uncompressed_bytes": 1981732,
+      "method": 8,
+      "crc32": 2465330751
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_0_3.png",
+      "offset": 68021921,
+      "compressed_bytes": 1842872,
+      "uncompressed_bytes": 1918456,
+      "method": 8,
+      "crc32": 1824370506
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_1_0.png",
+      "offset": 69864919,
+      "compressed_bytes": 1975007,
+      "uncompressed_bytes": 2045916,
+      "method": 8,
+      "crc32": 2294978780
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_1_1.png",
+      "offset": 71840052,
+      "compressed_bytes": 1887678,
+      "uncompressed_bytes": 1962606,
+      "method": 8,
+      "crc32": 26790735
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_1_3.png",
+      "offset": 73727856,
+      "compressed_bytes": 1865714,
+      "uncompressed_bytes": 1939740,
+      "method": 8,
+      "crc32": 3257600743
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_2_0.png",
+      "offset": 75593696,
+      "compressed_bytes": 1992479,
+      "uncompressed_bytes": 2066870,
+      "method": 8,
+      "crc32": 3501315760
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_2_1.png",
+      "offset": 77586301,
+      "compressed_bytes": 1964187,
+      "uncompressed_bytes": 2039039,
+      "method": 8,
+      "crc32": 2780274573
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_2_2.png",
+      "offset": 79550614,
+      "compressed_bytes": 1925465,
+      "uncompressed_bytes": 1999012,
+      "method": 8,
+      "crc32": 2374342929
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_2_3.png",
+      "offset": 81476205,
+      "compressed_bytes": 1891077,
+      "uncompressed_bytes": 1963568,
+      "method": 8,
+      "crc32": 1950094812
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_3_1.png",
+      "offset": 83367408,
+      "compressed_bytes": 1587591,
+      "uncompressed_bytes": 1675435,
+      "method": 8,
+      "crc32": 3780364014
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_3_2.png",
+      "offset": 84955125,
+      "compressed_bytes": 1729835,
+      "uncompressed_bytes": 1810449,
+      "method": 8,
+      "crc32": 1833635263
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_38000_46000_3_3.png",
+      "offset": 86685086,
+      "compressed_bytes": 1725618,
+      "uncompressed_bytes": 1807064,
+      "method": 8,
+      "crc32": 966442768
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_0_0.png",
+      "offset": 88410830,
+      "compressed_bytes": 1733382,
+      "uncompressed_bytes": 1811997,
+      "method": 8,
+      "crc32": 27791598
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_0_1.png",
+      "offset": 90144338,
+      "compressed_bytes": 1897146,
+      "uncompressed_bytes": 1970829,
+      "method": 8,
+      "crc32": 3777952621
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_0_2.png",
+      "offset": 92041610,
+      "compressed_bytes": 1905207,
+      "uncompressed_bytes": 1981569,
+      "method": 8,
+      "crc32": 2721693399
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_0_3.png",
+      "offset": 93946943,
+      "compressed_bytes": 1887530,
+      "uncompressed_bytes": 1962181,
+      "method": 8,
+      "crc32": 1932298528
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_1_0.png",
+      "offset": 95834599,
+      "compressed_bytes": 1741079,
+      "uncompressed_bytes": 1824102,
+      "method": 8,
+      "crc32": 1724174057
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_1_1.png",
+      "offset": 97575804,
+      "compressed_bytes": 1906799,
+      "uncompressed_bytes": 1982890,
+      "method": 8,
+      "crc32": 165387541
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_1_3.png",
+      "offset": 99482729,
+      "compressed_bytes": 1892847,
+      "uncompressed_bytes": 1969840,
+      "method": 8,
+      "crc32": 1233431793
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_2_0.png",
+      "offset": 101375702,
+      "compressed_bytes": 1728741,
+      "uncompressed_bytes": 1808799,
+      "method": 8,
+      "crc32": 1931042571
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_2_1.png",
+      "offset": 103104569,
+      "compressed_bytes": 1861958,
+      "uncompressed_bytes": 1940472,
+      "method": 8,
+      "crc32": 3924723333
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_2_2.png",
+      "offset": 104966653,
+      "compressed_bytes": 1861075,
+      "uncompressed_bytes": 1940500,
+      "method": 8,
+      "crc32": 1248449198
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_2_3.png",
+      "offset": 106827854,
+      "compressed_bytes": 1909674,
+      "uncompressed_bytes": 1988079,
+      "method": 8,
+      "crc32": 4171457788
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_3_0.png",
+      "offset": 108737654,
+      "compressed_bytes": 1744480,
+      "uncompressed_bytes": 1823139,
+      "method": 8,
+      "crc32": 2409574747
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_3_1.png",
+      "offset": 110482260,
+      "compressed_bytes": 1842326,
+      "uncompressed_bytes": 1919808,
+      "method": 8,
+      "crc32": 3579177508
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_56000_3_2.png",
+      "offset": 112324712,
+      "compressed_bytes": 1867402,
+      "uncompressed_bytes": 1947013,
+      "method": 8,
+      "crc32": 1520382599
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_0_0.png",
+      "offset": 114192240,
+      "compressed_bytes": 1902585,
+      "uncompressed_bytes": 1980399,
+      "method": 8,
+      "crc32": 2119272845
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_0_1.png",
+      "offset": 116094951,
+      "compressed_bytes": 1885084,
+      "uncompressed_bytes": 1961686,
+      "method": 8,
+      "crc32": 3679104818
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_0_2.png",
+      "offset": 117980161,
+      "compressed_bytes": 1919024,
+      "uncompressed_bytes": 1996450,
+      "method": 8,
+      "crc32": 3476043699
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_1_1.png",
+      "offset": 119899311,
+      "compressed_bytes": 1739625,
+      "uncompressed_bytes": 1822915,
+      "method": 8,
+      "crc32": 3474483361
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_1_2.png",
+      "offset": 121639062,
+      "compressed_bytes": 1750897,
+      "uncompressed_bytes": 1832896,
+      "method": 8,
+      "crc32": 1481444852
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_1_3.png",
+      "offset": 123390085,
+      "compressed_bytes": 1842119,
+      "uncompressed_bytes": 1919712,
+      "method": 8,
+      "crc32": 1066338834
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_2_0.png",
+      "offset": 125232330,
+      "compressed_bytes": 1721744,
+      "uncompressed_bytes": 1799854,
+      "method": 8,
+      "crc32": 68039287
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_2_1.png",
+      "offset": 126954200,
+      "compressed_bytes": 1736665,
+      "uncompressed_bytes": 1817680,
+      "method": 8,
+      "crc32": 4290701864
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_2_2.png",
+      "offset": 128690991,
+      "compressed_bytes": 1785876,
+      "uncompressed_bytes": 1867836,
+      "method": 8,
+      "crc32": 4234036957
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_2_3.png",
+      "offset": 130476993,
+      "compressed_bytes": 1756348,
+      "uncompressed_bytes": 1834468,
+      "method": 8,
+      "crc32": 2045575076
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_3_0.png",
+      "offset": 132233467,
+      "compressed_bytes": 1628841,
+      "uncompressed_bytes": 1713014,
+      "method": 8,
+      "crc32": 4051336786
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_3_1.png",
+      "offset": 133862434,
+      "compressed_bytes": 1774196,
+      "uncompressed_bytes": 1854384,
+      "method": 8,
+      "crc32": 4158215008
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_62000_3_3.png",
+      "offset": 135636756,
+      "compressed_bytes": 1684355,
+      "uncompressed_bytes": 1761448,
+      "method": 8,
+      "crc32": 1858285465
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_0_0.png",
+      "offset": 137321237,
+      "compressed_bytes": 1748204,
+      "uncompressed_bytes": 1829819,
+      "method": 8,
+      "crc32": 4099041612
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_0_1.png",
+      "offset": 139069567,
+      "compressed_bytes": 1715518,
+      "uncompressed_bytes": 1799562,
+      "method": 8,
+      "crc32": 3645305387
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_0_2.png",
+      "offset": 140785211,
+      "compressed_bytes": 1730466,
+      "uncompressed_bytes": 1812441,
+      "method": 8,
+      "crc32": 3545481172
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_0_3.png",
+      "offset": 142515803,
+      "compressed_bytes": 1675709,
+      "uncompressed_bytes": 1757612,
+      "method": 8,
+      "crc32": 4082813765
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_1_0.png",
+      "offset": 144191638,
+      "compressed_bytes": 1645940,
+      "uncompressed_bytes": 1730334,
+      "method": 8,
+      "crc32": 440941623
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_1_1.png",
+      "offset": 145837704,
+      "compressed_bytes": 1634405,
+      "uncompressed_bytes": 1720227,
+      "method": 8,
+      "crc32": 2158033928
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_2_0.png",
+      "offset": 147472235,
+      "compressed_bytes": 1649699,
+      "uncompressed_bytes": 1733178,
+      "method": 8,
+      "crc32": 2576039501
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_2_1.png",
+      "offset": 149122060,
+      "compressed_bytes": 1625931,
+      "uncompressed_bytes": 1710603,
+      "method": 8,
+      "crc32": 1452246860
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_2_2.png",
+      "offset": 150748117,
+      "compressed_bytes": 1646165,
+      "uncompressed_bytes": 1733962,
+      "method": 8,
+      "crc32": 1310189752
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_3_0.png",
+      "offset": 152394408,
+      "compressed_bytes": 1679460,
+      "uncompressed_bytes": 1761099,
+      "method": 8,
+      "crc32": 1132311964
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_3_1.png",
+      "offset": 154073994,
+      "compressed_bytes": 1709870,
+      "uncompressed_bytes": 1791993,
+      "method": 8,
+      "crc32": 2296852890
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_68000_3_3.png",
+      "offset": 155783990,
+      "compressed_bytes": 1725684,
+      "uncompressed_bytes": 1809762,
+      "method": 8,
+      "crc32": 726862271
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_0_0.png",
+      "offset": 157509800,
+      "compressed_bytes": 1739518,
+      "uncompressed_bytes": 1820348,
+      "method": 8,
+      "crc32": 3830268349
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_0_2.png",
+      "offset": 159249444,
+      "compressed_bytes": 1676896,
+      "uncompressed_bytes": 1761966,
+      "method": 8,
+      "crc32": 3319188810
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_0_3.png",
+      "offset": 160926466,
+      "compressed_bytes": 1695747,
+      "uncompressed_bytes": 1779062,
+      "method": 8,
+      "crc32": 350498201
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_1_1.png",
+      "offset": 162622339,
+      "compressed_bytes": 1685498,
+      "uncompressed_bytes": 1768913,
+      "method": 8,
+      "crc32": 2409774978
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_1_2.png",
+      "offset": 164307963,
+      "compressed_bytes": 1787021,
+      "uncompressed_bytes": 1864909,
+      "method": 8,
+      "crc32": 3465640579
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_1_3.png",
+      "offset": 166095110,
+      "compressed_bytes": 1678851,
+      "uncompressed_bytes": 1760344,
+      "method": 8,
+      "crc32": 1975497670
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_2_0.png",
+      "offset": 167774087,
+      "compressed_bytes": 1662829,
+      "uncompressed_bytes": 1745543,
+      "method": 8,
+      "crc32": 3522959270
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_2_1.png",
+      "offset": 169437042,
+      "compressed_bytes": 1627270,
+      "uncompressed_bytes": 1710588,
+      "method": 8,
+      "crc32": 373437139
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_2_3.png",
+      "offset": 171064438,
+      "compressed_bytes": 1674422,
+      "uncompressed_bytes": 1757776,
+      "method": 8,
+      "crc32": 508426000
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_3_0.png",
+      "offset": 172738986,
+      "compressed_bytes": 1713598,
+      "uncompressed_bytes": 1793628,
+      "method": 8,
+      "crc32": 115153965
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_3_2.png",
+      "offset": 174452710,
+      "compressed_bytes": 1663495,
+      "uncompressed_bytes": 1748098,
+      "method": 8,
+      "crc32": 3738137403
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_72000_3_3.png",
+      "offset": 176116331,
+      "compressed_bytes": 1678682,
+      "uncompressed_bytes": 1756004,
+      "method": 8,
+      "crc32": 2759982434
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_0_0.png",
+      "offset": 177795139,
+      "compressed_bytes": 1619497,
+      "uncompressed_bytes": 1708213,
+      "method": 8,
+      "crc32": 1512739848
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_0_1.png",
+      "offset": 179414762,
+      "compressed_bytes": 1559944,
+      "uncompressed_bytes": 1652857,
+      "method": 8,
+      "crc32": 1519849988
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_0_2.png",
+      "offset": 180974832,
+      "compressed_bytes": 1615325,
+      "uncompressed_bytes": 1705301,
+      "method": 8,
+      "crc32": 1088689210
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_1_0.png",
+      "offset": 182590283,
+      "compressed_bytes": 1615866,
+      "uncompressed_bytes": 1701037,
+      "method": 8,
+      "crc32": 2665549863
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_1_1.png",
+      "offset": 184206275,
+      "compressed_bytes": 1702893,
+      "uncompressed_bytes": 1785674,
+      "method": 8,
+      "crc32": 64526338
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_1_2.png",
+      "offset": 185909294,
+      "compressed_bytes": 1738074,
+      "uncompressed_bytes": 1819365,
+      "method": 8,
+      "crc32": 1285227726
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_1_3.png",
+      "offset": 187647494,
+      "compressed_bytes": 1652994,
+      "uncompressed_bytes": 1733991,
+      "method": 8,
+      "crc32": 1343418971
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_2_0.png",
+      "offset": 189300614,
+      "compressed_bytes": 1681487,
+      "uncompressed_bytes": 1765919,
+      "method": 8,
+      "crc32": 935267919
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_2_2.png",
+      "offset": 190982227,
+      "compressed_bytes": 1676580,
+      "uncompressed_bytes": 1760610,
+      "method": 8,
+      "crc32": 1339700673
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_3_0.png",
+      "offset": 192658933,
+      "compressed_bytes": 1678870,
+      "uncompressed_bytes": 1760922,
+      "method": 8,
+      "crc32": 3457579638
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_3_1.png",
+      "offset": 194337929,
+      "compressed_bytes": 1703555,
+      "uncompressed_bytes": 1785833,
+      "method": 8,
+      "crc32": 2593274477
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_3_2.png",
+      "offset": 196041610,
+      "compressed_bytes": 1751255,
+      "uncompressed_bytes": 1832110,
+      "method": 8,
+      "crc32": 1895723746
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_74000_3_3.png",
+      "offset": 197792991,
+      "compressed_bytes": 1792458,
+      "uncompressed_bytes": 1870688,
+      "method": 8,
+      "crc32": 2499131364
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_0_1.png",
+      "offset": 199585575,
+      "compressed_bytes": 1545968,
+      "uncompressed_bytes": 1634727,
+      "method": 8,
+      "crc32": 4265528031
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_0_2.png",
+      "offset": 201131669,
+      "compressed_bytes": 1647276,
+      "uncompressed_bytes": 1735537,
+      "method": 8,
+      "crc32": 999453244
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_0_3.png",
+      "offset": 202779071,
+      "compressed_bytes": 1663385,
+      "uncompressed_bytes": 1743866,
+      "method": 8,
+      "crc32": 3652572370
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_1_0.png",
+      "offset": 204442582,
+      "compressed_bytes": 1667473,
+      "uncompressed_bytes": 1748804,
+      "method": 8,
+      "crc32": 3846522063
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_1_1.png",
+      "offset": 206110181,
+      "compressed_bytes": 1673769,
+      "uncompressed_bytes": 1763877,
+      "method": 8,
+      "crc32": 1792250998
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_1_3.png",
+      "offset": 207784076,
+      "compressed_bytes": 1651316,
+      "uncompressed_bytes": 1734171,
+      "method": 8,
+      "crc32": 2569693963
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_2_1.png",
+      "offset": 209435518,
+      "compressed_bytes": 1658809,
+      "uncompressed_bytes": 1746598,
+      "method": 8,
+      "crc32": 1778503180
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_2_2.png",
+      "offset": 211094453,
+      "compressed_bytes": 1748647,
+      "uncompressed_bytes": 1831095,
+      "method": 8,
+      "crc32": 2977810824
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_3_0.png",
+      "offset": 212843226,
+      "compressed_bytes": 1670569,
+      "uncompressed_bytes": 1754404,
+      "method": 8,
+      "crc32": 425186714
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_3_1.png",
+      "offset": 214513921,
+      "compressed_bytes": 1682396,
+      "uncompressed_bytes": 1769187,
+      "method": 8,
+      "crc32": 3399130621
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_3_2.png",
+      "offset": 216196443,
+      "compressed_bytes": 1697711,
+      "uncompressed_bytes": 1782642,
+      "method": 8,
+      "crc32": 1351699040
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Bladder_48000_78000_3_3.png",
+      "offset": 217894280,
+      "compressed_bytes": 1620840,
+      "uncompressed_bytes": 1704791,
+      "method": 8,
+      "crc32": 3853519798
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_0_0.png",
+      "offset": 219515246,
+      "compressed_bytes": 1706757,
+      "uncompressed_bytes": 1785053,
+      "method": 8,
+      "crc32": 1335750890
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_0_1.png",
+      "offset": 221222126,
+      "compressed_bytes": 1692012,
+      "uncompressed_bytes": 1770251,
+      "method": 8,
+      "crc32": 1694147985
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_0_2.png",
+      "offset": 222914261,
+      "compressed_bytes": 1643533,
+      "uncompressed_bytes": 1725416,
+      "method": 8,
+      "crc32": 582949928
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_1_0.png",
+      "offset": 224557917,
+      "compressed_bytes": 1639792,
+      "uncompressed_bytes": 1719437,
+      "method": 8,
+      "crc32": 1386643388
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_1_2.png",
+      "offset": 226197832,
+      "compressed_bytes": 1627198,
+      "uncompressed_bytes": 1710728,
+      "method": 8,
+      "crc32": 1689035645
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_1_3.png",
+      "offset": 227825153,
+      "compressed_bytes": 1630803,
+      "uncompressed_bytes": 1712947,
+      "method": 8,
+      "crc32": 3355319205
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_2_1.png",
+      "offset": 229456079,
+      "compressed_bytes": 1697555,
+      "uncompressed_bytes": 1775845,
+      "method": 8,
+      "crc32": 1273576655
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_2_2.png",
+      "offset": 231153757,
+      "compressed_bytes": 1662409,
+      "uncompressed_bytes": 1743469,
+      "method": 8,
+      "crc32": 3772253583
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_3_0.png",
+      "offset": 232816289,
+      "compressed_bytes": 1628597,
+      "uncompressed_bytes": 1708900,
+      "method": 8,
+      "crc32": 1953060371
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_3_1.png",
+      "offset": 234445009,
+      "compressed_bytes": 1652019,
+      "uncompressed_bytes": 1731487,
+      "method": 8,
+      "crc32": 1064085440
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_28000_3_2.png",
+      "offset": 236097151,
+      "compressed_bytes": 1631749,
+      "uncompressed_bytes": 1712652,
+      "method": 8,
+      "crc32": 145382281
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_0_0.png",
+      "offset": 237729023,
+      "compressed_bytes": 1672047,
+      "uncompressed_bytes": 1756362,
+      "method": 8,
+      "crc32": 2236094788
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_0_1.png",
+      "offset": 239401193,
+      "compressed_bytes": 1688966,
+      "uncompressed_bytes": 1773097,
+      "method": 8,
+      "crc32": 1514147889
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_0_2.png",
+      "offset": 241090282,
+      "compressed_bytes": 1645097,
+      "uncompressed_bytes": 1730736,
+      "method": 8,
+      "crc32": 1125141377
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_0_3.png",
+      "offset": 242735502,
+      "compressed_bytes": 1744178,
+      "uncompressed_bytes": 1826793,
+      "method": 8,
+      "crc32": 452036974
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_1_1.png",
+      "offset": 244479803,
+      "compressed_bytes": 1720571,
+      "uncompressed_bytes": 1800990,
+      "method": 8,
+      "crc32": 3295802701
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_1_2.png",
+      "offset": 246200497,
+      "compressed_bytes": 1632416,
+      "uncompressed_bytes": 1716825,
+      "method": 8,
+      "crc32": 3586975526
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_1_3.png",
+      "offset": 247833036,
+      "compressed_bytes": 1591234,
+      "uncompressed_bytes": 1678401,
+      "method": 8,
+      "crc32": 511827818
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_2_0.png",
+      "offset": 249424393,
+      "compressed_bytes": 1694236,
+      "uncompressed_bytes": 1776461,
+      "method": 8,
+      "crc32": 2650867652
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_2_1.png",
+      "offset": 251118752,
+      "compressed_bytes": 1684580,
+      "uncompressed_bytes": 1766551,
+      "method": 8,
+      "crc32": 1071249946
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_2_2.png",
+      "offset": 252803455,
+      "compressed_bytes": 1664496,
+      "uncompressed_bytes": 1747926,
+      "method": 8,
+      "crc32": 4099982105
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_2_3.png",
+      "offset": 254468074,
+      "compressed_bytes": 1727956,
+      "uncompressed_bytes": 1810173,
+      "method": 8,
+      "crc32": 4237498024
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_3_0.png",
+      "offset": 256196153,
+      "compressed_bytes": 1661610,
+      "uncompressed_bytes": 1742970,
+      "method": 8,
+      "crc32": 4213087869
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_3_1.png",
+      "offset": 257857886,
+      "compressed_bytes": 1692540,
+      "uncompressed_bytes": 1777670,
+      "method": 8,
+      "crc32": 1164685887
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_30000_3_3.png",
+      "offset": 259550549,
+      "compressed_bytes": 1655573,
+      "uncompressed_bytes": 1740909,
+      "method": 8,
+      "crc32": 2286720871
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_0_0.png",
+      "offset": 261206245,
+      "compressed_bytes": 1628485,
+      "uncompressed_bytes": 1716681,
+      "method": 8,
+      "crc32": 1817670509
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_0_2.png",
+      "offset": 262834853,
+      "compressed_bytes": 1525489,
+      "uncompressed_bytes": 1625270,
+      "method": 8,
+      "crc32": 3932065607
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_1_0.png",
+      "offset": 264360465,
+      "compressed_bytes": 1725039,
+      "uncompressed_bytes": 1807846,
+      "method": 8,
+      "crc32": 262129141
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_1_2.png",
+      "offset": 266085627,
+      "compressed_bytes": 1646743,
+      "uncompressed_bytes": 1736258,
+      "method": 8,
+      "crc32": 3187096604
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_1_3.png",
+      "offset": 267732493,
+      "compressed_bytes": 1690362,
+      "uncompressed_bytes": 1776210,
+      "method": 8,
+      "crc32": 2007765816
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_2_0.png",
+      "offset": 269422978,
+      "compressed_bytes": 1667027,
+      "uncompressed_bytes": 1752385,
+      "method": 8,
+      "crc32": 3079655888
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_2_1.png",
+      "offset": 271090128,
+      "compressed_bytes": 1697346,
+      "uncompressed_bytes": 1781474,
+      "method": 8,
+      "crc32": 1096558233
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_2_2.png",
+      "offset": 272787597,
+      "compressed_bytes": 1790971,
+      "uncompressed_bytes": 1871222,
+      "method": 8,
+      "crc32": 4248337016
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_2_3.png",
+      "offset": 274578691,
+      "compressed_bytes": 1773402,
+      "uncompressed_bytes": 1854916,
+      "method": 8,
+      "crc32": 3435945365
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_3_0.png",
+      "offset": 276352216,
+      "compressed_bytes": 1651544,
+      "uncompressed_bytes": 1739191,
+      "method": 8,
+      "crc32": 3108077311
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_3_1.png",
+      "offset": 278003883,
+      "compressed_bytes": 1660598,
+      "uncompressed_bytes": 1747153,
+      "method": 8,
+      "crc32": 1581399004
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_3_2.png",
+      "offset": 279664604,
+      "compressed_bytes": 1751029,
+      "uncompressed_bytes": 1831169,
+      "method": 8,
+      "crc32": 1361659191
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_32000_3_3.png",
+      "offset": 281415756,
+      "compressed_bytes": 1770959,
+      "uncompressed_bytes": 1851353,
+      "method": 8,
+      "crc32": 3701563603
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_0_0.png",
+      "offset": 283186838,
+      "compressed_bytes": 1660501,
+      "uncompressed_bytes": 1743372,
+      "method": 8,
+      "crc32": 3926465744
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_0_1.png",
+      "offset": 284847462,
+      "compressed_bytes": 1703855,
+      "uncompressed_bytes": 1785829,
+      "method": 8,
+      "crc32": 3154546921
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_0_2.png",
+      "offset": 286551440,
+      "compressed_bytes": 1725057,
+      "uncompressed_bytes": 1807422,
+      "method": 8,
+      "crc32": 3607473462
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_0_3.png",
+      "offset": 288276620,
+      "compressed_bytes": 1677974,
+      "uncompressed_bytes": 1761175,
+      "method": 8,
+      "crc32": 1285821154
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_1_0.png",
+      "offset": 289954717,
+      "compressed_bytes": 1577470,
+      "uncompressed_bytes": 1664734,
+      "method": 8,
+      "crc32": 980618932
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_1_1.png",
+      "offset": 291532310,
+      "compressed_bytes": 1671736,
+      "uncompressed_bytes": 1755636,
+      "method": 8,
+      "crc32": 2617771768
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_1_2.png",
+      "offset": 293204169,
+      "compressed_bytes": 1689502,
+      "uncompressed_bytes": 1771995,
+      "method": 8,
+      "crc32": 2334830397
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_2_1.png",
+      "offset": 294893794,
+      "compressed_bytes": 1624459,
+      "uncompressed_bytes": 1709576,
+      "method": 8,
+      "crc32": 559279228
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_2_2.png",
+      "offset": 296518376,
+      "compressed_bytes": 1580578,
+      "uncompressed_bytes": 1669662,
+      "method": 8,
+      "crc32": 950255356
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_2_3.png",
+      "offset": 298099077,
+      "compressed_bytes": 1595054,
+      "uncompressed_bytes": 1684221,
+      "method": 8,
+      "crc32": 4227395649
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_3_0.png",
+      "offset": 299694254,
+      "compressed_bytes": 1754622,
+      "uncompressed_bytes": 1835558,
+      "method": 8,
+      "crc32": 3968296234
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_3_2.png",
+      "offset": 301448999,
+      "compressed_bytes": 1683635,
+      "uncompressed_bytes": 1770419,
+      "method": 8,
+      "crc32": 981343543
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_34000_3_3.png",
+      "offset": 303132757,
+      "compressed_bytes": 1695353,
+      "uncompressed_bytes": 1779080,
+      "method": 8,
+      "crc32": 3168544934
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_0_0.png",
+      "offset": 304828233,
+      "compressed_bytes": 1689399,
+      "uncompressed_bytes": 1773060,
+      "method": 8,
+      "crc32": 1487514932
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_0_1.png",
+      "offset": 306517755,
+      "compressed_bytes": 1673283,
+      "uncompressed_bytes": 1759663,
+      "method": 8,
+      "crc32": 453493035
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_0_2.png",
+      "offset": 308191161,
+      "compressed_bytes": 1598189,
+      "uncompressed_bytes": 1688082,
+      "method": 8,
+      "crc32": 421471010
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_0_3.png",
+      "offset": 309789473,
+      "compressed_bytes": 1608160,
+      "uncompressed_bytes": 1697493,
+      "method": 8,
+      "crc32": 2161720639
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_1_1.png",
+      "offset": 311397756,
+      "compressed_bytes": 1639253,
+      "uncompressed_bytes": 1724641,
+      "method": 8,
+      "crc32": 3740351010
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_2_0.png",
+      "offset": 313037132,
+      "compressed_bytes": 1612477,
+      "uncompressed_bytes": 1700055,
+      "method": 8,
+      "crc32": 994757617
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_2_2.png",
+      "offset": 314649732,
+      "compressed_bytes": 1643836,
+      "uncompressed_bytes": 1729413,
+      "method": 8,
+      "crc32": 857403712
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_2_3.png",
+      "offset": 316293691,
+      "compressed_bytes": 1696922,
+      "uncompressed_bytes": 1778955,
+      "method": 8,
+      "crc32": 1315377776
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_3_1.png",
+      "offset": 317990736,
+      "compressed_bytes": 1656691,
+      "uncompressed_bytes": 1740889,
+      "method": 8,
+      "crc32": 1254417025
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_3_2.png",
+      "offset": 319647550,
+      "compressed_bytes": 1681257,
+      "uncompressed_bytes": 1765012,
+      "method": 8,
+      "crc32": 1006521561
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_36000_3_3.png",
+      "offset": 321328930,
+      "compressed_bytes": 1638646,
+      "uncompressed_bytes": 1722432,
+      "method": 8,
+      "crc32": 3845319945
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_0_0.png",
+      "offset": 322967699,
+      "compressed_bytes": 1733122,
+      "uncompressed_bytes": 1815907,
+      "method": 8,
+      "crc32": 1356720492
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_0_1.png",
+      "offset": 324700944,
+      "compressed_bytes": 1648023,
+      "uncompressed_bytes": 1735056,
+      "method": 8,
+      "crc32": 1317767482
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_0_2.png",
+      "offset": 326349090,
+      "compressed_bytes": 1699481,
+      "uncompressed_bytes": 1784846,
+      "method": 8,
+      "crc32": 902913562
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_0_3.png",
+      "offset": 328048694,
+      "compressed_bytes": 1706943,
+      "uncompressed_bytes": 1791186,
+      "method": 8,
+      "crc32": 3697258383
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_1_0.png",
+      "offset": 329755760,
+      "compressed_bytes": 1707112,
+      "uncompressed_bytes": 1791109,
+      "method": 8,
+      "crc32": 822169617
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_2_0.png",
+      "offset": 331462995,
+      "compressed_bytes": 1707551,
+      "uncompressed_bytes": 1791896,
+      "method": 8,
+      "crc32": 2508083942
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_2_1.png",
+      "offset": 333170669,
+      "compressed_bytes": 1696804,
+      "uncompressed_bytes": 1780784,
+      "method": 8,
+      "crc32": 2108869801
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_2_3.png",
+      "offset": 334867596,
+      "compressed_bytes": 1617840,
+      "uncompressed_bytes": 1707574,
+      "method": 8,
+      "crc32": 94625934
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_3_1.png",
+      "offset": 336485559,
+      "compressed_bytes": 1679554,
+      "uncompressed_bytes": 1763809,
+      "method": 8,
+      "crc32": 3969545303
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_3_2.png",
+      "offset": 338165236,
+      "compressed_bytes": 1715025,
+      "uncompressed_bytes": 1798722,
+      "method": 8,
+      "crc32": 79988268
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_38000_3_3.png",
+      "offset": 339880384,
+      "compressed_bytes": 1663634,
+      "uncompressed_bytes": 1750810,
+      "method": 8,
+      "crc32": 3928053825
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_0_0.png",
+      "offset": 341544141,
+      "compressed_bytes": 1748707,
+      "uncompressed_bytes": 1831401,
+      "method": 8,
+      "crc32": 996331292
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_0_1.png",
+      "offset": 343292971,
+      "compressed_bytes": 1733542,
+      "uncompressed_bytes": 1817213,
+      "method": 8,
+      "crc32": 1969696122
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_0_2.png",
+      "offset": 345026636,
+      "compressed_bytes": 1825986,
+      "uncompressed_bytes": 1907596,
+      "method": 8,
+      "crc32": 1967064690
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_1_0.png",
+      "offset": 346852745,
+      "compressed_bytes": 1753392,
+      "uncompressed_bytes": 1835321,
+      "method": 8,
+      "crc32": 1037154940
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_1_1.png",
+      "offset": 348606260,
+      "compressed_bytes": 1724503,
+      "uncompressed_bytes": 1808457,
+      "method": 8,
+      "crc32": 146378295
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_1_2.png",
+      "offset": 350330886,
+      "compressed_bytes": 1749248,
+      "uncompressed_bytes": 1833672,
+      "method": 8,
+      "crc32": 3952463884
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_2_0.png",
+      "offset": 352080257,
+      "compressed_bytes": 1753140,
+      "uncompressed_bytes": 1835756,
+      "method": 8,
+      "crc32": 1142276491
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_2_2.png",
+      "offset": 353833520,
+      "compressed_bytes": 1652224,
+      "uncompressed_bytes": 1743109,
+      "method": 8,
+      "crc32": 1654528246
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_2_3.png",
+      "offset": 355485867,
+      "compressed_bytes": 1616787,
+      "uncompressed_bytes": 1707939,
+      "method": 8,
+      "crc32": 741648064
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_3_0.png",
+      "offset": 357102777,
+      "compressed_bytes": 1744252,
+      "uncompressed_bytes": 1827281,
+      "method": 8,
+      "crc32": 4052684704
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_3_1.png",
+      "offset": 358847152,
+      "compressed_bytes": 1753082,
+      "uncompressed_bytes": 1837120,
+      "method": 8,
+      "crc32": 1384032517
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_3_2.png",
+      "offset": 360600357,
+      "compressed_bytes": 1690251,
+      "uncompressed_bytes": 1777823,
+      "method": 8,
+      "crc32": 681954304
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_40000_3_3.png",
+      "offset": 362290731,
+      "compressed_bytes": 1672886,
+      "uncompressed_bytes": 1760425,
+      "method": 8,
+      "crc32": 1379718957
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_0_0.png",
+      "offset": 363963740,
+      "compressed_bytes": 1603327,
+      "uncompressed_bytes": 1691399,
+      "method": 8,
+      "crc32": 1982568518
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_0_1.png",
+      "offset": 365567190,
+      "compressed_bytes": 1757143,
+      "uncompressed_bytes": 1839383,
+      "method": 8,
+      "crc32": 380362604
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_0_2.png",
+      "offset": 367324456,
+      "compressed_bytes": 1741339,
+      "uncompressed_bytes": 1824333,
+      "method": 8,
+      "crc32": 2911968069
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_0_3.png",
+      "offset": 369065918,
+      "compressed_bytes": 1712531,
+      "uncompressed_bytes": 1796207,
+      "method": 8,
+      "crc32": 1706465915
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_1_1.png",
+      "offset": 370778572,
+      "compressed_bytes": 1666854,
+      "uncompressed_bytes": 1748628,
+      "method": 8,
+      "crc32": 2775214698
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_1_2.png",
+      "offset": 372445549,
+      "compressed_bytes": 1651238,
+      "uncompressed_bytes": 1736936,
+      "method": 8,
+      "crc32": 4285594181
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_1_3.png",
+      "offset": 374096910,
+      "compressed_bytes": 1593260,
+      "uncompressed_bytes": 1683001,
+      "method": 8,
+      "crc32": 1987722502
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_2_0.png",
+      "offset": 375690293,
+      "compressed_bytes": 1651887,
+      "uncompressed_bytes": 1735199,
+      "method": 8,
+      "crc32": 2336236701
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_2_1.png",
+      "offset": 377342303,
+      "compressed_bytes": 1720875,
+      "uncompressed_bytes": 1805195,
+      "method": 8,
+      "crc32": 2824007465
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_2_2.png",
+      "offset": 379063301,
+      "compressed_bytes": 1707369,
+      "uncompressed_bytes": 1792570,
+      "method": 8,
+      "crc32": 1712431235
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_2_3.png",
+      "offset": 380770793,
+      "compressed_bytes": 1649863,
+      "uncompressed_bytes": 1736787,
+      "method": 8,
+      "crc32": 3844259134
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_3_0.png",
+      "offset": 382420779,
+      "compressed_bytes": 1729669,
+      "uncompressed_bytes": 1813098,
+      "method": 8,
+      "crc32": 2391543991
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_3_1.png",
+      "offset": 384150571,
+      "compressed_bytes": 1731672,
+      "uncompressed_bytes": 1815086,
+      "method": 8,
+      "crc32": 3045643325
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_3_2.png",
+      "offset": 385882366,
+      "compressed_bytes": 1680539,
+      "uncompressed_bytes": 1767569,
+      "method": 8,
+      "crc32": 3071988459
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_42000_3_3.png",
+      "offset": 387563028,
+      "compressed_bytes": 1708473,
+      "uncompressed_bytes": 1793885,
+      "method": 8,
+      "crc32": 2337269700
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_0_0.png",
+      "offset": 389271624,
+      "compressed_bytes": 1727223,
+      "uncompressed_bytes": 1810822,
+      "method": 8,
+      "crc32": 3717695056
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_0_1.png",
+      "offset": 390998970,
+      "compressed_bytes": 1761817,
+      "uncompressed_bytes": 1845089,
+      "method": 8,
+      "crc32": 3558956969
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_0_2.png",
+      "offset": 392760910,
+      "compressed_bytes": 1745074,
+      "uncompressed_bytes": 1830162,
+      "method": 8,
+      "crc32": 4171154337
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_0_3.png",
+      "offset": 394506107,
+      "compressed_bytes": 1733485,
+      "uncompressed_bytes": 1816710,
+      "method": 8,
+      "crc32": 3047919469
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_1_0.png",
+      "offset": 396239715,
+      "compressed_bytes": 1675550,
+      "uncompressed_bytes": 1758420,
+      "method": 8,
+      "crc32": 998340848
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_1_1.png",
+      "offset": 397915388,
+      "compressed_bytes": 1672776,
+      "uncompressed_bytes": 1758208,
+      "method": 8,
+      "crc32": 2053306178
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_1_2.png",
+      "offset": 399588287,
+      "compressed_bytes": 1668594,
+      "uncompressed_bytes": 1756510,
+      "method": 8,
+      "crc32": 2696771781
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_1_3.png",
+      "offset": 401257004,
+      "compressed_bytes": 1706186,
+      "uncompressed_bytes": 1789869,
+      "method": 8,
+      "crc32": 3203281077
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_2_1.png",
+      "offset": 402963313,
+      "compressed_bytes": 1740540,
+      "uncompressed_bytes": 1823782,
+      "method": 8,
+      "crc32": 2829808226
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_2_3.png",
+      "offset": 404703976,
+      "compressed_bytes": 1657250,
+      "uncompressed_bytes": 1745839,
+      "method": 8,
+      "crc32": 2057731368
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_3_0.png",
+      "offset": 406361349,
+      "compressed_bytes": 1680977,
+      "uncompressed_bytes": 1764696,
+      "method": 8,
+      "crc32": 4223031968
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_3_1.png",
+      "offset": 408042449,
+      "compressed_bytes": 1637245,
+      "uncompressed_bytes": 1723881,
+      "method": 8,
+      "crc32": 2985484323
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_26000_44000_3_3.png",
+      "offset": 409679817,
+      "compressed_bytes": 1660636,
+      "uncompressed_bytes": 1747961,
+      "method": 8,
+      "crc32": 1606960231
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_0_0.png",
+      "offset": 411340576,
+      "compressed_bytes": 1642809,
+      "uncompressed_bytes": 1729473,
+      "method": 8,
+      "crc32": 1095965756
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_0_2.png",
+      "offset": 412983508,
+      "compressed_bytes": 1511531,
+      "uncompressed_bytes": 1596733,
+      "method": 8,
+      "crc32": 3885674505
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_0_3.png",
+      "offset": 414495162,
+      "compressed_bytes": 1423508,
+      "uncompressed_bytes": 1514459,
+      "method": 8,
+      "crc32": 1495300518
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_1_1.png",
+      "offset": 415918793,
+      "compressed_bytes": 1587367,
+      "uncompressed_bytes": 1671776,
+      "method": 8,
+      "crc32": 2906543540
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_1_2.png",
+      "offset": 417506283,
+      "compressed_bytes": 1692798,
+      "uncompressed_bytes": 1774386,
+      "method": 8,
+      "crc32": 2764234421
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_1_3.png",
+      "offset": 419199204,
+      "compressed_bytes": 1610085,
+      "uncompressed_bytes": 1691612,
+      "method": 8,
+      "crc32": 4138838342
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_2_0.png",
+      "offset": 420809412,
+      "compressed_bytes": 1612089,
+      "uncompressed_bytes": 1698115,
+      "method": 8,
+      "crc32": 961009429
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_2_1.png",
+      "offset": 422421624,
+      "compressed_bytes": 1712580,
+      "uncompressed_bytes": 1793341,
+      "method": 8,
+      "crc32": 2451665594
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_2_2.png",
+      "offset": 424134327,
+      "compressed_bytes": 1705944,
+      "uncompressed_bytes": 1787019,
+      "method": 8,
+      "crc32": 1071328998
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_3_1.png",
+      "offset": 425840394,
+      "compressed_bytes": 1743017,
+      "uncompressed_bytes": 1823001,
+      "method": 8,
+      "crc32": 296155938
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_3_2.png",
+      "offset": 427583534,
+      "compressed_bytes": 1674966,
+      "uncompressed_bytes": 1760096,
+      "method": 8,
+      "crc32": 1587753686
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_14000_3_3.png",
+      "offset": 429258623,
+      "compressed_bytes": 1573723,
+      "uncompressed_bytes": 1660864,
+      "method": 8,
+      "crc32": 4025628822
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_0_0.png",
+      "offset": 430832469,
+      "compressed_bytes": 1552462,
+      "uncompressed_bytes": 1635888,
+      "method": 8,
+      "crc32": 1932133733
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_0_1.png",
+      "offset": 432385054,
+      "compressed_bytes": 1504387,
+      "uncompressed_bytes": 1590886,
+      "method": 8,
+      "crc32": 612045500
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_0_2.png",
+      "offset": 433889564,
+      "compressed_bytes": 1728869,
+      "uncompressed_bytes": 1806648,
+      "method": 8,
+      "crc32": 3472594850
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_0_3.png",
+      "offset": 435618556,
+      "compressed_bytes": 1706717,
+      "uncompressed_bytes": 1786205,
+      "method": 8,
+      "crc32": 2480651976
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_1_0.png",
+      "offset": 437325396,
+      "compressed_bytes": 1571797,
+      "uncompressed_bytes": 1654236,
+      "method": 8,
+      "crc32": 160065581
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_1_1.png",
+      "offset": 438897316,
+      "compressed_bytes": 1535820,
+      "uncompressed_bytes": 1620864,
+      "method": 8,
+      "crc32": 3775879580
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_1_2.png",
+      "offset": 440433259,
+      "compressed_bytes": 1700728,
+      "uncompressed_bytes": 1779904,
+      "method": 8,
+      "crc32": 2781043675
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_1_3.png",
+      "offset": 442134110,
+      "compressed_bytes": 1625543,
+      "uncompressed_bytes": 1709417,
+      "method": 8,
+      "crc32": 2006772986
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_2_0.png",
+      "offset": 443759776,
+      "compressed_bytes": 1672647,
+      "uncompressed_bytes": 1752072,
+      "method": 8,
+      "crc32": 875427783
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_2_3.png",
+      "offset": 445432546,
+      "compressed_bytes": 1637982,
+      "uncompressed_bytes": 1719657,
+      "method": 8,
+      "crc32": 1556353560
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_3_0.png",
+      "offset": 447070651,
+      "compressed_bytes": 1647625,
+      "uncompressed_bytes": 1727846,
+      "method": 8,
+      "crc32": 1484619125
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_3_1.png",
+      "offset": 448718399,
+      "compressed_bytes": 1667240,
+      "uncompressed_bytes": 1744631,
+      "method": 8,
+      "crc32": 3444856259
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_3_2.png",
+      "offset": 450385762,
+      "compressed_bytes": 1696644,
+      "uncompressed_bytes": 1774464,
+      "method": 8,
+      "crc32": 1000028771
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_16000_3_3.png",
+      "offset": 452082529,
+      "compressed_bytes": 1592932,
+      "uncompressed_bytes": 1674809,
+      "method": 8,
+      "crc32": 3999081984
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_0_0.png",
+      "offset": 453675584,
+      "compressed_bytes": 1682149,
+      "uncompressed_bytes": 1761966,
+      "method": 8,
+      "crc32": 2482803945
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_0_1.png",
+      "offset": 455357856,
+      "compressed_bytes": 1683117,
+      "uncompressed_bytes": 1762814,
+      "method": 8,
+      "crc32": 1500133747
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_0_2.png",
+      "offset": 457041096,
+      "compressed_bytes": 1689296,
+      "uncompressed_bytes": 1769619,
+      "method": 8,
+      "crc32": 1622573534
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_0_3.png",
+      "offset": 458730515,
+      "compressed_bytes": 1663461,
+      "uncompressed_bytes": 1748528,
+      "method": 8,
+      "crc32": 1871645590
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_1_2.png",
+      "offset": 460394099,
+      "compressed_bytes": 1701265,
+      "uncompressed_bytes": 1782153,
+      "method": 8,
+      "crc32": 1613580631
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_2_0.png",
+      "offset": 462095487,
+      "compressed_bytes": 1575355,
+      "uncompressed_bytes": 1663710,
+      "method": 8,
+      "crc32": 1474729230
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_2_1.png",
+      "offset": 463670965,
+      "compressed_bytes": 1586469,
+      "uncompressed_bytes": 1673693,
+      "method": 8,
+      "crc32": 4042950007
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_2_2.png",
+      "offset": 465257557,
+      "compressed_bytes": 1672265,
+      "uncompressed_bytes": 1756439,
+      "method": 8,
+      "crc32": 2892479010
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_2_3.png",
+      "offset": 466929945,
+      "compressed_bytes": 1730084,
+      "uncompressed_bytes": 1811724,
+      "method": 8,
+      "crc32": 2696571316
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_3_0.png",
+      "offset": 468660152,
+      "compressed_bytes": 1612633,
+      "uncompressed_bytes": 1699794,
+      "method": 8,
+      "crc32": 1082522439
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_3_2.png",
+      "offset": 470272908,
+      "compressed_bytes": 1548284,
+      "uncompressed_bytes": 1637260,
+      "method": 8,
+      "crc32": 112406215
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_18000_3_3.png",
+      "offset": 471821315,
+      "compressed_bytes": 1669525,
+      "uncompressed_bytes": 1754194,
+      "method": 8,
+      "crc32": 3410584855
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_0_0.png",
+      "offset": 473490963,
+      "compressed_bytes": 1774028,
+      "uncompressed_bytes": 1853456,
+      "method": 8,
+      "crc32": 2916403394
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_0_1.png",
+      "offset": 475265114,
+      "compressed_bytes": 1658924,
+      "uncompressed_bytes": 1745940,
+      "method": 8,
+      "crc32": 1678936166
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_0_3.png",
+      "offset": 476924161,
+      "compressed_bytes": 1817764,
+      "uncompressed_bytes": 1895144,
+      "method": 8,
+      "crc32": 1143993005
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_1_0.png",
+      "offset": 478742048,
+      "compressed_bytes": 1686262,
+      "uncompressed_bytes": 1770098,
+      "method": 8,
+      "crc32": 2765198163
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_1_2.png",
+      "offset": 480428433,
+      "compressed_bytes": 1769166,
+      "uncompressed_bytes": 1850322,
+      "method": 8,
+      "crc32": 1589675561
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_1_3.png",
+      "offset": 482197722,
+      "compressed_bytes": 1740115,
+      "uncompressed_bytes": 1821685,
+      "method": 8,
+      "crc32": 2448914712
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_2_2.png",
+      "offset": 483937960,
+      "compressed_bytes": 1687839,
+      "uncompressed_bytes": 1771404,
+      "method": 8,
+      "crc32": 3046423405
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_2_3.png",
+      "offset": 485625922,
+      "compressed_bytes": 1778856,
+      "uncompressed_bytes": 1860134,
+      "method": 8,
+      "crc32": 4100568966
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_3_0.png",
+      "offset": 487404901,
+      "compressed_bytes": 1804883,
+      "uncompressed_bytes": 1887341,
+      "method": 8,
+      "crc32": 2184127533
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_3_1.png",
+      "offset": 489209907,
+      "compressed_bytes": 1778513,
+      "uncompressed_bytes": 1857594,
+      "method": 8,
+      "crc32": 978102738
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_3_2.png",
+      "offset": 490988543,
+      "compressed_bytes": 1731681,
+      "uncompressed_bytes": 1815344,
+      "method": 8,
+      "crc32": 1215627864
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_20000_3_3.png",
+      "offset": 492720347,
+      "compressed_bytes": 1713492,
+      "uncompressed_bytes": 1799054,
+      "method": 8,
+      "crc32": 1751340186
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_0_0.png",
+      "offset": 494433962,
+      "compressed_bytes": 1730988,
+      "uncompressed_bytes": 1812993,
+      "method": 8,
+      "crc32": 2373174181
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_0_1.png",
+      "offset": 496165073,
+      "compressed_bytes": 1687060,
+      "uncompressed_bytes": 1770732,
+      "method": 8,
+      "crc32": 2897031918
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_0_2.png",
+      "offset": 497852256,
+      "compressed_bytes": 1646090,
+      "uncompressed_bytes": 1733545,
+      "method": 8,
+      "crc32": 833810768
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_0_3.png",
+      "offset": 499498469,
+      "compressed_bytes": 1586250,
+      "uncompressed_bytes": 1675326,
+      "method": 8,
+      "crc32": 2668661428
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_1_0.png",
+      "offset": 501084842,
+      "compressed_bytes": 1777504,
+      "uncompressed_bytes": 1856633,
+      "method": 8,
+      "crc32": 2871232552
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_1_1.png",
+      "offset": 502862469,
+      "compressed_bytes": 1705793,
+      "uncompressed_bytes": 1788212,
+      "method": 8,
+      "crc32": 4071134164
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_1_2.png",
+      "offset": 504568385,
+      "compressed_bytes": 1742527,
+      "uncompressed_bytes": 1823266,
+      "method": 8,
+      "crc32": 3570745259
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_1_3.png",
+      "offset": 506311035,
+      "compressed_bytes": 1637451,
+      "uncompressed_bytes": 1725541,
+      "method": 8,
+      "crc32": 3323318414
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_2_0.png",
+      "offset": 507948609,
+      "compressed_bytes": 1729324,
+      "uncompressed_bytes": 1810377,
+      "method": 8,
+      "crc32": 2490681499
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_2_1.png",
+      "offset": 509678056,
+      "compressed_bytes": 1701470,
+      "uncompressed_bytes": 1782606,
+      "method": 8,
+      "crc32": 2803890434
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_2_2.png",
+      "offset": 511379649,
+      "compressed_bytes": 1574460,
+      "uncompressed_bytes": 1659915,
+      "method": 8,
+      "crc32": 3359208194
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_2_3.png",
+      "offset": 512954232,
+      "compressed_bytes": 1624302,
+      "uncompressed_bytes": 1708883,
+      "method": 8,
+      "crc32": 3413708743
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_3_0.png",
+      "offset": 514578657,
+      "compressed_bytes": 1745222,
+      "uncompressed_bytes": 1825305,
+      "method": 8,
+      "crc32": 3468247627
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_22000_3_1.png",
+      "offset": 516324002,
+      "compressed_bytes": 1658003,
+      "uncompressed_bytes": 1741047,
+      "method": 8,
+      "crc32": 1332184897
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_0_0.png",
+      "offset": 517982128,
+      "compressed_bytes": 1743426,
+      "uncompressed_bytes": 1822124,
+      "method": 8,
+      "crc32": 2585436390
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_0_1.png",
+      "offset": 519725677,
+      "compressed_bytes": 1650840,
+      "uncompressed_bytes": 1731553,
+      "method": 8,
+      "crc32": 3516995274
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_0_2.png",
+      "offset": 521376640,
+      "compressed_bytes": 1656887,
+      "uncompressed_bytes": 1738062,
+      "method": 8,
+      "crc32": 2213301720
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_0_3.png",
+      "offset": 523033650,
+      "compressed_bytes": 1608156,
+      "uncompressed_bytes": 1693114,
+      "method": 8,
+      "crc32": 799492665
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_1_0.png",
+      "offset": 524641929,
+      "compressed_bytes": 1709415,
+      "uncompressed_bytes": 1790556,
+      "method": 8,
+      "crc32": 1474804110
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_1_1.png",
+      "offset": 526351467,
+      "compressed_bytes": 1671384,
+      "uncompressed_bytes": 1754994,
+      "method": 8,
+      "crc32": 485839584
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_1_2.png",
+      "offset": 528022974,
+      "compressed_bytes": 1657896,
+      "uncompressed_bytes": 1741279,
+      "method": 8,
+      "crc32": 1740701662
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_1_3.png",
+      "offset": 529680993,
+      "compressed_bytes": 1672614,
+      "uncompressed_bytes": 1757084,
+      "method": 8,
+      "crc32": 213836992
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_2_0.png",
+      "offset": 531353730,
+      "compressed_bytes": 1600315,
+      "uncompressed_bytes": 1685699,
+      "method": 8,
+      "crc32": 3184495112
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_2_3.png",
+      "offset": 532954168,
+      "compressed_bytes": 1586134,
+      "uncompressed_bytes": 1674154,
+      "method": 8,
+      "crc32": 1332825581
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_3_1.png",
+      "offset": 534540425,
+      "compressed_bytes": 1551404,
+      "uncompressed_bytes": 1638599,
+      "method": 8,
+      "crc32": 1437085780
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_3_2.png",
+      "offset": 536091952,
+      "compressed_bytes": 1637080,
+      "uncompressed_bytes": 1720849,
+      "method": 8,
+      "crc32": 3806965743
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_24000_3_3.png",
+      "offset": 537729155,
+      "compressed_bytes": 1609225,
+      "uncompressed_bytes": 1694355,
+      "method": 8,
+      "crc32": 1773563911
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_0_0.png",
+      "offset": 539338503,
+      "compressed_bytes": 1661684,
+      "uncompressed_bytes": 1743612,
+      "method": 8,
+      "crc32": 1955417971
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_0_1.png",
+      "offset": 541000310,
+      "compressed_bytes": 1674214,
+      "uncompressed_bytes": 1753819,
+      "method": 8,
+      "crc32": 3269077331
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_0_2.png",
+      "offset": 542674647,
+      "compressed_bytes": 1666014,
+      "uncompressed_bytes": 1747362,
+      "method": 8,
+      "crc32": 1589910354
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_0_3.png",
+      "offset": 544340784,
+      "compressed_bytes": 1663321,
+      "uncompressed_bytes": 1744571,
+      "method": 8,
+      "crc32": 1082119072
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_1_0.png",
+      "offset": 546004228,
+      "compressed_bytes": 1666176,
+      "uncompressed_bytes": 1748207,
+      "method": 8,
+      "crc32": 1111812948
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_1_1.png",
+      "offset": 547670527,
+      "compressed_bytes": 1711004,
+      "uncompressed_bytes": 1789807,
+      "method": 8,
+      "crc32": 3776610519
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_1_3.png",
+      "offset": 549381654,
+      "compressed_bytes": 1647761,
+      "uncompressed_bytes": 1731444,
+      "method": 8,
+      "crc32": 3517006772
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_2_0.png",
+      "offset": 551029538,
+      "compressed_bytes": 1726378,
+      "uncompressed_bytes": 1807489,
+      "method": 8,
+      "crc32": 2699247406
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_2_1.png",
+      "offset": 552756039,
+      "compressed_bytes": 1706395,
+      "uncompressed_bytes": 1785431,
+      "method": 8,
+      "crc32": 160984985
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_2_2.png",
+      "offset": 554462557,
+      "compressed_bytes": 1688738,
+      "uncompressed_bytes": 1772032,
+      "method": 8,
+      "crc32": 3942126065
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_2_3.png",
+      "offset": 556151418,
+      "compressed_bytes": 1713748,
+      "uncompressed_bytes": 1796114,
+      "method": 8,
+      "crc32": 3851661105
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_3_0.png",
+      "offset": 557865289,
+      "compressed_bytes": 1701729,
+      "uncompressed_bytes": 1782849,
+      "method": 8,
+      "crc32": 2246139857
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_3_1.png",
+      "offset": 559567141,
+      "compressed_bytes": 1648720,
+      "uncompressed_bytes": 1731914,
+      "method": 8,
+      "crc32": 4054837599
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_26000_3_3.png",
+      "offset": 561215984,
+      "compressed_bytes": 1706939,
+      "uncompressed_bytes": 1787952,
+      "method": 8,
+      "crc32": 2357537439
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_0_0.png",
+      "offset": 562923046,
+      "compressed_bytes": 1684950,
+      "uncompressed_bytes": 1765267,
+      "method": 8,
+      "crc32": 882684890
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_0_1.png",
+      "offset": 564608119,
+      "compressed_bytes": 1713153,
+      "uncompressed_bytes": 1791982,
+      "method": 8,
+      "crc32": 1013831646
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_0_2.png",
+      "offset": 566321395,
+      "compressed_bytes": 1666422,
+      "uncompressed_bytes": 1747833,
+      "method": 8,
+      "crc32": 3212455085
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_0_3.png",
+      "offset": 567987940,
+      "compressed_bytes": 1783579,
+      "uncompressed_bytes": 1861440,
+      "method": 8,
+      "crc32": 1697130936
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_1_0.png",
+      "offset": 569771642,
+      "compressed_bytes": 1626928,
+      "uncompressed_bytes": 1711431,
+      "method": 8,
+      "crc32": 506309883
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_1_1.png",
+      "offset": 571398693,
+      "compressed_bytes": 1587644,
+      "uncompressed_bytes": 1672297,
+      "method": 8,
+      "crc32": 3437458082
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_1_2.png",
+      "offset": 572986460,
+      "compressed_bytes": 1610427,
+      "uncompressed_bytes": 1694824,
+      "method": 8,
+      "crc32": 2188133671
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_1_3.png",
+      "offset": 574597010,
+      "compressed_bytes": 1670081,
+      "uncompressed_bytes": 1752025,
+      "method": 8,
+      "crc32": 1944280405
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_2_0.png",
+      "offset": 576267214,
+      "compressed_bytes": 1706601,
+      "uncompressed_bytes": 1789284,
+      "method": 8,
+      "crc32": 136849805
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_2_1.png",
+      "offset": 577973938,
+      "compressed_bytes": 1688705,
+      "uncompressed_bytes": 1772269,
+      "method": 8,
+      "crc32": 3614741426
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_2_2.png",
+      "offset": 579662766,
+      "compressed_bytes": 1665434,
+      "uncompressed_bytes": 1747980,
+      "method": 8,
+      "crc32": 2803497041
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_2_3.png",
+      "offset": 581328323,
+      "compressed_bytes": 1705769,
+      "uncompressed_bytes": 1786812,
+      "method": 8,
+      "crc32": 3359882572
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_3_0.png",
+      "offset": 583034215,
+      "compressed_bytes": 1645361,
+      "uncompressed_bytes": 1728615,
+      "method": 8,
+      "crc32": 2256847799
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_3_1.png",
+      "offset": 584679699,
+      "compressed_bytes": 1688610,
+      "uncompressed_bytes": 1769369,
+      "method": 8,
+      "crc32": 1438393922
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_3_2.png",
+      "offset": 586368432,
+      "compressed_bytes": 1640234,
+      "uncompressed_bytes": 1723228,
+      "method": 8,
+      "crc32": 260762339
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_28000_3_3.png",
+      "offset": 588008789,
+      "compressed_bytes": 1645023,
+      "uncompressed_bytes": 1729247,
+      "method": 8,
+      "crc32": 896630897
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_0_1.png",
+      "offset": 589653935,
+      "compressed_bytes": 1631841,
+      "uncompressed_bytes": 1717820,
+      "method": 8,
+      "crc32": 1694375460
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_0_2.png",
+      "offset": 591285899,
+      "compressed_bytes": 1600087,
+      "uncompressed_bytes": 1683742,
+      "method": 8,
+      "crc32": 58266698
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_0_3.png",
+      "offset": 592886109,
+      "compressed_bytes": 1637308,
+      "uncompressed_bytes": 1721064,
+      "method": 8,
+      "crc32": 467352050
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_1_1.png",
+      "offset": 594523540,
+      "compressed_bytes": 1637109,
+      "uncompressed_bytes": 1720930,
+      "method": 8,
+      "crc32": 3704962307
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_1_2.png",
+      "offset": 596160772,
+      "compressed_bytes": 1606543,
+      "uncompressed_bytes": 1691036,
+      "method": 8,
+      "crc32": 542023640
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_1_3.png",
+      "offset": 597767438,
+      "compressed_bytes": 1673740,
+      "uncompressed_bytes": 1758032,
+      "method": 8,
+      "crc32": 737423027
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_2_1.png",
+      "offset": 599441301,
+      "compressed_bytes": 1675021,
+      "uncompressed_bytes": 1755055,
+      "method": 8,
+      "crc32": 3608931009
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_2_3.png",
+      "offset": 601116445,
+      "compressed_bytes": 1640028,
+      "uncompressed_bytes": 1722550,
+      "method": 8,
+      "crc32": 429887420
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_3_0.png",
+      "offset": 602756596,
+      "compressed_bytes": 1597769,
+      "uncompressed_bytes": 1684902,
+      "method": 8,
+      "crc32": 1242390552
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_3_1.png",
+      "offset": 604354488,
+      "compressed_bytes": 1571000,
+      "uncompressed_bytes": 1653950,
+      "method": 8,
+      "crc32": 647402407
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_3_2.png",
+      "offset": 605925611,
+      "compressed_bytes": 1687777,
+      "uncompressed_bytes": 1766869,
+      "method": 8,
+      "crc32": 1659435431
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_30000_3_3.png",
+      "offset": 607613511,
+      "compressed_bytes": 1585607,
+      "uncompressed_bytes": 1671790,
+      "method": 8,
+      "crc32": 1054375895
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_0_0.png",
+      "offset": 609199241,
+      "compressed_bytes": 1508329,
+      "uncompressed_bytes": 1599090,
+      "method": 8,
+      "crc32": 423208059
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_0_1.png",
+      "offset": 610707693,
+      "compressed_bytes": 1591295,
+      "uncompressed_bytes": 1676759,
+      "method": 8,
+      "crc32": 2738491615
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_0_2.png",
+      "offset": 612299111,
+      "compressed_bytes": 1608493,
+      "uncompressed_bytes": 1694374,
+      "method": 8,
+      "crc32": 105643044
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_0_3.png",
+      "offset": 613907727,
+      "compressed_bytes": 1595781,
+      "uncompressed_bytes": 1682863,
+      "method": 8,
+      "crc32": 491278119
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_1_1.png",
+      "offset": 615503631,
+      "compressed_bytes": 1589609,
+      "uncompressed_bytes": 1676692,
+      "method": 8,
+      "crc32": 2106772026
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_1_2.png",
+      "offset": 617093363,
+      "compressed_bytes": 1601530,
+      "uncompressed_bytes": 1689202,
+      "method": 8,
+      "crc32": 2066155157
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_1_3.png",
+      "offset": 618695016,
+      "compressed_bytes": 1670210,
+      "uncompressed_bytes": 1755500,
+      "method": 8,
+      "crc32": 3649379360
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_2_1.png",
+      "offset": 620365349,
+      "compressed_bytes": 1660242,
+      "uncompressed_bytes": 1743011,
+      "method": 8,
+      "crc32": 817684424
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_2_3.png",
+      "offset": 622025714,
+      "compressed_bytes": 1737352,
+      "uncompressed_bytes": 1818686,
+      "method": 8,
+      "crc32": 3685352817
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_3_1.png",
+      "offset": 623763189,
+      "compressed_bytes": 1697667,
+      "uncompressed_bytes": 1778690,
+      "method": 8,
+      "crc32": 2726445907
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_3_2.png",
+      "offset": 625460979,
+      "compressed_bytes": 1663606,
+      "uncompressed_bytes": 1747383,
+      "method": 8,
+      "crc32": 3865396645
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_32000_3_3.png",
+      "offset": 627124708,
+      "compressed_bytes": 1696654,
+      "uncompressed_bytes": 1779091,
+      "method": 8,
+      "crc32": 2266514438
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_0_0.png",
+      "offset": 628821485,
+      "compressed_bytes": 1705236,
+      "uncompressed_bytes": 1786821,
+      "method": 8,
+      "crc32": 2720349189
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_0_3.png",
+      "offset": 630526844,
+      "compressed_bytes": 1691320,
+      "uncompressed_bytes": 1775595,
+      "method": 8,
+      "crc32": 3753413038
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_1_0.png",
+      "offset": 632218287,
+      "compressed_bytes": 1639193,
+      "uncompressed_bytes": 1726592,
+      "method": 8,
+      "crc32": 2662816118
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_1_1.png",
+      "offset": 633857603,
+      "compressed_bytes": 1671671,
+      "uncompressed_bytes": 1758439,
+      "method": 8,
+      "crc32": 2377557792
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_1_2.png",
+      "offset": 635529397,
+      "compressed_bytes": 1594081,
+      "uncompressed_bytes": 1685308,
+      "method": 8,
+      "crc32": 767084078
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_1_3.png",
+      "offset": 637123601,
+      "compressed_bytes": 1696227,
+      "uncompressed_bytes": 1782786,
+      "method": 8,
+      "crc32": 548235824
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_2_0.png",
+      "offset": 638819951,
+      "compressed_bytes": 1640666,
+      "uncompressed_bytes": 1728265,
+      "method": 8,
+      "crc32": 1254788811
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_2_1.png",
+      "offset": 640460740,
+      "compressed_bytes": 1530953,
+      "uncompressed_bytes": 1622771,
+      "method": 8,
+      "crc32": 2555379174
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_2_3.png",
+      "offset": 641991816,
+      "compressed_bytes": 1628566,
+      "uncompressed_bytes": 1717251,
+      "method": 8,
+      "crc32": 543841469
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_3_1.png",
+      "offset": 643620505,
+      "compressed_bytes": 1633151,
+      "uncompressed_bytes": 1722973,
+      "method": 8,
+      "crc32": 1188807060
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_34000_3_2.png",
+      "offset": 645253779,
+      "compressed_bytes": 1651299,
+      "uncompressed_bytes": 1735661,
+      "method": 8,
+      "crc32": 182506772
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_0_0.png",
+      "offset": 646905201,
+      "compressed_bytes": 1704690,
+      "uncompressed_bytes": 1787660,
+      "method": 8,
+      "crc32": 1872431322
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_0_1.png",
+      "offset": 648610014,
+      "compressed_bytes": 1629948,
+      "uncompressed_bytes": 1716526,
+      "method": 8,
+      "crc32": 4232089666
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_0_2.png",
+      "offset": 650240085,
+      "compressed_bytes": 1670979,
+      "uncompressed_bytes": 1756722,
+      "method": 8,
+      "crc32": 1483070639
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_0_3.png",
+      "offset": 651911187,
+      "compressed_bytes": 1645520,
+      "uncompressed_bytes": 1732211,
+      "method": 8,
+      "crc32": 3000325450
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_1_0.png",
+      "offset": 653556830,
+      "compressed_bytes": 1707828,
+      "uncompressed_bytes": 1790212,
+      "method": 8,
+      "crc32": 1547850193
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_1_1.png",
+      "offset": 655264781,
+      "compressed_bytes": 1682116,
+      "uncompressed_bytes": 1765312,
+      "method": 8,
+      "crc32": 3129078214
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_1_2.png",
+      "offset": 656947020,
+      "compressed_bytes": 1750239,
+      "uncompressed_bytes": 1833887,
+      "method": 8,
+      "crc32": 2632027898
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_1_3.png",
+      "offset": 658697382,
+      "compressed_bytes": 1639808,
+      "uncompressed_bytes": 1726906,
+      "method": 8,
+      "crc32": 2012358795
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_2_0.png",
+      "offset": 660337313,
+      "compressed_bytes": 1714182,
+      "uncompressed_bytes": 1795354,
+      "method": 8,
+      "crc32": 2330356506
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_2_1.png",
+      "offset": 662051618,
+      "compressed_bytes": 1663440,
+      "uncompressed_bytes": 1746682,
+      "method": 8,
+      "crc32": 778079986
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_2_3.png",
+      "offset": 663715181,
+      "compressed_bytes": 1677982,
+      "uncompressed_bytes": 1764502,
+      "method": 8,
+      "crc32": 1921981346
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_3_2.png",
+      "offset": 665393286,
+      "compressed_bytes": 1695639,
+      "uncompressed_bytes": 1778460,
+      "method": 8,
+      "crc32": 1600833688
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_36000_3_3.png",
+      "offset": 667089048,
+      "compressed_bytes": 1708935,
+      "uncompressed_bytes": 1792560,
+      "method": 8,
+      "crc32": 361998782
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_0_0.png",
+      "offset": 668798106,
+      "compressed_bytes": 1612126,
+      "uncompressed_bytes": 1701841,
+      "method": 8,
+      "crc32": 1972495997
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_0_1.png",
+      "offset": 670410355,
+      "compressed_bytes": 1549116,
+      "uncompressed_bytes": 1640551,
+      "method": 8,
+      "crc32": 1802032671
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_0_3.png",
+      "offset": 671959594,
+      "compressed_bytes": 1635586,
+      "uncompressed_bytes": 1721796,
+      "method": 8,
+      "crc32": 4038093787
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_1_0.png",
+      "offset": 673595303,
+      "compressed_bytes": 1640779,
+      "uncompressed_bytes": 1728445,
+      "method": 8,
+      "crc32": 1136219065
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_1_1.png",
+      "offset": 675236205,
+      "compressed_bytes": 1612940,
+      "uncompressed_bytes": 1698862,
+      "method": 8,
+      "crc32": 1408773479
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_1_2.png",
+      "offset": 676849268,
+      "compressed_bytes": 1609089,
+      "uncompressed_bytes": 1697929,
+      "method": 8,
+      "crc32": 4272730262
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_1_3.png",
+      "offset": 678458480,
+      "compressed_bytes": 1661176,
+      "uncompressed_bytes": 1746930,
+      "method": 8,
+      "crc32": 2194618730
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_2_0.png",
+      "offset": 680119779,
+      "compressed_bytes": 1532383,
+      "uncompressed_bytes": 1624767,
+      "method": 8,
+      "crc32": 2847993919
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_2_2.png",
+      "offset": 681652285,
+      "compressed_bytes": 1580470,
+      "uncompressed_bytes": 1671103,
+      "method": 8,
+      "crc32": 1057692198
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_2_3.png",
+      "offset": 683232878,
+      "compressed_bytes": 1647985,
+      "uncompressed_bytes": 1736449,
+      "method": 8,
+      "crc32": 21700545
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_3_2.png",
+      "offset": 684880986,
+      "compressed_bytes": 1575669,
+      "uncompressed_bytes": 1665063,
+      "method": 8,
+      "crc32": 2135801433
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_40000_3_3.png",
+      "offset": 686456778,
+      "compressed_bytes": 1705184,
+      "uncompressed_bytes": 1789320,
+      "method": 8,
+      "crc32": 1431835904
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_0_0.png",
+      "offset": 688162085,
+      "compressed_bytes": 1763170,
+      "uncompressed_bytes": 1844169,
+      "method": 8,
+      "crc32": 4170171551
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_0_2.png",
+      "offset": 689925378,
+      "compressed_bytes": 1673387,
+      "uncompressed_bytes": 1758490,
+      "method": 8,
+      "crc32": 2071933166
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_1_1.png",
+      "offset": 691598888,
+      "compressed_bytes": 1651392,
+      "uncompressed_bytes": 1738025,
+      "method": 8,
+      "crc32": 4246637145
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_1_2.png",
+      "offset": 693250403,
+      "compressed_bytes": 1590647,
+      "uncompressed_bytes": 1680505,
+      "method": 8,
+      "crc32": 3394673771
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_1_3.png",
+      "offset": 694841173,
+      "compressed_bytes": 1783459,
+      "uncompressed_bytes": 1863058,
+      "method": 8,
+      "crc32": 3987764304
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_2_0.png",
+      "offset": 696624755,
+      "compressed_bytes": 1777510,
+      "uncompressed_bytes": 1859237,
+      "method": 8,
+      "crc32": 2650508768
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_2_1.png",
+      "offset": 698402388,
+      "compressed_bytes": 1681583,
+      "uncompressed_bytes": 1767082,
+      "method": 8,
+      "crc32": 313850500
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_2_2.png",
+      "offset": 700084094,
+      "compressed_bytes": 1731934,
+      "uncompressed_bytes": 1814332,
+      "method": 8,
+      "crc32": 839370034
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_3_0.png",
+      "offset": 701816151,
+      "compressed_bytes": 1802628,
+      "uncompressed_bytes": 1882123,
+      "method": 8,
+      "crc32": 2148796650
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_3_1.png",
+      "offset": 703618902,
+      "compressed_bytes": 1625701,
+      "uncompressed_bytes": 1713069,
+      "method": 8,
+      "crc32": 1231689279
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_42000_3_3.png",
+      "offset": 705244726,
+      "compressed_bytes": 1713639,
+      "uncompressed_bytes": 1798491,
+      "method": 8,
+      "crc32": 3931434564
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_0_1.png",
+      "offset": 706958488,
+      "compressed_bytes": 1721641,
+      "uncompressed_bytes": 1804454,
+      "method": 8,
+      "crc32": 4041184040
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_0_2.png",
+      "offset": 708680252,
+      "compressed_bytes": 1650234,
+      "uncompressed_bytes": 1735071,
+      "method": 8,
+      "crc32": 2783372949
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_0_3.png",
+      "offset": 710330609,
+      "compressed_bytes": 1723489,
+      "uncompressed_bytes": 1806165,
+      "method": 8,
+      "crc32": 3333825143
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_1_0.png",
+      "offset": 712054221,
+      "compressed_bytes": 1710785,
+      "uncompressed_bytes": 1793914,
+      "method": 8,
+      "crc32": 969312305
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_1_1.png",
+      "offset": 713765129,
+      "compressed_bytes": 1697864,
+      "uncompressed_bytes": 1781754,
+      "method": 8,
+      "crc32": 3978449555
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_1_2.png",
+      "offset": 715463116,
+      "compressed_bytes": 1692934,
+      "uncompressed_bytes": 1774232,
+      "method": 8,
+      "crc32": 3896572851
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_2_0.png",
+      "offset": 717156173,
+      "compressed_bytes": 1713007,
+      "uncompressed_bytes": 1795889,
+      "method": 8,
+      "crc32": 2958192392
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_2_1.png",
+      "offset": 718869303,
+      "compressed_bytes": 1710347,
+      "uncompressed_bytes": 1794484,
+      "method": 8,
+      "crc32": 11567586
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_2_3.png",
+      "offset": 720579773,
+      "compressed_bytes": 1738630,
+      "uncompressed_bytes": 1821895,
+      "method": 8,
+      "crc32": 1744177247
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_3_0.png",
+      "offset": 722318526,
+      "compressed_bytes": 1717119,
+      "uncompressed_bytes": 1800483,
+      "method": 8,
+      "crc32": 1617319444
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_3_1.png",
+      "offset": 724035768,
+      "compressed_bytes": 1665098,
+      "uncompressed_bytes": 1751066,
+      "method": 8,
+      "crc32": 3131073210
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_3_2.png",
+      "offset": 725700989,
+      "compressed_bytes": 1693782,
+      "uncompressed_bytes": 1777833,
+      "method": 8,
+      "crc32": 1401162361
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_28000_44000_3_3.png",
+      "offset": 727394894,
+      "compressed_bytes": 1739314,
+      "uncompressed_bytes": 1821566,
+      "method": 8,
+      "crc32": 1049100515
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_0_0.png",
+      "offset": 729134331,
+      "compressed_bytes": 1706687,
+      "uncompressed_bytes": 1791591,
+      "method": 8,
+      "crc32": 1855387994
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_0_1.png",
+      "offset": 730841141,
+      "compressed_bytes": 1721975,
+      "uncompressed_bytes": 1804558,
+      "method": 8,
+      "crc32": 4201179174
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_1_0.png",
+      "offset": 732563239,
+      "compressed_bytes": 1674047,
+      "uncompressed_bytes": 1759716,
+      "method": 8,
+      "crc32": 534632752
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_1_1.png",
+      "offset": 734237409,
+      "compressed_bytes": 1625607,
+      "uncompressed_bytes": 1714744,
+      "method": 8,
+      "crc32": 1796904268
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_1_2.png",
+      "offset": 735863139,
+      "compressed_bytes": 1639080,
+      "uncompressed_bytes": 1729822,
+      "method": 8,
+      "crc32": 4042157553
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_1_3.png",
+      "offset": 737502342,
+      "compressed_bytes": 1638418,
+      "uncompressed_bytes": 1723094,
+      "method": 8,
+      "crc32": 2818028998
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_2_0.png",
+      "offset": 739140883,
+      "compressed_bytes": 1630660,
+      "uncompressed_bytes": 1720226,
+      "method": 8,
+      "crc32": 4149411269
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_2_2.png",
+      "offset": 740771666,
+      "compressed_bytes": 1629255,
+      "uncompressed_bytes": 1716512,
+      "method": 8,
+      "crc32": 1177962988
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_2_3.png",
+      "offset": 742401044,
+      "compressed_bytes": 1737666,
+      "uncompressed_bytes": 1821196,
+      "method": 8,
+      "crc32": 1356594101
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_3_0.png",
+      "offset": 744138833,
+      "compressed_bytes": 1697158,
+      "uncompressed_bytes": 1783839,
+      "method": 8,
+      "crc32": 1178809323
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_3_1.png",
+      "offset": 745836114,
+      "compressed_bytes": 1681833,
+      "uncompressed_bytes": 1768263,
+      "method": 8,
+      "crc32": 3610241377
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_3_2.png",
+      "offset": 747518070,
+      "compressed_bytes": 1725269,
+      "uncompressed_bytes": 1808507,
+      "method": 8,
+      "crc32": 3526957174
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_30000_40000_3_3.png",
+      "offset": 749243462,
+      "compressed_bytes": 1658093,
+      "uncompressed_bytes": 1742670,
+      "method": 8,
+      "crc32": 1986770340
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_0_0.png",
+      "offset": 750901678,
+      "compressed_bytes": 1699671,
+      "uncompressed_bytes": 1782123,
+      "method": 8,
+      "crc32": 2967481230
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_0_1.png",
+      "offset": 752601472,
+      "compressed_bytes": 1637450,
+      "uncompressed_bytes": 1720251,
+      "method": 8,
+      "crc32": 1445466568
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_0_2.png",
+      "offset": 754239045,
+      "compressed_bytes": 1563299,
+      "uncompressed_bytes": 1647843,
+      "method": 8,
+      "crc32": 554223136
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_0_3.png",
+      "offset": 755802467,
+      "compressed_bytes": 1462579,
+      "uncompressed_bytes": 1555776,
+      "method": 8,
+      "crc32": 3393361550
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_1_0.png",
+      "offset": 757265169,
+      "compressed_bytes": 1648526,
+      "uncompressed_bytes": 1735083,
+      "method": 8,
+      "crc32": 1103862757
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_1_1.png",
+      "offset": 758913818,
+      "compressed_bytes": 1720487,
+      "uncompressed_bytes": 1803065,
+      "method": 8,
+      "crc32": 1908628134
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_1_2.png",
+      "offset": 760634428,
+      "compressed_bytes": 1725442,
+      "uncompressed_bytes": 1808062,
+      "method": 8,
+      "crc32": 2135399128
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_1_3.png",
+      "offset": 762359993,
+      "compressed_bytes": 1629575,
+      "uncompressed_bytes": 1713637,
+      "method": 8,
+      "crc32": 198074479
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_2_0.png",
+      "offset": 763989691,
+      "compressed_bytes": 1631140,
+      "uncompressed_bytes": 1719314,
+      "method": 8,
+      "crc32": 2057886384
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_2_1.png",
+      "offset": 765620954,
+      "compressed_bytes": 1710392,
+      "uncompressed_bytes": 1796851,
+      "method": 8,
+      "crc32": 552168447
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_2_2.png",
+      "offset": 767331469,
+      "compressed_bytes": 1665169,
+      "uncompressed_bytes": 1750362,
+      "method": 8,
+      "crc32": 3541512487
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_2_3.png",
+      "offset": 768996761,
+      "compressed_bytes": 1672022,
+      "uncompressed_bytes": 1757162,
+      "method": 8,
+      "crc32": 3548397422
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_3_1.png",
+      "offset": 770668906,
+      "compressed_bytes": 1627074,
+      "uncompressed_bytes": 1716482,
+      "method": 8,
+      "crc32": 1181498794
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_32000_3_2.png",
+      "offset": 772296103,
+      "compressed_bytes": 1706765,
+      "uncompressed_bytes": 1789877,
+      "method": 8,
+      "crc32": 1129280313
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_0_1.png",
+      "offset": 774002991,
+      "compressed_bytes": 1710140,
+      "uncompressed_bytes": 1793959,
+      "method": 8,
+      "crc32": 3789763336
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_0_2.png",
+      "offset": 775713254,
+      "compressed_bytes": 1692069,
+      "uncompressed_bytes": 1777707,
+      "method": 8,
+      "crc32": 1527008189
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_0_3.png",
+      "offset": 777405446,
+      "compressed_bytes": 1788340,
+      "uncompressed_bytes": 1870547,
+      "method": 8,
+      "crc32": 3940010122
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_1_0.png",
+      "offset": 779193909,
+      "compressed_bytes": 1710866,
+      "uncompressed_bytes": 1795021,
+      "method": 8,
+      "crc32": 3506362250
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_1_2.png",
+      "offset": 780904898,
+      "compressed_bytes": 1764891,
+      "uncompressed_bytes": 1846631,
+      "method": 8,
+      "crc32": 1049721261
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_2_1.png",
+      "offset": 782669912,
+      "compressed_bytes": 1710115,
+      "uncompressed_bytes": 1794520,
+      "method": 8,
+      "crc32": 2598385951
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_2_2.png",
+      "offset": 784380150,
+      "compressed_bytes": 1612469,
+      "uncompressed_bytes": 1700909,
+      "method": 8,
+      "crc32": 1624420572
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_3_0.png",
+      "offset": 785992742,
+      "compressed_bytes": 1798198,
+      "uncompressed_bytes": 1879959,
+      "method": 8,
+      "crc32": 2358643972
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_3_1.png",
+      "offset": 787791063,
+      "compressed_bytes": 1749225,
+      "uncompressed_bytes": 1831688,
+      "method": 8,
+      "crc32": 33135920
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_3_2.png",
+      "offset": 789540411,
+      "compressed_bytes": 1704817,
+      "uncompressed_bytes": 1789654,
+      "method": 8,
+      "crc32": 3591261707
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_34000_3_3.png",
+      "offset": 791245351,
+      "compressed_bytes": 1735265,
+      "uncompressed_bytes": 1818795,
+      "method": 8,
+      "crc32": 447906708
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_0_0.png",
+      "offset": 792980739,
+      "compressed_bytes": 1672981,
+      "uncompressed_bytes": 1757031,
+      "method": 8,
+      "crc32": 1236220562
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_0_1.png",
+      "offset": 794653843,
+      "compressed_bytes": 1734112,
+      "uncompressed_bytes": 1818991,
+      "method": 8,
+      "crc32": 2370717884
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_0_2.png",
+      "offset": 796388078,
+      "compressed_bytes": 1708632,
+      "uncompressed_bytes": 1791527,
+      "method": 8,
+      "crc32": 2933784574
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_0_3.png",
+      "offset": 798096833,
+      "compressed_bytes": 1650542,
+      "uncompressed_bytes": 1737044,
+      "method": 8,
+      "crc32": 211586141
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_1_0.png",
+      "offset": 799747498,
+      "compressed_bytes": 1672956,
+      "uncompressed_bytes": 1758847,
+      "method": 8,
+      "crc32": 2476304920
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_1_1.png",
+      "offset": 801420577,
+      "compressed_bytes": 1697972,
+      "uncompressed_bytes": 1784109,
+      "method": 8,
+      "crc32": 3929178476
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_1_3.png",
+      "offset": 803118672,
+      "compressed_bytes": 1661143,
+      "uncompressed_bytes": 1746447,
+      "method": 8,
+      "crc32": 3825371119
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_2_0.png",
+      "offset": 804779938,
+      "compressed_bytes": 1662867,
+      "uncompressed_bytes": 1748310,
+      "method": 8,
+      "crc32": 2679749624
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_2_2.png",
+      "offset": 806442928,
+      "compressed_bytes": 1762986,
+      "uncompressed_bytes": 1844008,
+      "method": 8,
+      "crc32": 4202239457
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_2_3.png",
+      "offset": 808206037,
+      "compressed_bytes": 1734857,
+      "uncompressed_bytes": 1817854,
+      "method": 8,
+      "crc32": 616171107
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_3_0.png",
+      "offset": 809941017,
+      "compressed_bytes": 1711628,
+      "uncompressed_bytes": 1794905,
+      "method": 8,
+      "crc32": 4199036446
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_36000_3_1.png",
+      "offset": 811652768,
+      "compressed_bytes": 1709827,
+      "uncompressed_bytes": 1793683,
+      "method": 8,
+      "crc32": 4148362309
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_0_0.png",
+      "offset": 813362718,
+      "compressed_bytes": 1648620,
+      "uncompressed_bytes": 1733939,
+      "method": 8,
+      "crc32": 512579105
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_0_1.png",
+      "offset": 815011461,
+      "compressed_bytes": 1841141,
+      "uncompressed_bytes": 1919843,
+      "method": 8,
+      "crc32": 3582880690
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_0_2.png",
+      "offset": 816852725,
+      "compressed_bytes": 1759398,
+      "uncompressed_bytes": 1841886,
+      "method": 8,
+      "crc32": 3620984649
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_0_3.png",
+      "offset": 818612246,
+      "compressed_bytes": 1669277,
+      "uncompressed_bytes": 1753950,
+      "method": 8,
+      "crc32": 66936911
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_1_0.png",
+      "offset": 820281646,
+      "compressed_bytes": 1597792,
+      "uncompressed_bytes": 1686721,
+      "method": 8,
+      "crc32": 289704556
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_1_1.png",
+      "offset": 821879561,
+      "compressed_bytes": 1757915,
+      "uncompressed_bytes": 1840163,
+      "method": 8,
+      "crc32": 897363835
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_1_2.png",
+      "offset": 823637599,
+      "compressed_bytes": 1732031,
+      "uncompressed_bytes": 1815203,
+      "method": 8,
+      "crc32": 1151332767
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_1_3.png",
+      "offset": 825369753,
+      "compressed_bytes": 1678220,
+      "uncompressed_bytes": 1763856,
+      "method": 8,
+      "crc32": 4206369527
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_2_0.png",
+      "offset": 827048096,
+      "compressed_bytes": 1735027,
+      "uncompressed_bytes": 1819179,
+      "method": 8,
+      "crc32": 1213752593
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_2_1.png",
+      "offset": 828783246,
+      "compressed_bytes": 1680093,
+      "uncompressed_bytes": 1767042,
+      "method": 8,
+      "crc32": 827130167
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_2_2.png",
+      "offset": 830463462,
+      "compressed_bytes": 1737361,
+      "uncompressed_bytes": 1820801,
+      "method": 8,
+      "crc32": 911758837
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_3_0.png",
+      "offset": 832200946,
+      "compressed_bytes": 1687472,
+      "uncompressed_bytes": 1773045,
+      "method": 8,
+      "crc32": 679980303
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_3_1.png",
+      "offset": 833888541,
+      "compressed_bytes": 1728196,
+      "uncompressed_bytes": 1810857,
+      "method": 8,
+      "crc32": 1190603025
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_3_2.png",
+      "offset": 835616860,
+      "compressed_bytes": 1805787,
+      "uncompressed_bytes": 1887046,
+      "method": 8,
+      "crc32": 3243020612
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_32000_40000_3_3.png",
+      "offset": 837422770,
+      "compressed_bytes": 1683173,
+      "uncompressed_bytes": 1769200,
+      "method": 8,
+      "crc32": 3148599660
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_0_0.png",
+      "offset": 839106066,
+      "compressed_bytes": 1650288,
+      "uncompressed_bytes": 1732199,
+      "method": 8,
+      "crc32": 1591074636
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_0_1.png",
+      "offset": 840756477,
+      "compressed_bytes": 1694235,
+      "uncompressed_bytes": 1774928,
+      "method": 8,
+      "crc32": 1808299594
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_0_2.png",
+      "offset": 842450835,
+      "compressed_bytes": 1685420,
+      "uncompressed_bytes": 1769580,
+      "method": 8,
+      "crc32": 562847731
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_0_3.png",
+      "offset": 844136378,
+      "compressed_bytes": 1779285,
+      "uncompressed_bytes": 1858274,
+      "method": 8,
+      "crc32": 2458850148
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_1_0.png",
+      "offset": 845915786,
+      "compressed_bytes": 1680032,
+      "uncompressed_bytes": 1763696,
+      "method": 8,
+      "crc32": 3885804398
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_1_1.png",
+      "offset": 847595941,
+      "compressed_bytes": 1617643,
+      "uncompressed_bytes": 1702793,
+      "method": 8,
+      "crc32": 3640706124
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_1_2.png",
+      "offset": 849213707,
+      "compressed_bytes": 1663153,
+      "uncompressed_bytes": 1747594,
+      "method": 8,
+      "crc32": 1637111845
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_1_3.png",
+      "offset": 850876983,
+      "compressed_bytes": 1632175,
+      "uncompressed_bytes": 1716080,
+      "method": 8,
+      "crc32": 1968497790
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_2_0.png",
+      "offset": 852509281,
+      "compressed_bytes": 1646254,
+      "uncompressed_bytes": 1729943,
+      "method": 8,
+      "crc32": 1136529740
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_2_1.png",
+      "offset": 854155658,
+      "compressed_bytes": 1602414,
+      "uncompressed_bytes": 1687032,
+      "method": 8,
+      "crc32": 3623748848
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_2_2.png",
+      "offset": 855758195,
+      "compressed_bytes": 1674365,
+      "uncompressed_bytes": 1758123,
+      "method": 8,
+      "crc32": 1097164185
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_2_3.png",
+      "offset": 857432683,
+      "compressed_bytes": 1644962,
+      "uncompressed_bytes": 1731075,
+      "method": 8,
+      "crc32": 2133593634
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_3_0.png",
+      "offset": 859077768,
+      "compressed_bytes": 1683088,
+      "uncompressed_bytes": 1764219,
+      "method": 8,
+      "crc32": 341828261
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_3_1.png",
+      "offset": 860760979,
+      "compressed_bytes": 1632762,
+      "uncompressed_bytes": 1717479,
+      "method": 8,
+      "crc32": 3947327934
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_26000_3_2.png",
+      "offset": 862393864,
+      "compressed_bytes": 1683997,
+      "uncompressed_bytes": 1765632,
+      "method": 8,
+      "crc32": 2098218502
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_0_0.png",
+      "offset": 864077984,
+      "compressed_bytes": 1689219,
+      "uncompressed_bytes": 1767850,
+      "method": 8,
+      "crc32": 3100152031
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_0_2.png",
+      "offset": 865767326,
+      "compressed_bytes": 1651468,
+      "uncompressed_bytes": 1733415,
+      "method": 8,
+      "crc32": 3335759936
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_0_3.png",
+      "offset": 867418917,
+      "compressed_bytes": 1694807,
+      "uncompressed_bytes": 1776009,
+      "method": 8,
+      "crc32": 3099600179
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_1_0.png",
+      "offset": 869113847,
+      "compressed_bytes": 1631856,
+      "uncompressed_bytes": 1714132,
+      "method": 8,
+      "crc32": 2779361429
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_1_1.png",
+      "offset": 870745826,
+      "compressed_bytes": 1653625,
+      "uncompressed_bytes": 1735868,
+      "method": 8,
+      "crc32": 3290536924
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_1_3.png",
+      "offset": 872399574,
+      "compressed_bytes": 1693099,
+      "uncompressed_bytes": 1775165,
+      "method": 8,
+      "crc32": 3864645786
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_2_0.png",
+      "offset": 874092796,
+      "compressed_bytes": 1630638,
+      "uncompressed_bytes": 1715394,
+      "method": 8,
+      "crc32": 2382958648
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_2_1.png",
+      "offset": 875723557,
+      "compressed_bytes": 1670744,
+      "uncompressed_bytes": 1752191,
+      "method": 8,
+      "crc32": 3474683398
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_2_2.png",
+      "offset": 877394424,
+      "compressed_bytes": 1594615,
+      "uncompressed_bytes": 1680236,
+      "method": 8,
+      "crc32": 1683748886
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_2_3.png",
+      "offset": 878989162,
+      "compressed_bytes": 1621646,
+      "uncompressed_bytes": 1706290,
+      "method": 8,
+      "crc32": 4126006908
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_3_0.png",
+      "offset": 880610931,
+      "compressed_bytes": 1646127,
+      "uncompressed_bytes": 1729102,
+      "method": 8,
+      "crc32": 2535950324
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_3_1.png",
+      "offset": 882257181,
+      "compressed_bytes": 1697725,
+      "uncompressed_bytes": 1777025,
+      "method": 8,
+      "crc32": 3790260120
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_3_2.png",
+      "offset": 883955029,
+      "compressed_bytes": 1586881,
+      "uncompressed_bytes": 1672288,
+      "method": 8,
+      "crc32": 1250166693
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_32000_3_3.png",
+      "offset": 885542033,
+      "compressed_bytes": 1576402,
+      "uncompressed_bytes": 1663973,
+      "method": 8,
+      "crc32": 1899884075
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_0_0.png",
+      "offset": 887118558,
+      "compressed_bytes": 1701609,
+      "uncompressed_bytes": 1785274,
+      "method": 8,
+      "crc32": 3375026068
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_0_3.png",
+      "offset": 888820290,
+      "compressed_bytes": 1659147,
+      "uncompressed_bytes": 1747286,
+      "method": 8,
+      "crc32": 2711600346
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_1_0.png",
+      "offset": 890479560,
+      "compressed_bytes": 1688459,
+      "uncompressed_bytes": 1775052,
+      "method": 8,
+      "crc32": 3839253607
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_1_1.png",
+      "offset": 892168142,
+      "compressed_bytes": 1654898,
+      "uncompressed_bytes": 1738761,
+      "method": 8,
+      "crc32": 4071847700
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_1_2.png",
+      "offset": 893823163,
+      "compressed_bytes": 1695485,
+      "uncompressed_bytes": 1781462,
+      "method": 8,
+      "crc32": 413771900
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_2_1.png",
+      "offset": 895518771,
+      "compressed_bytes": 1659259,
+      "uncompressed_bytes": 1746297,
+      "method": 8,
+      "crc32": 4013364750
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_2_2.png",
+      "offset": 897178153,
+      "compressed_bytes": 1629571,
+      "uncompressed_bytes": 1718187,
+      "method": 8,
+      "crc32": 2503493474
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_3_0.png",
+      "offset": 898807847,
+      "compressed_bytes": 1634021,
+      "uncompressed_bytes": 1724339,
+      "method": 8,
+      "crc32": 1334720538
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_3_1.png",
+      "offset": 900441991,
+      "compressed_bytes": 1702768,
+      "uncompressed_bytes": 1787030,
+      "method": 8,
+      "crc32": 3147155350
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_3_2.png",
+      "offset": 902144882,
+      "compressed_bytes": 1651089,
+      "uncompressed_bytes": 1740888,
+      "method": 8,
+      "crc32": 1006372633
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_34000_3_3.png",
+      "offset": 903796094,
+      "compressed_bytes": 1657775,
+      "uncompressed_bytes": 1747543,
+      "method": 8,
+      "crc32": 532212262
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_0_0.png",
+      "offset": 905453992,
+      "compressed_bytes": 1658101,
+      "uncompressed_bytes": 1744057,
+      "method": 8,
+      "crc32": 2619531455
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_0_1.png",
+      "offset": 907112216,
+      "compressed_bytes": 1569255,
+      "uncompressed_bytes": 1657409,
+      "method": 8,
+      "crc32": 549692101
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_1_1.png",
+      "offset": 908681594,
+      "compressed_bytes": 1607634,
+      "uncompressed_bytes": 1695842,
+      "method": 8,
+      "crc32": 599754138
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_1_3.png",
+      "offset": 910289351,
+      "compressed_bytes": 1667330,
+      "uncompressed_bytes": 1755536,
+      "method": 8,
+      "crc32": 2106294646
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_2_0.png",
+      "offset": 911956804,
+      "compressed_bytes": 1710021,
+      "uncompressed_bytes": 1794563,
+      "method": 8,
+      "crc32": 224767301
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_2_1.png",
+      "offset": 913666948,
+      "compressed_bytes": 1639678,
+      "uncompressed_bytes": 1725771,
+      "method": 8,
+      "crc32": 3501367184
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_2_2.png",
+      "offset": 915306749,
+      "compressed_bytes": 1671170,
+      "uncompressed_bytes": 1757261,
+      "method": 8,
+      "crc32": 3924317677
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_2_3.png",
+      "offset": 916978042,
+      "compressed_bytes": 1669505,
+      "uncompressed_bytes": 1756003,
+      "method": 8,
+      "crc32": 1889601485
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_3_1.png",
+      "offset": 918647670,
+      "compressed_bytes": 1681241,
+      "uncompressed_bytes": 1767960,
+      "method": 8,
+      "crc32": 4133295511
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_3_2.png",
+      "offset": 920329034,
+      "compressed_bytes": 1725146,
+      "uncompressed_bytes": 1808086,
+      "method": 8,
+      "crc32": 1713075369
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_34000_40000_3_3.png",
+      "offset": 922054303,
+      "compressed_bytes": 1683536,
+      "uncompressed_bytes": 1769857,
+      "method": 8,
+      "crc32": 2745774684
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_0_1.png",
+      "offset": 923737962,
+      "compressed_bytes": 1667657,
+      "uncompressed_bytes": 1749904,
+      "method": 8,
+      "crc32": 3531715265
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_0_3.png",
+      "offset": 925405742,
+      "compressed_bytes": 1722911,
+      "uncompressed_bytes": 1805194,
+      "method": 8,
+      "crc32": 483950030
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_1_0.png",
+      "offset": 927128776,
+      "compressed_bytes": 1715150,
+      "uncompressed_bytes": 1797112,
+      "method": 8,
+      "crc32": 865250624
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_1_2.png",
+      "offset": 928844049,
+      "compressed_bytes": 1583205,
+      "uncompressed_bytes": 1672545,
+      "method": 8,
+      "crc32": 4197176517
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_2_0.png",
+      "offset": 930427377,
+      "compressed_bytes": 1690512,
+      "uncompressed_bytes": 1771915,
+      "method": 8,
+      "crc32": 3901708820
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_2_1.png",
+      "offset": 932118012,
+      "compressed_bytes": 1709701,
+      "uncompressed_bytes": 1791151,
+      "method": 8,
+      "crc32": 1515581563
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_2_3.png",
+      "offset": 933827836,
+      "compressed_bytes": 1680387,
+      "uncompressed_bytes": 1763944,
+      "method": 8,
+      "crc32": 3377177592
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_3_0.png",
+      "offset": 935508346,
+      "compressed_bytes": 1727177,
+      "uncompressed_bytes": 1807222,
+      "method": 8,
+      "crc32": 961097544
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_3_1.png",
+      "offset": 937235646,
+      "compressed_bytes": 1707557,
+      "uncompressed_bytes": 1788124,
+      "method": 8,
+      "crc32": 1716700348
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_3_2.png",
+      "offset": 938943326,
+      "compressed_bytes": 1771984,
+      "uncompressed_bytes": 1849558,
+      "method": 8,
+      "crc32": 3538899704
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_32000_3_3.png",
+      "offset": 940715433,
+      "compressed_bytes": 1732691,
+      "uncompressed_bytes": 1816302,
+      "method": 8,
+      "crc32": 163484112
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_0_0.png",
+      "offset": 942448247,
+      "compressed_bytes": 1642398,
+      "uncompressed_bytes": 1730294,
+      "method": 8,
+      "crc32": 3181006104
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_0_2.png",
+      "offset": 944090768,
+      "compressed_bytes": 1670462,
+      "uncompressed_bytes": 1756815,
+      "method": 8,
+      "crc32": 1898276746
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_0_3.png",
+      "offset": 945761353,
+      "compressed_bytes": 1733083,
+      "uncompressed_bytes": 1816513,
+      "method": 8,
+      "crc32": 2552795673
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_1_0.png",
+      "offset": 947494559,
+      "compressed_bytes": 1643340,
+      "uncompressed_bytes": 1730974,
+      "method": 8,
+      "crc32": 2640105390
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_1_1.png",
+      "offset": 949138022,
+      "compressed_bytes": 1728136,
+      "uncompressed_bytes": 1810804,
+      "method": 8,
+      "crc32": 2433846594
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_1_3.png",
+      "offset": 950866281,
+      "compressed_bytes": 1730903,
+      "uncompressed_bytes": 1815329,
+      "method": 8,
+      "crc32": 834916644
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_2_0.png",
+      "offset": 952597307,
+      "compressed_bytes": 1761020,
+      "uncompressed_bytes": 1843871,
+      "method": 8,
+      "crc32": 3368806144
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_2_1.png",
+      "offset": 954358450,
+      "compressed_bytes": 1695124,
+      "uncompressed_bytes": 1779818,
+      "method": 8,
+      "crc32": 1562695202
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_2_2.png",
+      "offset": 956053697,
+      "compressed_bytes": 1684171,
+      "uncompressed_bytes": 1769159,
+      "method": 8,
+      "crc32": 903505930
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_2_3.png",
+      "offset": 957737991,
+      "compressed_bytes": 1674675,
+      "uncompressed_bytes": 1760434,
+      "method": 8,
+      "crc32": 2157514390
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_3_0.png",
+      "offset": 959412789,
+      "compressed_bytes": 1644588,
+      "uncompressed_bytes": 1733497,
+      "method": 8,
+      "crc32": 2111538497
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_3_1.png",
+      "offset": 961057500,
+      "compressed_bytes": 1667007,
+      "uncompressed_bytes": 1753645,
+      "method": 8,
+      "crc32": 1438487888
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_34000_3_3.png",
+      "offset": 962724630,
+      "compressed_bytes": 1755273,
+      "uncompressed_bytes": 1838767,
+      "method": 8,
+      "crc32": 2617356486
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_0_0.png",
+      "offset": 964480026,
+      "compressed_bytes": 1650073,
+      "uncompressed_bytes": 1736168,
+      "method": 8,
+      "crc32": 2562795132
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_0_2.png",
+      "offset": 966130222,
+      "compressed_bytes": 1558016,
+      "uncompressed_bytes": 1649592,
+      "method": 8,
+      "crc32": 2371250170
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_0_3.png",
+      "offset": 967688361,
+      "compressed_bytes": 1574472,
+      "uncompressed_bytes": 1664699,
+      "method": 8,
+      "crc32": 4090866122
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_1_1.png",
+      "offset": 969262956,
+      "compressed_bytes": 1603826,
+      "uncompressed_bytes": 1693456,
+      "method": 8,
+      "crc32": 1063277186
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_1_2.png",
+      "offset": 970866905,
+      "compressed_bytes": 1608614,
+      "uncompressed_bytes": 1697986,
+      "method": 8,
+      "crc32": 3983324648
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_1_3.png",
+      "offset": 972475642,
+      "compressed_bytes": 1644556,
+      "uncompressed_bytes": 1733845,
+      "method": 8,
+      "crc32": 67012781
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_2_0.png",
+      "offset": 974120321,
+      "compressed_bytes": 1641359,
+      "uncompressed_bytes": 1726297,
+      "method": 8,
+      "crc32": 4240800126
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_2_1.png",
+      "offset": 975761803,
+      "compressed_bytes": 1655351,
+      "uncompressed_bytes": 1743864,
+      "method": 8,
+      "crc32": 557254921
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_2_2.png",
+      "offset": 977417277,
+      "compressed_bytes": 1664955,
+      "uncompressed_bytes": 1750843,
+      "method": 8,
+      "crc32": 1480967291
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_2_3.png",
+      "offset": 979082355,
+      "compressed_bytes": 1648503,
+      "uncompressed_bytes": 1735403,
+      "method": 8,
+      "crc32": 3861125665
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_3_0.png",
+      "offset": 980730981,
+      "compressed_bytes": 1674665,
+      "uncompressed_bytes": 1758883,
+      "method": 8,
+      "crc32": 1963216889
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_3_1.png",
+      "offset": 982405769,
+      "compressed_bytes": 1543662,
+      "uncompressed_bytes": 1628042,
+      "method": 8,
+      "crc32": 1889786808
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_3_2.png",
+      "offset": 983949554,
+      "compressed_bytes": 1614667,
+      "uncompressed_bytes": 1700382,
+      "method": 8,
+      "crc32": 997235019
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_38000_3_3.png",
+      "offset": 985564344,
+      "compressed_bytes": 1688528,
+      "uncompressed_bytes": 1773786,
+      "method": 8,
+      "crc32": 1169959145
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_0_0.png",
+      "offset": 987252995,
+      "compressed_bytes": 1712733,
+      "uncompressed_bytes": 1795866,
+      "method": 8,
+      "crc32": 1838308378
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_0_1.png",
+      "offset": 988965851,
+      "compressed_bytes": 1699478,
+      "uncompressed_bytes": 1783154,
+      "method": 8,
+      "crc32": 1915748927
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_0_2.png",
+      "offset": 990665452,
+      "compressed_bytes": 1685949,
+      "uncompressed_bytes": 1770519,
+      "method": 8,
+      "crc32": 109474623
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_0_3.png",
+      "offset": 992351524,
+      "compressed_bytes": 1665015,
+      "uncompressed_bytes": 1751732,
+      "method": 8,
+      "crc32": 857573953
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_1_0.png",
+      "offset": 994016662,
+      "compressed_bytes": 1611482,
+      "uncompressed_bytes": 1698216,
+      "method": 8,
+      "crc32": 4022612078
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_1_1.png",
+      "offset": 995628267,
+      "compressed_bytes": 1652602,
+      "uncompressed_bytes": 1738399,
+      "method": 8,
+      "crc32": 4182666905
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_1_2.png",
+      "offset": 997280992,
+      "compressed_bytes": 1702954,
+      "uncompressed_bytes": 1786690,
+      "method": 8,
+      "crc32": 2202908041
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_2_0.png",
+      "offset": 998984069,
+      "compressed_bytes": 1695097,
+      "uncompressed_bytes": 1779471,
+      "method": 8,
+      "crc32": 538796593
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_2_1.png",
+      "offset": 1000679289,
+      "compressed_bytes": 1747008,
+      "uncompressed_bytes": 1828505,
+      "method": 8,
+      "crc32": 1290486877
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_2_2.png",
+      "offset": 1002426420,
+      "compressed_bytes": 1719436,
+      "uncompressed_bytes": 1802574,
+      "method": 8,
+      "crc32": 1692360881
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_2_3.png",
+      "offset": 1004145979,
+      "compressed_bytes": 1769202,
+      "uncompressed_bytes": 1851685,
+      "method": 8,
+      "crc32": 351428600
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_3_0.png",
+      "offset": 1005915304,
+      "compressed_bytes": 1707780,
+      "uncompressed_bytes": 1789503,
+      "method": 8,
+      "crc32": 922508185
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_3_1.png",
+      "offset": 1007623207,
+      "compressed_bytes": 1727794,
+      "uncompressed_bytes": 1811062,
+      "method": 8,
+      "crc32": 2007483123
+    },
+    {
+      "name": "DeepLIIF_Testing_Set/Lung_36000_42000_3_3.png",
+      "offset": 1009351124,
+      "compressed_bytes": 1808225,
+      "uncompressed_bytes": 1888718,
+      "method": 8,
+      "crc32": 1211912248
+    }
+  ]
+}

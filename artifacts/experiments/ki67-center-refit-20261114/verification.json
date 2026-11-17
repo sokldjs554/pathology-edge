@@ -1,0 +1,36 @@
+{
+  "training_source_commit": "d28c8127675cf92e08aa46698eb3e4908518a2f1",
+  "code_ci": {
+    "commit": "53a6c08b389cac72d083cdb7da249c6ce47ea3d7",
+    "url": "https://github.com/sokldjs554/pathology-edge/actions/runs/43578532938",
+    "tests_passed": 668,
+    "dice_values": 42,
+    "dice_means": 6,
+    "static_demo_passed": true
+  },
+  "local_test_runs": [
+    {
+      "tests_passed": 69,
+      "log": "runner-final-green.log"
+    },
+    {
+      "tests_passed": 26,
+      "log": "audit-combined.log"
+    }
+  ],
+  "local_full_suite_run": false,
+  "reason": "Local disk below full-suite reproduction precondition; clean GitHub CI used.",
+  "user_new_review_confirmed": false,
+  "prior_user_record": "U104 confirms old localization arrow toggle and displayed metric invariance only.",
+  "protected_learner_files": {
+    "src/pathology_edge/learner_coordinates.py": "1dbe51a1ccf1a5e3e5ddad7a018188dd685c15c9608d99124bf55b717ad2d149",
+    "src/pathology_edge/learner_losses.py": "290bb91f323643639cf36a8eec5353c1c80e15eab50f226c789f5120fcf8e271",
+    "src/pathology_edge/learner_metrics.py": "2ca1f21af2cfa8131ed690c13523a04a0b866836970bf1d1d1dcc6c157eb3774",
+    "src/pathology_edge/learner_refinement.py": "d6d57c6e652ff97b17b5dee4e4876be6d4d10319586728a90d436d2031aee5fa",
+    "src/pathology_edge/learner_split.py": "1d9fb45cd1b7e8f0b5bab96ae9f9cf4a9943ca4369fb878cc269e04874f81a1f",
+    "src/pathology_edge/learner_wsi.py": "7d5379a4444c620b07e2457c1c943e523c68b6e7b13a2ad8c474fcfffe1f74c6",
+    "tests/learner/test_merge_counterexample.py": "2d2003bd57c2b18fd5e511989ef6854ecb03353bf1e9ef43e5a102dc0609b34c"
+  },
+  "dist_unchanged": true,
+  "external_individual_cell_outputs_excluded_from_public_package": true
+}

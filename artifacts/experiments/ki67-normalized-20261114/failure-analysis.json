@@ -1,0 +1,1246 @@
+{
+  "scope": "Posthoc failure explanation on repeatedly used validation227/4cases; does not replace original selection rules or evaluate holdouts",
+  "floors": {
+    "case_macro_recall": 0.4797951648158369,
+    "tumor_recalls": [
+      0.5590062111801242,
+      0.3397832817337461
+    ]
+  },
+  "models": [
+    {
+      "width": 4,
+      "seed": 20261117,
+      "primary": false,
+      "eligible": false,
+      "parameters": 7697,
+      "A": {
+        "localization": {
+          "tp": 894,
+          "fp": 1349,
+          "fn": 1908,
+          "precision": 0.398573339277753,
+          "recall": 0.31905781584582443,
+          "f1": 0.35441030723488604
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 99,
+            "fp": 228,
+            "fn": 515,
+            "precision": 0.30275229357798167,
+            "recall": 0.16123778501628663,
+            "f1": 0.2104144527098831
+          },
+          "case_0005": {
+            "tp": 248,
+            "fp": 350,
+            "fn": 674,
+            "precision": 0.41471571906354515,
+            "recall": 0.26898047722342733,
+            "f1": 0.3263157894736842
+          },
+          "case_0007": {
+            "tp": 174,
+            "fp": 373,
+            "fn": 489,
+            "precision": 0.3180987202925046,
+            "recall": 0.26244343891402716,
+            "f1": 0.28760330578512394
+          },
+          "case_0019": {
+            "tp": 373,
+            "fp": 398,
+            "fn": 230,
+            "precision": 0.48378728923476005,
+            "recall": 0.6185737976782753,
+            "f1": 0.5429403202328966
+          }
+        },
+        "case_macro_f1": 0.341818467050397,
+        "case_macro_recall": 0.32780887470800407,
+        "tumor_recalls": [
+          0.4057971014492754,
+          0.19195046439628483
+        ],
+        "matched_by_true_class": [
+          196,
+          248,
+          53,
+          397
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B": {
+        "split": "validation",
+        "epoch": 24,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1236,
+          "fp": 1937,
+          "fn": 1566,
+          "precision": 0.389536716041601,
+          "recall": 0.4411134903640257,
+          "f1": 0.41372384937238493
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 210,
+            "fp": 429,
+            "fn": 404,
+            "precision": 0.3286384976525822,
+            "recall": 0.34201954397394135,
+            "f1": 0.33519553072625696
+          },
+          "case_0005": {
+            "tp": 370,
+            "fp": 579,
+            "fn": 552,
+            "precision": 0.3898840885142255,
+            "recall": 0.40130151843817785,
+            "f1": 0.39551042223409943
+          },
+          "case_0007": {
+            "tp": 288,
+            "fp": 575,
+            "fn": 375,
+            "precision": 0.33371958285052145,
+            "recall": 0.4343891402714932,
+            "f1": 0.37745740498034075
+          },
+          "case_0019": {
+            "tp": 368,
+            "fp": 354,
+            "fn": 235,
+            "precision": 0.5096952908587258,
+            "recall": 0.6102819237147595,
+            "f1": 0.5554716981132075
+          }
+        },
+        "case_macro_f1": 0.41590876401347615,
+        "case_macro_recall": 0.44699803159959295,
+        "tumor_recalls": [
+          0.505175983436853,
+          0.32739938080495357
+        ],
+        "matched_by_true_class": [
+          244,
+          423,
+          62,
+          507
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B_role": "unadopted diagnostic",
+      "B_criteria": {
+        "joint_fp_fn": false,
+        "macro_recall": false,
+        "positive_tumor_recall": false,
+        "negative_tumor_recall": false,
+        "every_case_recall": true
+      },
+      "failed_criteria": [
+        "joint_fp_fn",
+        "macro_recall",
+        "positive_tumor_recall",
+        "negative_tumor_recall"
+      ],
+      "gate_counts": {
+        "joint_fp_fn": 0,
+        "macro_recall": 343,
+        "positive_tumor_recall": 313,
+        "negative_tumor_recall": 353,
+        "every_case_recall": 416
+      },
+      "joint_only_count": 0,
+      "best_joint_only": null,
+      "full_gate_count": 0,
+      "training_selection_seconds": 1062.6367868839989
+    },
+    {
+      "width": 4,
+      "seed": 20261118,
+      "primary": false,
+      "eligible": false,
+      "parameters": 7697,
+      "A": {
+        "localization": {
+          "tp": 832,
+          "fp": 1472,
+          "fn": 1970,
+          "precision": 0.3611111111111111,
+          "recall": 0.29693076374018557,
+          "f1": 0.3258911084998041
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 94,
+            "fp": 242,
+            "fn": 520,
+            "precision": 0.27976190476190477,
+            "recall": 0.15309446254071662,
+            "f1": 0.19789473684210526
+          },
+          "case_0005": {
+            "tp": 228,
+            "fp": 375,
+            "fn": 694,
+            "precision": 0.3781094527363184,
+            "recall": 0.2472885032537961,
+            "f1": 0.29901639344262293
+          },
+          "case_0007": {
+            "tp": 154,
+            "fp": 398,
+            "fn": 509,
+            "precision": 0.27898550724637683,
+            "recall": 0.23227752639517346,
+            "f1": 0.25349794238683127
+          },
+          "case_0019": {
+            "tp": 356,
+            "fp": 457,
+            "fn": 247,
+            "precision": 0.43788437884378845,
+            "recall": 0.5903814262023217,
+            "f1": 0.5028248587570622
+          }
+        },
+        "case_macro_f1": 0.3133084828571554,
+        "case_macro_recall": 0.30576047959800196,
+        "tumor_recalls": [
+          0.32919254658385094,
+          0.20356037151702785
+        ],
+        "matched_by_true_class": [
+          159,
+          263,
+          49,
+          361
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B": {
+        "split": "validation",
+        "epoch": 23,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 6
+        },
+        "localization": {
+          "tp": 1220,
+          "fp": 2067,
+          "fn": 1582,
+          "precision": 0.37115911165196225,
+          "recall": 0.4354032833690221,
+          "f1": 0.40072261455082936
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 213,
+            "fp": 521,
+            "fn": 401,
+            "precision": 0.2901907356948229,
+            "recall": 0.3469055374592834,
+            "f1": 0.31602373887240354
+          },
+          "case_0005": {
+            "tp": 365,
+            "fp": 591,
+            "fn": 557,
+            "precision": 0.3817991631799163,
+            "recall": 0.3958785249457701,
+            "f1": 0.3887113951011715
+          },
+          "case_0007": {
+            "tp": 267,
+            "fp": 618,
+            "fn": 396,
+            "precision": 0.3016949152542373,
+            "recall": 0.40271493212669685,
+            "f1": 0.3449612403100775
+          },
+          "case_0019": {
+            "tp": 375,
+            "fp": 337,
+            "fn": 228,
+            "precision": 0.526685393258427,
+            "recall": 0.6218905472636815,
+            "f1": 0.5703422053231939
+          }
+        },
+        "case_macro_f1": 0.4050096449017116,
+        "case_macro_recall": 0.44184738544885793,
+        "tumor_recalls": [
+          0.4720496894409938,
+          0.32972136222910214
+        ],
+        "matched_by_true_class": [
+          228,
+          426,
+          59,
+          507
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B_role": "unadopted diagnostic",
+      "B_criteria": {
+        "joint_fp_fn": false,
+        "macro_recall": false,
+        "positive_tumor_recall": false,
+        "negative_tumor_recall": false,
+        "every_case_recall": true
+      },
+      "failed_criteria": [
+        "joint_fp_fn",
+        "macro_recall",
+        "positive_tumor_recall",
+        "negative_tumor_recall"
+      ],
+      "gate_counts": {
+        "joint_fp_fn": 15,
+        "macro_recall": 336,
+        "positive_tumor_recall": 122,
+        "negative_tumor_recall": 357,
+        "every_case_recall": 406
+      },
+      "joint_only_count": 15,
+      "best_joint_only": {
+        "split": "validation",
+        "epoch": 15,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1000,
+          "fp": 1453,
+          "fn": 1802,
+          "precision": 0.40766408479412963,
+          "recall": 0.35688793718772305,
+          "f1": 0.38058991436726924
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 158,
+            "fp": 327,
+            "fn": 456,
+            "precision": 0.32577319587628867,
+            "recall": 0.25732899022801303,
+            "f1": 0.2875341219290264
+          },
+          "case_0005": {
+            "tp": 282,
+            "fp": 371,
+            "fn": 640,
+            "precision": 0.4318529862174579,
+            "recall": 0.30585683297180044,
+            "f1": 0.3580952380952381
+          },
+          "case_0007": {
+            "tp": 219,
+            "fp": 419,
+            "fn": 444,
+            "precision": 0.3432601880877743,
+            "recall": 0.33031674208144796,
+            "f1": 0.3366641045349731
+          },
+          "case_0019": {
+            "tp": 341,
+            "fp": 336,
+            "fn": 262,
+            "precision": 0.5036927621861153,
+            "recall": 0.5655058043117744,
+            "f1": 0.5328125
+          }
+        },
+        "case_macro_f1": 0.3787764911398094,
+        "case_macro_recall": 0.36475209239825895,
+        "tumor_recalls": [
+          0.37888198757763975,
+          0.22987616099071206
+        ],
+        "matched_by_true_class": [
+          183,
+          297,
+          61,
+          459
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "full_gate_count": 0,
+      "training_selection_seconds": 1202.7851755300035
+    },
+    {
+      "width": 4,
+      "seed": 20261119,
+      "primary": false,
+      "eligible": false,
+      "parameters": 7697,
+      "A": {
+        "localization": {
+          "tp": 838,
+          "fp": 1424,
+          "fn": 1964,
+          "precision": 0.3704686118479222,
+          "recall": 0.2990720913633119,
+          "f1": 0.33096366508688785
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 94,
+            "fp": 241,
+            "fn": 520,
+            "precision": 0.28059701492537314,
+            "recall": 0.15309446254071662,
+            "f1": 0.19810326659641728
+          },
+          "case_0005": {
+            "tp": 228,
+            "fp": 348,
+            "fn": 694,
+            "precision": 0.3958333333333333,
+            "recall": 0.2472885032537961,
+            "f1": 0.30440587449933243
+          },
+          "case_0007": {
+            "tp": 146,
+            "fp": 424,
+            "fn": 517,
+            "precision": 0.256140350877193,
+            "recall": 0.22021116138763197,
+            "f1": 0.23682076236820762
+          },
+          "case_0019": {
+            "tp": 370,
+            "fp": 411,
+            "fn": 233,
+            "precision": 0.4737516005121639,
+            "recall": 0.6135986733001658,
+            "f1": 0.5346820809248555
+          }
+        },
+        "case_macro_f1": 0.31850299609720323,
+        "case_macro_recall": 0.3085482001205776,
+        "tumor_recalls": [
+          0.37267080745341613,
+          0.18188854489164086
+        ],
+        "matched_by_true_class": [
+          180,
+          235,
+          53,
+          370
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B": {
+        "split": "validation",
+        "epoch": 20,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1248,
+          "fp": 1831,
+          "fn": 1554,
+          "precision": 0.4053264046768431,
+          "recall": 0.44539614561027835,
+          "f1": 0.42441761605169187
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 206,
+            "fp": 419,
+            "fn": 408,
+            "precision": 0.3296,
+            "recall": 0.3355048859934853,
+            "f1": 0.33252623083131555
+          },
+          "case_0005": {
+            "tp": 379,
+            "fp": 581,
+            "fn": 543,
+            "precision": 0.39479166666666665,
+            "recall": 0.41106290672451196,
+            "f1": 0.4027630180658874
+          },
+          "case_0007": {
+            "tp": 290,
+            "fp": 495,
+            "fn": 373,
+            "precision": 0.36942675159235666,
+            "recall": 0.4374057315233786,
+            "f1": 0.4005524861878453
+          },
+          "case_0019": {
+            "tp": 373,
+            "fp": 336,
+            "fn": 230,
+            "precision": 0.5260930888575458,
+            "recall": 0.6185737976782753,
+            "f1": 0.5685975609756098
+          }
+        },
+        "case_macro_f1": 0.4261098240151645,
+        "case_macro_recall": 0.45063683047991276,
+        "tumor_recalls": [
+          0.4927536231884058,
+          0.32739938080495357
+        ],
+        "matched_by_true_class": [
+          238,
+          423,
+          64,
+          523
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B_role": "unadopted diagnostic",
+      "B_criteria": {
+        "joint_fp_fn": false,
+        "macro_recall": false,
+        "positive_tumor_recall": false,
+        "negative_tumor_recall": false,
+        "every_case_recall": true
+      },
+      "failed_criteria": [
+        "joint_fp_fn",
+        "macro_recall",
+        "positive_tumor_recall",
+        "negative_tumor_recall"
+      ],
+      "gate_counts": {
+        "joint_fp_fn": 7,
+        "macro_recall": 347,
+        "positive_tumor_recall": 170,
+        "negative_tumor_recall": 365,
+        "every_case_recall": 419
+      },
+      "joint_only_count": 7,
+      "best_joint_only": {
+        "split": "validation",
+        "epoch": 12,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1044,
+          "fp": 1349,
+          "fn": 1758,
+          "precision": 0.43627246134559133,
+          "recall": 0.37259100642398285,
+          "f1": 0.40192492781520694
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 157,
+            "fp": 300,
+            "fn": 457,
+            "precision": 0.3435448577680525,
+            "recall": 0.255700325732899,
+            "f1": 0.2931839402427638
+          },
+          "case_0005": {
+            "tp": 309,
+            "fp": 352,
+            "fn": 613,
+            "precision": 0.46747352496217853,
+            "recall": 0.3351409978308026,
+            "f1": 0.3903979785217941
+          },
+          "case_0007": {
+            "tp": 225,
+            "fp": 333,
+            "fn": 438,
+            "precision": 0.4032258064516129,
+            "recall": 0.3393665158371041,
+            "f1": 0.36855036855036855
+          },
+          "case_0019": {
+            "tp": 353,
+            "fp": 364,
+            "fn": 250,
+            "precision": 0.49232914923291493,
+            "recall": 0.5854063018242123,
+            "f1": 0.5348484848484848
+          }
+        },
+        "case_macro_f1": 0.39674519304085276,
+        "case_macro_recall": 0.3789035353062545,
+        "tumor_recalls": [
+          0.32919254658385094,
+          0.26160990712074306
+        ],
+        "matched_by_true_class": [
+          159,
+          338,
+          61,
+          486
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "full_gate_count": 0,
+      "training_selection_seconds": 1081.8868243200013
+    },
+    {
+      "width": 16,
+      "seed": 20261117,
+      "primary": true,
+      "eligible": false,
+      "parameters": 118913,
+      "A": {
+        "localization": {
+          "tp": 894,
+          "fp": 1349,
+          "fn": 1908,
+          "precision": 0.398573339277753,
+          "recall": 0.31905781584582443,
+          "f1": 0.35441030723488604
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 99,
+            "fp": 228,
+            "fn": 515,
+            "precision": 0.30275229357798167,
+            "recall": 0.16123778501628663,
+            "f1": 0.2104144527098831
+          },
+          "case_0005": {
+            "tp": 248,
+            "fp": 350,
+            "fn": 674,
+            "precision": 0.41471571906354515,
+            "recall": 0.26898047722342733,
+            "f1": 0.3263157894736842
+          },
+          "case_0007": {
+            "tp": 174,
+            "fp": 373,
+            "fn": 489,
+            "precision": 0.3180987202925046,
+            "recall": 0.26244343891402716,
+            "f1": 0.28760330578512394
+          },
+          "case_0019": {
+            "tp": 373,
+            "fp": 398,
+            "fn": 230,
+            "precision": 0.48378728923476005,
+            "recall": 0.6185737976782753,
+            "f1": 0.5429403202328966
+          }
+        },
+        "case_macro_f1": 0.341818467050397,
+        "case_macro_recall": 0.32780887470800407,
+        "tumor_recalls": [
+          0.4057971014492754,
+          0.19195046439628483
+        ],
+        "matched_by_true_class": [
+          196,
+          248,
+          53,
+          397
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B": {
+        "split": "validation",
+        "epoch": 22,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1421,
+          "fp": 1807,
+          "fn": 1381,
+          "precision": 0.4402106567534077,
+          "recall": 0.5071377587437544,
+          "f1": 0.47131011608623546
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 247,
+            "fp": 463,
+            "fn": 367,
+            "precision": 0.34788732394366195,
+            "recall": 0.4022801302931596,
+            "f1": 0.3731117824773414
+          },
+          "case_0005": {
+            "tp": 420,
+            "fp": 527,
+            "fn": 502,
+            "precision": 0.44350580781414994,
+            "recall": 0.455531453362256,
+            "f1": 0.449438202247191
+          },
+          "case_0007": {
+            "tp": 351,
+            "fp": 497,
+            "fn": 312,
+            "precision": 0.41391509433962265,
+            "recall": 0.5294117647058824,
+            "f1": 0.46459298477829253
+          },
+          "case_0019": {
+            "tp": 403,
+            "fp": 320,
+            "fn": 200,
+            "precision": 0.5573997233748271,
+            "recall": 0.6683250414593698,
+            "f1": 0.6078431372549019
+          }
+        },
+        "case_macro_f1": 0.47374652668943174,
+        "case_macro_recall": 0.513887097455167,
+        "tumor_recalls": [
+          0.5362318840579711,
+          0.4117647058823529
+        ],
+        "matched_by_true_class": [
+          259,
+          532,
+          68,
+          562
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B_role": "unadopted diagnostic",
+      "B_criteria": {
+        "joint_fp_fn": false,
+        "macro_recall": true,
+        "positive_tumor_recall": false,
+        "negative_tumor_recall": true,
+        "every_case_recall": true
+      },
+      "failed_criteria": [
+        "joint_fp_fn",
+        "positive_tumor_recall"
+      ],
+      "gate_counts": {
+        "joint_fp_fn": 0,
+        "macro_recall": 383,
+        "positive_tumor_recall": 142,
+        "negative_tumor_recall": 411,
+        "every_case_recall": 424
+      },
+      "joint_only_count": 0,
+      "best_joint_only": null,
+      "full_gate_count": 0,
+      "training_selection_seconds": 3640.037911194002
+    },
+    {
+      "width": 16,
+      "seed": 20261118,
+      "primary": true,
+      "eligible": false,
+      "parameters": 118913,
+      "A": {
+        "localization": {
+          "tp": 832,
+          "fp": 1472,
+          "fn": 1970,
+          "precision": 0.3611111111111111,
+          "recall": 0.29693076374018557,
+          "f1": 0.3258911084998041
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 94,
+            "fp": 242,
+            "fn": 520,
+            "precision": 0.27976190476190477,
+            "recall": 0.15309446254071662,
+            "f1": 0.19789473684210526
+          },
+          "case_0005": {
+            "tp": 228,
+            "fp": 375,
+            "fn": 694,
+            "precision": 0.3781094527363184,
+            "recall": 0.2472885032537961,
+            "f1": 0.29901639344262293
+          },
+          "case_0007": {
+            "tp": 154,
+            "fp": 398,
+            "fn": 509,
+            "precision": 0.27898550724637683,
+            "recall": 0.23227752639517346,
+            "f1": 0.25349794238683127
+          },
+          "case_0019": {
+            "tp": 356,
+            "fp": 457,
+            "fn": 247,
+            "precision": 0.43788437884378845,
+            "recall": 0.5903814262023217,
+            "f1": 0.5028248587570622
+          }
+        },
+        "case_macro_f1": 0.3133084828571554,
+        "case_macro_recall": 0.30576047959800196,
+        "tumor_recalls": [
+          0.32919254658385094,
+          0.20356037151702785
+        ],
+        "matched_by_true_class": [
+          159,
+          263,
+          49,
+          361
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B": {
+        "split": "validation",
+        "epoch": 22,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1490,
+          "fp": 1850,
+          "fn": 1312,
+          "precision": 0.44610778443113774,
+          "recall": 0.5317630264097074,
+          "f1": 0.48518397915988276
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 275,
+            "fp": 443,
+            "fn": 339,
+            "precision": 0.383008356545961,
+            "recall": 0.44788273615635177,
+            "f1": 0.41291291291291293
+          },
+          "case_0005": {
+            "tp": 445,
+            "fp": 594,
+            "fn": 477,
+            "precision": 0.42829643888354185,
+            "recall": 0.482646420824295,
+            "f1": 0.45385007649158593
+          },
+          "case_0007": {
+            "tp": 347,
+            "fp": 511,
+            "fn": 316,
+            "precision": 0.40442890442890445,
+            "recall": 0.5233785822021116,
+            "f1": 0.45627876397107164
+          },
+          "case_0019": {
+            "tp": 423,
+            "fp": 302,
+            "fn": 180,
+            "precision": 0.5834482758620689,
+            "recall": 0.7014925373134329,
+            "f1": 0.6370481927710844
+          }
+        },
+        "case_macro_f1": 0.4900224865366637,
+        "case_macro_recall": 0.5388500691240479,
+        "tumor_recalls": [
+          0.515527950310559,
+          0.4628482972136223
+        ],
+        "matched_by_true_class": [
+          249,
+          598,
+          75,
+          568
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B_role": "unadopted diagnostic",
+      "B_criteria": {
+        "joint_fp_fn": false,
+        "macro_recall": true,
+        "positive_tumor_recall": false,
+        "negative_tumor_recall": true,
+        "every_case_recall": true
+      },
+      "failed_criteria": [
+        "joint_fp_fn",
+        "positive_tumor_recall"
+      ],
+      "gate_counts": {
+        "joint_fp_fn": 3,
+        "macro_recall": 403,
+        "positive_tumor_recall": 224,
+        "negative_tumor_recall": 414,
+        "every_case_recall": 432
+      },
+      "joint_only_count": 3,
+      "best_joint_only": {
+        "split": "validation",
+        "epoch": 6,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 994,
+          "fp": 1153,
+          "fn": 1808,
+          "precision": 0.46297158826269214,
+          "recall": 0.3547466095645967,
+          "f1": 0.4016973125884017
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 145,
+            "fp": 271,
+            "fn": 469,
+            "precision": 0.3485576923076923,
+            "recall": 0.23615635179153094,
+            "f1": 0.2815533980582524
+          },
+          "case_0005": {
+            "tp": 288,
+            "fp": 309,
+            "fn": 634,
+            "precision": 0.4824120603015075,
+            "recall": 0.3123644251626898,
+            "f1": 0.37919684002633314
+          },
+          "case_0007": {
+            "tp": 211,
+            "fp": 270,
+            "fn": 452,
+            "precision": 0.4386694386694387,
+            "recall": 0.31825037707390647,
+            "f1": 0.3688811188811189
+          },
+          "case_0019": {
+            "tp": 350,
+            "fp": 303,
+            "fn": 253,
+            "precision": 0.5359877488514548,
+            "recall": 0.5804311774461028,
+            "f1": 0.5573248407643312
+          }
+        },
+        "case_macro_f1": 0.39673904943250893,
+        "case_macro_recall": 0.36180058286855754,
+        "tumor_recalls": [
+          0.3084886128364389,
+          0.2755417956656347
+        ],
+        "matched_by_true_class": [
+          149,
+          356,
+          57,
+          432
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "full_gate_count": 0,
+      "training_selection_seconds": 3923.7877707609987
+    },
+    {
+      "width": 16,
+      "seed": 20261119,
+      "primary": true,
+      "eligible": false,
+      "parameters": 118913,
+      "A": {
+        "localization": {
+          "tp": 838,
+          "fp": 1424,
+          "fn": 1964,
+          "precision": 0.3704686118479222,
+          "recall": 0.2990720913633119,
+          "f1": 0.33096366508688785
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 94,
+            "fp": 241,
+            "fn": 520,
+            "precision": 0.28059701492537314,
+            "recall": 0.15309446254071662,
+            "f1": 0.19810326659641728
+          },
+          "case_0005": {
+            "tp": 228,
+            "fp": 348,
+            "fn": 694,
+            "precision": 0.3958333333333333,
+            "recall": 0.2472885032537961,
+            "f1": 0.30440587449933243
+          },
+          "case_0007": {
+            "tp": 146,
+            "fp": 424,
+            "fn": 517,
+            "precision": 0.256140350877193,
+            "recall": 0.22021116138763197,
+            "f1": 0.23682076236820762
+          },
+          "case_0019": {
+            "tp": 370,
+            "fp": 411,
+            "fn": 233,
+            "precision": 0.4737516005121639,
+            "recall": 0.6135986733001658,
+            "f1": 0.5346820809248555
+          }
+        },
+        "case_macro_f1": 0.31850299609720323,
+        "case_macro_recall": 0.3085482001205776,
+        "tumor_recalls": [
+          0.37267080745341613,
+          0.18188854489164086
+        ],
+        "matched_by_true_class": [
+          180,
+          235,
+          53,
+          370
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B": {
+        "split": "validation",
+        "epoch": 22,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1458,
+          "fp": 1835,
+          "fn": 1344,
+          "precision": 0.44275736410567873,
+          "recall": 0.5203426124197003,
+          "f1": 0.4784249384741591
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 260,
+            "fp": 485,
+            "fn": 354,
+            "precision": 0.348993288590604,
+            "recall": 0.4234527687296417,
+            "f1": 0.3826342899190581
+          },
+          "case_0005": {
+            "tp": 430,
+            "fp": 546,
+            "fn": 492,
+            "precision": 0.4405737704918033,
+            "recall": 0.46637744034707157,
+            "f1": 0.45310853530031614
+          },
+          "case_0007": {
+            "tp": 346,
+            "fp": 498,
+            "fn": 317,
+            "precision": 0.4099526066350711,
+            "recall": 0.521870286576169,
+            "f1": 0.45919044459190445
+          },
+          "case_0019": {
+            "tp": 422,
+            "fp": 306,
+            "fn": 181,
+            "precision": 0.5796703296703297,
+            "recall": 0.6998341625207297,
+            "f1": 0.6341096919609316
+          }
+        },
+        "case_macro_f1": 0.48226074044305256,
+        "case_macro_recall": 0.527883664543403,
+        "tumor_recalls": [
+          0.5403726708074534,
+          0.43188854489164086
+        ],
+        "matched_by_true_class": [
+          261,
+          558,
+          68,
+          571
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "B_role": "unadopted diagnostic",
+      "B_criteria": {
+        "joint_fp_fn": false,
+        "macro_recall": true,
+        "positive_tumor_recall": false,
+        "negative_tumor_recall": true,
+        "every_case_recall": true
+      },
+      "failed_criteria": [
+        "joint_fp_fn",
+        "positive_tumor_recall"
+      ],
+      "gate_counts": {
+        "joint_fp_fn": 8,
+        "macro_recall": 380,
+        "positive_tumor_recall": 233,
+        "negative_tumor_recall": 399,
+        "every_case_recall": 414
+      },
+      "joint_only_count": 8,
+      "best_joint_only": {
+        "split": "validation",
+        "epoch": 12,
+        "config": {
+          "threshold": 0.1,
+          "min_distance": 8
+        },
+        "localization": {
+          "tp": 1181,
+          "fp": 1369,
+          "fn": 1621,
+          "precision": 0.4631372549019608,
+          "recall": 0.4214846538187009,
+          "f1": 0.4413303437967115
+        },
+        "cases": {
+          "case_0003": {
+            "tp": 191,
+            "fp": 331,
+            "fn": 423,
+            "precision": 0.36590038314176243,
+            "recall": 0.31107491856677527,
+            "f1": 0.3362676056338028
+          },
+          "case_0005": {
+            "tp": 353,
+            "fp": 374,
+            "fn": 569,
+            "precision": 0.4855570839064649,
+            "recall": 0.38286334056399135,
+            "f1": 0.42813826561552454
+          },
+          "case_0007": {
+            "tp": 265,
+            "fp": 381,
+            "fn": 398,
+            "precision": 0.4102167182662539,
+            "recall": 0.3996983408748115,
+            "f1": 0.40488922841864017
+          },
+          "case_0019": {
+            "tp": 372,
+            "fp": 283,
+            "fn": 231,
+            "precision": 0.5679389312977099,
+            "recall": 0.6169154228855721,
+            "f1": 0.5914149443561209
+          }
+        },
+        "case_macro_f1": 0.4401775110060221,
+        "case_macro_recall": 0.42763800572278754,
+        "tumor_recalls": [
+          0.4140786749482402,
+          0.33126934984520123
+        ],
+        "matched_by_true_class": [
+          200,
+          428,
+          61,
+          492
+        ],
+        "true_class_counts": [
+          483,
+          1292,
+          112,
+          915
+        ]
+      },
+      "full_gate_count": 0,
+      "training_selection_seconds": 3752.3728944899995
+    }
+  ]
+}

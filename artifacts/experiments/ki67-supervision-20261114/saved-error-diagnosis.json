@@ -1,0 +1,261 @@
+{
+  "scope": "Posthoc diagnosis on existing validation peaks, no new model/inference or heldout access. No-saved-peak means no saved peak at score>=0.01, not necessarily no mathematical maximum.",
+  "source_commit": "de8c6d22f9bfc026e7dea390c93bf5462129d5cf",
+  "selection_sha256": "c19efd398f96b39ae29b487e2d6a2d85b56b5c0ad534df69a4bb4e9a78d05775",
+  "dataset": {
+    "train": {
+      "images": 696,
+      "empty": 0,
+      "class_names": [
+        "positive_tumor_cell",
+        "negative_tumor_cell",
+        "others_positive",
+        "others_negative"
+      ],
+      "class_counts": [
+        3118,
+        5434,
+        193,
+        2006
+      ],
+      "cells_per_image_quantiles": [
+        2.0,
+        11.0,
+        15.0,
+        19.0,
+        41.0
+      ]
+    },
+    "validation": {
+      "images": 227,
+      "empty": 0,
+      "class_names": [
+        "positive_tumor_cell",
+        "negative_tumor_cell",
+        "others_positive",
+        "others_negative"
+      ],
+      "class_counts": [
+        483,
+        1292,
+        112,
+        915
+      ],
+      "cells_per_image_quantiles": [
+        1.0,
+        9.0,
+        11.0,
+        15.0,
+        36.0
+      ]
+    }
+  },
+  "models": [
+    {
+      "seed": 20261117,
+      "epoch": 22,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "by_true_class": [
+        {
+          "matched": 259,
+          "no_saved_peak_ge_0.01": 184,
+          "distance_suppressed": 11,
+          "below_threshold": 29
+        },
+        {
+          "no_saved_peak_ge_0.01": 505,
+          "below_threshold": 238,
+          "matched": 532,
+          "distance_suppressed": 17
+        },
+        {
+          "matched": 68,
+          "no_saved_peak_ge_0.01": 28,
+          "below_threshold": 15,
+          "distance_suppressed": 1
+        },
+        {
+          "matched": 562,
+          "no_saved_peak_ge_0.01": 244,
+          "below_threshold": 107,
+          "distance_suppressed": 2
+        }
+      ],
+      "fp_distance_to_nearest_gt": {
+        "6_to12": 865,
+        "12_to24": 410,
+        "beyond24_or_no_gt": 527,
+        "within6_competition": 5
+      },
+      "case_counts": {
+        "case_0003": [
+          247,
+          463,
+          367
+        ],
+        "case_0005": [
+          420,
+          527,
+          502
+        ],
+        "case_0007": [
+          351,
+          497,
+          312
+        ],
+        "case_0019": [
+          403,
+          320,
+          200
+        ]
+      },
+      "fn_within8px_border": 218,
+      "tp_distance_quantiles": [
+        2.23606797749979,
+        3.605551275463989,
+        4.47213595499958,
+        5.830951894845301
+      ]
+    },
+    {
+      "seed": 20261118,
+      "epoch": 22,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "by_true_class": [
+        {
+          "no_saved_peak_ge_0.01": 167,
+          "below_threshold": 59,
+          "matched": 249,
+          "distance_suppressed": 8
+        },
+        {
+          "no_saved_peak_ge_0.01": 495,
+          "below_threshold": 180,
+          "matched": 598,
+          "distance_suppressed": 19
+        },
+        {
+          "matched": 75,
+          "below_threshold": 9,
+          "no_saved_peak_ge_0.01": 27,
+          "distance_suppressed": 1
+        },
+        {
+          "matched": 568,
+          "no_saved_peak_ge_0.01": 274,
+          "below_threshold": 72,
+          "distance_suppressed": 1
+        }
+      ],
+      "fp_distance_to_nearest_gt": {
+        "6_to12": 855,
+        "12_to24": 381,
+        "beyond24_or_no_gt": 607,
+        "within6_competition": 7
+      },
+      "case_counts": {
+        "case_0003": [
+          275,
+          443,
+          339
+        ],
+        "case_0005": [
+          445,
+          594,
+          477
+        ],
+        "case_0007": [
+          347,
+          511,
+          316
+        ],
+        "case_0019": [
+          423,
+          302,
+          180
+        ]
+      },
+      "fn_within8px_border": 199,
+      "tp_distance_quantiles": [
+        2.23606797749979,
+        3.605551275463989,
+        4.47213595499958,
+        5.830951894845301
+      ]
+    },
+    {
+      "seed": 20261119,
+      "epoch": 22,
+      "config": {
+        "threshold": 0.1,
+        "min_distance": 8
+      },
+      "by_true_class": [
+        {
+          "below_threshold": 38,
+          "matched": 261,
+          "no_saved_peak_ge_0.01": 182,
+          "distance_suppressed": 2
+        },
+        {
+          "no_saved_peak_ge_0.01": 470,
+          "below_threshold": 247,
+          "matched": 558,
+          "distance_suppressed": 17
+        },
+        {
+          "matched": 68,
+          "no_saved_peak_ge_0.01": 29,
+          "below_threshold": 15
+        },
+        {
+          "matched": 571,
+          "no_saved_peak_ge_0.01": 226,
+          "below_threshold": 105,
+          "distance_suppressed": 13
+        }
+      ],
+      "fp_distance_to_nearest_gt": {
+        "6_to12": 874,
+        "12_to24": 440,
+        "beyond24_or_no_gt": 512,
+        "within6_competition": 9
+      },
+      "case_counts": {
+        "case_0003": [
+          260,
+          485,
+          354
+        ],
+        "case_0005": [
+          430,
+          546,
+          492
+        ],
+        "case_0007": [
+          346,
+          498,
+          317
+        ],
+        "case_0019": [
+          422,
+          306,
+          181
+        ]
+      },
+      "fn_within8px_border": 205,
+      "tp_distance_quantiles": [
+        2.23606797749979,
+        3.605551275463989,
+        5.0,
+        5.830951894845301
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "all_passed": true,
+  "examples": 6,
+  "checks": [
+    {
+      "image": "case_0007_region_9_patch_1_O.png",
+      "metrics": true,
+      "saved_arrows": true,
+      "image_changed": true,
+      "same_image_without_overlay": true,
+      "arrow_toggle_passed": true
+    },
+    {
+      "image": "case_0019_region_0_patch_16_O.png",
+      "metrics": true,
+      "saved_arrows": true,
+      "image_changed": true,
+      "same_image_without_overlay": true,
+      "arrow_toggle_passed": true
+    },
+    {
+      "image": "case_0007_region_2_patch_4_O.png",
+      "metrics": true,
+      "saved_arrows": true,
+      "image_changed": true,
+      "same_image_without_overlay": true,
+      "arrow_toggle_passed": true
+    },
+    {
+      "image": "case_0005_region_0_patch_20_O.png",
+      "metrics": true,
+      "saved_arrows": true,
+      "image_changed": true,
+      "same_image_without_overlay": true,
+      "arrow_toggle_passed": true
+    },
+    {
+      "image": "case_0007_region_8_patch_1_O.png",
+      "metrics": true,
+      "saved_arrows": true,
+      "image_changed": true,
+      "same_image_without_overlay": true,
+      "arrow_toggle_passed": true
+    },
+    {
+      "image": "case_0005_region_1_patch_13_O.png",
+      "metrics": true,
+      "saved_arrows": true,
+      "image_changed": true,
+      "same_image_without_overlay": true,
+      "arrow_toggle_passed": true
+    }
+  ],
+  "errors": [],
+  "desktop": [
+    1440,
+    1000
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "body_overflow_mobile": false,
+  "navigation_passed": true,
+  "joint_diagnostic_table_verified": true,
+  "joint_table_mobile_overflow": false
+}

@@ -1,0 +1,45 @@
+{
+  "evidence": {
+    "bytes": 57374413,
+    "sha256": "c7cafea187c8c39a0363f415c5b585ed73589f3dcb3c10918f330e30989e5b83",
+    "members": 192,
+    "crc_and_member_hashes_verified": true
+  },
+  "review_zip": {
+    "path": "artifacts/handoff/PathologyEdge-Normalized-Review-20261114.zip",
+    "bytes": 1714110,
+    "sha256": "0f890889921ae10eeb87bf9d162c904ec20693bd51ad6d750a88489b1986ac89",
+    "members": 12,
+    "crc_and_member_hashes_verified": true
+  },
+  "published_user_review_confirmed": false,
+  "files": {
+    "new-external-audit.json": "77e53d5dbb2cf02001f5d46dba2e6dd4c3a03a635e2228caf08f331fc0812cab",
+    "execution-resources.json": "40591bb836bef79a324de45351d4b575fa544076d001720a53f1be09820ee36f",
+    "stability.json": "851d877fff3ed1f59dc6936bd68c97b79d51c70b321ddcf599ceef72ea6070dc",
+    "new-external-not-run.json": "c490df5aead05c44ff802c2cfca715fad5ec00e11f1ee1c96181e4f594a33f55",
+    "prospective-external-protocol.sha256": "c3ce6d2bf4c015a60b737ccb9ef9078ad326694932962a4825bce23c90740d22",
+    "verification.json": "d906cbc8ed218a5ed0787b1fdb45e8b089fe0a6215ba0faf6de94fa54b89b3d5",
+    "selection.json": "c19efd398f96b39ae29b487e2d6a2d85b56b5c0ad534df69a4bb4e9a78d05775",
+    "protocol.sha256": "0d7a841ce5806310258e848e9a090822b7e9c5fc9c0c7501b1d0cf2d2fe975f3",
+    "audit.json": "c7da2e5cd99d608c52e7023a53743e7a67fb899a01f91ea20657bf340858ef34",
+    "deepliif-test-index.json": "39702f0d7f6dbdbd6d03aceba2bb0220498aabce82820ed79e8f15e4849aca6a",
+    "prospective-external-protocol.json": "0af323c63bf782598e4f601a67150a8dedfda6792997bd1c17d552eacf6f50b0",
+    "internal-not-run.json": "a183512b1534bbd9d1dec7d491735456db8df16a09484b8598a2d762db0e1bcf",
+    "evidence.zip": "c7cafea187c8c39a0363f415c5b585ed73589f3dcb3c10918f330e30989e5b83",
+    "failure-analysis.json": "5a6f2e4c7d4dd4080e5a6fef5a9b8e4acd1930fa8eeaebcd09874347f84a94ae",
+    "DATA-NOTICE.txt": "8da7c961f418135fec0598b4a813a8ca179fbd7059e2f8b2cb725d7245b9aae3",
+    "final-review.json": "6324b54b76fa6fea0d32840bea53f462b275367f15c0e8395badf5ed71fab12b",
+    "selection-lock.json": "7c2a1c9116f4a4664a4edab8a0f9c3297de1a3a83734948df2c6282255e221e4",
+    "classifier-selection.json": "6162c610bf342d35166e765dcbc6f9b1dd34b5925ce239e29fd4a768c82e5ce7",
+    "classifier-lock.json": "4a5defd47f77a4be9578633fbf29ceeeb6c7c5b03c012aea175d962aba33530f",
+    "external-not-run.json": "a183512b1534bbd9d1dec7d491735456db8df16a09484b8598a2d762db0e1bcf",
+    "user-source-preservation.json": "766f1f73342e5e5f63cdf0a2a0f4b6c1dce77a64e018775ae88d1e44ef7f1735",
+    "protocol.json": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+    "review/browser.json": "605c804819c8be7f1f1de202eacb59369f78889b263e9c6c8090c503c2268aa7",
+    "review/review-manifest.json": "fba0bb04222bcb4b2e9206a242501dbc884d304f0dd953d270f5fffef85462e6",
+    "review/mobile.png": "de78be1dd05c3552eb18cde5b9b4dedcd4a03fc32912d614a333b57105f4ecad",
+    "review/desktop.png": "abe9b581d920faf85202defc1813cb2c49fd9bd83a5d18e92478cdde35c270c8",
+    "review/index.html": "d87f717656f8a1f35c3445670288de7b0d5f23cfe2061ff9372ed72a408a4745"
+  }
+}

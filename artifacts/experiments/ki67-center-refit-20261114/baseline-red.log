@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_epoch_zero_reproduces_original_validation_summary ____________
+
+refit = <module 'pathology_edge.ki67_center_refit' from '/workspace/pathology-edge-auto-ki67/src/pathology_edge/ki67_center_refit.py'>
+
+    def test_epoch_zero_reproduces_original_validation_summary(refit=None):
+        refit=load_refit();base=baseline()
+        expected=dict(validation_case_macro_f1=base['case_macro_f1'],validation_case_macro_recall=base['case_macro_recall'])
+>       refit.verify_initial_baseline(base,expected)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'pathology_edge.ki67_center_refit' has no attribute 'verify_initial_baseline'
+
+tests/test_ki67_center_refit.py:120: AttributeError
+=========================== short test summary info ============================
+FAILED tests/test_ki67_center_refit.py::test_epoch_zero_reproduces_original_validation_summary
+1 failed in 1.93s

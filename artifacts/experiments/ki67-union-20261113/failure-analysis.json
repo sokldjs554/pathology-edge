@@ -1,0 +1,47 @@
+{
+  "scope": "post-selection diagnosis only; no retuning",
+  "seeds": [
+    {
+      "seed": 20261117,
+      "trials": 504,
+      "criterion_pass_counts": {
+        "fp": 12,
+        "fn": 373,
+        "macro_recall": 286,
+        "positive_recall": 285,
+        "negative_recall": 308,
+        "every_case": 372,
+        "joint_fp_fn": 0
+      },
+      "eligible": false
+    },
+    {
+      "seed": 20261118,
+      "trials": 504,
+      "criterion_pass_counts": {
+        "fp": 49,
+        "fn": 385,
+        "macro_recall": 282,
+        "positive_recall": 285,
+        "negative_recall": 304,
+        "every_case": 391,
+        "joint_fp_fn": 0
+      },
+      "eligible": false
+    },
+    {
+      "seed": 20261119,
+      "trials": 504,
+      "criterion_pass_counts": {
+        "fp": 57,
+        "fn": 382,
+        "macro_recall": 296,
+        "positive_recall": 269,
+        "negative_recall": 310,
+        "every_case": 386,
+        "joint_fp_fn": 0
+      },
+      "eligible": false
+    }
+  ]
+}

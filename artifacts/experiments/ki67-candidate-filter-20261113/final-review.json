@@ -1,0 +1,29 @@
+{
+  "reviewed_commits": "b582212..be24a9d",
+  "fresh_reviewer": true,
+  "findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "scoped_tests_passed": 23,
+  "independent_image_arm_recounts": 4320,
+  "input_source_selection_hashes_checked": true,
+  "additional_probes": [
+    "empty validation",
+    "threshold-zero identity",
+    "NaN model on empty/populated inputs"
+  ],
+  "not_rerun_by_reviewer": [
+    "training",
+    "full inference",
+    "browser",
+    "full CI"
+  ],
+  "not_independently_established": [
+    "annotation completeness",
+    "patient/slide overlap",
+    "MPP"
+  ],
+  "final_zip_review_by_reviewer": false
+}

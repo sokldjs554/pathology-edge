@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "example_model_combinations": [
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "lr",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "cnn-20261113",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "cnn-20261114",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "cnn-20261115",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0015_region_4_patch_2_O.png",
+      "arm": "lr",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0015_region_4_patch_2_O.png",
+      "arm": "cnn-20261113",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0015_region_4_patch_2_O.png",
+      "arm": "cnn-20261114",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0015_region_4_patch_2_O.png",
+      "arm": "cnn-20261115",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0004_region_2_patch_3_O.png",
+      "arm": "lr",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0004_region_2_patch_3_O.png",
+      "arm": "cnn-20261113",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0004_region_2_patch_3_O.png",
+      "arm": "cnn-20261114",
+      "before": true,
+      "after": true,
+      "gt": true
+    },
+    {
+      "image": "case_0004_region_2_patch_3_O.png",
+      "arm": "cnn-20261115",
+      "before": true,
+      "after": true,
+      "gt": true
+    }
+  ],
+  "overlays_change_pixels": true,
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "selectorsVisible": true
+  },
+  "expandedWidth": 390,
+  "errors": []
+}

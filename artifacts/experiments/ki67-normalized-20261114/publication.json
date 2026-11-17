@@ -1,0 +1,40 @@
+{
+  "artifact_commit": "0db31e14108b533eb1adfe7b649faaed3e52a540",
+  "checks": [
+    {
+      "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/0db31e14108b533eb1adfe7b649faaed3e52a540/artifacts/handoff/PathologyEdge-Normalized-Review-20261114.zip",
+      "bytes": 1714110,
+      "sha256": "0f890889921ae10eeb87bf9d162c904ec20693bd51ad6d750a88489b1986ac89",
+      "members": 12,
+      "crc_and_member_hashes_verified": true,
+      "browser_html_sha256": "d87f717656f8a1f35c3445670288de7b0d5f23cfe2061ff9372ed72a408a4745"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/0db31e14108b533eb1adfe7b649faaed3e52a540/artifacts/experiments/ki67-normalized-20261114/evidence.zip",
+      "bytes": 57374413,
+      "sha256": "c7cafea187c8c39a0363f415c5b585ed73589f3dcb3c10918f330e30989e5b83",
+      "members": 192,
+      "crc_and_member_hashes_verified": true,
+      "browser_html_sha256": null
+    }
+  ],
+  "checked_utc": "2026-11-14T11:21:37.244329+00:00",
+  "artifact_ci": {
+    "run": 43589344530,
+    "job": 132430562717,
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "0db31e14108b533eb1adfe7b649faaed3e52a540",
+    "tests": 715,
+    "test_seconds": 33.71,
+    "dice_values": 42,
+    "dice_means": 6,
+    "static_demo": true,
+    "javascript_syntax": true
+  },
+  "draft_pr": 2,
+  "main_merged": false,
+  "live_demo_changed": false,
+  "user_step92_confirmed": false,
+  "receipt_scope": "Publication of immutable evidence commit. The later receipt-only commit CI is checked separately; training/selection locks and both ZIPs are unchanged."
+}

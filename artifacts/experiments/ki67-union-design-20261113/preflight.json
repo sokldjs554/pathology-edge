@@ -1,0 +1,125 @@
+{
+  "source_commit": "db0a8fdacdd34431366e0a096a3891ea8fde2fb8",
+  "manifest_sha256": "fcef8402b336f73bb19890ee8057ae506101c14f35410fec721225a1d02bcd82",
+  "counts": {
+    "train": {
+      "images": 696,
+      "case_groups": 15,
+      "cells_by_class": {
+        "positive_tumor_cell": 3118,
+        "negative_tumor_cell": 5434,
+        "others_positive": 193,
+        "others_negative": 2006
+      }
+    },
+    "validation": {
+      "images": 227,
+      "case_groups": 4,
+      "cells_by_class": {
+        "positive_tumor_cell": 483,
+        "negative_tumor_cell": 1292,
+        "others_positive": 112,
+        "others_negative": 915
+      }
+    },
+    "test": {
+      "images": 407,
+      "case_groups": 10,
+      "cells_by_class": {
+        "positive_tumor_cell": 1955,
+        "negative_tumor_cell": 2804,
+        "others_positive": 160,
+        "others_negative": 1500
+      }
+    }
+  },
+  "decoded_train_validation_images": 923,
+  "empty_train_validation_annotations": 0,
+  "centers_with_another_reference_within_6px": {
+    "train": {
+      "positive_tumor_cell": 2,
+      "negative_tumor_cell": 0,
+      "others_positive": 0,
+      "others_negative": 0
+    },
+    "validation": {
+      "positive_tumor_cell": 0,
+      "negative_tumor_cell": 0,
+      "others_positive": 0,
+      "others_negative": 0
+    }
+  },
+  "validation_saved_peak_coverage": {
+    "20261117": {
+      "raw_candidate_count": 41604,
+      "matched_references": [
+        280,
+        653,
+        77,
+        634
+      ],
+      "references": [
+        483,
+        1292,
+        112,
+        915
+      ],
+      "recall_by_class": [
+        0.5797101449275363,
+        0.5054179566563467,
+        0.6875,
+        0.692896174863388
+      ],
+      "note": "All stored peaks before threshold/distance filtering, one-to-one 6px matching; no guarantee that a learned rejection gate retains these."
+    },
+    "20261118": {
+      "raw_candidate_count": 54707,
+      "matched_references": [
+        251,
+        719,
+        81,
+        629
+      ],
+      "references": [
+        483,
+        1292,
+        112,
+        915
+      ],
+      "recall_by_class": [
+        0.5196687370600414,
+        0.5565015479876161,
+        0.7232142857142857,
+        0.687431693989071
+      ],
+      "note": "All stored peaks before threshold/distance filtering, one-to-one 6px matching; no guarantee that a learned rejection gate retains these."
+    },
+    "20261119": {
+      "raw_candidate_count": 62203,
+      "matched_references": [
+        240,
+        699,
+        81,
+        649
+      ],
+      "references": [
+        483,
+        1292,
+        112,
+        915
+      ],
+      "recall_by_class": [
+        0.4968944099378882,
+        0.5410216718266254,
+        0.7232142857142857,
+        0.7092896174863388
+      ],
+      "note": "All stored peaks before threshold/distance filtering, one-to-one 6px matching; no guarantee that a learned rejection gate retains these."
+    }
+  },
+  "source_annotation_roi_support": "Only published point masks are available; no expert-confirmed exhaustive background or annotation polygon support.",
+  "test_images_decoded": 0,
+  "new_model_training": false,
+  "new_model_inference": false,
+  "scope": "Read-only input and saved-candidate audit; counts are not new performance results."
+}

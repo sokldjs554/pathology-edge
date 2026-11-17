@@ -1,0 +1,12 @@
+{
+  "head_sha": "94819f87811df7ad126ecbb1069b83111d11ddb7",
+  "run": 43607238036,
+  "job": 132484407135,
+  "conclusion": "success",
+  "tests": 750,
+  "test_seconds": 35.4,
+  "dice_values": 42,
+  "dice_means": 6,
+  "static_demo": true,
+  "javascript_checks": true
+}

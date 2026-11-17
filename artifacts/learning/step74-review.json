@@ -1,0 +1,36 @@
+{
+  "step": 74,
+  "contribution_id": "U88",
+  "recorded_date": "2026-11-13",
+  "timezone": "Asia/Seoul",
+  "user_response": "아니요. 케이스 양성률 MAE는 19.78 → 13.51%p로 감소했지만, 세포 검출·분류 macro-F1은 0.0704 → 0.0570으로 하락했으므로, 양성률 계산의 개선만으로 자동 세포 분석 전체의 정확도가 향상됐다고 말할 수 없습니다.",
+  "prompt_scope": "내부 테스트에서 CNN 20261113의 케이스 양성률 MAE 감소와 세포 검출·분류 macro-F1 하락을 함께 해석하는 질문",
+  "interpretation_correct": true,
+  "scope": "제공된 수치를 근거로 양성률 오차 감소만으로 자동 세포 분석 전체 정확도 향상을 주장할 수 없음을 설명",
+  "evidence_commit": "751f92e5c83069d1bdb651b4b7dce6e9b0d36726",
+  "evidence_path": "artifacts/experiments/auto-ki67-20261113/results.json",
+  "evidence_sha256": "6f585bd89564ce947f6275cbbdbbcf5c74d0897f10e077ca6fe1ca714ab57780",
+  "metric_scope": {
+    "case_ratio_mae": "10케이스별 세포 수를 합산해 양성률을 구한 뒤 절대오차 평균; %p, 낮을수록 좋음",
+    "macro_f1": "407장 전체의 클래스별 TP/FP/FN을 합산한 네 클래스 F1 평균; 높을수록 좋음"
+  },
+  "reference_values": {
+    "lr": {
+      "case_ratio_mae_pp": 19.776615359684552,
+      "macro_f1": 0.0704383785775961
+    },
+    "cnn-20261113": {
+      "case_ratio_mae_pp": 13.50556443132371,
+      "macro_f1": 0.0569763867273301
+    }
+  },
+  "new_user_code": false,
+  "new_user_tests": false,
+  "new_user_training": false,
+  "new_user_inference": false,
+  "user_independent_metric_recount": false,
+  "all_images_or_seeds_individually_reviewed": false,
+  "external_result_interpretation_received_in_this_response": false,
+  "help_provided": "두 방식의 반올림 수치와 각 지표의 좋은 방향, 비교 질문을 제공",
+  "archive_scope": "기존 발행 ZIP과 U87 당시 기록은 보존하고 후속 해석 확인으로 추가"
+}

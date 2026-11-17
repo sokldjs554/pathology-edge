@@ -1,0 +1,13 @@
+{
+  "all_http_asset_checks_passed": true,
+  "external_asset_requests": [],
+  "embedded_image_rendered": true,
+  "overlay_counts_unchanged": true,
+  "errors": [],
+  "direct_file_url_test": {
+    "status": "blocked_by_browser_policy",
+    "error": "ERR_BLOCKED_BY_ADMINISTRATOR",
+    "passed": false
+  },
+  "fallback": "From extracted ZIP folder: python -m http.server 8000 --bind 127.0.0.1; open http://127.0.0.1:8000/"
+}

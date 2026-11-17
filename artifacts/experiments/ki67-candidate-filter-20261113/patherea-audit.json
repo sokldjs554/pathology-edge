@@ -1,0 +1,12 @@
+{
+  "all_checks_passed": true,
+  "scope": "patherea",
+  "images": 407,
+  "image_arm_recounts": 3256,
+  "baseline_matches_historical": true,
+  "retention_threshold_matches": true,
+  "independent_maximum_cardinality_solver": true,
+  "new_inference_run": false,
+  "original_candidates": 69152,
+  "kept_candidates": 51788
+}

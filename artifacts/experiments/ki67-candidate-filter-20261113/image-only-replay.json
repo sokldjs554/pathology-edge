@@ -1,0 +1,19 @@
+{
+  "all_checks_passed": true,
+  "image": "case_0011_region_0_patch_1_O.png",
+  "classifier_classes_match": {
+    "lr": true,
+    "cnn-20261113": true,
+    "cnn-20261114": true,
+    "cnn-20261115": true
+  },
+  "kept_candidates": 90,
+  "image_only_inference_run": true,
+  "new_training_run": false,
+  "gt_passed_to_inference": false,
+  "model_hashes": {
+    "cnn-20261113.pt": "f4084b82ef75ea0be9a002f2628153845ad29b79ac92da467d1c1b347f3c092e",
+    "cnn-20261114.pt": "cbaa25d792bbcdc2f44388209a3dfa9d53b9c4bbbf05c660f74a1ef8fedb1dd2",
+    "cnn-20261115.pt": "497ad1744eb07d3af7b91f3352163a60438ef5c2d7d1c3d9a8d98fa327589acc"
+  }
+}

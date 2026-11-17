@@ -1,0 +1,12 @@
+{
+  "files": 97,
+  "bytes": 5593732,
+  "sha256": "08a3bd1197bce79dacb20f8d67e790de55400442ef9fe6d20d11d82aec47af00",
+  "zip_crc": true,
+  "all_member_hashes": true,
+  "source_commit": "fda5695cac0312889e1355539c475d9d6fcad70d",
+  "public_download_checked": true,
+  "http_status": 200,
+  "download_url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/3729765b277634592f42effae719624d8ff7107c/artifacts/handoff/PathologyEdge-RecallReview-20261113.zip",
+  "artifact_commit": "3729765b277634592f42effae719624d8ff7107c"
+}

@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "example_model_combinations": [
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "lr",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "cnn-20261113",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "cnn-20261114",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_1_O.png",
+      "arm": "cnn-20261115",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0023_region_1_patch_10_OI 2608_95 A5-2.png",
+      "arm": "lr",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0023_region_1_patch_10_OI 2608_95 A5-2.png",
+      "arm": "cnn-20261113",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0023_region_1_patch_10_OI 2608_95 A5-2.png",
+      "arm": "cnn-20261114",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0023_region_1_patch_10_OI 2608_95 A5-2.png",
+      "arm": "cnn-20261115",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_35_O.png",
+      "arm": "lr",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_35_O.png",
+      "arm": "cnn-20261113",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_35_O.png",
+      "arm": "cnn-20261114",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    },
+    {
+      "image": "case_0011_region_0_patch_35_O.png",
+      "arm": "cnn-20261115",
+      "gt": true,
+      "pred": true,
+      "ratio": true,
+      "f1": true
+    }
+  ],
+  "overlay_changes_pixels": true,
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "canvasWidths": [
+      366,
+      366,
+      366
+    ],
+    "selectorsVisible": true
+  },
+  "browser_errors": []
+}

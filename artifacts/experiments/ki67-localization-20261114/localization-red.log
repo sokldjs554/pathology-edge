@@ -1,0 +1,966 @@
+EEEEEEEEEEEEEEEEEEEEEEEEEE                                               [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_reflected_context_keeps_integer_anchor_and_real_border_pixels _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-0-expected0] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-1-expected1] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-2-expected2] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-3-expected3] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-0-expected0] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-1-expected1] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-2-expected2] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-3-expected3] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-0-expected0] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-1-expected1] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-2-expected2] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-3-expected3] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-0-expected0] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-1-expected1] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-2-expected2] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-3-expected3] _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_ ERROR at setup of test_proxy_targets_are_candidate_native_and_ties_are_stable _
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+______ ERROR at setup of test_continuous_bound_and_rounding_are_separate _______
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_____ ERROR at setup of test_invalid_continuous_offsets_rejected[offset0] ______
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_____ ERROR at setup of test_invalid_continuous_offsets_rejected[offset1] ______
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_____ ERROR at setup of test_invalid_continuous_offsets_rejected[offset2] ______
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_____ ERROR at setup of test_zero_initialized_offset_head_and_loss_update ______
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_________ ERROR at setup of test_prediction_is_image_and_proposal_only _________
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+______ ERROR at setup of test_nonfinite_weights_rejected_for_empty_input _______
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+_________ ERROR at setup of test_overflowing_logits_cannot_be_returned _________
+
+    @pytest.fixture
+    def api():
+>       try:return importlib.import_module('pathology_edge.ki67_localization')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ki67_localization.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'pathology_edge.ki67_localization'
+import_ = <function _gcd_import at 0x7f855759c0e0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'pathology_edge.ki67_localization'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.fixture
+    def api():
+        try:return importlib.import_module('pathology_edge.ki67_localization')
+>       except ModuleNotFoundError:pytest.fail('candidate localization module missing')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: candidate localization module missing
+
+tests/test_ki67_localization.py:10: Failed
+=========================== short test summary info ============================
+ERROR tests/test_ki67_localization.py::test_reflected_context_keeps_integer_anchor_and_real_border_pixels
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-0-expected0]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-1-expected1]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-2-expected2]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-False-3-expected3]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-0-expected0]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-1-expected1]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-2-expected2]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-False-3-expected3]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-0-expected0]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-1-expected1]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-2-expected2]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[False-True-3-expected3]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-0-expected0]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-1-expected1]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-2-expected2]
+ERROR tests/test_ki67_localization.py::test_augmentation_keeps_off_center_impulse_on_offset_target[True-True-3-expected3]
+ERROR tests/test_ki67_localization.py::test_proxy_targets_are_candidate_native_and_ties_are_stable
+ERROR tests/test_ki67_localization.py::test_continuous_bound_and_rounding_are_separate
+ERROR tests/test_ki67_localization.py::test_invalid_continuous_offsets_rejected[offset0]
+ERROR tests/test_ki67_localization.py::test_invalid_continuous_offsets_rejected[offset1]
+ERROR tests/test_ki67_localization.py::test_invalid_continuous_offsets_rejected[offset2]
+ERROR tests/test_ki67_localization.py::test_zero_initialized_offset_head_and_loss_update
+ERROR tests/test_ki67_localization.py::test_prediction_is_image_and_proposal_only
+ERROR tests/test_ki67_localization.py::test_nonfinite_weights_rejected_for_empty_input
+ERROR tests/test_ki67_localization.py::test_overflowing_logits_cannot_be_returned
+26 errors in 1.76s

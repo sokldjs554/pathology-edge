@@ -1,0 +1,20 @@
+{
+  "code_scope": "Read-only whole new code range 0700a785..53a6c08; fresh final reviewer reused for completed-run followup",
+  "critical": 0,
+  "important": 0,
+  "reviewer_ran_training_or_full_audit": false,
+  "artifact_scope": [
+    "locked hashes",
+    "24 additional epochs per seed",
+    "selected0/3",
+    "diagnostic epochs19/23/24",
+    "independent joint-FP/FN trial recount2/48/40",
+    "viewer summaries and HTML hash",
+    "audit2700 and1362 replay records",
+    "zero-inference skip records",
+    "report qualification and posthoc labeling"
+  ],
+  "browser_scope": "Reviewed saved browser evidence6 examples1440/390; implementer directly inspected screenshots",
+  "direct_file_url": "Managed Chromium blocked file://; not verified. standalone.json records passing localhost/embedded-asset check; STEP91 supplies HTTP fallback.",
+  "archive_scope": "Local packaging and public download verification performed separately after this review."
+}

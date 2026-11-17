@@ -1,0 +1,29 @@
+{
+  "models": [
+    {
+      "seed": 20261117,
+      "detector_eligible": false,
+      "reference_classifier": "cnn-20261113",
+      "selected_classifier": null,
+      "validation_pipeline_passed": false
+    },
+    {
+      "seed": 20261118,
+      "detector_eligible": false,
+      "reference_classifier": "cnn-20261114",
+      "selected_classifier": null,
+      "validation_pipeline_passed": false
+    },
+    {
+      "seed": 20261119,
+      "detector_eligible": false,
+      "reference_classifier": "cnn-20261115",
+      "selected_classifier": null,
+      "validation_pipeline_passed": false
+    }
+  ],
+  "selection_data": "validation227/4cases",
+  "classifiers_refit": false,
+  "test_used_for_selection": false,
+  "external_used_for_selection": false
+}

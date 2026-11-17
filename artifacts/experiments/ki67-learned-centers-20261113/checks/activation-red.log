@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_detector_preserves_gradient_through_negative_block_activations ______
+
+    def test_detector_preserves_gradient_through_negative_block_activations():
+        model=c.CenterDetector()
+        for name in ('e1','e2','bottom','d2','d1'):
+            block=getattr(model,name)
+            with torch.no_grad():
+                for layer in (block[0],block[2]):
+                    layer.weight.zero_();layer.bias.zero_();layer.weight[0,0,1,1]=1
+            x=-torch.ones(1,block[0].in_channels,5,5,requires_grad=True)
+            x.retain_grad();out=block(x);out[0,0,2,2].backward()
+>           assert out[0,0,2,2].item()==pytest.approx(-.01)
+E           assert 0.0 == -0.01 ± 1.0e-08
+E             
+E             comparison failed
+E             Obtained: 0.0
+E             Expected: -0.01 ± 1.0e-08
+
+tests/test_ki67_centers.py:93: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_ki67_centers.py::test_detector_preserves_gradient_through_negative_block_activations
+1 failed, 24 deselected in 1.27s

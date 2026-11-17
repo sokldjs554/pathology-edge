@@ -1,0 +1,13 @@
+{
+  "commit": "dbd95e2edcd248f51f3a6277b35bc18f0561475b",
+  "url": "https://raw.githubusercontent.com/sokldjs554/pathology-edge/dbd95e2edcd248f51f3a6277b35bc18f0561475b/artifacts/handoff/PathologyEdge-CenterRefit-Review-20261114.zip",
+  "bytes": 2506477,
+  "sha256": "ce3b326762cfb8db9834b4ef6ec6bc2a9323cf25308c5322fe20a3fd23402e90",
+  "crc_passed": true,
+  "member_hashes_passed": true,
+  "browser_verified_html_equal": true,
+  "pr_url": "https://github.com/sokldjs554/pathology-edge/pull/2",
+  "current_ci_status_source": "GitHub Actions exact-head checks and final PR body; archive verification.json freezes source53a6c08 CI668",
+  "user_review_confirmed": false,
+  "archive_unchanged": true
+}

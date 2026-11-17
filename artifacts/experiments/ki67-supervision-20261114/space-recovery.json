@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/workspace/pathology-edge/artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip",
+    "commit": "ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e",
+    "git_blob": "1c8d29a36cf0a1236bc17f9130e3bfe0373fea0a",
+    "sha256": "a74b32bcfacf0f347600b2f6efd627d1b808cca338d0c975227a801def50b073",
+    "bytes": 16397030,
+    "restore": "git show ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e:artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip > artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip; git update-index --no-skip-worktree artifacts/handoff/PathologyEdge-Final-Handoff-20261113.zip"
+  },
+  {
+    "path": "/workspace/pathology-edge/artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip",
+    "commit": "ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e",
+    "git_blob": "4f6a039f294721d0935fd46e018c5e2a3542f520",
+    "sha256": "ed4c0479ed515d8d448a007f586b7b1b36a5569a70ad3ab4f4abc9fc11ab35f1",
+    "bytes": 11552627,
+    "restore": "git show ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e:artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip > artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip; git update-index --no-skip-worktree artifacts/handoff/PathologyEdge-Final-Handoff-20261112-v2.zip"
+  },
+  {
+    "path": "/workspace/pathology-edge/artifacts/handoff/PathologyEdge-Final-Handoff-20261112.zip",
+    "commit": "ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e",
+    "git_blob": "520f319f40c59fb33bc43efd3a81365ce4076649",
+    "sha256": "643cb7d5f52d675e4490430e71d8b41cb0bdd8fd8afed29175c5104f18efab73",
+    "bytes": 11528072,
+    "restore": "git show ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e:artifacts/handoff/PathologyEdge-Final-Handoff-20261112.zip > artifacts/handoff/PathologyEdge-Final-Handoff-20261112.zip; git update-index --no-skip-worktree artifacts/handoff/PathologyEdge-Final-Handoff-20261112.zip"
+  }
+]

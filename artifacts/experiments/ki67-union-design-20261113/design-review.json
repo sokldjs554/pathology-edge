@@ -1,0 +1,7 @@
+{
+  "scope": "Read-only design builder check, not implementation/result validation",
+  "reviewer": "union_gate_design_check",
+  "result": "nothing important left",
+  "product_code_changed": false,
+  "user_design_approval": "pending"
+}

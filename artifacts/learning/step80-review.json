@@ -1,0 +1,32 @@
+{
+  "step": 80,
+  "contribution_id": "U94",
+  "recorded_date": "2026-11-13",
+  "timezone": "Asia/Seoul",
+  "user_response": "응 잘 작동해",
+  "prompt_scope": "ZIP의 review.html 첫 사례에서 후보107→13개 표시를 확인하고 ‘학습 위치 지도’를 켰다 끄는 화면 조작 요청",
+  "scope": "직전 요청한 첫 사례의 후보 수 표시·위치 지도 전환에 대한 정상 동작 보고",
+  "screen_check_reported": true,
+  "evidence_commit": "8ba7d50e37579dd2e2782d8fd40549375d024896",
+  "evidence_files": {
+    "artifacts/experiments/ki67-learned-centers-20261113/review.html": "a5877ae12117f0b11f608a12786643ac742b31550ceb810a42fe10b94c55db74"
+  },
+  "provided_reference_values": {
+    "image": "case_0011_region_0_patch_1_O.png",
+    "detector_seed": 20261117,
+    "classifier": "cnn-20261113",
+    "baseline_candidates": 107,
+    "learned_candidates": 13
+  },
+  "new_user_code": false,
+  "new_user_automated_tests": false,
+  "new_user_training": false,
+  "new_user_model_inference": false,
+  "user_independent_numeric_audit": false,
+  "user_all_examples_or_seeds_reviewed": false,
+  "user_detailed_three_panel_check_reported": false,
+  "user_result_interpretation_completed": false,
+  "user_browser_details_reported": false,
+  "help_provided": "ZIP 다운로드·review.html 위치, 첫 사례의 예상 후보 수와 위치 지도 전환 조작을 안내함",
+  "archive_scope": "기존 ZIP과 배포 실험 자료는 응답 이전의 발행 기록으로 보존하고 이번 확인을 별도 후속 기록으로 추가함"
+}

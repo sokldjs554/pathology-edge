@@ -1,0 +1,4 @@
+AUDITED 20261117
+AUDITED 20261118
+AUDITED 20261119
+{"all_checks_passed": true, "trial_checks": 1512, "checkpoint_and_proposal_replay_images": 681, "evaluation_classifier_summaries": 0, "eligible_seeds": 0, "test_passes": 0, "stability_denominator": 3, "seeds": [{"seed": 20261117, "eligible": false, "trials": 504}, {"seed": 20261118, "eligible": false, "trials": 504}, {"seed": 20261119, "eligible": false, "trials": 504}], "selection_lock_sha256": "b29b3b6af1e07fa94611b7dd1b89390644900cea2da88bfafc448a5263546bd1", "scope": "Exploratory repeatedly used validation; eligible-only reused test407/BCData133; no fresh external/clinical/whole-WSI claim"}

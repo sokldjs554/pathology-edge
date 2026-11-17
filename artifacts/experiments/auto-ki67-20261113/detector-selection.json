@@ -1,0 +1,71 @@
+{
+  "config": {
+    "min_response": 0.1,
+    "min_distance": 8
+  },
+  "trials": [
+    {
+      "config": {
+        "min_response": 0.03,
+        "min_distance": 4
+      },
+      "case_macro_f1": 0.04159839240166891
+    },
+    {
+      "config": {
+        "min_response": 0.03,
+        "min_distance": 6
+      },
+      "case_macro_f1": 0.04775102948985793
+    },
+    {
+      "config": {
+        "min_response": 0.03,
+        "min_distance": 8
+      },
+      "case_macro_f1": 0.0577815120647765
+    },
+    {
+      "config": {
+        "min_response": 0.06,
+        "min_distance": 4
+      },
+      "case_macro_f1": 0.07083130598259982
+    },
+    {
+      "config": {
+        "min_response": 0.06,
+        "min_distance": 6
+      },
+      "case_macro_f1": 0.07506542426956186
+    },
+    {
+      "config": {
+        "min_response": 0.06,
+        "min_distance": 8
+      },
+      "case_macro_f1": 0.08197007066274747
+    },
+    {
+      "config": {
+        "min_response": 0.1,
+        "min_distance": 4
+      },
+      "case_macro_f1": 0.11780410918108605
+    },
+    {
+      "config": {
+        "min_response": 0.1,
+        "min_distance": 6
+      },
+      "case_macro_f1": 0.12088457938087674
+    },
+    {
+      "config": {
+        "min_response": 0.1,
+        "min_distance": 8
+      },
+      "case_macro_f1": 0.12559641128966215
+    }
+  ]
+}

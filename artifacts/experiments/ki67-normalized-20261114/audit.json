@@ -1,0 +1,105 @@
+{
+  "all_checks_passed": true,
+  "trial_checks": 5184,
+  "validation_checkpoint_replay_images": 2724,
+  "actual_center_pipeline_replay_images": 0,
+  "classifier_summaries": 0,
+  "eligible_seeds": 0,
+  "denominator": 3,
+  "workers": [
+    {
+      "width": 4,
+      "seed": 20261117,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 454,
+      "eligible": false,
+      "complete_sha256": "fc6b2680d13847e3b71cde436fd9f94132a64192c6d2b441a8adc16a45613de0",
+      "protocol_sha256": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+      "audit_sources": {
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_normalized.py": "832e664cc8646d0cd3a7a94ab559233cc0f179f07624886c97401903287d41c0",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py": "ae4d7bb7c0a91d8a445deb0c88f47bfa0e57feda481013d9bae1d5e6cae127e5",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_center_refit.py": "707ad7cbe152b501585c7270307af542fbcce4f8070e5407591c8863597257b1"
+      }
+    },
+    {
+      "width": 4,
+      "seed": 20261118,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 454,
+      "eligible": false,
+      "complete_sha256": "68c434f1a61ef9caf90accf2c6a22ebb7b4dcc39c3422bb11d8f9c43a2158c99",
+      "protocol_sha256": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+      "audit_sources": {
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_normalized.py": "832e664cc8646d0cd3a7a94ab559233cc0f179f07624886c97401903287d41c0",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py": "ae4d7bb7c0a91d8a445deb0c88f47bfa0e57feda481013d9bae1d5e6cae127e5",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_center_refit.py": "707ad7cbe152b501585c7270307af542fbcce4f8070e5407591c8863597257b1"
+      }
+    },
+    {
+      "width": 4,
+      "seed": 20261119,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 454,
+      "eligible": false,
+      "complete_sha256": "7280cb38594cca36591e04c16f9eea4f1b0a6baac0bf13a4003eeb51f77bbbbe",
+      "protocol_sha256": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+      "audit_sources": {
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_normalized.py": "832e664cc8646d0cd3a7a94ab559233cc0f179f07624886c97401903287d41c0",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py": "ae4d7bb7c0a91d8a445deb0c88f47bfa0e57feda481013d9bae1d5e6cae127e5",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_center_refit.py": "707ad7cbe152b501585c7270307af542fbcce4f8070e5407591c8863597257b1"
+      }
+    },
+    {
+      "width": 16,
+      "seed": 20261117,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 454,
+      "eligible": false,
+      "complete_sha256": "06678a938db447cf51ab7606d459220488990b608c777985cbb239a0a338efd5",
+      "protocol_sha256": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+      "audit_sources": {
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_normalized.py": "832e664cc8646d0cd3a7a94ab559233cc0f179f07624886c97401903287d41c0",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py": "ae4d7bb7c0a91d8a445deb0c88f47bfa0e57feda481013d9bae1d5e6cae127e5",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_center_refit.py": "707ad7cbe152b501585c7270307af542fbcce4f8070e5407591c8863597257b1"
+      }
+    },
+    {
+      "width": 16,
+      "seed": 20261118,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 454,
+      "eligible": false,
+      "complete_sha256": "9d55fac782e6330a2eda696746f1410366690499c7be7b1c78797d30796a184e",
+      "protocol_sha256": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+      "audit_sources": {
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_normalized.py": "832e664cc8646d0cd3a7a94ab559233cc0f179f07624886c97401903287d41c0",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py": "ae4d7bb7c0a91d8a445deb0c88f47bfa0e57feda481013d9bae1d5e6cae127e5",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_center_refit.py": "707ad7cbe152b501585c7270307af542fbcce4f8070e5407591c8863597257b1"
+      }
+    },
+    {
+      "width": 16,
+      "seed": 20261119,
+      "all_checks_passed": true,
+      "trials": 864,
+      "checkpoint_replay_images": 454,
+      "eligible": false,
+      "complete_sha256": "7868a2a8a397d8eb103bc9eaccde36c523a0fc2adff72defdc2bc9ee87a07e4e",
+      "protocol_sha256": "ebd40793d4ae0d2f79aa9ee8940b3e59650e6f190e122cbd0100a84523811b8b",
+      "audit_sources": {
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_normalized.py": "832e664cc8646d0cd3a7a94ab559233cc0f179f07624886c97401903287d41c0",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_union.py": "ae4d7bb7c0a91d8a445deb0c88f47bfa0e57feda481013d9bae1d5e6cae127e5",
+        "/workspace/pathology-edge-auto-ki67/scripts/audit_ki67_center_refit.py": "707ad7cbe152b501585c7270307af542fbcce4f8070e5407591c8863597257b1"
+      }
+    }
+  ],
+  "test_passes": 0,
+  "pipeline_passes": 0,
+  "selection_lock_sha256": "7c2a1c9116f4a4664a4edab8a0f9c3297de1a3a83734948df2c6282255e221e4",
+  "classifier_lock_sha256": "4a5defd47f77a4be9578633fbf29ceeeb6c7c5b03c012aea175d962aba33530f"
+}
