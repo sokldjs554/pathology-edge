@@ -6,11 +6,12 @@ README에는 목적·역할·대표 결과와 시작 경로를, RUNBOOK에는 �
 
 | 범위 | 기준 소스 | 상태·근거 |
 |---|---|---|
+| 현재 공개 작업대·main | `3baf06d2327f67da87fef9e65842071b48d6e7a5` | 2026-11-18 [UI PR #3 병합](https://github.com/sokldjs554/pathology-edge/pull/3). 배포 버전27과 화면 파일 2,197개 동일. [현재 버전 안내](PUBLIC_DEMO_VERSION.md) |
 | 공개 작업대·main의 이전 상태 | `ff486a3be0f01fcdc98e9aad5dd67d6a7424d39e` | TNBC·WSI·정답 중심 조건 IHC, NuCLS·U86 전달 자료까지. 아래 원문에 당시 전체 내용 보관 |
 | 후속 연구의 고정 상태 | `095b0196585c05b256942bfe6bf889c3668a136c` | 자동 패치 검출·분류, 사전학습·새 외부 평가, U106까지의 확인. [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2) |
-| 공개 UI 배포 기준 | `b5024b0`의 UI 파일 | [WSI/UI 배포 검증](WSI_REVIEW.md). 이후 연구·문서 커밋을 새 화면 배포로 해석하지 않음 |
+| 과거 공개 UI 배포 기준 | `b5024b0`의 UI 파일 | [당시 WSI/UI 배포 검증](WSI_REVIEW.md). 현재 UI 기준은 위 main 통합 기록을 따름 |
 
-2026-11-15의 문서 정리는 소스·모델·측정 결과·공개 `dist/` 파일을 변경하지 않습니다. 현재 브랜치 CI 상태는 [main](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml?query=branch%3Amain)과 [research](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml?query=branch%3Afeat%2Fauto-ki67)에서 각각 확인합니다.
+2026-11-15의 문서 정리에서는 소스·모델·측정 결과·공개 `dist/` 파일을 변경하지 않았습니다. 2026-11-18에는 이미 배포된 UI를 main에 통합했으며 모델·실험값을 갱신하거나 재배포하지 않았습니다. 현재 브랜치 CI 상태는 [main](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml?query=branch%3Amain)과 [research](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml?query=branch%3Afeat%2Fauto-ki67)에서 각각 확인합니다.
 
 ## 연구 흐름
 
@@ -32,10 +33,12 @@ README에는 목적·역할·대표 결과와 시작 경로를, RUNBOOK에는 �
 <a id="verification"></a>
 ## 검증 이력 — 버전별 결과
 
-테스트 개수는 서로 다른 소스·환경의 기록입니다. 합계나 현재 버전의 검사 수로 사용하지 않습니다. 아래 최신 두 소스의 통과 수는 GitHub 원본 job 로그에서 확인했습니다.
+테스트 개수는 서로 다른 소스·환경의 기록입니다. 합산하지 않으며, 현재 검사 범위는 소스별로 확인합니다. 아래 UI 통합 Python·브라우저 통과 수는 GitHub 원본 job 로그에서 대조했습니다.
 
 | 소스·시점 | 검사 결과 | 수행·근거 |
 |---|---|---|
+| main UI 통합 `3baf06d` | **462 passed**, Dice42/42·평균6/6, JS·정적 데모 검사 성공 | [병합 후 CPU CI44239440513](https://github.com/sokldjs554/pathology-edge/actions/runs/44239440513) |
+| UI 통합 검증 `689a155` | **Chromium 88/88·WebKit 88/88**, Node21개 통과 | [브라우저 CI44238492952](https://github.com/sokldjs554/pathology-edge/actions/runs/44238492952). 병합 커밋 `3baf06d`와 전체 Git 트리 `cd6800f51b824450812a0186a989b5c57de18697`이 동일. checkout 대상이며 공개 URL 조작 검사는 아님 |
 | main `ff486a3` | **462 passed**, Dice42/42·평균6/6, JS·정적 데모 검사 성공 | [CPU CI43269595759](https://github.com/sokldjs554/pathology-edge/actions/runs/43269595759) |
 | research `095b019` | **799 passed**, Dice42/42·평균6/6, JS·정적 데모 검사 성공 | [CPU CI43625358925](https://github.com/sokldjs554/pathology-edge/actions/runs/43625358925) |
 | 클래스 대조 검사 수정 당시 | 374 passed | [당시 근거](../artifacts/learning/step58-class-match-fix.json) |

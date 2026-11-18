@@ -5,12 +5,13 @@
 | 구분 | 소스·상태 |
 |---|---|
 | 공개 UI 기준 | [`main`](https://github.com/sokldjs554/pathology-edge/tree/main) · [UI 통합 PR #3](https://github.com/sokldjs554/pathology-edge/pull/3) |
+| main 통합 커밋 | [`3baf06d2327f67da87fef9e65842071b48d6e7a5`](https://github.com/sokldjs554/pathology-edge/commit/3baf06d2327f67da87fef9e65842071b48d6e7a5), 2026-11-18 병합 완료 |
 | 검사한 UI 스냅샷 | [`5d7d843168f0b08bb87d6da2a56468f6a1522fbe`](https://github.com/sokldjs554/pathology-edge/tree/5d7d843168f0b08bb87d6da2a56468f6a1522fbe) |
 | 호스팅 버전 | 공개 버전 27, 호스팅 저장소 커밋 `d27412a8fe2f4f7df3ea6d36ef79e2c9d1600b86` |
 | main | 공개 TNBC 모델·저장 결과와 현재 보라색 UI를 함께 제공 |
 | 후속 자동 IHC 연구 | [`feat/auto-ki67`](https://github.com/sokldjs554/pathology-edge/tree/feat/auto-ki67), [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2), 공개 데모에 미적용 |
 
-GitHub 커밋과 호스팅 커밋은 서로 다른 저장소의 식별자다. 검사에서는 UI 스냅샷과 로컬 호스팅 소스의 `dist/` 2,197개 파일을 바이트 단위로 대조해 일치를 확인했다. PR #3은 검증한 UI와 문서·브라우저 검사를 main에 통합한다. 기존 UI 스냅샷 대비 화면 파일·모델·실험값은 변경하지 않으며, 동일한 화면을 다시 배포하지 않는다.
+GitHub 커밋과 호스팅 커밋은 서로 다른 저장소의 식별자다. 검사에서는 UI 스냅샷과 로컬 호스팅 소스의 `dist/` 2,197개 파일을 바이트 단위로 대조해 일치를 확인했다. PR #3으로 검증한 UI와 문서·브라우저 검사를 main에 통합했다. 기존 UI 스냅샷 대비 화면 파일·모델·실험값은 변경하지 않았으며, 동일한 화면을 다시 배포하지 않았다.
 
 ## 현재 화면 실행
 
@@ -30,6 +31,6 @@ python3 -m http.server 8000 --directory dist --bind 127.0.0.1
 
 ## 검증 범위
 
-해당 UI의 로컬 Chromium 브라우저 테스트 88개, 추가 조작 점검 14개, JavaScript 단위 테스트 21개가 통과했다. 패널 전환·이동·확대·수치/이미지 연결·오류 재시도와 375px부터 데스크톱까지의 화면을 검사했다. 이 실행을 사용자 직접 테스트로 기록하지 않는다.
+UI 통합 대상의 GitHub CI에서 Chromium·WebKit 각각 88개, JavaScript 단위 테스트 21개가 통과했다. 병합 후 main의 Python 테스트 462개·저장 Dice42/42·평균6/6도 통과했다. 소스별 [CI 근거](PROJECT_HISTORY.md#verification)를 보존한다. 병합 후 로컬 main의 추가 조작 점검 14개도 통과했으며 패널 전환·이동·확대·수치/이미지 연결·오류 재시도를 확인했다. 이 실행을 사용자 직접 테스트로 기록하지 않는다.
 
 현재 검사 환경의 공개 URL 직접 요청은 HTTP 403을 반환했다. 따라서 이번 로컬 검사를 공개 사이트의 현재 브라우저 조작 성공으로 확대하지 않으며, 이 응답만으로 일반 사용자의 공개 사이트 장애라고 단정하지 않는다. 기존 배포 당시의 공개 검증은 [UI 브랜치의 보관 기록](https://github.com/sokldjs554/pathology-edge/blob/5d7d843168f0b08bb87d6da2a56468f6a1522fbe/docs/UI_WSI_BOUNDARY_ZOOM.md)과 구분한다.

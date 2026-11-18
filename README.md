@@ -9,7 +9,7 @@
 | 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | 현재 UI·저장 결과: [`main`](https://github.com/sokldjs554/pathology-edge/tree/main) · [UI 통합 PR #3](https://github.com/sokldjs554/pathology-edge/pull/3) |
 | 후속 연구 | 자동 IHC 패치 검출·분류, 사전학습 대조, 추가 외부 평가 | [`feat/auto-ki67`](https://github.com/sokldjs554/pathology-edge/tree/feat/auto-ki67) · [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2), main 미병합·공개 데모 미적용 |
 
-배포 버전 27의 검사 기준 UI는 `5d7d843`이며, 동일한 화면 파일을 `main`에 통합했습니다. [배포·소스 대응과 고정 스냅샷 실행](docs/PUBLIC_DEMO_VERSION.md).
+공개 UI는 [커밋 `3baf06d`](https://github.com/sokldjs554/pathology-edge/commit/3baf06d2327f67da87fef9e65842071b48d6e7a5)에서 `main`에 병합됐습니다. 화면 파일 2,197개는 배포 버전 27과 동일합니다. [배포·소스 대응과 고정 스냅샷 실행](docs/PUBLIC_DEMO_VERSION.md).
 
 연구·교육용 독립 프로젝트입니다. 공개 웹 화면은 **사전 계산된 실제 결과**를 표시합니다. 실제 모델 추론은 아래 CLI로 실행하며, 임상 진단·치료용 도구가 아닙니다.
 
@@ -40,10 +40,10 @@
 | [`LocalResidualHead`](src/pathology_edge/learner_refinement.py) | 합성곱 1→8→1, ReLU, 마지막 층 0 초기화, 잔차 합산 |
 
 - **실행:** 작성 코드의 테스트, 저장 Dice 42개·평균 6개 대조, 데이터 분리 검사, Codespaces 비교 학습·세 seed 반복, C++ 추출 8조건·72회 측정, Ubuntu 고정 소스 재현.
-- **검토:** 개선·악화 사례, FP/FN과 양성률 분모, 후보 억제의 한계, WSI·IHC 분석 범위, 처리 시간·seed 변동 해석.
+- **검토:** 개선·악화 사례, FP/FN과 양성률 분모, 후보 억제의 한계, WSI·IHC 분석 범위, 처리 시간·seed 변동 해석. GIL·원자적 작업 배분, 연결 성분과 실제 핵의 차이, Docker 재현성의 한계도 설명했습니다.
 - **Git:** 재현 로그 9개 commit·push, [PR #1](https://github.com/sokldjs554/pathology-edge/pull/1) 생성·병합. Docker는 원격 CI 결과 화면을 확인한 범위입니다.
 
-세부 작성 범위·받은 도움·실행 근거는 [기여 기록](docs/CONTRIBUTIONS.md)에, 후속 연구까지의 확인 범위는 [U00–U106 고정 기록](https://github.com/sokldjs554/pathology-edge/blob/095b0196585c05b256942bfe6bf889c3668a136c/docs/CONTRIBUTIONS.md)에 있습니다. 후속 자동 구현·학습·검산을 본인의 직접 실행으로 합산하지 않습니다.
+세부 작성 범위·받은 도움·실행 근거는 [기여 기록](docs/CONTRIBUTIONS.md), [U00–U106 고정 기록](https://github.com/sokldjs554/pathology-edge/blob/095b0196585c05b256942bfe6bf889c3668a136c/docs/CONTRIBUTIONS.md), [이후 기술 설명·협업 역할 확인](docs/USER_REVIEW_20261118.md)에 있습니다. 후속 자동 구현·학습·검산을 본인의 직접 실행으로 합산하지 않습니다.
 
 [공고 기준과 구현 근거](docs/JOB_POSTING_ALIGNMENT.md) · [기술 코드 설명 자료](docs/ENGINEERING_REVIEW.md) · [협업 경험·Git 근거](docs/COLLABORATION_EXPERIENCE.md).
 
@@ -113,12 +113,12 @@ python3 -m http.server 8000 --directory dist --bind 127.0.0.1
 
 [마지막 고정 연구 보고서](https://github.com/sokldjs554/pathology-edge/blob/095b0196585c05b256942bfe6bf889c3668a136c/docs/KI67_FINAL_TRANSFER.md)의 기준 충족 수는 내부 채택 **0/3**, 재사용 내부 test 407장 **1/3**, 재사용 BCData 133장 **3/3**, 새 DeepLIIF 597장 **1/3**입니다. 이는 기존 검출기 A 대비 새 사전학습 검출기 B의 결과이며, 무작위 특징 대조는 사전학습 효과를 분리하는 별도 비교입니다. 모든 seed에서 안정적인 종합 개선은 달성하지 못했고 공개 모델은 교체하지 않았습니다.
 
-[전체 진행·개인 수행 자료 ZIP](https://raw.githubusercontent.com/sokldjs554/pathology-edge/b15ae2ae0bcc2934da2df30d544bae993cdae86d/artifacts/handoff/PathologyEdge-All-Progress-U106-20261115.zip)에는 문서·소스·대표 화면·본인 원본 실험 ZIP과 대용량 근거의 고정 링크가 있습니다(약97.9MB). 후속 코드는 [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2)에 있으며 연구 HTML은 공개 작업대와 별도입니다.
+[2026-11-15·U106 기준 보관 ZIP](https://raw.githubusercontent.com/sokldjs554/pathology-edge/b15ae2ae0bcc2934da2df30d544bae993cdae86d/artifacts/handoff/PathologyEdge-All-Progress-U106-20261115.zip)에는 당시 문서·소스·대표 화면·본인 원본 실험 ZIP과 대용량 근거의 고정 링크가 있습니다(약97.9MB). 이후 UI 개편·공고 정정·추가 본인 확인은 현재 `main` 문서를 따릅니다. 후속 코드는 [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2)에 있으며 연구 HTML은 공개 작업대와 별도입니다.
 
 [![main CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml?query=branch%3Amain)
 [![research CPU checks](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml/badge.svg?branch=feat%2Fauto-ki67)](https://github.com/sokldjs554/pathology-edge/actions/workflows/ci.yml?query=branch%3Afeat%2Fauto-ki67)
 
-CI는 각 버전의 Python 테스트·저장 Dice 대조·JavaScript 문법·정적 데모 연결을 검사합니다. 브라우저 조작 검증과 과거 테스트 수는 [검증 이력](docs/PROJECT_HISTORY.md#verification)에 별도로 보존합니다.
+UI 통합 검증에서는 **Python 462개, Chromium·WebKit 각각 88개, JavaScript 단위 테스트 21개**가 통과했고, 저장 Dice **42/42·평균 6/6**이 일치했습니다. 검사한 소스·환경·원본 CI와 과거 기록은 [검증 이력](docs/PROJECT_HISTORY.md#verification)에서 확인합니다. 자동 검사와 본인의 직접 실행 기록은 구분합니다.
 
 ## 한계·출처·상세 문서
 
@@ -133,7 +133,7 @@ CI는 각 버전의 Python 테스트·저장 Dice 대조·JavaScript 문법·정
 | 개인 작성·실행·검토 근거 | [CONTRIBUTIONS](docs/CONTRIBUTIONS.md) |
 | 연구 흐름·과거 테스트·원문 보관 | [PROJECT_HISTORY](docs/PROJECT_HISTORY.md) |
 | WSI·IHC의 입력·분석 범위 | [WSI 실험](docs/WSI_EXPERIMENT.md) · [IHC 실험](docs/IHC_EXPERIMENT.md) |
-| 공고·업무와의 연결 | [직무 대조](docs/JOB_MATCH_2026-11-10.md) |
+| 공고·업무와의 연결 | [사용자 제공 공고 캡처 기준 대조](docs/JOB_POSTING_ALIGNMENT.md) |
 | 데이터·모델·코드의 권리 | [THIRD_PARTY](THIRD_PARTY.md) |
 
 TNBC는 CC BY 4.0, CMU 공개 WSI는 CC0, Patherea 데이터는 CC BY-NC 4.0입니다. 그 외 데이터와 사전학습 가중치는 각 연구 보고서의 출처·조건을 유지합니다. 자체 코드에 일괄 오픈소스 라이선스를 선언한 상태는 아닙니다.
