@@ -1,3 +1,4 @@
+import { tool, openTools, closeTools } from './controls.js';
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
@@ -11,8 +12,10 @@ const ready = async (page, id = '10_1') => {
   await expect(page.locator('#after')).toHaveAttribute('data-zoom', /\d/);
 };
 const open = async (page) => {
-  await page.goto('/');
+  await page.goto('/?sample=10_1');
   await ready(page);
+  await tool(page,'modeBoundary','click');
+  if(page.viewportSize().width >= 1200) await tool(page,'toggleInspector','click');
 };
 const shot = async (page, name) =>
   page.screenshot({ path: `captures/${name}.png`, fullPage: true });
@@ -80,7 +83,7 @@ test('synchronized zoom, drag, overview navigation, keyboard and fit', async ({
   page,
 }) => {
   await open(page);
-  await page.locator('#jumpBoundary').click();
+  await tool(page,'jumpBoundary','click');
   await expect(page.locator('#after')).toHaveAttribute(
     'data-case',
     '10_1-worsened',
@@ -122,7 +125,7 @@ test('synchronized zoom, drag, overview navigation, keyboard and fit', async ({
   await expect(page.locator('#viewportBounds')).toHaveText(
     '현재 시야 x 0–512 · y 0–512',
   );
-  await page.locator('#nativeZoom').click();
+  await tool(page,'nativeZoom','click');
   await expect(page.locator('#zoomvalue')).toHaveText('100%');
   await page.locator('#zoomout').click();
   await expect(page.locator('#zoomvalue')).toHaveText('80%');
@@ -136,21 +139,22 @@ test('overlay switches change real pixels and scope metrics correspond to highli
 }) => {
   await open(page);
   const initial = await bitmap(page);
-  await page.locator('#segmentation').uncheck();
+  await tool(page,'segmentation','uncheck');
   expect(await bitmap(page)).not.toBe(initial);
   const plain = await bitmap(page);
-  await page.locator('#truth').check();
+  await tool(page,'truth','check');
   expect(await bitmap(page)).not.toBe(plain);
-  await page.locator('#truth').uncheck();
-  await page.locator('#segmentation').check();
-  await page.locator('#opacity').focus();
+  await tool(page,'truth','uncheck');
+  await tool(page,'segmentation','check');
+  await tool(page,'opacity','focus');
   await page.keyboard.press('Home');
   expect(await bitmap(page)).toBe(plain);
   for (let i = 0; i < 25; i++) await page.keyboard.press('ArrowRight');
   await expect(page.locator('#opacityValue')).toHaveText('25%');
-  await page.locator('#grid').uncheck();
+  await tool(page,'grid','uncheck');
   expect(await bitmap(page)).not.toBe(initial);
-  await page.locator('#grid').check();
+  await tool(page,'grid','check');
+  if(!await page.locator('#scopeBoundary').isVisible())await tool(page,'toggleInspector');
   await page.locator('#scopeBoundary').click();
   await metrics(page, data.samples[0], 'boundary');
   await expect(page.locator('#scopeExplanation')).toContainText(
@@ -191,9 +195,9 @@ test('NMS raw-to-kept pair and image click resolve actual exported objects', asy
   );
   await shot(page, 'after-merge');
   const shown = await bitmap(page);
-  await page.locator('#objects').uncheck();
+  await tool(page,'objects','uncheck');
   expect(await bitmap(page)).not.toBe(shown);
-  await page.locator('#objects').check();
+  await tool(page,'objects','check');
   await page.locator('#componentSelect').selectOption('0');
   const o = m.objects[0];
   const b = await page.locator('#after').boundingBox(),
@@ -207,6 +211,8 @@ test('NMS raw-to-kept pair and image click resolve actual exported objects', asy
   );
   await expect(page.locator('#selectionText')).toHaveText('B · 병합 후 #1');
   await expect(page.locator('#selectedInfo')).toContainText(o.bbox.join(', '));
+  await tool(page,'toggleDock','click');
+  await tool(page,'toggleInspector','click');
   await page.locator('#visibleOnly').check();
   expect(await page.locator('#componentSelect option').count()).toBeLessThan(
     m.objects.length + 1,
@@ -221,15 +227,14 @@ test('NMS raw-to-kept pair and image click resolve actual exported objects', asy
 
 test('single image, focus panels and help are usable', async ({ page }) => {
   await open(page);
-  await page.locator('#modeSingle').click();
+  const pairedWidth = (await page.locator('#after').boundingBox()).width;
+  await tool(page,'modeSingle','click');
   await expect(page.locator('#before')).toBeHidden();
-  expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(
-    1000,
-  );
-  await page.locator('#focusMode').click();
+  expect((await page.locator('#after').boundingBox()).width).toBeGreaterThan(pairedWidth * 1.9);
+  await tool(page,'focusMode','click');
   await expect(page.locator('#tray')).toBeHidden();
   await expect(page.locator('#inspector')).toBeHidden();
-  await page.locator('#focusMode').click();
+  await tool(page,'focusMode','click');
   await expect(page.locator('#tray')).toBeVisible();
   await expect(page.locator('#inspector')).toBeVisible();
   await page.locator('#help').click();
@@ -257,21 +262,21 @@ for (const [width, height] of [
     ).toBe(true);
     const box = await page.locator('#after').boundingBox();
     expect(box.y).toBeLessThan(width <= 760 ? 415 : 345);
-    expect(box.width).toBeGreaterThan(width <= 760 ? width - 5 : 400);
+    expect(box.width).toBeGreaterThan(width <= 760 ? width * 0.95 : 400);
     if (width <= 760) {
       await page.locator('#mobileBefore').click();
       await expect(page.locator('#before')).toBeVisible();
       await expect(page.locator('#after')).toBeHidden();
       await page.locator('#mobileAfter').click();
     }
-    await page.locator('#jumpBoundary').click();
+    await tool(page,'jumpBoundary','click');
     await expect(page.locator('#after')).toHaveAttribute(
       'data-case',
       '10_1-worsened',
     );
     await page.locator('#fit').click();
     await shot(page, `after-${width}`);
-    await page.locator('#toggleInspector').click();
+    await tool(page,'toggleInspector','click');
     await expect(page.locator('#inspector')).toBeVisible();
     await page.locator('#scopeBoundary').click();
     await metrics(page, data.samples[0], 'boundary');
@@ -292,7 +297,7 @@ test('loading, HTTP error, retry and empty states never imply a new analysis', a
     if (failed) await route.fulfill({ status: 503, body: 'unavailable' });
     else await route.fulfill({ json: data });
   });
-  await page.goto('/');
+  await page.goto('/?sample=10_1');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'loading');
   await expect(page.locator('#stateDetail')).toContainText(
     '실시간 추론이 아니라',
@@ -436,14 +441,14 @@ test('canvas source pixels match the selected exported image at 1:1', async ({
 }) => {
   await open(page);
   for (const id of ['segmentation', 'grid', 'truth', 'objects'])
-    await page.locator('#' + id).uncheck();
+    await tool(page,id,'uncheck');
   for (const sample of [
     data.samples[0],
     data.samples.find((s) => s.id === '11_2'),
   ]) {
     await page.locator('#sample').selectOption(sample.id);
     await ready(page, sample.id);
-    await page.locator('#nativeZoom').click();
+    await tool(page,'nativeZoom','click');
     const pairs = await page
       .locator('#after')
       .evaluate(async (c, imagePath) => {

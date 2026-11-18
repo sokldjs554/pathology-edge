@@ -1,0 +1,53 @@
+{
+  "method": "WCAG relative luminance; selected shell text pairs only, not a complete accessibility audit",
+  "pairs": [
+    {
+      "name": "body",
+      "foreground": "#292631",
+      "background": "#ffffff",
+      "ratio": 14.8318
+    },
+    {
+      "name": "primary_button",
+      "foreground": "#ffffff",
+      "background": "#613575",
+      "ratio": 9.2332
+    },
+    {
+      "name": "active_navigation",
+      "foreground": "#ffffff",
+      "background": "#302039",
+      "ratio": 15.0931
+    },
+    {
+      "name": "muted_navigation",
+      "foreground": "#c7b7cd",
+      "background": "#302039",
+      "ratio": 7.9658
+    },
+    {
+      "name": "eosin_on_header",
+      "foreground": "#e397b6",
+      "background": "#302039",
+      "ratio": 6.7332
+    },
+    {
+      "name": "case_muted",
+      "foreground": "#655e6c",
+      "background": "#eee9f2",
+      "ratio": 5.2131
+    },
+    {
+      "name": "pane_muted",
+      "foreground": "#bfbac5",
+      "background": "#303137",
+      "ratio": 6.8172
+    },
+    {
+      "name": "menu_heading",
+      "foreground": "#613575",
+      "background": "#ffffff",
+      "ratio": 9.2332
+    }
+  ]
+}

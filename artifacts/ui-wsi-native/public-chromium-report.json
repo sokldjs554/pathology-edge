@@ -1,0 +1,3232 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/pathology-edge/pathology-edge/web-tests/playwright.config.js",
+    "rootDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+        "commitHash": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+        "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/43875223710"
+      },
+      "gitCommit": {
+        "shortHash": "a1d5de4",
+        "hash": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+        "subject": "fix: align WSI toolbar to whole pixels for native rendering",
+        "body": "fix: align WSI toolbar to whole pixels for native rendering\n",
+        "author": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794834919000
+        },
+        "committer": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794834919000
+        },
+        "branch": "feat/linked-pathology-workbench"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+            "commitHash": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+            "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/43875223710"
+          },
+          "gitCommit": {
+            "shortHash": "a1d5de4",
+            "hash": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+            "subject": "fix: align WSI toolbar to whole pixels for native rendering",
+            "body": "fix: align WSI toolbar to whole pixels for native rendering\n",
+            "author": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794834919000
+            },
+            "committer": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794834919000
+            },
+            "branch": "feat/linked-pathology-workbench"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.js"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "case-scope.spec.js",
+      "file": "case-scope.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "case direction buttons keep the current image and disclose absent evidence at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4838,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:23.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2949227de292b60f3bf2-2bd1798a3a1ad61e0923",
+          "file": "case-scope.spec.js",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "case direction buttons keep the current image and disclose absent evidence at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:30.357Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2949227de292b60f3bf2-100e04187c3e4db51764",
+          "file": "case-scope.spec.js",
+          "line": 5,
+          "column": 31
+        }
+      ]
+    },
+    {
+      "title": "clarity.spec.js",
+      "file": "clarity.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "entry immediately explains the method and shows a labeled actual difference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1455,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:35.603Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-88aa84246e52eee08547",
+          "file": "clarity.spec.js",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "all miniature mask pixels and displayed contours come from the saved masks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2311,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:37.073Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-de085a3e03e73affb53a",
+          "file": "clarity.spec.js",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "explicit sample and case links are preserved and selecting another image clears the story",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:39.391Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-f9cbfe0e88750238b4c9",
+          "file": "clarity.spec.js",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "first comparison and masks remain available at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 988,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:43.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-fa415b5795b539c12aaf",
+          "file": "clarity.spec.js",
+          "line": 90,
+          "column": 31
+        },
+        {
+          "title": "first comparison and masks remain available at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:44.767Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-3162e74dc7bcb0d0f8b9",
+          "file": "clarity.spec.js",
+          "line": 90,
+          "column": 31
+        },
+        {
+          "title": "later compareFour wins over automatic entry while images load",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 958,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:45.811Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-3c53f88ce350c1f8ab25",
+          "file": "clarity.spec.js",
+          "line": 98,
+          "column": 50
+        },
+        {
+          "title": "later toggleDock wins over automatic entry while images load",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 915,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:46.777Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-c6375985e84d41f75f43",
+          "file": "clarity.spec.js",
+          "line": 98,
+          "column": 50
+        }
+      ]
+    },
+    {
+      "title": "ihc.spec.js",
+      "file": "ihc.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "IHC source pixels, all 16 real cases, GT coordinates and scores follow the export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3904,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:47.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-dedb61c6d5353c389d7d",
+          "file": "ihc.spec.js",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "experiment metrics, confusion, split, limits and NC attribution retain real evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 859,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:51.618Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-70884ddf5bad833c5e4c",
+          "file": "ihc.spec.js",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "IHC image, example selection, crop and result drawer remain usable at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1316,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:52.484Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-804afd0d5325921dd2e2",
+          "file": "ihc.spec.js",
+          "line": 154,
+          "column": 3
+        },
+        {
+          "title": "IHC image, example selection, crop and result drawer remain usable at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1039,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:53.807Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-7ba2bd35a4dbacb8d1d5",
+          "file": "ihc.spec.js",
+          "line": 154,
+          "column": 3
+        },
+        {
+          "title": "slow response shows a genuine loading state and no old classification",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:54.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-493750c5b1f33416cc5b",
+          "file": "ihc.spec.js",
+          "line": 197,
+          "column": 1
+        },
+        {
+          "title": "HTTP error can retry into the real experiment without inventing metrics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 674,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:55.519Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-a9ebfeacd343b64aef1e",
+          "file": "ihc.spec.js",
+          "line": 217,
+          "column": 1
+        },
+        {
+          "title": "empty example collection stays empty, then retry restores supplied examples",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 709,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:56.199Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-bf2f511dd9afb648909e",
+          "file": "ihc.spec.js",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "missing source image is explicit and retry does not substitute another cell",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 969,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:56.917Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-d136db5fc36eb4f6baa4",
+          "file": "ihc.spec.js",
+          "line": 253,
+          "column": 1
+        },
+        {
+          "title": "out-of-image ground-truth coordinate is rejected rather than displayed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 335,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:57.892Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-4c5825bd0ef128a79387",
+          "file": "ihc.spec.js",
+          "line": 269,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "pan.spec.js",
+      "file": "pan.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pan after one zoom step follows both drag axes 1440 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1578,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:58.242Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDAsIm1vZGUiOiJib3VuZGFyeSJ9LCJiZWZvcmUiOlsxMjgsMjcyXSwiYWZ0ZXIiOlsxMjEuNiwyNjMuNDY3XSwiem9vbSI6My43NSwiZXhwZWN0ZWQiOnsieCI6MTIxLjYsInkiOjI2My40NjY2NjY2NjY2NjY2NH19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-264bb611554c110ab0a9",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 1280 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:24:59.827Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxMjgwLCJoZWlnaHQiOjgwMCwibW9kZSI6ImJvdW5kYXJ5In0sImJlZm9yZSI6WzEyOCwyNzJdLCJhZnRlciI6WzEyMC4zMDQsMjYxLjczOV0sInpvb20iOjMuMTE4NDksImV4cGVjdGVkIjp7IngiOjEyMC4zMDM5Njc2MjUzNTcxNSwieSI6MjYxLjczODYyMzUwMDQ3NjJ9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-84409b22346a512dd781",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 390 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:01.802Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjozOTAsImhlaWdodCI6ODQ0LCJtb2RlIjoiYm91bmRhcnkifSwiYmVmb3JlIjpbMTI4LDI3Ml0sImFmdGVyIjpbMTEzLjM3MSwyNTIuNDk1XSwiem9vbSI6MS42NDA2MywiZXhwZWN0ZWQiOnsieCI6MTEzLjM3MTQ3MzE1MzYwNTYyLCJ5IjoyNTIuNDk1Mjk3NTM4MTQwODV9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-d5b208bbeab69d717a1c",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 1440 single",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1762,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:03.225Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDAsIm1vZGUiOiJzaW5nbGUifSwiYmVmb3JlIjpbMTI4LDI3Ml0sImFmdGVyIjpbMTIxLjYsMjYzLjQ2N10sInpvb20iOjMuNzUsImV4cGVjdGVkIjp7IngiOjEyMS42LCJ5IjoyNjMuNDY2NjY2NjY2NjY2NjR9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-7ccc4baa4dfa56b70cf8",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "two-finger style horizontal and vertical wheel events pan without changing zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1149,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:04.995Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wheel-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJiZWZvcmUiOlsxMjgsMjcyXSwiYWZ0ZXIiOlsxMzQuNCwyODAuNTMzXSwiem9vbSI6My43NSwiYWZ0ZXJab29tIjozLjc1fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-a432d23839a75396f020",
+          "file": "pan.spec.js",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "modifier wheel zoom remains available after wheel panning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1595,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:06.150Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-3a3367884229ca87b055",
+          "file": "pan.spec.js",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "canvas geometry matches the visible pane rather than overflowing below it",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1481,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:07.753Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-fe5676d64e263464129d",
+          "file": "pan.spec.js",
+          "line": 131,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "progressive.spec.js",
+      "file": "progressive.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "first visit prioritizes comparison and defers advanced choices",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:09.247Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-0bb7080bcaca048fb892",
+          "file": "progressive.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "advanced controls open on request and keyboard can return to comparison",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1836,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:11.147Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-ff7a58df565126ca261b",
+          "file": "progressive.spec.js",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "progressive menu and scoped outcome remain usable at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1164,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:12.990Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-64f4e1a22500dc1e9b8c",
+          "file": "progressive.spec.js",
+          "line": 55,
+          "column": 31
+        },
+        {
+          "title": "progressive menu and scoped outcome remain usable at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1426,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:14.161Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-4a2349f42ff9115ea4fd",
+          "file": "progressive.spec.js",
+          "line": 55,
+          "column": 31
+        },
+        {
+          "title": "result-table case restores both images from B-only and candidate views",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1655,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:15.594Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-7d15731fca69b6ed94f9",
+          "file": "progressive.spec.js",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "tablet candidate details share a column without shrinking the image",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1188,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:17.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-a4083247e215d91cbe6a",
+          "file": "progressive.spec.js",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "case loading preserves a later four-pane choice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1382,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:18.451Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-5a5263b5e62a3016141f",
+          "file": "progressive.spec.js",
+          "line": 96,
+          "column": 1
+        },
+        {
+          "title": "case overview keeps tissue context and inline controls at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1884,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:19.840Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-685bc356f2dad56076da",
+          "file": "progressive.spec.js",
+          "line": 119,
+          "column": 36
+        },
+        {
+          "title": "case overview keeps tissue context and inline controls at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1536,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:21.733Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-e5ca6b8b227142fd4008",
+          "file": "progressive.spec.js",
+          "line": 119,
+          "column": 36
+        },
+        {
+          "title": "case overview keeps tissue context and inline controls at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1466,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:23.276Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-3d92d031180549d53dbe",
+          "file": "progressive.spec.js",
+          "line": 119,
+          "column": 36
+        },
+        {
+          "title": "detail menu wraps its controls without horizontal scroll",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:24.748Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-4c55818cb8fa2ac75457",
+          "file": "progressive.spec.js",
+          "line": 141,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "review.spec.js",
+      "file": "review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "purpose, one-click improvement and regression, all real local cases and exact image metrics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:29.194Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-1e54b8a364a20bd72c54",
+          "file": "review.spec.js",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "canvas highlight colors occur at the exported corrected and regressed pixel coordinates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1610,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:35.678Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-425432b90cb4d8d8dfeb",
+          "file": "review.spec.js",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "aggregate cost, per-image changes and accessible glossary use original precision",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2467,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:37.295Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-c7c259ad030d3bcbec83",
+          "file": "review.spec.js",
+          "line": 147,
+          "column": 1
+        },
+        {
+          "title": "boundary review and same ROI A/B remain usable at 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:39.768Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-be0994e04637055b7c42",
+          "file": "review.spec.js",
+          "line": 193,
+          "column": 3
+        },
+        {
+          "title": "boundary review and same ROI A/B remain usable at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:41.461Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-2bafb9921ca3c0a3ee07",
+          "file": "review.spec.js",
+          "line": 193,
+          "column": 3
+        },
+        {
+          "title": "boundary review and same ROI A/B remain usable at 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2440,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:43.098Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-55e8a2b8583f929cafb3",
+          "file": "review.spec.js",
+          "line": 193,
+          "column": 3
+        },
+        {
+          "title": "missing, mismatched or corrupt case evidence never fabricates a highlight",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2324,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:45.544Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-ec5905b3e437b67b20ad",
+          "file": "review.spec.js",
+          "line": 229,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "secondary-review.spec.js",
+      "file": "secondary-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "secondary WSI overview, selected ROI, tools and evidence preserve the camera at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:47.897Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-644dc20a816863bf771d",
+          "file": "secondary-review.spec.js",
+          "line": 42,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:51.109Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-734ac68c11ff0ee5b1b2",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "secondary WSI overview, selected ROI, tools and evidence preserve the camera at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3040,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:53.178Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-59353d7558b88ceac896",
+          "file": "secondary-review.spec.js",
+          "line": 42,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1613,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:56.226Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-daa5ec585f69b599b41d",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "secondary WSI overview, selected ROI, tools and evidence preserve the camera at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2874,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:25:57.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-601a1a7c4dce6a4688c9",
+          "file": "secondary-review.spec.js",
+          "line": 42,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1335,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:00.726Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-7f18140699ad20582bb5",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "studio.spec.js",
+      "file": "studio.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "studio has three distinct working layouts at laptop size with linked real references",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2563,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:02.078Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-ac1fcba4173fc300c98b",
+          "file": "studio.spec.js",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "studio mobile data view stays visible after selecting A; IHC case strip closes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1518,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:04.648Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-c56528a55a2496fb7aa3",
+          "file": "studio.spec.js",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "review entry shows A/B, offers taller two/four views and readable controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3397,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:06.176Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-2617f4978d916c44a433",
+          "file": "studio.spec.js",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "shared navigation is consistent and WSI provenance opens only on request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7100,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:09.580Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-f29e8a5b878f42e4ee4b",
+          "file": "studio.spec.js",
+          "line": 75,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ui.spec.js",
+      "file": "ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all seven images load immediately and metrics/counts match the real export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:16.708Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-dfe12e112d64a977548c",
+          "file": "ui.spec.js",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "synchronized zoom, drag, overview navigation, keyboard and fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:22.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-c1f5d2f93c0c3fd41db6",
+          "file": "ui.spec.js",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "overlay switches change real pixels and scope metrics correspond to highlighted regions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:24.487Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-0fa274c74ab7a51be2cf",
+          "file": "ui.spec.js",
+          "line": 137,
+          "column": 1
+        },
+        {
+          "title": "NMS raw-to-kept pair and image click resolve actual exported objects",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3050,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:27.982Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-779b24945e5871ea5d4e",
+          "file": "ui.spec.js",
+          "line": 171,
+          "column": 1
+        },
+        {
+          "title": "single image, focus panels and help are usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2477,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:31.041Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-978546a619f2c4bb9505",
+          "file": "ui.spec.js",
+          "line": 228,
+          "column": 1
+        },
+        {
+          "title": "responsive controls 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1988,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:33.524Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-d15270732546a23ebe69",
+          "file": "ui.spec.js",
+          "line": 252,
+          "column": 3
+        },
+        {
+          "title": "responsive controls 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2043,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:35.520Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-4a708baa35ab62906dbd",
+          "file": "ui.spec.js",
+          "line": 252,
+          "column": 3
+        },
+        {
+          "title": "responsive controls 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2447,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:37.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-d0f50eb5438a300b2cdc",
+          "file": "ui.spec.js",
+          "line": 252,
+          "column": 3
+        },
+        {
+          "title": "loading, HTTP error, retry and empty states never imply a new analysis",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:40.022Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-2e57ac11b7409df6034f",
+          "file": "ui.spec.js",
+          "line": 289,
+          "column": 1
+        },
+        {
+          "title": "failed image clears old numbers; rapid sample changes cannot leave mismatched results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2201,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:41.031Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-97360bf0741a2dd84742",
+          "file": "ui.spec.js",
+          "line": 329,
+          "column": 1
+        },
+        {
+          "title": "served UI and result bytes match this repository commit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1438,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:43.241Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-ed87e45ba1b1b5e22128",
+          "file": "ui.spec.js",
+          "line": 358,
+          "column": 1
+        },
+        {
+          "title": "canvas source pixels match the selected exported image at 1:1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:44.685Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-a7eb72983ca25de2f4c8",
+          "file": "ui.spec.js",
+          "line": 439,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workbench.spec.js",
+      "file": "workbench.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "candidate table navigates to original exported candidate and links its detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1337,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:46.990Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-09b4092d1df6a59aca90",
+          "file": "workbench.spec.js",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "image changes clear the object crop and restore the full candidate list",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:48.338Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-36b6f1a2a2ee35a0c095",
+          "file": "workbench.spec.js",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "pane maximize restores synchronized comparison without changing selected case",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1507,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:49.610Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-140fb97120bc5fdd2b04",
+          "file": "workbench.spec.js",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "small screen keeps candidate and result controls available without page overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1107,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:51.123Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-96cafdf3982affe505ee",
+          "file": "workbench.spec.js",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "short mobile workbench scrolls to the candidate dock without clipping controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:52.239Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-df96acad8c7010a91e97",
+          "file": "workbench.spec.js",
+          "line": 49,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wsi-native.spec.js",
+      "file": "wsi-native.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "WSI native RGB uses original level-0 pixels in both panes and survives display changes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4904,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:53.488Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-76c9ea5d40c53729417b",
+          "file": "wsi-native.spec.js",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "WSI native automatic zoom preserves boundary center and manual inspection at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:26:58.398Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-c17d1e48a4e20b81be3d",
+          "file": "wsi-native.spec.js",
+          "line": 79,
+          "column": 54
+        },
+        {
+          "title": "WSI native automatic zoom preserves boundary center and manual inspection at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2048,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:00.768Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-0243d6b219922fb54efe",
+          "file": "wsi-native.spec.js",
+          "line": 79,
+          "column": 54
+        },
+        {
+          "title": "WSI native PNG missing retains JPEG and predictions; retry restores the original image",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:02.824Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-4f2407885caced43de4d",
+          "file": "wsi-native.spec.js",
+          "line": 106,
+          "column": 64
+        },
+        {
+          "title": "WSI native PNG wrong dimensions retains JPEG and predictions; retry restores the original image",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2260,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:05.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-577a1e5187de929dbf4e",
+          "file": "wsi-native.spec.js",
+          "line": 106,
+          "column": 64
+        },
+        {
+          "title": "WSI native PNG stalled retains JPEG and predictions; retry restores the original image",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17224,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:07.512Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-72f0120e1f6195dd5c32",
+          "file": "wsi-native.spec.js",
+          "line": 106,
+          "column": 64
+        },
+        {
+          "title": "WSI native 1:1 remains CSS-pixel calibrated on high-DPI displays",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2851,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:24.745Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-8cce303c4fcb515266aa",
+          "file": "wsi-native.spec.js",
+          "line": 126,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wsi.spec.js",
+      "file": "wsi.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real multilevel tiles load; ROI masks, metrics and native coordinates use the same slide",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:27.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-a1e94d59596af945530c",
+          "file": "wsi.spec.js",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "real XOR case, shared viewport, ordinary scroll, dragging and calibrated zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3089,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:30.092Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-ada08b042e14e90b5c07",
+          "file": "wsi.spec.js",
+          "line": 118,
+          "column": 1
+        },
+        {
+          "title": "NMS pair links actual raw candidates to the two original native patches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3130,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:33.188Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-5d330923818a762333be",
+          "file": "wsi.spec.js",
+          "line": 187,
+          "column": 1
+        },
+        {
+          "title": "candidate centres are selectable without blocking drag; navigator moves both panes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2663,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:36.326Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-f2b05d0867d50a6f8d93",
+          "file": "wsi.spec.js",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "a stalled overlay cannot indefinitely block the real WSI",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16358,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:38.995Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-75c0f28ea6f92bc2af72",
+          "file": "wsi.spec.js",
+          "line": 270,
+          "column": 1
+        },
+        {
+          "title": "unanalysed scan has no fabricated result; old positive and negative GT cases remain accessible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2863,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:55.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-6fa936f03e35c5c00a66",
+          "file": "wsi.spec.js",
+          "line": 285,
+          "column": 1
+        },
+        {
+          "title": "WSI responsive review 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1618,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:58.230Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-abe2bef0e05ae71987d3",
+          "file": "wsi.spec.js",
+          "line": 309,
+          "column": 3
+        },
+        {
+          "title": "WSI responsive review 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2040,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:27:59.855Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-7356c29c44e7f63be6a4",
+          "file": "wsi.spec.js",
+          "line": 309,
+          "column": 3
+        },
+        {
+          "title": "WSI responsive review 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:28:01.903Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-48bfcd164c0a25b07f0f",
+          "file": "wsi.spec.js",
+          "line": 309,
+          "column": 3
+        },
+        {
+          "title": "tile outage and metadata failure are visible and retry fetches real data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:28:04.039Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-c7c13451369542fbc89f",
+          "file": "wsi.spec.js",
+          "line": 339,
+          "column": 1
+        },
+        {
+          "title": "invalid and empty manifests disable actions; missing overlay is disclosed and retried",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3021,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:28:05.907Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-adab3815555bf4ad3b40",
+          "file": "wsi.spec.js",
+          "line": 366,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T13:24:22.634Z",
+    "duration": 226404.61099999998,
+    "expected": 88,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

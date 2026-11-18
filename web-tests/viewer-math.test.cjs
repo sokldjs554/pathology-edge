@@ -59,3 +59,17 @@ test('selection radius stays fixed in screen pixels; visible filtering keeps ori
   assert.equal(list.length, 1);
   assert.equal(list[0].index, 1);
 });
+
+test('fractional CSS canvas sizes use the same logical size as the backing pixels', () => {
+  assert.deepEqual(JSON.parse(JSON.stringify(M.rasterDimensions(454.5, 371.40625, 1))), { width:455, height:371 });
+  assert.deepEqual(JSON.parse(JSON.stringify(M.rasterDimensions(454.5, 371.40625, 2))), { width:454.5, height:371.5 });
+});
+
+test('native-size rendering aligns image edges to pixels in an odd-sized canvas', () => {
+  const t = M.transform(455, 371, 1, 256, 256);
+  assert.equal(t.ox, -29);
+  assert.equal(t.oy, -71);
+  const source = M.toImage(t.ox + 200.5, t.oy + 200.5, t);
+  assert.equal(source.x, 200.5);
+  assert.equal(source.y, 200.5);
+});

@@ -1,0 +1,46 @@
+{
+  "recorded_utc": "2026-11-16T09:17:40.201730+00:00",
+  "ui_commit": "4ba0a122b1372dfd5688b2652a743b5a42be7667",
+  "version": 24,
+  "site_source_commit": "f35d9ba9129fb1a7794857f9e3206f533a62139d",
+  "deployment_id": "appgdep_6afac8ecafd88191b396fa20856fc14c",
+  "deployment_status": "succeeded",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html",
+  "changes": [
+    "정답 사례 → 맞게 분류한 사례",
+    "정답 중심·crop → 세포 위치·확대 영역",
+    "Terminology kept in title and aria-describedby method help",
+    "Mobile select min-width prevents collapse under the longer labels"
+  ],
+  "unchanged": [
+    "IHC logic and stored data/metrics/models",
+    "WSI and TNBC behavior and content"
+  ],
+  "source_browser_run": 43837392655,
+  "source_reports": {
+    "source-chromium": {
+      "startTime": "2026-11-16T09:11:40.917Z",
+      "duration": 184786.41799999998,
+      "expected": 81,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "source-webkit": {
+      "startTime": "2026-11-16T09:11:50.654Z",
+      "duration": 230509.708,
+      "expected": 81,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "public_targeted_run": 43837712207,
+  "public_targeted_status": "queued",
+  "public_html_and_css_exact_source_match": true,
+  "source_file_matches": 2197,
+  "node_passed": 16,
+  "screenshots_origin": "Source Chromium run 43837392655; to be replaced with final public capture if available.",
+  "user_confirmed_this_revision": false,
+  "initial_reports": "initial-* reports describe c2a7b9c / public version23 before the mobile select width adjustment."
+}

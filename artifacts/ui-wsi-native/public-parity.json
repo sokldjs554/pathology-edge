@@ -1,0 +1,63 @@
+{
+  "ui_commit": "a1d5de47d496abab1c83a0bbbab2eb66a4aa16de",
+  "site_commit": "bc27b78372b6589e4e944f61a00fe424c097c869",
+  "site_version": 26,
+  "identical_site_dist_files": 2197,
+  "public_fetched_files": [
+    {
+      "path": "wsi.js",
+      "sha256": "6edef959a1660e7350f87ced2f418bea448fec63dc62f8b20a6c1683326622bc",
+      "matches": true
+    },
+    {
+      "path": "wsi.html",
+      "sha256": "44533a2d40328ce1eced392b6b0b6add28dc757de38c8e33644745ea4e164bb5",
+      "matches": true
+    },
+    {
+      "path": "secondary-review.css",
+      "sha256": "1aa5217a45487e975cdbd2351aca1f1c28b1d8b7db5fec8027c38826d7fc762b",
+      "matches": true
+    },
+    {
+      "path": "wsi.json",
+      "sha256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "sha256": "40a8550b9a14567c09520a355616f6da92503f39a31c4e568e7164de41877405",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "sha256": "91160e7ec869ab2a536dca6a8573cb4807dc184d6512c991d7098a0d483444a0",
+      "matches": true
+    },
+    {
+      "path": "ihc.html",
+      "sha256": "09715111184a1bdcb4e04040795b37ea0827e7d45998592e23358922721ec41c",
+      "matches": true
+    },
+    {
+      "path": "ihc.js",
+      "sha256": "c9187c17b93bbe29e8221b2603b43a834f61c75c78fd2490e96b8e88b6fdd7a2",
+      "matches": true
+    },
+    {
+      "path": "wsi/R1.png",
+      "sha256": "fe9aae2ba037beb47d7aa74e058b0660ab86ad434d7f6676f7fe258fe9f8a7f3",
+      "matches": true
+    },
+    {
+      "path": "wsi/R2.png",
+      "sha256": "404f05f24fb421ce328141bc9c141df7fa53b24cff8413e73ea90ca3d0ca6441",
+      "matches": true
+    },
+    {
+      "path": "wsi/R3.png",
+      "sha256": "b526e9c9a33a3a0e0ed29f8c9d47981ee320fc380ea54c7f49f5bd04ec74c08c",
+      "matches": true
+    }
+  ]
+}

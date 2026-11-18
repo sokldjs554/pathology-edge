@@ -1,0 +1,136 @@
+{
+  "verified_utc": "2026-11-16T08:37:57.079859+00:00",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "github_ui_commit": "d8d42635345876bf870959515e5d9f989ddd4450",
+  "site_source_commit": "c92fd2c3769aee268c0f7a257a5e8bfacfcfcca9",
+  "local_source_files_matched": 2197,
+  "live_files_checked": [
+    {
+      "path": "index.html",
+      "source_sha256": "40a8550b9a14567c09520a355616f6da92503f39a31c4e568e7164de41877405",
+      "response_sha256": "40a8550b9a14567c09520a355616f6da92503f39a31c4e568e7164de41877405",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "app.js",
+      "source_sha256": "91160e7ec869ab2a536dca6a8573cb4807dc184d6512c991d7098a0d483444a0",
+      "response_sha256": "91160e7ec869ab2a536dca6a8573cb4807dc184d6512c991d7098a0d483444a0",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-entry.css",
+      "source_sha256": "370ae8acfc389482db471fa5d8349422b8fad7a0ec79c973faa5e38e721d59fe",
+      "response_sha256": "370ae8acfc389482db471fa5d8349422b8fad7a0ec79c973faa5e38e721d59fe",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-entry.js",
+      "source_sha256": "dec8232b839ffd7088ee6789e1783e16ce3170411f905a8347e074ee0cfb2eb5",
+      "response_sha256": "dec8232b839ffd7088ee6789e1783e16ce3170411f905a8347e074ee0cfb2eb5",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-ui.js",
+      "source_sha256": "4ec9e92412ddcaafea151dd121b8d3882babfce5e4df1be5af5be37f4b875249",
+      "response_sha256": "4ec9e92412ddcaafea151dd121b8d3882babfce5e4df1be5af5be37f4b875249",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "studio-ui.js",
+      "source_sha256": "b6ee82c5bdd52a4ddd10daddabe9bea6592d7d5e36cbf0773b355bcba0a006c1",
+      "response_sha256": "b6ee82c5bdd52a4ddd10daddabe9bea6592d7d5e36cbf0773b355bcba0a006c1",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "wsi.html",
+      "source_sha256": "c8ac15ab0613b84c0494ae67371f98ed493cc88b2681b651504122714e867484",
+      "response_sha256": "c8ac15ab0613b84c0494ae67371f98ed493cc88b2681b651504122714e867484",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "ihc.html",
+      "source_sha256": "fdb6dc2e36f8fb7b410025134ab755d26b3962fbcce54f007a470a2b9d8d4ae6",
+      "response_sha256": "fdb6dc2e36f8fb7b410025134ab755d26b3962fbcce54f007a470a2b9d8d4ae6",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "cases.json",
+      "source_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "response_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "results.json",
+      "source_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "response_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "wsi.js",
+      "source_sha256": "23c2e089732883af59c48992137f80720b160a53fe1abbde7bb1cd7cde60374e",
+      "response_sha256": "23c2e089732883af59c48992137f80720b160a53fe1abbde7bb1cd7cde60374e",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "ihc.js",
+      "source_sha256": "dfedf6facd7dabaf87b378faf4076bd3ac985516f3ab8fb2fd18b0b6703a1934",
+      "response_sha256": "dfedf6facd7dabaf87b378faf4076bd3ac985516f3ab8fb2fd18b0b6703a1934",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "secondary-review.css",
+      "source_sha256": "f4623ab6b88d877e9942443dbf56f4ede9a42cfb20f251860c7b8b9fa613ac32",
+      "response_sha256": "f4623ab6b88d877e9942443dbf56f4ede9a42cfb20f251860c7b8b9fa613ac32",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "wsi.json",
+      "source_sha256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+      "response_sha256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "ihc/results.json",
+      "source_sha256": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+      "response_sha256": "902d8962e33edc573aaff027b124711f983eb7e268f30751c3dd903ba10ec506",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "ihc/model.json",
+      "source_sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+      "response_sha256": "a0d75efdada6a5a2a077e3144ffc7685430a5130de769d69ccc155d511b48a3a",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "studio.css",
+      "source_sha256": "303630a0c42b2f42521ed545dbd7e94a4d63186c42d1a7fc223e984c0a966027",
+      "response_sha256": "303630a0c42b2f42521ed545dbd7e94a4d63186c42d1a7fc223e984c0a966027",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "stain-theme.css",
+      "source_sha256": "561e11db3d4812fb7e5da6e2e33f88ecd460d21f539d684686843b024c1f59b1",
+      "response_sha256": "561e11db3d4812fb7e5da6e2e33f88ecd460d21f539d684686843b024c1f59b1",
+      "matched": true,
+      "hosting_injection": null
+    }
+  ],
+  "note": "All dist files matched between the GitHub checkout and published Site source; public HTTP checked UI files and unchanged evidence/model/shared styles. Public access is checked separately by browser CI."
+}

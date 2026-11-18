@@ -11,6 +11,8 @@ const WSI = {
   frames: 0,
   tiles: { loaded: 0, failed: 0, levels: new Set() },
   failedOverlays: new Set(),
+  nativeImages: new Set(),
+  failedNativeImages: new Set(),
 };
 const $ = (id) => document.getElementById(id);
 const number = (n) => Number(n).toLocaleString('en-US');
@@ -43,9 +45,26 @@ function layoutPanels() {
   );
 }
 function showResults() {
+  const restore = preserveCamera();
   $('workbench').classList.remove('results-hidden');
   if (innerWidth <= 760) $('workbench').classList.add('regions-hidden');
   layoutPanels();
+  restore();
+}
+// Keep native image scale and position when available canvas space changes.
+function preserveCamera() {
+  const viewport = WSI.viewers.B?.viewport;
+  const center = viewport?.getCenter(true);
+  const scale = viewport?.viewportToImageZoom(viewport.getZoom(true));
+  return () =>
+    requestAnimationFrame(() => {
+      resizeViewers();
+      if (center && Number.isFinite(scale)) {
+        viewport.zoomTo(viewport.imageToViewportZoom(scale), null, true);
+        viewport.panTo(center, true);
+      }
+      updateView();
+    });
 }
 function ready() {
   document.body.dataset.phase = 'ready';
@@ -87,16 +106,65 @@ function failure(message, metadata = false) {
   }
   text('status', message);
 }
+function assetWarnings() {
+  const messages = [];
+  if (WSI.tiles.failed)
+    messages.push('일부 영상 타일을 불러오지 못했습니다. 다시 불러오세요.');
+  if (WSI.failedOverlays.size)
+    messages.push('일부 예측 오버레이 파일을 불러오지 못했습니다. 표시 누락은 핵 예측이 없다는 뜻이 아닙니다. 다시 불러오세요.');
+  if (WSI.failedNativeImages.size)
+    messages.push('일부 원본 PNG를 읽지 못해 해당 영역은 JPEG 타일로 표시합니다. 다시 불러오세요.');
+  text('tileWarningText', messages.join(' '));
+  $('tileWarning').hidden = !messages.length;
+}
+async function loadNativeImages(data, signal) {
+  // These are the exact existing model-input RGB PNGs, not enhanced images.
+  // Load independently so a slow PNG cannot block whole-slide exploration.
+  await Promise.all(data.rois.map(async (roi) => {
+    const image = new Image();
+    image.src = roi.image;
+    let timer;
+    try {
+      await Promise.race([
+        image.decode(),
+        new Promise((_, reject) => {
+          timer = setTimeout(() => reject(new Error('native image timeout')), 15000);
+        }),
+      ]);
+      if (image.naturalWidth !== roi.width || image.naturalHeight !== roi.height)
+        throw new Error('native image dimensions do not match the ROI');
+      if (signal.aborted || WSI.data !== data) return;
+      WSI.nativeImages.add(roi.image);
+    } catch {
+      if (signal.aborted || WSI.data !== data) return;
+      WSI.failedNativeImages.add(roi.image);
+    } finally {
+      clearTimeout(timer);
+    }
+    renderOverlays();
+    assetWarnings();
+  }));
+}
 function resizeViewers() {
-  for (const [id, viewer] of Object.entries(WSI.viewers)) {
-    const box = $('viewer' + id).getBoundingClientRect();
-    if (box.width > 0 && box.height > 0 && viewer.viewport) {
-      viewer.viewport.resize(
-        new OpenSeadragon.Point(box.width, box.height),
-        true,
-      );
+  // This is the only resize owner. OpenSeadragon's automatic resize would
+  // otherwise apply its old-container zoom ratio after our manual fit.
+  WSI.resizing = true;
+  try {
+    for (const [id, viewer] of Object.entries(WSI.viewers)) {
+      const box = $('viewer' + id).getBoundingClientRect();
+      const v = viewer.viewport;
+      if (!v || box.width <= 0 || box.height <= 0) continue;
+      const size = v.getContainerSize();
+      if (Math.abs(size.x - box.width) < 0.01 && Math.abs(size.y - box.height) < 0.01) continue;
+      const center = v.getCenter(true);
+      const scale = v.viewportToImageZoom(v.getZoom(true));
+      v.resize(new OpenSeadragon.Point(box.width, box.height), true);
+      v.zoomTo(v.imageToViewportZoom(scale), null, true);
+      v.panTo(center, true);
       viewer.forceRedraw();
     }
+  } finally {
+    WSI.resizing = false;
   }
 }
 function synchronize(source) {
@@ -117,7 +185,7 @@ function synchronize(source) {
   WSI.syncing = false;
 }
 function updateView(source = WSI.viewers.B) {
-  if (!source?.world.getItemCount()) return;
+  if (WSI.resizing || !source?.world.getItemCount()) return;
   synchronize(source);
   if (WSI.frames) return;
   WSI.frames = requestAnimationFrame(() => {
@@ -162,10 +230,6 @@ function updateView(source = WSI.viewers.B) {
         `${(um / WSI.data.slide.mpp_x) * scale}px`;
       if (id === 'B') {
         text('zoomReadout', `${Math.round(scale * 100)}%`);
-        text(
-          'position',
-          `level-0 중심 x ${Math.round(center.x)} · y ${Math.round(center.y)}`,
-        );
         const roi = WSI.data.rois.find(
           (r) =>
             center.x >= r.origin[0] &&
@@ -173,6 +237,12 @@ function updateView(source = WSI.viewers.B) {
             center.y >= r.origin[1] &&
             center.y < r.origin[1] + r.height,
         );
+        const native = roi && $('showNativeRGB').checked && WSI.nativeImages.has(roi.image);
+        text('position', `${native ? '원본 PNG' : 'JPEG 타일'}${scale > 1.0001 ? ' · 확대 표시' : ''} · x ${Math.round(center.x)} · y ${Math.round(center.y)}`);
+        $('position').title = `현재 level-0 중심의 영상 출처. ${native ? roi.id + ' 원본 RGB PNG' : '전체 슬라이드 JPEG 타일'}. 100%는 원본 1픽셀 = 화면 1 CSS 픽셀이며 그 이상은 기존 픽셀을 늘린 표시입니다.`;
+        $('zoomReadout').title = scale > 1.0001
+          ? '원본보다 확대 표시 중입니다. 원본 1:1로 돌아갈 수 있습니다.'
+          : '100%는 원본 1픽셀을 화면 1 CSS 픽셀로 표시합니다.';
         text(
           'centerCoverage',
           roi ? `현재 중심: ${roi.id} 분석 범위` : '현재 중심: 미분석',
@@ -245,7 +315,7 @@ function setMode(mode) {
     updateView();
   });
 }
-function fit(box, margin = 0) {
+function fit(box, margin = 0, maxScale = 1) {
   requestAnimationFrame(() => {
     resizeViewers();
     const v = WSI.viewers.B.viewport;
@@ -258,6 +328,13 @@ function fit(box, margin = 0) {
       ),
       true,
     );
+    // Routine framing stays native. Explicit boundary inspection may enlarge
+    // up to its supplied cap; the existing source/zoom label discloses this.
+    if (v.viewportToImageZoom(v.getZoom(true)) > maxScale) {
+      const center = v.getCenter(true);
+      v.zoomTo(v.imageToViewportZoom(maxScale), null, true);
+      v.panTo(center, true);
+    }
     synchronize(WSI.viewers.B);
     updateView();
   });
@@ -266,6 +343,7 @@ function selectROI(id, mode = 'compare') {
   const roi = WSI.data.rois.find((r) => r.id === id);
   if (!roi) return;
   WSI.roi = roi;
+  text('selectedRegion', `${id} · 저장된 분석 ROI`);
   WSI.pair = null;
   WSI.selected = null;
   WSI.boundary = null;
@@ -357,8 +435,8 @@ function jumpDifference() {
   );
   $('differenceDetail').hidden = false;
   $('traceDetail').hidden = true;
-  fit(c.bbox_level0, 96);
   if (innerWidth > 1199) showResults();
+  fit(c.bbox_level0, 48, 3);
 }
 function pairInfo(pair) {
   const m = WSI.roi.methods.overlap;
@@ -405,6 +483,8 @@ function selectPair(index) {
   if (!WSI.roi) selectROI(WSI.data.rois[0].id, 'trace');
   const p = WSI.roi.methods.overlap.suppressed[index];
   if (!p) return;
+  $('traceTools').open = true;
+  showResults();
   setMode('trace');
   WSI.pair = p;
   WSI.selected = null;
@@ -454,6 +534,7 @@ function selectCandidate(method, rawIndex) {
     row('평균 확률', o.score.toFixed(3)) +
     '<p>이 후보와 연결된 억제·유지 쌍은 저장 결과에 없습니다.</p>';
   $('traceDetail').hidden = false;
+  $('traceTools').open = true;
   $('differenceDetail').hidden = true;
   renderOverlays();
   showResults();
@@ -471,6 +552,8 @@ function renderOverlays() {
     for (const r of WSI.data.rois) {
       const [x, y] = r.origin,
         box = [x, y, x + r.width, y + r.height];
+      if ($('showNativeRGB').checked && WSI.nativeImages.has(r.image))
+        markup += `<image data-native-rgb="${r.id}" href="${r.image}" x="${x}" y="${y}" width="${r.width}" height="${r.height}" preserveAspectRatio="none" pointer-events="none"/>`;
       if (
         $('showMask').checked &&
         !WSI.failedOverlays.has(r.methods[method].overlay)
@@ -578,6 +661,7 @@ function setupViewer(id) {
     id: 'viewer' + id,
     tileSources: WSI.data.slide.tile_source,
     drawer: 'canvas',
+    autoResize: false,
     showNavigationControl: false,
     showNavigator: id === 'B',
     navigatorPosition: 'BOTTOM_RIGHT',
@@ -727,7 +811,9 @@ function home() {
 }
 async function init() {
   WSI.events?.abort();
+  WSI.resizeObserver?.disconnect();
   WSI.events = new AbortController();
+  const signal = WSI.events.signal;
   if (WSI.frames) cancelAnimationFrame(WSI.frames);
   WSI.frames = 0;
   controls(true);
@@ -745,8 +831,12 @@ async function init() {
   $('roiList').replaceChildren();
   $('jumpDifference').disabled = true;
   text('activeRegion', '스캔 전체 탐색');
+  text('selectedRegion', '전체 슬라이드');
+  text('centerCoverage', '분석 범위 확인 중');
   WSI.tiles = { loaded: 0, failed: 0, levels: new Set() };
   WSI.failedOverlays.clear();
+  WSI.nativeImages.clear();
+  WSI.failedNativeImages.clear();
   document.body.dataset.phase = 'loading';
   $('stageMessage').hidden = false;
   $('tileWarning').hidden = true;
@@ -755,7 +845,9 @@ async function init() {
       signal: AbortSignal.timeout(20000),
     });
     if (!response.ok) throw new Error(`결과 목록 HTTP ${response.status}`);
-    WSI.data = await response.json();
+    const data = await response.json();
+    if (signal.aborted) return;
+    WSI.data = data;
     if (!WSI.data.slide?.tile_source || !Array.isArray(WSI.data.rois))
       throw new Error('WSI 분석 목록 형식이 올바르지 않습니다.');
     if (!WSI.data.rois.length) {
@@ -791,7 +883,7 @@ async function init() {
       if (b) selectROI(b.dataset.roi);
     };
     $('provenance').innerHTML =
-      `<p>원본 <a href="${s.source_url}" target="_blank" rel="noreferrer">${escape(s.name)} ↗</a><br>${escape(s.credit)} · <a href="${s.license_url}" target="_blank" rel="noreferrer">${escape(s.license)}</a></p><p>원본 SHA-256</p><div class="hash">${s.source_sha256}</div><p>고정 TinyUNet · TNBC H&E 학습 · threshold 0.5</p><div class="hash">${WSI.data.model.sha256}</div><p>화면용 타일은 같은 SVS 원본에서 OpenSlide로 직접 생성한 JPEG Q75이며 이 데모에서 제공합니다. 분석은 원본의 native RGB에서 수행했습니다. JPEG 손실압축으로 화면 타일과 ROI PNG의 픽셀값은 완전히 같지 않습니다.</p><a href="wsi/provenance.json">실행·출처 기록 ↗</a>`;
+      `<p>원본 <a href="${s.source_url}" target="_blank" rel="noreferrer">${escape(s.name)} ↗</a><br>${escape(s.credit)} · <a href="${s.license_url}" target="_blank" rel="noreferrer">${escape(s.license)}</a></p><p>원본 SHA-256</p><div class="hash">${s.source_sha256}</div><p>고정 TinyUNet · TNBC H&E 학습 · threshold 0.5</p><div class="hash">${WSI.data.model.sha256}</div><p>전체 슬라이드 배경은 같은 SVS에서 만든 JPEG Q75 타일입니다. R1–R3에는 분석에 사용한 native 1024×1024 RGB PNG를 원래 위치에 표시해 추가 JPEG 재압축을 피합니다. ‘원본 ROI 화질’을 끄거나 PNG 로딩에 실패하면 해당 위치도 JPEG 타일로 표시합니다. PNG와 JPEG 타일의 픽셀값은 완전히 같지 않습니다. 원본을 넘어선 디테일을 생성하거나 새 추론을 실행하지 않습니다.</p><a href="wsi/provenance.json">실행·출처 기록 ↗</a>`;
     await Promise.all(
       WSI.data.rois
         .flatMap((r) => [
@@ -814,23 +906,26 @@ async function init() {
               }),
             ]);
           } catch {
-            WSI.failedOverlays.add(path);
+            if (!signal.aborted) WSI.failedOverlays.add(path);
           } finally {
             clearTimeout(timer);
           }
         }),
     );
+    if (signal.aborted) return;
     setupViewer('A');
     setupViewer('B');
+    WSI.resizeObserver = new ResizeObserver(() => {
+      if (signal.aborted) return;
+      resizeViewers();
+      updateView();
+    });
+    for (const id of ['A', 'B']) WSI.resizeObserver.observe($('viewer' + id));
     renderOverlays();
-    if (WSI.failedOverlays.size) {
-      text(
-        'tileWarningText',
-        '일부 예측 오버레이 파일을 불러오지 못했습니다. 표시 누락은 핵 예측이 없다는 뜻이 아닙니다. 다시 불러오세요.',
-      );
-      $('tileWarning').hidden = false;
-    }
+    assetWarnings();
+    void loadNativeImages(WSI.data, signal);
   } catch (error) {
+    if (signal.aborted) return;
     failure(
       error.name === 'TimeoutError'
         ? '분석 목록 응답 시간이 초과되었습니다.'
@@ -839,7 +934,7 @@ async function init() {
     );
   }
 }
-if (innerWidth <= 1199) $('workbench').classList.add('results-hidden');
+$('workbench').classList.add('results-hidden');
 if (innerWidth <= 760) $('workbench').classList.add('regions-hidden');
 layoutPanels();
 for (const [id, mode] of [
@@ -852,6 +947,7 @@ for (const [id, mode] of [
     if (mode === 'trace') selectPair(0);
   };
 for (const id of [
+  'showNativeRGB',
   'showBounds',
   'showMask',
   'showGrid',
@@ -880,6 +976,10 @@ $('native').onclick = () => {
 };
 $('home').onclick = home;
 $('slideOverview').onclick = () => {
+  text(
+    'selectedRegion',
+    WSI.roi ? `${WSI.roi.id} 선택 유지 · 전체 보기` : '전체 슬라이드',
+  );
   setMode('explore');
   requestAnimationFrame(home);
 };
@@ -888,21 +988,26 @@ for (const [id, cls] of [
   ['toggleResults', 'results-hidden'],
 ])
   $(id).onclick = () => {
+    const restore = preserveCamera();
     $('workbench').classList.toggle(cls);
     layoutPanels();
-    requestAnimationFrame(() => {
-      resizeViewers();
-      updateView();
-    });
+    restore();
   };
 $('closeResults').onclick = () => {
+  const restore = preserveCamera();
   $('workbench').classList.add('results-hidden');
   layoutPanels();
-  requestAnimationFrame(() => {
-    resizeViewers();
-    updateView();
-  });
+  restore();
 };
+document.addEventListener('click', (event) => {
+  if (!$('displayTools').contains(event.target)) $('displayTools').open = false;
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && $('displayTools').open) {
+    $('displayTools').open = false;
+    $('displayTools').querySelector('summary').focus();
+  }
+});
 for (const id of ['A', 'B'])
   $('mobile' + id).onclick = () => {
     $('panes').classList.toggle('show-a', id === 'A');
@@ -912,7 +1017,7 @@ for (const id of ['A', 'B'])
 $('help').onclick = () => $('helpDialog').showModal();
 $('closeHelp').onclick = () => $('helpDialog').close();
 $('retryTiles').onclick = () => {
-  if (!WSI.viewers.B?.viewport || WSI.failedOverlays.size) {
+  if (!WSI.viewers.B?.viewport || WSI.failedOverlays.size || WSI.failedNativeImages.size) {
     init();
     return;
   }

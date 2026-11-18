@@ -1,0 +1,580 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/pathology-edge/pathology-edge/web-tests/playwright.config.js",
+    "rootDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/c2a7b9c9eefd964b5d196fa737e2c06edf774444",
+        "commitHash": "c2a7b9c9eefd964b5d196fa737e2c06edf774444",
+        "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/43836807364"
+      },
+      "gitCommit": {
+        "shortHash": "c2a7b9c",
+        "hash": "c2a7b9c9eefd964b5d196fa737e2c06edf774444",
+        "subject": "ui: clarify IHC correct-case and cell overlay labels",
+        "body": "ui: clarify IHC correct-case and cell overlay labels\n",
+        "author": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794819864000
+        },
+        "committer": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794819864000
+        },
+        "branch": "feat/linked-pathology-workbench"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/c2a7b9c9eefd964b5d196fa737e2c06edf774444",
+            "commitHash": "c2a7b9c9eefd964b5d196fa737e2c06edf774444",
+            "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/43836807364"
+          },
+          "gitCommit": {
+            "shortHash": "c2a7b9c",
+            "hash": "c2a7b9c9eefd964b5d196fa737e2c06edf774444",
+            "subject": "ui: clarify IHC correct-case and cell overlay labels",
+            "body": "ui: clarify IHC correct-case and cell overlay labels\n",
+            "author": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794819864000
+            },
+            "committer": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794819864000
+            },
+            "branch": "feat/linked-pathology-workbench"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.js"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ihc.spec.js",
+      "file": "ihc.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "IHC source pixels, all 16 real cases, GT coordinates and scores follow the export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13925,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:01.323Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-dedb61c6d5353c389d7d",
+          "file": "ihc.spec.js",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "experiment metrics, confusion, split, limits and NC attribution retain real evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1332,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:15.859Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-70884ddf5bad833c5e4c",
+          "file": "ihc.spec.js",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "IHC image, example selection, crop and result drawer remain usable at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:17.200Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-804afd0d5325921dd2e2",
+          "file": "ihc.spec.js",
+          "line": 154,
+          "column": 3
+        },
+        {
+          "title": "IHC image, example selection, crop and result drawer remain usable at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1237,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:18.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-7ba2bd35a4dbacb8d1d5",
+          "file": "ihc.spec.js",
+          "line": 154,
+          "column": 3
+        },
+        {
+          "title": "slow response shows a genuine loading state and no old classification",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:19.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-493750c5b1f33416cc5b",
+          "file": "ihc.spec.js",
+          "line": 197,
+          "column": 1
+        },
+        {
+          "title": "HTTP error can retry into the real experiment without inventing metrics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1030,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:21.113Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-a9ebfeacd343b64aef1e",
+          "file": "ihc.spec.js",
+          "line": 217,
+          "column": 1
+        },
+        {
+          "title": "empty example collection stays empty, then retry restores supplied examples",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1020,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:22.152Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-bf2f511dd9afb648909e",
+          "file": "ihc.spec.js",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "missing source image is explicit and retry does not substitute another cell",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1103,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:23.182Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-d136db5fc36eb4f6baa4",
+          "file": "ihc.spec.js",
+          "line": 253,
+          "column": 1
+        },
+        {
+          "title": "out-of-image ground-truth coordinate is rejected rather than displayed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:24.299Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-4c5825bd0ef128a79387",
+          "file": "ihc.spec.js",
+          "line": 269,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "secondary-review.spec.js",
+      "file": "secondary-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2742,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:25.000Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-734ac68c11ff0ee5b1b2",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2043,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:27.764Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-daa5ec585f69b599b41d",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:29.818Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-7f18140699ad20582bb5",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "studio.spec.js",
+      "file": "studio.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "studio mobile data view stays visible after selecting A; IHC case strip closes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2039,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T09:08:32.989Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-c56528a55a2496fb7aa3",
+          "file": "studio.spec.js",
+          "line": 35,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T09:08:00.510Z",
+    "duration": 34568.276999999995,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,8 @@
+GitHub Actions run: 43874042267
+Source commit: a1d5de47d496abab1c83a0bbbab2eb66a4aa16de
+test	Run python -m pytest -q	2026-11-16T13:17:01.8486860Z 462 passed in 27.17s
+test	Run python scripts/audit_dice.py --output work/dice-audit.json	2026-11-16T13:17:02.9893091Z 42/42 Dice values and 6/6 image means match.
+test	Run python scripts/audit_dice.py --output work/dice-audit.json	2026-11-16T13:17:02.9894124Z method           all       boundary  interior
+test	Run python scripts/audit_dice.py --output work/dice-audit.json	2026-11-16T13:17:02.9894489Z no_overlap       0.558001  0.491793  0.572866
+test	Run python scripts/audit_dice.py --output work/dice-audit.json	2026-11-16T13:17:02.9895279Z overlap          0.560790  0.527261  0.569630
+test	Run python scripts/validate_demo.py	2026-11-16T13:17:03.6497026Z PASS: 7 real samples, 42 images/overlays, DOM targets, source/mode labels. Static-only check; browser evidence is separate.

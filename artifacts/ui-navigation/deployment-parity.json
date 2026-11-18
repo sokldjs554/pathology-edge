@@ -1,0 +1,80 @@
+{
+  "verified_utc": "2026-11-16T07:23:54.780148+00:00",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "github_ui_commit": "445ebe61dbb83c7de1ce3b2c570fbc4e9ed96e9f",
+  "site_source_commit": "bf5fac1c135d378dfaaa6fa85e3803736ebfea38",
+  "local_source_files_matched": 2196,
+  "live_files_checked": [
+    {
+      "path": "index.html",
+      "source_sha256": "40a8550b9a14567c09520a355616f6da92503f39a31c4e568e7164de41877405",
+      "response_sha256": "40a8550b9a14567c09520a355616f6da92503f39a31c4e568e7164de41877405",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "app.js",
+      "source_sha256": "91160e7ec869ab2a536dca6a8573cb4807dc184d6512c991d7098a0d483444a0",
+      "response_sha256": "91160e7ec869ab2a536dca6a8573cb4807dc184d6512c991d7098a0d483444a0",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-entry.css",
+      "source_sha256": "370ae8acfc389482db471fa5d8349422b8fad7a0ec79c973faa5e38e721d59fe",
+      "response_sha256": "370ae8acfc389482db471fa5d8349422b8fad7a0ec79c973faa5e38e721d59fe",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-entry.js",
+      "source_sha256": "dec8232b839ffd7088ee6789e1783e16ce3170411f905a8347e074ee0cfb2eb5",
+      "response_sha256": "dec8232b839ffd7088ee6789e1783e16ce3170411f905a8347e074ee0cfb2eb5",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-ui.js",
+      "source_sha256": "4ec9e92412ddcaafea151dd121b8d3882babfce5e4df1be5af5be37f4b875249",
+      "response_sha256": "4ec9e92412ddcaafea151dd121b8d3882babfce5e4df1be5af5be37f4b875249",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "studio-ui.js",
+      "source_sha256": "b6ee82c5bdd52a4ddd10daddabe9bea6592d7d5e36cbf0773b355bcba0a006c1",
+      "response_sha256": "b6ee82c5bdd52a4ddd10daddabe9bea6592d7d5e36cbf0773b355bcba0a006c1",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "wsi.html",
+      "source_sha256": "80212815cc7c6d505f0cee461b329f563235dd4f2862d474edb51af3d87f8a07",
+      "response_sha256": "80212815cc7c6d505f0cee461b329f563235dd4f2862d474edb51af3d87f8a07",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "ihc.html",
+      "source_sha256": "a9ead0c3d1be8832c61f9b8416849a975510b730189080a29c970c607c75e235",
+      "response_sha256": "a9ead0c3d1be8832c61f9b8416849a975510b730189080a29c970c607c75e235",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "cases.json",
+      "source_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "response_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "results.json",
+      "source_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "response_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "matched": true,
+      "hosting_injection": null
+    }
+  ],
+  "note": "All 2196 files matched between the GitHub checkout and published Site source; live public HTTP checked the three changed HTML pages and seven unchanged application/evidence files. Public access is checked separately by browser CI."
+}

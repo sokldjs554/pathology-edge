@@ -75,13 +75,26 @@ const Review = {
     $('caseLoadNotice').textContent = text;
     $('caseLoadNotice').className = '';
   },
+  caseFor(direction) {
+    return this.data?.cases.find(
+      (c) => c.sample_id === state.sample?.id && c.direction === direction,
+    );
+  },
   refresh() {
     const ready = state.phase === 'ready';
     for (const [id, direction] of [
       ['showImproved', 'improved'],
       ['showWorsened', 'worsened'],
-    ])
-      $(id).disabled = !ready || !this.data?.recommended[direction];
+    ]) {
+      const target = this.caseFor(direction);
+      const name = direction === 'improved' ? '좋아진 경계' : '나빠진 경계';
+      const missing = ready && this.data && !target;
+      $(id).disabled = !ready || !target;
+      $(id).textContent = missing ? `${name}: 저장 사례 없음` : `${name} 보기`;
+      $(id).title = missing
+        ? `${state.sample.id}에는 이 방향의 검토 기준을 충족한 저장 사례가 없습니다. 다른 이미지로 이동하지 않습니다.`
+        : `현재 이미지 ${state.sample?.id || ''} 안의 ${name}로 이동합니다.`;
+    }
     $('jumpBoundary').disabled =
       !ready || !this.data?.cases.some((c) => c.sample_id === state.sample?.id);
     $('caseSelect').disabled = !ready;
@@ -93,6 +106,7 @@ const Review = {
     this.selected = this.layer = null;
     $('caseDetail').hidden = true;
     for (const canvas of canvases) delete canvas.dataset.case;
+    window.ReviewEntry?.refresh();
   },
   current() {
     const candidates =
@@ -178,9 +192,12 @@ const Review = {
     ctx.putImageData(pixels, 0, 0);
     return layer;
   },
-  async open(id) {
+  async open(id, { immediate = false } = {}) {
     const c = this.data?.cases.find((c) => c.id === id);
     if (!c) return;
+    // Restore paired review when requested, before loading. A later layout choice
+    // must survive the asynchronous image load and evidence validation.
+    if (window.Studio && (Studio.layout !== 'compare' || Studio.comparison !== 'two')) Studio.setComparison('two');
     const intent = ++this.intent;
     let request = state.request;
     if (state.sample?.id !== c.sample_id) {
@@ -189,7 +206,7 @@ const Review = {
       await loading;
     }
     // Let loadSample's fit render first, then apply the requested review viewport.
-    await new Promise(requestAnimationFrame);
+    if (!immediate) await new Promise(requestAnimationFrame);
     if (
       intent !== this.intent ||
       request !== state.request ||
@@ -203,7 +220,8 @@ const Review = {
       setScope('all');
       $('objects').checked = false;
       $('grid').checked = true;
-      $('caseHighlight').checked = true;
+      $('caseHighlight').checked = false;
+      $('segmentation').checked = true;
       this.selected = c;
       this.layer = layer;
       $('caseDetail').hidden = false;
@@ -224,22 +242,25 @@ const Review = {
         `이 상자 안 경계 띠만의 점수입니다. ${c.sample_id} 이미지 전체 Dice 차이는 ${this.signed(imageDelta)}로, 국소 사례와 방향이 다를 수 있습니다. 아래 이미지 지표는 확대해도 바뀌지 않습니다.`;
       $('modeDescription').textContent =
         `${c.sample_id} · 국소 ${c.direction === 'improved' ? '개선' : '악화'} · 흰 상자 = 동일 영역 · 청록 개선 / 분홍 악화`;
-      // Do not cover the only canvas with the floating inspector on small screens.
-      if (innerWidth >= 1200) setTab('image');
-      else setTab('image', false);
+      // Keep both images visible; the compact result offers explicit evidence access.
+      setTab('image', false);
+      window.ReviewEntry?.refresh();
       state.fitMode = false;
       state.cx = c.center[0];
       state.cy = c.center[1];
       const views = visibleCanvases().map(dimensions);
+      // Show tissue around the 64px ROI (at least 192px on the short axis).
+      // This is display scaling, not optical magnification; + remains available.
       state.zoom = Math.min(
-        6,
-        ...views.map((v) => Math.min(v.width, v.height) / 108),
+        3,
+        ...views.map((v) => Math.min(v.width, v.height) / 192),
       );
       clampView();
       draw();
       renderObjectOptions();
       $('status').textContent =
         `${c.sample_id} · 선택 경계 ${c.center.join(', ')}px · 사후 선택 사례 · 상세는 결과 패널`;
+      history.replaceState(null, '', `${location.pathname}?sample=${encodeURIComponent(c.sample_id)}&case=${encodeURIComponent(c.id)}`);
     } catch (error) {
       this.clear();
       this.notice(
@@ -354,12 +375,12 @@ const Review = {
       `전체 Dice 증가 ${improved}개 / 감소 ${worsened}개. 10_1도 전체·경계 모두 감소합니다. 예제 번호로 실제 영역을 여세요.`;
   },
   bind() {
-    $('showImproved').addEventListener('click', () =>
-      this.open(this.data?.recommended.improved),
-    );
-    $('showWorsened').addEventListener('click', () =>
-      this.open(this.data?.recommended.worsened),
-    );
+    for (const [id, direction] of [['showImproved', 'improved'], ['showWorsened', 'worsened']]) {
+      $(id).addEventListener('click', () => {
+        const target = this.caseFor(direction);
+        if (state.phase === 'ready' && target) this.open(target.id);
+      });
+    }
     $('caseSelect').addEventListener('change', (e) =>
       this.open(e.target.value),
     );

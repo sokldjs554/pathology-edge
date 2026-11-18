@@ -1,0 +1,8 @@
+{
+  "slide": "CMU-1-JP2K-33005.svs",
+  "sha256": "9a1923cd9bcb260ba4d99d64f8d6e32550648c332ba48817f920662f3a513420",
+  "matches_manifest": true,
+  "roi_png_file_hashes_match": true,
+  "new_inference_run": false,
+  "new_training_run": false
+}

@@ -1,0 +1,112 @@
+{
+  "github_ui_commit": "2852b335654e1739d73b02be89d970234eada9c4",
+  "site_source_commit": "d908780f0a4ee7a9e75b1eb60c438b3a78c2dcc5",
+  "version_number": 12,
+  "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_d6a4ab71a25c8191b1f226fbce875aa9",
+  "deployment_id": "appgdep_6af9ed8115b0819190b43b215e4dcaf7",
+  "deployment_status": "succeeded",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "deployed_utc": "2026-11-15T17:36:16.728153+00:00",
+  "checkout_browser_run": 43741673952,
+  "production_browser_run": 43742062792,
+  "cpu_run": 43741679797,
+  "python_tests_passed": 462,
+  "node_tests_passed": 14,
+  "dice_checks": 42,
+  "image_means": 6,
+  "experiment_assets_unchanged": true,
+  "user_verified_revision": false,
+  "browser_reports": {
+    "checkout-chromium": {
+      "file": "checkout-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-15T17:33:11.368Z",
+        "duration": 94866.776,
+        "expected": 55,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "checkout-webkit": {
+      "file": "checkout-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-15T17:33:41.079Z",
+        "duration": 114339.936,
+        "expected": 55,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-chromium": {
+      "file": "production-chromium-report.json",
+      "stats": {
+        "startTime": "2026-11-15T17:37:21.459Z",
+        "duration": 126301.184,
+        "expected": 55,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "production-webkit": {
+      "file": "production-webkit-report.json",
+      "stats": {
+        "startTime": "2026-11-15T17:37:43.147Z",
+        "duration": 148435.139,
+        "expected": 55,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  },
+  "matched_deployment_files": 2193,
+  "screenshots": {
+    "candidate-data.png": {
+      "sha256": "6502a5ac6cad832ff9bec765543e4c592fb80303a08cdb7162d12924eba2c601",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    },
+    "entry.png": {
+      "sha256": "8495437794b57290a80933aaabba98938defdbbedeee331408c5ac3a09254361",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    },
+    "four.png": {
+      "sha256": "cbcdafefc691a285ce07e965cf30f9cefb01cd1a8c8675053e70fcf958f690d6",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    },
+    "ihc.png": {
+      "sha256": "30fbe60a2db233a8fbd607e8b5d8d51d0124bba392b8be8c9d3d9ab8d31c9cc4",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    },
+    "mobile-data.png": {
+      "sha256": "70932ad52ee1069ca5c1ad46b8a833faee1e675498e2181a65703d892006c77b",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    },
+    "wsi-mobile.png": {
+      "sha256": "830671960524e2952698c9c46fe337248a7e143726ade960fe372eb64a1b25b4",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    },
+    "wsi.png": {
+      "sha256": "486bda0f4145f3595b7d4fd203951ea1f9d3aa2f1d4a8aca3f5fb0058cf17aed",
+      "production_browser_run": 43742062792,
+      "browser": "chromium"
+    }
+  },
+  "changed_dist_files_since_v11": [
+    "dist/app.js",
+    "dist/ihc.html",
+    "dist/index.html",
+    "dist/studio-ui.js",
+    "dist/studio.css",
+    "dist/workbench-ui.js",
+    "dist/wsi.html"
+  ]
+}

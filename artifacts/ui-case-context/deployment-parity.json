@@ -1,0 +1,52 @@
+{
+  "verified_utc": "2026-11-16T00:59:50.630222+00:00",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "github_ui_commit": "71ba59faabef9c633cc117f30463449dd4c5a607",
+  "site_source_commit": "51a503b1ae4e3474cdd5305d95b5f52797b406ea",
+  "local_source_files_matched": 2195,
+  "live_files_checked": [
+    {
+      "path": "index.html",
+      "source_sha256": "93079871fa59c8b271284cfb019674be314fcfbe7d69e51ad9534ae70abf26f3",
+      "response_sha256": "93079871fa59c8b271284cfb019674be314fcfbe7d69e51ad9534ae70abf26f3",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-entry.css",
+      "source_sha256": "e836a1c05c4afcc052b8006a919e262059b5666f9ccfbd0919794854abb31d19",
+      "response_sha256": "e836a1c05c4afcc052b8006a919e262059b5666f9ccfbd0919794854abb31d19",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-entry.js",
+      "source_sha256": "c2816beed41b63a5b9ec1dfe2639e251a6918df5f9b7c03441cdac6dd2bb9fd0",
+      "response_sha256": "c2816beed41b63a5b9ec1dfe2639e251a6918df5f9b7c03441cdac6dd2bb9fd0",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "review-ui.js",
+      "source_sha256": "6c632be59e29e866f317a3bb1645fbe00de694186c5040bf3b8669877a20246b",
+      "response_sha256": "6c632be59e29e866f317a3bb1645fbe00de694186c5040bf3b8669877a20246b",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "cases.json",
+      "source_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "response_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "results.json",
+      "source_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "response_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "matched": true,
+      "hosting_injection": null
+    }
+  ],
+  "note": "All 2195 files matched between the GitHub checkout and published Site source; live public HTTP checked the four changed UI files and two evidence JSON files. Public access is checked separately by browser CI."
+}

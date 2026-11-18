@@ -1,0 +1,3294 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/pathology-edge/pathology-edge/web-tests/playwright.config.js",
+    "rootDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/b772479be29c4940aab22ad245e17934fd8bdc35",
+        "commitHash": "b772479be29c4940aab22ad245e17934fd8bdc35",
+        "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/43869881972"
+      },
+      "gitCommit": {
+        "shortHash": "b772479",
+        "hash": "b772479be29c4940aab22ad245e17934fd8bdc35",
+        "subject": "test: define native WSI display and zoom expectations",
+        "body": "test: define native WSI display and zoom expectations\n",
+        "author": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794833294000
+        },
+        "committer": {
+          "name": "Codex",
+          "email": "codex@users.noreply.github.com",
+          "time": 1794833294000
+        },
+        "branch": "feat/linked-pathology-workbench"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/sokldjs554/pathology-edge/commit/b772479be29c4940aab22ad245e17934fd8bdc35",
+            "commitHash": "b772479be29c4940aab22ad245e17934fd8bdc35",
+            "buildHref": "https://github.com/sokldjs554/pathology-edge/actions/runs/43869881972"
+          },
+          "gitCommit": {
+            "shortHash": "b772479",
+            "hash": "b772479be29c4940aab22ad245e17934fd8bdc35",
+            "subject": "test: define native WSI display and zoom expectations",
+            "body": "test: define native WSI display and zoom expectations\n",
+            "author": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794833294000
+            },
+            "committer": {
+              "name": "Codex",
+              "email": "codex@users.noreply.github.com",
+              "time": 1794833294000
+            },
+            "branch": "feat/linked-pathology-workbench"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/pathology-edge/pathology-edge/web-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.js"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": {
+      "command": "python3 -m http.server 8765 --directory ../dist --bind 127.0.0.1",
+      "url": "http://127.0.0.1:8765",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "case-scope.spec.js",
+      "file": "case-scope.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "case direction buttons keep the current image and disclose absent evidence at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4855,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:11.288Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2949227de292b60f3bf2-2bd1798a3a1ad61e0923",
+          "file": "case-scope.spec.js",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "case direction buttons keep the current image and disclose absent evidence at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4563,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:16.588Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2949227de292b60f3bf2-100e04187c3e4db51764",
+          "file": "case-scope.spec.js",
+          "line": 5,
+          "column": 31
+        }
+      ]
+    },
+    {
+      "title": "clarity.spec.js",
+      "file": "clarity.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "entry immediately explains the method and shows a labeled actual difference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1292,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:21.188Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-88aa84246e52eee08547",
+          "file": "clarity.spec.js",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "all miniature mask pixels and displayed contours come from the saved masks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1263,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:22.488Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-de085a3e03e73affb53a",
+          "file": "clarity.spec.js",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "explicit sample and case links are preserved and selecting another image clears the story",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2793,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:23.760Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-f9cbfe0e88750238b4c9",
+          "file": "clarity.spec.js",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "first comparison and masks remain available at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 834,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:26.564Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-fa415b5795b539c12aaf",
+          "file": "clarity.spec.js",
+          "line": 90,
+          "column": 31
+        },
+        {
+          "title": "first comparison and masks remain available at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:27.409Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-3162e74dc7bcb0d0f8b9",
+          "file": "clarity.spec.js",
+          "line": 90,
+          "column": 31
+        },
+        {
+          "title": "later compareFour wins over automatic entry while images load",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 882,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:28.056Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-3c53f88ce350c1f8ab25",
+          "file": "clarity.spec.js",
+          "line": 98,
+          "column": 50
+        },
+        {
+          "title": "later toggleDock wins over automatic entry while images load",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 891,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:28.947Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f9f0755311f8183b459-c6375985e84d41f75f43",
+          "file": "clarity.spec.js",
+          "line": 98,
+          "column": 50
+        }
+      ]
+    },
+    {
+      "title": "ihc.spec.js",
+      "file": "ihc.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "IHC source pixels, all 16 real cases, GT coordinates and scores follow the export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:29.857Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-dedb61c6d5353c389d7d",
+          "file": "ihc.spec.js",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "experiment metrics, confusion, split, limits and NC attribution retain real evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 643,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:32.207Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-70884ddf5bad833c5e4c",
+          "file": "ihc.spec.js",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "IHC image, example selection, crop and result drawer remain usable at 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 644,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:32.858Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-804afd0d5325921dd2e2",
+          "file": "ihc.spec.js",
+          "line": 154,
+          "column": 3
+        },
+        {
+          "title": "IHC image, example selection, crop and result drawer remain usable at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:33.511Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-7ba2bd35a4dbacb8d1d5",
+          "file": "ihc.spec.js",
+          "line": 154,
+          "column": 3
+        },
+        {
+          "title": "slow response shows a genuine loading state and no old classification",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 474,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:34.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-493750c5b1f33416cc5b",
+          "file": "ihc.spec.js",
+          "line": 197,
+          "column": 1
+        },
+        {
+          "title": "HTTP error can retry into the real experiment without inventing metrics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 491,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:34.620Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-a9ebfeacd343b64aef1e",
+          "file": "ihc.spec.js",
+          "line": 217,
+          "column": 1
+        },
+        {
+          "title": "empty example collection stays empty, then retry restores supplied examples",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:35.121Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-bf2f511dd9afb648909e",
+          "file": "ihc.spec.js",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "missing source image is explicit and retry does not substitute another cell",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:35.670Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-d136db5fc36eb4f6baa4",
+          "file": "ihc.spec.js",
+          "line": 253,
+          "column": 1
+        },
+        {
+          "title": "out-of-image ground-truth coordinate is rejected rather than displayed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:36.124Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b997d58751314cb8819f-4c5825bd0ef128a79387",
+          "file": "ihc.spec.js",
+          "line": 269,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "pan.spec.js",
+      "file": "pan.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pan after one zoom step follows both drag axes 1440 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1558,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:36.320Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDAsIm1vZGUiOiJib3VuZGFyeSJ9LCJiZWZvcmUiOlsxMjgsMjcyXSwiYWZ0ZXIiOlsxMjEuNiwyNjMuNDY3XSwiem9vbSI6My43NSwiZXhwZWN0ZWQiOnsieCI6MTIxLjYsInkiOjI2My40NjY2NjY2NjY2NjY2NH19"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-264bb611554c110ab0a9",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 1280 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1513,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:37.887Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxMjgwLCJoZWlnaHQiOjgwMCwibW9kZSI6ImJvdW5kYXJ5In0sImJlZm9yZSI6WzEyOCwyNzJdLCJhZnRlciI6WzEyMC4zMDQsMjYxLjczOV0sInpvb20iOjMuMTE4NDksImV4cGVjdGVkIjp7IngiOjEyMC4zMDM5Njc2MjUzNTcxNSwieSI6MjYxLjczODYyMzUwMDQ3NjJ9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-84409b22346a512dd781",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 390 boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1505,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:39.408Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjozOTAsImhlaWdodCI6ODQ0LCJtb2RlIjoiYm91bmRhcnkifSwiYmVmb3JlIjpbMTI4LDI3Ml0sImFmdGVyIjpbMTEzLjM3MSwyNTIuNDk1XSwiem9vbSI6MS42NDA2MywiZXhwZWN0ZWQiOnsieCI6MTEzLjM3MTQ3MzE1MzYwNTYyLCJ5IjoyNTIuNDk1Mjk3NTM4MTQwODV9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-d5b208bbeab69d717a1c",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "pan after one zoom step follows both drag axes 1440 single",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1669,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:40.921Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "pan-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJ2aWV3Ijp7IndpZHRoIjoxNDQwLCJoZWlnaHQiOjEwMDAsIm1vZGUiOiJzaW5nbGUifSwiYmVmb3JlIjpbMTI4LDI3Ml0sImFmdGVyIjpbMTIxLjYsMjYzLjQ2N10sInpvb20iOjMuNzUsImV4cGVjdGVkIjp7IngiOjEyMS42LCJ5IjoyNjMuNDY2NjY2NjY2NjY2NjR9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-7ccc4baa4dfa56b70cf8",
+          "file": "pan.spec.js",
+          "line": 33,
+          "column": 3
+        },
+        {
+          "title": "two-finger style horizontal and vertical wheel events pan without changing zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:42.599Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wheel-diagnostic",
+                      "contentType": "application/json",
+                      "body": "eyJiZWZvcmUiOlsxMjgsMjcyXSwiYWZ0ZXIiOlsxMzQuNCwyODAuNTMzXSwiem9vbSI6My43NSwiYWZ0ZXJab29tIjozLjc1fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-a432d23839a75396f020",
+          "file": "pan.spec.js",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "modifier wheel zoom remains available after wheel panning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:43.649Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-3a3367884229ca87b055",
+          "file": "pan.spec.js",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "canvas geometry matches the visible pane rather than overflowing below it",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:45.127Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2595d35dae64abe8817-fe5676d64e263464129d",
+          "file": "pan.spec.js",
+          "line": 131,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "progressive.spec.js",
+      "file": "progressive.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "first visit prioritizes comparison and defers advanced choices",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:45.835Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-0bb7080bcaca048fb892",
+          "file": "progressive.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "advanced controls open on request and keyboard can return to comparison",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1869,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:47.970Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-ff7a58df565126ca261b",
+          "file": "progressive.spec.js",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "progressive menu and scoped outcome remain usable at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 937,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:49.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-64f4e1a22500dc1e9b8c",
+          "file": "progressive.spec.js",
+          "line": 55,
+          "column": 31
+        },
+        {
+          "title": "progressive menu and scoped outcome remain usable at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1054,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:50.795Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-4a2349f42ff9115ea4fd",
+          "file": "progressive.spec.js",
+          "line": 55,
+          "column": 31
+        },
+        {
+          "title": "result-table case restores both images from B-only and candidate views",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1620,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:51.861Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-7d15731fca69b6ed94f9",
+          "file": "progressive.spec.js",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "tablet candidate details share a column without shrinking the image",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1147,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:53.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-a4083247e215d91cbe6a",
+          "file": "progressive.spec.js",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "case loading preserves a later four-pane choice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1113,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:54.651Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-5a5263b5e62a3016141f",
+          "file": "progressive.spec.js",
+          "line": 96,
+          "column": 1
+        },
+        {
+          "title": "case overview keeps tissue context and inline controls at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1360,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:55.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-685bc356f2dad56076da",
+          "file": "progressive.spec.js",
+          "line": 119,
+          "column": 36
+        },
+        {
+          "title": "case overview keeps tissue context and inline controls at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:57.139Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-e5ca6b8b227142fd4008",
+          "file": "progressive.spec.js",
+          "line": 119,
+          "column": 36
+        },
+        {
+          "title": "case overview keeps tissue context and inline controls at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1475,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:49:58.595Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-3d92d031180549d53dbe",
+          "file": "progressive.spec.js",
+          "line": 119,
+          "column": 36
+        },
+        {
+          "title": "detail menu wraps its controls without horizontal scroll",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2954,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:00.078Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b4177a5a16e2a1915f9-4c55818cb8fa2ac75457",
+          "file": "progressive.spec.js",
+          "line": 141,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "review.spec.js",
+      "file": "review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "purpose, one-click improvement and regression, all real local cases and exact image metrics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4143,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:03.066Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-1e54b8a364a20bd72c54",
+          "file": "review.spec.js",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "canvas highlight colors occur at the exported corrected and regressed pixel coordinates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1196,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:07.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-425432b90cb4d8d8dfeb",
+          "file": "review.spec.js",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "aggregate cost, per-image changes and accessible glossary use original precision",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1407,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:08.422Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-c7c259ad030d3bcbec83",
+          "file": "review.spec.js",
+          "line": 147,
+          "column": 1
+        },
+        {
+          "title": "boundary review and same ROI A/B remain usable at 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1369,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:09.837Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-be0994e04637055b7c42",
+          "file": "review.spec.js",
+          "line": 193,
+          "column": 3
+        },
+        {
+          "title": "boundary review and same ROI A/B remain usable at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:11.217Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-2bafb9921ca3c0a3ee07",
+          "file": "review.spec.js",
+          "line": 193,
+          "column": 3
+        },
+        {
+          "title": "boundary review and same ROI A/B remain usable at 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:12.640Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-55e8a2b8583f929cafb3",
+          "file": "review.spec.js",
+          "line": 193,
+          "column": 3
+        },
+        {
+          "title": "missing, mismatched or corrupt case evidence never fabricates a highlight",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1493,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:14.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12430d314f3277ea95-ec5905b3e437b67b20ad",
+          "file": "review.spec.js",
+          "line": 229,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "secondary-review.spec.js",
+      "file": "secondary-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "secondary WSI overview, selected ROI, tools and evidence preserve the camera at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2755,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:15.620Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-644dc20a816863bf771d",
+          "file": "secondary-review.spec.js",
+          "line": 42,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1776,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:18.383Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-734ac68c11ff0ee5b1b2",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "secondary WSI overview, selected ROI, tools and evidence preserve the camera at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:20.168Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-59353d7558b88ceac896",
+          "file": "secondary-review.spec.js",
+          "line": 42,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1311,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:22.456Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-daa5ec585f69b599b41d",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "secondary WSI overview, selected ROI, tools and evidence preserve the camera at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2095,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:23.773Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-601a1a7c4dce6a4688c9",
+          "file": "secondary-review.spec.js",
+          "line": 42,
+          "column": 3
+        },
+        {
+          "title": "secondary IHC selected cell precedes aggregate results and survives panel changes at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 945,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:25.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bcdf9ecf0e549bfc2761-7f18140699ad20582bb5",
+          "file": "secondary-review.spec.js",
+          "line": 105,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "studio.spec.js",
+      "file": "studio.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "studio has three distinct working layouts at laptop size with linked real references",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:26.834Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-ac1fcba4173fc300c98b",
+          "file": "studio.spec.js",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "studio mobile data view stays visible after selecting A; IHC case strip closes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1027,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:29.293Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-c56528a55a2496fb7aa3",
+          "file": "studio.spec.js",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "review entry shows A/B, offers taller two/four views and readable controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3390,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:30.329Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-2617f4978d916c44a433",
+          "file": "studio.spec.js",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "shared navigation is consistent and WSI provenance opens only on request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3597,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:33.726Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3324084181281abe3b7c-f29e8a5b878f42e4ee4b",
+          "file": "studio.spec.js",
+          "line": 75,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ui.spec.js",
+      "file": "ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all seven images load immediately and metrics/counts match the real export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3330,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:37.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-dfe12e112d64a977548c",
+          "file": "ui.spec.js",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "synchronized zoom, drag, overview navigation, keyboard and fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2041,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:40.693Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-c1f5d2f93c0c3fd41db6",
+          "file": "ui.spec.js",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "overlay switches change real pixels and scope metrics correspond to highlighted regions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3537,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:42.740Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-0fa274c74ab7a51be2cf",
+          "file": "ui.spec.js",
+          "line": 137,
+          "column": 1
+        },
+        {
+          "title": "NMS raw-to-kept pair and image click resolve actual exported objects",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2104,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:46.286Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-779b24945e5871ea5d4e",
+          "file": "ui.spec.js",
+          "line": 171,
+          "column": 1
+        },
+        {
+          "title": "single image, focus panels and help are usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1576,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:48.398Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-978546a619f2c4bb9505",
+          "file": "ui.spec.js",
+          "line": 228,
+          "column": 1
+        },
+        {
+          "title": "responsive controls 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:49.982Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-d15270732546a23ebe69",
+          "file": "ui.spec.js",
+          "line": 252,
+          "column": 3
+        },
+        {
+          "title": "responsive controls 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1866,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:51.778Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-4a708baa35ab62906dbd",
+          "file": "ui.spec.js",
+          "line": 252,
+          "column": 3
+        },
+        {
+          "title": "responsive controls 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1803,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:53.650Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-d0f50eb5438a300b2cdc",
+          "file": "ui.spec.js",
+          "line": 252,
+          "column": 3
+        },
+        {
+          "title": "loading, HTTP error, retry and empty states never imply a new analysis",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 796,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:55.460Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-2e57ac11b7409df6034f",
+          "file": "ui.spec.js",
+          "line": 289,
+          "column": 1
+        },
+        {
+          "title": "failed image clears old numbers; rapid sample changes cannot leave mismatched results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1464,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:56.264Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-97360bf0741a2dd84742",
+          "file": "ui.spec.js",
+          "line": 329,
+          "column": 1
+        },
+        {
+          "title": "served UI and result bytes match this repository commit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 120,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:57.738Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-ed87e45ba1b1b5e22128",
+          "file": "ui.spec.js",
+          "line": 358,
+          "column": 1
+        },
+        {
+          "title": "canvas source pixels match the selected exported image at 1:1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1942,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:57.864Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cacfa4b79c1be8f210f-a7eb72983ca25de2f4c8",
+          "file": "ui.spec.js",
+          "line": 439,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workbench.spec.js",
+      "file": "workbench.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "candidate table navigates to original exported candidate and links its detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1046,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:50:59.833Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-09b4092d1df6a59aca90",
+          "file": "workbench.spec.js",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "image changes clear the object crop and restore the full candidate list",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 936,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:00.886Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-36b6f1a2a2ee35a0c095",
+          "file": "workbench.spec.js",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "pane maximize restores synchronized comparison without changing selected case",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1260,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:01.829Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-140fb97120bc5fdd2b04",
+          "file": "workbench.spec.js",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "small screen keeps candidate and result controls available without page overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 795,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:03.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-96cafdf3982affe505ee",
+          "file": "workbench.spec.js",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "short mobile workbench scrolls to the candidate dock without clipping controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1003,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:03.899Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "786bed9da8f8fd2ce49c-df96acad8c7010a91e97",
+          "file": "workbench.spec.js",
+          "line": 49,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wsi-native.spec.js",
+      "file": "wsi-native.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "WSI native RGB uses original level-0 pixels in both panes and survives display changes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5829,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayA [data-native-rgb=\"R1\"]')\nExpected: \u001b[32m\"wsi/R1.png\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayA [data-native-rgb=\"R1\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayA [data-native-rgb=\"R1\"]')\nExpected: \u001b[32m\"wsi/R1.png\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayA [data-native-rgb=\"R1\"]')\u001b[22m\n\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:21:27",
+                    "location": {
+                      "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                      "column": 27,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m pane \u001b[36mof\u001b[39m [\u001b[32m'A'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'B'\u001b[39m]) {\n \u001b[90m 20 |\u001b[39m       \u001b[36mconst\u001b[39m layer\u001b[33m=\u001b[39msourceLayer(page\u001b[33m,\u001b[39mpane\u001b[33m,\u001b[39mroi\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m       \u001b[36mawait\u001b[39m expect(layer)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'href'\u001b[39m\u001b[33m,\u001b[39mroi\u001b[33m.\u001b[39mimage)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m       \u001b[36mawait\u001b[39m expect(layer)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'x'\u001b[39m\u001b[33m,\u001b[39m\u001b[33mString\u001b[39m(roi\u001b[33m.\u001b[39morigin[\u001b[35m0\u001b[39m]))\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m expect(layer)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'y'\u001b[39m\u001b[33m,\u001b[39m\u001b[33mString\u001b[39m(roi\u001b[33m.\u001b[39morigin[\u001b[35m1\u001b[39m]))\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m       \u001b[36mawait\u001b[39m expect(layer)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'width'\u001b[39m\u001b[33m,\u001b[39m\u001b[33mString\u001b[39m(roi\u001b[33m.\u001b[39mwidth))\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                        "column": 27,
+                        "line": 21
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayA [data-native-rgb=\"R1\"]')\nExpected: \u001b[32m\"wsi/R1.png\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayA [data-native-rgb=\"R1\"]')\u001b[22m\n\n\n  19 |     for (const pane of ['A','B']) {\n  20 |       const layer=sourceLayer(page,pane,roi.id);\n> 21 |       await expect(layer).toHaveAttribute('href',roi.image);\n     |                           ^\n  22 |       await expect(layer).toHaveAttribute('x',String(roi.origin[0]));\n  23 |       await expect(layer).toHaveAttribute('y',String(roi.origin[1]));\n  24 |       await expect(layer).toHaveAttribute('width',String(roi.width));\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:21:27"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:04.931Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-RGB--7c55f-nd-survives-display-changes/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-RGB--7c55f-nd-survives-display-changes/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-RGB--7c55f-nd-survives-display-changes/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                    "column": 27,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-76c9ea5d40c53729417b",
+          "file": "wsi-native.spec.js",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "WSI native automatic zoom preserves boundary center and manual inspection at 1440",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6001,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayB [data-native-rgb=\"R1\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayB [data-native-rgb=\"R1\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayB [data-native-rgb=\"R1\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayB [data-native-rgb=\"R1\"]')\u001b[22m\n\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:64:44",
+                    "location": {
+                      "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                      "column": 44,
+                      "line": 64
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 62 |\u001b[39m \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m [width\u001b[33m,\u001b[39mheight] \u001b[36mof\u001b[39m [[\u001b[35m1440\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1000\u001b[39m]\u001b[33m,\u001b[39m[\u001b[35m375\u001b[39m\u001b[33m,\u001b[39m\u001b[35m667\u001b[39m]]) test(\u001b[32m`WSI native automatic zoom preserves boundary center and manual inspection at ${width}`\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 63 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetViewportSize({width\u001b[33m,\u001b[39mheight})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/wsi.html'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m select(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m   \u001b[36mawait\u001b[39m expect(sourceLayer(page\u001b[33m,\u001b[39m\u001b[32m'B'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'R1'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#jumpDifference'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m   \u001b[36mconst\u001b[39m target\u001b[33m=\u001b[39mdata\u001b[33m.\u001b[39mrois[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mdifference\u001b[33m.\u001b[39mcases[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mcenter_level0\u001b[33m.\u001b[39mmap(x\u001b[33m=>\u001b[39mx\u001b[33m.\u001b[39mtoFixed(\u001b[35m4\u001b[39m))\u001b[33m.\u001b[39mjoin(\u001b[32m','\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m   \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m pane \u001b[36mof\u001b[39m [\u001b[32m'A'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'B'\u001b[39m]) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                        "column": 44,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayB [data-native-rgb=\"R1\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayB [data-native-rgb=\"R1\"]')\u001b[22m\n\n\n  62 | for(const [width,height] of [[1440,1000],[375,667]]) test(`WSI native automatic zoom preserves boundary center and manual inspection at ${width}`,async({page})=>{\n  63 |   await page.setViewportSize({width,height});await page.goto('/wsi.html');await ready(page);await select(page);\n> 64 |   await expect(sourceLayer(page,'B','R1')).toBeVisible();\n     |                                            ^\n  65 |   await page.locator('#jumpDifference').click();\n  66 |   const target=data.rois[0].difference.cases[0].center_level0.map(x=>x.toFixed(4)).join(',');\n  67 |   for(const pane of ['A','B']) {\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:64:44"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:11.804Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-auto-14cbc-d-manual-inspection-at-1440/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-auto-14cbc-d-manual-inspection-at-1440/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-auto-14cbc-d-manual-inspection-at-1440/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                    "column": 44,
+                    "line": 64
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-c17d1e48a4e20b81be3d",
+          "file": "wsi-native.spec.js",
+          "line": 62,
+          "column": 54
+        },
+        {
+          "title": "WSI native automatic zoom preserves boundary center and manual inspection at 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5805,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayB [data-native-rgb=\"R1\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayB [data-native-rgb=\"R1\"]')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayB [data-native-rgb=\"R1\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayB [data-native-rgb=\"R1\"]')\u001b[22m\n\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:64:44",
+                    "location": {
+                      "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                      "column": 44,
+                      "line": 64
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 62 |\u001b[39m \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m [width\u001b[33m,\u001b[39mheight] \u001b[36mof\u001b[39m [[\u001b[35m1440\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1000\u001b[39m]\u001b[33m,\u001b[39m[\u001b[35m375\u001b[39m\u001b[33m,\u001b[39m\u001b[35m667\u001b[39m]]) test(\u001b[32m`WSI native automatic zoom preserves boundary center and manual inspection at ${width}`\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 63 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetViewportSize({width\u001b[33m,\u001b[39mheight})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/wsi.html'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m select(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m   \u001b[36mawait\u001b[39m expect(sourceLayer(page\u001b[33m,\u001b[39m\u001b[32m'B'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'R1'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#jumpDifference'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m   \u001b[36mconst\u001b[39m target\u001b[33m=\u001b[39mdata\u001b[33m.\u001b[39mrois[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mdifference\u001b[33m.\u001b[39mcases[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mcenter_level0\u001b[33m.\u001b[39mmap(x\u001b[33m=>\u001b[39mx\u001b[33m.\u001b[39mtoFixed(\u001b[35m4\u001b[39m))\u001b[33m.\u001b[39mjoin(\u001b[32m','\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m   \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m pane \u001b[36mof\u001b[39m [\u001b[32m'A'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'B'\u001b[39m]) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                        "column": 44,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#overlayB [data-native-rgb=\"R1\"]')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#overlayB [data-native-rgb=\"R1\"]')\u001b[22m\n\n\n  62 | for(const [width,height] of [[1440,1000],[375,667]]) test(`WSI native automatic zoom preserves boundary center and manual inspection at ${width}`,async({page})=>{\n  63 |   await page.setViewportSize({width,height});await page.goto('/wsi.html');await ready(page);await select(page);\n> 64 |   await expect(sourceLayer(page,'B','R1')).toBeVisible();\n     |                                            ^\n  65 |   await page.locator('#jumpDifference').click();\n  66 |   const target=data.rois[0].difference.cases[0].center_level0.map(x=>x.toFixed(4)).join(',');\n  67 |   for(const pane of ['A','B']) {\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:64:44"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:18.753Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-auto-cc468-nd-manual-inspection-at-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-auto-cc468-nd-manual-inspection-at-375/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-auto-cc468-nd-manual-inspection-at-375/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                    "column": 44,
+                    "line": 64
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-0243d6b219922fb54efe",
+          "file": "wsi-native.spec.js",
+          "line": 62,
+          "column": 54
+        },
+        {
+          "title": "WSI native PNG failures retain JPEG and predictions; retry restores the original image",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5994,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#tileWarning')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 3\u001b[39m\n\n\u001b[32m- 원본 PNG\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+             타일 다시 불러오기\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#tileWarning')\u001b[22m\n\u001b[2m    9 × locator resolved to <div hidden=\"\" role=\"alert\" id=\"tileWarning\" class=\"tile-warning\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m            타일 다시 불러오기\u001b[22m\n\u001b[2m          \"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#tileWarning')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 3\u001b[39m\n\n\u001b[32m- 원본 PNG\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+             타일 다시 불러오기\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#tileWarning')\u001b[22m\n\u001b[2m    9 × locator resolved to <div hidden=\"\" role=\"alert\" id=\"tileWarning\" class=\"tile-warning\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m            타일 다시 불러오기\u001b[22m\n\u001b[2m          \"\u001b[22m\n\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:89:46",
+                    "location": {
+                      "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                      "column": 46,
+                      "line": 89
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 87 |\u001b[39m   \u001b[36mconst\u001b[39m r\u001b[33m=\u001b[39mdata\u001b[33m.\u001b[39mrois[\u001b[35m0\u001b[39m]\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/'\u001b[39m\u001b[33m+\u001b[39mr\u001b[33m.\u001b[39mimage\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39mroute\u001b[33m.\u001b[39mfulfill({status\u001b[33m:\u001b[39m\u001b[35m404\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m'missing'\u001b[39m}))\u001b[33m;\u001b[39m\n \u001b[90m 88 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/wsi.html'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m select(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#tileWarning'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'원본 PNG'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 90 |\u001b[39m   \u001b[36mawait\u001b[39m expect(sourceLayer(page\u001b[33m,\u001b[39m\u001b[32m'B'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m.\u001b[39mid))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#position'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'JPEG 타일'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#overlayB [data-mask=\"R1-overlap\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'href'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m.\u001b[39mmethods\u001b[33m.\u001b[39moverlap\u001b[33m.\u001b[39moverlay)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                        "column": 46,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#tileWarning')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 3\u001b[39m\n\n\u001b[32m- 원본 PNG\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+             타일 다시 불러오기\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#tileWarning')\u001b[22m\n\u001b[2m    9 × locator resolved to <div hidden=\"\" role=\"alert\" id=\"tileWarning\" class=\"tile-warning\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m            타일 다시 불러오기\u001b[22m\n\u001b[2m          \"\u001b[22m\n\n\n  87 |   const r=data.rois[0];await page.route('**/'+r.image,route=>route.fulfill({status:404,body:'missing'}));\n  88 |   await page.goto('/wsi.html');await ready(page);await select(page);\n> 89 |   await expect(page.locator('#tileWarning')).toContainText('원본 PNG');\n     |                                              ^\n  90 |   await expect(sourceLayer(page,'B',r.id)).toHaveCount(0);\n  91 |   await expect(page.locator('#position')).toContainText('JPEG 타일');\n  92 |   await expect(page.locator('#overlayB [data-mask=\"R1-overlap\"]')).toHaveAttribute('href',r.methods.overlap.overlay);\n    at /home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js:89:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:25.402Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-PNG--5b7e8-restores-the-original-image/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-PNG--5b7e8-restores-the-original-image/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/pathology-edge/pathology-edge/web-tests/test-results/wsi-native-WSI-native-PNG--5b7e8-restores-the-original-image/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/pathology-edge/pathology-edge/web-tests/wsi-native.spec.js",
+                    "column": 46,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1b5799bc5653eb958989-038804efed2893ce7a81",
+          "file": "wsi-native.spec.js",
+          "line": 86,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wsi.spec.js",
+      "file": "wsi.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real multilevel tiles load; ROI masks, metrics and native coordinates use the same slide",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2301,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:32.374Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-a1e94d59596af945530c",
+          "file": "wsi.spec.js",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "real XOR case, shared viewport, ordinary scroll, dragging and calibrated zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:34.750Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-ada08b042e14e90b5c07",
+          "file": "wsi.spec.js",
+          "line": 117,
+          "column": 1
+        },
+        {
+          "title": "NMS pair links actual raw candidates to the two original native patches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:37.598Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-5d330923818a762333be",
+          "file": "wsi.spec.js",
+          "line": 186,
+          "column": 1
+        },
+        {
+          "title": "candidate centres are selectable without blocking drag; navigator moves both panes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2085,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:40.009Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-f2b05d0867d50a6f8d93",
+          "file": "wsi.spec.js",
+          "line": 235,
+          "column": 1
+        },
+        {
+          "title": "a stalled overlay cannot indefinitely block the real WSI",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16233,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:42.103Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-75c0f28ea6f92bc2af72",
+          "file": "wsi.spec.js",
+          "line": 269,
+          "column": 1
+        },
+        {
+          "title": "unanalysed scan has no fabricated result; old positive and negative GT cases remain accessible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1610,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:58.343Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-6fa936f03e35c5c00a66",
+          "file": "wsi.spec.js",
+          "line": 284,
+          "column": 1
+        },
+        {
+          "title": "WSI responsive review 1024x768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1341,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:51:59.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-abe2bef0e05ae71987d3",
+          "file": "wsi.spec.js",
+          "line": 308,
+          "column": 3
+        },
+        {
+          "title": "WSI responsive review 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1361,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:52:01.312Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-7356c29c44e7f63be6a4",
+          "file": "wsi.spec.js",
+          "line": 308,
+          "column": 3
+        },
+        {
+          "title": "WSI responsive review 375x667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:52:02.683Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-48bfcd164c0a25b07f0f",
+          "file": "wsi.spec.js",
+          "line": 308,
+          "column": 3
+        },
+        {
+          "title": "tile outage and metadata failure are visible and retry fetches real data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1199,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:52:03.935Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-c7c13451369542fbc89f",
+          "file": "wsi.spec.js",
+          "line": 338,
+          "column": 1
+        },
+        {
+          "title": "invalid and empty manifests disable actions; missing overlay is disclosed and retried",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1843,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:52:05.143Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fa4aafb7db442dea7956-adab3815555bf4ad3b40",
+          "file": "wsi.spec.js",
+          "line": 365,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T12:49:10.180Z",
+    "duration": 176911.059,
+    "expected": 81,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

@@ -22,12 +22,12 @@
 **처음 받기 — 상위 작업 폴더에서 실행:**
 
 ```bash
-git clone --depth 1 --filter=blob:none --sparse --branch feat/linked-pathology-workbench https://github.com/sokldjs554/pathology-edge.git pathology-edge
+git clone --depth 1 --filter=blob:none --sparse --branch main https://github.com/sokldjs554/pathology-edge.git pathology-edge
 cd pathology-edge
 git sparse-checkout set dist
 ```
 
-공개 UI 브랜치의 화면용 파일과 WSI 타일을 받는 경량 checkout입니다. `main`의 기존 화면과 다릅니다. [검사한 커밋·배포 버전](PUBLIC_DEMO_VERSION.md). 기존 저장소를 사용할 때는 `git branch --show-current`로 브랜치를 확인하세요. 수정 파일이 있는 폴더를 강제로 전환하지 말고, 최신 UI가 필요하면 다른 이름의 새 폴더에 위 브랜치를 clone하세요. 다음 명령은 **선택한 저장소 루트**에서 실행합니다.
+공개 UI가 통합된 `main`의 화면용 파일과 WSI 타일을 받는 경량 checkout입니다. [검사한 커밋·배포 버전](PUBLIC_DEMO_VERSION.md). 기존 저장소를 사용할 때는 `git branch --show-current`로 브랜치를 확인하세요. 수정 파일이 있는 폴더를 강제로 전환하지 말고, 최신 UI가 필요하면 다른 이름의 새 폴더에 `main`을 clone하세요. 다음 명령은 **선택한 저장소 루트**에서 실행합니다.
 
 ```bash
 python3 -m http.server 8000 --directory dist --bind 127.0.0.1

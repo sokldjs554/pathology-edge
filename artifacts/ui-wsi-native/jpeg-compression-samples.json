@@ -1,0 +1,38 @@
+[
+  {
+    "roi": "R1",
+    "native_window": [
+      6368,
+      21088,
+      64,
+      64
+    ],
+    "jpeg_tile": "dist/wsi/slide_files/16/6_20.jpeg",
+    "rgb_mean_absolute_difference": 4.142659505208333,
+    "metric_scope": "display compression difference only; not model accuracy"
+  },
+  {
+    "roi": "R2",
+    "native_window": [
+      29920,
+      10144,
+      64,
+      64
+    ],
+    "jpeg_tile": "dist/wsi/slide_files/16/29_9.jpeg",
+    "rgb_mean_absolute_difference": 2.9586588541666665,
+    "metric_scope": "display compression difference only; not model accuracy"
+  },
+  {
+    "roi": "R3",
+    "native_window": [
+      16352,
+      26592,
+      64,
+      64
+    ],
+    "jpeg_tile": "dist/wsi/slide_files/16/16_26.jpeg",
+    "rgb_mean_absolute_difference": 4.179280598958333,
+    "metric_scope": "display compression difference only; not model accuracy"
+  }
+]

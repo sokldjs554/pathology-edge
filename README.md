@@ -6,22 +6,24 @@
 
 | 구분 | 확인할 수 있는 범위 | 코드·상태 |
 |---|---|---|
-| 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | 저장 결과: `main` · 현재 UI: [`feat/linked-pathology-workbench`](https://github.com/sokldjs554/pathology-edge/tree/feat/linked-pathology-workbench), [Draft PR #3](https://github.com/sokldjs554/pathology-edge/pull/3)·main 미병합 |
+| 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | 현재 UI·저장 결과: [`main`](https://github.com/sokldjs554/pathology-edge/tree/main) · [UI 통합 PR #3](https://github.com/sokldjs554/pathology-edge/pull/3) |
 | 후속 연구 | 자동 IHC 패치 검출·분류, 사전학습 대조, 추가 외부 평가 | [`feat/auto-ki67`](https://github.com/sokldjs554/pathology-edge/tree/feat/auto-ki67) · [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2), main 미병합·공개 데모 미적용 |
 
-배포 버전 27의 검사 기준 UI는 `5d7d843`입니다. `main` 기본 clone의 화면과 다릅니다. [배포·소스 대응과 고정 스냅샷 실행](docs/PUBLIC_DEMO_VERSION.md).
+배포 버전 27의 검사 기준 UI는 `5d7d843`이며, 동일한 화면 파일을 `main`에 통합했습니다. [배포·소스 대응과 고정 스냅샷 실행](docs/PUBLIC_DEMO_VERSION.md).
 
 연구·교육용 독립 프로젝트입니다. 공개 웹 화면은 **사전 계산된 실제 결과**를 표시합니다. 실제 모델 추론은 아래 CLI로 실행하며, 임상 진단·치료용 도구가 아닙니다.
 
 ## 화면에서 확인하기
 
-1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 예제 선택 → ‘좋아진 경계 보기’ 또는 ‘나빠진 경계 보기’ → 같은 위치의 A/B와 정답·오류 픽셀 비교. 확대·이동과 후보 억제 출처도 확인합니다.
-2. **[WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)**: 전체 슬라이드 확대 → R1–R3 선택 → 해당 ROI의 예측 차이 확인. 전체 슬라이드 탐색과 일부 ROI의 분석을 구분합니다.
-3. **[IHC 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html)**: 예제와 세포 선택 → 정답·예측 클래스 비교. 이 공개 화면은 정답 중심 좌표가 주어진 분류 실험입니다.
+1. **[경계 비교](https://pathology-edge-lab.ykh13571.chatgpt.site/)**: 실제 개선 사례가 먼저 열립니다. 같은 위치의 A/B 예측 윤곽과 정답 마스크를 비교하고, ‘나빠진 경계 보기’로 **현재 이미지 안의** 악화 사례도 확인합니다. 해당 방향의 저장 사례가 없으면 버튼에 표시합니다. **근거 보기**에서 상세 결과를, **상세 도구**에서 원본·정답 4분할·후보 표·중복 병합·표시 설정·전체 실험을 엽니다. 후보 표의 행을 선택하면 해당 위치와 실제 확대 조각이 연결됩니다.
+2. **[WSI 탐색](https://pathology-edge-lab.ykh13571.chatgpt.site/wsi.html)**: 전체 슬라이드 확대 → R1–R3 선택 → 해당 ROI의 예측 차이 확인. 전체 슬라이드 탐색과 일부 ROI의 분석을 구분합니다. 표시 설정과 상세 근거는 필요할 때 펼칩니다. [원본 ROI 화질·1:1 표시 안내](docs/UI_WSI_NATIVE_DISPLAY.md).
+3. **[IHC 세포 분류](https://pathology-edge-lab.ykh13571.chatgpt.site/ihc.html)**: 실패 사례·맞게 분류한 사례 선택 → 원본 위치·세포 확대·정답·예측·선택 점수 확인. 전체 실험 결과와 방법·출처는 접어서 제공합니다. 정답 중심 좌표가 주어진 분류 실험입니다.
 
-![같은 위치의 핵 분할·패치 경계와 정답 기반 차이를 비교하는 작업대](https://raw.githubusercontent.com/sokldjs554/pathology-edge/5d7d843168f0b08bb87d6da2a56468f6a1522fbe/artifacts/ui-navigation/clarity-first.png)
+![현재 이미지의 실제 개선·악화 경계를 A·B·정답 마스크로 비교하는 첫 화면](artifacts/ui-navigation/clarity-first.png)
 
-[WSI 전체 탐색 화면](https://github.com/sokldjs554/pathology-edge/blob/5d7d843168f0b08bb87d6da2a56468f6a1522fbe/artifacts/ui-secondary-review/secondary-wsi-first-1440.png) · [악화 사례](https://github.com/sokldjs554/pathology-edge/blob/5d7d843168f0b08bb87d6da2a56468f6a1522fbe/artifacts/ui-navigation/same-image-worsened-1440.png) · [UI 조사·설계](docs/UI_REVIEW.md)
+[원본·정답 포함 4분할](artifacts/ui-clarity/readability-four.png) · [영상과 후보 데이터 연결](artifacts/ui-clarity/studio-data-laptop.png)
+
+[WSI 전체 탐색 화면](artifacts/ui-secondary-review/secondary-wsi-first-1440.png) · [IHC 선택 세포](artifacts/ui-ihc-wording/secondary-ihc-first-1440.png) · [WSI·IHC 화면 정리와 검증](docs/UI_SECONDARY_REVIEW.md) · [같은 이미지의 악화 사례](artifacts/ui-navigation/same-image-worsened-1440.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md) · [H&E 색상 체계](docs/UI_COLOR_SYSTEM.md) · [첫 화면 개편·검증](docs/UI_FIRST_VISIT.md) · [현재 이미지의 경계 이동](docs/UI_BOUNDARY_CASE_SCOPE.md) · [상단 메뉴·로고 이동](docs/UI_NAVIGATION.md)
 
 ## 직접 담당한 범위
 
@@ -88,7 +90,7 @@ Dice는 높을수록 정답 영역과 잘 겹칩니다. 표의 Dice는 원본 �
 **화면만 보려면** 위 공개 데모를 여세요. 로컬 화면에는 Git과 Python 3만 필요합니다. 아래 명령은 상위 작업 폴더에서 시작합니다.
 
 ```bash
-git clone --depth 1 --filter=blob:none --sparse --branch feat/linked-pathology-workbench https://github.com/sokldjs554/pathology-edge.git pathology-edge
+git clone --depth 1 --filter=blob:none --sparse --branch main https://github.com/sokldjs554/pathology-edge.git pathology-edge
 cd pathology-edge
 git sparse-checkout set dist
 python3 -m http.server 8000 --directory dist --bind 127.0.0.1

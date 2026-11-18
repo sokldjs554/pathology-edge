@@ -36,6 +36,12 @@ const roi = async (page, id = 'R1') => {
     })
     .toBeLessThan(1);
 };
+const display = async (page, id, action = 'click') => {
+  if (!(await page.locator('#' + id).isVisible())) await page.locator('#displayTools > summary').click();
+  await page.locator('#' + id)[action]();
+  if (await page.locator('#displayTools').getAttribute('open') !== null)
+    await page.locator('#displayTools > summary').click();
+};
 const center = (page, id = 'B') =>
   page.locator('#viewer' + id).getAttribute('data-center');
 const synced = async (page) => {
@@ -67,7 +73,7 @@ test('real multilevel tiles load; ROI masks, metrics and native coordinates use 
   });
   await open(page);
   await shot(page, 'overview');
-  await expect(page.locator('.guide')).toContainText('① 슬라이드 탐색');
+  await expect(page.locator('#scopeNote')).toContainText('저장 결과');
   await expect(page.locator('#coverageSummary')).toContainText('0.2079%');
   for (const r of data.rois) {
     await roi(page, r.id);
@@ -88,7 +94,7 @@ test('real multilevel tiles load; ROI masks, metrics and native coordinates use 
     await expect(mask).toHaveAttribute('x', String(r.origin[0]));
     await expect(mask).toHaveAttribute('href', r.methods.overlap.overlay);
   }
-  await page.locator('#native').click();
+  await display(page, 'native', 'click');
   await expect(page.locator('#zoomReadout')).toHaveText('100%');
   await expect
     .poll(() =>
@@ -166,12 +172,12 @@ test('real XOR case, shared viewport, ordinary scroll, dragging and calibrated z
     )
     .toBeGreaterThan(z);
   await synced(page);
-  await page.locator('#showMask').uncheck();
+  await display(page, 'showMask', 'uncheck');
   await expect(page.locator('#overlayB [data-mask]')).toHaveCount(0);
-  await page.locator('#showDifference').uncheck();
+  await display(page, 'showDifference', 'uncheck');
   await expect(page.locator('#overlayB [data-difference]')).toHaveCount(0);
-  await page.locator('#showMask').check();
-  await page.locator('#showDifference').check();
+  await display(page, 'showMask', 'check');
+  await display(page, 'showDifference', 'check');
   await page.locator('#viewerB').focus();
   const old3 = await center(page);
   await page.keyboard.press('ArrowLeft');
@@ -183,6 +189,8 @@ test('NMS pair links actual raw candidates to the two original native patches', 
 }) => {
   await open(page);
   await roi(page);
+  await page.locator('#toggleResults').click();
+  await page.locator('#traceTools > summary').click();
   await page.locator('#traceFirst').click();
   const m = data.rois[0].methods.overlap,
     p = m.suppressed[0];
@@ -230,7 +238,7 @@ test('candidate centres are selectable without blocking drag; navigator moves bo
 }) => {
   await open(page);
   await roi(page);
-  await page.locator('#showCandidates').check();
+  await display(page, 'showCandidates', 'check');
   const object = data.rois[0].methods.no_overlap.objects.find(
     (o) => o.x > 350 && o.x < 650 && o.y > 350 && o.y < 650,
   );
@@ -282,8 +290,8 @@ test('unanalysed scan has no fabricated result; old positive and negative GT cas
   await page.locator('#slideOverview').click();
   await expect(page.locator('#centerCoverage')).toContainText('미분석');
   await expect(page.locator('#overlayB [data-mask]')).toHaveCount(3);
-  await expect(page.locator('.notice')).toContainText(
-    '정확도 개선을 뜻하지 않습니다',
+  await expect(page.locator('#scopeNote')).toContainText(
+    '차이 ≠ 정확도 개선',
   );
   for (const [sample, caseId] of [
     ['11_1', '11_1-improved'],
@@ -380,11 +388,15 @@ test('invalid and empty manifests disable actions; missing overlay is disclosed 
   await expect(page.locator('#overlayB [data-mask="R1-overlap"]')).toHaveCount(
     0,
   );
+  await roi(page, 'R2');
+  await expect(page.locator('#selectedRegion')).toContainText('R2');
   await page.unroute(`**/${path}`);
   await page.locator('#retryTiles').click();
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready', {
     timeout: 25000,
   });
+  await expect(page.locator('#selectedRegion')).toHaveText('전체 슬라이드');
+  await expect(page.locator('#centerCoverage')).toContainText('미분석');
   await expect(page.locator('#overlayB [data-mask="R1-overlap"]')).toHaveCount(
     1,
   );

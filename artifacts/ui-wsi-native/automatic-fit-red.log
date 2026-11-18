@@ -1,0 +1,55 @@
+✖ WSI automatic boundary fit does not enlarge source pixels and retains its target (3.540708ms)
+✔ WSI small viewport fit preserves context without forcing enlargement (2.315871ms)
+✖ WSI large display ROI fit stays at native scale (1.211927ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.164416
+
+✖ failing tests:
+
+test at web-tests/wsi-fit.test.cjs:20:1
+✖ WSI automatic boundary fit does not enlarge source pixels and retains its target (3.540708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  2.34375 !== 1
+
+      at TestContext.<anonymous> (/workspace/pathology-edge-ui/web-tests/wsi-fit.test.cjs:22:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2.34375,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at web-tests/wsi-fit.test.cjs:28:1
+✖ WSI large display ROI fit stays at native scale (1.211927ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 1.5463917525773196
+  - 1
+
+      at TestContext.<anonymous> (/workspace/pathology-edge-ui/web-tests/wsi-fit.test.cjs:30:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1.5463917525773196,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

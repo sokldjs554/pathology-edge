@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-16",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site/",
+  "before_ui_commit": "40a627ba8f994bc865d71a5a0b323bb0a6bd99e7",
+  "github_ui_commit": "cbe1910fb2bb2ee9df6d344de2edb662839c7dd4",
+  "branch": "feat/linked-pathology-workbench",
+  "pull_request": {
+    "url": "https://github.com/sokldjs554/pathology-edge/pull/3",
+    "draft": true,
+    "merged": false
+  },
+  "deployment": {
+    "version": 18,
+    "source_commit": "08e56df844ca1b057ad2bc0a2c0e39ee04089a09",
+    "id": "appgdep_6afa9d31052081918185d0871b0ad5e2",
+    "status": "succeeded",
+    "version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_6f75a82123848191a6a4a0f87d074eca"
+  },
+  "browser_runs": {
+    "checkout": 43813930114,
+    "production": 43814496194
+  },
+  "browser_reports": {
+    "checkout": {
+      "chromium": {
+        "report": "checkout-chromium-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:01:45.639Z",
+          "duration": 141526.285,
+          "expected": 73,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      "webkit": {
+        "report": "checkout-webkit-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:02:31.804Z",
+          "duration": 147267.816,
+          "expected": 73,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    "production": {
+      "chromium": {
+        "report": "production-chromium-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:06:46.105Z",
+          "duration": 154983.596,
+          "expected": 73,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      "webkit": {
+        "report": "production-webkit-report.json",
+        "stats": {
+          "startTime": "2026-11-16T06:06:55.249Z",
+          "duration": 191984.056,
+          "expected": 73,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    }
+  },
+  "artifact_ids": {
+    "checkout_chromium": 14202285329,
+    "checkout_webkit": 14202375042,
+    "production_chromium": 14202196506,
+    "production_webkit": 14201274959
+  },
+  "cpu": {
+    "run_id": 43813930136,
+    "tests_passed": 462,
+    "stored_dice_matches": 42,
+    "image_mean_matches": 6,
+    "static_demo_check": "passed"
+  },
+  "node_tests_passed": 14,
+  "source_parity": "deployment-parity.json",
+  "changed_dist_files": [
+    "dist/app.js",
+    "dist/index.html",
+    "dist/review-entry.css",
+    "dist/review-entry.js",
+    "dist/review-ui.js",
+    "dist/studio-ui.js"
+  ],
+  "stored_images_masks_results_unchanged": true,
+  "learner_code_unchanged": true,
+  "new_inference_run": false,
+  "screenshot_source": {
+    "run_id": 43814496194,
+    "artifact_id": 14202196506,
+    "browser": "chromium",
+    "target": "production",
+    "sha256": {
+      "clarity-1024.png": "58f0677e10be2c31a458c8eae58414f387a5f551a65ee5aff06589addeea73a7",
+      "clarity-375.png": "706b0b7bbb5494f4a59a9b2e86c5a32f6b4a750dffbc0a60c288809fa778ff50",
+      "clarity-first.png": "d4707d00d85b1b1e9084474cebc5e596ed4d6d61f62df0f3c6d34d8e7adfa9a5",
+      "clarity-merge.png": "3336a6c5030a62ab42ed1acd220b04800c38e82f2d44f8fa5519b12443c520cd",
+      "clarity-worsened.png": "54b93b2f57768e3212630c693836a0813cf488cfa90017e2bf0c252bf5c9a886",
+      "context-menu-375.png": "4541817ce102bf05ab23c6d647880c31c725b28699e68e40db36b70b8cd26251",
+      "ihc-375.png": "7c7ae2c89e8bc8f3dabf75b1dd73d1be187ca7ca09ccdbea06fc0d781466e25d",
+      "ihc-desktop.png": "d19b136424f8dc330b22cb7ea649bab3c7e536efc8d6acbf634e7dda30b8ef1c",
+      "readability-four.png": "f6dc3bf218c0c550a4773d21b573240c1ac97c43aae4516e0d9f6cb467625d23",
+      "simple-entry.png": "d4707d00d85b1b1e9084474cebc5e596ed4d6d61f62df0f3c6d34d8e7adfa9a5",
+      "simple-four.png": "72cfe69d10da18cb1c695df9f000e177cbd9839f25fa7d1ebd0603f98f1f3f28",
+      "simple-improved.png": "86ac7b70997437300aa1bddd0cba47461701b66c4ae025ff5735fa193e1cd95c",
+      "simple-tablet-candidates.png": "e5f077fbd9d3282d24368e0f89274feb953a276abcca485a65a5de707677636a",
+      "simple-worsened.png": "54b93b2f57768e3212630c693836a0813cf488cfa90017e2bf0c252bf5c9a886",
+      "studio-data-laptop.png": "baa1634ba1b958ee3756a0b42eadbbdaf367b095c8be69dd895d4fd944b9c82a",
+      "wsi-overview.png": "a43d1cccda479c604e2421acaf74c6f264cf233a605554419591613cf6ba3154",
+      "wsi-roi-native.png": "89b12ab96096c5991de5a0f62ec2396a91c604801d75d0a2b05fae3993a81bf2"
+    }
+  },
+  "independent_review": {
+    "scope": "source review",
+    "resolved": [
+      "automatic initial case must preserve later user layout choice",
+      "mobile mask scope caption must remain visible",
+      "explanatory patch diagram must have visible qualification"
+    ],
+    "browser_verification": "separate full browser CI and actual screenshot inspection"
+  },
+  "user_verified_revision": false,
+  "interviewer_usability_study_run": false,
+  "limitations": [
+    "Automated assertions and screenshot review do not establish comprehension by a first-time interviewer.",
+    "Research/education only; stored results, no live model inference.",
+    "Selected improvement is explicitly labeled and does not represent overall performance.",
+    "Main is not merged; deployed UI source is pinned above."
+  ]
+}

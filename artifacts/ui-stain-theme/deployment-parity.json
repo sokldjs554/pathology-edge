@@ -1,0 +1,52 @@
+{
+  "verified_utc": "2026-11-16T01:39:39.457086+00:00",
+  "url": "https://pathology-edge-lab.ykh13571.chatgpt.site",
+  "github_ui_commit": "9e075e39d08378b3d68cd78303ec8dbe46777761",
+  "site_source_commit": "5f822909e07d0982069857b1a692496a964c2581",
+  "local_source_files_matched": 2196,
+  "live_files_checked": [
+    {
+      "path": "index.html",
+      "source_sha256": "934bd0f08b422603413939e5136efe84e5d74b3dfde1a0354c0f66ee1dd4bb25",
+      "response_sha256": "934bd0f08b422603413939e5136efe84e5d74b3dfde1a0354c0f66ee1dd4bb25",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "wsi.html",
+      "source_sha256": "072644202b75180527998c2c6a49892450d104f6cfcb382ea0d32c3302669817",
+      "response_sha256": "072644202b75180527998c2c6a49892450d104f6cfcb382ea0d32c3302669817",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "ihc.html",
+      "source_sha256": "9091593b512269208a981399ec5579a1e268a62331dba7391dae6d14dc7f938e",
+      "response_sha256": "9091593b512269208a981399ec5579a1e268a62331dba7391dae6d14dc7f938e",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "stain-theme.css",
+      "source_sha256": "561e11db3d4812fb7e5da6e2e33f88ecd460d21f539d684686843b024c1f59b1",
+      "response_sha256": "561e11db3d4812fb7e5da6e2e33f88ecd460d21f539d684686843b024c1f59b1",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "cases.json",
+      "source_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "response_sha256": "743dc6e08edbe1fd277acc855cf8fca92f8243a51d2da527cc18c2b84e462196",
+      "matched": true,
+      "hosting_injection": null
+    },
+    {
+      "path": "results.json",
+      "source_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "response_sha256": "9a8036b204fca353cb53557d2bb617fc999d79cde6120a0af7a39c4d1cd9d426",
+      "matched": true,
+      "hosting_injection": null
+    }
+  ],
+  "note": "All 2196 files matched between the GitHub checkout and published Site source; live public HTTP checked the three changed HTML pages, shared theme CSS and two evidence JSON files. Public access is checked separately by browser CI."
+}

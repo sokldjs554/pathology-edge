@@ -1,0 +1,24 @@
+{
+  "site_version": 27,
+  "ui_commit": "81bf9e3c65b9fe89fdae296225b96c9cd3428e8e",
+  "site_commit": "d27412a8fe2f4f7df3ea6d36ef79e2c9d1600b86",
+  "local_site_files_identical": 2197,
+  "public_files": [
+    {
+      "path": "wsi.html",
+      "sha256": "0e72e7d0c04e4ec2905bc38f0ed1bc3e3c061f63ebc3122cf491b1322cc76d2e"
+    },
+    {
+      "path": "wsi.js",
+      "sha256": "52a229677652fdcd517d3cc59d3749168806ee8223940cb9f2ced7dd3779e9a3"
+    },
+    {
+      "path": "wsi.json",
+      "sha256": "45596434ad556bfa06e9848da442a33ddd27a22d4a0f48d90383ea9389b1d721"
+    },
+    {
+      "path": "secondary-review.css",
+      "sha256": "1aa5217a45487e975cdbd2351aca1f1c28b1d8b7db5fec8027c38826d7fc762b"
+    }
+  ]
+}

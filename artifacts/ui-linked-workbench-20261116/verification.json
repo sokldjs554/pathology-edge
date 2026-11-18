@@ -1,0 +1,65 @@
+{
+  "github_code_test_commit": "f823bac1c747406c7999ccf6390a6fdf7ac86197",
+  "github_last_ui_commit": "974472b373a623cacec7e068bacad26e501fb1ad",
+  "sites_source_commit": "659fb0eb24f244f298380f5fe6428dd1a8cb4a39",
+  "sites_version": 8,
+  "sites_version_id": "appgprj_6aeefa8b1ea081919ea881ec8b0b9daf~appgver_27a5760f46cc8191a781690cc79f0a1c",
+  "deployment_id": "appgdep_6af9d4483ed481919ac9e507187c429b",
+  "deployment_status": "succeeded",
+  "production_url": "https://pathology-edge-lab.ykh13571.chatgpt.site/",
+  "matched_deployed_files": 2191,
+  "unchanged_existing_files": 2185,
+  "cpu_workflow": 43731542536,
+  "checkout_browser_workflow": 43731542454,
+  "production_browser_workflow": 43731956593,
+  "python_tests": {
+    "passed": 462
+  },
+  "node_tests": {
+    "passed": 14
+  },
+  "saved_dice_checks": {
+    "individual": 42,
+    "means": 6
+  },
+  "checkout_browsers": {
+    "chromium": {
+      "passed": 51,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webkit": {
+      "passed": 51,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "local_python": {
+    "passed": 460,
+    "disk_guard_failures": 2
+  },
+  "local_managed_browser_available": false,
+  "user_checked_new_interface": false,
+  "before_screenshot": "Existing production-v7 Chromium capture, copied without modification from earlier evidence.",
+  "after_screenshots": "Actual production-v8 Chromium captures from workflow 43731956593.",
+  "production_browsers": {
+    "chromium": {
+      "startTime": "2026-11-15T15:49:49.547Z",
+      "duration": 110503.97,
+      "expected": 51,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webkit": {
+      "startTime": "2026-11-15T15:50:09.929Z",
+      "duration": 143907.23799999998,
+      "expected": 51,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  }
+}

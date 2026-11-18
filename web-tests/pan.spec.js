@@ -1,3 +1,4 @@
+import { tool, openTools, closeTools } from './controls.js';
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 
@@ -11,6 +12,7 @@ async function open(page) {
   await page.goto('/');
   await expect(page.locator('body')).toHaveAttribute('data-phase', 'ready');
   await expect(page.locator('#after')).toHaveAttribute('data-zoom', /\d/);
+  await tool(page,'modeBoundary','click');
 }
 async function drag(page, dx, dy) {
   const b = await page.locator('#after').boundingBox();
@@ -33,7 +35,7 @@ for (const view of [
   }, testInfo) => {
     await page.setViewportSize({ width: view.width, height: view.height });
     await open(page);
-    if (view.mode === 'single') await page.locator('#modeSingle').click();
+    if (view.mode === 'single') await tool(page,'modeSingle','click');
     await page.locator('#zoomin').click();
     const before = await center(page),
       zoom = await scale(page);
@@ -133,11 +135,11 @@ test('canvas geometry matches the visible pane rather than overflowing below it'
   for (const id of ['before', 'after']) {
     const geometry = await page.locator('#' + id).evaluate((c) => {
       const pane = c.closest('.pane'),
-        r = pane.getBoundingClientRect();
+        r = pane.getBoundingClientRect(), style = getComputedStyle(pane);
       return {
         actual: c.getBoundingClientRect().height,
         available:
-          r.height -
+          r.height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth) -
           pane.querySelector('.pane-header').getBoundingClientRect().height -
           pane.querySelector('.pane-caption').getBoundingClientRect().height,
       };

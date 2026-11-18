@@ -114,12 +114,15 @@ function setPhase(phase, title = '', detail = '') {
   );
   interactionIds.forEach((id) => ($(id).disabled = phase !== 'ready'));
   Review.refresh();
+  window.WorkbenchUI?.refresh();
+  window.ReviewEntry?.refresh();
   if (phase !== 'ready') {
     $('componentSelect').disabled = true;
     $('suppressionSelect').disabled = true;
   }
 }
 function activeCanvas() {
+  if (state.expandedSide) return $(state.expandedSide);
   return innerWidth <= 760
     ? $(
         state.mobileSide === 'before' && state.mode !== 'single'
@@ -130,10 +133,10 @@ function activeCanvas() {
 }
 function dimensions(canvas) {
   const r = canvas.getBoundingClientRect();
-  return { width: r.width, height: r.height };
+  return M.rasterDimensions(r.width, r.height, Math.min(devicePixelRatio || 1, 2));
 }
 function visibleCanvases() {
-  return canvases.filter(
+  return [...canvases, $('referenceSource'), $('referenceTruth')].filter(Boolean).filter(
     (c) =>
       c.getBoundingClientRect().width > 0 &&
       c.getBoundingClientRect().height > 0,
@@ -192,13 +195,26 @@ function layerFrom(image, kind) {
   const d = ctx.getImageData(0, 0, c.width, c.height);
   for (let i = 0; i < d.data.length; i += 4) {
     const on = kind === 'truth' ? d.data[i] > 127 : d.data[i + 3] > 0;
-    d.data[i] = kind === 'truth' ? 170 : 48;
-    d.data[i + 1] = kind === 'truth' ? 109 : 188;
-    d.data[i + 2] = kind === 'truth' ? 224 : 154;
+    d.data[i] = kind === 'truth' ? 170 : 235;
+    d.data[i + 1] = kind === 'truth' ? 109 : 178;
+    d.data[i + 2] = kind === 'truth' ? 224 : 77;
     d.data[i + 3] = on ? 255 : 0;
   }
   ctx.putImageData(d, 0, 0);
   return c;
+}
+// Display-only outline of the saved foreground; masks used for scoring stay intact.
+function maskOutline(mask) {
+  const c = document.createElement('canvas'); c.width = mask.width; c.height = mask.height;
+  const ctx = c.getContext('2d'), source = mask.getContext('2d').getImageData(0,0,c.width,c.height).data;
+  const out = ctx.createImageData(c.width,c.height);
+  for(let y=0;y<c.height;y++) for(let x=0;x<c.width;x++) {
+    const i=(y*c.width+x)*4;
+    if(source[i+3] && (x===0 || y===0 || x===c.width-1 || y===c.height-1 ||
+      !source[i-4+3] || !source[i+4+3] || !source[i-c.width*4+3] || !source[i+c.width*4+3]))
+      out.data.set([255,224,102,255],i);
+  }
+  ctx.putImageData(out,0,0); return c;
 }
 function scopeShade(width, height, scope) {
   const c = document.createElement('canvas');
@@ -246,6 +262,8 @@ function draw() {
     const side = i ? 'after' : 'before',
       p = paneData(side),
       { width, height } = dimensions(canvas);
+    canvas.dataset.zoom = state.zoom.toFixed(5);
+    canvas.dataset.center = `${state.cx.toFixed(3)},${state.cy.toFixed(3)}`;
     if (!width || !height) continue;
     const ratio = Math.min(devicePixelRatio || 1, 2);
     if (
@@ -266,11 +284,14 @@ function draw() {
     ctx.save();
     ctx.translate(t.ox, t.oy);
     ctx.scale(t.scale, t.scale);
+    // At native size and above, preserve source pixels rather than blend neighbors.
+    ctx.imageSmoothingEnabled = state.zoom < 1;
     ctx.drawImage(state.images.base, 0, 0);
     if ($('segmentation').checked) {
       ctx.globalAlpha = Number($('opacity').value) / 100;
       ctx.drawImage(state.images[p.mask], 0, 0);
       ctx.globalAlpha = 1;
+      if (state.mode === 'boundary' && Number($('opacity').value) > 0) ctx.drawImage(state.images[p.mask + '_outline'], 0, 0);
     }
     if ($('truth').checked) {
       ctx.globalAlpha = Number($('opacity').value) / 100;
@@ -403,6 +424,8 @@ function draw() {
   $('viewportBounds').textContent =
     `현재 시야 x ${Math.floor(b.x0)}–${Math.ceil(b.x1)} · y ${Math.floor(b.y0)}–${Math.ceil(b.y1)}`;
   $('zoomvalue').textContent = `${Math.round(state.zoom * 100)}%`;
+  window.Studio?.drawReferences();
+  window.ReviewEntry?.refresh();
   const n = $('navigator'),
     ctx = n.getContext('2d');
   ctx.clearRect(0, 0, n.width, n.height);
@@ -483,12 +506,12 @@ function updatePanels() {
   $('timing').textContent = `${ms(a.median_seconds)} / ${ms(b.median_seconds)}`;
   $('modelShort').textContent = `TinyUNet / ${state.data.threshold}`;
   $('beforeTitle').textContent =
-    state.mode === 'merge' ? '겹침 · 병합 전' : '무겹침';
+    state.mode === 'merge' ? '중복 후보 억제 전' : '겹치지 않게 잘라 분석';
   $('afterTitle').textContent =
-    state.mode === 'merge' ? '겹침 · 병합 후' : '겹침 + 병합';
+    state.mode === 'merge' ? '중복 후보 억제 후' : '겹쳐 분석한 뒤 결과 결합';
   $('beforeMeta').textContent =
-    state.mode === 'merge' ? 'raw 후보' : 'stride 128';
-  $('afterMeta').textContent = state.mode === 'merge' ? 'NMS 후' : 'stride 64';
+    state.mode === 'merge' ? '같은 겹침 추론 · raw 후보' : '128px 패치 · 128px 이동';
+  $('afterMeta').textContent = state.mode === 'merge' ? '같은 겹침 추론 · NMS 후' : '128px 패치 · 64px 이동';
   $('countBefore').textContent =
     `${state.mode === 'merge' ? b.raw_count : a.merged_count} 후보`;
   $('countAfter').textContent = `${b.merged_count} 후보`;
@@ -505,9 +528,9 @@ function updatePanels() {
       ? '동일 겹침 추론 · 성분 경로'
       : scopeNames[state.scope];
   $('mobileBefore').textContent =
-    state.mode === 'merge' ? 'A 병합 전' : 'A 무겹침';
+    state.mode === 'merge' ? 'A 병합 전' : 'A 겹치지 않게';
   $('mobileAfter').textContent =
-    state.mode === 'merge' ? 'B 병합 후' : 'B 겹침 처리';
+    state.mode === 'merge' ? 'B 병합 후' : 'B 겹쳐서';
   $('objectSource').options[1].text =
     state.mode === 'merge' ? 'A · 병합 전 raw' : 'A · 무겹침';
   $('jumpDuplicate').disabled = !b.suppressed.length;
@@ -516,6 +539,7 @@ function updatePanels() {
 function clearSelection() {
   state.selected = null;
   state.pair = null;
+  window.WorkbenchUI?.refresh();
   $('pairInfo').textContent =
     '분홍 상자는 억제 후보, 파란 상자는 유지 후보입니다. 두 후보가 같은 실제 핵인지는 별도 검토가 필요합니다.';
   $('selectedInfo').replaceChildren();
@@ -525,6 +549,7 @@ function clearSelection() {
 }
 function setMode(mode) {
   if (state.phase !== 'ready') return;
+  window.WorkbenchUI?.setExpanded(null);
   state.mode = mode;
   if (mode === 'merge') $('objects').checked = true;
   clearSelection();
@@ -595,6 +620,7 @@ function renderObjectOptions() {
     ? selected
     : '';
   $('componentSelect').disabled = !list.length;
+  window.WorkbenchUI?.refresh();
 }
 function selectObject(side, index, move = false) {
   if (!state.sample) return;
@@ -719,6 +745,7 @@ function populateData() {
         `sample-delta ${d < 0 ? 'negative' : ''}`,
       ),
     );
+    button.append(node('span', 'H&E · 512 × 512 px', 'sample-kind'));
     button.addEventListener('click', () => loadSample(s.id));
     $('sampleList').append(button);
   }
@@ -775,8 +802,9 @@ function resetNumbers() {
   clearSelection();
   Review.clear();
 }
-async function loadSample(id) {
+async function loadSample(id, initialCase = null) {
   if (!state.data) return;
+  const initialViewRevision = window.Studio?.viewRevision;
   const candidate = state.data.samples.find((s) => s.id === id);
   if (!candidate) return;
   state.controller?.abort();
@@ -820,6 +848,7 @@ async function loadSample(id) {
       boundary: scopeShade(512, 512, 'boundary'),
       interior: scopeShade(512, 512, 'interior'),
     };
+    for (const key of ['no_overlap','overlap']) state.images[key + '_outline'] = maskOutline(state.images[key]);
     state.cx = 256;
     state.cy = 256;
     state.fitMode = true;
@@ -859,7 +888,8 @@ async function loadSample(id) {
       '',
       `${location.pathname}?sample=${encodeURIComponent(id)}`,
     );
-    requestAnimationFrame(fit);
+    if (initialCase && initialViewRevision === window.Studio?.viewRevision) await Review.open(initialCase, { immediate: true });
+    else requestAnimationFrame(() => { fit(); window.Studio?.startView(); });
   } catch (error) {
     if (ticket !== state.request) return;
     state.sample = null;
@@ -909,15 +939,16 @@ async function init() {
       $('status').textContent = '예제 0개';
       return;
     }
-    const requested = new URLSearchParams(location.search).get('sample');
-    const requestedCase = new URLSearchParams(location.search).get('case');
-    await loadSample(
-      data.samples.some((s) => s.id === requested)
-        ? requested
-        : data.samples[0].id,
-    );
+    const params = new URLSearchParams(location.search);
+    const requested = params.get('sample'), requestedCase = params.get('case');
     await caseTask;
-    if (requestedCase) await Review.open(requestedCase);
+    if (ticket !== state.request) return;
+    // Only a bare entry gets the selected example. Explicit links stay explicit.
+    const initialCase = Review.data?.cases.find(c => c.id ===
+      (requestedCase || (!requested && !params.has('case') ? Review.data.recommended.improved : null)));
+    await loadSample(initialCase?.sample_id ||
+      (data.samples.some(s => s.id === requested) ? requested : data.samples[0].id), initialCase?.id);
+
   } catch (error) {
     if (ticket !== state.request) return;
     setPhase(
@@ -1038,7 +1069,7 @@ for (const [i, canvas] of canvases.entries()) {
       drag = null;
       return;
     }
-    if (drag && !drag.moved && state.sample && $('objects').checked) {
+    if (drag && !drag.moved && state.sample && $('objects').checked && state.tool !== 'pan') {
       const p = eventPoint(e, canvas),
         d = dimensions(canvas),
         q = M.toImage(
@@ -1126,7 +1157,10 @@ $('sample').addEventListener('change', () => loadSample($('sample').value));
 $('retry').addEventListener('click', () =>
   state.data?.samples.length ? loadSample($('sample').value) : init(),
 );
-$('modeBoundary').addEventListener('click', () => setMode('boundary'));
+$('modeBoundary').addEventListener('click', () => {
+  if (state.mode !== 'boundary') setMode('boundary');
+  window.Studio?.setComparison('two');
+});
 $('modeMerge').addEventListener('click', () => setMode('merge'));
 $('modeSingle').addEventListener('click', () => setMode('single'));
 $('scopeAll').addEventListener('click', () => setScope('all'));
@@ -1198,7 +1232,7 @@ $('toggleInspector').addEventListener('click', () => togglePanel('inspector'));
 $('closeInspector').addEventListener('click', () => {
   $('workbench').classList.add('inspector-hidden');
   $('toggleInspector').setAttribute('aria-expanded', 'false');
-  $('toggleInspector').focus();
+  $('detailTools').querySelector('summary').focus();
 });
 $('focusMode').addEventListener('click', () => {
   state.focus = !state.focus;
