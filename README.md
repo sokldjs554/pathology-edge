@@ -6,10 +6,10 @@
 
 | 구분 | 확인할 수 있는 범위 | 코드·상태 |
 |---|---|---|
-| 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | 저장 결과: `main` · 현재 UI: [`feat/linked-pathology-workbench`](https://github.com/sokldjs554/pathology-edge/tree/feat/linked-pathology-workbench), [Draft PR #3](https://github.com/sokldjs554/pathology-edge/pull/3)·main 미병합 |
+| 공개 작업대 | TNBC 경계 비교, 실제 WSI 탐색·3개 ROI 예측, 정답 중심 조건 IHC 분류 | 현재 UI·저장 결과: [`main`](https://github.com/sokldjs554/pathology-edge/tree/main) · [UI 통합 PR #3](https://github.com/sokldjs554/pathology-edge/pull/3) |
 | 후속 연구 | 자동 IHC 패치 검출·분류, 사전학습 대조, 추가 외부 평가 | [`feat/auto-ki67`](https://github.com/sokldjs554/pathology-edge/tree/feat/auto-ki67) · [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2), main 미병합·공개 데모 미적용 |
 
-배포 버전 27의 검사 기준 UI는 `5d7d843`입니다. `main` 기본 clone의 화면과 다릅니다. [배포·소스 대응과 고정 스냅샷 실행](docs/PUBLIC_DEMO_VERSION.md).
+배포 버전 27의 검사 기준 UI는 `5d7d843`이며, 동일한 화면 파일을 `main`에 통합했습니다. [배포·소스 대응과 고정 스냅샷 실행](docs/PUBLIC_DEMO_VERSION.md).
 
 연구·교육용 독립 프로젝트입니다. 공개 웹 화면은 **사전 계산된 실제 결과**를 표시합니다. 실제 모델 추론은 아래 CLI로 실행하며, 임상 진단·치료용 도구가 아닙니다.
 
@@ -88,7 +88,7 @@ Dice는 높을수록 정답 영역과 잘 겹칩니다. 표의 Dice는 원본 �
 **화면만 보려면** 위 공개 데모를 여세요. 로컬 화면에는 Git과 Python 3만 필요합니다. 아래 명령은 상위 작업 폴더에서 시작합니다.
 
 ```bash
-git clone --depth 1 --filter=blob:none --sparse --branch feat/linked-pathology-workbench https://github.com/sokldjs554/pathology-edge.git pathology-edge
+git clone --depth 1 --filter=blob:none --sparse --branch main https://github.com/sokldjs554/pathology-edge.git pathology-edge
 cd pathology-edge
 git sparse-checkout set dist
 python3 -m http.server 8000 --directory dist --bind 127.0.0.1

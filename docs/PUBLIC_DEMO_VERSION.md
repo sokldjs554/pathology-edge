@@ -4,22 +4,22 @@
 
 | 구분 | 소스·상태 |
 |---|---|
-| 공개 UI 기준 | [`feat/linked-pathology-workbench`](https://github.com/sokldjs554/pathology-edge/tree/feat/linked-pathology-workbench), [Draft PR #3](https://github.com/sokldjs554/pathology-edge/pull/3), main 미병합 |
+| 공개 UI 기준 | [`main`](https://github.com/sokldjs554/pathology-edge/tree/main) · [UI 통합 PR #3](https://github.com/sokldjs554/pathology-edge/pull/3) |
 | 검사한 UI 스냅샷 | [`5d7d843168f0b08bb87d6da2a56468f6a1522fbe`](https://github.com/sokldjs554/pathology-edge/tree/5d7d843168f0b08bb87d6da2a56468f6a1522fbe) |
 | 호스팅 버전 | 공개 버전 27, 호스팅 저장소 커밋 `d27412a8fe2f4f7df3ea6d36ef79e2c9d1600b86` |
-| main | 공개 TNBC 모델·저장 결과와 기존 UI. 현재 보라색 UI와는 화면 파일이 다름 |
+| main | 공개 TNBC 모델·저장 결과와 현재 보라색 UI를 함께 제공 |
 | 후속 자동 IHC 연구 | [`feat/auto-ki67`](https://github.com/sokldjs554/pathology-edge/tree/feat/auto-ki67), [Draft PR #2](https://github.com/sokldjs554/pathology-edge/pull/2), 공개 데모에 미적용 |
 
-GitHub 커밋과 호스팅 커밋은 서로 다른 저장소의 식별자다. 검사에서는 UI 스냅샷과 로컬 호스팅 소스의 `dist/` 2,197개 파일을 바이트 단위로 대조해 일치를 확인했다. 이번 문서 정리는 모델·결과·화면 파일을 변경하거나 새 버전을 배포하지 않는다.
+GitHub 커밋과 호스팅 커밋은 서로 다른 저장소의 식별자다. 검사에서는 UI 스냅샷과 로컬 호스팅 소스의 `dist/` 2,197개 파일을 바이트 단위로 대조해 일치를 확인했다. PR #3은 검증한 UI와 문서·브라우저 검사를 main에 통합한다. 기존 UI 스냅샷 대비 화면 파일·모델·실험값은 변경하지 않으며, 동일한 화면을 다시 배포하지 않는다.
 
 ## 현재 화면 실행
 
-새 작업 폴더에서 [RUNBOOK의 로컬 화면 명령](RUNBOOK.md#local-viewer)을 실행하면 UI 브랜치를 받는다. `main`을 clone한 화면을 현재 공개 UI와 동일하다고 설명하지 않는다. 기존 작업 폴더에 수정 파일이 있으면 강제로 checkout/reset하지 말고 별도 폴더를 사용한다.
+새 작업 폴더에서 [RUNBOOK의 로컬 화면 명령](RUNBOOK.md#local-viewer)을 실행하면 공개 UI를 포함한 `main`을 받는다. 기존 작업 폴더에 수정 파일이 있으면 강제로 checkout/reset하지 말고 별도 폴더를 사용한다.
 
-검사한 **특정 스냅샷**이 필요하면, 새 상위 작업 폴더에서 다음을 실행한다. 현재 UI 브랜치의 최신 문서와 과거 화면 스냅샷을 구분한다.
+검사한 **특정 스냅샷**이 필요하면, 새 상위 작업 폴더에서 다음을 실행한다. 현재 main의 문서와 과거 화면 스냅샷을 구분한다.
 
 ```bash
-git clone --filter=blob:none --sparse --single-branch --branch feat/linked-pathology-workbench https://github.com/sokldjs554/pathology-edge.git pathology-edge-demo-snapshot
+git clone --filter=blob:none --sparse --single-branch --branch main https://github.com/sokldjs554/pathology-edge.git pathology-edge-demo-snapshot
 cd pathology-edge-demo-snapshot
 git sparse-checkout set dist
 git checkout --detach 5d7d843168f0b08bb87d6da2a56468f6a1522fbe
