@@ -21,9 +21,23 @@
 
 ![현재 이미지의 실제 개선·악화 경계를 A·B·정답 마스크로 비교하는 첫 화면](artifacts/ui-navigation/clarity-first.png)
 
-[원본·정답 포함 4분할](artifacts/ui-clarity/readability-four.png) · [영상과 후보 데이터 연결](artifacts/ui-clarity/studio-data-laptop.png)
+[WSI 전체 탐색 화면](artifacts/ui-secondary-review/secondary-wsi-first-1440.png) · [IHC 선택 세포](artifacts/ui-ihc-wording/secondary-ihc-first-1440.png)
 
-[WSI 전체 탐색 화면](artifacts/ui-secondary-review/secondary-wsi-first-1440.png) · [IHC 선택 세포](artifacts/ui-ihc-wording/secondary-ihc-first-1440.png) · [WSI·IHC 화면 정리와 검증](docs/UI_SECONDARY_REVIEW.md) · [같은 이미지의 악화 사례](artifacts/ui-navigation/same-image-worsened-1440.png) · [UI 조사·설계](docs/UI_REVIEW.md) · [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md) · [H&E 색상 체계](docs/UI_COLOR_SYSTEM.md) · [첫 화면 개편·검증](docs/UI_FIRST_VISIT.md) · [현재 이미지의 경계 이동](docs/UI_BOUNDARY_CASE_SCOPE.md) · [상단 메뉴·로고 이동](docs/UI_NAVIGATION.md)
+<details>
+<summary>화면 개발 기록</summary>
+
+- [원본·정답 포함 4분할](artifacts/ui-clarity/readability-four.png)
+- [영상과 후보 데이터 연결](artifacts/ui-clarity/studio-data-laptop.png)
+- [WSI·IHC 화면 정리와 검증](docs/UI_SECONDARY_REVIEW.md)
+- [같은 이미지의 악화 사례](artifacts/ui-navigation/same-image-worsened-1440.png)
+- [UI 조사·설계](docs/UI_REVIEW.md)
+- [화면 개편·전후 비교](docs/UI_LINKED_WORKBENCH.md)
+- [H&E 색상 체계](docs/UI_COLOR_SYSTEM.md)
+- [첫 화면 개편·검증](docs/UI_FIRST_VISIT.md)
+- [현재 이미지의 경계 이동](docs/UI_BOUNDARY_CASE_SCOPE.md)
+- [상단 메뉴·로고 이동](docs/UI_NAVIGATION.md)
+
+</details>
 
 ## 직접 담당한 범위
 
